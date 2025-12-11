@@ -5,18 +5,22 @@ import Link from "next/link";
 
 export default function Dropdown({ isOpen, items }) {
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 mt-3 z-40">
+    <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2 z-[9999]">
       <AnimatePresence>
         {isOpen && (
           <motion.div
             key="dropdown"
-            initial={{ opacity: 0, scale: 0.95, y: -5 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: -5 }}
-            transition={{ duration: 0.22, ease: "easeOut" }}
+            initial={{ opacity: 0, y: -6, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -6, scale: 0.96 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
             className="
-              w-64 rounded-2xl bg-white shadow-xl py-4
-              backdrop-blur-2xl border border-gray-200
+              w-56 md:w-64
+              rounded-2xl
+              bg-white/10 backdrop-blur-xl
+              border border-white/20
+              shadow-[0_8px_32px_rgba(0,0,0,0.25)]
+              overflow-hidden
             "
           >
             {items.map((item, index) => (
@@ -24,8 +28,9 @@ export default function Dropdown({ isOpen, items }) {
                 key={index}
                 href={item.href}
                 className="
-                  block w-full px-6 py-2 text-gray-800
-                  hover:bg-gray-100 transition
+                  block px-6 py-2.5 text-white/90 text-sm
+                  hover:bg-white/15 hover:text-white
+                  transition-all duration-200
                 "
               >
                 {item.label}
