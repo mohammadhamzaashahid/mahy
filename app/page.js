@@ -17,32 +17,28 @@ export const SECTIONS = [
 export const HERO_SLIDES = [
   {
     id: 1,
-    image: '/pumps.avif',
+    image: '/1.jpeg',
     title: "We are innovation. We are technology.",
     subtitle: "We want to be the leading company by innovation, expanding our businesses by diversification & geographical growth exceeding all stakeholders expectations.",
     cta: { label: "Consult With Us" },
   },
   {
     id: 2,
-    image: "/carosel2.avif",
+    image: "/2.jpeg",
     title: "Design that inspires confidence",
     subtitle: "Advanced engineering for every journey.",
     cta: { label: "Explore Models" },
   },
   {
     id: 3,
-    image: "/pumps.avif",
+    image: "/3.jpeg",
     title: "Performance redefined",
     subtitle: "Precision meets innovation.",
     cta: { label: "Learn More" },
   },
 ];
 
-
-
 export default function Home() {
-
-
   return (
     <main className="bg-white min-h-screen overflow-x-hidden">
       <Navbar />
