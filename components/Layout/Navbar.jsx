@@ -80,8 +80,13 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 z-50 w-full">
       <nav
         className="
-          mx-auto flex max-w-7xl items-center justify-between px-6 py-4
-          rounded-b-full bg-black/20 backdrop-blur-xl border border-white/10
+          mx-auto flex max-w-7xl items-center justify-between px-8 py-6
+          rounded-b-full
+bg-black/40
+backdrop-blur-2xl
+border border-white/10
+shadow-[0_10px_30px_rgba(0,0,0,0.35)]
+
         "
       >
         <Image src="/MAHY.png" alt="mhy" width={140} height={50} />

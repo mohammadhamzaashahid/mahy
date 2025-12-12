@@ -49,6 +49,10 @@ export default function Home() {
       <div id="home">
         <HeroCarousel slides={HERO_SLIDES} />
       </div>
+
+       <div id="about">
+        <HeroCarousel slides={HERO_SLIDES} />
+      </div>
     </main>
   );
 }
