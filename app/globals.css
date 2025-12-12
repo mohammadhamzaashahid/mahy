@@ -67,6 +67,6 @@ body {
   fill: white;
 }
 
-logo-img path {
+.logo-img path {
   fill: red;
 }
