@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function SectionNavigator({ sections = [] }) {
+export default function SectionNavigator({ sections }) {
   const [active, setActive] = useState(sections[0]?.id || "");
   const [hovered, setHovered] = useState(null);
 
@@ -47,7 +47,7 @@ export default function SectionNavigator({ sections = [] }) {
           onClick={() => scrollTo(item.id)}
           onMouseEnter={() => setHovered(item.id)}
           onMouseLeave={() => setHovered(null)}
-          className="group relative"
+          className="group relative z-10"
           aria-label={`Go to ${item.label}`}
         >
           <span
@@ -63,10 +63,9 @@ export default function SectionNavigator({ sections = [] }) {
               border border-white/30 bg-black/40 px-3 py-1 text-[10px]
               font-semibold uppercase tracking-[0.4em] text-white/80 shadow-lg
               transition-all duration-200
-              ${
-                hovered === item.id
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-2"
+              ${hovered === item.id
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-2"
               }
             `}
           >
