@@ -1,6 +1,7 @@
 
 import Navbar from "@/components/Layout/Navbar.jsx";
 import SectionNavigator from "@/components/Navigator/SectionNavigator.jsx";
+import BusinessSteps from "@/components/UI/BusinessSteps";
 import DesignProcess from "@/components/UI/DesignProcess";
 import HeroCarousel from "@/components/UI/HeroCarousel.jsx";
 
@@ -47,6 +48,7 @@ export default function Home() {
         <HeroCarousel slides={HERO_SLIDES} />
       </div>
       <DesignProcess />
+      <BusinessSteps />
     </main>
   );
 }
