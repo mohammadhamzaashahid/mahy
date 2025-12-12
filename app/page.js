@@ -52,7 +52,7 @@ export default function Home() {
       </div>
       <div id="about">
         <DesignProcess />
-      <BusinessSteps />
+
       </div>
 
       <div id="partners">
@@ -62,6 +62,8 @@ export default function Home() {
       <section id="enterprise">
         <EnterprisePinnedSection />
       </section>
+
+      <BusinessSteps />
     </main>
   );
 }
