@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent-color:
+    #00bcd4;
 }
 
 @theme inline {
@@ -23,6 +25,50 @@ body {
   background: var(--background);
   /* color: var(--foreground); */
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.step-card {
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  clip-path: inset(-15px -15px 0 0);
+}
+
+.step-card .step-card-icon {
+  transition: background 1s ease;
+}
+
+.step-card:hover .step-card-icon {
+  background: var(--accent-color);
+}
+
+.step-card .bottom {
+  background: rgb(245, 245, 245);
+  transition: background 1s ease;
+}
+
+.step-card:hover .bottom {
+  background: var(--accent-color);
+}
+
+.step-card-container .number {
+  transition: color 0.2s ease-in-out;
+}
+
+.step-card-container:hover .number {
+  color: var(--accent-color);
+}
+
+.step-card-icon svg {
+  transition: fill 0.3s ease-in-out;
+  fill: var(--accent-color);
+}
+
+.step-card:hover .step-card-icon svg {
+  fill: white;
+}
+
+.logo-img path {
+  fill: red;
 }
 
 @keyframes marquee {

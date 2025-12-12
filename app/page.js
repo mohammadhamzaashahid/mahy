@@ -3,6 +3,7 @@ import EnterprisePinnedSection from "@/components/Layout/EnterprisePinnedSection
 import Navbar from "@/components/Layout/Navbar.jsx";
 import PartnersSection from "@/components/Layout/PartnersSection";
 import SectionNavigator from "@/components/Navigator/SectionNavigator.jsx";
+import BusinessSteps from "@/components/UI/BusinessSteps";
 import DesignProcess from "@/components/UI/DesignProcess";
 import HeroCarousel from "@/components/UI/HeroCarousel.jsx";
 
@@ -51,6 +52,7 @@ export default function Home() {
       </div>
       <div id="about">
         <DesignProcess />
+      <BusinessSteps />
       </div>
 
       <div id="partners">
