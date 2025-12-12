@@ -1,5 +1,6 @@
 
 import Navbar from "@/components/Layout/Navbar.jsx";
+import PartnersSection from "@/components/Layout/PartnersSection";
 import SectionNavigator from "@/components/Navigator/SectionNavigator.jsx";
 import DesignProcess from "@/components/UI/DesignProcess";
 import HeroCarousel from "@/components/UI/HeroCarousel.jsx";
@@ -8,7 +9,7 @@ import HeroCarousel from "@/components/UI/HeroCarousel.jsx";
 export const SECTIONS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "vehicles", label: "Vehicles" },
+  { id: "partners", label: "Partners" },
   { id: "after-sales", label: "After Sales" },
   { id: "contact", label: "Contact" },
   { id: "careers", label: "Careers" },
@@ -46,7 +47,15 @@ export default function Home() {
       <div id="home">
         <HeroCarousel slides={HERO_SLIDES} />
       </div>
-      <DesignProcess />
+      <div id="about">
+
+        <DesignProcess />
+
+      </div>
+
+      <div id="partners">
+        <PartnersSection />
+      </div>
     </main>
   );
 }
