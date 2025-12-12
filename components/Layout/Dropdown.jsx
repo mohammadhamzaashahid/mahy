@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Dropdown({ isOpen, items }) {
   return (
-    <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2 z-[9999]">
+    <div className="absolute left-1/2 top-full -translate-x-1/2 pt-2 z-9999">
       <AnimatePresence>
         {isOpen && (
           <motion.div

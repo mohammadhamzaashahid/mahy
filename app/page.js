@@ -1,4 +1,5 @@
 
+import EnterprisePinnedSection from "@/components/Layout/EnterprisePinnedSection";
 import Navbar from "@/components/Layout/Navbar.jsx";
 import PartnersSection from "@/components/Layout/PartnersSection";
 import SectionNavigator from "@/components/Navigator/SectionNavigator.jsx";
@@ -10,6 +11,7 @@ export const SECTIONS = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "partners", label: "Partners" },
+  { id: "enterprise", label: "Enterprise" },
   { id: "after-sales", label: "After Sales" },
   { id: "contact", label: "Contact" },
   { id: "careers", label: "Careers" },
@@ -43,19 +45,21 @@ export default function Home() {
   return (
     <main className="bg-white min-h-screen overflow-x-hidden">
       <Navbar />
-      <SectionNavigator sections={SECTIONS} />
+      {/* <SectionNavigator sections={SECTIONS} /> */}
       <div id="home">
         <HeroCarousel slides={HERO_SLIDES} />
       </div>
       <div id="about">
-
         <DesignProcess />
-
       </div>
 
       <div id="partners">
         <PartnersSection />
       </div>
+
+      <section id="enterprise">
+        <EnterprisePinnedSection />
+      </section>
     </main>
   );
 }
