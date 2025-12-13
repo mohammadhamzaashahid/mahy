@@ -8,7 +8,6 @@ export default function StickyMediaPane({ image }) {
         lg:block
         relative
         h-screen
-        sticky
         top-0
         overflow-hidden
         pointer-events-none
