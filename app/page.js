@@ -65,8 +65,8 @@ export default function Home() {
       </section>
 
       <section id="enterprise">
-        {/* <EnterprisePinnedSection /> */}
-        <PinnedSection />
+        <EnterprisePinnedSection />
+        {/* <PinnedSection /> */}
       </section>
 
       <section id="after-sales">

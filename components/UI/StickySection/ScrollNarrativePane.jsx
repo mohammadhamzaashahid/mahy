@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import NarrativeCard from "./NarrativeCard";
 
+
 const SECTIONS = [
   {
     title: "Customer Experience",
