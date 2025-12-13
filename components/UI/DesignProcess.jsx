@@ -50,20 +50,13 @@ function DesignProcess() {
         }];
 
     return (
-        <section className="max-w-7xl mx-auto mb-20">
-            {/* <h2 className="text-center font-bold text-4xl my-20 md:mt-20 md:mb-0 mx-5">Our Website Design Process</h2> */}
-
-             <div className="text-center font-bold text-4xl my-20 md:mt-20 md:mb-0 mx-5">
-        <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
-          Our Process
-        </h2>
-
-<div className="w-24 md:w-32 h-[3px] bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 mx-auto my-4 rounded-full" />
-
-        {/* <p className="max-w-xl mx-auto text-slate-600 text-sm md:text-base font-medium">
-          We work only with the best to bring you only the best.
-        </p> */}
-      </div>
+        <div className="max-w-7xl mx-auto mb-20">
+            <div className="text-center font-bold text-4xl my-20 md:mt-20 md:mb-0 mx-5">
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+                    Our Process
+                </h2>
+                <div className="w-24 md:w-32 h-[3px] bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 mx-auto my-4 rounded-full" />
+            </div>
             <div className="mt-3 grid grid-cols-1 md:grid-cols-5 items-center justify-center">
                 <motion.div
                     className="relative overflow-hidden w-170 h-170 rounded-full -left-50 hidden lg:block col-span-2"
@@ -94,7 +87,7 @@ function DesignProcess() {
                     ))}
                 </div>
             </div>
-        </section >
+        </div>
     )
 }
 

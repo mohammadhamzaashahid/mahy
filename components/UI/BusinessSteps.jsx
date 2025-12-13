@@ -21,7 +21,7 @@ function BusinessSteps() {
         { id: 3, title: 'Start Working', description: 'This first step is critical. It is about gathering information: quantitative information and qualitative insights.', icon: '/icons/step3.png' },
     ]
     return (
-        <section className="py-20">
+        <div className="py-20">
             <h2 className="text-center font-bold text-4xl mb-30 mx-5">To Get successful business have to follow some steps</h2>
             <div className="grid lg:grid-cols-2 gap-60 gap-x-20 lg:gap-30 px-4 lg:px-40 xl:grid-cols-3">
                 {steps.map((step, i) => (
@@ -54,7 +54,7 @@ function BusinessSteps() {
                     />
                 </Link>
             </div>
-        </section>
+        </div>
     )
 }
 

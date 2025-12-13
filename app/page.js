@@ -7,6 +7,7 @@ import BusinessSteps from "@/components/UI/BusinessSteps";
 import DesignProcess from "@/components/UI/DesignProcess";
 import HeroCarousel from "@/components/UI/HeroCarousel.jsx";
 import HeroVideo from "@/components/UI/HeroVideo";
+import FloatingMenu from "@/components/UI/FloatingMenu";
 
 
 export const SECTIONS = [
@@ -48,23 +49,27 @@ export default function Home() {
     <main className="bg-white min-h-screen overflow-x-hidden">
       <Navbar />
       {/* <SectionNavigator sections={SECTIONS} /> */}
+      <FloatingMenu />
       <div id="home">
         {/* <HeroCarousel slides={HERO_SLIDES} /> */}
         <HeroVideo slides={HERO_SLIDES} />
       </div>
-      <div id="about">
-        <DesignProcess />
-      </div>
 
-      <div id="partners">
+      <section id="about">
+        <DesignProcess />
+      </section>
+
+      <section id="partners">
         <PartnersSection />
-      </div>
+      </section>
 
       <section id="enterprise">
         <EnterprisePinnedSection />
       </section>
 
-      <BusinessSteps />
+      <section id="after-sales">
+        <BusinessSteps />
+      </section>
     </main>
   );
 }
