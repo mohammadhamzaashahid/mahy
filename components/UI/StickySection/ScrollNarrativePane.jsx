@@ -43,7 +43,7 @@ export default function ScrollNarrativePane({ onActiveChange }) {
         });
       },
       {
-        root: scrollRootRef.current, 
+        root: scrollRootRef.current,
         threshold: 0.6,
       }
     );
@@ -63,21 +63,25 @@ export default function ScrollNarrativePane({ onActiveChange }) {
         hide-scrollbar
       "
     >
-      <div className="h-full snap-y snap-mandatory">
+      <div className="h-full snap-y snap-mandatory space-y-4 lg:space-y-0">
         {SECTIONS.map((section, index) => (
           <section
             key={index}
             ref={(el) => (sectionRefs.current[index] = el)}
             data-index={index}
             className="
-              min-h-screen
-              flex
-              items-center
-              snap-start
-              px-6
-              md:px-12
-              lg:px-20
-            "
+    min-h-[auto]
+    lg:min-h-screen
+    flex
+    items-center
+    snap-start
+    px-6
+    md:px-12
+    lg:px-20
+    py-20
+    lg:py-0
+    border-b border-white/10
+  "
           >
             <NarrativeCard {...section} />
           </section>
