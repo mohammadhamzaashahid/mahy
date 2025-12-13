@@ -33,7 +33,7 @@ export default function FloatingMenu() {
   }, []);
 
   return (
-    <ul className="hideen lg:fixed bottom-25 lg:right-20 space-y-4 z-30">
+    <ul className="hidden lg:fixed bottom-25 lg:right-20 space-y-4 z-30">
       {sections.map((s) => (
         <li key={s.id} className="group">
           <a
