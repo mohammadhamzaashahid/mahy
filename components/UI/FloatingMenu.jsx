@@ -5,6 +5,7 @@ import { FiMinus } from "react-icons/fi";
 const sections = [
   { id: "home", label: "Home", lightBg: false },
   { id: "about", label: "About", lightBg: true },
+  { id: "gallery", label: "Gallery", lightBg: false },
   { id: "partners", label: "Partners", lightBg: true },
   { id: "enterprise", label: "Enterprise", lightBg: false },
   { id: "after-sales", label: "After Sales", lightBg: true },

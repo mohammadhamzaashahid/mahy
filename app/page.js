@@ -9,6 +9,7 @@ import HeroCarousel from "@/components/UI/HeroCarousel.jsx";
 import HeroVideo from "@/components/UI/HeroVideo";
 import FloatingMenu from "@/components/UI/FloatingMenu";
 import PinnedSection from "@/components/UI/PinnedSection";
+import Gallery from "@/components/UI/Gallery";
 
 
 export const SECTIONS = [
@@ -59,6 +60,10 @@ export default function Home() {
 
       <section id="about">
         <DesignProcess />
+      </section>
+
+      <section id="gallery">
+        <Gallery />
       </section>
 
       <section id="partners">
