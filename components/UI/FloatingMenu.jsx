@@ -23,17 +23,15 @@ export default function FloatingMenu() {
       },
       { threshold: 0.6 }
     );
-
     sections.forEach((s) => {
       const el = document.getElementById(s.id);
       if (el) observer.observe(el);
     });
-
     return () => observer.disconnect();
   }, []);
 
   return (
-    <ul className="hidden lg:fixed bottom-25 lg:right-20 space-y-4 z-30">
+    <ul className="hidden lg:block fixed bottom-25 lg:right-20 space-y-4 z-30">
       {sections.map((s) => (
         <li key={s.id} className="group">
           <a

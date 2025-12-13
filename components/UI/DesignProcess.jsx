@@ -55,7 +55,7 @@ function DesignProcess() {
                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
                     Our Process
                 </h2>
-                <div className="w-24 md:w-32 h-[3px] bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 mx-auto my-4 rounded-full" />
+                <div className="w-24 md:w-32 h-0.75 bg-linear-to-r from-slate-900 via-slate-700 to-slate-900 mx-auto my-4 rounded-full" />
             </div>
             <div className="mt-3 grid grid-cols-1 md:grid-cols-5 items-center justify-center">
                 <motion.div
