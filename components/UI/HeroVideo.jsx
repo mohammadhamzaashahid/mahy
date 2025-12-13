@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "./Button";
+import SecondaryButton from "./SecondaryButton";
 
 function HeroVideo({ slides }) {
     const [index, setIndex] = useState(0);
+    const currentSlide = slides[index];
 
     useEffect(() => {
         const id = setInterval(() => {
@@ -36,18 +38,27 @@ function HeroVideo({ slides }) {
                     className="absolute bottom-20 left-6 md:left-20 z-30 max-w-xl"
                 >
                     <h1 className="text-4xl md:text-6xl font-semibold text-gray-100 leading-tight drop-shadow-lg">
-                        {slides[index].title}
+                        {currentSlide.title}
                     </h1>
-                    {slides[index].subtitle && (
-                        <p className="mt-4 text-gray-200 font-light">{slides[index].subtitle}</p>
+                    {currentSlide.subtitle && (
+                        <p className="mt-4 text-gray-200 font-light">{currentSlide.subtitle}</p>
                     )}
-                    {slides[index].cta && (
-                        <div className="mt-6">
-                            <Button onClick={slides[index].cta.onClick || (() => { })}>
-                                {slides[index].cta.label}
-                            </Button>
-                        </div>
-                    )}
+                    <div className="flex flex-wrap gap-3">
+                        {currentSlide.cta && (
+                            <div className="mt-6">
+                                <Button onClick={currentSlide.cta.onClick || (() => { })}>
+                                    {currentSlide.cta.label}
+                                </Button>
+                            </div>
+                        )}
+                        {currentSlide.otherCta && (
+                            <div className="mt-6">
+                                <SecondaryButton className="text-white bg-transparent" onClick={currentSlide.otherCta.onClick || (() => { })}>
+                                    {currentSlide.otherCta.label}
+                                </SecondaryButton>
+                            </div>
+                        )}
+                    </div>
                 </motion.div>
             </AnimatePresence>
         </section>
