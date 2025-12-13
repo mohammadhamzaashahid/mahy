@@ -1,5 +1,6 @@
 import PrimaryButton from "../PrimaryButton";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function NarrativeCard({
   title,
@@ -8,7 +9,13 @@ export default function NarrativeCard({
   image,
 }) {
   return (
-    <div className="max-w-xl w-full">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.4 }}
+      className="max-w-xl w-full"
+    >
       <h2 className="text-3xl md:text-4xl font-semibold text-white">
         {title}
       </h2>
@@ -36,8 +43,14 @@ export default function NarrativeCard({
       />
 
       {image && (
-        <div className="mt-10 block lg:hidden w-full">
-          <div className="relative w-full h-64 overflow-hidden rounded-lg">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="mt-10 block lg:hidden w-full"
+        >         
+         <div className="relative w-full h-64 overflow-hidden rounded-lg">
             <Image
               src={image}
               alt={title}
@@ -45,8 +58,8 @@ export default function NarrativeCard({
               className="object-cover"
             />
           </div>
-        </div>
+        </motion.div>
       )}
-    </div>
+    </motion.div>
   );
 }
