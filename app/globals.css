@@ -101,3 +101,24 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes neon-glow {
+  0% {
+    opacity: 0.55;
+    filter: blur(32px);
+  }
+
+  50% {
+    opacity: 0.85;
+    filter: blur(40px);
+  }
+
+  100% {
+    opacity: 0.55;
+    filter: blur(32px);
+  }
+}
+
+.animate-neon-glow {
+  animation: neon-glow 4.5s ease-in-out infinite;
+}

@@ -1,5 +1,5 @@
+import { useEffect, useRef, useState } from "react";
 import NarrativeCard from "./NarrativeCard";
-import { useEffect, useRef } from "react";
 
 const SECTIONS = [
   {
@@ -30,6 +30,9 @@ export default function ScrollNarrativePane({ onActiveChange }) {
   const sectionRefs = useRef([]);
   const scrollRootRef = useRef(null);
 
+  const [cursor, setCursor] = useState({ x: 0, y: 0, active: false });
+
+
   useEffect(() => {
     if (!scrollRootRef.current) return;
 
@@ -57,11 +60,22 @@ export default function ScrollNarrativePane({ onActiveChange }) {
     <div
       ref={scrollRootRef}
       className="
-        relative
-        lg:h-screen
-        lg:overflow-y-auto
-        hide-scrollbar
-      "
+    relative
+    lg:h-screen
+    lg:overflow-y-auto
+    hide-scrollbar
+  "
+      onMouseMove={(e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        setCursor({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top,
+          active: true,
+        });
+      }}
+      onMouseLeave={() =>
+        setCursor((c) => ({ ...c, active: false }))
+      }
     >
       <div className="h-full snap-y snap-mandatory space-y-4 lg:space-y-0">
         {SECTIONS.map((section, index) => (
@@ -83,7 +97,7 @@ export default function ScrollNarrativePane({ onActiveChange }) {
     border-b border-white/10
   "
           >
-            <NarrativeCard {...section} />
+            <NarrativeCard {...section} cursor={cursor} />
           </section>
         ))}
       </div>
