@@ -44,6 +44,7 @@ export default function PinnedSection() {
     useEffect(() => {
         const el = document.getElementById("enterprise");
         if (!el) return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setInView(entry.isIntersecting && entry.intersectionRatio >= 0.9);
@@ -76,8 +77,6 @@ export default function PinnedSection() {
             return;
         }
         isScrolling.current = true;
-        e.preventDefault();
-
         lastRun.current = Date.now();
 
         setTimeout(() => {
@@ -91,7 +90,7 @@ export default function PinnedSection() {
         setTimeout(() => {
             isScrolling.current = false;
             document.body.style.overflow = "auto";
-        }, 500);
+        }, 1000);
     };
 
     useEffect(() => {
@@ -101,13 +100,13 @@ export default function PinnedSection() {
 
     return (
         <div
-            className="h-screen grid lg:grid-cols-2 bg-black text-white"
+            className="h-11/12 lg:h-screen grid lg:grid-cols-2 bg-black text-white"
             onWheel={handleWheel}
         >
             <AnimatePresence mode="wait">
                 <motion.div
                     key={index}
-                    className="relative h-120 lg:h-full w-full"
+                    className="relative h-100 lg:h-full w-full"
                     variants={imageVariants}
                     initial="hidden"
                     animate="visible"
