@@ -8,6 +8,7 @@ import DesignProcess from "@/components/UI/DesignProcess";
 import HeroCarousel from "@/components/UI/HeroCarousel.jsx";
 import HeroVideo from "@/components/UI/HeroVideo";
 import FloatingMenu from "@/components/UI/FloatingMenu";
+import PinnedSection from "@/components/UI/PinnedSection";
 
 
 export const SECTIONS = [
@@ -64,7 +65,8 @@ export default function Home() {
       </section>
 
       <section id="enterprise">
-        <EnterprisePinnedSection />
+        {/* <EnterprisePinnedSection /> */}
+        <PinnedSection />
       </section>
 
       <section id="after-sales">
