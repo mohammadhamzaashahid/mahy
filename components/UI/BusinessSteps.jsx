@@ -3,6 +3,7 @@
 import Link from "next/link"
 import BusinessStepCard from "./BusinessStepCard"
 import { motion } from "framer-motion";
+import PrimaryButton from "./PrimaryButton";
 
 const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -43,7 +44,15 @@ function BusinessSteps() {
             </div>
             <div className="flex flex-wrap justify-center items-center mt-50 lg:mt-40 mx-5 gap-2">
                 <p>Stay ahead in a rapidly changing world.</p>
-                <Link className="bg-teal-600 hover:bg-cyan-600 text-white px-3 py-1 rounded-2xl" href={"/"}>Consult Now</Link>
+                <Link className="" href={"/"}>
+                    <PrimaryButton
+                        label="Consult now"
+                        size="md"
+                        bg="bg-gradient-to-r from-teal-600 to-emerald-600"
+                        hoverBg="hover:from-teal-500 hover:to-emerald-500"
+                        radius="rounded-full"
+                    />
+                </Link>
             </div>
         </section>
     )

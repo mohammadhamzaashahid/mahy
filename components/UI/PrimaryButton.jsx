@@ -34,7 +34,7 @@ export default function PrimaryButton({
           : undefined
       }
       className={clsx(
-        "inline-flex items-center font-medium transition-all duration-300",
+        "inline-flex items-center font-medium transition-all duration-300 cursor-pointer",
         "shadow-lg hover:shadow-xl focus:outline-none",
         "focus:ring-2 focus:ring-teal-500 focus:ring-offset-2",
         sizeClasses[size],
