@@ -40,6 +40,7 @@ export default function Button({ children = "", onClick, size = "md" }) {
         damping: 20,
       }}
       className={`
+        cursor-pointer
         group
         inline-flex items-center gap-2 md:gap-3
         rounded-full

@@ -25,23 +25,24 @@ export const HERO_SLIDES = [
   {
     id: 1,
     image: '/1.jpeg',
-    title: "We are innovation. We are technology.",
-    subtitle: "We want to be the leading company by innovation, expanding our businesses by diversification & geographical growth exceeding all stakeholders expectations.",
-    cta: { label: "Consult With Us" },
+    title: "M.A.H.Y. KHOORY & CO., LLC",
+    subtitle: "As one of the leading business hubs in the region we set an example for best practice in trade, design and service. We are a diversified group of companies with eight independent business units with our corporate office in Dubai.",
+    cta: { label: "Our Business Groups" },
   },
   {
     id: 2,
     image: "/2.jpeg",
-    title: "Design that inspires confidence",
-    subtitle: "Advanced engineering for every journey.",
-    cta: { label: "Explore Models" },
+    title: "M.A.H.Y. KHOORY ENGINEERING",
+    subtitle: "Designing and installing Pumping Systems\nOur engineering division has been designing and installing pumping systems since 1935.",
+    cta: { label: "Learn More" },
+    otherCta: { label: "Our Products" },
   },
   {
     id: 3,
     image: "/3.jpeg",
-    title: "Performance redefined",
-    subtitle: "Precision meets innovation.",
-    cta: { label: "Learn More" },
+    title: "Innovation in Research & Trading",
+    subtitle: "Empowering The GCC Skyline.",
+    cta: { label: "Products" },
   },
 ];
 
