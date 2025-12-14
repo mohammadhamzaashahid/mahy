@@ -66,16 +66,21 @@ export default function Footer() {
                         <Link
                             href={brand.logo.href}
                             aria-label={brand.logo.alt}
-                            className="inline-flex items-center"
+                            className="inline-flex items-center justify-center sm:justify-start"
                         >
                             <Image
                                 src={brand.logo.src}
                                 alt={brand.logo.alt}
                                 width={brand.logo.width}
                                 height={brand.logo.height}
-                                sizes="(max-width: 768px) 120px, 140px"
-                                className="h-7 sm:h-8 md:h-9 w-auto object-contain"
+                                sizes="(max-width: 640px) 220px, (max-width: 1024px) 190px, (max-width: 1280px) 220px, 260px"
+                                className="
+    w-auto object-contain
+    h-12 sm:h-10 md:h-11
+    lg:h-14 xl:h-16 2xl:h-[72px]
+  "
                             />
+
                         </Link>
 
                         <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-md">
