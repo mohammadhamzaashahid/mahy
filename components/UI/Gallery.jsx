@@ -28,6 +28,10 @@ function Gallery() {
             title: "Ras al khema",
             image: "/gallery/gallery-4.jpg"
         },
+        {
+            title: "Al-ain",
+            image: "/gallery/gallery-5.jpg"
+        },
     ]
 
     const [index, setIndex] = useState(0);
@@ -52,7 +56,7 @@ function Gallery() {
                     />
                 </motion.div>
             </AnimatePresence>
-            <div className="absolute inset-0 text-white grid grid-cols-2 lg:grid-cols-4 bg-black/10">
+            <div className="absolute inset-0 text-white grid grid-cols-2 lg:grid-cols-5 bg-black/10">
                 {items.map((item, idx) => (
                     <div
                         key={idx}
