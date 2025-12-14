@@ -25,11 +25,11 @@ function Gallery() {
             image: "/gallery/gallery-3.jpeg"
         },
         {
-            title: "Ras al khema",
+            title: "Ras al Khaimah",
             image: "/gallery/gallery-4.jpg"
         },
         {
-            title: "Al-ain",
+            title: "Al Ain",
             image: "/gallery/gallery-5.jpg"
         },
     ]
