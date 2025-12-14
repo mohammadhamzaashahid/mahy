@@ -10,6 +10,7 @@ import HeroVideo from "@/components/UI/HeroVideo";
 import FloatingMenu from "@/components/UI/FloatingMenu";
 import PinnedSection from "@/components/UI/PinnedSection";
 import Gallery from "@/components/UI/Gallery";
+import Footer from "@/components/Layout/Footer";
 
 
 export const SECTIONS = [
@@ -18,6 +19,7 @@ export const SECTIONS = [
   { id: "partners", label: "Partners" },
   { id: "enterprise", label: "Enterprise" },
   { id: "after-sales", label: "After Sales" },
+  { id: "useful-links", label: "Important Links" },
   { id: "contact", label: "Contact" },
   { id: "careers", label: "Careers" },
 ];
@@ -77,6 +79,11 @@ export default function Home() {
 
       <section id="after-sales">
         <BusinessSteps />
+      </section>
+
+      <section id="useful-links">
+
+        <Footer />
       </section>
     </main>
   );
