@@ -3,14 +3,15 @@ import EnterprisePinnedSection from "@/components/Layout/EnterprisePinnedSection
 import Navbar from "@/components/Layout/Navbar.jsx";
 import PartnersSection from "@/components/Layout/PartnersSection";
 import SectionNavigator from "@/components/Navigator/SectionNavigator.jsx";
-import BusinessSteps from "@/components/UI/BusinessSteps";
-import DesignProcess from "@/components/UI/DesignProcess";
+import BusinessSteps from "@/components/UI/home/BusinessSteps";
+import DesignProcess from "@/components/UI/home/DesignProcess";
 import HeroCarousel from "@/components/UI/HeroCarousel.jsx";
 import HeroVideo from "@/components/UI/HeroVideo";
 import FloatingMenu from "@/components/UI/FloatingMenu";
 import PinnedSection from "@/components/UI/PinnedSection";
-import Gallery from "@/components/UI/Gallery";
+import Gallery from "@/components/UI/home/Gallery";
 import Footer from "@/components/Layout/Footer";
+import WhyUs from "@/components/UI/home/WhyUs";
 import KeyStatsSection from "@/components/UI/KeyStatsSection";
 
 
@@ -84,8 +85,11 @@ export default function Home() {
         <BusinessSteps />
       </section>
 
-      <section id="useful-links">
+      <section id="why-us">
+        <WhyUs />
+      </section>
 
+      <section id="useful-links">
         <Footer />
       </section>
     </main>

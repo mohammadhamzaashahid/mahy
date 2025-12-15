@@ -9,6 +9,7 @@ const sections = [
   { id: "partners", label: "Partners", lightBg: true },
   { id: "enterprise", label: "Enterprise", lightBg: false },
   { id: "after-sales", label: "After Sales", lightBg: true },
+  { id: "why-us", label: "Why Us", lightBg: false },
 ];
 
 export default function FloatingMenu() {
