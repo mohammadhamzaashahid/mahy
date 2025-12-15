@@ -14,23 +14,23 @@ function Gallery() {
     const items = [
         {
             title: "Abu dhabi",
-            image: "/gallery/gallery-1.jpeg"
+            image: "/gallery/gallery-1.png"
         },
         {
             title: "Dubai",
-            image: "/gallery/gallery-2.jpg"
+            image: "/gallery/gallery-2.png"
         },
         {
             title: "Sharjah",
-            image: "/gallery/gallery-3.jpeg"
+            image: "/gallery/gallery-3.png"
         },
         {
             title: "Ras al Khaimah",
-            image: "/gallery/gallery-4.jpg"
+            image: "/gallery/gallery-4.png"
         },
         {
             title: "Al Ain",
-            image: "/gallery/gallery-5.jpg"
+            image: "/gallery/gallery-5.png"
         },
     ]
 

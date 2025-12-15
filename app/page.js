@@ -11,6 +11,7 @@ import FloatingMenu from "@/components/UI/FloatingMenu";
 import PinnedSection from "@/components/UI/PinnedSection";
 import Gallery from "@/components/UI/Gallery";
 import Footer from "@/components/Layout/Footer";
+import WhyUs from "@/components/UI/WhyUs";
 
 
 export const SECTIONS = [
@@ -81,8 +82,11 @@ export default function Home() {
         <BusinessSteps />
       </section>
 
-      <section id="useful-links">
+      <section id="why-us">
+        <WhyUs />
+      </section>
 
+      <section id="useful-links">
         <Footer />
       </section>
     </main>
