@@ -32,7 +32,7 @@ export default function CompaniesCard({ category, title, logo, onClick }) {
         </div>
       </div>
 
-      <h3 className="mt-10 text-[28px] font-semibold leading-[1.12] text-[#0B0F14]">
+      <h3 className="mt-10 text-[28px] font-medium leading-[1.12] text-[#0B0F14]">
         {title}
       </h3>
 
@@ -41,7 +41,7 @@ export default function CompaniesCard({ category, title, logo, onClick }) {
           onClick={onClick}
           className="
             inline-flex items-center justify-center
-            h-[40px] w-[70px]
+            h-[40px] w-[100px]
             rounded-full
             border border-[#0B6B61]
             text-[#0B0F14]
