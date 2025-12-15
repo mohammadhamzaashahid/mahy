@@ -1,6 +1,7 @@
 "use client";
 
-import AnimatedCounter from "@/components/ui/AnimatedCounter";
+import AnimatedCounter from "./AnimatedCounter";
+
 
 const STATS = [
     { value: 3200, label: "Employees" },
