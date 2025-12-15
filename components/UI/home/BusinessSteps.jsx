@@ -23,7 +23,7 @@ function BusinessSteps() {
     return (
         <div className="py-20">
             <h2 className="text-center font-bold text-4xl mb-30 mx-5">To Get successful business have to follow some steps</h2>
-            <div className="grid lg:grid-cols-2 gap-32 gap-x-20 lg:gap-30 px-4 lg:px-40 xl:grid-cols-3">
+            <div className="grid lg:grid-cols-2 gap-40 gap-x-20 lg:gap-30 px-4 lg:px-40 xl:grid-cols-3">
                 {steps.map((step, i) => (
                     <motion.div
                         key={step.id}
