@@ -11,6 +11,7 @@ import FloatingMenu from "@/components/UI/FloatingMenu";
 import PinnedSection from "@/components/UI/PinnedSection";
 import Gallery from "@/components/UI/Gallery";
 import Footer from "@/components/Layout/Footer";
+import KeyStatsSection from "@/components/UI/KeyStatsSection";
 
 
 export const SECTIONS = [
@@ -67,6 +68,8 @@ export default function Home() {
       <section id="gallery">
         <Gallery />
       </section>
+
+       <KeyStatsSection />
 
       <section id="partners">
         <PartnersSection />
