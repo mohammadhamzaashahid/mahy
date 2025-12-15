@@ -107,7 +107,7 @@ export default function WhyUs() {
                                     transition={{ duration: 0.3, ease: "easeInOut" }}
                                     className="overflow-hidden"
                                 >
-                                    <p className="mb-1">{item.content}</p>
+                                    <p className="mb-1 text-gray-500">{item.content}</p>
                                 </motion.div>
                             </AccordionContent>
                         </AccordionItem>
