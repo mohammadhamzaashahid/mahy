@@ -13,6 +13,8 @@ import Gallery from "@/components/UI/home/Gallery";
 import Footer from "@/components/Layout/Footer";
 import WhyUs from "@/components/UI/home/WhyUs";
 import KeyStatsSection from "@/components/UI/KeyStatsSection";
+import CompaniesCard from "@/components/Layout/Industries/CompaniesCard";
+import CompaniesGrid from "@/components/Layout/Industries/CompaniesGrid";
 
 
 export const SECTIONS = [
@@ -51,6 +53,7 @@ export const HERO_SLIDES = [
   },
 ];
 
+
 export default function Home() {
   return (
     <main className="bg-white min-h-screen overflow-x-hidden">
@@ -70,7 +73,7 @@ export default function Home() {
         <Gallery />
       </section>
 
-       <KeyStatsSection />
+      <KeyStatsSection />
 
       <section id="partners">
         <PartnersSection />
@@ -92,6 +95,7 @@ export default function Home() {
       <section id="useful-links">
         <Footer />
       </section>
+
     </main>
   );
 }
