@@ -28,10 +28,10 @@ function CheckFilters({ searchKey, label, list }) {
 
     return (
         <div className="mb-6">
-            <p className="text-gray-600 font-medium mb-4 pb-2 border-b border-gray-300">{label}</p>
+            <p className="font-medium text-sm mb-4 pb-3 border-b border-gray-200">{label}</p>
             <div className="flex flex-col space-y-3">
                 {list.map((item, index) => (
-                    <div key={item} className="flex items-center gap-1">
+                    <div key={item} className="flex items-center gap-2">
                         <input
                             type="checkbox"
                             id={item}
@@ -43,7 +43,7 @@ function CheckFilters({ searchKey, label, list }) {
                         />
                         <label
                             htmlFor={item}
-                            className={`cursor-pointer hover:text-teal-700
+                            className={`text-sm cursor-pointer text-gray-600 hover:text-teal-700
                                 ${searchValues.includes(index.toString())
                                 && "text-teal-600 font-medium "}
                             `}

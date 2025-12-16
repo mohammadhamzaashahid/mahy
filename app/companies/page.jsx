@@ -1,4 +1,6 @@
 import Filters from '@/components/UI/companies/Filters';
+import Hero from '@/components/UI/companies/Hero';
+import List from '@/components/UI/companies/List';
 import Image from 'next/image';
 import React from 'react'
 
@@ -53,44 +55,38 @@ const companies = [
 
 async function Companies({ searchParams }) {
     const params = await searchParams;
+    const search = params.search;
+
     const getCompanies = () => {
-        const sectors = params.sector?.split(",") || [];
-        const locations = params.location?.split(",") || [];
-        const sizes = params.size?.split(",") || [];
+        let filteredCompanies = search ? companies.filter((company) =>
+            company.name.toLowerCase().includes(search.toLowerCase())
+        ) : companies;
 
-        console.log(sectors);
+        const sectorIdx = params.sector?.split(",").map(Number) || [];
+        const locationIdx = params.location?.split(",").map(Number) || [];
+        const sizeIdx = params.size?.split(",").map(Number) || [];
 
+        const sectorValues = sectorIdx.map((i) => filters[0].options[i]);
+        const locationValues = locationIdx.map((i) => filters[2].options[i]);
+        const sizeValues = sizeIdx.map((i) => filters[1].options[i]);
 
-        return companies.filter((company) => {
-            if (sectors.length && !sectors.includes(company.sector)) return false;
-            if (locations.length && !locations.includes(company.location)) return false;
-            if (sizes.length && !sizes.includes(company.size)) return false;
+        return filteredCompanies.filter((company) => {
+            if (sectorValues.length && !sectorValues.includes(company.sector)) return false;
+            if (locationValues.length && !locationValues.includes(company.location)) return false;
+            if (sizeValues.length && !sizeValues.includes(company.size)) return false;
             return true;
         });
     };
 
     return (
-        <main className='max-w-7xl mx-auto px-4 pt-22 py-8'>
-            <div className='md:grid gap-2 grid-cols-1 lg:grid-cols-10'>
-                <div className='col-span-2 px-4'>
-                    <Filters filters={filters} />
+        <main className='bg-gray-200 pb-14'>
+            <Hero />
+            <div id='list' className='max-w-7xl mx-auto md:grid gap-5 grid-cols-1 lg:grid-cols-10 pt-20'>
+                <div className='col-span-2 px-4 py-7 rounded-3xl bg-gray-50'>
+                    <Filters filters={filters} search={search} />
                 </div>
                 <div className="col-span-8">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {getCompanies().map((company, index) => (
-                            <div key={index} className="rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200 border border-gray-200 cursor-pointer">
-                                <div>
-                                    <Image src={company.image} alt={company.name} width={400} height={250} className="w-full h-48 object-cover" />
-                                </div>
-                                <div className='py-4 px-5'>
-                                    <h3 className="text-lg font-semibold mb-2">{company.name}</h3>
-                                    <p className="text-sm text-gray-600 mb-1"><span className="font-medium">Sector:</span> {company.sector}</p>
-                                    <p className="text-sm text-gray-600 mb-1"><span className="font-medium">Size:</span> {company.size}</p>
-                                    <p className="text-sm text-gray-600"><span className="font-medium">Location:</span> {company.location}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <List companies={getCompanies()} />
                 </div>
             </div>
         </main>

@@ -6,7 +6,8 @@ function ResetButton() {
     const pathname = usePathname();
 
     const handleReset = () => {
-        router.replace(pathname);
+        // add #list to the URL to jump to the list section
+        router.replace(`${pathname}#list`);
     }
 
     return (
