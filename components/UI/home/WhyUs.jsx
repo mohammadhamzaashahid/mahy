@@ -76,7 +76,7 @@ export default function WhyUs() {
     ];
 
     return (
-        <div className="grid lg:grid-cols-2 lg:h-[60vh]">
+        <div className="grid lg:grid-cols-2 lg:h-[70vh]">
             <motion.div
                 className="p-8 lg:p-15"
                 variants={containerVariants}
@@ -84,7 +84,7 @@ export default function WhyUs() {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                <p className="text-teal-600 font-bold text-3xl uppercase">You should choose us</p>
+                <p className="text-teal-600 font-bold text-3xl uppercase">Why you should choose us?</p>
                 <p className="text-gray-600 my-5">We combine innovation, sustainability, and trusted partnerships to deliver solutions that are efficient, reliable, and built for long-term value.</p>
                 <Accordion
                     type="single"

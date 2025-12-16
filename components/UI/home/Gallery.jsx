@@ -14,11 +14,11 @@ function Gallery() {
     const items = [
         {
             title: "Abu dhabi",
-            image: "/gallery/gallery-1.jpg"
+            image: "/gallery/gallery-2.jpg"
         },
         {
             title: "Dubai",
-            image: "/gallery/gallery-2.jpg"
+            image: "/gallery/gallery-1.jpg"
         },
         {
             title: "Sharjah",

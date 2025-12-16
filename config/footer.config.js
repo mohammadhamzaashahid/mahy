@@ -6,17 +6,17 @@ import {
 } from "react-icons/fa6";
 
 export const FOOTER_CONFIG = {
-   brand: {
+  brand: {
     name: "MAHY Khoory",
     logo: {
-      src: "/MAHY.png", 
+      src: "/MAHY.png",
       alt: "MAHY Khoory & Co. LLC",
-      href: "/", 
-      width: 140, 
+      href: "/",
+      width: 140,
       height: 32,
     },
     description:
-      "Diversified business group delivering engineering, trading, and after-sales excellence across the GCC region.",
+      "We are the M.A.H.Y. Khoory Group, one of the leaders in innovation and technology in the region and beyond. We are a conglomerate of diverse companies and business units, with a workforce of over 3100+ people.",
     status: {
       label: "All services are operational",
       active: true,

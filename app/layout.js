@@ -16,19 +16,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "My Page Title",
-  description: "Page description",
+  metadataBase: new URL("https://mahy.vercel.app"),
+  title: "M.A.H.Y. Khoory & CO. LLC",
+  description: "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
   openGraph: {
-    title: "My Page Title",
-    description: "Page description",
+    title: "M.A.H.Y. Khoory & CO. LLC",
+    description: "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
+        url: "/gallery/icon.png",
+        width: 1000,
         height: 630,
       },
     ],
   },
+};
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({ children }) {
@@ -37,6 +43,7 @@ export default function RootLayout({ children }) {
       <body
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
         <Navbar />
         {children}

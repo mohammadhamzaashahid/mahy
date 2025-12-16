@@ -31,18 +31,27 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full">
+    <header className="fixed top-0 left-0 z-50 w-full " style={{
+      paddingTop: "env(safe-area-inset-top)",
+    }}>
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10 py-2 min-h-[62px] rounded-b-full bg-black/50 backdrop-blur-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
         <div className="flex items-center pr-4">
-          <Image
-            src="/MAHY.png"
-            alt="MAHY Khoory & Co."
-            width={220}
-            height={90}
-            priority
-            className="w-[150px] sm:w-[160px] md:w-[170px] lg:w-[180px] xl:w-[200px] object-contain"
-          />
+          <Link
+            href="/"
+            aria-label="MAHY Home"
+            className="inline-flex items-center"
+          >
+            <Image
+              src="/MAHY.png"
+              alt="MAHY Khoory & Co."
+              width={220}
+              height={100}
+              priority
+              className="w-[150px] sm:w-[160px] md:w-[170px] lg:w-[180px] xl:w-[200px] object-contain"
+            />
+          </Link>
         </div>
+
         <ul className="hidden lg:flex items-center gap-6 text-white text-sm font-medium">
           {NAVIGATION.map((item) => {
             if (item.linkType === "dropdown") {

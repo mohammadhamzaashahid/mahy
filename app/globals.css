@@ -107,6 +107,7 @@ body {
   animation: marquee linear infinite;
 }
 
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -147,4 +148,23 @@ html {
 
 button {
   cursor: pointer;
+}
+
+@keyframes arrow-loop {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  40% {
+    transform: translateX(140%);
+    opacity: 0;
+  }
+  41% {
+    transform: translateX(-140%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
