@@ -10,7 +10,7 @@ function PageHeading({ title, description, image }) {
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="col-span-2 h-[60vh] lg:h-[70vh] relative"
+                    className="col-span-2 h-[50vh] lg:h-[70vh] relative"
                 >
                     <Image
                         src={image}
@@ -21,7 +21,7 @@ function PageHeading({ title, description, image }) {
                     />
                 </motion.div>
             </div>
-            <div className="col-span-3 py-20 px-15 flex flex-col justify-end bg-slate-950">
+            <div className="col-span-3 px-10 py-20 lg:px-15 flex flex-col justify-end bg-slate-950">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
