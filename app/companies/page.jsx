@@ -1,7 +1,6 @@
 import Filters from '@/components/UI/companies/Filters';
-import Hero from '@/components/UI/companies/Hero';
+import PageHeading from '@/components/UI/PageHeading';
 import List from '@/components/UI/companies/List';
-import Image from 'next/image';
 import React from 'react'
 
 const filters = [
@@ -78,13 +77,15 @@ async function Companies({ searchParams }) {
         });
     };
 
+
     return (
         <main className='bg-gray-50 pb-14'>
-            <Hero />
-            <div id='list' className='max-w-7xl mx-auto md:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20'>
-                <div className='col-span-2 px-4 py-7 rounded-3xl bg-white border border-[#E7E3DA] md:sticky md:top-20 lg:top-24 h-fit mb-10 lg:mb-0'>
-                    <Filters filters={filters} search={search} />
-                </div>
+            <PageHeading title={"Our Portfolio"}
+                description={"The Fund seeks to build a rich investment portfolio of companies across diverse sectors in UAE and beyond, in line with UAE Vision."}
+                image={"/gallery/gallery-1.png"}
+            />
+            <div id='list' className='relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20'>
+                <Filters filters={filters} search={search} />
                 <div className="col-span-8">
                     <List companies={getCompanies()} />
                 </div>

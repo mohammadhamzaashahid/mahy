@@ -14,7 +14,9 @@ function List({ companies }) {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true, amount: 0.3 }}
                 >
-                    <CompaniesCard category={company.sector} title={company.name} logo={company.image} onClick={() => { }} />
+                    <CompaniesCard category={company.sector} title={company.name} logo={company.image} onClick={() => {
+                        console.log('clicked');
+                    }} />
                 </motion.div>
             ))}
         </div>

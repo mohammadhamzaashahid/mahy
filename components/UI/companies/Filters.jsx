@@ -5,6 +5,7 @@ import { HiSearch } from 'react-icons/hi'
 import CheckFilters from './CheckFilters'
 import ResetButton from './ResetButton'
 import { usePathname, useRouter } from 'next/navigation'
+import { motion, AnimatePresence } from "framer-motion";
 
 function Filters({ filters, search }) {
 
@@ -15,25 +16,49 @@ function Filters({ filters, search }) {
         e.preventDefault();
         router.replace(`${pathname}?search=${searchValue}#list`);
         setSearchValue("");
+        setShowFilters(false);
     }
+
+    const [showFilters, setShowFilters] = React.useState(false);
 
     return (
         <Fragment>
-            <div className="relative mb-7 group">
-                <form onSubmit={onSubmit}>
-                    <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} name='search' className="border border-gray-300 focus:outline-teal-600 rounded-xl py-2 px-4 w-full text-sm pr-8 relative z-10" placeholder="" />
-                    <div className='absolute inset-0 flex justify-end items-center right-2'>
-                        <HiSearch className='text-teal-600' />
-                    </div>
-                </form>
+            <button
+                onClick={() => setShowFilters(!showFilters)}
+                className={`
+  fixed bottom-3 left-3 ${showFilters ? "z-50" : "z-20"}
+  rounded-3xl
+  border border-teal-600/40
+  bg-white/20
+  backdrop-blur-xl
+  shadow-2xl
+  px-6 py-2
+  text-teal-600
+  lg:hidden
+  backdrop-saturate-150`}
+            >
+                {showFilters ? "Close" : "Filters"}
+            </button>
+
+            <div className={`
+                ${showFilters ? "h-screen pt-20 opacity-100" : "opacity-0 pointer-events-none lg:pointer-events-auto lg:opacity-100"}
+                fixed z-40 transition-opacity duration-500 inset-0 col-span-2 px-4 py-7 rounded-3xl bg-white border border-[#E7E3DA] lg:sticky lg:top-20 h-fit mb-10 lg:mb-0`}>
+                <div className="relative mb-7 group">
+                    <form onSubmit={onSubmit}>
+                        <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} name='search' className="border border-gray-300 focus:outline-teal-600 rounded-xl py-2 px-4 w-full text-sm pr-8 relative z-10" placeholder="" />
+                        <div className='absolute inset-0 flex justify-end items-center right-2'>
+                            <HiSearch className='text-teal-600' />
+                        </div>
+                    </form>
+                </div>
+                <div className="flex justify-between flex-wrap items-center gap-4 mb-6">
+                    <h2 className="font-medium">Filters</h2>
+                    <ResetButton setShowFilters={setShowFilters} />
+                </div>
+                {filters.map((filter, index) => (
+                    <CheckFilters key={index} searchKey={filter.key} label={filter.title} list={filter.options} />
+                ))}
             </div>
-            <div className="flex justify-between flex-wrap items-center gap-4 mb-6">
-                <h2 className="font-medium">Filters</h2>
-                <ResetButton />
-            </div>
-            {filters.map((filter, index) => (
-                <CheckFilters key={index} searchKey={filter.key} label={filter.title} list={filter.options} />
-            ))}
         </Fragment>
     )
 }

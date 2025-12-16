@@ -1,13 +1,13 @@
 import { usePathname, useRouter } from "next/navigation";
 
-function ResetButton() {
+function ResetButton({ setShowFilters }) {
 
     const router = useRouter();
     const pathname = usePathname();
 
     const handleReset = () => {
-        // add #list to the URL to jump to the list section
         router.replace(`${pathname}#list`);
+        setShowFilters(false);
     }
 
     return (
