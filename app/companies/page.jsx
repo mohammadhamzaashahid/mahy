@@ -2,6 +2,7 @@ import Filters from '@/components/UI/companies/Filters';
 import PageHeading from '@/components/UI/PageHeading';
 import List from '@/components/UI/companies/List';
 import React from 'react'
+import Breadcrumb from '@/components/UI/Breadcrumb';
 
 const filters = [
     {
@@ -84,6 +85,7 @@ async function Companies({ searchParams }) {
                 description={"The Fund seeks to build a rich investment portfolio of companies across diverse sectors in UAE and beyond, in line with UAE Vision."}
                 image={"/gallery/gallery-2.jpg"}
             />
+            <Breadcrumb/>
             <div id='list' className='relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20'>
                 <Filters filters={filters} search={search} />
                 <div className="col-span-8">
