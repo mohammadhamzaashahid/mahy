@@ -1,6 +1,5 @@
 
 import EnterprisePinnedSection from "@/components/Layout/EnterprisePinnedSection";
-import Navbar from "@/components/Layout/Navbar.jsx";
 import PartnersSection from "@/components/Layout/PartnersSection";
 import SectionNavigator from "@/components/Navigator/SectionNavigator.jsx";
 import BusinessSteps from "@/components/UI/home/BusinessSteps";
@@ -54,7 +53,6 @@ export const HERO_SLIDES = [
 export default function Home() {
   return (
     <main className="bg-white min-h-screen overflow-x-hidden">
-      <Navbar />
       {/* <SectionNavigator sections={SECTIONS} /> */}
       <FloatingMenu />
       <div id="home">
@@ -70,7 +68,7 @@ export default function Home() {
         <Gallery />
       </section>
 
-       <KeyStatsSection />
+      <KeyStatsSection />
 
       <section id="partners">
         <PartnersSection />
