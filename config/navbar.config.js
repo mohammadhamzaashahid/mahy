@@ -4,17 +4,21 @@ export const NAVIGATION = [
         label: "Home",
         href: "/",
         type: "link",
+        linkType: "link",
     },
     {
         id: "about",
         label: "About Us",
         href: "/about",
         type: "link",
+        linkType: "link",
     },
     {
         id: "companies",
         label: "Companies",
-        type: "dropdown",
+        href: "/companies",
+        type: "link",
+        linkType: "dropdown",
         items: [
             {
                 label: "Trading Division",
@@ -103,7 +107,9 @@ export const NAVIGATION = [
     {
         id: "aftersales",
         label: "Shop",
-        type: "dropdown",
+        type: "link",
+        linkType: "dropdown",
+        href: "/",
         items: [
             { label: "Spare Parts", href: "/after-sales/spare-parts" },
             { label: "Maintenance", href: "/after-sales/maintenance" },
@@ -112,7 +118,8 @@ export const NAVIGATION = [
     {
         id: "careers",
         label: "Careers",
-        href: "/careers",
+        href: "/",
         type: "link",
+        linkType: "link",
     },
 ];
