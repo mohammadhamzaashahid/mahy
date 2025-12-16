@@ -62,16 +62,16 @@ export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
 export default function WhyUs() {
     const items = [
         {
-            title: "Product Information",
-            content: "Lorem ipsum dolor sit amet consecteture Duis aute irure dolor innocente reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla."
+            title: "Sustainable & Smart Solutions",
+            content: "From water pumping to recycling, our products are designed to protect the environment while delivering unmatched performance and efficiency."
         },
         {
-            title: "Shipping Details",
-            content: "Lorem ipsum dolor sit amet consecteture Duis aute irure dolor innocente reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla."
+            title: "Global Partnerships, Local Expertise",
+            content: "We collaborate with world-class brands like Grundfos to bring cutting-edge technology tailored to regional needs."
         },
         {
-            title: "Return Policy",
-            content: "Lorem ipsum dolor sit amet consecteture Duis aute irure dolor innocente reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla."
+            title: "Seamless Service & Support",
+            content: "Our dedicated after-sales team ensures smooth installation, prompt maintenance, and long-term peace of mind - every step of the way."
         },
     ];
 
@@ -84,7 +84,7 @@ export default function WhyUs() {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                <p className="text-teal-500 font-bold uppercase">Exclusive Benefits</p>
+                {/* <p className="text-teal-500 font-bold uppercase">Exclusive Benefits</p> */}
                 <p className="text-cyan-900 font-bold text-3xl mt-1">You should choose us</p>
                 <p className="text-gray-600 my-5">Lorem ipsum dolor sit amet consecteture Duis aute irure dolor innocente reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
                 <Accordion
@@ -116,7 +116,7 @@ export default function WhyUs() {
             </motion.div>
             <div className="relative w-full h-80 lg:h-full">
                 <Image
-                    src="/office.jpg"
+                    src="/gallery/gallery-3.jpg"
                     alt="Why Us"
                     fill
                     className="object-cover"

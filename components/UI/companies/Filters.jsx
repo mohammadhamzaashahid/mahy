@@ -37,7 +37,6 @@ function Filters({ filters, search }) {
   border border-teal-600/40
   bg-white/20
   backdrop-blur-xl
-  shadow-2xl
   px-6 py-2
   text-teal-600
   lg:hidden
@@ -48,7 +47,7 @@ function Filters({ filters, search }) {
 
             <div className={`
                 ${showFilters ? "h-screen pt-20 opacity-100" : "opacity-0 pointer-events-none lg:pointer-events-auto lg:opacity-100"}
-                overflow-y-scroll fixed z-40 transition-opacity duration-500 inset-0 col-span-2 px-4 py-7 rounded-3xl bg-white border border-[#E7E3DA] lg:sticky lg:top-20 h-fit mb-10 lg:mb-0`}>
+                overflow-y-scroll fixed z-40 transition-opacity duration-500 inset-0 col-span-2 px-4 pt-7 pb-12 lg:pb-7 rounded-3xl bg-white border border-[#E7E3DA] lg:sticky lg:top-20 h-fit mb-10 lg:mb-0`}>
                 <div className="relative mb-7 group">
                     <form onSubmit={onSubmit}>
                         <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} name='search' className="border border-gray-300 focus:outline-teal-600 rounded-xl py-2 px-4 w-full text-sm pr-8 relative z-10" placeholder="" />
