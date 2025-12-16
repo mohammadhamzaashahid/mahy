@@ -35,7 +35,7 @@ export default function Footer() {
     };
     return (
         <footer
-            className="relative bg-slate-950 border-t border-slate-800 overflow-hidden"
+            className="relative z-10 bg-slate-950 border-t border-slate-800 overflow-hidden"
             ref={footerRef}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
@@ -53,7 +53,7 @@ export default function Footer() {
                 }}
             />
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div
                     className="
             grid gap-12

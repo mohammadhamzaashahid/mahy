@@ -86,10 +86,6 @@ export default function Home() {
       <section id="why-us">
         <WhyUs />
       </section>
-{/* 
-      <section id="useful-links">
-        <Footer />
-      </section> */}
     </main>
   );
 }
