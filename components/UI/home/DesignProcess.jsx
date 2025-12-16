@@ -22,29 +22,29 @@ function DesignProcess() {
     const processes = [
         {
             id: 1,
-            title: "Planning",
-            description: "Our next step is to thoroughly research and organize your strengths and weaknesses. We start with understanding how you want to position your website and offer technical assistance.",
+            title: "Understanding Needs",
+            description: "We begin by listening carefully to our customers and stakeholders, identifying their unique requirements and challenges. This ensures every solution is tailored to deliver maximum impact.",
             icon: "/processes/planning.png",
             horizontalShift: "left-0"
         },
         {
             id: 2,
-            title: "Design",
-            description: "The next stage is where we start with designing the website, checking the sitemap, optimizing user experience and making sure the website is responsive across all digital fronts.",
+            title: "Designing Sustainable Solutions",
+            description: "Our experts craft innovative, eco-friendly, and cost-effective solutions that balance performance with environmental responsibility. Sustainability is embedded in every stage of our process.",
             icon: "/processes/design.png",
             horizontalShift: "left-22"
         },
         {
             id: 3,
-            title: "Development",
-            description: "We create initial mockups of the web design from scratch. Our team ensures to optimize the design and add content that is fully optimized to rank on different search engines.",
+            title: "Implementing with Excellence",
+            description: "From planning to execution, we apply advanced technologies and industry best practices to deliver reliable, high-quality outcomes. Precision and efficiency guide every project we undertake.",
             icon: "/processes/development.png",
             horizontalShift: "left-20"
         },
         {
             id: 4,
-            title: "Deployment",
-            description: "The launch phase is where (once the customer feels satisfied), we send the website live. We ensure the original design works smoothly and gain feedback on improvements.",
+            title: "Continuous Improvement & Support",
+            description: "We don't stop at delivery. Ongoing monitoring, feedback, and support help us refine our solutions, ensuring long-term value and exceeding stakeholder expectations.",
             icon: "/processes/deployment.png",
             horizontalShift: "left-12"
         }];
@@ -66,7 +66,7 @@ function DesignProcess() {
                     viewport={{ once: true }}
                 >
                     <Image
-                        src="/pumps.avif"
+                        src="/processes/customer-service.avif"
                         alt="Design Process"
                         fill
                         className="object-cover"

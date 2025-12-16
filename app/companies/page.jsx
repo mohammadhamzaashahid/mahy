@@ -82,7 +82,7 @@ async function Companies({ searchParams }) {
         <main className='bg-gray-50 pb-14'>
             <PageHeading title={"Our Portfolio"}
                 description={"The Fund seeks to build a rich investment portfolio of companies across diverse sectors in UAE and beyond, in line with UAE Vision."}
-                image={"/gallery/gallery-1.png"}
+                image={"/gallery/gallery-2.jpg"}
             />
             <div id='list' className='relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20'>
                 <Filters filters={filters} search={search} />
