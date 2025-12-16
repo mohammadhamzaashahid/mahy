@@ -10,7 +10,7 @@ function PageHeading({ title, description, image }) {
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="col-span-2 h-[60vh] lg:h-[70vh] relative"
+                    className="col-span-2 h-[50vh] lg:h-[70vh] relative"
                 >
                     <Image
                         src={image}
