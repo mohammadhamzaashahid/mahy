@@ -21,7 +21,7 @@ function Filters({ filters, search }) {
         <Fragment>
             <div className="relative mb-7 group">
                 <form onSubmit={onSubmit}>
-                    <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} name='search' className="border border-gray-300 focus:outline-teal-600 rounded-md py-2 px-4 w-full text-sm pr-8 relative z-10" placeholder="" />
+                    <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} name='search' className="border border-gray-300 focus:outline-teal-600 rounded-xl py-2 px-4 w-full text-sm pr-8 relative z-10" placeholder="" />
                     <div className='absolute inset-0 flex justify-end items-center right-2'>
                         <HiSearch className='text-teal-600' />
                     </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Hero() {
     return (
-        <div className="grid grid-cols-5">
+        <div className="lg:grid lg:grid-cols-5">
             <div className="col-span-2 overflow-hidden">
                 <motion.div
                     initial={{ opacity: 0, scale: 1.05 }}

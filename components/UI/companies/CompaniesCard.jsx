@@ -11,8 +11,8 @@ export default function CompaniesCard({ category, title, logo, onClick }) {
         w-full
         rounded-3xl
         border border-[#E7E3DA]
-        bg-gray-100
-        hover:bg-white
+        bg-white
+        hover:shadow-lg
         px-8 pt-8 pb-7
         overflow-hidden
         cursor-pointer
@@ -30,7 +30,7 @@ export default function CompaniesCard({ category, title, logo, onClick }) {
                         src={logo}
                         alt={title}
                         fill
-                        style={{ objectFit: "cover" }}
+                        style={{ objectFit: "contain" }}
                         priority
                     />
                 </div>

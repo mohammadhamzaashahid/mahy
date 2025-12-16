@@ -25,28 +25,28 @@ const filters = [
 const companies = [
     {
         name: "Tech Innovators",
-        image: "/gallery/gallery-1.png",
+        image: "/companies/Grundfos.jpg",
         sector: "Technology",
         size: "201-500",
         location: "North America"
     },
     {
         name: "Health Plus",
-        image: "/gallery/gallery-2.png",
+        image: "/companies/oventop.jpeg",
         sector: "Healthcare",
         size: "51-200",
         location: "Europe"
     },
     {
         name: "Finance Gurus",
-        image: "/gallery/gallery-3.png",
+        image: "/companies/partners-ariston.jpg",
         sector: "Finance",
         size: "500+",
         location: "Asia"
     },
     {
         name: "EduWorld",
-        image: "/gallery/gallery-4.png",
+        image: "/companies/partners-gaia.jpg",
         sector: "Education",
         size: "11-50",
         location: "Australia"
@@ -79,10 +79,10 @@ async function Companies({ searchParams }) {
     };
 
     return (
-        <main className='bg-gray-200 pb-14'>
+        <main className='bg-gray-50 pb-14'>
             <Hero />
-            <div id='list' className='max-w-7xl mx-auto md:grid gap-5 grid-cols-1 lg:grid-cols-10 pt-20'>
-                <div className='col-span-2 px-4 py-7 rounded-3xl bg-gray-50'>
+            <div id='list' className='max-w-7xl mx-auto md:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20'>
+                <div className='col-span-2 px-4 py-7 rounded-3xl bg-white border border-[#E7E3DA] md:sticky md:top-20 lg:top-24 h-fit mb-10 lg:mb-0'>
                     <Filters filters={filters} search={search} />
                 </div>
                 <div className="col-span-8">
