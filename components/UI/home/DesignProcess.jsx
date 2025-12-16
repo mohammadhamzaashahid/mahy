@@ -66,7 +66,7 @@ function DesignProcess() {
                     viewport={{ once: true }}
                 >
                     <Image
-                        src="/pumps.avif"
+                        src="/processes/customer-service.avif"
                         alt="Design Process"
                         fill
                         className="object-cover"

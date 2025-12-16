@@ -85,7 +85,7 @@ export default function WhyUs() {
                 viewport={{ once: true }}
             >
                 {/* <p className="text-teal-500 font-bold uppercase">Exclusive Benefits</p> */}
-                <p className="text-cyan-900 font-bold text-3xl mt-1">You should choose us</p>
+                <p className="text-teal-600 font-bold text-3xl uppercase">You should choose us</p>
                 <p className="text-gray-600 my-5">Lorem ipsum dolor sit amet consecteture Duis aute irure dolor innocente reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
                 <Accordion
                     type="single"
