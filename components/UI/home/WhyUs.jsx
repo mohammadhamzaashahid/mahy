@@ -84,9 +84,8 @@ export default function WhyUs() {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                {/* <p className="text-teal-500 font-bold uppercase">Exclusive Benefits</p> */}
                 <p className="text-teal-600 font-bold text-3xl uppercase">You should choose us</p>
-                <p className="text-gray-600 my-5">Lorem ipsum dolor sit amet consecteture Duis aute irure dolor innocente reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.</p>
+                <p className="text-gray-600 my-5">We combine innovation, sustainability, and trusted partnerships to deliver solutions that are efficient, reliable, and built for long-term value.</p>
                 <Accordion
                     type="single"
                     collapsible
@@ -116,7 +115,7 @@ export default function WhyUs() {
             </motion.div>
             <div className="relative w-full h-80 lg:h-full">
                 <Image
-                    src="/gallery/gallery-3.jpg"
+                    src="/office.jpg"
                     alt="Why Us"
                     fill
                     className="object-cover"
