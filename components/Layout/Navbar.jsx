@@ -118,21 +118,32 @@ export default function Navbar() {
 
                   return (
                     <li key={item.id}>
-                      <button
-                        type="button"
-                        className="flex w-full items-center justify-between rounded-2xl bg-white/5 px-4 py-3"
-                        onClick={() =>
-                          setMobileDropdown((prev) =>
-                            prev === item.id ? null : item.id
-                          )
-                        }
-                      >
-                        {item.label}
-                        <HiChevronDown
-                          className={`text-xl transition-transform ${expanded ? "rotate-180" : ""
-                            }`}
-                        />
-                      </button>
+                      <div className="flex items-center justify-between rounded-2xl bg-white/5 px-4 py-3">
+
+                        <Link
+                          href={item.href}
+                          onClick={closeMobileMenu}
+                          className="text-white"
+                        >
+                          {item.label}
+                        </Link>
+
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setMobileDropdown((prev) =>
+                              prev === item.id ? null : item.id
+                            );
+                          }}
+                          aria-expanded={expanded}
+                        >
+                          <HiChevronDown
+                            className={`text-xl transition-transform ${expanded ? "rotate-180" : ""
+                              }`}
+                          />
+                        </button>
+                      </div>
 
                       {expanded && (
                         <div className="mt-2 rounded-2xl bg-white/5 p-3">
@@ -153,6 +164,7 @@ export default function Navbar() {
                     </li>
                   );
                 }
+
 
                 return (
                   <li key={item.id}>
