@@ -76,7 +76,7 @@ export default function WhyUs() {
     ];
 
     return (
-        <div className="grid lg:grid-cols-2 lg:h-[70vh]">
+        <div className="grid lg:grid-cols-2 lg:h-[60vh]">
             <motion.div
                 className="p-8 lg:p-15"
                 variants={containerVariants}
