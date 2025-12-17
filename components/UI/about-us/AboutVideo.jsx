@@ -4,37 +4,43 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export default function AboutVideo() {
-    const ref = useRef(null);
+  const ref = useRef(null);
 
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["center end", "center start"],
-    });
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["center end", "center start"],
+  });
 
-    const scale = useTransform(
-        scrollYProgress,
-        [0, 0.5, 1],
-        [0.85, 1, 0.85]
-    );
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    [0.85, 1, 0.85]
+  );
 
-    return (
-        <motion.div
-            ref={ref}
-            style={{ scale }}
-            className="h-[50vh] lg:h-[90vh] w-[90vw]"
+  return (
+    <div className="w-full flex justify-center my-5 lg:my-16">
+            <motion.div
+        ref={ref}
+        style={{ scale }}
+        className="
+          relative
+          w-full
+          max-w-7xl
+          aspect-video
+          overflow-hidden
+        "
+      >
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
         >
-            <video
-                className="object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-            >
-                <source
-                    src="videos/hero-video.mp4"
-                    type="video/mp4"
-                />
-            </video>
-        </motion.div>
-    );
+          <source src="/videos/hero-video.mp4" type="video/mp4" />
+        </video>
+      </motion.div>
+
+    </div>
+  );
 }

@@ -5,45 +5,81 @@ import PrimaryButton from '@/components/UI/PrimaryButton';
 import Link from 'next/link';
 import AboutVideo from '@/components/UI/about-us/AboutVideo';
 import History from '@/components/UI/about-us/History';
+import ValuesSection from '@/components/UI/about-us/ValuesSection';
+import LeadersSection from '@/components/UI/about-us/LeadersSection';
+import ArrowActionButton from '@/components/UI/about-us/ArrowActionButton';
 
 async function About() {
 
     return (
-        <main className='bg-gray-50 pb-14'>
+        <main className='bg-gray-50'>
             <PageHeading title={"About Us"}
                 description={"The M.A.H.Y. Khoory Group is among the most trusted and recognized names in the United Arab Emirates. A leader in the regional market, we at the M.A.H.Y. Khoory Group are a diverse group of companies and business units that bring world-class technological products and services to our clients."}
                 image={"/gallery/MAHYABOUT.jpg"}
             />
             <Breadcrumb />
-            <div className='py-30 border-b border-gray-300'>
+            <div className='py-18 lg:py-16 border-b border-gray-300'>
                 <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
                     <h2 className='uppercase  font-bold'>Mission Statement</h2>
-                    <p className='text-teal-600 text-6xl font-bold uppercase mt-6 mb-10'>We make Trade Flow</p>
-                    <p className='text-lg'>To drive global trade forward through sustainable, innovative,
-                        and inclusive logistics solutions that create value for all our stakeholders, now and for the future.</p>
+                    <p className="
+  text-teal-600
+  font-bold
+  uppercase
+  mt-6
+  mb-10
+  text-3xl
+  sm:text-4xl
+  lg:text-5xl
+">
+                        We Make Flow Reliable
+                    </p>
+                    <p className='    mt-2
+    text-base
+    sm:text-lg
+    leading-relaxed
+    font-light
+    text-gray-800'>To provide high-quality pumping products and engineered solutions through trusted partnerships, continuous innovation, and exceptional service, creating long-term value for our customers, stakeholders, and communities.</p>
                     <Link className="mt-10" href={"/"}>
-                        <PrimaryButton
-                            label="Explore"
-                            size="md"
-                            bg="bg-gradient-to-r from-teal-600 to-emerald-600"
-                            hoverBg="hover:from-teal-500 hover:to-emerald-500"
-                            radius="rounded-full"
+                        <ArrowActionButton
+                            width="w-40"
+                            height="h-15"
+                            iconSize={29}
+                            ariaLabel="Our People"
                         />
+
                     </Link>
                 </div>
             </div>
-            <div className='py-30 border-b border-gray-300'>
-                <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
+            <div className='py-6 lg:py-8 border-b border-gray-300'>
+                <div className='flex flex-col justify-center items-center max-w-5xl mx-auto text-center'>
                     <h2 className='uppercase font-bold'>Our Purpose</h2>
-                    <p className='text-6xl font-bold uppercase mt-6 mb-10'>Change what's possible, for everyone.</p>
+                    <p className="
+  font-bold
+  uppercase
+  mt-6
+  mb-1
+  text-3xl
+  sm:text-4xl
+  lg:text-5xl
+">
+                        Change what's possible, for everyone.
+                    </p>
                     <AboutVideo />
-                    <p className="text-lg mt-8 font-light">Our purpose is to make trade flow and change what's possible for everyone.
-                        We aim to achieve this with fast, sustainable movement of products through a single platform for trade.
-                        This is our north star. It guides every decision we make and allows us to make a meaningful difference to the world.
-                        Whatever we do, wherever we do it, it all leads here.</p>
+                    <p
+                        className="
+    mt-2
+    text-base
+    sm:text-lg
+    leading-relaxed
+    font-light
+    text-gray-800
+  "
+                    >
+                        At M.A.H.Y. Khoory Group, our purpose is to deliver solutions that enrich lives while protecting the planet. We combine innovation, sustainability, and technology to create cost-effective products and services that empower communities, drive progress, and safeguard the environment for future generations.
+                    </p>
                 </div>
             </div>
-            <div className='py-30 border-b border-gray-300'>
+            <div className='py-24 lg:py-32 border-b border-gray-300'>
                 <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
                     <h2 className='text-6xl text-teal-600 font-bold uppercase'>Our History</h2>
                     <p className="text-lg mt-8 font-light">We're proud of our UAE heritage. From our beginnings in
@@ -52,6 +88,31 @@ async function About() {
                 </div>
                 <History />
             </div>
+
+            <div className='border-b border-gray-200'>
+            </div>
+            <ValuesSection
+                title="OUR PEOPLE"
+                description="Our dedicated team of more than 100,000 employees from over 150 nationalities ensure the smooth flow of trade. As an equal employer that recognises and values diversity and an inclusive culture, we empower and up-skill our people with opportunities to perform at their best."
+                imageSrc="/gallery/gallery-2.jpg"
+                imageAlt="Our people"
+                imagePosition="right"
+                ctaLabel="Learn More"
+                ctaHref="/people"
+            />
+            <div className='border-b border-gray-200'>
+            </div>
+            <LeadersSection />
+            <ValuesSection
+                title="OUR EXCELLENCE"
+                description="Our dedicated team of more than 100,000 employees from over 150 nationalities ensure the smooth flow of trade. As an equal employer that recognises and values diversity and an inclusive culture, we empower and up-skill our people with opportunities to perform at their best."
+                imageSrc="/gallery/gallery-6.jpg"
+                imageAlt="Our people"
+                imagePosition="left"
+                ctaLabel="Learn More"
+                ctaHref="/people"
+            />
+
         </main>
     )
 }
