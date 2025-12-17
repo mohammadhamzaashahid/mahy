@@ -53,8 +53,8 @@ function LogoItem({ logo, onHover }) {
             <Image
                 src={logo.src}
                 alt={logo.alt || "Company logo"}
-                width={160}
-                height={80}
+                width={140}
+                height={60}
                 className="
           object-contain
           opacity-60

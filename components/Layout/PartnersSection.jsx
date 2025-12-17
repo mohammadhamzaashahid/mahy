@@ -1,14 +1,14 @@
 import LogoMarquee from "../UI/LogoMarquee";
 
 const LOGOS = [
-  { src: "/companies/Grundfos.jpg", alt: "Grundfos" },
-  { src: "/companies/oventop.jpeg", alt: "Oventrop" },
-  { src: "/companies/partners-ariston.jpg", alt: "Ariston" },
-  { src: "/companies/partners-gaia.jpg", alt: "Gaia" },
-  { src: "/companies/partners-havells.jpg", alt: "Havells" },
-  { src: "/companies/partners-lister-petter.jpg", alt: "Lister Petter" },
-  { src: "/companies/partners-marathon-motor.jpg", alt: "Marathon Motor" },
-  { src: "/companies/partners-pakawaste.jpg", alt: "Pakawaste" },
+  { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994346/grundfos_lbiolu.png", alt: "Grundfos" },
+  { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/GAIA_r8o2xz.png", alt: "Gaia" },
+  { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/oventrop_v6j8mf.png", alt: "Oventrop" },
+  { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/ListerPetter_ea6myv.png", alt: "Lister Petter" },
+  { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/Marathon_rqvumo.png", alt: "Marathon Motor" },
+  { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/Artiston_dkapb8.png", alt: "Ariston" },
+  { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/PakaWaste_ltpkeg.png", alt: "Pakawaste" },
+  { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994346/Havells_wmzbot.png", alt: "Havells" },
 ];
 
 export default function PartnersSection() {
@@ -23,7 +23,7 @@ export default function PartnersSection() {
           We work only with the best to bring you only the best.
         </p>
       </div>
-      <LogoMarquee logos={LOGOS} speed={35} />
+      <LogoMarquee logos={LOGOS} speed={40} />
     </div>
   );
 }
