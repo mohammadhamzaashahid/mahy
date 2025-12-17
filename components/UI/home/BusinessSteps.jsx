@@ -17,7 +17,7 @@ const itemVariants = {
 function BusinessSteps() {
     const steps = [
         { id: 1, title: 'Commit to Sustainability', description: 'Drive growth responsibly by adopting eco-friendly practices that protect resources and support a cleaner future.', icon: '/icons/step1.png' },
-        { id: 2, title: 'Innovate & Diversify', description: 'Drive growth through innovation and diversification. Leverage advanced technologies, expand across industries, and adapt to evolving market demands.', icon: '/icons/step2.png' },
+        { id: 2, title: 'Innovate & Diversify', description: 'Drive growth through innovation, advanced technology, and smart diversification while adapting to evolving market demands.', icon: '/icons/step2.png' },
         { id: 3, title: 'Trusted by Stakeholders', description: 'Consistently deliver excellence to earn trust and build lasting relationships.', icon: '/icons/step3.png' },
     ]
     return (
