@@ -106,9 +106,9 @@ export default function Breadcrumb() {
   return (
     <nav
       aria-label="Breadcrumb"
-      className="w-full bg-[#ffffff] border-b border-black/1"
+      className="w-full border-b border-black/1"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-3">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-5">
         <ol className="flex flex-wrap items-center text-sm text-black/70">
           <li className="flex items-center">
             <Link href="/" className="hover:text-black transition">

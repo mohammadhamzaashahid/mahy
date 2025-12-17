@@ -11,7 +11,7 @@ function PageHeading({ title, description, image }) {
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="h-[50vh] lg:h-[70vh] relative"
+                    className="h-[50vh] lg:h-[65vh] relative"
                 >
                     <Image
                         src={image}
@@ -43,7 +43,7 @@ function PageHeading({ title, description, image }) {
                         initial={{ scaleX: 0, opacity: 0 }}
                         animate={{ scaleX: 1, opacity: 1 }}
                         transition={{
-                            delay: 0.45,      
+                            delay: 0.45,
                             duration: 0.8,
                             ease: "easeOut",
                         }}
