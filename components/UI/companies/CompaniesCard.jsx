@@ -1,7 +1,9 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { FiArrowRight } from "react-icons/fi";
+
 
 export default function CompaniesCard({ category, title, logo, onClick }) {
     return (
@@ -39,6 +41,44 @@ export default function CompaniesCard({ category, title, logo, onClick }) {
             <h3 className="mt-5 text-[28px] font-medium leading-[1.12] text-[#0B0F14]">
                 {title}
             </h3>
+
+            <motion.div
+                className="
+    mt-4
+    relative
+    origin-left
+    opacity-0
+    scale-x-0
+    transition-all
+    duration-200
+    ease-out
+    group-hover:opacity-100
+    group-hover:scale-x-100
+  "
+            >
+                <div
+                    className="
+      h-px
+      w-full
+      bg-gradient-to-r
+      from-[#0B6B61]/60
+      via-[#0B6B61]/30
+      to-transparent
+    "
+                />
+
+                <div
+                    className="
+      absolute
+      inset-0
+      h-px
+      bg-gradient-to-r
+      from-[#0B6B61]/40
+      to-transparent
+      blur-sm
+    "
+                />
+            </motion.div>
 
             <div className="mt-4">
                 <button
