@@ -14,23 +14,24 @@ function Gallery() {
     const items = [
         {
             title: "Abu dhabi",
-            image: "/gallery/gallery-1.jpg"
+            image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961377/gallery-2_mgmir1.jpg"
         },
+
         {
             title: "Dubai",
-            image: "/gallery/gallery-2.jpg"
+            image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961326/gallery-1_u7bk29.jpg"
         },
         {
             title: "Sharjah",
-            image: "/gallery/gallery-3.jpg"
+            image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961312/gallery-3_o7q6xp.jpg"
         },
         {
             title: "Ras al Khaimah",
-            image: "/gallery/gallery-4.jpg"
+            image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961506/gallery-4_jxixjw.jpg"
         },
         {
             title: "Al Ain",
-            image: "/gallery/gallery-5.jpg"
+            image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961631/gallery-5_rckdvg.jpg"
         },
     ]
 
