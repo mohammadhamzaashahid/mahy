@@ -25,7 +25,8 @@ function HeroVideo({ slides }) {
                 loop
                 playsInline
             >
-                <source src="/videos/hero-video.mp4" type="video/mp4" />
+                <source type="video/mp4"
+                    src="https://res.cloudinary.com/db3fd1qah/video/upload/v1765963725/hero-video_bs65jw.mp4" />
             </video>
             <div className="absolute inset-0 bg-black opacity-20"></div>
             <AnimatePresence mode="wait">

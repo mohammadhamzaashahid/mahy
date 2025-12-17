@@ -115,7 +115,7 @@ export default function WhyUs() {
             </motion.div>
             <div className="relative w-full h-80 lg:h-full">
                 <Image
-                    src="/office.jpg"
+                    src="https://res.cloudinary.com/db3fd1qah/image/upload/v1765963733/office_hin6ul.jpg"
                     alt="Why Us"
                     fill
                     className="object-cover"
