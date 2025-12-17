@@ -7,7 +7,6 @@ import AboutVideo from '@/components/UI/about-us/AboutVideo';
 import History from '@/components/UI/about-us/History';
 import ValuesSection from '@/components/UI/about-us/ValuesSection';
 import LeadersSection from '@/components/UI/about-us/LeadersSection';
-import ArrowActionButton from '@/components/UI/about-us/ArrowActionButton';
 
 async function About() {
 
