@@ -16,13 +16,13 @@ const itemVariants = {
 
 function BusinessSteps() {
     const steps = [
-        { id: 1, title: 'Research and Insights', description: 'This first step is critical. It is about gathering information: quantitative information and qualitative insights.', icon: '/icons/step1.png' },
-        { id: 2, title: 'Estimate Budget', description: 'This first step is critical. It is about gathering information: quantitative information and qualitative insights.', icon: '/icons/step2.png' },
-        { id: 3, title: 'Start Working', description: 'This first step is critical. It is about gathering information: quantitative information and qualitative insights.', icon: '/icons/step3.png' },
+        { id: 1, title: 'Commit to Sustainability', description: 'Drive growth responsibly by adopting eco-friendly practices that protect resources and support a cleaner future.', icon: '/icons/step1.png' },
+        { id: 2, title: 'Innovate & Diversify', description: 'Drive growth through innovation and diversification. Leverage advanced technologies, expand across industries, and adapt to evolving market demands.', icon: '/icons/step2.png' },
+        { id: 3, title: 'Trusted by Stakeholders', description: 'Consistently deliver excellence to earn trust and build lasting relationships.', icon: '/icons/step3.png' },
     ]
     return (
         <div className="py-20">
-            <h2 className="text-center font-bold text-4xl mb-30 mx-5">To Get successful business have to follow some steps</h2>
+            <h2 className="text-center font-bold text-4xl mb-30 mx-5">To Get Successful Business, Follow These Steps</h2>
             <div className="grid lg:grid-cols-2 gap-32 gap-x-20 lg:gap-30 px-4 lg:px-40 xl:grid-cols-3">
                 {steps.map((step, i) => (
                     <motion.div

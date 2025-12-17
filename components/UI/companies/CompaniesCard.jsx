@@ -43,17 +43,28 @@ export default function CompaniesCard({ category, title, logo, onClick }) {
             <div className="mt-4">
                 <button
                     className="
-            inline-flex items-center justify-center
-            h-8 w-15
-            rounded-full
-            border border-[#0B6B61]
-            text-[#0B0F14]
-            transition-colors duration-500
-            group-hover:bg-[#0B6B61] group-hover:text-white
-          "
+      group
+      relative
+      inline-flex items-center justify-center
+      h-8 w-20
+      overflow-hidden
+      rounded-full
+      border border-[#0B6B61]
+      text-[#0B0F14]
+      transition-colors duration-300
+      group-hover:bg-[#0B6B61]
+      group-hover:text-white
+    "
                     aria-label="Open company"
                 >
-                    <FiArrowRight size={18} />
+                    <FiArrowRight
+                        size={19}
+                        className="
+        transition-transform
+        duration-300
+        group-hover:animate-[arrow-loop_0.5s_ease-in-out]
+      "
+                    />
                 </button>
             </div>
         </div>

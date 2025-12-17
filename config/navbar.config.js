@@ -9,7 +9,7 @@ export const NAVIGATION = [
     {
         id: "about",
         label: "About Us",
-        href: "/about",
+        href: "/about-us",
         type: "link",
         linkType: "link",
     },
