@@ -40,11 +40,12 @@ async function About() {
     font-light
     text-gray-800'>To provide high-quality pumping products and engineered solutions through trusted partnerships, continuous innovation, and exceptional service, creating long-term value for our customers, stakeholders, and communities.</p>
                     <Link className="mt-10" href={"/"}>
-                        <ArrowActionButton
-                            width="w-40"
-                            height="h-15"
-                            iconSize={29}
-                            ariaLabel="Our People"
+                        <PrimaryButton
+                            label="Explore"
+                            size="md"
+                            bg="bg-gradient-to-r from-teal-600 to-emerald-600"
+                            hoverBg="hover:from-teal-500 hover:to-emerald-500"
+                            radius="rounded-full"
                         />
 
                     </Link>
