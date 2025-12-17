@@ -19,6 +19,7 @@ export const metadata = {
   metadataBase: new URL("https://mahy.vercel.app"),
   title: "M.A.H.Y. Khoory & CO. LLC",
   description: "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
+  themeColor: "#000",
   openGraph: {
     title: "M.A.H.Y. Khoory & CO. LLC",
     description: "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
