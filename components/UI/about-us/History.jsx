@@ -83,7 +83,7 @@ function History() {
         <div className="relative">
             <div
                 ref={scrollRef}
-                className="flex flex-nowrap h-180 mt-14 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-5"
+                className="flex flex-nowrap h-140 mt-14 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-5"
             >
                 {items.map((item, i) => (
                     <motion.div
@@ -106,27 +106,15 @@ function History() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.55, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="absolute inset-0 bottom-15 md:bottom-18 flex items-center justify-center">
+                className="absolute inset-0 bottom-15 md:bottom-25 flex items-center justify-center">
                 <div className="grid grid-flow-col auto-cols-fr items-center w-full">
                     {Array.from({ length: 100 }).map((_, i) => (
-                        <span key={i} className={`mx-auto bg-black w-px ${(i - 9) % 20 === 0 ? "h-3 lg:h-5 lg:bg-teal-600 lg:w-0.5" : "h-2"}`} />
+                        <span key={i} className={`mx-auto bg-black w-px ${(i - 12) % 20 === 0 ? "h-3 lg:h-5 lg:bg-teal-700 lg:w-0.5" : "h-2"}`} />
                     ))}
                 </div>
             </motion.div>
 
-            {/* <div className="flex justify-center gap-2 px-8">
-                <button onClick={handlePrev} className="px-1 py-1/2 border-3 border-teal-800 text-teal-800 hover:bg-teal-800 hover:text-white text-4xl rounded-2xl transition-colors duration-300">
-                    <HiChevronLeft />
-                </button>
-                <button onClick={handleNext} className="px-1 py-1/2 border-3 border-teal-800 text-teal-800 hover:bg-teal-800 hover:text-white text-4xl rounded-2xl transition-colors duration-300">
-                    <HiChevronRight />
-                </button>
-            </div> */}
-
-
             <div className="relative mt-3 flex items-center justify-center gap-3">
-
-                
                 <button
                     onClick={handlePrev}
                     disabled={currentIndex === 0}
@@ -150,18 +138,16 @@ function History() {
         text-black
         transition-all duration-300
         group-hover:text-white
-        group-hover:-translate-x-0.5
-      "
+        group-hover:-translate-x-0.5"
                     />
                 </button>
 
-
-                  <div className="flex flex-col items-center text-center">
+                <div className="flex flex-col items-center text-center">
                     <span className="text-xs tracking-[0.35em] uppercase text-slate-500">
-                         TIMELINE
+                        TIMELINE
                     </span>
                     <span className="mt-1 text-sm font-semibold text-slate-900">
-                            {items[currentIndex]?.title}
+                        {items[currentIndex]?.title}
                     </span>
                 </div>
                 <button
@@ -169,18 +155,16 @@ function History() {
                     disabled={currentIndex === items.length - 1}
                     aria-label="Next year"
                     className={`
-      group
-      relative
-      flex h-14 w-14 items-center justify-center
-      rounded-full
-      border border-black/20
-      backdrop-blur-md
-      transition-all duration-300
-      ${currentIndex === items.length - 1
+                            group
+                            relative
+                            flex h-14 w-14 items-center justify-center
+                            rounded-full
+                            border border-black/20
+                            backdrop-blur-md
+                            transition-all duration-300
+                            ${currentIndex === items.length - 1
                             ? "opacity-30 cursor-not-allowed"
-                            : "hover:border-black hover:bg-black hover:scale-105"}
-    `}
-                >
+                            : "hover:border-black hover:bg-black hover:scale-105"}`}>
                     <HiChevronRight
                         className="
         text-3xl
