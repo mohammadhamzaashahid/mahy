@@ -38,7 +38,7 @@ export default function FloatingMenu() {
         <li key={s.id} className="group">
           <a
             href={`#${s.id}`}
-            className={`flex items-center justify-end gap-2 text-xs font-bold uppercase w-30 ${isActiveLightBg ? "text-teal-600 hover:text-teal-700" : "text-gray-200 hover:text-white"}`}
+            className={`flex items-center justify-end gap-2 text-xs font-bold uppercase w-30 ${isActiveLightBg ? "t-base t-base-hover" : "text-gray-200 hover:text-white"}`}
           >
             {active !== s.id && <FiMinus className="group-hover:opacity-0 absolute" />}
             <span

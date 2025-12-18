@@ -109,7 +109,7 @@ function History() {
                 className="absolute inset-0 bottom-22 md:bottom-25 flex items-center justify-center">
                 <div className="grid grid-flow-col auto-cols-fr items-center w-full">
                     {Array.from({ length: 100 }).map((_, i) => (
-                        <span key={i} className={`mx-auto bg-black w-px ${(i - 12) % 20 === 0 ? "h-3 lg:h-5 lg:bg-teal-700 lg:w-0.5" : "h-2"}`} />
+                        <span key={i} className={`mx-auto bg-black w-px ${(i - 12) % 20 === 0 ? "h-3 lg:h-5 lg:w-0.5" : "h-2"}`} />
                     ))}
                 </div>
             </motion.div>

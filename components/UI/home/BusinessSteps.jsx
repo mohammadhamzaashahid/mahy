@@ -48,8 +48,6 @@ function BusinessSteps() {
                     <PrimaryButton
                         label="Consult now"
                         size="md"
-                        bg="bg-gradient-to-r from-teal-600 to-emerald-600"
-                        hoverBg="hover:from-teal-500 hover:to-emerald-500"
                         radius="rounded-full"
                     />
                 </Link>

@@ -11,17 +11,14 @@ export default function NarrativeCard({
 }) {
   return (
     <div className="relative isolate max-w-xl w-full">
-            <span
+      <span
         aria-hidden
         className="
           absolute
           inset-0
           rounded-3xl
           blur-[80px]
-          bg-gradient-to-r
-          from-emerald-400/10
-          via-teal-400/5
-          to-emerald-400/10
+    b-base
           opacity-60
           pointer-events-none
           z-0
@@ -80,7 +77,7 @@ export default function NarrativeCard({
         <ul className="mt-8 space-y-4">
           {bullets.map((item, i) => (
             <li key={i} className="flex items-start gap-3 text-white">
-              <span className="text-teal-400 mt-1">✓</span>
+              <span className="t-base mt-1">✓</span>
               <span>{item}</span>
             </li>
           ))}
@@ -89,8 +86,6 @@ export default function NarrativeCard({
         <PrimaryButton
           label="View More"
           size="md"
-          bg="bg-gradient-to-r from-teal-600 to-emerald-600"
-          hoverBg="hover:from-teal-500 hover:to-emerald-500"
           radius="rounded-full"
           className="mt-12"
         />

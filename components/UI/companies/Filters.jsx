@@ -34,11 +34,11 @@ function Filters({ filters, search }) {
                 className={`
   fixed bottom-3 left-3 ${showFilters ? "z-50" : "z-20"}
   rounded-3xl
-  border border-teal-600/40
+    border-base
   bg-white/20
   backdrop-blur-xl
   px-6 py-2
-  text-teal-600
+  t-base
   lg:hidden
   backdrop-saturate-150`}
             >
@@ -50,9 +50,9 @@ function Filters({ filters, search }) {
                 overflow-y-scroll fixed z-40 transition-opacity duration-500 inset-0 col-span-2 px-4 pt-7 pb-12 lg:pb-7 rounded-3xl bg-white border border-[#E7E3DA] lg:sticky lg:top-20 h-fit mb-10 lg:mb-0`}>
                 <div className="relative mb-7 group">
                     <form onSubmit={onSubmit}>
-                        <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} name='search' className="border border-gray-300 focus:outline-teal-600 rounded-xl py-2 px-4 w-full text-sm pr-8 relative z-10" placeholder="" />
+                        <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} name='search' className="border border-gray-300 f-base rounded-xl py-2 px-4 w-full text-sm pr-8 relative z-10" placeholder="" />
                         <div className='absolute inset-0 flex justify-end items-center right-2'>
-                            <HiSearch className='text-teal-600' />
+                            <HiSearch className='t-base' />
                         </div>
                     </form>
                 </div>

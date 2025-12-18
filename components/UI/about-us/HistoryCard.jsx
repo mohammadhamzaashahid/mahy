@@ -16,7 +16,7 @@ function HistoryCard({ title, image, description, index }) {
                         priority
                     />
                 </div>
-                <div className="absolute bottom-0 -left-2 h-4 w-4 rounded-full bg-teal-900"></div>
+                <div className="absolute bottom-0 -left-2 h-4 w-4 rounded-full b-base"></div>
             </div>
         </div>
     )

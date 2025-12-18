@@ -84,7 +84,7 @@ export default function WhyUs() {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                <p className="text-teal-600 font-bold text-3xl uppercase">Why you should choose us?</p>
+                <p className="font-bold text-3xl uppercase">Why you should choose us?</p>
                 <p className="text-gray-600 my-5">We combine innovation, sustainability, and trusted partnerships to deliver solutions that are efficient, reliable, and built for long-term value.</p>
                 <Accordion
                     type="single"
@@ -94,7 +94,7 @@ export default function WhyUs() {
                 >
                     {items.map((item, i) => (
                         <AccordionItem key={i} value={`item-${i + 1}`}>
-                            <AccordionTrigger className="cursor-pointer hover:text-teal-600 transition-colors duration-500 font-bold text-lg">
+                            <AccordionTrigger className="cursor-pointer t-base-hover transition-colors duration-500 font-bold text-lg">
                                 {item.title}
                             </AccordionTrigger>
 
