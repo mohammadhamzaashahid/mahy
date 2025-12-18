@@ -4,7 +4,7 @@ function DesignProcessCard({ process }) {
     return (
         <div className={`lg:relative ${process.horizontalShift} flex flex-col justify-center gap-10 px-5 hover:translate-x-4 transition-transform duration-500`}>
             <div className="flex">
-                <div className="relative -top-4 w-22 h-22 bg-gray-100 rounded-full flex-none z-10">
+                <div className="relative -top-4 w-22 h-22 bg-white border border-gray-50 shadow-lg rounded-full flex-none z-10">
                     <Image
                         src={process.icon}
                         alt={process.title}
