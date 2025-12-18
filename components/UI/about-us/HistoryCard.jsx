@@ -7,7 +7,7 @@ function HistoryCard({ title, image, description, index }) {
             <div className='border-l pt-2 pb-8 relative'>
                 <p className='font-bold uppercase tracking-[0.28em] text-[#0B6B61] pl-2'>{title}</p>
                 <p className='text-xs md:text-sm font-light mt-1 pl-2'>{description}</p>
-                <div className="relative h-40 w-full mt-3">
+                <div className="relative h-40 w-full mt-3 ml-2">
                     <Image
                         src={image}
                         alt={title}

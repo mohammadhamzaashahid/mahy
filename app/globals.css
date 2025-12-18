@@ -10,8 +10,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -22,7 +21,7 @@
 } */
 
 body {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-poppins);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,24 +38,20 @@ body {
 
 
 .text-heading {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-poppins);
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
 .text-body {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-poppins);
   font-weight: 400;
   line-height: 1.6;
 }
 
 .text-ui {
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-poppins);
   font-weight: 500;
-}
-
-.text-mono {
-  font-family: var(--font-geist-mono);
 }
 
 .step-card:hover .step-card-icon {

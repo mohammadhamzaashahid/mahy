@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react'
 import HistoryCard from './HistoryCard'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
+import { motion } from "framer-motion";
 
 function History() {
     const scrollRef = useRef(null);
@@ -85,22 +86,33 @@ function History() {
                 className="flex flex-nowrap h-180 mt-14 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-5"
             >
                 {items.map((item, i) => (
-                    <HistoryCard
+                    <motion.div
                         key={i}
-                        index={i}
-                        title={item.title}
-                        image={item.image}
-                        description={item.description}
-                    />
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 + i * 0.15, duration: 0.55, ease: "easeOut" }}
+                        viewport={{ once: true }}>
+                        <HistoryCard
+                            index={i}
+                            title={item.title}
+                            image={item.image}
+                            description={item.description}
+                        />
+                    </motion.div>
                 ))}
             </div>
-            <div className="absolute inset-0 bottom-20 flex items-center justify-center">
+            <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.55, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="absolute inset-0 bottom-15 md:bottom-18 flex items-center justify-center">
                 <div className="grid grid-flow-col auto-cols-fr items-center w-full">
                     {Array.from({ length: 100 }).map((_, i) => (
-                        <span key={i} className={`mx-auto ${(i - 9) % 20 === 0 ? "h-3 lg:h-6" : "h-2"} w-px bg-black`} />
+                        <span key={i} className={`mx-auto bg-black w-px ${(i - 9) % 20 === 0 ? "h-3 lg:h-5 lg:bg-teal-600 lg:w-0.5" : "h-2"}`} />
                     ))}
                 </div>
-            </div>
+            </motion.div>
             <div className="flex justify-center gap-2 px-8">
                 <button onClick={handlePrev} className="px-1 py-1/2 border-3 border-teal-800 text-teal-800 hover:bg-teal-800 hover:text-white text-4xl rounded-2xl transition-colors duration-300">
                     <HiChevronLeft />
