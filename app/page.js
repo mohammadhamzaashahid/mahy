@@ -72,8 +72,8 @@ export default function Home() {
       </section>
 
       <section id="enterprise">
-        {/* <EnterprisePinnedSection /> */}
-        <PinnedScrollSection />
+        <EnterprisePinnedSection />
+        {/* <PinnedScrollSection /> */}
         {/* <PinnedSection /> */}
       </section>
 

@@ -14,3 +14,14 @@ export default function StickyMediaPane({ image }) {
         </div>
     );
 }
+
+
+//   className="
+//         hidden
+//         lg:block
+//         relative
+//         h-screen
+//         top-0
+//         overflow-hidden
+//         pointer-events-none
+//       "
