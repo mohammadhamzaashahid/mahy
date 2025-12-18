@@ -54,7 +54,7 @@ function History() {
         <div className="relative">
             <div
                 ref={scrollRef}
-                className="flex flex-nowrap gap-4 mt-10 overflow-x-auto scroll-smooth scrollbar-none px-5"
+                className="flex flex-nowrap gap-4 mt-14 overflow-x-auto scroll-smooth scrollbar-none px-5"
             >
                 {items.map((item, i) => (
                     <HistoryCard
@@ -65,7 +65,7 @@ function History() {
                     />
                 ))}
             </div>
-            <div className="flex gap-2 px-5 mt-6">
+            <div className="flex gap-2 px-8 mt-6">
                 <button onClick={handlePrev} className="px-1 py-1/2 border-3 border-teal-800 text-teal-800 hover:bg-teal-800 hover:text-white text-4xl rounded-2xl transition-colors duration-300">
                     <HiChevronLeft />
                 </button>
