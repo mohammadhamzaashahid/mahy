@@ -2,17 +2,7 @@ import Image from "next/image";
 
 export default function StickyMediaPane({ image }) {
     return (
-        <div
-            className="
-        hidden
-        lg:block
-        relative
-        h-screen
-        top-0
-        overflow-hidden
-        pointer-events-none
-      "
-        >
+        <div className="hidden lg:block sticky top-0 h-screen overflow-hidden pointer-events-none">
             <Image
                 src={image}
                 alt="Enterprise Visual"

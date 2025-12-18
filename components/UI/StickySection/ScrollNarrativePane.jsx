@@ -36,7 +36,6 @@ export default function ScrollNarrativePane({ onActiveChange }) {
 
   useEffect(() => {
     if (!scrollRootRef.current) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -51,11 +50,35 @@ export default function ScrollNarrativePane({ onActiveChange }) {
         threshold: 0.6,
       }
     );
-
     sectionRefs.current.forEach((el) => el && observer.observe(el));
-
     return () => observer.disconnect();
   }, [onActiveChange]);
+
+  useEffect(() => {
+    const el = scrollRootRef.current;
+    if (!el) return;
+
+    const onWheel = (e) => {
+      const atTop = el.scrollTop === 0;
+      const atBottom =
+        el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
+
+      if (
+        (e.deltaY < 0 && atTop) ||
+        (e.deltaY > 0 && atBottom)
+      ) {
+        // allow page scroll
+        return;
+      }
+
+      // otherwise lock page scroll
+      e.preventDefault();
+      el.scrollTop += e.deltaY;
+    };
+
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, []);
 
   return (
     <div
