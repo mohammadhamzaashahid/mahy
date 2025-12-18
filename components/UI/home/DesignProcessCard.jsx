@@ -4,17 +4,17 @@ function DesignProcessCard({ process }) {
     return (
         <div className={`lg:relative ${process.horizontalShift} flex flex-col justify-center gap-10 px-5 hover:translate-x-4 transition-transform duration-500`}>
             <div className="flex">
-                <div className="relative -top-4 w-22 h-22 bg-white border border-gray-50 shadow-lg rounded-full flex-none z-10">
+                <div className="relative -top-4 w-18 h-18 bg-white border border-gray-50 shadow-lg rounded-full flex-none z-10">
                     <Image
                         src={process.icon}
                         alt={process.title}
                         fill
-                        className="p-6"
+                        className="p-5"
                     />
                 </div>
                 <div className="w-14 h-1 border-b mt-3 relative -left-1"></div>
                 <div className="ml-3">
-                    <span className="font-semibold text-xl">{process.id}. {process.title}</span>
+                    <span className="font-semibold text-lg">{process.id}. {process.title}</span>
                     <p className="text-gray-600 font-medium text-sm mt-1">
                         {process.description}
                     </p>

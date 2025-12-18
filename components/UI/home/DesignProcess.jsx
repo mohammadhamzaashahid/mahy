@@ -32,21 +32,21 @@ function DesignProcess() {
             title: "Designing Sustainable Solutions",
             description: "Our experts craft innovative, eco-friendly, and cost-effective solutions that balance performance with environmental responsibility. Sustainability is embedded in every stage of our process.",
             icon: "/processes/design.png",
-            horizontalShift: "left-22"
+            horizontalShift: "left-15"
         },
         {
             id: 3,
             title: "Implementing with Excellence",
             description: "From planning to execution, we apply advanced technologies and industry best practices to deliver reliable, high-quality outcomes. Precision and efficiency guide every project we undertake.",
             icon: "/processes/development.png",
-            horizontalShift: "left-20"
+            horizontalShift: "left-17"
         },
         {
             id: 4,
             title: "Continuous Improvement & Support",
             description: "We don't stop at delivery. Ongoing monitoring, feedback, and support help us refine our solutions, ensuring long-term value and exceeding stakeholder expectations.",
             icon: "/processes/deployment.png",
-            horizontalShift: "left-12"
+            horizontalShift: "left-4"
         }];
 
     return (
@@ -59,7 +59,7 @@ function DesignProcess() {
             </div>
             <div className="mt-3 grid grid-cols-1 md:grid-cols-5 items-center justify-center">
                 <motion.div
-                    className="relative overflow-hidden w-170 h-170 rounded-full -left-50 hidden lg:block col-span-2"
+                    className="relative overflow-hidden w-150 h-150 rounded-full -left-40 hidden lg:block col-span-2"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -72,7 +72,7 @@ function DesignProcess() {
                         className="object-cover"
                     />
                 </motion.div>
-                <div className="col-span-3 space-y-20 lg:space-y-14 relative lg:-left-50 w-screen lg:w-auto">
+                <div className="col-span-3 space-y-20 lg:space-y-10 relative lg:-left-50 w-screen lg:w-auto">
                     {processes.map((process, i) => (
                         <motion.div
                             key={process.id}
