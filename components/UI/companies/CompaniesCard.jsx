@@ -60,9 +60,7 @@ export default function CompaniesCard({ category, title, logo, onClick }) {
                     className="
       h-px
       w-full
-      bg-gradient-to-r
-      from-[#0B6B61]/60
-      via-[#0B6B61]/30
+b-base
       to-transparent
     "
                 />
@@ -72,9 +70,7 @@ export default function CompaniesCard({ category, title, logo, onClick }) {
       absolute
       inset-0
       h-px
-      bg-gradient-to-r
-      from-[#0B6B61]/40
-      to-transparent
+      b-base-hover
       blur-sm
     "
                 />
@@ -89,10 +85,10 @@ export default function CompaniesCard({ category, title, logo, onClick }) {
       h-8 w-20
       overflow-hidden
       rounded-full
-      border border-[#0B6B61]
+      border-base
       text-[#0B0F14]
       transition-colors duration-300
-      group-hover:bg-[#0B6B61]
+      group-hover:bg-[#79C4E7]
       group-hover:text-white
     "
                     aria-label="Open company"

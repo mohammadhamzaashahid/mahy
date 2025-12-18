@@ -8,8 +8,8 @@ import { FiArrowUpRight } from "react-icons/fi";
 export default function PrimaryButton({
   label = "View More",
   size = "md",
-  bg = "bg-teal-600",
-  hoverBg = "hover:bg-teal-500",
+  bg = "b-base",
+  hoverBg = "b-base-hover",
   textColor = "text-white",
   radius = "rounded-full",
   icon: Icon = FiArrowUpRight,
@@ -36,7 +36,7 @@ export default function PrimaryButton({
       className={clsx(
         "inline-flex items-center font-medium transition-all duration-300 cursor-pointer",
         "shadow-lg hover:shadow-xl focus:outline-none",
-        "focus:ring-2 focus:ring-teal-500 focus:ring-offset-2",
+        "focus:ring-2 f-base focus:ring-offset-2",
         sizeClasses[size],
         bg,
         hoverBg,

@@ -39,13 +39,13 @@ function CheckFilters({ searchKey, label, list }) {
                             value={index}
                             checked={searchValues.includes(index.toString())}
                             onChange={() => handleClick(index.toString())}
-                            className="cursor-pointer accent-teal-600"
+                            className="cursor-pointer a-base"
                         />
                         <label
                             htmlFor={item}
-                            className={`text-sm cursor-pointer text-gray-600 hover:text-teal-700
+                            className={`text-sm cursor-pointer text-gray-600 t-base-hover
                                 ${searchValues.includes(index.toString())
-                                && "text-teal-600 font-medium "}
+                                && "t-base font-medium "}
                             `}
                         >
                             {item}

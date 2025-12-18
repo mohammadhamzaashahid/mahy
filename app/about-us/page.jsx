@@ -29,7 +29,6 @@ function About() {
                     <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
                         <h2 className='uppercase font-bold'>Mission Statement</h2>
                         <p className="
-                        text-teal-600
                         font-bold
                         uppercase
                         mt-2
@@ -42,7 +41,6 @@ function About() {
                         </p>
                         <p className='
                         mt-7 lg:mt-10
-                        text-base
                         sm:text-lg
                         leading-relaxed
                         font-light
@@ -52,8 +50,6 @@ function About() {
                             <PrimaryButton
                                 label="Explore"
                                 size="md"
-                                bg="bg-gradient-to-r from-teal-600 to-emerald-600"
-                                hoverBg="hover:from-teal-500 hover:to-emerald-500"
                                 radius="rounded-full"
                             />
                         </Link>
@@ -113,7 +109,7 @@ function About() {
                     transition={{ duration: 0.55, ease: "easeOut" }}
                     viewport={{ once: true }}>
                     <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
-                        <h2 className='text-3xl lg:text-4xl text-teal-600 font-bold uppercase px-10'>Our History</h2>
+                        <h2 className='text-3xl lg:text-4xl font-bold uppercase px-10'>Our History</h2>
                         <p className="mt-6 font-light px-10 mb-8">We're proud of our UAE heritage. From our beginnings in
                             1972 as a local port operator in Dubai to a global logistics provider with operations in
                             over 69 countries and across every continent.</p>

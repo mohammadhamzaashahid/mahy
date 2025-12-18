@@ -3,8 +3,39 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accent-color:
-    #138159;
+  --accent-color: #79C4E7;
+  --accent-light: rgb(143, 199, 225)7;
+  --accent-dark: #2da5dc;
+}
+
+.t-base {
+  color: var(--accent-color);
+}
+
+.t-base-hover:hover {
+  color: var(--accent-dark);
+}
+
+.b-base {
+  background-color: var(--accent-color);
+}
+
+.b-base-hover:hover {
+  background-color: var(--accent-dark);
+}
+
+.f-base:focus {
+  color: var(--accent-color);
+  outline-color: var(--accent-color);
+}
+
+.a-base {
+  accent-color: var(--accent-color);
+  background-color: white;
+}
+
+.border-base {
+  border: 1px solid var(--accent-color);
 }
 
 @theme inline {
