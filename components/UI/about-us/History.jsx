@@ -90,7 +90,7 @@ function History() {
                         key={i}
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 + i * 0.15, duration: 0.55, ease: "easeOut" }}
+                        transition={{ duration: 0.55, ease: "easeOut" }}
                         viewport={{ once: true }}>
                         <HistoryCard
                             index={i}
