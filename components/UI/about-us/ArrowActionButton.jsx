@@ -6,6 +6,9 @@ export default function ArrowActionButton({
   width = "w-20",
   height = "h-8",
   iconSize = 19,
+  bg = "b-base",
+  hoverBg = "b-base-hover",
+  textColor = "text-white",
   className = "",
   ariaLabel = "Open",
 }) {
@@ -22,21 +25,24 @@ export default function ArrowActionButton({
         ${height}
         overflow-hidden
         rounded-full
-        border border-[#0B6B61]
-        text-[#0B0F14]
-        transition-colors duration-300
-        hover:bg-[#0B6B61]
+        border-base
+        t-base
+        transition-colors
+        duration-300
         hover:text-white
+        b-base-hover
         ${className}
       `}
     >
       <FiArrowRight
         size={iconSize}
         className="
-          transition-transform
-          duration-300
-          group-hover:animate-[arrow-loop_0.5s_ease-in-out]
-        "
+  text-[var(--accent-color)]
+  transition-transform
+  duration-300
+  group-hover:text-white
+  group-hover:animate-[arrow-loop_0.5s_ease-in-out]
+"
       />
     </button>
   );

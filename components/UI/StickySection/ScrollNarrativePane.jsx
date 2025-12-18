@@ -54,31 +54,6 @@ export default function ScrollNarrativePane({ onActiveChange }) {
     return () => observer.disconnect();
   }, [onActiveChange]);
 
-  // useEffect(() => {
-  //   const el = scrollRootRef.current;
-  //   if (!el) return;
-
-  //   const onWheel = (e) => {
-  //     const atTop = el.scrollTop === 0;
-  //     const atBottom =
-  //       el.scrollTop + el.clientHeight >= el.scrollHeight - 1;
-
-  //     if (
-  //       (e.deltaY < 0 && atTop) ||
-  //       (e.deltaY > 0 && atBottom)
-  //     ) {
-  //       // allow page scroll
-  //       return;
-  //     }
-
-  //     // otherwise lock page scroll
-  //     e.preventDefault();
-  //     el.scrollTop += e.deltaY;
-  //   };
-
-  //   el.addEventListener("wheel", onWheel, { passive: false });
-  //   return () => el.removeEventListener("wheel", onWheel);
-  // }, []);
 
   return (
     <div

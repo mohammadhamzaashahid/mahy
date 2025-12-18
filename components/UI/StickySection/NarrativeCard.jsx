@@ -14,34 +14,22 @@ export default function NarrativeCard({
       <span
         aria-hidden
         className="
-          absolute
-          inset-0
-          rounded-3xl
-          blur-[80px]
-    b-base
-          opacity-60
-          pointer-events-none
-          z-0
-        "
-      />
-
-      <span
-        aria-hidden
-        className="
-          absolute
-          inset-0
-          pointer-events-none
-          transition-opacity
-          duration-300
-          z-0
-        "
+    absolute
+    inset-0
+    rounded-3xl
+    blur-[120px]
+    opacity-35
+    pointer-events-none
+    z-0
+  "
         style={{
-          opacity: cursor?.active ? 1 : 0,
-          background: `radial-gradient(
-            220px circle at ${cursor?.x}px ${cursor?.y}px,
-            rgba(16, 185, 129, 0.12),
-            transparent 65%
-          )`,
+          background: `
+      radial-gradient(
+        70% 70% at 70% 40%,
+        rgb(from var(--accent-color) r g b / 1.2),
+        transparent 70%
+      )
+    `,
         }}
       />
 
@@ -99,12 +87,7 @@ export default function NarrativeCard({
             className="mt-10 block lg:hidden w-full"
           >
             <div className="relative w-full h-64 overflow-hidden rounded-lg">
-              <Image
-                src={image}
-                alt={title}
-                fill
-                className="object-cover"
-              />
+              <Image src={image} alt={title} fill className="object-cover" />
             </div>
           </motion.div>
         )}

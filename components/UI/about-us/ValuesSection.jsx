@@ -120,7 +120,6 @@ export default function ValuesSection({
       max-h-[520px]
     "
                         >
-                            {/* Light overlay */}
                             <div
                                 className="
         pointer-events-none
