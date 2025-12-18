@@ -65,7 +65,7 @@ function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, ease: "easeOut" }}
                 viewport={{ once: true }}>
-                <div className='py-20 border-b border-gray-300'>
+                <div className='py-15 lg:py-20 border-b border-gray-300'>
                     <div className='flex flex-col justify-center items-center max-w-5xl mx-auto text-center'>
                         <h2 className='uppercase font-bold px-5'>Our Purpose</h2>
                         <p className="
@@ -96,7 +96,7 @@ function About() {
                     </div>
                 </div>
             </motion.div>
-            <div className='py-24 lg:py-24 border-b border-gray-300'>
+            <div className='py-16 lg:py-24 border-b border-gray-300'>
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -104,7 +104,7 @@ function About() {
                     viewport={{ once: true }}>
                     <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
                         <h2 className='text-3xl sm:text-4xl lg:text-5xl text-teal-600 font-bold uppercase px-5'>Our History</h2>
-                        <p className="lg:text-lg mt-5 font-light px-5">We're proud of our UAE heritage. From our beginnings in
+                        <p className="lg:text-lg mt-5 font-light px-5 mb-5">We're proud of our UAE heritage. From our beginnings in
                             1972 as a local port operator in Dubai to a global logistics provider with operations in
                             over 69 countries and across every continent.</p>
                     </div>
@@ -116,9 +116,6 @@ function About() {
                     viewport={{ once: true }}>
                     <History />
                 </motion.div>
-            </div>
-
-            <div className='border-b border-gray-200'>
             </div>
             <ValuesSection
                 title="OUR PEOPLE"
