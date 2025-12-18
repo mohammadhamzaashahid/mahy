@@ -111,8 +111,12 @@ export const NAVIGATION = [
         linkType: "dropdown",
         href: "/",
         items: [
-            { label: "Spare Parts", href: "/after-sales/spare-parts" },
-            { label: "Maintenance", href: "/after-sales/maintenance" },
+            { label: "Pumps", href: "/after-sales/spare-parts" },
+            { label: "Air Conditioning", href: "/after-sales/maintenance" },
+            { label: "VFD", href: "/after-sales/maintenance" },
+             { label: "Valves", href: "/after-sales/maintenance" },
+
+
         ],
     },
     {
