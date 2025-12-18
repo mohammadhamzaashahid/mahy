@@ -116,6 +116,13 @@ export const NAVIGATION = [
         ],
     },
     {
+        id: "news",
+        label: "News",
+        href: "/news",
+        type: "link",
+        linkType: "link"
+    },
+    {
         id: "careers",
         label: "Careers",
         href: "/",
