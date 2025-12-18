@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import PageHeading from "@/components/UI/PageHeading";
 import Breadcrumb from "@/components/UI/Breadcrumb";
@@ -106,7 +106,15 @@ const newsList = [
   },
 ];
 
-export default function News() {
+export default function NewsPage() {
+  return (
+    <Suspense fallback={<div className="py-10 text-center">Loading news...</div>}>
+      <NewsContent />
+    </Suspense>
+  );
+}
+
+function NewsContent() {
   const searchParams = useSearchParams();
   const page = Number(searchParams.get("page")) || 1;
   const search = searchParams.get("search");
