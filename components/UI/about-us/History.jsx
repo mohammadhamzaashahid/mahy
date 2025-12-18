@@ -113,14 +113,87 @@ function History() {
                     ))}
                 </div>
             </motion.div>
-            <div className="flex justify-center gap-2 px-8">
+
+            {/* <div className="flex justify-center gap-2 px-8">
                 <button onClick={handlePrev} className="px-1 py-1/2 border-3 border-teal-800 text-teal-800 hover:bg-teal-800 hover:text-white text-4xl rounded-2xl transition-colors duration-300">
                     <HiChevronLeft />
                 </button>
                 <button onClick={handleNext} className="px-1 py-1/2 border-3 border-teal-800 text-teal-800 hover:bg-teal-800 hover:text-white text-4xl rounded-2xl transition-colors duration-300">
                     <HiChevronRight />
                 </button>
+            </div> */}
+
+
+            <div className="relative mt-3 flex items-center justify-center gap-3">
+
+                
+                <button
+                    onClick={handlePrev}
+                    disabled={currentIndex === 0}
+                    aria-label="Previous year"
+                    className={`
+      group
+      relative
+      flex h-14 w-14 items-center justify-center
+      rounded-full
+      border border-black/20
+      backdrop-blur-md
+      transition-all duration-300
+      ${currentIndex === 0
+                            ? "opacity-30 cursor-not-allowed"
+                            : "hover:border-black hover:bg-black hover:scale-105"}
+    `}
+                >
+                    <HiChevronLeft
+                        className="
+        text-3xl
+        text-black
+        transition-all duration-300
+        group-hover:text-white
+        group-hover:-translate-x-0.5
+      "
+                    />
+                </button>
+
+
+                  <div className="flex flex-col items-center text-center">
+                    <span className="text-xs tracking-[0.35em] uppercase text-slate-500">
+                         TIMELINE
+                    </span>
+                    <span className="mt-1 text-sm font-semibold text-slate-900">
+                            {items[currentIndex]?.title}
+                    </span>
+                </div>
+                <button
+                    onClick={handleNext}
+                    disabled={currentIndex === items.length - 1}
+                    aria-label="Next year"
+                    className={`
+      group
+      relative
+      flex h-14 w-14 items-center justify-center
+      rounded-full
+      border border-black/20
+      backdrop-blur-md
+      transition-all duration-300
+      ${currentIndex === items.length - 1
+                            ? "opacity-30 cursor-not-allowed"
+                            : "hover:border-black hover:bg-black hover:scale-105"}
+    `}
+                >
+                    <HiChevronRight
+                        className="
+        text-3xl
+        text-black
+        transition-all duration-300
+        group-hover:text-white
+        group-hover:translate-x-0.5
+      "
+                    />
+                </button>
+
             </div>
+
         </div>
     )
 }
