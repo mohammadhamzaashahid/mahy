@@ -114,7 +114,7 @@ export const NAVIGATION = [
             { label: "Pumps", href: "/after-sales/spare-parts" },
             { label: "Air Conditioning", href: "/after-sales/maintenance" },
             { label: "VFD", href: "/after-sales/maintenance" },
-             { label: "Valves", href: "/after-sales/maintenance" },
+            { label: "Valves", href: "/after-sales/maintenance" },
 
 
         ],
@@ -129,7 +129,7 @@ export const NAVIGATION = [
     {
         id: "careers",
         label: "Careers",
-        href: "/",
+        href: "/careers",
         type: "link",
         linkType: "link",
     },
