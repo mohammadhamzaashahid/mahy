@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const imageVariants = {
     hidden: { opacity: 0, scale: 1 },
-    visible: { opacity: 1, scale: 1.1, transition: { duration: 0.8 } },
-    exit: { opacity: 0, scale: 1.05, transition: { duration: 0.8 } },
+    visible: { opacity: 1, scale: 1.1, transition: { duration: 2 } },
+    exit: { opacity: 0, scale: 1, transition: { duration: 2 } },
 };
 
 function FeaturedDepartments() {
@@ -77,7 +77,8 @@ function FeaturedDepartments() {
                         variants={imageVariants}
                         initial="hidden"
                         animate="visible"
-                        exit="exit" className='w-full h-[40vh] md:h-[60vh] relative'>
+                        exit="exit"
+                        className='w-full h-[40vh] md:h-[60vh] relative'>
                         <Image
                             src={departments[index].image}
                             alt={departments[index].title}

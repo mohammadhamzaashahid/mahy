@@ -10,9 +10,9 @@ import History from '@/components/UI/about-us/History';
 import ValuesSection from '@/components/UI/about-us/ValuesSection';
 import LeadersSection from '@/components/UI/about-us/LeadersSection';
 import { motion } from "framer-motion";
+import Values from '@/components/UI/about-us/Values';
 
 function About() {
-
     return (
         <main className='bg-gray-50'>
             <PageHeading title={"About Us"}
@@ -79,10 +79,10 @@ function About() {
                                 Change what's possible.
                             </p>
                         </div>
-                        <AboutVideo />
+                        {/* <AboutVideo /> */}
+                        <Values />
                         <p
-                            className="px-10
-                                mt-2 mb-2 lg:mt-0
+                            className="px-10 mb-2 lg:mt-0
                                 text-base
                                 sm:text-lg
                                 leading-relaxed
