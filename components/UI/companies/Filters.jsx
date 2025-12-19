@@ -5,7 +5,6 @@ import { HiSearch } from 'react-icons/hi'
 import CheckFilters from './CheckFilters'
 import ResetButton from './ResetButton'
 import { usePathname, useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from "framer-motion";
 
 function Filters({ filters, search }) {
 
@@ -58,7 +57,7 @@ function Filters({ filters, search }) {
                 </div>
                 <div className="flex justify-between flex-wrap items-center gap-4 mb-6">
                     <h2 className="font-medium">Filters</h2>
-                    <ResetButton handleShowFilters={handleShowFilters} />
+                    <ResetButton />
                 </div>
                 {filters.map((filter, index) => (
                     <CheckFilters key={index} searchKey={filter.key} label={filter.title} list={filter.options} />

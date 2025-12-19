@@ -1,0 +1,25 @@
+import JobList from '@/components/UI/jobs/JobList'
+import PageHeading from '@/components/UI/PageHeading'
+import React from 'react'
+
+async function Jobs({ searchParams }) {
+    const heading = {
+        title: "Explore Jobs",
+        description: "Join a team driven by innovation, collaboration, and impact. Build your career while shaping meaningful solutions and growing with us.",
+        image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1766132766/OMODA_JAECOO_expands_UAE_presence_with_MAHY_Khoory_Automotive_as_the_____imgupscaler.ai_Sharpener_4K_ofh9sq.png"
+    }
+    const params = await searchParams;
+
+    return (
+        <main>
+            <PageHeading
+                title={heading.title}
+                description={heading.description}
+                image={heading.image}
+            />
+            <JobList params={params} />
+        </main >
+    )
+}
+
+export default Jobs

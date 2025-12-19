@@ -1,9 +1,15 @@
 "use client"
 
 import Image from 'next/image'
-import Link from 'next/link';
 import React, { useRef, useState } from 'react'
 import DepartmentCard from './DepartmentCard';
+import { motion, AnimatePresence } from "framer-motion";
+
+const imageVariants = {
+    hidden: { opacity: 0, scale: 1 },
+    visible: { opacity: 1, scale: 1.1, transition: { duration: 0.8 } },
+    exit: { opacity: 0, scale: 1.05, transition: { duration: 0.8 } },
+};
 
 function FeaturedDepartments() {
     const [index, setIndex] = useState(0);
@@ -14,7 +20,7 @@ function FeaturedDepartments() {
     const getOffset = () => {
         if (typeof window === "undefined") return 240;
         const w = window.innerWidth;
-        if (w < 640) return 40;
+        if (w < 640) return 60;
         if (w < 1024) return 120;
         return 240;
     };
@@ -56,17 +62,32 @@ function FeaturedDepartments() {
     ]
 
     return (
-        <section className='max-w-7xl mx-auto px-5 py-15'>
-            <h2 className='text-4xl font-semibold mb-8'>Featured Departments</h2>
-            <div className='w-full h-[40vh] md:h-[60vh] relative'>
-                <Image
-                    src={departments[index].image}
-                    alt={departments[index].title}
-                    fill
-                    style={{ objectFit: "cover" }}
-                />
+        <section className='max-w-7xl mx-auto py-20'>
+            <div className="px-5">
+                <motion.div
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.55, ease: "easeOut" }}
+                    viewport={{ once: true }}>
+                    <h2 className='text-4xl font-semibold mb-8'>Featured Departments</h2>
+                </motion.div>
+                <div className="overflow-hidden">
+                    <motion.div
+                        key={departments[index].image}
+                        variants={imageVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit" className='w-full h-[40vh] md:h-[60vh] relative'>
+                        <Image
+                            src={departments[index].image}
+                            alt={departments[index].title}
+                            fill
+                            style={{ objectFit: "cover" }}
+                        />
+                    </motion.div>
+                </div>
             </div>
-            <div className="flex flex-nowrap gap-10 mt-10 overflow-hidden"
+            <div className="flex flex-nowrap gap-10 mt-10 overflow-hidden px-2 md:px-5"
                 ref={containerRef}>
                 {departments.map((department, i) => (
                     <DepartmentCard key={i} i={i}
