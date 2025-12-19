@@ -13,9 +13,7 @@ function FeaturedDepartments() {
 
     const getOffset = () => {
         if (typeof window === "undefined") return 240;
-
         const w = window.innerWidth;
-
         if (w < 640) return 40;
         if (w < 1024) return 120;
         return 240;
