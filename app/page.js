@@ -1,32 +1,20 @@
-
 import EnterprisePinnedSection from "@/components/Layout/EnterprisePinnedSection";
 import PartnersSection from "@/components/Layout/PartnersSection";
 import BusinessSteps from "@/components/UI/home/BusinessSteps";
-import DesignProcess from "@/components/UI/home/DesignProcess";
+import DesignProcessContainer from "@/components/UI/home/DesignProcessContainer";
 import HeroVideo from "@/components/UI/HeroVideo";
 import FloatingMenu from "@/components/UI/FloatingMenu";
 import Gallery from "@/components/UI/home/Gallery";
 import WhyUs from "@/components/UI/home/WhyUs";
-import KeyStatsSection from "@/components/UI/KeyStatsSection";
+import KeyStatsSection from "@/components/UI/home/KeyStatsSection";
 import { getTranslations } from 'next-intl/server';
-
-
-export const SECTIONS = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "partners", label: "Partners" },
-  { id: "enterprise", label: "Enterprise" },
-  { id: "after-sales", label: "After Sales" },
-  { id: "useful-links", label: "Important Links" },
-  { id: "contact", label: "Contact" },
-  { id: "careers", label: "Careers" },
-];
-
+import EnterprisePinnedContainer from "@/components/Layout/EnterprisePinnedContainer";
+import BusinessStepsContainer from "@/components/UI/home/BusinessStepsContainer";
+import WhyUsContainer from "@/components/UI/home/WhyUsContainer";
 
 
 export default async function Home() {
   const translations = await getTranslations('HomePage');
-
 
   const slides = [
     {
@@ -49,7 +37,6 @@ export default async function Home() {
 
   return (
     <main className="bg-white min-h-screen overflow-x-hidden">
-      {/* <SectionNavigator sections={SECTIONS} /> */}
       <FloatingMenu />
       <div id="home">
         {/* <HeroCarousel slides={HERO_SLIDES} /> */}
@@ -57,7 +44,7 @@ export default async function Home() {
       </div>
 
       <section id="about">
-        <DesignProcess />
+        <DesignProcessContainer />
       </section>
 
       <section id="gallery">
@@ -71,17 +58,17 @@ export default async function Home() {
       </section>
 
       <section id="enterprise">
-        <EnterprisePinnedSection />
+        <EnterprisePinnedContainer />
         {/* <PinnedScrollSection /> */}
         {/* <PinnedSection /> */}
       </section>
 
       <section id="after-sales">
-        <BusinessSteps />
+        <BusinessStepsContainer />
       </section>
 
       <section id="why-us">
-        <WhyUs />
+        <WhyUsContainer />
       </section>
     </main>
   );

@@ -2,37 +2,12 @@ import { useEffect, useRef, useState } from "react";
 import NarrativeCard from "./NarrativeCard";
 
 
-const SECTIONS = [
-  {
-    title: "Customer Experience",
-    subtitle:
-      "Deliver a triple play of results: happier customers, employees and shareholders",
-    bullets: ["An insurgent mindset", "Integrated innovation"],
-    image: "/processes/UAE.avif",
-  },
-  {
-    title: "People & Organization",
-    subtitle:
-      "Accelerate your organization’s results through your people and teams",
-    bullets: ["Passion & Commitment", "Honesty & Openness"],
-    image: "/processes/manufacturer.avif",
-  },
-  {
-    title: "Business Strategy",
-    subtitle:
-      "Deliver a triple play of results: happier customers, employees and shareholders",
-    bullets: ["Corporate Strategy and Finance", "Innovation & Business Building"],
-    image: "/processes/customer-service.avif",
-  },
-];
 
-
-export default function ScrollNarrativePane({ onActiveChange }) {
+export default function ScrollNarrativePane({ sections, onActiveChange }) {
   const sectionRefs = useRef([]);
   const scrollRootRef = useRef(null);
 
   const [cursor, setCursor] = useState({ x: 0, y: 0, active: false });
-
 
   useEffect(() => {
     if (!scrollRootRef.current) return;
@@ -77,7 +52,7 @@ export default function ScrollNarrativePane({ onActiveChange }) {
       }
     >
       <div className="h-full snap-y snap-mandatory space-y-4 lg:space-y-0">
-        {SECTIONS.map((section, index) => (
+        {sections.map((section, index) => (
           <section
             key={index}
             ref={(el) => (sectionRefs.current[index] = el)}

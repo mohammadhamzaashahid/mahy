@@ -10,22 +10,7 @@ const containerVariants = {
     visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-export default function WhyUs() {
-    const items = [
-        {
-            title: "Sustainable & Smart Solutions",
-            content: "From water pumping to recycling, our products are designed to protect the environment while delivering unmatched performance and efficiency."
-        },
-        {
-            title: "Global Partnerships, Local Expertise",
-            content: "We collaborate with world-class brands like Grundfos to bring cutting-edge technology tailored to regional needs."
-        },
-        {
-            title: "Seamless Service & Support",
-            content: "Our dedicated after-sales team ensures smooth installation, prompt maintenance, and long-term peace of mind - every step of the way."
-        },
-    ];
-
+export default function WhyUs({ items }) {
     return (
         <div className="grid lg:grid-cols-2 lg:h-[70vh]">
             <motion.div
@@ -35,15 +20,15 @@ export default function WhyUs() {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                <p className="font-bold text-3xl uppercase">Why you should choose us?</p>
-                <p className="text-gray-600 my-5">We combine innovation, sustainability, and trusted partnerships to deliver solutions that are efficient, reliable, and built for long-term value.</p>
+                <p className="font-bold text-3xl uppercase">{items.heading}</p>
+                <p className="text-gray-600 my-5">{items.description}</p>
                 <Accordion
                     type="single"
                     collapsible
                     className="w-full"
                     defaultValue="item-1"
                 >
-                    {items.map((item, i) => (
+                    {items.data.map((item, i) => (
                         <AccordionItem key={i} value={`item-${i + 1}`}>
                             <AccordionTrigger className="cursor-pointer t-base-hover transition-colors duration-500 font-bold text-lg">
                                 {item.title}

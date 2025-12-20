@@ -6,25 +6,7 @@ const containerVariants = {
     visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-function Values() {
-    const items = [
-        {
-            title: "Mission",
-            content:
-                "To deliver innovative, sustainable solutions that create long-term value for our partners, communities, and the markets we serve. We are committed to combining expertise, technology, and responsible practices to address real-world challenges while driving measurable impact. Through continuous improvement and collaboration, we aim to build resilient businesses that contribute positively to economic and social development.",
-        },
-        {
-            title: "Vision",
-            content:
-                "To be a trusted regional leader, shaping the future through smart investments, innovation, and responsible growth. We envision a future where our initiatives set new benchmarks for excellence, adaptability, and sustainability across industries. By anticipating change and embracing progress, we strive to create lasting value for generations to come.",
-        },
-        {
-            title: "Values",
-            content:
-                "Integrity, collaboration, and excellence guide everything we do, ensuring accountability, transparency, and lasting impact. We believe in building strong relationships based on trust, mutual respect, and shared goals. Our values drive ethical decision-making, foster teamwork, and inspire us to consistently deliver high-quality outcomes in all our endeavors.",
-        },
-    ];
-
+function Values({ items }) {
     return (
         <motion.div
             className="p-10"

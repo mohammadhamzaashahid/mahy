@@ -5,8 +5,8 @@ const BusinessStepCard = ({ id, title, description, icon }) => {
         <div className="relative group step-card-container">
             <div className="relative lg:absolute inset-0 z-20 flex items-center justify-between pointer-events-none mr-6 lg:mr-0">
                 <div className="mt-15 lg:mt-10">
-                    <span className="text-xl font-semibold">{title}</span>
-                    <p className="mt-2 font-medium">{description}</p>
+                    <span className=" font-semibold">{title}</span>
+                    <p className="mt-2 text-sm font-medium">{description}</p>
                 </div>
                 <div className="number mt-8 lg:mt-7 relative -right-1  lg:-right-3 text-4xl font-bold">0{id}</div>
             </div>

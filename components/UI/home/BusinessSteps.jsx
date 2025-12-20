@@ -14,15 +14,11 @@ const itemVariants = {
     }),
 };
 
-function BusinessSteps() {
-    const steps = [
-        { id: 1, title: 'Commit to Sustainability', description: 'Drive growth responsibly by adopting eco-friendly practices that protect resources and support a cleaner future.', icon: '/icons/step1.png' },
-        { id: 2, title: 'Innovate & Diversify', description: 'Drive growth through innovation, advanced technology, and smart diversification while adapting to evolving market demands.', icon: '/icons/step2.png' },
-        { id: 3, title: 'Trusted by Stakeholders', description: 'Consistently deliver excellence to earn trust and build lasting relationships.', icon: '/icons/step3.png' },
-    ]
+function BusinessSteps({ items, steps }) {
+
     return (
         <div className="py-20">
-            <h2 className="text-center font-bold text-4xl mb-30 mx-5">To Get Successful Business, Follow These Steps</h2>
+            <h2 className="text-center font-bold text-4xl mb-30 mx-5">{items.heading}</h2>
             <div className="grid lg:grid-cols-2 gap-32 gap-x-20 lg:gap-30 px-4 lg:px-40 xl:grid-cols-3">
                 {steps.map((step, i) => (
                     <motion.div
@@ -43,10 +39,10 @@ function BusinessSteps() {
                 ))}
             </div>
             <div className="flex flex-wrap justify-center items-center mt-50 lg:mt-40 mx-5 gap-2">
-                <p>Stay ahead in a rapidly changing world.</p>
+                <p>{items.text}</p>
                 <Link className="" href={"/"}>
                     <PrimaryButton
-                        label="Consult now"
+                        label={items.button}
                         size="md"
                         radius="rounded-full"
                     />

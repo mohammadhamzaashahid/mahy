@@ -80,105 +80,91 @@ function History() {
         },
     ]
     return (
-        <div className="relative">
-            <div
-                ref={scrollRef}
-                className="flex flex-nowrap h-140 mt-14 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-5"
-            >
-                {items.map((item, i) => (
-                    <motion.div
-                        key={i}
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.55, ease: "easeOut" }}
-                        viewport={{ once: true }}>
-                        <HistoryCard
-                            index={i}
-                            title={item.title}
-                            image={item.image}
-                            description={item.description}
-                        />
-                    </motion.div>
-                ))}
-            </div>
+        <>
             <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.55, ease: "easeOut" }}
-                viewport={{ once: true }}
-                className="absolute inset-0 bottom-22 md:bottom-25 flex items-center justify-center">
-                <div className="grid grid-flow-col auto-cols-fr items-center w-full">
-                    {Array.from({ length: 100 }).map((_, i) => (
-                        <span key={i} className={`mx-auto bg-black w-px ${(i - 12) % 20 === 0 ? "h-3 lg:h-5 lg:w-0.5" : "h-2"}`} />
-                    ))}
+                viewport={{ once: true }}>
+                <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
+                    <h2 className='text-3xl lg:text-4xl font-bold uppercase px-10'>Our History</h2>
+                    <p className="mt-6 font-light px-10 mb-8">We're proud of our UAE heritage. From our beginnings in
+                        1972 as a local port operator in Dubai to a global logistics provider with operations in
+                        over 69 countries and across every continent.</p>
+                </div>
+                <div className="relative">
+                    <div
+                        ref={scrollRef}
+                        className="flex flex-nowrap h-140 mt-14 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-5"
+                    >
+                        {items.map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.55, ease: "easeOut" }}
+                                viewport={{ once: true }}>
+                                <HistoryCard
+                                    index={i}
+                                    title={item.title}
+                                    image={item.image}
+                                    description={item.description}
+                                />
+                            </motion.div>
+                        ))}
+                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.55, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="absolute inset-0 bottom-22 md:bottom-25 flex items-center justify-center">
+                        <div className="grid grid-flow-col auto-cols-fr items-center w-full">
+                            {Array.from({ length: 100 }).map((_, i) => (
+                                <span key={i} className={`mx-auto bg-black w-px ${(i - 12) % 20 === 0 ? "h-3 lg:h-5 lg:w-0.5" : "h-2"}`} />
+                            ))}
+                        </div>
+                    </motion.div>
+
+                    <div className="relative mt-3 flex items-center justify-center gap-3">
+                        <button
+                            onClick={handlePrev}
+                            disabled={currentIndex === 0}
+                            aria-label="Previous year"
+                            className={`group relative flex h-14 w-14 items-center justify-center rounded-full border border-black/20 backdrop-blur-md transition-all duration-300
+                                ${currentIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:border-black hover:bg-black hover:scale-105"}`}>
+                            <HiChevronLeft
+                                className="text-3xl text-black transition-all duration-300 group-hover:text-white group-hover:-translate-x-0.5"
+                            />
+                        </button>
+
+                        <div className="flex flex-col items-center text-center">
+                            <span className="text-xs tracking-[0.35em] uppercase text-slate-500">
+                                TIMELINE
+                            </span>
+                            <span className="mt-1 text-sm font-semibold text-slate-900">
+                                {items[currentIndex]?.title}
+                            </span>
+                        </div>
+                        <button
+                            onClick={handleNext}
+                            disabled={currentIndex === items.length - 1}
+                            aria-label="Next year"
+                            className={`group relative flex h-14 w-14 items-center justify-center rounded-full border border-black/20 backdrop-blur-md transition-all duration-300
+                            ${currentIndex === items.length - 1
+                                    ? "opacity-30 cursor-not-allowed"
+                                    : "hover:border-black hover:bg-black hover:scale-105"}`}>
+                            <HiChevronRight
+                                className="text-3xl text-black transition-all duration-300 group-hover:text-white group-hover:translate-x-0.5"
+                            />
+                        </button>
+
+                    </div>
+
                 </div>
             </motion.div>
+        </>
 
-            <div className="relative mt-3 flex items-center justify-center gap-3">
-                <button
-                    onClick={handlePrev}
-                    disabled={currentIndex === 0}
-                    aria-label="Previous year"
-                    className={`
-      group
-      relative
-      flex h-14 w-14 items-center justify-center
-      rounded-full
-      border border-black/20
-      backdrop-blur-md
-      transition-all duration-300
-      ${currentIndex === 0
-                            ? "opacity-30 cursor-not-allowed"
-                            : "hover:border-black hover:bg-black hover:scale-105"}
-    `}
-                >
-                    <HiChevronLeft
-                        className="
-        text-3xl
-        text-black
-        transition-all duration-300
-        group-hover:text-white
-        group-hover:-translate-x-0.5"
-                    />
-                </button>
-
-                <div className="flex flex-col items-center text-center">
-                    <span className="text-xs tracking-[0.35em] uppercase text-slate-500">
-                        TIMELINE
-                    </span>
-                    <span className="mt-1 text-sm font-semibold text-slate-900">
-                        {items[currentIndex]?.title}
-                    </span>
-                </div>
-                <button
-                    onClick={handleNext}
-                    disabled={currentIndex === items.length - 1}
-                    aria-label="Next year"
-                    className={`
-                            group
-                            relative
-                            flex h-14 w-14 items-center justify-center
-                            rounded-full
-                            border border-black/20
-                            backdrop-blur-md
-                            transition-all duration-300
-                            ${currentIndex === items.length - 1
-                            ? "opacity-30 cursor-not-allowed"
-                            : "hover:border-black hover:bg-black hover:scale-105"}`}>
-                    <HiChevronRight
-                        className="
-        text-3xl
-        text-black
-        transition-all duration-300
-        group-hover:text-white
-        group-hover:translate-x-0.5
-      "
-                    />
-                </button>
-
-            </div>
-
-        </div>
     )
 }
 

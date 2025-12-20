@@ -3,6 +3,7 @@ import PageHeading from '@/components/UI/PageHeading';
 import List from '@/components/UI/companies/List';
 import React from 'react'
 import Breadcrumb from '@/components/UI/Breadcrumb';
+import { getTranslations } from 'next-intl/server';
 
 const filters = [
     {
@@ -78,14 +79,15 @@ async function Companies({ searchParams }) {
         });
     };
 
+    const translations = await getTranslations('CompaniesPage');
 
     return (
         <main className='bg-gray-50 pb-14'>
-            <PageHeading title={"Our Portfolio"}
-                description={"The Fund seeks to build a rich investment portfolio of companies across diverse sectors in UAE and beyond, in line with UAE Vision."}
+            <PageHeading title={translations("Heading")}
+                description={translations("Description")}
                 image={"/gallery/gallery-2.jpg"}
             />
-            <Breadcrumb/>
+            <Breadcrumb />
             <div id='list' className='relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20'>
                 <Filters filters={filters} search={search} />
                 <div className="col-span-8">

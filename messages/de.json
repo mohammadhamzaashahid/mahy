@@ -9,6 +9,72 @@
         "Hero2OtherCtaLabel": "Unsere Produkte",
         "Hero3Title": "Innovation in Forschung & Handel",
         "Hero3Subtitle": "Stärkung der Skyline des GCC.",
-        "Hero3CtaLabel": "Produkte"
+        "Hero3CtaLabel": "Produkte",
+        "Process": {
+            "Heading": "Unser Prozess",
+            "Step1Title": "Bedürfnisse verstehen",
+            "Step1Description": "Wir beginnen damit, unseren Kunden und Stakeholdern aufmerksam zuzuhören und ihre einzigartigen Anforderungen und Herausforderungen zu identifizieren. So stellen wir sicher, dass jede Lösung maximalen Nutzen liefert.",
+            "Step2Title": "Nachhaltige Lösungen entwerfen",
+            "Step2Description": "Unsere Experten entwickeln innovative, umweltfreundliche und kosteneffiziente Lösungen, die Leistung und ökologische Verantwortung ausbalancieren. Nachhaltigkeit ist in jeder Phase unseres Prozesses verankert.",
+            "Step3Title": "Exzellent umsetzen",
+            "Step3Description": "Von der Planung bis zur Ausführung setzen wir moderne Technologien und bewährte Methoden ein, um zuverlässige, hochwertige Ergebnisse zu liefern. Präzision und Effizienz leiten jedes Projekt, das wir durchführen.",
+            "Step4Title": "Kontinuierliche Verbesserung & Support",
+            "Step4Description": "Wir hören nicht nach der Lieferung auf. Laufendes Monitoring, Feedback und Support helfen uns, unsere Lösungen zu optimieren, langfristigen Wert zu schaffen und die Erwartungen der Stakeholder zu übertreffen."
+        },
+        "KeyFacts": {
+            "Heading": "Wichtige Fakten",
+            "Fact1": "Mitarbeiter",
+            "Fact2": "Nationalitäten",
+            "Fact3": "Zertifizierte Ingenieure",
+            "Fact4": "Projekte in den VAE",
+            "Fact5": "Vertriebspartner"
+        },
+        "Partners": {
+            "Heading": "Unsere Partner",
+            "Description": "Wir arbeiten nur mit den Besten, um Ihnen nur das Beste zu bieten."
+        },
+        "EnterpriseSections": {
+            "Section1Title": "Kundenerlebnis",
+            "Section1Subtitle": "Erzielung dreifacher Ergebnisse: zufriedenere Kunden, Mitarbeiter und Aktionäre",
+            "Section1Bullet1": "Ein rebellisches Mindset",
+            "Section1Bullet2": "Integrierte Innovation",
+            "Section2Title": "Menschen & Organisation",
+            "Section2Subtitle": "Beschleunigen Sie die Ergebnisse Ihrer Organisation durch Ihre Mitarbeiter und Teams",
+            "Section2Bullet1": "Leidenschaft & Engagement",
+            "Section2Bullet2": "Ehrlichkeit & Offenheit",
+            "Section3Title": "Geschäftsstrategie",
+            "Section3Subtitle": "Erzielung dreifacher Ergebnisse: zufriedenere Kunden, Mitarbeiter und Aktionäre",
+            "Section3Bullet1": "Unternehmensstrategie und Finanzen",
+            "Section3Bullet2": "Innovation & Geschäftsentwicklung"
+        },
+        "BusinessSteps": {
+            "Heading": "Um erfolgreich zu sein, folgen Sie diesen Schritten",
+            "Step1Title": "Verpflichtung zur Nachhaltigkeit",
+            "Step1Description": "Fördern Sie Wachstum verantwortungsvoll durch umweltfreundliche Praktiken, die Ressourcen schützen und eine sauberere Zukunft unterstützen.",
+            "Step2Title": "Innovieren & Diversifizieren",
+            "Step2Description": "Fördern Sie Wachstum durch Innovation, moderne Technologie und kluge Diversifikation, während Sie sich an die sich verändernden Marktanforderungen anpassen.",
+            "Step3Title": "Vertrauen der Stakeholder gewinnen",
+            "Step3Description": "Liefern Sie konsequent Exzellenz, um Vertrauen zu gewinnen und dauerhafte Beziehungen aufzubauen.",
+            "Text": "Bleiben Sie in einer sich schnell verändernden Welt vorne.",
+            "Button": "Jetzt beraten lassen"
+        },
+        "WhyUs": {
+            "Heading": "Warum Sie uns wählen sollten?",
+            "Description": "Wir kombinieren Innovation, Nachhaltigkeit und vertrauenswürdige Partnerschaften, um Lösungen zu liefern, die effizient, zuverlässig und auf langfristigen Wert ausgelegt sind.",
+            "Item1Title": "Nachhaltige & intelligente Lösungen",
+            "Item1Content": "Von Wasserpumpen bis zum Recycling: Unsere Produkte schützen die Umwelt und bieten gleichzeitig unvergleichliche Leistung und Effizienz.",
+            "Item2Title": "Globale Partnerschaften, lokale Expertise",
+            "Item2Content": "Wir arbeiten mit weltbekannten Marken wie Grundfos zusammen, um modernste Technologie auf regionale Bedürfnisse zuzuschneiden.",
+            "Item3Title": "Nahtloser Service & Support",
+            "Item3Content": "Unser engagiertes After-Sales-Team sorgt für reibungslose Installation, schnelle Wartung und langfristige Ruhe – bei jedem Schritt."
+        }
+    },
+    "AboutUsPage": {
+        "Heading": "Unser Portfolio",
+        "Description": "Der Fonds strebt den Aufbau eines umfangreichen Investitionsportfolios von Unternehmen in verschiedenen Sektoren in den VAE und darüber hinaus an, im Einklang mit der Vision der VAE."
+    },
+    "CompaniesPage": {
+        "Heading": "Unser Portfolio",
+        "Description": "Der Fonds strebt den Aufbau eines umfangreichen Investitionsportfolios von Unternehmen in verschiedenen Sektoren in den VAE und darüber hinaus an, im Einklang mit der Vision der VAE."
     }
 }
