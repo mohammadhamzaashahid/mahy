@@ -89,6 +89,32 @@
             "Item3Text": "Integrity, collaboration, and excellence guide everything we do, ensuring accountability, transparency, and lasting impact. We believe in building strong relationships based on trust, mutual respect, and shared goals. Our values drive ethical decision-making, foster teamwork, and inspire us to consistently deliver high-quality outcomes in all our endeavors.",
             "Text1": "At M.A.H.Y. Khoory Group, our purpose is to deliver solutions that enrich lives while protecting the planet.",
             "Text2": "We combine innovation, sustainability, and technology to create cost-effective products and services that empower communities, drive progress, and safeguard the environment for future generations."
+        },
+        "History": {
+            "Heading": "Our History",
+            "Text": "We're proud of our UAE heritage. From our beginnings in 1972 as a local port operator in Dubai to a global logistics provider with operations in over 69 countries and across every continent.",
+            "Item1": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam",
+            "Item2": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam",
+            "Item3": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam",
+            "Item4": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam",
+            "Item5": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
+        },
+        "OurPeople": {
+            "Heading": "Our People",
+            "Text": "Our dedicated team of more than 100,000 employees from over 150 nationalities ensure the smooth flow of trade. As an equal employer that recognises and values diversity and an inclusive culture, we empower and up-skill our people with opportunities to perform at their best."
+        },
+        "Leaders": {
+            "Heading": "From The Leaders",
+            "Text1": "Our people are our greatest strength and the driving force behind our shared vision of making trade flow.",
+            "Person1": "Mr. Salahuddin Sharafi",
+            "Position1": "Chairman of M.A.H.Y. Khoory & Co. LLC",
+            "Text2": "Our people are our greatest strength and the driving force behind our shared vision of making trade flow.",
+            "Person2": "Mr. Shabbir Haideri",
+            "Position2": "Group CEO of M.A.H.Y. Khoory & Co. LLC"
+        },
+        "OurExcellence": {
+            "Heading": "Our Excellence",
+            "Text": "Our dedicated team of more than 100,000 employees from over 150 nationalities ensure the smooth flow of trade. As an equal employer that recognises and values diversity and an inclusive culture, we empower and up-skill our people with opportunities to perform at their best."
         }
     },
     "CompaniesPage": {

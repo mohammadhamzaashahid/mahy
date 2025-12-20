@@ -4,7 +4,7 @@ import HistoryCard from './HistoryCard'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import { motion } from "framer-motion";
 
-function History() {
+function History({ history }) {
     const scrollRef = useRef(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -36,48 +36,28 @@ function History() {
         {
             title: "Today",
             image: "/office.jpg",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
+            description: history.items[0]
         },
         {
             title: "1972",
             image: "/office.jpg",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
+            description: history.items[1]
         },
         {
             title: "1960",
             image: "/office.jpg",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
+            description: history.items[2]
         },
         {
             title: "1960",
             image: "/office.jpg",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
+            description: history.items[3]
         },
         {
             title: "1960",
             image: "/office.jpg",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
-        },
-        {
-            title: "1960",
-            image: "/office.jpg",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
-        },
-        {
-            title: "1960",
-            image: "/office.jpg",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
-        },
-        {
-            title: "1960",
-            image: "/office.jpg",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
-        },
-        {
-            title: "1960",
-            image: "/office.jpg",
-            description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
-        },
+            description: history.items[4]
+        }
     ]
     return (
         <>
@@ -87,10 +67,8 @@ function History() {
                 transition={{ duration: 0.55, ease: "easeOut" }}
                 viewport={{ once: true }}>
                 <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
-                    <h2 className='text-3xl lg:text-4xl font-bold uppercase px-10'>Our History</h2>
-                    <p className="mt-6 font-light px-10 mb-8">We're proud of our UAE heritage. From our beginnings in
-                        1972 as a local port operator in Dubai to a global logistics provider with operations in
-                        over 69 countries and across every continent.</p>
+                    <h2 className='text-3xl lg:text-4xl font-bold uppercase px-10'>{history.heading}</h2>
+                    <p className="mt-6 font-light px-10 mb-8">{history.subHeading}</p>
                 </div>
                 <div className="relative">
                     <div

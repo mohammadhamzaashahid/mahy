@@ -30,6 +30,25 @@ async function About() {
         text2: translations("Purpose.Text2"),
     }
 
+    const history = {
+        heading: translations("History.Heading"),
+        subHeading: translations("History.Text"),
+        items: [translations("History.Item1"), translations("History.Item2"), translations("History.Item3"), translations("History.Item4"), translations("History.Item5")]
+    }
+    const ourPeople = {
+        heading: translations("OurPeople.Heading"),
+        text: translations("OurPeople.Text"),
+    }
+    const leaders = {
+        heading: translations("Leaders.Heading"),
+        leader1: { quote: translations("Leaders.Text1"), name: translations("Leaders.Person1"), designation: translations("Leaders.Position1") },
+        leader2: { quote: translations("Leaders.Text2"), name: translations("Leaders.Person2"), designation: translations("Leaders.Position2") },
+    }
+    const ourExcellence = {
+        heading: translations("OurExcellence.Heading"),
+        text: translations("OurExcellence.Text"),
+    }
+
     return (
         <main className='bg-gray-50'>
             <PageHeading title={translations("Heading")}
@@ -40,11 +59,11 @@ async function About() {
             <MissionStatement missionStatement={missionStatement} />
             <Purpose purpose={purpose} />
             <div className='py-16 lg:py-24 border-b border-gray-300'>
-                <History />
+                <History history={history} />
             </div>
             <ValuesSection
-                title="OUR PEOPLE"
-                description="Our dedicated team of more than 100,000 employees from over 150 nationalities ensure the smooth flow of trade. As an equal employer that recognises and values diversity and an inclusive culture, we empower and up-skill our people with opportunities to perform at their best."
+                title={ourPeople.heading}
+                description={ourPeople.text}
                 imageSrc="/gallery/gallery-2.jpg"
                 imageAlt="Our people"
                 imagePosition="right"
@@ -53,10 +72,10 @@ async function About() {
             />
             <div className='border-b border-gray-200'>
             </div>
-            <LeadersSection />
+            <LeadersSection leaders={leaders} />
             <ValuesSection
-                title="OUR EXCELLENCE"
-                description="Our dedicated team of more than 100,000 employees from over 150 nationalities ensure the smooth flow of trade. As an equal employer that recognises and values diversity and an inclusive culture, we empower and up-skill our people with opportunities to perform at their best."
+                title={ourExcellence.heading}
+                description={ourExcellence.text}
                 imageSrc="/gallery/gallery-6.jpg"
                 imageAlt="Our people"
                 imagePosition="left"

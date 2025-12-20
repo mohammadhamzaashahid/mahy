@@ -70,8 +70,52 @@
         }
     },
     "AboutUsPage": {
-        "Heading": "Unser Portfolio",
-        "Description": "Der Fonds strebt den Aufbau eines umfangreichen Investitionsportfolios von Unternehmen in verschiedenen Sektoren in den VAE und darüber hinaus an, im Einklang mit der Vision der VAE."
+        "Heading": "Über Uns",
+        "Description": "Die M.A.H.Y. Khoory Gruppe gehört zu den vertrauenswürdigsten und bekanntesten Namen in den Vereinigten Arabischen Emiraten. Als führendes Unternehmen auf dem regionalen Markt besteht die M.A.H.Y. Khoory Gruppe aus einer vielfältigen Gruppe von Unternehmen und Geschäftseinheiten, die erstklassige technologische Produkte und Dienstleistungen für unsere Kunden bereitstellen.",
+        "MissionStatement": {
+            "Heading": "Leitbild",
+            "SubHeading": "Wir machen den Fluss zuverlässig",
+            "Text": "Hochwertige Pumpenprodukte und technische Lösungen durch vertrauensvolle Partnerschaften, kontinuierliche Innovation und exzellenten Service bereitstellen und dabei langfristigen Wert für unsere Kunden, Stakeholder und Gemeinschaften schaffen.",
+            "Button": "Entdecken"
+        },
+        "Purpose": {
+            "Heading": "Unser Ziel",
+            "SubHeading": "Verändere das, was möglich ist.",
+            "Item1Title": "Mission",
+            "Item1Text": "Innovative, nachhaltige Lösungen liefern, die langfristigen Wert für unsere Partner, Gemeinschaften und die von uns bedienten Märkte schaffen. Wir setzen Fachwissen, Technologie und verantwortungsvolle Praktiken ein, um reale Herausforderungen zu bewältigen und messbare Ergebnisse zu erzielen. Durch kontinuierliche Verbesserung und Zusammenarbeit bauen wir widerstandsfähige Unternehmen auf, die positiv zur wirtschaftlichen und sozialen Entwicklung beitragen.",
+            "Item2Title": "Vision",
+            "Item2Text": "Ein vertrauenswürdiger regionaler Marktführer sein, der die Zukunft durch kluge Investitionen, Innovation und verantwortungsbewusstes Wachstum gestaltet. Wir stellen uns eine Zukunft vor, in der unsere Initiativen neue Maßstäbe für Exzellenz, Anpassungsfähigkeit und Nachhaltigkeit in allen Branchen setzen. Durch vorausschauendes Handeln und die Nutzung von Fortschritt streben wir danach, dauerhaften Wert für kommende Generationen zu schaffen.",
+            "Item3Title": "Werte",
+            "Item3Text": "Integrität, Zusammenarbeit und Exzellenz leiten alles, was wir tun, und gewährleisten Verantwortung, Transparenz und nachhaltige Wirkung. Wir glauben an den Aufbau starker Beziehungen, die auf Vertrauen, gegenseitigem Respekt und gemeinsamen Zielen basieren. Unsere Werte fördern ethische Entscheidungen, Teamarbeit und inspirieren uns, in allen unseren Vorhaben konsequent hochwertige Ergebnisse zu liefern.",
+            "Text1": "Bei der M.A.H.Y. Khoory Gruppe besteht unser Ziel darin, Lösungen zu liefern, die das Leben bereichern und gleichzeitig den Planeten schützen.",
+            "Text2": "Wir kombinieren Innovation, Nachhaltigkeit und Technologie, um kosteneffiziente Produkte und Dienstleistungen zu schaffen, die Gemeinschaften stärken, Fortschritt fördern und die Umwelt für zukünftige Generationen schützen."
+        },
+        "History": {
+            "Heading": "Unsere Geschichte",
+            "Text": "Wir sind stolz auf unser Erbe in den VAE. Von unseren Anfängen 1972 als lokaler Hafenbetreiber in Dubai bis hin zu einem globalen Logistikanbieter mit Aktivitäten in über 69 Ländern und auf allen Kontinenten.",
+            "Item1": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam",
+            "Item2": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam",
+            "Item3": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam",
+            "Item4": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam",
+            "Item5": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde illo officia recusandae. Rem incidunt iste ipsa rerum sequi, numquam"
+        },
+        "OurPeople": {
+            "Heading": "Unser Team",
+            "Text": "Unser engagiertes Team von über 100.000 Mitarbeitern aus mehr als 150 Nationen gewährleistet einen reibungslosen Handelsfluss. Als gleichberechtigter Arbeitgeber, der Vielfalt und eine inklusive Kultur anerkennt und wertschätzt, fördern wir unsere Mitarbeiter und bieten Möglichkeiten, ihr Bestes zu geben."
+        },
+        "Leaders": {
+            "Heading": "Von den Führungskräften",
+            "Text1": "Unsere Mitarbeiter sind unsere größte Stärke und die treibende Kraft hinter unserer gemeinsamen Vision, den Handel fließen zu lassen.",
+            "Person1": "Herr Salahuddin Sharafi",
+            "Position1": "Vorsitzender von M.A.H.Y. Khoory & Co. LLC",
+            "Text2": "Unsere Mitarbeiter sind unsere größte Stärke und die treibende Kraft hinter unserer gemeinsamen Vision, den Handel fließen zu lassen.",
+            "Person2": "Herr Shabbir Haideri",
+            "Position2": "Group CEO von M.A.H.Y. Khoory & Co. LLC"
+        },
+        "OurExcellence": {
+            "Heading": "Unsere Exzellenz",
+            "Text": "Unser engagiertes Team von über 100.000 Mitarbeitern aus mehr als 150 Nationen gewährleistet einen reibungslosen Handelsfluss. Als gleichberechtigter Arbeitgeber, der Vielfalt und eine inklusive Kultur anerkennt und wertschätzt, fördern wir unsere Mitarbeiter und bieten Möglichkeiten, ihr Bestes zu geben."
+        }
     },
     "CompaniesPage": {
         "Heading": "Unser Portfolio",
