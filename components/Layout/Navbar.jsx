@@ -7,6 +7,7 @@ import { HiChevronDown, HiMenuAlt3, HiX } from "react-icons/hi";
 import Dropdown from "./Dropdown";
 import Button from "../UI/Button";
 import { NAVIGATION } from "../../config/navbar.config";
+import Cookies from "js-cookie";
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(null);
@@ -30,6 +31,11 @@ export default function Navbar() {
     setMobileDropdown(null);
   };
 
+  const setLocale = (locale) => {
+    Cookies.set("locale", locale, { expires: 30 }); // cookie valid for 30 days
+    window.location.reload(); // optional: reload to apply locale change
+  };
+
   return (
     <header className="fixed top-0 left-0 z-50 w-full " style={{
       paddingTop: "env(safe-area-inset-top)",
@@ -50,6 +56,15 @@ export default function Navbar() {
               className="w-[150px] sm:w-[160px] md:w-[170px] lg:w-[180px] xl:w-[200px] object-contain"
             />
           </Link>
+        </div>
+
+        <div className="flex gap-2">
+          <button onClick={() => setLocale("en")} className="px-3 py-1 bg-blue-500 text-white rounded">
+            EN
+          </button>
+          <button onClick={() => setLocale("de")} className="px-3 py-1 bg-green-500 text-white rounded">
+            DE
+          </button>
         </div>
 
         <ul className="hidden lg:flex items-center gap-6 text-white text-sm font-medium">

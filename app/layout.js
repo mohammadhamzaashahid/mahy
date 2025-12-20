@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
+import { NextIntlClientProvider } from "next-intl";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -40,11 +41,13 @@ export default function RootLayout({ children }) {
         className={`${poppins.variable} antialiased`}
         style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
-        <Navbar />
-        {children}
-        <section id="useful-links">
-          <Footer />
-        </section>
+        <NextIntlClientProvider>
+          <Navbar />
+          {children}
+          <section id="useful-links">
+            <Footer />
+          </section>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
