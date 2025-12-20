@@ -7,7 +7,7 @@ async function Jobs({ searchParams }) {
     const heading = {
         title: "Explore Jobs",
         description: "Join a team driven by innovation, collaboration, and impact. Build your career while shaping meaningful solutions and growing with us.",
-        image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1766132766/OMODA_JAECOO_expands_UAE_presence_with_MAHY_Khoory_Automotive_as_the_____imgupscaler.ai_Sharpener_4K_ofh9sq.png"
+        image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1766132761/careers_tkbmhq.avif"
     }
     const params = await searchParams;
 

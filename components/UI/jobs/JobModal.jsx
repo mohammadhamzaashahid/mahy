@@ -23,11 +23,11 @@ export default function JobModal({ }) {
 
     return (
         <>
-            <div>
+            <div className='flex justify-center'>
                 <button
                     type="button"
                     onClick={openModal}
-                    className="rounded-lg text-sm b-base b-base-hover px-5 py-3 font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+                    className="rounded-lg text-sm b-base b-base-hover px-6 py-3 font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
                 >
                     Apply for Job
                 </button>
@@ -58,17 +58,17 @@ export default function JobModal({ }) {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white p-10 text-left align-middle shadow-xl transition-all">
                                     <Dialog.Title
                                         as="h3"
-                                        className="text-lg font-semibold text-gray-900"
+                                        className="text-xl font-semibold text-gray-900"
                                     >
                                         Apply for this position
                                     </Dialog.Title>
 
                                     <form onSubmit={handleSubmit} className="mt-4 space-y-4" encType="multipart/form-data">
                                         {/* Name */}
-                                        <div className='pt-1'>
+                                        <div className='pt-3'>
                                             <label className="block text-sm font-medium text-gray-700 mb-1">
                                                 Full Name
                                             </label>
@@ -79,7 +79,7 @@ export default function JobModal({ }) {
                                             />
                                         </div>
                                         {/* Email */}
-                                        <div>
+                                        <div className='pt-2'>
                                             <label className="block text-sm font-medium text-gray-700 mb-1">
                                                 Email
                                             </label>
@@ -90,7 +90,7 @@ export default function JobModal({ }) {
                                             />
                                         </div>
                                         {/* Resume */}
-                                        <div>
+                                        <div className='pt-2'>
                                             <label className="block text-sm font-medium text-gray-700 mb-1">
                                                 Resume (PDF only)
                                             </label>
