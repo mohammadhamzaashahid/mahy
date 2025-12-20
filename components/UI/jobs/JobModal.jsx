@@ -2,6 +2,7 @@
 
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import { Slide, ToastContainer, toast } from 'react-toastify';
 
 export default function JobModal({ }) {
     let [isOpen, setIsOpen] = useState(false)
@@ -12,6 +13,12 @@ export default function JobModal({ }) {
 
     function openModal() {
         setIsOpen(true)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        toast("You have succesfully applied to this job.");
+        closeModal();
     }
 
     return (
@@ -59,7 +66,7 @@ export default function JobModal({ }) {
                                         Apply for this position
                                     </Dialog.Title>
 
-                                    <form className="mt-4 space-y-4" encType="multipart/form-data">
+                                    <form onSubmit={handleSubmit} className="mt-4 space-y-4" encType="multipart/form-data">
                                         {/* Name */}
                                         <div className='pt-1'>
                                             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -118,6 +125,15 @@ export default function JobModal({ }) {
                     </div>
                 </Dialog>
             </Transition>
+            <ToastContainer
+                transition={Slide}
+                hideProgressBar
+                autoClose={3000}
+                position="top-right"
+                toastStyle={{
+                    transition: "all 0.5s ease-in-out",
+                }}
+            />
         </>
     )
 }
