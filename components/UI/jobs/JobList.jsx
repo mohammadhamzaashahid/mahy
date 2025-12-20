@@ -1,5 +1,6 @@
 import Filters from '../companies/Filters'
 import JobCard from './JobCard';
+import JobModal from './JobModal';
 
 function JobList({ params }) {
     const search = params.search;
@@ -77,14 +78,17 @@ function JobList({ params }) {
     };
 
     return (
-        <section id='list' className='grid gap-10 md:grid-cols-10 max-w-7xl mx-auto px-5 py-20'>
-            <div className="col-span-3">
-                <Filters filters={filters} search={search} />
-            </div>
-            <div className="col-span-7 space-y-5 mt-5">
-                {getJobs().map((job, i) => (
-                    <JobCard key={i} job={job} />
-                ))}
+        <section id='list' className='max-w-7xl mx-auto px-5 py-10'>
+            <JobModal />
+            <div className='grid gap-10 md:grid-cols-10 mt-8'>
+                <div className="col-span-3">
+                    <Filters filters={filters} search={search} />
+                </div>
+                <div className="col-span-7 space-y-5 mt-3">
+                    {getJobs().map((job, i) => (
+                        <JobCard key={i} job={job} />
+                    ))}
+                </div>
             </div>
         </section>
     )

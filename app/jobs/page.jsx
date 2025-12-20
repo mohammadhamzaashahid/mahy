@@ -1,4 +1,5 @@
 import JobList from '@/components/UI/jobs/JobList'
+import JobModal from '@/components/UI/jobs/JobModal';
 import PageHeading from '@/components/UI/PageHeading'
 import React from 'react'
 
