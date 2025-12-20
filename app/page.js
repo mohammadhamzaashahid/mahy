@@ -1,11 +1,8 @@
-import EnterprisePinnedSection from "@/components/Layout/EnterprisePinnedSection";
 import PartnersSection from "@/components/Layout/PartnersSection";
-import BusinessSteps from "@/components/UI/home/BusinessSteps";
 import DesignProcessContainer from "@/components/UI/home/DesignProcessContainer";
 import HeroVideo from "@/components/UI/HeroVideo";
 import FloatingMenu from "@/components/UI/FloatingMenu";
 import Gallery from "@/components/UI/home/Gallery";
-import WhyUs from "@/components/UI/home/WhyUs";
 import KeyStatsSection from "@/components/UI/home/KeyStatsSection";
 import { getTranslations } from 'next-intl/server';
 import EnterprisePinnedContainer from "@/components/Layout/EnterprisePinnedContainer";

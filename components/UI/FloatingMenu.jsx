@@ -1,4 +1,5 @@
 "use client"
+import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import { FiMinus } from "react-icons/fi";
 
@@ -15,6 +16,7 @@ const sections = [
 export default function FloatingMenu() {
   const [active, setActive] = useState(null);
   const isActiveLightBg = sections.find((s) => s.id === active)?.lightBg;
+  const locale = useLocale();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,7 +35,7 @@ export default function FloatingMenu() {
   }, []);
 
   return (
-    <ul className="hidden lg:block fixed bottom-25 lg:right-20 space-y-4 z-30">
+    <ul className={`hidden lg:block fixed bottom-25 ${locale === "ar" ? "left-20" : "right-20"} space-y-4 z-30`}>
       {sections.map((s) => (
         <li key={s.id} className="group">
           <a

@@ -9,28 +9,32 @@ async function DesignProcessContainer() {
             title: translations('Step1Title'),
             description: translations('Step1Description'),
             icon: "/processes/planning.png",
-            horizontalShift: "left-0"
+            leftShift: "left-0",
+            rightShift: "right-0"
         },
         {
             id: 2,
             title: translations('Step2Title'),
             description: translations('Step2Description'),
             icon: "/processes/design.png",
-            horizontalShift: "left-15"
+            leftShift: "left-15",
+            rightShift: "right-15"
         },
         {
             id: 3,
             title: translations('Step3Title'),
             description: translations('Step3Description'),
             icon: "/processes/development.png",
-            horizontalShift: "left-17"
+            leftShift: "left-17",
+            rightShift: "right-17"
         },
         {
             id: 4,
             title: translations('Step4Title'),
             description: translations('Step4Description'),
             icon: "/processes/deployment.png",
-            horizontalShift: "left-4"
+            leftShift: "left-4",
+            rightShift: "right-4"
         }];
 
     return (

@@ -8,6 +8,7 @@ import Dropdown from "./Dropdown";
 import Button from "../UI/Button";
 import { NAVIGATION } from "../../config/navbar.config";
 import Cookies from "js-cookie";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(null);
@@ -31,9 +32,15 @@ export default function Navbar() {
     setMobileDropdown(null);
   };
 
+  const router = useRouter();
+  const pathname = usePathname();
+
   const setLocale = (locale) => {
-    Cookies.set("locale", locale, { expires: 30 }); // cookie valid for 30 days
-    window.location.reload(); // optional: reload to apply locale change
+    Cookies.set("locale", locale, { expires: 30 });
+    window.location.reload();
+    // router.replace(pathname, {
+    //   scroll: false,
+    // });
   };
 
   return (
@@ -62,8 +69,11 @@ export default function Navbar() {
           <button onClick={() => setLocale("en")} className="px-3 py-1 bg-blue-500 text-white rounded">
             EN
           </button>
-          <button onClick={() => setLocale("de")} className="px-3 py-1 bg-green-500 text-white rounded">
+          <button onClick={() => setLocale("de")} className="px-3 py-1 bg-red-500 text-white rounded">
             DE
+          </button>
+          <button onClick={() => setLocale("ar")} className="px-3 py-1 bg-green-500 text-white rounded">
+            AR
           </button>
         </div>
 

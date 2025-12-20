@@ -16,6 +16,8 @@ function HeroVideo({ slides }) {
         return () => clearInterval(id);
     }, [slides.length]);
 
+
+
     return (
         <section className="relative h-screen">
             <video
@@ -36,7 +38,7 @@ function HeroVideo({ slides }) {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.5 }}
-                    className="absolute bottom-20 left-6 md:left-20 z-30 max-w-xl"
+                    className={`absolute bottom-20 left-6 right-6 md:left-20 md:right-20 z-30 max-w-xl`}
                 >
                     <h1 className="text-4xl md:text-6xl font-semibold text-gray-100 leading-tight drop-shadow-lg">
                         {currentSlide.title}

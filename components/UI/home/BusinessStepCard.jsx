@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const BusinessStepCard = ({ id, title, description, icon }) => {
     return (
-        <div className="relative group step-card-container">
+        <div className="relative group step-card-container" dir="ltr">
             <div className="relative lg:absolute inset-0 z-20 flex items-center justify-between pointer-events-none mr-6 lg:mr-0">
-                <div className="mt-15 lg:mt-10">
+                <div dir="rtl" className="mt-15 lg:mt-10">
                     <span className=" font-semibold">{title}</span>
                     <p className="mt-2 text-sm font-medium">{description}</p>
                 </div>

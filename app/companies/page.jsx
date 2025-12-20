@@ -88,7 +88,7 @@ async function Companies({ searchParams }) {
                 image={"/gallery/gallery-2.jpg"}
             />
             <Breadcrumb />
-            <div id='list' className='relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20'>
+            <div dir='ltr' id='list' className='relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20'>
                 <Filters filters={filters} search={search} />
                 <div className="col-span-8">
                     <List companies={getCompanies()} />

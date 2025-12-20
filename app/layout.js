@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import { NextIntlClientProvider } from "next-intl";
+import { cookies } from "next/headers";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -33,15 +34,20 @@ export const viewport = {
   themeColor: "#000",
 };
 
-export default function RootLayout({ children }) {
+
+export default async function RootLayout({ children }) {
+  const cookieStore = await cookies()
+  const locale = cookieStore.get("locale").value || "en";
+  const dir = locale === "ar" ? "rtl" : "ltr";
+
   return (
-    <html lang="en">
+    <html lang={locale} dir={dir}>
       <body
         suppressHydrationWarning
         className={`${poppins.variable} antialiased`}
         style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
-        <NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale}>
           <Navbar />
           {children}
           <section id="useful-links">

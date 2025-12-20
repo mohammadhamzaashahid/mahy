@@ -31,16 +31,8 @@ function Filters({ filters, search }) {
             <button
                 onClick={handleShowFilters}
                 className={`
-  fixed bottom-3 left-3 ${showFilters ? "z-50" : "z-20"}
-  rounded-3xl
-    border-base
-  bg-white/20
-  backdrop-blur-xl
-  px-6 py-2
-  t-base
-  lg:hidden
-  backdrop-saturate-150`}
-            >
+                    fixed bottom-3 left-3 ${showFilters ? "z-50" : "z-20"} 
+                    rounded-3xl border-base bg-white/20 backdrop-blur-xl px-6 py-2 t-base lg:hidden backdrop-saturate-150`}>
                 {showFilters ? "Close" : "Filters"}
             </button>
 
@@ -55,10 +47,12 @@ function Filters({ filters, search }) {
                         </div>
                     </form>
                 </div>
+
                 <div className="flex justify-between flex-wrap items-center gap-4 mb-6">
                     <h2 className="font-medium">Filters</h2>
                     <ResetButton />
                 </div>
+
                 {filters.map((filter, index) => (
                     <CheckFilters key={index} searchKey={filter.key} label={filter.title} list={filter.options} />
                 ))}

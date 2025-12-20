@@ -1,8 +1,8 @@
 import Image from "next/image"
 
-function DesignProcessCard({ process }) {
+function DesignProcessCard({ process, locale }) {
     return (
-        <div className={`lg:relative ${process.horizontalShift} flex flex-col justify-center gap-10 px-5 hover:translate-x-4 transition-transform duration-500`}>
+        <div className={`lg:relative ${locale === "ar" ? process.rightShift : process.leftShift} flex flex-col justify-center gap-10 px-5`}>
             <div className="flex">
                 <div className="relative -top-4 w-18 h-18 bg-white border border-gray-50 shadow-lg rounded-full flex-none z-10">
                     <Image
