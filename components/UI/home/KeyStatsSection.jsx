@@ -5,7 +5,7 @@ export default async function KeyStatsSection() {
   const translations = await getTranslations('HomePage.KeyFacts');
 
   const stats = [
-    { value: 3200, label: translations('Fact1') },
+    { value: 4000, label: translations('Fact1') },
     { value: 31, label: translations('Fact2') },
     { value: 300, label: translations('Fact3') },
     { value: 2000, label: translations('Fact4') },

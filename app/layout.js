@@ -37,7 +37,7 @@ export const viewport = {
 
 export default async function RootLayout({ children }) {
   const cookieStore = await cookies()
-  const locale = cookieStore.get("locale").value || "en";
+  const locale = cookieStore.get("locale")?.value || "en";
   const dir = locale === "ar" ? "rtl" : "ltr";
 
   return (

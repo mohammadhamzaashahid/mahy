@@ -1,19 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { HiChevronDown, HiMenuAlt3, HiX } from "react-icons/hi";
+import { HiChevronDown, HiMenuAlt3, HiOutlineGlobeAlt, HiX } from "react-icons/hi";
 import Dropdown from "./Dropdown";
 import Button from "../UI/Button";
 import { NAVIGATION } from "../../config/navbar.config";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 
+const LANGUAGE_OPTIONS = [
+  { code: "en", label: "English", icon: "/flags/en.svg" },
+  { code: "de", label: "Deutsch", icon: "/flags/de.svg" },
+  { code: "ar", label: "Arabic", icon: "/flags/ar.svg" },
+];
+
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState(null);
+  const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+  const [currentLocale, setCurrentLocale] = useState("en");
+  const languageMenuRef = useRef(null);
 
   const toggleDropdown = (id) => {
     setOpenMenu((prev) => (prev === id ? null : id));
@@ -32,6 +41,24 @@ export default function Navbar() {
     setMobileDropdown(null);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (languageMenuRef.current && !languageMenuRef.current.contains(event.target)) {
+        setLanguageMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const storedLocale = Cookies.get("locale");
+    if (storedLocale) {
+      setCurrentLocale(storedLocale);
+    }
+  }, []);
+
   const router = useRouter();
   const pathname = usePathname();
 
@@ -43,11 +70,23 @@ export default function Navbar() {
     // });
   };
 
+  const handleLocaleSelection = (locale) => {
+    setLanguageMenuOpen(false);
+    if (locale === currentLocale) return;
+
+    setCurrentLocale(locale);
+    setLocale(locale);
+  };
+
+  const currentLanguage =
+    LANGUAGE_OPTIONS.find((option) => option.code === currentLocale) ||
+    LANGUAGE_OPTIONS[0];
+
   return (
     <header className="fixed top-0 left-0 z-50 w-full " style={{
       paddingTop: "env(safe-area-inset-top)",
     }}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10 py-2 min-h-[62px] rounded-b-full bg-black/50 backdrop-blur-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+      <nav className="mx-auto flex max-w-[82rem] items-center justify-between px-6 lg:px-12 py-2 min-h-[62px] rounded-b-full bg-black/50 backdrop-blur-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
         <div className="flex items-center pr-4">
           <Link
             href="/"
@@ -65,19 +104,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="flex gap-2">
-          <button onClick={() => setLocale("en")} className="px-3 py-1 bg-blue-500 text-white rounded">
-            EN
-          </button>
-          <button onClick={() => setLocale("de")} className="px-3 py-1 bg-red-500 text-white rounded">
-            DE
-          </button>
-          <button onClick={() => setLocale("ar")} className="px-3 py-1 bg-green-500 text-white rounded">
-            AR
-          </button>
-        </div>
-
-        <ul className="hidden lg:flex items-center gap-6 text-white text-sm font-medium">
+        <ul className="hidden lg:flex flex-1 items-center justify-center gap-6 text-white text-sm font-medium">
           {NAVIGATION.map((item) => {
             if (item.linkType === "dropdown") {
               return (
@@ -127,7 +154,59 @@ export default function Navbar() {
           })}
         </ul>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <div className="relative" ref={languageMenuRef}>
+            <button
+              type="button"
+              className="inline-flex h-10 items-center gap-2 rounded-full border border-white/20 px-3 text-[11px] font-semibold uppercase tracking-[0.15em] text-white transition hover:border-white/40"
+              onClick={() => setLanguageMenuOpen((prev) => !prev)}
+              aria-haspopup="listbox"
+              aria-expanded={languageMenuOpen}
+            >
+              <HiOutlineGlobeAlt className="text-sm" />
+              {currentLanguage && (
+                <Image
+                  src={currentLanguage.icon}
+                  alt={`${currentLanguage.label} flag`}
+                  width={20}
+                  height={14}
+                  className="h-3.5 w-5 rounded-[3px] object-cover shadow-sm"
+                />
+              )}
+              {currentLocale}
+            </button>
+
+            {languageMenuOpen && (
+              <div className="absolute right-0 mt-2 w-40 rounded-2xl border border-white/10 bg-black/90 p-2 text-white shadow-lg backdrop-blur-xl">
+                {LANGUAGE_OPTIONS.map((option) => (
+                  <button
+                    key={option.code}
+                    type="button"
+                    className={`flex w-full items-center gap-3 rounded-xl px-3 py-1.5 text-left text-[11px] transition ${option.code === currentLocale
+                      ? "bg-white/15 text-white"
+                      : "text-white/70 hover:bg-white/5 hover:text-white"
+                      }`}
+                    onClick={() => handleLocaleSelection(option.code)}
+                  >
+                    <Image
+                      src={option.icon}
+                      alt={`${option.label} flag`}
+                      width={20}
+                      height={14}
+                      className="h-3.5 w-5 rounded-[3px] object-cover shadow-sm"
+                    />
+                    <div className="flex flex-1 items-center justify-between">
+                      <span>{option.label}</span>
+                      <span className="uppercase tracking-widest text-[9px] text-white/60">
+                        {option.code}
+                      </span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           <div className="hidden xl:block">
             <Button size="sm">Contact</Button>
           </div>
