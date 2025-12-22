@@ -34,29 +34,51 @@ function History({ history }) {
 
     const items = [
         {
-            title: "Today",
+            title: "1930s-1950s",
+            subText: "Foundation & Engineering Leadership",
             image: "/office.jpg",
-            description: history.items[0]
+            description: [
+                "Founded in Dubai by Mohd. Abdulla Haji Yousuf Khoory",
+                "Introduced modern engineering products during Dubai's formative years",
+                "1935: Pioneered water-pumping system design and installation",
+                "Established global partnerships, notably with Grundfos",
+                "Positioned as a leader in engineering & infrastructure"
+            ]
         },
         {
-            title: "1972",
+            title: "1960s-1980s",
+            subText: "Infrastructure Expansion & Industrial Strength",
             image: "/office.jpg",
-            description: history.items[1]
+            description: [
+                "Expanded engineering operations (Al Khoory Engineering / Senan Industry)",
+                "Contributed to iconic UAE projects including Burj Khalifa",
+                "Built Electrical Division representing Eaton, ABB, Lister Petter, Kirloskar",
+                "Recognized regional leader in water & electrical solutions"
+            ]
         },
         {
-            title: "1960",
+            title: "1988-2010s",
+            subText: "Diversification & Manufacturing Growth",
             image: "/office.jpg",
-            description: history.items[2]
+            description: [
+                "1988: Launched Union Paper Mills - UAE's first paper-recycling plant",
+                "Expanded recycling capacity & manufacturing footprint",
+                "Established Al Dhafra Paper Manufacturing (Abu Dhabi)",
+                "Diversified into packaging, interiors, hospitality, logistics & waste management",
+                "Transitioned into a multi-sector industrial group"
+            ]
         },
         {
-            title: "1960",
+            title: "2010s-Present",
+            subText: "Sustainability, Innovation & Future Mobility",
             image: "/office.jpg",
-            description: history.items[3]
-        },
-        {
-            title: "1960",
-            image: "/office.jpg",
-            description: history.items[4]
+            description: [
+                "Launched Creative Solutions for energy & sustainability consulting",
+                "Entered renewable energy as UAE partner for SolarEdge",
+                "2024: Re-entered automotive sector with Dongfeng Motor Corporation",
+                "Focus on EVs, clean energy & innovation-driven growth",
+                "Positioned for future-ready, sustainable expansion"
+            ]
         }
     ]
     return (
@@ -74,7 +96,7 @@ function History({ history }) {
                 <div className="relative">
                     <div
                         ref={scrollRef}
-                        className="flex flex-nowrap h-140 mt-14 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-5"
+                        className="flex flex-nowrap h-125 mt-10 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-5"
                     >
                         {items.map((item, i) => (
                             <motion.div
@@ -86,6 +108,7 @@ function History({ history }) {
                                 <HistoryCard
                                     index={i}
                                     title={item.title}
+                                    subText={item.subText}
                                     image={item.image}
                                     description={item.description}
                                 />
@@ -105,7 +128,7 @@ function History({ history }) {
                         </div>
                     </motion.div>
 
-                    <div className="relative mt-3 flex items-center justify-center gap-3">
+                    <div className="relative mt-1 flex items-center justify-center gap-3">
                         <button
                             onClick={handlePrev}
                             disabled={currentIndex === 0}
