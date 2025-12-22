@@ -53,14 +53,14 @@ export default function ChatInput({
     (type !== "phone" || value.trim().length >= 7);
 
   return (
-    <div className="space-y-1">
+    <div className="space-y-1.5">
       <form
         onSubmit={handleSubmit}
-        className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-2 shadow-sm shadow-slate-900/5 focus-within:border-slate-400 focus-within:ring-1 focus-within:ring-slate-200"
+        className="flex items-center gap-3 rounded-2xl border border-slate-200/90 bg-white px-5 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.08)] transition focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100"
       >
         <input
           type={type === "phone" ? "tel" : type === "email" ? "email" : "text"}
-          className="flex-1 bg-transparent text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none disabled:text-slate-400"
+          className="flex-1 bg-transparent text-[15px] font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none disabled:text-slate-400"
           placeholder={placeholder}
           value={value}
           disabled={disabled}
@@ -71,8 +71,8 @@ export default function ChatInput({
           type="submit"
           aria-label="Send message"
           disabled={!canSend}
-          className={`inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/20 ${
-            canSend ? "" : "opacity-40 hover:translate-y-0"
+          className={`inline-flex h-11 min-w-[3rem] items-center justify-center gap-2 rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/30 ${
+            canSend ? "hover:-translate-y-0.5" : "opacity-40 hover:translate-y-0"
           }`}
         >
           <span className="hidden sm:inline">Send</span>
@@ -90,9 +90,7 @@ export default function ChatInput({
         </button>
       </form>
 
-      {error && (
-        <p className="px-1 text-xs text-red-500">{error}</p>
-      )}
+      {error && <p className="px-1.5 text-xs text-red-500">{error}</p>}
     </div>
   );
 }

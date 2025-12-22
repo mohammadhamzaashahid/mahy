@@ -15,6 +15,7 @@ export default function ChatWidget() {
     { from: "bot", text: FLOW.q1_business.text },
   ]);
   const [current, setCurrent] = useState("q1_business");
+  const [history, setHistory] = useState(["q1_business"]);
   const [answers, setAnswers] = useState({});
   const [isTyping, setIsTyping] = useState(false);
   const [isWidgetOpen, setIsWidgetOpen] = useState(false);
@@ -99,12 +100,16 @@ export default function ChatWidget() {
         "Your enquiry has been submitted successfully. Our specialists will contact you shortly."
       );
       setCurrent("done");
+      setHistory((prev) => [...prev, "done"]);
     }, 900);
   }
 
   function progress(nextKey) {
     if (!nextKey || !FLOW[nextKey]) {
       setCurrent("done");
+      setHistory((prev) =>
+        prev[prev.length - 1] === "done" ? prev : [...prev, "done"]
+      );
       return;
     }
 
@@ -118,11 +123,13 @@ export default function ChatWidget() {
         await submitToCRM({ answers, conversation: messages });
         setIsTyping(false);
         setCurrent("done");
+        setHistory((prev) => [...prev, "done"]);
         return;
       }
 
       setIsTyping(false);
       setCurrent(nextKey);
+      setHistory((prev) => [...prev, nextKey]);
     }, 650);
   }
 
@@ -136,6 +143,7 @@ export default function ChatWidget() {
   const isCountryStage = question?.type === "country";
   const canInteract = current !== "done" && !isTyping;
   const prompt = current !== "done" ? question?.text : null;
+  const canChangeSelection = history.length > 1 && current !== "done" && !isTyping;
 
   function getPlaceholder() {
     if (!question) return "Type your response";
@@ -144,27 +152,78 @@ export default function ChatWidget() {
     return "Type your response";
   }
 
+  function handleChangeSelection() {
+    setHistory((prevHistory) => {
+      if (prevHistory.length <= 1) return prevHistory;
+      const previousKey = prevHistory[prevHistory.length - 2];
+      const trimmedHistory = prevHistory.slice(0, -1);
+
+      setCurrent(previousKey);
+      setIsTyping(false);
+
+      setMessages((prevMessages) => {
+        const updated = [...prevMessages];
+        if (updated.length && updated[updated.length - 1]?.from === "bot") {
+          updated.pop();
+        }
+        if (updated.length && updated[updated.length - 1]?.from === "user") {
+          updated.pop();
+        }
+        return updated;
+      });
+
+      setAnswers((prevAnswers) => {
+        const updated = { ...prevAnswers };
+        if (Array.isArray(updated._qmap)) {
+          updated._qmap = updated._qmap.slice(0, -1);
+        }
+        const fieldKey = FLOW[previousKey]?.field;
+        if (fieldKey) {
+          delete updated[fieldKey];
+        }
+        return updated;
+      });
+
+      return trimmedHistory;
+    });
+  }
+
   return (
     <>
       {!isWidgetOpen && (
         <button
           type="button"
           onClick={() => setIsWidgetOpen(true)}
-          className="fixed bottom-6 right-6 z-40 flex items-center gap-3 rounded-full border border-slate-200 bg-white px-5 py-3 shadow-xl"
+          className="group fixed bottom-6 right-6 z-40 flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 text-white shadow-[0_20px_45px_rgba(15,23,42,0.35)] transition duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
         >
-          <div>
-            <p className="text-[11px] uppercase tracking-[0.3em] text-slate-400">
-              Concierge
-            </p>
-            <p className="text-lg font-semibold text-slate-900">Chat with us</p>
-          </div>
+          <span className="sr-only">Open concierge assistant</span>
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 rounded-full border border-white/15 transition duration-200 group-hover:border-white/30"
+          />
+          <span
+            aria-hidden="true"
+            className="absolute -top-1 -right-1 h-3.5 w-3.5 rounded-full bg-emerald-400 shadow-[0_0_0_3px_rgba(255,255,255,0.85)]"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="relative h-5 w-5"
+          >
+            <path d="M21 12a9 9 0 0 1-10 9 9.6 9.6 0 0 1-4-.9L3 21l.9-4a9.6 9.6 0 0 1-.9-4 9 9 0 1 1 18 0Z" />
+            <path d="M8 10h8" />
+            <path d="M8 14h5" />
+          </svg>
         </button>
       )}
 
       {isWidgetOpen && (
         <>
           <div
-            className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"
+            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
             onClick={() => setIsWidgetOpen(false)}
           />
 
@@ -189,11 +248,22 @@ export default function ChatWidget() {
                 messages={messages}
                 isTyping={isTyping}
               />
-              <footer className="space-y-3 border-t border-slate-100 bg-slate-50 px-5 pb-5 pt-4">
+              <footer className="space-y-4 border-t border-slate-100 bg-slate-50/95 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
                 {prompt && (
-                  <p className="text-sm font-semibold text-slate-600">
-                    {prompt}
-                  </p>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <p className="text-sm font-semibold text-slate-600">
+                      {prompt}
+                    </p>
+                    {canChangeSelection && (
+                      <button
+                        type="button"
+                        onClick={handleChangeSelection}
+                        className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500 transition hover:text-slate-900"
+                      >
+                        Change Answer
+                      </button>
+                    )}
+                  </div>
                 )}
 
                 {canInteract && options && (
@@ -226,6 +296,7 @@ export default function ChatWidget() {
                         ]);
                         setAnswers({});
                         setCurrent("q1_business");
+                        setHistory(["q1_business"]);
                         setIsTyping(false);
                       }}
                       className="mt-2 rounded-full border border-slate-200 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.3em] text-blue-600"

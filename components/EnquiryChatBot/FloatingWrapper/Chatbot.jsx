@@ -5,6 +5,7 @@ import ChatWidget from "../ChatWidget";
 
 const HIDDEN_ROUTES = [
   "/careers",
+//   "/about-us",
   "/privacy-policy",
   "/terms"
 ];
