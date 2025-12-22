@@ -44,9 +44,9 @@ export const FOOTER_CONFIG = {
     {
       title: "Company",
       links: [
-        { label: "About", href: "#" },
+        { label: "About", href: "/about-us" },
         { label: "Media", href: "#" },
-        { label: "Companies", href: "#" },
+        { label: "Companies", href: "/companies" },
         { label: "Innovation", href: "#" },
       ],
     },
@@ -54,7 +54,7 @@ export const FOOTER_CONFIG = {
       title: "Support",
       links: [
         { label: "Support Docs", href: "#" },
-        { label: "Contact", href: "#" },
+        { label: "Contact", href: "/contact-us" },
         { label: "Chat With Us", href: "#" },
       ],
       cta: {

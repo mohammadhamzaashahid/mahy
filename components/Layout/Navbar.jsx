@@ -86,7 +86,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 z-50 w-full " style={{
       paddingTop: "env(safe-area-inset-top)",
     }}>
-      <nav className="mx-auto flex max-w-[82rem] items-center justify-between px-6 lg:px-12 py-2 min-h-[62px] rounded-b-full bg-black/50 backdrop-blur-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
+      <nav className="mx-auto flex max-w-[90rem] items-center justify-between px-6 lg:px-12 py-2 min-h-[62px] rounded-b-full bg-black/50 backdrop-blur-2xl border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
         <div className="flex items-center pr-4">
           <Link
             href="/"
@@ -208,7 +208,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden xl:block">
-            <Button size="sm">Contact</Button>
+            <Button size="sm" onClick={() => router.push("/contact-us")}>Contact Us</Button>
           </div>
 
           <button
@@ -293,7 +293,7 @@ export default function Navbar() {
               })}
 
               <li className="pt-4">
-                <Button size="md" className="w-full">
+                <Button size="md" className="w-full" onClick={() => {router.push('/contact-us')}} >
                   Contact
                 </Button>
               </li>
