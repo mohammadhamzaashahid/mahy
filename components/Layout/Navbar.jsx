@@ -58,9 +58,6 @@ export default function Navbar({ navigation }) {
     }
   }, []);
 
-  const router = useRouter();
-  const pathname = usePathname();
-
   const setLocale = (locale) => {
     Cookies.set("locale", locale, { expires: 30 });
     window.location.reload();

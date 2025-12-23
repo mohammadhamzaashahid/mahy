@@ -11,7 +11,7 @@ const imageVariants = {
     exit: { opacity: 0, scale: 1, transition: { duration: 1.5 } },
 };
 
-function FeaturedDepartments() {
+function FeaturedDepartments({ title, departments, cta }) {
     const [index, setIndex] = useState(0);
 
     const containerRef = useRef(null);
@@ -38,29 +38,6 @@ function FeaturedDepartments() {
         });
     };
 
-    const departments = [
-        {
-            title: "Aritifical Intelligence",
-            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed qui suscipit aut consequuntur, nemo fuga aspernatur",
-            image: "/gallery/gallery-1.jpg"
-        },
-        {
-            title: "Aritifical Intelligence 2",
-            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed qui suscipit aut consequuntur, nemo fuga aspernatur",
-            image: "/gallery/gallery-2.jpg"
-        },
-        {
-            title: "Aritifical Intelligence 3",
-            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed qui suscipit aut consequuntur, nemo fuga aspernatur",
-            image: "/gallery/gallery-3.jpg"
-        },
-        {
-            title: "Aritifical Intelligence 4",
-            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed qui suscipit aut consequuntur, nemo fuga aspernatur",
-            image: "/gallery/gallery-4.jpg"
-        },
-    ]
-
     return (
         <section className='max-w-7xl mx-auto py-20'>
             <div className="px-5">
@@ -69,7 +46,7 @@ function FeaturedDepartments() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.55, ease: "easeOut" }}
                     viewport={{ once: true }}>
-                    <h2 className='text-4xl font-semibold mb-8'>Featured Departments</h2>
+                    <h2 className='text-4xl font-semibold mb-8 text-center'>{title}</h2>
                 </motion.div>
                 <div className="overflow-hidden">
                     <motion.div
@@ -94,7 +71,8 @@ function FeaturedDepartments() {
                     <DepartmentCard key={i} i={i}
                         itemRefs={itemRefs}
                         index={index} department={department}
-                        handleIndexChange={handleIndexChange} />
+                        handleIndexChange={handleIndexChange}
+                        cta={cta} />
                 ))}
             </div>
         </section>

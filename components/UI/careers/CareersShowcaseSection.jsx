@@ -10,7 +10,7 @@ export default function CareersShowcaseSection({
   return (
     <section className="w-full bg-white py-20 sm:py-24 lg:py-28 overflow-x-hidden">
       <div className="mx-auto w-full max-w-screen-xl px-6 sm:px-8 lg:px-12 overflow-x-hidden">
-        
+
         <div className="text-center">
           <h2
             className="

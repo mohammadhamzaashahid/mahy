@@ -153,6 +153,24 @@
         "IntroText": "Stay informed with the latest announcements, strategic updates, and insights from across the MAHY Group. For media enquiries and interview requests, please contact",
         "Cta": "Read More"
     },
+    "CareersPage": {
+        "Heading": "Careers",
+        "Description": "Explore exciting opportunities to grow your skills and make a real impact. Join a dynamic workplace that values innovation, teamwork, and long-term growth.",
+        "ShowcaseTitle": "Life At MAHY Khoory",
+        "FeaturedTitle": "Featured Departments",
+        "Featured1": "Aritifical Intelligence",
+        "Description1": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed qui suscipit aut consequuntur, nemo fuga aspernatur",
+        "Featured2": "Aritifical Intelligence 2",
+        "Description2": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed qui suscipit aut consequuntur, nemo fuga aspernatur",
+        "Featured3": "Aritifical Intelligence 3",
+        "Description3": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed qui suscipit aut consequuntur, nemo fuga aspernatur",
+        "Featured4": "Aritifical Intelligence 4",
+        "Description4": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed qui suscipit aut consequuntur, nemo fuga aspernatur",
+        "Cta": "Learn More",
+        "JoinUs": "Join Us",
+        "JoinUsText": "Help accelerate the world's transition to sustainable energy",
+        "JoinCta": "Explore Jobs"
+    },
     "Nav": {
         "Home": "Home",
         "AboutUs": "About Us",
