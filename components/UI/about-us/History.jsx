@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 function History({ history }) {
     const scrollRef = useRef(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const { items } = history;
 
     const SPACING = 24;
 
@@ -31,34 +32,6 @@ function History({ history }) {
         scrollToIndex(Math.min(currentIndex + 1, items.length - 1));
     };
 
-
-    const items = [
-        {
-            title: "Today",
-            image: "/office.jpg",
-            description: history.items[0]
-        },
-        {
-            title: "1972",
-            image: "/office.jpg",
-            description: history.items[1]
-        },
-        {
-            title: "1960",
-            image: "/office.jpg",
-            description: history.items[2]
-        },
-        {
-            title: "1960",
-            image: "/office.jpg",
-            description: history.items[3]
-        },
-        {
-            title: "1960",
-            image: "/office.jpg",
-            description: history.items[4]
-        }
-    ]
     return (
         <>
             <motion.div
@@ -74,7 +47,7 @@ function History({ history }) {
                 <div className="relative">
                     <div
                         ref={scrollRef}
-                        className="flex flex-nowrap h-140 mt-14 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-5"
+                        className="flex flex-nowrap h-125 mt-10 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-10"
                     >
                         {items.map((item, i) => (
                             <motion.div
@@ -86,6 +59,7 @@ function History({ history }) {
                                 <HistoryCard
                                     index={i}
                                     title={item.title}
+                                    subText={item.text}
                                     image={item.image}
                                     description={item.description}
                                 />
@@ -105,7 +79,7 @@ function History({ history }) {
                         </div>
                     </motion.div>
 
-                    <div className="relative mt-3 flex items-center justify-center gap-3">
+                    <div className="relative mt-1 flex items-center justify-center gap-3">
                         <button
                             onClick={handlePrev}
                             disabled={currentIndex === 0}

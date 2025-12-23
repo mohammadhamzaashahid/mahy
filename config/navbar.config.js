@@ -1,136 +1,81 @@
-export const NAVIGATION = [
-  {
-    id: "home",
-    label: "Home",
-    href: "/",
-    type: "link",
-    linkType: "link",
-  },
-  {
-    id: "about",
-    label: "About Us",
-    href: "/about-us",
-    type: "link",
-    linkType: "link",
-  },
-  {
-    id: "companies",
-    label: "Companies",
-    href: "/companies",
-    type: "link",
-    linkType: "dropdown",
-    items: [
-      {
-        label: "Trading Division",
-        href: "#",
-        children: [
-          { label: "MAHY Khoory", href: "" },
-          { label: "Emirates Intl Equipments & Machinery", href: "" },
-          { label: "Al Mehwar Alfde General Trading", href: "" },
-          { label: "Greenland Equipment & Machinery", href: "" },
-          { label: "Al Khoory Engineering", href: "" },
-        ],
-      },
-
-      {
-        label: "Manufacturing Division",
-        href: "#",
-        children: [
-          { label: "Union Wood Works", href: "" },
-          { label: "Union Paper Mills", href: "" },
-          { label: "Al Dhafra Paper Manufacturing", href: "" },
-          { label: "National Paper Industry", href: "" },
-          { label: "Senan Industry", href: "" },
-          { label: "Al Khoory Engineering", href: "" },
-        ],
-      },
-
-      {
-        label: "Recycling Services",
-        href: "#",
-        children: [
-          { label: "Al Dhafra Waste Management", href: "" },
-          { label: "Al Etihad Waste Management", href: "" },
-          { label: "Green Arabia", href: "" },
-          { label: "Waste Management in Dubai", href: "" },
-        ],
-      },
-
-      {
-        label: "Hospitality",
-        href: "#",
-        children: [
-          { label: "The Pearl Marina Hotel Apartments", href: "" },
-          { label: "The Market Restaurant", href: "" },
-        ],
-      },
-
-      {
-        label: "Logistics",
-        href: "#",
-        children: [
-          { label: "Green Land Transport", href: "" },
-          { label: "Central Warehouse", href: "" },
-        ],
-      },
-
-      {
-        label: "Green Energy",
-        href: "#",
-        children: [
-          { label: "Creative Solutions", href: "" },
-          { label: "PV Inverter", href: "" },
-          { label: "SE Factsheet", href: "" },
-        ],
-      },
-
-      {
-        label: "Khoory Kitchen",
-        href: "#",
-        children: [],
-      },
-
-      {
-        label: "Automotive",
-        href: "#",
-        children: [
-          { label: "MAHY Khoory Automative", href: "" },
-          { label: "MAHY Khoory Motors", href: "" },
-        ],
-      },
-
-      {
-        label: "Pure Energy Constructions",
-        href: "#",
-        children: [],
-      },
-    ],
-  },
-  {
-    id: "aftersales",
-    label: "Shop",
-    type: "link",
-    linkType: "dropdown",
-    href: "/",
-    items: [
-      { label: "Pumps", href: "/after-sales/spare-parts" },
-      { label: "Air Conditioning", href: "/after-sales/maintenance" },
-      { label: "VFD", href: "/after-sales/maintenance" },
-      { label: "Valves", href: "/after-sales/maintenance" },
-    ],
-  },
-  {
-    id: "news",
-    label: "News",
-    href: "/news",
-    type: "link",
-    linkType: "link",
-  },
-  {
-    id: "careers",
-    label: "Careers",
-    href: "/careers",
-    type: "link",
-    linkType: "link",
-  },
-];
+export const getNavigation = (translations) => {
+    return {
+        links: [
+            {
+                id: "home",
+                label: translations("Home"),
+                href: "/",
+                type: "link",
+                linkType: "link",
+            },
+            {
+                id: "about",
+                label: translations("AboutUs"),
+                href: "/about-us",
+                type: "link",
+                linkType: "link",
+            },
+            {
+                id: "companies",
+                label: translations("Companies"),
+                type: "link",
+                href: "/companies",
+                type: "link",
+                linkType: "dropdown",
+                items: [
+                    {
+                        label: translations("TradingDivision"),
+                        href: "#",
+                        children: [
+                            { label: translations("ProjectSales"), href: "" },
+                            { label: translations("ChannelSalesExport"), href: "" },
+                            { label: translations("ElectricalDivision"), href: "" },
+                            { label: translations("ServiceDivision"), href: "" },
+                            { label: translations("SpareDivision"), href: "" },
+                            { label: translations("EcommerceGrundfos"), href: "" },
+                        ],
+                    },
+                    {
+                        label: translations("ManufacturingDivision"),
+                        href: "#",
+                        children: [
+                            { label: translations("UnionWoodWorks"), href: "" },
+                            { label: translations("UnionPaperMills"), href: "" },
+                            { label: translations("AlDhafraPaper"), href: "" },
+                            { label: translations("NationalPaperIndustry"), href: "" },
+                            { label: translations("SenanIndustry"), href: "" },
+                            { label: translations("AlKhooryEngineering"), href: "" },
+                        ],
+                    },
+                ],
+            },
+            {
+                id: "aftersales",
+                label: translations("Shop"),
+                type: "link",
+                linkType: "dropdown",
+                href: "/",
+                items: [
+                    { label: translations("Pumps"), href: "" },
+                    { label: translations("AirConditioning"), href: "" },
+                    { label: translations("VFD"), href: "" },
+                    { label: translations("Valves"), href: "" },
+                ],
+            },
+            {
+                id: "news",
+                label: translations("News"),
+                href: "/news",
+                type: "link",
+                linkType: "link",
+            },
+            {
+                id: "careers",
+                label: translations("Careers"),
+                href: "/careers",
+                type: "link",
+                linkType: "link",
+            }],
+        contact: translations("Contact")
+    };
+}

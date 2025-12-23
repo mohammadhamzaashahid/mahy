@@ -3,12 +3,25 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { FOOTER_CONFIG } from "@/config/footer.config";
 import Button from "@/components/UI/Button";
 import { useRef, useState } from "react";
+import {
+  FaXTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa6";
 
-export default function Footer() {
-  const { brand, sections, bottom } = FOOTER_CONFIG;
+export default function Footer({ data }) {
+  const socials = [
+    { icon: FaXTwitter, href: "#" },
+    { icon: FaLinkedinIn, href: "#" },
+    { icon: FaInstagram, href: "#" },
+    { icon: FaYoutube, href: "#" },
+  ];
+
+  const { brand, sections, bottom } = data;
+
   const footerRef = useRef(null);
   const rafRef = useRef(null);
 
@@ -85,7 +98,7 @@ export default function Footer() {
               {brand.description}
             </p>
             <div className="flex items-center gap-3 pt-2">
-              {brand.socials.map((social, index) => (
+              {socials.map((social, index) => (
                 <Link
                   key={index}
                   href={social.href}

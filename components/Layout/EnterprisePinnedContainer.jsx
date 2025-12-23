@@ -9,18 +9,21 @@ async function EnterprisePinnedContainer() {
             title: translations("Section1Title"),
             subtitle: translations("Section1Subtitle"),
             bullets: [translations("Section1Bullet1"), translations("Section1Bullet2")],
+            cta: translations("Section1Cta"),
             image: "/processes/UAE.avif",
         },
         {
             title: translations("Section2Title"),
             subtitle: translations("Section2Subtitle"),
             bullets: [translations("Section2Bullet1"), translations("Section2Bullet2")],
+            cta: translations("Section2Cta"),
             image: "/processes/manufacturer.avif",
         },
         {
             title: translations("Section3Title"),
             subtitle: translations("Section3Subtitle"),
             bullets: [translations("Section3Bullet1"), translations("Section3Bullet2")],
+            cta: translations("Section3Cta"),
             image: "/processes/customer-service.avif",
         },
     ];

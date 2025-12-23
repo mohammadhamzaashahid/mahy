@@ -6,7 +6,6 @@ import Link from "next/link";
 import { HiChevronDown, HiMenuAlt3, HiOutlineGlobeAlt, HiX } from "react-icons/hi";
 import Dropdown from "./Dropdown";
 import Button from "../UI/Button";
-import { NAVIGATION } from "../../config/navbar.config";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -16,7 +15,7 @@ const LANGUAGE_OPTIONS = [
   { code: "ar", label: "Arabic", icon: "/flags/ar.svg" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ navigation }) {
   const [openMenu, setOpenMenu] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileDropdown, setMobileDropdown] = useState(null);
@@ -65,9 +64,6 @@ export default function Navbar() {
   const setLocale = (locale) => {
     Cookies.set("locale", locale, { expires: 30 });
     window.location.reload();
-    // router.replace(pathname, {
-    //   scroll: false,
-    // });
   };
 
   const handleLocaleSelection = (locale) => {
@@ -105,7 +101,7 @@ export default function Navbar() {
         </div>
 
         <ul className="hidden lg:flex flex-1 items-center justify-center gap-6 text-white text-sm font-medium">
-          {NAVIGATION.map((item) => {
+          {navigation.links.map((item) => {
             if (item.linkType === "dropdown") {
               return (
                 <li
@@ -208,7 +204,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden xl:block">
-            <Button size="sm" onClick={() => router.push("/contact-us")}>Contact Us</Button>
+            <Button size="sm" onClick={() => router.push("/contact-us")}>{navigation.contact Us}</Button>
           </div>
 
           <button
@@ -225,7 +221,7 @@ export default function Navbar() {
         <div className="lg:hidden px-6 pt-3">
           <div className="rounded-3xl border border-white/10 bg-black/80 px-5 py-5 text-white backdrop-blur-xl">
             <ul className="flex flex-col gap-4">
-              {NAVIGATION.map((item) => {
+              {navigation.links.map((item) => {
                 if (item.linkType === "dropdown") {
                   const expanded = mobileDropdown === item.id;
 
@@ -294,7 +290,7 @@ export default function Navbar() {
 
               <li className="pt-4">
                 <Button size="md" className="w-full" onClick={() => {router.push('/contact-us')}} >
-                  Contact
+                  {navigation.contact}
                 </Button>
               </li>
             </ul>

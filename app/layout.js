@@ -3,8 +3,9 @@ import "./globals.css";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import { cookies } from "next/headers";
-import ChatBot from "@/components/EnquiryChatBot/FloatingWrapper/Chatbot";
-import ClientProviders from "@/components/Providers/ClientProviders";
+import { getTranslations } from "next-intl/server";
+import { getNavigation } from "@/config/navbar.config";
+import { getFooter } from "@/config/footer.config";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -41,6 +42,9 @@ export default async function RootLayout({ children }) {
   const cookieStore = await cookies();
   const locale = cookieStore.get("locale")?.value || "en";
   const dir = locale === "ar" ? "rtl" : "ltr";
+  const navTranslations = await getTranslations('Nav');
+  const footerTranslations = await getTranslations('Footer');
+  const footerLinks = getFooter(footerTranslations);
 
   return (
     <html lang={locale} dir={dir}>
@@ -49,11 +53,11 @@ export default async function RootLayout({ children }) {
         className={`${poppins.variable} antialiased`}
         style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
-        <ClientProviders locale={locale}>
-          <Navbar />
+        <NextIntlClientProvider locale={locale}>
+          <Navbar navigation={getNavigation(navTranslations)} />
           {children}
           <section id="useful-links">
-            <Footer />
+            <Footer data={footerLinks} />
           </section>
           <ChatBot />
         </ClientProviders>

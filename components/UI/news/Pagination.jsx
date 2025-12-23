@@ -18,13 +18,13 @@ export default function Pagination({ totalPages, className = "" }) {
       params.set("page", page);
     }
 
-    router.push(`/news?${params.toString()}`, { scroll: true });
+    router.push(`/news?${params.toString()}`, { scroll: false });
   };
 
   if (totalPages <= 1) return null;
 
   const pages = [];
-  const maxVisible = 5;
+  const maxVisible = 6;
 
   for (let i = 1; i <= Math.min(maxVisible, totalPages); i++) {
     pages.push(i);
@@ -34,7 +34,7 @@ export default function Pagination({ totalPages, className = "" }) {
   const lastPage = totalPages;
 
   return (
-    <nav
+    <nav dir="ltr"
       className={`
         mt-24
         flex
@@ -72,10 +72,9 @@ export default function Pagination({ totalPages, className = "" }) {
             h-9 w-9 rounded-full
             flex items-center justify-center
             transition
-            ${
-              currentPage === page
-                ? "bg-indigo-100 text-indigo-700 font-medium"
-                : "text-slate-700 hover:bg-slate-100"
+            ${currentPage === page
+              ? "bg-indigo-100 text-indigo-700 font-medium"
+              : "text-slate-700 hover:bg-slate-100"
             }
           `}
           aria-current={currentPage === page ? "page" : undefined}
@@ -94,10 +93,9 @@ export default function Pagination({ totalPages, className = "" }) {
               h-9 w-9 rounded-full
               flex items-center justify-center
               transition
-              ${
-                currentPage === lastPage
-                  ? "bg-indigo-100 text-indigo-700 font-medium"
-                  : "text-slate-700 hover:bg-slate-100"
+              ${currentPage === lastPage
+                ? "bg-indigo-100 text-indigo-700 font-medium"
+                : "text-slate-700 hover:bg-slate-100"
               }
             `}
           >
