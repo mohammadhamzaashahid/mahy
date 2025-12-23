@@ -4,14 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import ArrowActionButton from "../about-us/ArrowActionButton";
 
-export default function NewsCard({
-  image,
-  date,
-  title,
-  excerpt,
-  href = "#",
-  priority = false,
-}) {
+export default function NewsCard(
+  {
+    image,
+    date,
+    title,
+    excerpt,
+    href = "#",
+    priority = false,
+    cta
+  }) {
   return (
     <article className="w-full group flex flex-col cursor-pointer">
       {" "}
@@ -20,7 +22,7 @@ export default function NewsCard({
           className="
             relative
             w-full
-            aspect-[4/3]
+            aspect-4/3
             overflow-hidden
             bg-slate-100
           "
@@ -32,7 +34,7 @@ export default function NewsCard({
               opacity-0
               group-hover:opacity-100
               transition-opacity duration-500
-              bg-gradient-to-tr
+              bg-linear-to-tr
               from-white/10
               via-white/5
               to-transparent
@@ -65,7 +67,7 @@ export default function NewsCard({
           duration-500
         "
       >
-        <span className="text-ui text-xs tracking-[0.22em] text-slate-500 mb-2">
+        <span className="text-ui text-xs text-slate-500 mb-2">
           {date}
         </span>
 
@@ -77,7 +79,7 @@ export default function NewsCard({
             leading-snug
             text-black
             line-clamp-3
-            min-h-[4.5rem]
+            min-h-18
             transition-colors
             duration-500
             group-hover:text-[#2d3fa5]
@@ -93,7 +95,7 @@ export default function NewsCard({
             text-slate-600
             leading-relaxed
             line-clamp-3
-            min-h-[4.5rem]
+            min-h-18
             transition-colors
             duration-500
             group-hover:text-slate-800
@@ -113,7 +115,7 @@ export default function NewsCard({
               group-hover:text-black
             "
           >
-            Read More
+            {cta}
           </span>
           <ArrowActionButton />
         </div>

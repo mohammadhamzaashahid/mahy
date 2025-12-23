@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import ArrowActionButton from "../about-us/ArrowActionButton";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FeaturedNews({
   image,
@@ -10,7 +11,8 @@ export default function FeaturedNews({
   title,
   location,
   excerpt,
-  ctaLabel = "Read More",
+  ctaLabel,
+  href,
   invert = false,
 }) {
   return (
@@ -24,11 +26,10 @@ export default function FeaturedNews({
         items-center
         gap-y-10
         lg:gap-x-20
-        ${
-          invert
-            ? "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1"
-            : ""
-        }
+        ${invert
+              ? "lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1"
+              : ""
+            }
       `}
         >
           {/* IMAGE — untouched hover logic */}
@@ -94,7 +95,7 @@ export default function FeaturedNews({
               {date}
             </span>
 
-            <h2 className="text-heading text-3xl sm:text-4xl lg:text-5xl leading-tight text-black">
+            <h2 className="text-heading text-2xl sm:text-4xl lg:text-3xl leading-tight text-black">
               {title}
             </h2>
 
@@ -107,12 +108,12 @@ export default function FeaturedNews({
               {excerpt}
             </p>
 
-            <div className="mt-6 flex items-center gap-3">
+            <Link href={href} className="mt-6 flex items-center gap-3">
               <span className="text-sm font-medium text-slate-900">
                 {ctaLabel}
               </span>
               <ArrowActionButton />
-            </div>
+            </Link>
           </motion.div>
         </div>
       </div>
