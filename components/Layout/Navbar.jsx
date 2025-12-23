@@ -204,7 +204,7 @@ export default function Navbar({ navigation }) {
           </div>
 
           <div className="hidden xl:block">
-            <Button size="sm" onClick={() => router.push("/contact-us")}>{navigation.contact Us}</Button>
+            <Button size="sm" onClick={() => router.push("/contact-us")}>{navigation.contact}</Button>
           </div>
 
           <button
