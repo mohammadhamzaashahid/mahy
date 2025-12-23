@@ -9,7 +9,7 @@ import Button from "../UI/Button";
 import Cookies from "js-cookie";
 import { usePathname, useRouter } from "next/navigation";
 
-const LANGUAGE_OPTIONS = [
+const languageOptions = [
   { code: "en", label: "English", icon: "/flags/en.svg" },
   { code: "de", label: "Deutsch", icon: "/flags/de.svg" },
   { code: "ar", label: "Arabic", icon: "/flags/ar.svg" },
@@ -75,8 +75,8 @@ export default function Navbar({ navigation }) {
   };
 
   const currentLanguage =
-    LANGUAGE_OPTIONS.find((option) => option.code === currentLocale) ||
-    LANGUAGE_OPTIONS[0];
+    languageOptions.find((option) => option.code === currentLocale) ||
+    languageOptions[0];
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full " style={{
@@ -174,7 +174,7 @@ export default function Navbar({ navigation }) {
 
             {languageMenuOpen && (
               <div className="absolute right-0 mt-2 w-40 rounded-2xl border border-white/10 bg-black/90 p-2 text-white shadow-lg backdrop-blur-xl">
-                {LANGUAGE_OPTIONS.map((option) => (
+                {languageOptions.map((option) => (
                   <button
                     key={option.code}
                     type="button"

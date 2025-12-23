@@ -2,6 +2,7 @@ import { getLocale } from '@/utlils';
 import { getArticle } from '@/utlils/articles';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import React from 'react'
 
 async function Article({ params }) {
@@ -9,6 +10,8 @@ async function Article({ params }) {
     const translations = await getTranslations('Articles');
     const article = getArticle(id, translations);
     const locale = await getLocale();
+
+    if (!article) return notFound();
 
     return (
         <main className='max-w-4xl mx-auto mt-22 pb-15'>

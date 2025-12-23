@@ -88,10 +88,10 @@ export default function FeaturedNews({
           flex
           flex-col
           justify-center
-          max-w-[520px]
+          max-w-130
         "
           >
-            <span className="text-ui text-xs tracking-[0.22em] text-slate-500 mb-3">
+            <span className="text-ui text-xs text-slate-500 mb-3">
               {date}
             </span>
 
