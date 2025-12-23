@@ -2,6 +2,7 @@ import { articles } from "@/constants/articles";
 
 const getArticle = (id, translation) => {
     const article = articles.find((article) => article.id === Number(id));
+    if (!article) return false;
     return {
         ...article,
         heading: (translation(`Article${id}Heading`)),
