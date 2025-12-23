@@ -3,11 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accent-color: #79C4E7;
-  --accent-light: rgb(143, 199, 225)7;
+  --accent-color: #79c4e7;
+  --accent-light: rgb(143, 199, 225) 7;
   --accent-dark: #2da5dc;
 }
-
 
 .t-base {
   color: var(--accent-color);
@@ -57,8 +56,35 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-
+  scrollbar-width: thin;
+  scrollbar-color: rgba(121, 196, 231, 0.55) transparent;
 }
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 9px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+}
+
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(121, 196, 231, 0.55);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(45, 165, 220, 0.85);
+}
+
 
 .step-card {
   background: white;
@@ -69,7 +95,6 @@ body {
 .step-card .step-card-icon {
   transition: background 1s ease;
 }
-
 
 .text-heading {
   font-family: var(--font-poppins);
@@ -135,7 +160,6 @@ body {
 .marquee {
   animation: marquee linear infinite;
 }
-
 
 .hide-scrollbar {
   -ms-overflow-style: none;
@@ -238,7 +262,6 @@ button {
   .animate-fade-in {
     animation: fade-in 0.25s ease-out forwards;
   }
-
 
   .animate-message-in {
     animation: fadeIn 0.35s ease forwards;
