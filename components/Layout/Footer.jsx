@@ -21,7 +21,6 @@ export default function Footer({ data }) {
   ];
 
   const { brand, sections, bottom } = data;
-  console.log(brand);
 
   const footerRef = useRef(null);
   const rafRef = useRef(null);
