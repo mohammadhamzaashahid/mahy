@@ -1,6 +1,6 @@
 export default function ContactTextPane() {
   return (
-    <div className="pt-24">
+    <div className="pt-4">
       <span className="text-xs tracking-[0.28em] font-semibold uppercase text-slate-500">
         HOW CAN WE HELP?
       </span>

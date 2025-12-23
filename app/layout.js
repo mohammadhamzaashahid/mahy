@@ -2,9 +2,9 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
-import { NextIntlClientProvider } from "next-intl";
 import { cookies } from "next/headers";
 import ChatBot from "@/components/EnquiryChatBot/FloatingWrapper/Chatbot";
+import ClientProviders from "@/components/Providers/ClientProviders";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -15,10 +15,12 @@ const poppins = Poppins({
 export const metadata = {
   metadataBase: new URL("https://mahy.vercel.app"),
   title: "M.A.H.Y. Khoory & CO. LLC",
-  description: "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
+  description:
+    "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
   openGraph: {
     title: "M.A.H.Y. Khoory & CO. LLC",
-    description: "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
+    description:
+      "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
     images: [
       {
         url: "/gallery/icon.png",
@@ -35,9 +37,8 @@ export const viewport = {
   themeColor: "#000",
 };
 
-
 export default async function RootLayout({ children }) {
-  const cookieStore = await cookies()
+  const cookieStore = await cookies();
   const locale = cookieStore.get("locale")?.value || "en";
   const dir = locale === "ar" ? "rtl" : "ltr";
 
@@ -48,14 +49,14 @@ export default async function RootLayout({ children }) {
         className={`${poppins.variable} antialiased`}
         style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
-        <NextIntlClientProvider locale={locale}>
+        <ClientProviders locale={locale}>
           <Navbar />
           {children}
           <section id="useful-links">
             <Footer />
           </section>
-            <ChatBot />
-        </NextIntlClientProvider>
+          <ChatBot />
+        </ClientProviders>
       </body>
     </html>
   );

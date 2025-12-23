@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { COUNTRIES, ENQUIRY_TYPES } from "../../config/contactOptions.js";
 import React from "react";
+// import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const schema = z.object({
   firstName: z.string().min(2, "Required"),
@@ -30,12 +31,26 @@ export default function ContactFormPane() {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log("FINAL PAYLOAD:", data);
+  // const { executeRecaptcha } = useGoogleReCaptcha();
+
+ const onSubmit = async (data) => {
+  // if (!executeRecaptcha) {
+  //   console.warn("reCAPTCHA not yet available");
+  //   return;
+  // }
+
+  // const token = await executeRecaptcha("contact_form");
+
+  const payload = {
+    ...data,
+    recaptchaToken: "",
   };
 
+  console.log("payload:", payload);
+
+};
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="pt-24 max-w-3xl">
+    <form onSubmit={handleSubmit(onSubmit)} className="pt-4 max-w-3xl">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
         <Field label="First Name" error={errors.firstName}>
           <input {...register("firstName")} />
@@ -84,9 +99,8 @@ export default function ContactFormPane() {
         <div className="flex items-start gap-3">
           <input type="checkbox" {...register("agreed")} />
           <p className="text-sm text-slate-600">
-            I agree to the{" "}
-            <span className="underline">Terms & Conditions</span> and{" "}
-            <span className="underline">Privacy Policy</span>
+            I agree to the <span className="underline">Terms & Conditions</span>{" "}
+            and <span className="underline">Privacy Policy</span>
           </p>
         </div>
 
