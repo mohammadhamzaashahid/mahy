@@ -6,6 +6,8 @@ import { cookies } from "next/headers";
 import { getTranslations } from "next-intl/server";
 import { getNavigation } from "@/config/navbar.config";
 import { getFooter } from "@/config/footer.config";
+import { NextIntlClientProvider } from "next-intl";
+import ChatBot from "@/components/EnquiryChatBot/FloatingWrapper/Chatbot";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -60,7 +62,7 @@ export default async function RootLayout({ children }) {
             <Footer data={footerLinks} />
           </section>
           <ChatBot />
-        </ClientProviders>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
