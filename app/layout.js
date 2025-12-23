@@ -4,6 +4,9 @@ import Navbar from "@/components/Layout/Navbar";
 import Footer from "@/components/Layout/Footer";
 import { NextIntlClientProvider } from "next-intl";
 import { cookies } from "next/headers";
+import { getTranslations } from "next-intl/server";
+import { getNavigation } from "@/config/navbar.config";
+import { getFooter } from "@/config/footer.config";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -39,6 +42,9 @@ export default async function RootLayout({ children }) {
   const cookieStore = await cookies()
   const locale = cookieStore.get("locale")?.value || "en";
   const dir = locale === "ar" ? "rtl" : "ltr";
+  const navTranslations = await getTranslations('Nav');
+  const footerTranslations = await getTranslations('Footer');
+  const footerLinks = getFooter(footerTranslations);
 
   return (
     <html lang={locale} dir={dir}>
@@ -48,10 +54,10 @@ export default async function RootLayout({ children }) {
         style={{ paddingTop: "env(safe-area-inset-top)" }}
       >
         <NextIntlClientProvider locale={locale}>
-          <Navbar />
+          <Navbar navigation={getNavigation(navTranslations)} />
           {children}
           <section id="useful-links">
-            <Footer />
+            <Footer data={footerLinks} />
           </section>
         </NextIntlClientProvider>
       </body>

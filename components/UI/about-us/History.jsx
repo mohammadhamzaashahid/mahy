@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 function History({ history }) {
     const scrollRef = useRef(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const { items } = history;
 
     const SPACING = 24;
 
@@ -31,56 +32,6 @@ function History({ history }) {
         scrollToIndex(Math.min(currentIndex + 1, items.length - 1));
     };
 
-
-    const items = [
-        {
-            title: "1930s-1950s",
-            subText: "Foundation & Engineering Leadership",
-            image: "/office.jpg",
-            description: [
-                "Founded in Dubai by Mohd. Abdulla Haji Yousuf Khoory",
-                "Introduced modern engineering products during Dubai's formative years",
-                "1935: Pioneered water-pumping system design and installation",
-                "Established global partnerships, notably with Grundfos",
-                "Positioned as a leader in engineering & infrastructure"
-            ]
-        },
-        {
-            title: "1960s-1980s",
-            subText: "Infrastructure Expansion & Industrial Strength",
-            image: "/office.jpg",
-            description: [
-                "Expanded engineering operations (Al Khoory Engineering / Senan Industry)",
-                "Contributed to iconic UAE projects including Burj Khalifa",
-                "Built Electrical Division representing Eaton, ABB, Lister Petter, Kirloskar",
-                "Recognized regional leader in water & electrical solutions"
-            ]
-        },
-        {
-            title: "1988-2010s",
-            subText: "Diversification & Manufacturing Growth",
-            image: "/office.jpg",
-            description: [
-                "1988: Launched Union Paper Mills - UAE's first paper-recycling plant",
-                "Expanded recycling capacity & manufacturing footprint",
-                "Established Al Dhafra Paper Manufacturing (Abu Dhabi)",
-                "Diversified into packaging, interiors, hospitality, logistics & waste management",
-                "Transitioned into a multi-sector industrial group"
-            ]
-        },
-        {
-            title: "2010s-Present",
-            subText: "Sustainability, Innovation & Future Mobility",
-            image: "/office.jpg",
-            description: [
-                "Launched Creative Solutions for energy & sustainability consulting",
-                "Entered renewable energy as UAE partner for SolarEdge",
-                "2024: Re-entered automotive sector with Dongfeng Motor Corporation",
-                "Focus on EVs, clean energy & innovation-driven growth",
-                "Positioned for future-ready, sustainable expansion"
-            ]
-        }
-    ]
     return (
         <>
             <motion.div
@@ -96,7 +47,7 @@ function History({ history }) {
                 <div className="relative">
                     <div
                         ref={scrollRef}
-                        className="flex flex-nowrap h-125 mt-10 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-5"
+                        className="flex flex-nowrap h-125 mt-10 overflow-y-hidden overflow-x-auto scroll-smooth scrollbar-none px-10"
                     >
                         {items.map((item, i) => (
                             <motion.div
@@ -108,7 +59,7 @@ function History({ history }) {
                                 <HistoryCard
                                     index={i}
                                     title={item.title}
-                                    subText={item.subText}
+                                    subText={item.text}
                                     image={item.image}
                                     description={item.description}
                                 />

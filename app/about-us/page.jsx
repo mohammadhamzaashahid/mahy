@@ -33,7 +33,51 @@ async function About() {
     const history = {
         heading: translations("History.Heading"),
         subHeading: translations("History.Text"),
-        items: [translations("History.Item1"), translations("History.Item2"), translations("History.Item3"), translations("History.Item4"), translations("History.Item5")]
+        items: [
+            {
+                title: translations("History.Item1Title"), text: translations("History.Item1Text"),
+                description: [
+                    translations("History.Item1Description1"),
+                    translations("History.Item1Description2"),
+                    translations("History.Item1Description3"),
+                    translations("History.Item1Description4"),
+                    translations("History.Item1Description5"),
+                ],
+                image: "/office.jpg",
+            },
+            {
+                title: translations("History.Item2Title"), text: translations("History.Item2Text"),
+                description: [
+                    translations("History.Item2Description1"),
+                    translations("History.Item2Description2"),
+                    translations("History.Item2Description3"),
+                    translations("History.Item2Description4"),
+                ],
+                image: "/office.jpg",
+            },
+            {
+                title: translations("History.Item3Title"), text: translations("History.Item3Text"),
+                description: [
+                    translations("History.Item3Description1"),
+                    translations("History.Item3Description2"),
+                    translations("History.Item3Description3"),
+                    translations("History.Item3Description4"),
+                    translations("History.Item3Description5"),
+                ],
+                image: "/office.jpg",
+            },
+            {
+                title: translations("History.Item4Title"), text: translations("History.Item4Text"),
+                description: [
+                    translations("History.Item4Description1"),
+                    translations("History.Item4Description2"),
+                    translations("History.Item4Description3"),
+                    translations("History.Item4Description4"),
+                    translations("History.Item4Description5"),
+                ],
+                image: "/office.jpg",
+            },
+        ]
     }
     const ourPeople = {
         heading: translations("OurPeople.Heading"),

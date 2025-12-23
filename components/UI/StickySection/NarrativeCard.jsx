@@ -8,6 +8,7 @@ export default function NarrativeCard({
   bullets,
   image,
   cursor,
+  cta
 }) {
   return (
     <div className="relative isolate max-w-xl w-full">
@@ -72,7 +73,7 @@ export default function NarrativeCard({
         </ul>
 
         <PrimaryButton
-          label="View More"
+          label={cta}
           size="md"
           radius="rounded-full"
           className="mt-12"
