@@ -3,9 +3,10 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import React from "react";
+import React, { useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-
+import SubmitButton from "./SubmitButton";
+import FileUploadField from "./FileUploadField";
 
 const COMPLAINT_CATEGORIES = [
   { value: "product_quality", label: "Product Quality & Defects" },
@@ -41,27 +42,26 @@ export default function ComplaintFormPane() {
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: zodResolver(schema) });
-const onSubmit = async (data) => {
-  if (!executeRecaptcha) {
-    console.warn("recaPTCHA not yet available");
-    return;
-  }
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // const token = await executeRecaptcha("complaint_form");
+  const onSubmit = async (data) => {
+    if (!executeRecaptcha) {
+      console.warn("recaPTCHA not yet available");
+      return;
+    }
 
-  const payload = {
-    ...data,
-    recaptchaToken: "",
+    // const token = await executeRecaptcha("complaint_form");
+
+    const payload = {
+      ...data,
+      recaptchaToken: "",
+    };
+
+    console.log("payloadd", payload);
   };
 
-  console.log("payloadd", payload);
-
-};
-
-// const { executeRecaptcha } = useGoogleReCaptcha();
+  // const { executeRecaptcha } = useGoogleReCaptcha();
   return (
-
-
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-3xl">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
         <Field label="Customer Name" error={errors.customerName}>
@@ -89,7 +89,7 @@ const onSubmit = async (data) => {
           {...register("category")}
         />
 
-        <div>
+        {/* <div>
           <label className="mb-1 block text-sm font-medium text-slate-700">
             Attachment
           </label>
@@ -98,7 +98,13 @@ const onSubmit = async (data) => {
             {...register("attachment")}
             className="w-full text-sm"
           />
-        </div>
+        </div> */}
+
+        <FileUploadField
+          label="Attachment (optional)"
+          register={register}
+          error={errors.attachment}
+        />
         {/* <div className="flex items-start gap-3">
           <input type="checkbox" {...register("captcha")} />
           <p className="text-sm text-slate-600">Verify if you are human</p>
@@ -108,12 +114,7 @@ const onSubmit = async (data) => {
           <p className="text-sm text-red-500">{errors.captcha.message}</p>
         )} */}
 
-        <button
-          type="submit"
-          className="mt-8 rounded-full bg-[#3F3C8F] px-12 py-3 text-sm font-semibold text-white hover:bg-[#2f2c70]"
-        >
-          Submit Complaint
-        </button>
+        <SubmitButton label="Submit Complaint" loading={isSubmitting} />
       </div>
     </form>
   );

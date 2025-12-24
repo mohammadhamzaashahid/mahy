@@ -4,7 +4,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { COUNTRIES, ENQUIRY_TYPES } from "../../config/contactOptions.js";
-import React from "react";
+import React, { useState } from "react";
+import SubmitButton from "./SubmitButton.jsx";
 // import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const schema = z.object({
@@ -30,25 +31,25 @@ export default function ContactFormPane() {
   } = useForm({
     resolver: zodResolver(schema),
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // const { executeRecaptcha } = useGoogleReCaptcha();
 
- const onSubmit = async (data) => {
-  // if (!executeRecaptcha) {
-  //   console.warn("reCAPTCHA not yet available");
-  //   return;
-  // }
+  const onSubmit = async (data) => {
+    // if (!executeRecaptcha) {
+    //   console.warn("reCAPTCHA not yet available");
+    //   return;
+    // }
 
-  // const token = await executeRecaptcha("contact_form");
+    // const token = await executeRecaptcha("contact_form");
 
-  const payload = {
-    ...data,
-    recaptchaToken: "",
+    const payload = {
+      ...data,
+      recaptchaToken: "",
+    };
+
+    console.log("payload:", payload);
   };
-
-  console.log("payload:", payload);
-
-};
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="pt-4 max-w-3xl">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
@@ -108,12 +109,7 @@ export default function ContactFormPane() {
           <p className="text-sm text-red-500">{errors.agreed.message}</p>
         )}
 
-        <button
-          type="submit"
-          className="mt-8 rounded-full bg-[#3F3C8F] px-12 py-3 text-sm font-semibold text-white hover:bg-[#2f2c70]"
-        >
-          Submit
-        </button>
+        <SubmitButton label="Submit" loading={isSubmitting} />
       </div>
     </form>
   );
