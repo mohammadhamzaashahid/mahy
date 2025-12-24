@@ -22,6 +22,7 @@ export default function Navbar({ navigation }) {
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const [currentLocale, setCurrentLocale] = useState("en");
   const languageMenuRef = useRef(null);
+  const router = useRouter();
 
   const toggleDropdown = (id) => {
     setOpenMenu((prev) => (prev === id ? null : id));
