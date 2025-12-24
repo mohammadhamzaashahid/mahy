@@ -8,6 +8,7 @@ import MissionStatement from "@/components/UI/about-us/MissionStatement";
 import Purpose from "@/components/UI/about-us/Purpose";
 import { getTranslations } from "next-intl/server";
 import HistoryTimelineClient from "@/components/HistoryTimelineClient";
+import IndustriesGrid from "@/components/UI/about-us/IndustriesGrid";
 
 async function About() {
   const translations = await getTranslations("AboutUsPage");
@@ -129,28 +130,6 @@ async function About() {
         <div className="py-16 lg:py-24 border-b border-gray-300">
           <History history={history} />
         </div>
-        <ValuesSection
-          title={ourPeople.heading}
-          description={ourPeople.text}
-          imageSrc="/gallery/gallery-2.jpg"
-          imageAlt="Our people"
-          imagePosition="right"
-          ctaLabel="Learn More"
-          ctaHref="/people"
-        />
-        <div className="border-b border-gray-200"></div>
-        <LeadersSection leaders={leaders} />
-        <ValuesSection
-          title={ourExcellence.heading}
-          description={ourExcellence.text}
-          imageSrc="/gallery/gallery-6.jpg"
-          imageAlt="Our people"
-          imagePosition="left"
-          ctaLabel="Learn More"
-          ctaHref="/people"
-        />
-
-        <div className="border-b border-gray-200"></div>
 
         <HistoryTimelineClient
           title={translations("History.Heading")}
@@ -200,6 +179,31 @@ async function About() {
             },
           ]}
         />
+
+        <IndustriesGrid />
+
+        <ValuesSection
+          title={ourPeople.heading}
+          description={ourPeople.text}
+          imageSrc="/gallery/gallery-2.jpg"
+          imageAlt="Our people"
+          imagePosition="right"
+          ctaLabel="Learn More"
+          ctaHref="/people"
+        />
+        <div className="border-b border-gray-200"></div>
+        <LeadersSection leaders={leaders} />
+        <ValuesSection
+          title={ourExcellence.heading}
+          description={ourExcellence.text}
+          imageSrc="/gallery/gallery-6.jpg"
+          imageAlt="Our people"
+          imagePosition="left"
+          ctaLabel="Learn More"
+          ctaHref="/people"
+        />
+
+        {/* <div className="border-b border-gray-200"></div> */}
       </main>
     </>
   );
