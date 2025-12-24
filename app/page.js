@@ -31,10 +31,19 @@ export default async function Home() {
       cta: { label: translations('Hero3CtaLabel') }
     }
   ];
+  const floatingMenuItems = [
+    translations('FloatingMenu.Item1'),
+    translations('FloatingMenu.Item2'),
+    translations('FloatingMenu.Item3'),
+    translations('FloatingMenu.Item4'),
+    translations('FloatingMenu.Item5'),
+    translations('FloatingMenu.Item6'),
+    translations('FloatingMenu.Item7')
+  ];
 
   return (
     <main className="bg-white min-h-screen overflow-x-hidden">
-      <FloatingMenu />
+      <FloatingMenu floatingMenuItems={floatingMenuItems} />
       <div id="home">
         {/* <HeroCarousel slides={HERO_SLIDES} /> */}
         <HeroVideo slides={slides} />

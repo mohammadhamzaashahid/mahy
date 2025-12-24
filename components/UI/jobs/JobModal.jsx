@@ -4,7 +4,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { Slide, ToastContainer, toast } from 'react-toastify';
 
-export default function JobModal({ }) {
+export default function JobModal({ formLabels }) {
     let [isOpen, setIsOpen] = useState(false)
 
     function closeModal() {
@@ -24,12 +24,9 @@ export default function JobModal({ }) {
     return (
         <>
             <div className='flex justify-center'>
-                <button
-                    type="button"
-                    onClick={openModal}
-                    className="rounded-lg text-sm b-base b-base-hover px-6 py-3 font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
-                >
-                    Apply for Job
+                <button type="button" onClick={openModal}
+                    className="rounded-lg text-sm b-base b-base-hover px-6 py-3 font-medium text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+                    {formLabels.cta}
                 </button>
             </div>
 
@@ -63,14 +60,14 @@ export default function JobModal({ }) {
                                         as="h3"
                                         className="text-xl font-semibold text-gray-900"
                                     >
-                                        Apply for this position
+                                        {formLabels.title}
                                     </Dialog.Title>
 
                                     <form onSubmit={handleSubmit} className="mt-4 space-y-4" encType="multipart/form-data">
                                         {/* Name */}
                                         <div className='pt-3'>
                                             <label className="block text-sm font-medium text-gray-700 mb-1">
-                                                Full Name
+                                                {formLabels.label1}
                                             </label>
                                             <input
                                                 type="text"
@@ -81,7 +78,8 @@ export default function JobModal({ }) {
                                         {/* Email */}
                                         <div className='pt-2'>
                                             <label className="block text-sm font-medium text-gray-700 mb-1">
-                                                Email
+                                                {formLabels.label2}
+
                                             </label>
                                             <input
                                                 type="email"
@@ -92,7 +90,7 @@ export default function JobModal({ }) {
                                         {/* Resume */}
                                         <div className='pt-2'>
                                             <label className="block text-sm font-medium text-gray-700 mb-1">
-                                                Resume (PDF only)
+                                                {formLabels.label3}
                                             </label>
                                             <input
                                                 type="file"
@@ -108,14 +106,14 @@ export default function JobModal({ }) {
                                                 onClick={closeModal}
                                                 className="rounded-md border px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                             >
-                                                Cancel
+                                                {formLabels.button1}
                                             </button>
 
                                             <button
                                                 type="submit"
                                                 className="rounded-md b-base b-base-hover px-4 py-2 text-sm font-medium text-white"
                                             >
-                                                Submit Application
+                                                {formLabels.button2}
                                             </button>
                                         </div>
                                     </form>

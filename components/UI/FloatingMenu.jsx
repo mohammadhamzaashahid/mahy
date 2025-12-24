@@ -3,20 +3,22 @@ import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 import { FiMinus } from "react-icons/fi";
 
-const sections = [
-  { id: "home", label: "Home", lightBg: false },
-  { id: "about", label: "About", lightBg: true },
-  { id: "gallery", label: "Gallery", lightBg: false },
-  { id: "partners", label: "Partners", lightBg: true },
-  { id: "enterprise", label: "Enterprise", lightBg: false },
-  { id: "after-sales", label: "After Sales", lightBg: true },
-  { id: "why-us", label: "Why Us", lightBg: false },
-];
 
-export default function FloatingMenu() {
+
+export default function FloatingMenu({ floatingMenuItems }) {
   const [active, setActive] = useState(null);
-  const isActiveLightBg = sections.find((s) => s.id === active)?.lightBg;
   const locale = useLocale();
+
+  const sections = [
+    { id: "home", label: floatingMenuItems[0], lightBg: false },
+    { id: "about", label: floatingMenuItems[1], lightBg: true },
+    { id: "gallery", label: floatingMenuItems[2], lightBg: false },
+    { id: "partners", label: floatingMenuItems[3], lightBg: true },
+    { id: "enterprise", label: floatingMenuItems[4], lightBg: false },
+    { id: "after-sales", label: floatingMenuItems[5], lightBg: true },
+    { id: "why-us", label: floatingMenuItems[6], lightBg: false },
+  ];
+  const isActiveLightBg = sections.find((s) => s.id === active)?.lightBg;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,6 +35,8 @@ export default function FloatingMenu() {
     });
     return () => observer.disconnect();
   }, []);
+
+
 
   return (
     <ul className={`hidden lg:block fixed bottom-25 ${locale === "ar" ? "left-20" : "right-20"} space-y-4 z-30`}>

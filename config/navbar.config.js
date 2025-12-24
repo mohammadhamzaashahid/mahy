@@ -102,7 +102,7 @@ export const getNavigation = (t) => ({
         {
             id: "shop",
             label: t("Shop"),
-            href: "/",
+            href: "/shop",
             type: "link",
             linkType: "dropdown",
             items: [

@@ -70,6 +70,15 @@
             "Item2Content": "We collaborate with world-class brands like Grundfos to bring cutting-edge technology tailored to regional needs.",
             "Item3Title": "Seamless Service & Support",
             "Item3Content": "Our dedicated after-sales team ensures smooth installation, prompt maintenance, and long-term peace of mind - every step of the way."
+        },
+        "FloatingMenu": {
+            "Item1": "Home",
+            "Item2": "About",
+            "Item3": "Gallery",
+            "Item4": "Partners",
+            "Item5": "Enterprise",
+            "Item6": "After Sales",
+            "Item7": "Why Us"
         }
     },
     "AboutUsPage": {
@@ -146,6 +155,10 @@
         "Heading": "Our Portfolio",
         "Description": "The Fund seeks to build a rich investment portfolio of companies across diverse sectors in UAE and beyond, in line with UAE Vision."
     },
+    "ShopPage": {
+        "Heading": "Shop",
+        "Description": "Buy quality goods from our shop."
+    },
     "NewsPage": {
         "Heading": "News & Media",
         "Description": "Latest announcements, insights, and updates from MAHY Group and its portfolio.",
@@ -170,6 +183,17 @@
         "JoinUs": "Join Us",
         "JoinUsText": "Help accelerate the world's transition to sustainable energy",
         "JoinCta": "Explore Jobs"
+    },
+    "JobsPage": {
+        "Heading": "Explore Jobs",
+        "SubHeading": "Join a team driven by innovation, collaboration, and impact. Build your career while shaping meaningful solutions and growing with us.",
+        "Cta": "Apply for Job",
+        "FormTitle": "Apply for this position",
+        "Label1": "Full Name",
+        "Label2": "Email",
+        "Label3": "Resume (PDF only)",
+        "Button1": "Cancel",
+        "Button2": "Submit Application"
     },
     "Nav": {
         "Home": "Home",
