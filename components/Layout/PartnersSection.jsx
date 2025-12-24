@@ -1,19 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import LogoMarquee from "../UI/LogoMarquee";
+import partners from "@/constants/partners";
 
 export default async function PartnersSection() {
   const translations = await getTranslations('HomePage.Partners');
-
-  const logos = [
-    { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994346/grundfos_lbiolu.png", alt: "Grundfos" },
-    { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/GAIA_r8o2xz.png", alt: "Gaia" },
-    { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/oventrop_v6j8mf.png", alt: "Oventrop" },
-    { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/ListerPetter_ea6myv.png", alt: "Lister Petter" },
-    { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/Marathon_rqvumo.png", alt: "Marathon Motor" },
-    { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/Artiston_dkapb8.png", alt: "Ariston" },
-    { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994347/PakaWaste_ltpkeg.png", alt: "Pakawaste" },
-    { src: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765994346/Havells_wmzbot.png", alt: "Havells" },
-  ];
 
   return (
     <div className="max-w-7xl mx-auto px-5 py-24">
@@ -26,7 +16,7 @@ export default async function PartnersSection() {
           {translations("Description")}
         </p>
       </div>
-      <LogoMarquee logos={logos} speed={40} />
+      <LogoMarquee partners={partners} speed={40} />
     </div>
   );
 }

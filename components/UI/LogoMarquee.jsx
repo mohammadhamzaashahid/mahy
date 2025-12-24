@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { useLocale } from "next-intl";
+import Link from "next/link";
 
-export default function LogoMarquee({ logos = [], speed = 30 }) {
+export default function LogoMarquee({ partners = [], speed = 30 }) {
     const [paused, setPaused] = useState(false);
     const locale = useLocale();
 
@@ -20,18 +21,20 @@ export default function LogoMarquee({ logos = [], speed = 30 }) {
                     animationPlayState: paused ? "running" : "running",
                 }}
             >
-                {logos.map((logo, i) => (
+                {partners.map((partner, i) => (
                     <LogoItem
                         key={`a-${i}`}
-                        logo={logo}
+                        partner={partner}
                         onHover={setPaused}
+                        href={`/shop?partners=${partner.id}`}
                     />
                 ))}
-                {logos.map((logo, i) => (
+                {partners.map((partner, i) => (
                     <LogoItem
                         key={`b-${i}`}
-                        logo={logo}
+                        partner={partner}
                         onHover={setPaused}
+                        href={`/shop?partners=${partner.id}`}
                     />
                 ))}
             </div>
@@ -39,35 +42,17 @@ export default function LogoMarquee({ logos = [], speed = 30 }) {
     );
 }
 
-function LogoItem({ logo, onHover }) {
+function LogoItem({ partner, onHover, href }) {
     return (
-        <div
-            className="
-        group
-        flex items-center justify-center
-        mx-10
-        min-w-[120px] sm:min-w-[160px]
-        cursor-pointer
-      "
+        <Link href={href} className=" group flex items-center justify-center mx-10 min-w-30 sm:min-w-[160px]cursor-pointer"
             onMouseEnter={() => onHover(true)}
-            onMouseLeave={() => onHover(false)}
-        >
+            onMouseLeave={() => onHover(false)}>
             <Image
-                src={logo.src}
-                alt={logo.alt || "Company logo"}
+                src={partner.image}
+                alt={partner.name || "Company logo"}
                 width={140}
                 height={60}
-                className="
-          object-contain
-          opacity-60
-          grayscale
-          transition-all duration-300 ease-out
-          group-hover:opacity-100
-          group-hover:grayscale-0
-          group-hover:scale-125
-          group-hover:drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]
-        "
-            />
-        </div>
+                className="object-contain opacity-60 grayscale transition-all duration-300 ease-out group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-125 group-hover:drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)]" />
+        </Link>
     );
 }
