@@ -22,7 +22,7 @@ export default function ManufacturingNetworkMap() {
   const primaryPin = networkPins[0];
 
   const dotStep = 8;
-  const dotRadius = 2.1;
+  const dotRadius = 2.0
   const baseDot = "#d4d7dd";
   const activeDot = "#2D69FF";
   const waveInterval = 5000;
@@ -31,7 +31,7 @@ export default function ManufacturingNetworkMap() {
   const pulseStagger = 360;
 
   const baseWidth = 1600;
-  const baseHeight = 700;
+  const baseHeight = 800;
 
   const [canvasSize, setCanvasSize] = useState({
     width: baseWidth,
@@ -360,7 +360,7 @@ export default function ManufacturingNetworkMap() {
             </div>
             <div
               ref={wrapRef}
-              className="order-1 lg:order-2 relative w-full h-[320px] sm:h-[400px] lg:h-[520px] xl:h-[580px] overflow-hidden rounded-[22px] sm:rounded-[28px] lg:rounded-[32px] bg-[#F8FAFF]"
+              className="order-2 lg:order-2 relative w-full h-[320px] sm:h-[400px] lg:h-[520px] xl:h-[580px] overflow-hidden rounded-[22px] sm:rounded-[28px] lg:rounded-[32px] bg-[#F8FAFF]"
             >
               <canvas
                 ref={canvasRef}
