@@ -39,7 +39,7 @@ export default function FloatingMenu({ floatingMenuItems }) {
 
 
   return (
-    <ul className={`hidden lg:block fixed bottom-25 ${locale === "ar" ? "left-20" : "right-20"} space-y-4 z-30`}>
+    <ul className={`hidden lg:block fixed bottom-80 ${locale === "ar" ? "left-20" : "right-20"} space-y-4 z-30`}>
       {sections.map((s) => (
         <li key={s.id} className="group">
           <a

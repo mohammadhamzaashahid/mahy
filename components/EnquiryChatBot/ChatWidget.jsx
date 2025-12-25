@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import ChatLayout from "./ChatLayout";
 import ChatMessages from "./ChatMessages";
@@ -9,6 +9,9 @@ import CountryDropdown from "./CountryDropdown";
 import ChatInput from "./ChatInput";
 import { COUNTRY_LIST } from "@/utils/countries";
 import { FLOW } from "@/utils/chatbot-inference/chatBotFlow";
+import LottieButton from "./LottieButton";
+import IdlePrompt from "./IdlePrompt";
+import MahyraAvatar from "./MahyraAvatar";
 
 export default function ChatWidget() {
   const [messages, setMessages] = useState([
@@ -19,6 +22,37 @@ export default function ChatWidget() {
   const [answers, setAnswers] = useState({});
   const [isTyping, setIsTyping] = useState(false);
   const [isWidgetOpen, setIsWidgetOpen] = useState(false);
+
+  const IDLE_DELAY = 12000;
+
+  const idleTimer = useRef(null);
+  const [showIdlePrompt, setShowIdlePrompt] = useState(false);
+
+  function startIdleCountdown() {
+    if (idleTimer.current) clearTimeout(idleTimer.current);
+    idleTimer.current = setTimeout(() => {
+      if (!isWidgetOpen) setShowIdlePrompt(true);
+    }, IDLE_DELAY);
+  }
+
+  function handleIdleTease() {
+    setShowIdlePrompt(false);
+    if (!isWidgetOpen) startIdleCountdown();
+  }
+
+  useEffect(() => {
+    if (isWidgetOpen) {
+      setShowIdlePrompt(false);
+      if (idleTimer.current) clearTimeout(idleTimer.current);
+      return;
+    }
+
+    startIdleCountdown();
+
+    return () => {
+      if (idleTimer.current) clearTimeout(idleTimer.current);
+    };
+  }, [isWidgetOpen]);
 
   const messagesRef = useRef(null);
 
@@ -143,7 +177,8 @@ export default function ChatWidget() {
   const isCountryStage = question?.type === "country";
   const canInteract = current !== "done" && !isTyping;
   const prompt = current !== "done" ? question?.text : null;
-  const canChangeSelection = history.length > 1 && current !== "done" && !isTyping;
+  const canChangeSelection =
+    history.length > 1 && current !== "done" && !isTyping;
 
   function getPlaceholder() {
     if (!question) return "Type your response";
@@ -190,7 +225,7 @@ export default function ChatWidget() {
 
   return (
     <>
-      {!isWidgetOpen && (
+      {/* {!isWidgetOpen && (
         <button
           type="button"
           onClick={() => setIsWidgetOpen(true)}
@@ -218,6 +253,35 @@ export default function ChatWidget() {
             <path d="M8 14h5" />
           </svg>
         </button>
+      )} */}
+
+      {!isWidgetOpen && (
+        <div
+          className="
+    fixed
+    bottom-6
+    right-6
+    z-[9999]
+    pointer-events-auto
+  "
+        >
+          {" "}
+          <MahyraAvatar visible={showIdlePrompt} />
+          <IdlePrompt
+            visible={showIdlePrompt}
+            onOpen={() => {
+              handleIdleTease();
+              setIsWidgetOpen(true);
+            }}
+          />
+          <LottieButton
+            onInteract={handleIdleTease}
+            onClick={() => {
+              handleIdleTease();
+              setIsWidgetOpen(true);
+            }}
+          />
+        </div>
       )}
 
       {isWidgetOpen && (

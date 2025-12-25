@@ -17,6 +17,7 @@
     "d3-geo": "^3.1.1",
     "framer-motion": "^12.23.26",
     "js-cookie": "^3.0.5",
+    "lottie-web": "^5.13.0",
     "lucide-react": "^0.561.0",
     "next": "^16.0.8",
     "next-intl": "^4.6.1",
