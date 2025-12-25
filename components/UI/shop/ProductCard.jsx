@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function ProductCard({ title, image, models, onClick, price, href }) {
+export default function ProductCard({ title, image, models, price, href }) {
   const [selectedModel, setSelectedModel] = useState(0);
 
   return (
@@ -26,7 +26,7 @@ export default function ProductCard({ title, image, models, onClick, price, href
         ))}
       </div>
       <p className="font-medium mt-6 text-lg">{price.toLocaleString()} AED</p>
-      <Link href={href}>
+      <Link href={`${href}?model=${selectedModel}`}>
         <button className="py-2 w-full b-base text-white text-center rounded-2xl mt-4 text-sm">Buy</button>
       </Link>
     </div>

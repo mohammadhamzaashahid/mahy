@@ -37,25 +37,21 @@ function Filters({ filters, search }) {
             </button>
 
             <div className={`
-                ${showFilters ? "h-screen pt-20 lg:pt-7 opacity-100" : "opacity-0 pointer-events-none lg:pointer-events-auto lg:opacity-100"}
-                overflow-y-scroll fixed z-40 transition-opacity duration-500 inset-0 col-span-2 px-4 pt-7 pb-12 lg:pb-7 rounded-3xl bg-white border border-[#E7E3DA] lg:sticky lg:top-20 h-fit mb-10 lg:mb-0`}>
-                <div className="relative mb-7 group">
+                ${showFilters ? "h-screen pt-20 opacity-100 px-5" : "opacity-0 pointer-events-none lg:pointer-events-auto lg:opacity-100"}
+                overflow-y-scroll fixed z-40 transition-opacity lg:pt-0 duration-500 inset-0 col-span-2 pt-7 pb-12 lg:pb-7 bg-white lg:sticky lg:top-20 h-fit mb-10 lg:mb-0`}>
+                {/* <div className="relative mb-7 group">
                     <form onSubmit={onSubmit}>
                         <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} name='search' className="border border-gray-300 f-base rounded-xl py-2 px-4 w-full text-sm pr-8 relative z-10" placeholder="" />
                         <div className='absolute inset-0 flex justify-end items-center right-2'>
                             <HiSearch className='t-base' />
                         </div>
                     </form>
-                </div>
-
-                <div className="flex justify-between flex-wrap items-center gap-4 mb-6">
-                    <h2 className="font-medium">Filters</h2>
-                    <ResetButton />
-                </div>
+                </div> */}
 
                 {filters.map((filter, index) => (
                     <CheckFilters key={index} searchKey={filter.key} label={filter.title} list={filter.options} />
                 ))}
+                <ResetButton />
             </div>
         </Fragment>
     )

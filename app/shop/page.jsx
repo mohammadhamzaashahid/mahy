@@ -43,7 +43,8 @@ async function Shop({ searchParams }) {
             >
                 <Filters filters={filters} search={search} />
                 <div className="col-span-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="text-sm font-medium text-gray-700">Results ({getItems().length})</div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                         {getItems().map((item, i) => (
                             <div key={i}>
                                 <ProductCard
