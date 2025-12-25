@@ -8,7 +8,7 @@ const products = [
             "Model 3",
         ],
         images: ["/pump.png", "/pump2.jpeg"],
-        price: 40,
+        price: 400000,
         partnerId: 0
     },
     {
@@ -19,7 +19,7 @@ const products = [
             "Model 2",
         ],
         images: ["/pump.png"],
-        price: 40,
+        price: 400000,
         partnerId: 0
     },
     {
@@ -31,7 +31,7 @@ const products = [
             "Model 3",
         ],
         images: ["/pump.png"],
-        price: 40,
+        price: 4000,
         partnerId: 3
     },
     {
@@ -43,7 +43,7 @@ const products = [
             "Model 3",
         ],
         images: ["/pump.png"],
-        price: 40,
+        price: 4000,
         partnerId: 4
     },
     {
@@ -55,7 +55,7 @@ const products = [
             "Model 3",
         ],
         images: ["/pump.png"],
-        price: 40,
+        price: 4000,
         partnerId: 5
     },
     {
@@ -65,7 +65,7 @@ const products = [
             "Model 1",
         ],
         images: ["/pump.png"],
-        price: 40,
+        price: 4000,
         partnerId: 6
     },
 ];
