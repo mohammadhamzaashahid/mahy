@@ -1,3 +1,4 @@
+import { Check } from "lucide-react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 function CheckFilters({ searchKey, label, list }) {
@@ -28,29 +29,15 @@ function CheckFilters({ searchKey, label, list }) {
 
     return (
         <div className="mb-6">
-            <p className="font-medium text-sm mb-4 pb-3 border-b border-gray-200">{label}</p>
-            <div className="flex flex-col space-y-3">
+            <p className="text-sm font-medium text-gray-700 mb-4">{label} ({list.length})</p>
+            <div className="flex flex-wrap gap-2">
                 {list.map((item, index) => (
-                    <div key={item} className="flex items-center gap-2">
-                        <input
-                            type="checkbox"
-                            id={item}
-                            name={searchKey}
-                            value={index}
-                            checked={searchValues.includes(index.toString())}
-                            onChange={() => handleClick(index.toString())}
-                            className="cursor-pointer a-base"
-                        />
-                        <label
-                            htmlFor={item}
-                            className={`text-sm cursor-pointer text-gray-600 t-base-hover
-                                ${searchValues.includes(index.toString())
-                                && "t-base font-medium "}
-                            `}
-                        >
-                            {item}
-                        </label>
-                    </div>
+                    <button className={`flex items-center gap-2 border  text-sm px-3 py-1 rounded-lg hover:bg-[#79c4e7] hover:text-white hover:border-[#79c4e7] transition-colors duration-300
+                        ${searchValues.includes(index.toString()) ? "bg-[#79c4e7] text-white border-[#79c4e7]" : "border-gray-500 text-gray-500"}`}
+                        onClick={() => handleClick(index.toString())} key={item}>
+                        {searchValues.includes(index.toString()) && <Check />}
+                        <div>{item}</div>
+                    </button>
                 ))}
             </div>
         </div >

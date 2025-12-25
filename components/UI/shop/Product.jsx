@@ -6,9 +6,9 @@ import { HiMinus, HiPlus } from 'react-icons/hi';
 import { Slide, toast, ToastContainer } from 'react-toastify';
 import Cookies from "js-cookie";
 
-function Product({ product, locale }) {
+function Product({ product, model, locale }) {
     const [imageIndex, setImageIndex] = useState(0);
-    const [modelIndex, setModelIndex] = useState(0);
+    const [modelIndex, setModelIndex] = useState(Number(model));
     const [quantity, setQuantity] = useState(0);
     const productId = product.id;
 
@@ -24,7 +24,6 @@ function Product({ product, locale }) {
         if (quantity === 0) return;
         setQuantity(quantity - 1);
     };
-
 
     const addToCart = () => {
         const cart = Cookies.get("cart") ? JSON.parse(Cookies.get("cart")) : [];
