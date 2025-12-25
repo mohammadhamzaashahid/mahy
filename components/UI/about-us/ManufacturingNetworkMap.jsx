@@ -9,32 +9,74 @@ export default function ManufacturingNetworkMap() {
   const wrapRef = useRef(null);
   const canvasRef = useRef(null);
 
-  // Highlight location (Dubai)
-  const pin = useMemo(
-    () => ({ lon: 55.296249, lat: 25.276987, label: "Dubai, UAE" }),
+  const networkPins = useMemo(
+    () => [
+      { lon: 55.296249, lat: 25.276987, label: "Dubai, UAE" },
+      { lon: 39.1911, lat: 21.4858, label: "Jeddah, Saudi Arabia" },
+      { lon: 77.209, lat: 28.6139, label: "New Delhi, India" },
+      { lon: 103.8198, lat: 1.3521, label: "Singapore" },
+      { lon: 51.389, lat: 25.2854, label: "Doha, Qatar" },
+    ],
     []
   );
+  const primaryPin = networkPins[0];
 
-  // Visual tuning
   const dotStep = 8;
-  const dotRadius = 2;
-  const baseDot = "#9a9da1";
-  const activeDot = "#356CFF";
+  const dotRadius = 2.1;
+  const baseDot = "#d4d7dd";
+  const activeDot = "#2D69FF";
   const waveInterval = 5000;
   const waveDuration = 2600;
-  const pulseDuration = 3200;
-  const pulseStagger = 380;
+  const pulseDuration = 2600;
+  const pulseStagger = 360;
 
-  const canvasWidth = 1600;
-  const canvasHeight = 700;
+  const baseWidth = 1600;
+  const baseHeight = 700;
+
+  const [canvasSize, setCanvasSize] = useState({
+    width: baseWidth,
+    height: baseHeight,
+  });
 
   const [isPinHovered, setIsPinHovered] = useState(false);
   const pointsRef = useRef([]);
   const pinPxRef = useRef([0, 0]);
+  const pinPixelsRef = useRef([]);
   const animRef = useRef({ raf: null, start: 0 });
   const hoverStateRef = useRef(false);
-  const hoverWaveStartRef = useRef(null);
   const controlsRef = useRef({ start: () => {}, stop: () => {} });
+  const worldDataRef = useRef(null);
+
+  useEffect(() => {
+    const wrap = wrapRef.current;
+    if (!wrap) return;
+
+    const recalc = () => {
+      const rect = wrap.getBoundingClientRect();
+      const width = rect.width || baseWidth;
+      const height =
+        rect.height && rect.height > 0
+          ? rect.height
+          : Math.max(300, (width / baseWidth) * baseHeight * 0.65);
+
+      setCanvasSize((prev) => {
+        if (
+          Math.abs(prev.width - width) < 1 &&
+          Math.abs(prev.height - height) < 1
+        ) {
+          return prev;
+        }
+
+        return { width, height };
+      });
+    };
+
+    recalc();
+    const observer = new ResizeObserver(recalc);
+    observer.observe(wrap);
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -43,24 +85,35 @@ export default function ManufacturingNetworkMap() {
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+
+    const width = Math.max(360, canvasSize.width || baseWidth);
+    const height =
+      canvasSize.height || Math.max(320, (width / baseWidth) * baseHeight);
+
     const dpr = Math.max(1, Math.floor(window.devicePixelRatio || 1));
-    canvas.width = canvasWidth * dpr;
-    canvas.height = canvasHeight * dpr;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
     canvas.style.width = "100%";
     canvas.style.height = "100%";
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
+    const scaleFactor = width / baseWidth;
+    const renderRadius = Math.min(3, Math.max(1.5, dotRadius * scaleFactor));
+    const spacing = Math.max(5.2, dotStep * scaleFactor);
     const projection = geoNaturalEarth1()
-      .scale(350)
-      .translate([canvasWidth * 0.52, canvasHeight * 0.56]);
-
+      .scale(350 * scaleFactor)
+      .translate([width * 0.52, height * 0.56]);
     const path = geoPath(projection);
     let destroyed = false;
 
     function drawFrame(waveRadius, pulseProgress = []) {
-      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-      ctx.fillStyle = "#fff";
-      ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+      ctx.clearRect(0, 0, width, height);
+
+      const gradient = ctx.createLinearGradient(0, 0, 0, height);
+      gradient.addColorStop(0, "#ffffff");
+      gradient.addColorStop(1, "#f7f9ff");
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, width, height);
 
       const pts = pointsRef.current;
 
@@ -77,7 +130,7 @@ export default function ManufacturingNetworkMap() {
           } else if (t > 0) {
             ctx.globalAlpha = 0.25 + 0.75 * t;
             ctx.beginPath();
-            ctx.arc(p.x, p.y, dotRadius, 0, Math.PI * 2);
+            ctx.arc(p.x, p.y, renderRadius, 0, Math.PI * 2);
             ctx.fillStyle = activeDot;
             ctx.fill();
             ctx.globalAlpha = 1;
@@ -86,52 +139,71 @@ export default function ManufacturingNetworkMap() {
         }
 
         ctx.beginPath();
-        ctx.arc(p.x, p.y, dotRadius, 0, Math.PI * 2);
+        ctx.arc(p.x, p.y, renderRadius, 0, Math.PI * 2);
         ctx.fillStyle = color;
         ctx.fill();
       }
 
-      // Pin + label
-      const [px, py] = pinPxRef.current;
+      const pinPixels = pinPixelsRef.current;
+      const [mainPx = 0, mainPy = 0] = pinPxRef.current;
 
-      ctx.font =
-        "600 16px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial";
-      ctx.fillStyle = "#111827";
-      ctx.textAlign = "right";
-      ctx.textBaseline = "middle";
-      ctx.fillText(pin.label, px - 14, py - 38);
+      if (mainPx && mainPy) {
+        const labelFontSize = Math.max(13, Math.min(18, width / 95));
+        ctx.font = `600 ${labelFontSize}px 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial`;
+        ctx.fillStyle = "#111827";
+        ctx.textAlign = "right";
+        ctx.textBaseline = "middle";
+        ctx.fillText(primaryPin.label, mainPx - 16, mainPy - 34);
 
-      // connector
-      ctx.beginPath();
-      ctx.moveTo(px - 10, py - 38);
-      ctx.lineTo(px, py - 38);
-      ctx.lineTo(px, py);
-      ctx.strokeStyle = activeDot;
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-
-      // ring
-      ctx.beginPath();
-      ctx.arc(px, py, 11, 0, Math.PI * 2);
-      ctx.strokeStyle = activeDot;
-      ctx.lineWidth = 2.4;
-      ctx.stroke();
-
-      // inner dot
-      ctx.beginPath();
-      ctx.arc(px, py, 4, 0, Math.PI * 2);
-      ctx.fillStyle = activeDot;
-      ctx.fill();
-
-      // soft halo pulses
-      pulseProgress.forEach((progress) => {
-        const radius = 18 + progress * 42;
-        const alpha = 0.4 * (1 - progress);
         ctx.beginPath();
-        ctx.arc(px, py, radius, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(53,108,255,${alpha})`;
-        ctx.lineWidth = 2;
+        ctx.moveTo(mainPx - 12, mainPy - 34);
+        ctx.lineTo(mainPx, mainPy - 34);
+        ctx.lineTo(mainPx, mainPy);
+        ctx.strokeStyle = activeDot;
+        ctx.lineWidth = 1.3;
         ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(mainPx, mainPy, 12, 0, Math.PI * 2);
+        ctx.strokeStyle = activeDot;
+        ctx.lineWidth = 2.2;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(mainPx, mainPy, 4.6, 0, Math.PI * 2);
+        ctx.fillStyle = activeDot;
+        ctx.fill();
+
+        pulseProgress.forEach((progress) => {
+          const radius = 18 + progress * 48;
+          const alpha = 0.4 * (1 - progress);
+          ctx.beginPath();
+          ctx.arc(mainPx, mainPy, radius, 0, Math.PI * 2);
+          ctx.strokeStyle = `rgba(45,105,255,${alpha})`;
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        });
+      }
+
+      pinPixels.forEach((coords, idx) => {
+        if (!coords || idx === 0) return;
+        const [px, py] = coords;
+
+        ctx.beginPath();
+        ctx.arc(px, py, 7, 0, Math.PI * 2);
+        ctx.fillStyle = "#ffffff";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.arc(px, py, 7, 0, Math.PI * 2);
+        ctx.strokeStyle = "rgba(45,105,255,0.35)";
+        ctx.lineWidth = 1.4;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(px, py, 3.2, 0, Math.PI * 2);
+        ctx.fillStyle = activeDot;
+        ctx.fill();
       });
     }
 
@@ -193,10 +265,11 @@ export default function ManufacturingNetworkMap() {
 
     function handleMove(e) {
       const rect = canvas.getBoundingClientRect();
-      const mx = ((e.clientX - rect.left) / rect.width) * canvasWidth;
-      const my = ((e.clientY - rect.top) / rect.height) * canvasHeight;
+      const mx = ((e.clientX - rect.left) / rect.width) * width;
+      const my = ((e.clientY - rect.top) / rect.height) * height;
       const [px, py] = pinPxRef.current;
-      const hit = Math.hypot(mx - px, my - py) <= 34;
+      const hitRadius = 34 * (width / baseWidth);
+      const hit = Math.hypot(mx - px, my - py) <= hitRadius;
       setIsPinHovered(hit);
     }
 
@@ -207,23 +280,31 @@ export default function ManufacturingNetworkMap() {
     canvas.addEventListener("mousemove", handleMove);
     canvas.addEventListener("mouseleave", handleLeave);
 
-    async function buildDots() {
-      const world = await fetch(
+    async function loadWorld() {
+      if (worldDataRef.current) return worldDataRef.current;
+      const data = await fetch(
         "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
       ).then((r) => r.json());
+      worldDataRef.current = data;
+      return data;
+    }
 
+    (async () => {
+      const world = await loadWorld();
       if (destroyed) return;
 
       const land = feature(world, world.objects.countries);
-      const [px, py] = projection([pin.lon, pin.lat]);
-      pinPxRef.current = [px, py];
+      pinPxRef.current = projection([primaryPin.lon, primaryPin.lat]);
+      pinPixelsRef.current = networkPins.map((pin) =>
+        projection([pin.lon, pin.lat])
+      );
 
       const pts = [];
       for (const f of land.features) {
         const bounds = path.bounds(f);
 
-        for (let x = bounds[0][0]; x < bounds[1][0]; x += dotStep) {
-          for (let y = bounds[0][1]; y < bounds[1][1]; y += dotStep) {
+        for (let x = bounds[0][0]; x < bounds[1][0]; x += spacing) {
+          for (let y = bounds[0][1]; y < bounds[1][1]; y += spacing) {
             const lonlat = projection.invert([x, y]);
             if (!lonlat) continue;
             if (!d3.geoContains(f, lonlat)) continue;
@@ -231,7 +312,7 @@ export default function ManufacturingNetworkMap() {
             pts.push({
               x,
               y,
-              dist: d3.geoDistance(lonlat, [pin.lon, pin.lat]),
+              dist: d3.geoDistance(lonlat, [primaryPin.lon, primaryPin.lat]),
             });
           }
         }
@@ -239,9 +320,7 @@ export default function ManufacturingNetworkMap() {
 
       pointsRef.current = pts;
       drawFrame(null);
-    }
-
-    buildDots();
+    })();
 
     return () => {
       destroyed = true;
@@ -249,7 +328,7 @@ export default function ManufacturingNetworkMap() {
       canvas.removeEventListener("mouseleave", handleLeave);
       if (animRef.current.raf) cancelAnimationFrame(animRef.current.raf);
     };
-  }, [pin]);
+  }, [primaryPin, networkPins, canvasSize]);
 
   useEffect(() => {
     hoverStateRef.current = isPinHovered;
@@ -261,52 +340,27 @@ export default function ManufacturingNetworkMap() {
   }, [isPinHovered]);
 
   return (
-    // <section className="py-8 bg-[#F2F5FB]">
-    <section className="py-12 sm:py-16 bg-[#F2F5FB]">
-      <div className="max-w-full mx-auto px-3 sm:px-8 lg:px-12">
-        <div
-          className="
-  bg-white
-  rounded-[28px] sm:rounded-[36px] lg:rounded-[42px]
-  shadow-[0_24px_80px_rgba(15,23,42,0.08)]
-  px-5 sm:px-10 lg:px-16
-  py-10 sm:py-12 lg:py-14
-"
-        >
-          {/* <div className="bg-white rounded-[42px] shadow-[0_24px_80px_rgba(15,23,42,0.08)] px-6 sm:px-10 lg:px-16 py-10 lg:py-14"> */}
-          <div className="max-w-3xl mx-auto lg:ml-[6%] text-center lg:text-left">
-            {/* <div className="max-w-3xl lg:ml-[6%]"> */}
-            <h2 className="text-[34px] md:text-[38px] leading-tight font-semibold text-gray-900">
-              Our
-              <br />
-              Network
-            </h2>
-
-            <p className="mt-6 text-[15px] leading-7 text-gray-600">
-              Headquartered in Dubai, UAE, MAHY Khoory has established an
-              intelligent manufacturing and supply network, including authorized
-              facilities and strategic partners, with the capability to support
-              large-scale industrial production and regional distribution.
-            </p>
-          </div>
-          <div className="flex flex-col gap-12 pt-10">
-            {/* <div
-              ref={wrapRef}
-              className="relative max-w-full h-[360px] sm:h-[430px] lg:h-[570px] overflow-hidden rounded-[34px]"
-            > */}
-
+    <section className="py-16 sm:py-20 bg-[#F1F4FA]">
+      <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="bg-white rounded-[32px] sm:rounded-[38px] shadow-[0_20px_70px_rgba(15,23,42,0.08)] px-5 sm:px-10 lg:px-14 py-10 sm:py-12 lg:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(320px,430px)_1fr] items-center gap-10 lg:gap-16">
+            <div className="order-2 lg:order-1 text-center lg:text-left">
+              <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.35em] text-[#1C4C9A]">
+                Connected Presence
+              </p>
+              <h2 className="mt-4 text-[30px] sm:text-[36px] lg:text-[40px] font-semibold leading-tight text-gray-900">
+                Our Networks Centre
+              </h2>
+              <p className="mt-6 text-base sm:text-lg leading-7 text-gray-600 max-w-xl mx-auto lg:mx-0">
+                Anchored in Dubai, our manufacturing network spans the Middle
+                East and Asia through authorized plants and logistics partners,
+                keeping production nimble and supply chains responsive for every
+                market we serve.
+              </p>
+            </div>
             <div
               ref={wrapRef}
-              className="
-    relative
-    max-w-full
-    h-[260px]
-    sm:h-[360px]
-    md:h-[430px]
-    lg:h-[570px]
-    overflow-hidden
-    rounded-[22px] sm:rounded-[28px] lg:rounded-[34px]
-  "
+              className="order-1 lg:order-2 relative w-full h-[320px] sm:h-[400px] lg:h-[520px] xl:h-[580px] overflow-hidden rounded-[22px] sm:rounded-[28px] lg:rounded-[32px] bg-[#F8FAFF]"
             >
               <canvas
                 ref={canvasRef}
