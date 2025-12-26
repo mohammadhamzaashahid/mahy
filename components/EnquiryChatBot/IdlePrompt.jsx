@@ -6,28 +6,25 @@ export default function IdlePrompt({ visible, onOpen }) {
   return (
     <div
       className="
-        absolute
-        bottom-[72px]
-        sm:bottom-[88px]
-        right-0.5
-        sm:right-1
-        w-[208px]
-        sm:w-[230px]
-        rounded-2xl
-        border
-        border-white/40
-        bg-white/35
+        relative
+        w-full
+        rounded-[26px]
+        border border-white/15
+        bg-gradient-to-br
+        from-slate-900/95
+        via-slate-900/90
+        to-slate-800/80
         px-4
         py-4
-        backdrop-blur-xl
-        shadow-[0_16px_40px_rgba(15,23,42,0.18)]
+        text-slate-50
+        backdrop-blur-2xl
+        shadow-[0_22px_50px_rgba(2,6,23,0.55)]
         animate-[fadeUp_0.25s_ease-out]
-        text-slate-900
         pointer-events-auto
       "
     >
-      <div className="flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-[18px] border border-white/50 bg-white/80 text-slate-900 shadow-[0_6px_16px_rgba(15,23,42,0.08)]">
+      <div className="flex items-center gap-3 pr-1">
+        <div className="flex h-10 w-10 items-center justify-center rounded-[18px] bg-white/10 text-white shadow-[0_10px_30px_rgba(15,23,42,0.5)] ring-1 ring-white/25">
           <svg
             width="20"
             height="20"
@@ -42,48 +39,53 @@ export default function IdlePrompt({ visible, onOpen }) {
           </svg>
         </div>
         <div className="space-y-0.5">
-          <p className="text-[11px] uppercase tracking-[0.28em] text-slate-500">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-slate-200">
             Need help?
           </p>
-          <p className="text-sm font-semibold text-slate-900">
+          <p className="text-base font-semibold text-white">
             Chat with Mahyra
           </p>
+          {/* <p className="text-[11px] text-slate-300/90">
+            We usually respond in under a minute.
+          </p> */}
         </div>
       </div>
 
       <button
         onClick={onOpen}
         className="
-          mt-3
+          mt-4
           inline-flex
           items-center
           justify-between
           rounded-full
-          border border-white/50
-          bg-white/60
+          border border-white/20
+          bg-white/10
           px-3.5
           py-1.5
           text-[11px]
           font-semibold
           uppercase
           tracking-[0.3em]
-          text-slate-800
-          backdrop-blur
+          text-white
           transition
-          hover:bg-white
+          hover:bg-white/20
+          focus-visible:outline-none
+          focus-visible:ring-2
+          focus-visible:ring-white/60
         "
       >
         Let's talk
-        <span className="ml-2 h-1.5 w-1.5 rounded-full bg-emerald-500" />
+        <span className="ml-2 h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_0_2px_rgba(255,255,255,0.35)]" />
       </button>
 
       <div
         className="
           pointer-events-none
           absolute
-          -bottom-6
-          right-[-2px]
-          sm:right-1
+          -bottom-5
+          right-4
+          sm:right-6
           flex
           flex-col
           items-start

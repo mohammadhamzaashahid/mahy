@@ -27,6 +27,8 @@ export default function ChatWidget() {
 
   const idleTimer = useRef(null);
   const [showIdlePrompt, setShowIdlePrompt] = useState(false);
+  const idleChimeRef = useRef(null);
+  const idleChimePlayed = useRef(false);
 
   function startIdleCountdown() {
     if (idleTimer.current) clearTimeout(idleTimer.current);
@@ -53,6 +55,36 @@ export default function ChatWidget() {
       if (idleTimer.current) clearTimeout(idleTimer.current);
     };
   }, [isWidgetOpen]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    idleChimeRef.current = new Audio("/audio/idle-pop.wav");
+    idleChimeRef.current.volume = 0.4;
+
+    return () => {
+      idleChimeRef.current?.pause();
+      idleChimeRef.current = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!showIdlePrompt || idleChimePlayed.current) return;
+    if (!idleChimeRef.current) return;
+
+    const playSound = async () => {
+      try {
+        idleChimeRef.current.currentTime = 0;
+        await idleChimeRef.current.play();
+      } catch (error) {
+        console.warn("Idle prompt sound blocked", error);
+      } finally {
+        idleChimePlayed.current = true;
+      }
+    };
+
+    playSound();
+  }, [showIdlePrompt]);
 
   const messagesRef = useRef(null);
 
@@ -258,29 +290,41 @@ export default function ChatWidget() {
       {!isWidgetOpen && (
         <div
           className="
-    fixed
-    bottom-6
-    right-6
-    z-[9999]
-    pointer-events-auto
-  "
+            fixed
+            bottom-4
+            right-4
+            sm:bottom-6
+            sm:right-6
+            z-[9999]
+            flex
+            flex-col
+            items-end
+            gap-3
+            pointer-events-none
+          "
         >
-          {" "}
-          <MahyraAvatar visible={showIdlePrompt} />
-          <IdlePrompt
-            visible={showIdlePrompt}
-            onOpen={() => {
-              handleIdleTease();
-              setIsWidgetOpen(true);
-            }}
-          />
-          <LottieButton
-            onInteract={handleIdleTease}
-            onClick={() => {
-              handleIdleTease();
-              setIsWidgetOpen(true);
-            }}
-          />
+          <div
+            className="relative w-full max-w-[260px] sm:max-w-[280px] pointer-events-auto"
+            style={{ width: "min(80vw, 280px)" }}
+          >
+            <MahyraAvatar visible={showIdlePrompt} />
+            <IdlePrompt
+              visible={showIdlePrompt}
+              onOpen={() => {
+                handleIdleTease();
+                setIsWidgetOpen(true);
+              }}
+            />
+          </div>
+          <div className="pointer-events-auto">
+            <LottieButton
+              onInteract={handleIdleTease}
+              onClick={() => {
+                handleIdleTease();
+                setIsWidgetOpen(true);
+              }}
+            />
+          </div>
         </div>
       )}
 
