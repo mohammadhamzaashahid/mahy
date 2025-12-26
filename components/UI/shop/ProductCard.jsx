@@ -9,7 +9,7 @@ export default function ProductCard({ title, image, models, price, href }) {
 
   return (
     <div className="relative rounded-3xl bg-gray-50 px-6 pt-10 pb-8 hover:bg-gray-100 duration-500 transition-all">
-      <div className="relative mt-4 h-30 w-full">
+      <div className="relative mt-4 h-50 w-full">
         <Image
           src={image}
           alt={title}
@@ -22,7 +22,7 @@ export default function ProductCard({ title, image, models, price, href }) {
       <p className="mt-4 text-sm text-gray-500 font-medium uppercase">{models.length > 1 ? "Models" : "Model"}</p>
       <div className="flex gap-1 flex-wrap mt-2">
         {models.map((model, i) => (
-          <button onClick={() => setSelectedModel(i)} key={i} className={`py-1 px-3 text-xs rounded-2xl border-base ${i === selectedModel ? "b-base text-white" : "t-base"}`}>{model}</button>
+          <button onClick={() => setSelectedModel(i)} key={i} className={`py-1 px-3 text-sm rounded-2xl border-base ${i === selectedModel ? "b-base text-white" : "t-base"}`}>{model}</button>
         ))}
       </div>
       <p className="font-medium mt-6 text-lg">{price.toLocaleString()} AED</p>

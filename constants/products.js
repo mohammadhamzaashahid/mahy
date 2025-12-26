@@ -7,7 +7,7 @@ const products = [
             "Model 2",
             "Model 3",
         ],
-        images: ["/pump.png", "/pump2.jpeg"],
+        images: ["/pump.png", "/pump2.png"],
         price: 400000,
         partnerId: 0
     },

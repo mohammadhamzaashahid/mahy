@@ -32,7 +32,7 @@ function Filters({ filters, search }) {
                 onClick={handleShowFilters}
                 className={`
                     fixed bottom-3 left-3 ${showFilters ? "z-50" : "z-20"} 
-                    rounded-3xl border-base bg-white/20 backdrop-blur-xl px-6 py-2 t-base lg:hidden backdrop-saturate-150`}>
+                    rounded-3xl border-base px-6 py-2 t-base lg:hidden`}>
                 {showFilters ? "Close" : "Filters"}
             </button>
 

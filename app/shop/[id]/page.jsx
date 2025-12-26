@@ -1,4 +1,5 @@
 import Product from '@/components/UI/shop/Product';
+import Specs from '@/components/UI/shop/Specs';
 import { getProduct } from '@/constants/products';
 import { getLocale, getTranslations } from 'next-intl/server';
 import React from 'react'
@@ -12,8 +13,11 @@ async function ProductPage({ params, searchParams }) {
     const locale = await getLocale();
 
     return (
-        <main className='max-w-6xl mx-auto mt-22 pb-15 grid grid-cols-1 lg:grid-cols-3 gap-2'>
-            <Product product={product} model={model} locale={locale} />
+        <main className='max-w-6xl mx-auto mt-22 pb-15 '>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
+                <Product product={product} model={model} locale={locale} />
+            </div>
+            <Specs />
         </main>
     )
 }
