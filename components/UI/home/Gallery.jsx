@@ -10,27 +10,27 @@ const imageVariants = {
     exit: { opacity: 0, scale: 1.05, transition: { duration: 0.8 } },
 };
 
-function Gallery() {
+function Gallery({ galleryItems }) {
     const items = [
         {
-            title: "Abu dhabi",
+            title: galleryItems[0],
             image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961377/gallery-2_mgmir1.jpg"
         },
 
         {
-            title: "Dubai",
+            title: galleryItems[1],
             image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961326/gallery-1_u7bk29.jpg"
         },
         {
-            title: "Sharjah",
+            title: galleryItems[2],
             image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961312/gallery-3_o7q6xp.jpg"
         },
         {
-            title: "Ras al Khaimah",
+            title: galleryItems[3],
             image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961506/gallery-4_jxixjw.jpg"
         },
         {
-            title: "Al Ain",
+            title: galleryItems[4],
             image: "https://res.cloudinary.com/db3fd1qah/image/upload/v1765961631/gallery-5_rckdvg.jpg"
         },
     ]

@@ -14,28 +14,24 @@ import {
   FaCogs,
 } from "react-icons/fa";
 
-const INDUSTRIES = [
-  { label: "Aerospace", icon: FaPlane, href: "/companies" },
-  { label: "Automotive", icon: FaCar, href: "/companies" },
-  { label: "Defense", icon: FaShieldAlt, href: "/companies" },
-  { label: "Electronics", icon: FaMicrochip, href: "/companies" },
-  { label: "Consulting", icon: FaUserTie, href: "/companies" },
+export default function IndustriesGrid({ heading, industries }) {
+  const INDUSTRIES = [
+    { label: industries[0], icon: FaPlane, href: "/companies" },
+    { label: industries[1], icon: FaCar, href: "/companies" },
+    { label: industries[2], icon: FaShieldAlt, href: "/companies" },
+    { label: industries[3], icon: FaMicrochip, href: "/companies" },
+    { label: industries[4], icon: FaUserTie, href: "/companies" },
 
-  { label: "Medical", icon: FaBriefcaseMedical, href: "/companies" },
-  { label: "Oil & Gas", icon: FaOilCan, href: "/companies" },
-  { label: "Optics", icon: FaMicroscope, href: "/companies" },
-  { label: "Power Generation", icon: FaBolt, href: "/companies" },
-  { label: "Semiconductors", icon: FaCogs, href: "/companies" },
-];
-
-export default function IndustriesGrid() {
+    { label: industries[5], icon: FaBriefcaseMedical, href: "/companies" },
+    { label: industries[6], icon: FaOilCan, href: "/companies" },
+    { label: industries[7], icon: FaMicroscope, href: "/companies" },
+    { label: industries[8], icon: FaBolt, href: "/companies" },
+    { label: industries[9], icon: FaCogs, href: "/companies" },
+  ];
   return (
     <section className="w-full py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-center text-lg md:text-xl font-medium text-gray-700 mb-12">
-          The list of industries we serve
-        </h2>
-
+        <h2 className="text-center text-lg md:text-xl font-medium text-gray-700 mb-12">{heading}</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
           {INDUSTRIES.map((item, index) => {
             const Icon = item.icon;
