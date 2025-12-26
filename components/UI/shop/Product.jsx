@@ -5,13 +5,12 @@ import ProductDetailSection from './ProductDetailSection';
 
 function Product({ product, model, locale }) {
     return (
-        <>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
             <ProductImageSection images={product.images} alt={product.name} />
             <ProductDetailSection product={product} model={model} locale={locale} />
             <ToastContainer transition={Slide} autoClose={3000} position="top-right" hideProgressBar
-                toastStyle={{ transition: "all 0.5s ease-in-out", }}
-            />
-        </>
+                toastStyle={{ transition: "all 0.5s ease-in-out", }} />
+        </div>
     )
 }
 
