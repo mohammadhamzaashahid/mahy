@@ -4,16 +4,23 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 function ScrollButons({ scrollRef, length }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const getOffset = () => {
+        if (typeof window === "undefined") return 240;
+        const w = window.innerWidth;
+        if (w < 640) return 20;
+        if (w < 1024) return 120;
+        return 140;
+    };
+
     const scrollToIndex = (index) => {
         if (!scrollRef.current) return;
         const card = scrollRef.current.children[index];
         if (!card) return;
 
         scrollRef.current.scrollTo({
-            left: card.offsetLeft - 200,
+            left: card.offsetLeft - getOffset(),
             behavior: "smooth",
         });
-
         setCurrentIndex(index);
     };
 

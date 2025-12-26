@@ -125,7 +125,7 @@ function Product({ product, model, locale }) {
                     </div>
                     <button onClick={addToCart} className="mt-4 lg:mt-0 b-base b-base-hover rounded-xl py-2 px-14 flex items-center justify-center gap-4 w-full lg:w-fit" >
                         <ShoppingCart stroke='white' />
-                        <p className="text-white font-medium">Add to cart</p>
+                        <p className="text-white font-medium py-1">Add to cart</p>
                     </button>
                 </div>
             </div>
