@@ -10,6 +10,7 @@ import { getTranslations } from "next-intl/server";
 import HistoryTimelineClient from "@/components/HistoryTimelineClient";
 import IndustriesGrid from "@/components/UI/about-us/IndustriesGrid";
 import ManufacturingNetworkMap from "@/components/UI/about-us/ManufacturingNetworkMap";
+import ManufacturingNetworkSection from "@/components/UI/about-us/ManufacturingNetworkSection";
 
 async function About() {
   const translations = await getTranslations("AboutUsPage");
@@ -183,7 +184,8 @@ async function About() {
 
         <IndustriesGrid />
 
-        <ManufacturingNetworkMap />
+        {/* <ManufacturingNetworkMap /> */}
+        <ManufacturingNetworkSection />
 
         <ValuesSection
           title={ourPeople.heading}
