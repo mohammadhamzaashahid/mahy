@@ -1,6 +1,7 @@
+import MoreProducts from '@/components/UI/shop/MoreProducts';
 import Product from '@/components/UI/shop/Product';
 import Specs from '@/components/UI/shop/Specs';
-import { getProduct } from '@/constants/products';
+import products, { getProduct } from '@/constants/products';
 import { getLocale, getTranslations } from 'next-intl/server';
 import React from 'react'
 
@@ -10,6 +11,7 @@ async function ProductPage({ params, searchParams }) {
 
     const translations = await getTranslations('Articles');
     const product = getProduct(id);
+    const moreProducts = products;
     const locale = await getLocale();
 
     return (
@@ -18,6 +20,7 @@ async function ProductPage({ params, searchParams }) {
                 <Product product={product} model={model} locale={locale} />
             </div>
             <Specs />
+            <MoreProducts products={moreProducts} />
         </main>
     )
 }

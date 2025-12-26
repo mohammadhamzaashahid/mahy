@@ -71,6 +71,7 @@ body::-webkit-scrollbar-track {
   backdrop-filter: blur(6px);
 }
 
+
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
   background-color: rgba(166, 199, 215, 0.78);
@@ -83,6 +84,7 @@ html::-webkit-scrollbar-thumb:hover,
 body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(4, 24, 34, 0.85);
 }
+
 
 .step-card {
   background: white;
@@ -157,39 +159,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .marquee {
   animation: marquee linear infinite;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(6px) scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes avatar-bob {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-
-  60% {
-    transform: translateY(0) scale(1);
-  }
-
-  70% {
-    transform: translateY(-6px) scale(1.03);
-  }
-
-  85% {
-    transform: translateY(2px) scale(0.995);
-  }
-
-  100% {
-    transform: translateY(0) scale(1);
-  }
 }
 
 .hide-scrollbar {
@@ -296,10 +265,6 @@ button {
 
   .animate-message-in {
     animation: fadeIn 0.35s ease forwards;
-  }
-
-  .animate-avatar-bob {
-    animation: avatar-bob 6s ease-in-out infinite;
   }
 
   .custom-scrollbar {

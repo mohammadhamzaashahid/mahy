@@ -111,7 +111,6 @@ function History({ history }) {
                                 className="text-3xl text-black transition-all duration-300 group-hover:text-white group-hover:translate-x-0.5"
                             />
                         </button>
-
                     </div>
 
                 </div>

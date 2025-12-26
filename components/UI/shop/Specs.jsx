@@ -18,7 +18,7 @@ const support = [
 
 function Specs() {
     return (
-        <TabGroup className={"mt-15 w-full mb-15"}>
+        <TabGroup className={"mt-15 w-full"}>
             <TabList className={"grid grid-cols-2"}>
                 {tabs.map((tab, i) => (
                     <Tab key={i}
