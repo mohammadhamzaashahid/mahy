@@ -37,19 +37,19 @@ export default function MahyraAvatar({ visible }) {
     <div
       className={`
         absolute
-        bottom-[108px]
-        sm:bottom-[128px]
-        lg:bottom-[136px]
-        -right-2
-        sm:-right-5
+        -top-10
+        -right-4
+        sm:-top-12
+        sm:-right-6
+        lg:-top-14
         lg:-right-8
-        w-32
-        h-32
-        sm:w-40
-        sm:h-40
-        lg:w-44
-        lg:h-44
-        z-[9999]
+        w-30
+        h-30
+        sm:w-24
+        sm:h-24
+        lg:w-38
+        lg:h-38
+        z-10
         pointer-events-none
         transition
         duration-500
