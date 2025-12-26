@@ -14,7 +14,7 @@ async function Article({ params }) {
     if (!article) return notFound();
 
     return (
-        <main className='max-w-4xl mx-auto mt-22 pb-15'>
+        <main className='max-w-4xl mx-auto mt-22 pb-15 animate-fade-in'>
             <h1 className={`text-3xl lg:text-5xl font-semibold leading-tight uppercase ${locale !== "ar" && "tracking-tighter"} px-4`}>{article.heading}</h1>
             <div className='text-lg mt-7 px-4 t-base'>{article.date.toLocaleString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}</div>
             <div className="md:px-4 mt-3">

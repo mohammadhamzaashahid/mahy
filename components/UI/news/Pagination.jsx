@@ -1,25 +1,10 @@
 "use client";
 
-import { useSearchParams, useRouter } from "next/navigation";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import { useNewsPageNavigation } from "./useNewsPageNavigation";
 
 export default function Pagination({ totalPages, className = "" }) {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-
-  const currentPage = Number(searchParams.get("page")) || 1;
-
-  const goToPage = (page) => {
-    const params = new URLSearchParams(searchParams.toString());
-
-    if (page === 1) {
-      params.delete("page");
-    } else {
-      params.set("page", page);
-    }
-
-    router.push(`/news?${params.toString()}`, { scroll: false });
-  };
+  const { currentPage, goToPage, isPending } = useNewsPageNavigation(totalPages);
 
   if (totalPages <= 1) return null;
 
@@ -42,13 +27,16 @@ export default function Pagination({ totalPages, className = "" }) {
         justify-center
         gap-2
         text-sm
+        transition-opacity
+        ${isPending ? "opacity-70" : ""}
         ${className}
       `}
       aria-label="Pagination"
+      aria-busy={isPending}
     >
       <button
         onClick={() => goToPage(currentPage - 1)}
-        disabled={currentPage === 1}
+        disabled={currentPage === 1 || isPending}
         className="
           flex h-9 w-9 items-center justify-center
           rounded-full
@@ -76,6 +64,7 @@ export default function Pagination({ totalPages, className = "" }) {
               ? "bg-indigo-100 text-indigo-700 font-medium"
               : "text-slate-700 hover:bg-slate-100"
             }
+            ${isPending ? "pointer-events-none opacity-50" : ""}
           `}
           aria-current={currentPage === page ? "page" : undefined}
         >
@@ -85,7 +74,7 @@ export default function Pagination({ totalPages, className = "" }) {
 
       {showEllipsis && (
         <>
-          <span className="px-2 text-slate-500">…</span>
+          <span className="px-2 text-slate-500">...</span>
 
           <button
             onClick={() => goToPage(lastPage)}
@@ -97,6 +86,7 @@ export default function Pagination({ totalPages, className = "" }) {
                 ? "bg-indigo-100 text-indigo-700 font-medium"
                 : "text-slate-700 hover:bg-slate-100"
               }
+              ${isPending ? "pointer-events-none opacity-50" : ""}
             `}
           >
             {lastPage}
@@ -106,7 +96,7 @@ export default function Pagination({ totalPages, className = "" }) {
 
       <button
         onClick={() => goToPage(currentPage + 1)}
-        disabled={currentPage === totalPages}
+        disabled={currentPage === totalPages || isPending}
         className="
           flex h-9 w-9 items-center justify-center
           rounded-full

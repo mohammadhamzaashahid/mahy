@@ -263,6 +263,38 @@ button {
     animation: fade-in 0.25s ease-out forwards;
   }
 
+  @keyframes slide-from-right {
+    from {
+      opacity: 0;
+      transform: translateX(32px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-from-left {
+    from {
+      opacity: 0;
+      transform: translateX(-32px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-slide-from-right {
+    animation: slide-from-right 0.35s ease-out both;
+  }
+
+  .animate-slide-from-left {
+    animation: slide-from-left 0.35s ease-out both;
+  }
+
   .animate-message-in {
     animation: fadeIn 0.35s ease forwards;
   }

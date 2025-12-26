@@ -5,6 +5,7 @@ import NewsroomIntro from "@/components/UI/news/NewsroomIntro";
 import FeaturedNews from "@/components/UI/news/FeaturedNews";
 import NewsCard from "@/components/UI/news/NewsCard";
 import Pagination from "@/components/UI/news/Pagination";
+import SwipeableNewsGrid from "@/components/UI/news/SwipeableNewsGrid";
 import { getArticle, getArticles } from "@/utlils/articles";
 import { getTranslations } from "next-intl/server";
 import { articles } from "@/constants/articles";
@@ -58,7 +59,7 @@ async function NewsContent({ searchParams }) {
         ctaLabel={pageTranslations("Cta")}
       />
 
-      <div id="list" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+      <SwipeableNewsGrid key={`news-page-${page}`} page={page} totalPages={totalPages}>
         {news.map((item) => (
           <NewsCard
             key={item.id}
@@ -70,7 +71,7 @@ async function NewsContent({ searchParams }) {
             cta={pageTranslations("Cta")}
           />
         ))}
-      </div>
+      </SwipeableNewsGrid>
       <Pagination totalPages={totalPages} />
     </main>
   );
