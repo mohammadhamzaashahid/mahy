@@ -183,7 +183,8 @@
         "Models": "Models",
         "Currency": "AED",
         "Buy": "Buy",
-        "AddToCart": "Add to cart"
+        "AddToCart": "Add to cart",
+        "Partners": "Partners"
     },
     "NewsPage": {
         "Heading": "News & Media",
@@ -381,5 +382,14 @@
                 "Model3": "Model 3"
             }
         }
+    },
+    "Partners": {
+        "Partner1": "Grundfos",
+        "Partner2": "Gaia",
+        "Partner3": "Oventrop",
+        "Partner4": "Lister Petter",
+        "Partner5": "Marathon Motor",
+        "Partner6": "Ariston",
+        "Partner7": "Pakawaste"
     }
 }

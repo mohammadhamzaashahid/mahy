@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
-function CheckFilters({ searchKey, label, list }) {
+function CheckFilters({ searchKey, label, list, count }) {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
@@ -29,7 +29,7 @@ function CheckFilters({ searchKey, label, list }) {
 
     return (
         <div className="mb-6">
-            <p className="text-sm font-medium text-gray-700 mb-4">{label} ({list.length})</p>
+            <p className="text-sm font-medium text-gray-700 mb-4">{label} ({count})</p>
             <div className="flex flex-wrap gap-2">
                 {list.map((item, index) => (
                     <button className={`flex items-center gap-2 border  text-sm px-3 py-1 rounded-lg hover:bg-[#79c4e7] hover:text-white hover:border-[#79c4e7] transition-colors duration-300

@@ -3,21 +3,24 @@ import Filters from "@/components/UI/companies/Filters";
 import PageHeading from "@/components/UI/PageHeading";
 import ProductCard from "@/components/UI/shop/ProductCard";
 import { getPartnerNames } from "@/constants/partners";
-import products, { getProducts } from "@/constants/products";
-import { getTranslations } from "next-intl/server";
+import { getProducts } from "@/constants/products";
+import { getLocale, getTranslations } from "next-intl/server";
 import React from "react";
 
 async function Shop({ searchParams }) {
     const params = await searchParams;
+    const locale = await getLocale();
     const search = params.search;
     const translations = await getTranslations("ShopPage");
 
+    const partnerNames = await getPartnerNames();
     const filters = [
         {
-            title: "Partners",
+            title: translations("Partners"),
             key: "partners",
-            options: getPartnerNames(),
-        },
+            options: partnerNames,
+            count: partnerNames.length.toLocaleString(locale)
+        }
     ];
 
     const getItems = async () => {
@@ -41,7 +44,7 @@ async function Shop({ searchParams }) {
             <div id="list" className="relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20" >
                 <Filters filters={filters} search={search} />
                 <div className="col-span-8">
-                    <div className="text-sm font-medium text-gray-700">{translations("Results")} ({items.length})</div>
+                    <div className="text-sm font-medium text-gray-700">{translations("Results")} ({items.length.toLocaleString(locale)})</div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                         {items.map((item, i) => (
                             <div key={i}>

@@ -49,7 +49,7 @@ function Filters({ filters, search }) {
                 </div> */}
 
                 {filters.map((filter, index) => (
-                    <CheckFilters key={index} searchKey={filter.key} label={filter.title} list={filter.options} />
+                    <CheckFilters key={index} searchKey={filter.key} label={filter.title} list={filter.options} count={filter.count} />
                 ))}
                 <ResetButton />
             </div>

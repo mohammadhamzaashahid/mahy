@@ -12,7 +12,7 @@ async function CartPage() {
     const combined = combineProductsWithCart(products, cart);
 
     return (
-        <main className='max-w-7xl mx-auto mt-25 pb-15'>
+        <main className='max-w-7xl mx-auto pt-25 pb-15'>
             <Cart products={combined} />
         </main>
     )

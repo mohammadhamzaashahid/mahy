@@ -14,7 +14,7 @@ async function ProductPage({ params, searchParams }) {
     const locale = await getLocale();
 
     return (
-        <main className='max-w-6xl mx-auto mt-22 pb-15 '>
+        <main className='max-w-6xl mx-auto pt-22 pb-15 '>
             <Product product={product} model={model} locale={locale} />
             <Specs />
             <MoreProducts
