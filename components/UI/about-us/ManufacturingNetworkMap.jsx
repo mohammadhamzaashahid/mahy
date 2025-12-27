@@ -5,17 +5,17 @@ import * as d3 from "d3";
 import { geoNaturalEarth1, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 
-export default function ManufacturingNetworkMap() {
+export default function ManufacturingNetworkMap({ data, locations }) {
   const wrapRef = useRef(null);
   const canvasRef = useRef(null);
 
   const networkPins = useMemo(
     () => [
-      { lon: 55.296249, lat: 25.276987, label: "Dubai, UAE" },
-      { lon: 39.1911, lat: 21.4858, label: "Jeddah, Saudi Arabia" },
-      { lon: 77.209, lat: 28.6139, label: "New Delhi, India" },
-      { lon: 103.8198, lat: 1.3521, label: "Singapore" },
-      { lon: 51.389, lat: 25.2854, label: "Doha, Qatar" },
+      { lon: 55.296249, lat: 25.276987, label: locations[0] },
+      { lon: 39.1911, lat: 21.4858, label: locations[1] },
+      { lon: 77.209, lat: 28.6139, label: locations[2] },
+      { lon: 103.8198, lat: 1.3521, label: locations[3] },
+      { lon: 51.389, lat: 25.2854, label: locations[4] },
     ],
     []
   );
@@ -24,8 +24,8 @@ export default function ManufacturingNetworkMap() {
   const dotStep = 8;
   const dotRadius = 2.0;
 
-  const baseDot = "#D3D7DF"; 
-  const baseDot2 = "#C7CCD6"; 
+  const baseDot = "#D3D7DF";
+  const baseDot2 = "#C7CCD6";
 
   const regionDot = "#8F9DFF";
   const regionDot2 = "#A7B0FF";
@@ -58,7 +58,7 @@ export default function ManufacturingNetworkMap() {
 
   const animRef = useRef({ raf: null, start: 0 });
   const hoverStateRef = useRef(false);
-  const controlsRef = useRef({ start: () => {}, stop: () => {} });
+  const controlsRef = useRef({ start: () => { }, stop: () => { } });
   const worldDataRef = useRef(null);
 
   useEffect(() => {
@@ -133,9 +133,9 @@ export default function ManufacturingNetworkMap() {
       .translate(
         isCompactMap
           ? [
-              width * 0.58, 
-              height * 0.6, 
-            ]
+            width * 0.58,
+            height * 0.6,
+          ]
           : [width * 0.52, height * 0.53]
       );
 
@@ -456,18 +456,15 @@ export default function ManufacturingNetworkMap() {
           "
         >
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(260px,320px)_1fr] items-center gap-10 lg:gap-16">
-            <div className="order-2 lg:order-1 text-center lg:text-left">
-              <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.35em] text-[#1C4C9A]">
-                Connected Presence
+            <div className="order-2 lg:order-1 text-center lg:text-start">
+              <p className="text-xs sm:text-sm font-semibold uppercase text-[#1C4C9A]">
+                {data[0]}
               </p>
               <h2 className="mt-4 text-[30px] sm:text-[36px] lg:text-[40px] font-semibold leading-tight text-gray-900">
-                Our Networks Centre
+                {data[1]}
               </h2>
               <p className="mt-6 text-base sm:text-lg leading-7 text-gray-600 max-w-xl mx-auto lg:mx-0">
-                Anchored in Dubai, our manufacturing network spans the Middle
-                East and Asia through authorized plants and logistics partners,
-                keeping production nimble and supply chains responsive for every
-                market we serve.
+                {data[2]}
               </p>
             </div>
 

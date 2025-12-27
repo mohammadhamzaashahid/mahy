@@ -97,6 +97,13 @@ async function About() {
       },
     ],
   };
+  const network = {
+    text: [t("Network.Text1"), t("Network.Text2")],
+    stats: [t("Network.Stat1"), t("Network.Stat2"), t("Network.Stat3")],
+    statsNo: [(300000).toLocaleString(locale), (60).toLocaleString(locale), (1200).toLocaleString(locale)],
+    map: [t("Network.Map1"), t("Network.Map2"), t("Network.Map3")],
+    locations: [t("Network.Location1"), t("Network.Location2"), t("Network.Location3"), t("Network.Location4"), t("Network.Location5")]
+  };
   const ourPeople = {
     heading: t("OurPeople.Heading"),
     text: t("OurPeople.Text"),
@@ -144,7 +151,6 @@ async function About() {
       <div className="py-16 lg:py-24 border-b border-gray-300">
         <History history={history} />
       </div>
-
       <HistoryTimelineClient
         title={t("History.Heading")}
         items={[
@@ -194,8 +200,7 @@ async function About() {
         ]}
       />
       <IndustriesGrid heading={t("Industries.Heading")} industries={industries} />
-      {/* <ManufacturingNetworkMap /> */}
-      <ManufacturingNetworkSection />
+      <ManufacturingNetworkSection network={network} locale={locale} />
       <ValuesSection
         title={ourPeople.heading}
         description={ourPeople.text}
@@ -216,8 +221,6 @@ async function About() {
         ctaLabel="Learn More"
         ctaHref="/people"
       />
-
-      {/* <div className="border-b border-gray-200"></div> */}
     </main>
   );
 }

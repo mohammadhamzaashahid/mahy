@@ -225,8 +225,9 @@ export default function HistoryTimeline({ title = "", items = [] }) {
 
   return (
     <section
+      dir="ltr"
       ref={sectionRef}
-      className="relative w-full bg-white pt-6" 
+      className="relative w-full bg-white pt-6"
       style={{ minHeight: "100vh" }}
     >
       <div className="mx-auto max-w-[1000px] px-5 md:px-10 pt-2 md:pt-0">

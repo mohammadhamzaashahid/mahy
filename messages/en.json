@@ -155,6 +155,21 @@
             "Item9": "Power Generation",
             "Item10": "Semiconductors"
         },
+        "Network": {
+            "Text1": "Our technical confidence comes from the R&D network",
+            "Text2": "Supported by a global R&D network spanning multiple innovation hubs, we focus on advanced consumer technologies, artificial intelligence, industrial design, and next-generation digital solutions.",
+            "Stat1": "Global Offline Sales and After-sales Service Centers",
+            "Stat2": "Countries and Regions",
+            "Stat3": "Users",
+            "Map1": "Connected Presence",
+            "Map2": "Our Networks Centre",
+            "Map3": "Anchored in Dubai, our manufacturing network spans the Middle East and Asia through authorized plants and logistics partners, keeping production nimble and supply chains responsive for every market we serve.",
+            "Location1": "Dubai, UAE",
+            "Location2": "Jeddah, Saudi Arabia",
+            "Location3": "New Delhi, India",
+            "Location4": "Singapore",
+            "Location5": "Doha, Qatar"
+        },
         "OurPeople": {
             "Heading": "Our People",
             "Text": "Our dedicated team of more than 100,000 employees from over 150 nationalities ensure the smooth flow of trade. As an equal employer that recognises and values diversity and an inclusive culture, we empower and up-skill our people with opportunities to perform at their best."

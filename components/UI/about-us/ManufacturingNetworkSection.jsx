@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import ManufacturingNetworkMap from "./ManufacturingNetworkMap";
 
-export default function ManufacturingNetworkSection() {
+export default function ManufacturingNetworkSection({ network, locale }) {
   const prefersReducedMotion = useReducedMotion();
 
   const fadeUp = {
@@ -30,100 +30,29 @@ export default function ManufacturingNetworkSection() {
   return (
     <section className="relative overflow-hidden bg-[#99afdc]">
       <div
-        className="
-          relative
-          min-h-[980px]
-          sm:min-h-[1040px]
-          md:min-h-[1100px]
-          lg:min-h-[1180px]
-          xl:min-h-[1260px]
-        "
-      >
-        <Image
-          src="/dubai-pano.jpg"
-          alt="Global network background"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div
-          className="
-            absolute inset-0
-            bg-gradient-to-b
-            from-[#071A3A]/75
-            via-[#0B3A7A]/45
-            to-[#F1F4FA]
-          "
-        />
-        <motion.div
-          className="relative z-10"
-          initial="hidden"
-          animate="visible"
-          variants={prefersReducedMotion ? {} : stagger}
-        >
+        className="relative min-h-245 sm:min-h-260 md:min-h-275 lg:min-h-295 xl:min-h-315" >
+        <Image src="/dubai-pano.jpg" alt="Global network background"
+          fill priority className="object-cover" sizes="100vw" />
+        <div className="absolute inset-0 bg-linear-to-b from-[#071A3A]/75 via-[#0B3A7A]/45 to-[#F1F4FA]" />
+        <motion.div className="relative z-10" initial="hidden" animate="visible"
+          variants={prefersReducedMotion ? {} : stagger}>
           <div
-            className="
-              max-w-[1100px]
-              mx-auto
-              px-4
-              sm:px-8
-              pt-20
-              sm:pt-24
-              md:pt-28
-              text-center
-              text-white
-            "
-          >
+            className="max-w-275 mx-auto px-4 sm:px-8 pt-20 sm:pt-24 md:pt-28 text-center text-white">
             <motion.h2
               variants={prefersReducedMotion ? {} : fadeUp}
-              className="
-                text-[22px]
-                sm:text-[28px]
-                md:text-[34px]
-                font-medium
-                leading-tight
-              "
-            >
-              Our technical confidence comes from the R&amp;D network
+              className="text-[22px] sm:text-[28px] md:text-[34px] font-medium leading-tight">
+              {network.text[0]}
             </motion.h2>
-
             <motion.p
               variants={prefersReducedMotion ? {} : fadeUp}
-              className="
-                mt-5
-                text-sm
-                sm:text-base
-                md:text-lg
-                leading-relaxed
-                opacity-90
-                max-w-[900px]
-                mx-auto
-              "
-            >
-              Supported by a global R&amp;D network spanning multiple innovation
-              hubs, we focus on advanced consumer technologies, artificial
-              intelligence, industrial design, and next-generation digital
-              solutions.
+              className="mt-5 text-sm sm:text-base md:text-lg leading-relaxed opacity-90 max-w-225 mx-auto">
+              {network.text[1]}
             </motion.p>
-
-            <motion.div
-              variants={prefersReducedMotion ? {} : stagger}
-              className="
-                mt-14
-                grid
-                grid-cols-1
-                sm:grid-cols-3
-                gap-y-12
-                gap-x-6
-              "
-            >
-              <Stat
-                value="300,000+"
-                label="Global Offline Sales and After-sales Service Centers"
-              />
-              <Stat value="60+" label="Countries and Regions" />
-              <Stat value="1,200+" label="Users" />
+            <motion.div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-y-12 gap-x-6"
+              variants={prefersReducedMotion ? {} : stagger}>
+              <Stat value={network.statsNo[0]} label={network.stats[0]} />
+              <Stat value={network.statsNo[1]} label={network.stats[1]} />
+              <Stat value={network.statsNo[2]} label={network.stats[2]} />
             </motion.div>
           </div>
         </motion.div>
@@ -144,7 +73,7 @@ export default function ManufacturingNetworkSection() {
             delay: 0.25,
           }}
         >
-          <ManufacturingNetworkMap />
+          <ManufacturingNetworkMap data={network.map} locations={network.locations} />
         </motion.div>
       </div>
     </section>
@@ -178,7 +107,7 @@ function Stat({ value, label }) {
           lg:text-[62px]
         "
       >
-        {value}
+        {value}+
       </div>
       <p
         className="
