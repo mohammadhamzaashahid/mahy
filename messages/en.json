@@ -177,7 +177,13 @@
     },
     "ShopPage": {
         "Heading": "Shop",
-        "Description": "Buy quality goods from our shop."
+        "Description": "Buy quality goods from our shop.",
+        "Results": "Results",
+        "Model": "Model",
+        "Models": "Models",
+        "Currency": "AED",
+        "Buy": "Buy",
+        "AddToCart": "Add to cart"
     },
     "NewsPage": {
         "Heading": "News & Media",
@@ -334,5 +340,46 @@
         "Article16Heading": "M.A.H.Y. Khoory Announces AED 1 billion Paper Mill Expansion in Abu Dhabi",
         "Article16SubHeading": "A major investment doubled recycled paper production capacity in the UAE.\nThe expansion strengthened the country's industrial and export capabilities.",
         "Article16": "M.A.H.Y. Khoory announced a AED 1 billion expansion of its Abu Dhabi-based paper manufacturing operations. The project significantly increased production capacity, making it one of the largest recycled paper facilities in the GCC.\nThe investment reflected strong confidence in regional demand and the UAE's industrial growth strategy. It also enhanced the group's ability to supply sustainable packaging materials.\nThe expansion reinforced M.A.H.Y. Khoory's role as a major contributor to the UAE's manufacturing sector."
+    },
+    "Products": {
+        "Product1": {
+            "Name": "Centrifugal Pump",
+            "Models": {
+                "Model1": "Model 1",
+                "Model2": "Model 2",
+                "Model3": "Model 3"
+            }
+        },
+        "Product2": {
+            "Name": "Submersible Pump",
+            "Models": {
+                "Model1": "Model 1",
+                "Model2": "Model 2"
+            }
+        },
+        "Product3": {
+            "Name": "Multistage Pump",
+            "Models": {
+                "Model1": "Model 1",
+                "Model2": "Model 2",
+                "Model3": "Model 3"
+            }
+        },
+        "Product4": {
+            "Name": "Fire Fighting System",
+            "Models": {
+                "Model1": "Model 1",
+                "Model2": "Model 2",
+                "Model3": "Model 3"
+            }
+        },
+        "Product5": {
+            "Name": "Booster Systems",
+            "Models": {
+                "Model1": "Model 1",
+                "Model2": "Model 2",
+                "Model3": "Model 3"
+            }
+        }
     }
 }
