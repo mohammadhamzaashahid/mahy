@@ -1,5 +1,6 @@
 {
     "HomePage": {
+        "Page": "Startseite",
         "Hero1Title": "M.A.H.Y. KHOORY & CO., LLC",
         "Hero1Subtitle": "Als eines der führenden Geschäftszentren der Region setzen wir Maßstäbe für Best Practices in Handel, Design und Service. Wir sind eine diversifizierte Unternehmensgruppe mit acht unabhängigen Geschäftseinheiten und unserem Hauptsitz in Dubai.",
         "Hero1CtaLabel": "Unsere Geschäftsbereiche",
@@ -89,6 +90,7 @@
         }
     },
     "AboutUsPage": {
+        "Page": "Über uns",
         "Heading": "Über uns",
         "Description": "Die M.A.H.Y. Khoory Group ist eine der vertrauenswürdigsten Unternehmensgruppen der VAE und liefert erstklassige technologische Lösungen für verschiedenste Branchen. Mit Hauptsitz in Dubai beschäftigt die Gruppe über 3.100 Fachkräfte aus 30 Nationalitäten, betreibt 17 Niederlassungen in den VAE und betreut Kunden in mehr als 29 Ländern im Nahen Osten, der Levante und Afrika.",
         "MissionStatement": {
@@ -153,6 +155,21 @@
             "Item9": "Energieerzeugung",
             "Item10": "Halbleiter"
         },
+        "Network": {
+            "Text1": "Unser technisches Vertrauen stammt aus dem F&E-Netzwerk",
+            "Text2": "Unterstützt von einem globalen F&E-Netzwerk mit mehreren Innovationszentren konzentrieren wir uns auf fortschrittliche Verbrauchertechnologien, künstliche Intelligenz, Industriedesign und digitale Lösungen der nächsten Generation.",
+            "Stat1": "Globale Offline-Vertriebs- und After-Sales-Servicezentren",
+            "Stat2": "Länder und Regionen",
+            "Stat3": "Nutzer",
+            "Map1": "Vernetzte Präsenz",
+            "Map2": "Unser Netzwerkzentrum",
+            "Map3": "Verankert in Dubai erstreckt sich unser Fertigungsnetzwerk über den Nahen Osten und Asien durch autorisierte Werke und Logistikpartner und hält die Produktion flexibel sowie die Lieferketten für jeden von uns bedienten Markt reaktionsfähig.",
+            "Location1": "Dubai, VAE",
+            "Location2": "Dschidda, Saudi-Arabien",
+            "Location3": "Neu-Delhi, Indien",
+            "Location4": "Singapur",
+            "Location5": "Doha, Katar"
+        },
         "OurPeople": {
             "Heading": "Unsere Mitarbeitenden",
             "Text": "Unser engagiertes Team aus mehr als 100.000 Mitarbeitenden aus über 150 Nationalitäten sorgt für einen reibungslosen Handelsfluss. Als chancengleicher Arbeitgeber mit Fokus auf Vielfalt und Inklusion fördern wir unsere Mitarbeitenden gezielt, damit sie ihr volles Potenzial entfalten können."
@@ -172,14 +189,24 @@
         }
     },
     "CompaniesPage": {
+        "Page": "Unternehmen",
         "Heading": "Unser Portfolio",
         "Description": "Der Fonds strebt den Aufbau eines umfangreichen Investitionsportfolios von Unternehmen in verschiedenen Sektoren in den VAE und darüber hinaus an, im Einklang mit der Vision der VAE."
     },
     "ShopPage": {
+        "Page": "Shop",
         "Heading": "Shop",
-        "Description": "Kaufen Sie hochwertige Produkte in unserem Shop."
+        "Description": "Kaufen Sie hochwertige Produkte in unserem Shop.",
+        "Results": "Ergebnisse",
+        "Model": "Modell",
+        "Models": "Modelle",
+        "Currency": "AED",
+        "Buy": "Kaufen",
+        "AddToCart": "In den Warenkorb",
+        "Partners": "Partner"
     },
     "NewsPage": {
+        "Page": "Nachrichten",
         "Heading": "News & Medien",
         "Description": "Aktuelle Ankündigungen, Einblicke und Updates der MAHY Group und ihres Portfolios.",
         "IntroHeading": "Pressebereich",
@@ -187,6 +214,7 @@
         "Cta": "Mehr lesen"
     },
     "CareersPage": {
+        "Page": "Karriere",
         "Heading": "Karriere",
         "Description": "Entdecken Sie spannende Möglichkeiten, Ihre Fähigkeiten weiterzuentwickeln und echten Einfluss zu nehmen. Werden Sie Teil eines dynamischen Arbeitsumfelds, das Innovation, Teamarbeit und langfristiges Wachstum schätzt.",
         "ShowcaseTitle": "Arbeiten bei MAHY Khoory",
@@ -205,6 +233,7 @@
         "JoinCta": "Stellen entdecken"
     },
     "JobsPage": {
+        "Page": "Stellenangebote",
         "Heading": "Stellen entdecken",
         "SubHeading": "Werden Sie Teil eines Teams, das von Innovation, Zusammenarbeit und Wirkung angetrieben wird. Bauen Sie Ihre Karriere auf, während Sie sinnvolle Lösungen gestalten und mit uns wachsen.",
         "Cta": "Auf Stelle bewerben",
@@ -214,6 +243,40 @@
         "Label3": "Lebenslauf (nur PDF)",
         "Button1": "Abbrechen",
         "Button2": "Bewerbung absenden"
+    },
+    "ContactUsPage": {
+        "Page": "Kontakt",
+        "Heading": "Kontaktieren Sie uns",
+        "Description": "Was können wir für Sie möglich machen?",
+        "ContactUs": "Kontaktieren Sie uns",
+        "CustomerComplaint": "Kundenbeschwerden",
+        "Text1": "Wie können wir helfen?",
+        "Text2": "Kundenanfragen",
+        "Text3": "Füllen Sie das Formular aus, und wir setzen uns umgehend mit Ihnen in Verbindung.",
+        "Form1": "Vorname",
+        "Form2": "Nachname",
+        "Form3": "Firmenname",
+        "Form4": "Firmenwebsite",
+        "Form5": "E-Mail",
+        "Form6": "Mobilnummer",
+        "Form7": "Land auswählen",
+        "Form8": "Anfragetyp auswählen",
+        "Form9": "Nachricht",
+        "Form10": "Kundenname",
+        "Form11": "E-Mail",
+        "Form12": "Telefon",
+        "Form13": "Produkt / Dienstleistung",
+        "Form14": "Beschwerdekategorie",
+        "Form15": "Anhang (optional)",
+        "Form16": "Klicken zum Hochladen",
+        "Form17": "oder per Drag & Drop",
+        "Form18": "PDF, JPG, PNG (max. 5MB)",
+        "Agree1": "Ich stimme zu den",
+        "Agree2": "Allgemeinen Geschäftsbedingungen",
+        "Agree3": "und der",
+        "Agree4": "Datenschutzrichtlinie",
+        "Submit1": "Absenden",
+        "Submit2": "Beschwerde einreichen"
     },
     "Nav": {
         "Home": "Startseite",
@@ -334,5 +397,55 @@
         "Article16Heading": "M.A.H.Y. Khoory kündigt Papierfabrik-Erweiterung im Wert von 1 Mrd. AED in Abu Dhabi an",
         "Article16SubHeading": "Eine Großinvestition verdoppelte die Recyclingpapier-Produktionskapazität in den VAE.\nDie Erweiterung stärkte die industriellen und Exportkapazitäten des Landes.",
         "Article16": "M.A.H.Y. Khoory kündigte eine Erweiterung seiner Papierproduktionsanlagen in Abu Dhabi im Wert von 1 Mrd. AED an. Das Projekt erhöhte die Produktionskapazität erheblich und machte die Anlage zu einer der größten Recyclingpapierfabriken im GCC.\nDie Investition stärkte die Fähigkeit der Gruppe, nachhaltige Verpackungsmaterialien zu liefern, und festigte ihre Rolle im Fertigungssektor der VAE."
+    },
+    "Products": {
+        "Product1": {
+            "Name": "Zentrifugalpumpe",
+            "Models": {
+                "Model1": "Modell 1",
+                "Model2": "Modell 2",
+                "Model3": "Modell 3"
+            }
+        },
+        "Product2": {
+            "Name": "Tauchpumpe",
+            "Models": {
+                "Model1": "Modell 1",
+                "Model2": "Modell 2"
+            }
+        },
+        "Product3": {
+            "Name": "Mehrstufenpumpe",
+            "Models": {
+                "Model1": "Modell 1",
+                "Model2": "Modell 2",
+                "Model3": "Modell 3"
+            }
+        },
+        "Product4": {
+            "Name": "Brandbekämpfungssystem",
+            "Models": {
+                "Model1": "Modell 1",
+                "Model2": "Modell 2",
+                "Model3": "Modell 3"
+            }
+        },
+        "Product5": {
+            "Name": "Druckerhöhungssysteme",
+            "Models": {
+                "Model1": "Modell 1",
+                "Model2": "Modell 2",
+                "Model3": "Modell 3"
+            }
+        }
+    },
+    "Partners": {
+        "Partner1": "Grundfos",
+        "Partner2": "Gaia",
+        "Partner3": "Oventrop",
+        "Partner4": "Lister Petter",
+        "Partner5": "Marathon Motor",
+        "Partner6": "Ariston",
+        "Partner7": "Pakawaste"
     }
 }
