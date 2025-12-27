@@ -3,7 +3,7 @@ import PageHeading from '@/components/UI/PageHeading';
 import List from '@/components/UI/companies/List';
 import React from 'react'
 import Breadcrumb from '@/components/UI/Breadcrumb';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 
 const filters = [
     {
@@ -79,15 +79,16 @@ async function Companies({ searchParams }) {
         });
     };
 
-    const translations = await getTranslations('CompaniesPage');
+    const t = await getTranslations('CompaniesPage');
+    const locale = await getLocale();
 
     return (
         <main className='bg-gray-50 pb-14'>
-            <PageHeading title={translations("Heading")}
-                description={translations("Description")}
+            <PageHeading title={t("Heading")}
+                description={t("Description")}
                 image={"/gallery/gallery-2.jpg"}
             />
-            <Breadcrumb />
+            <Breadcrumb segments={[{ label: t("Page"), href: "/companies" }]} locale={locale} />
             <div dir='ltr' id='list' className='relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20'>
                 <Filters filters={filters} search={search} />
                 <div className="col-span-8">

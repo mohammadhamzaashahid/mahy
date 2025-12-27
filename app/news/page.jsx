@@ -25,7 +25,7 @@ async function NewsContent({ searchParams }) {
   const params = await searchParams;
   const page = Number(params?.page) || 1;
 
-  const pageTranslations = await getTranslations("NewsPage");
+  const t = await getTranslations("NewsPage");
 
   const start = (page - 1) * itemsPerPage;
   const end = start + itemsPerPage;
@@ -39,15 +39,15 @@ async function NewsContent({ searchParams }) {
   return (
     <main className="pb-10">
       <PageHeading
-        title={pageTranslations("Heading")}
-        description={pageTranslations("Description")}
+        title={t("Heading")}
+        description={t("Description")}
         image="/gallery/gallery-2.jpg"
       />
 
-      <Breadcrumb />
+      <Breadcrumb segments={[{ label: t("Page"), href: "/news" }]} locale={locale} />
       <NewsroomIntro
-        title={pageTranslations("IntroHeading")}
-        description={pageTranslations("IntroText")}
+        title={t("IntroHeading")}
+        description={t("IntroText")}
       />
 
       <FeaturedNews
@@ -56,7 +56,7 @@ async function NewsContent({ searchParams }) {
         date={featuredArticle.date.toLocaleString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}
         title={featuredArticle.heading}
         excerpt={featuredArticle.subHeading}
-        ctaLabel={pageTranslations("Cta")}
+        ctaLabel={t("Cta")}
       />
 
       <SwipeableNewsGrid key={`news-page-${page}`} page={page} totalPages={totalPages}>
@@ -68,7 +68,7 @@ async function NewsContent({ searchParams }) {
             title={item.heading}
             excerpt={item.subHeading}
             href={`/news/${item.id}`}
-            cta={pageTranslations("Cta")}
+            cta={t("Cta")}
           />
         ))}
       </SwipeableNewsGrid>

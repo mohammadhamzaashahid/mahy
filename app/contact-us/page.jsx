@@ -1,11 +1,12 @@
 import ContactUsSection from "@/components/Contact/ContactUsSection";
 import Breadcrumb from "@/components/UI/Breadcrumb";
 import PageHeading from "@/components/UI/PageHeading";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import React from "react";
 
 async function ContactUs() {
   const t = await getTranslations("ContactUsPage");
+  const locale = await getLocale();
 
   const contactUs = {
     headings: [t("Text1"), t("Text2"), t("Text3")],
@@ -24,7 +25,7 @@ async function ContactUs() {
         description={t("Description")}
         image="https://res.cloudinary.com/db3fd1qah/image/upload/v1766132761/careers_tkbmhq.avif"
       />
-      <Breadcrumb />
+      <Breadcrumb segments={[{ label: t("Page"), href: "/contact-us" }]} locale={locale} />
       <ContactUsSection contactUs={contactUs} />
     </main>
   );

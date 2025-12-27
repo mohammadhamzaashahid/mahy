@@ -1,5 +1,6 @@
 {
     "HomePage": {
+        "Page": "Home",
         "Hero1Title": "M.A.H.Y. KHOORY & CO., LLC",
         "Hero1Subtitle": "As one of the leading business hubs in the region we set an example for best practice in trade, design and service. We are a diversified group of companies with eight independent business units with our corporate office in Dubai.",
         "Hero1CtaLabel": "Our Business Groups",
@@ -89,6 +90,7 @@
         }
     },
     "AboutUsPage": {
+        "Page": "About Us",
         "Heading": "About Us",
         "Description": "The M.A.H.Y. Khoory Group is one of the UAE's most trusted business groups, delivering world-class technological solutions across diverse industries. Headquartered in Dubai, the group employs over 3,100 professionals from 30 nationalities, operates 17 offices across the UAE, and serves clients in more than 29 countries across the Middle East, the Levant, and Africa.",
         "MissionStatement": {
@@ -172,10 +174,12 @@
         }
     },
     "CompaniesPage": {
+        "Page": "Companies",
         "Heading": "Our Portfolio",
         "Description": "The Fund seeks to build a rich investment portfolio of companies across diverse sectors in UAE and beyond, in line with UAE Vision."
     },
     "ShopPage": {
+        "Page": "Shop",
         "Heading": "Shop",
         "Description": "Buy quality goods from our shop.",
         "Results": "Results",
@@ -187,6 +191,7 @@
         "Partners": "Partners"
     },
     "NewsPage": {
+        "Page": "News",
         "Heading": "News & Media",
         "Description": "Latest announcements, insights, and updates from MAHY Group and its portfolio.",
         "IntroHeading": "News Room",
@@ -194,6 +199,7 @@
         "Cta": "Read More"
     },
     "CareersPage": {
+        "Page": "Careers",
         "Heading": "Careers",
         "Description": "Explore exciting opportunities to grow your skills and make a real impact. Join a dynamic workplace that values innovation, teamwork, and long-term growth.",
         "ShowcaseTitle": "Life At MAHY Khoory",
@@ -212,6 +218,7 @@
         "JoinCta": "Explore Jobs"
     },
     "JobsPage": {
+        "Page": "Jobs",
         "Heading": "Explore Jobs",
         "SubHeading": "Join a team driven by innovation, collaboration, and impact. Build your career while shaping meaningful solutions and growing with us.",
         "Cta": "Apply for Job",
@@ -223,6 +230,7 @@
         "Button2": "Submit Application"
     },
     "ContactUsPage": {
+        "Page": "Contact Us",
         "Heading": "Contact Us",
         "Description": "What can we make possible for you?",
         "ContactUs": "Contact Us",

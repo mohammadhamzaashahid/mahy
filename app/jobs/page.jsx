@@ -1,11 +1,14 @@
+import Breadcrumb from '@/components/UI/Breadcrumb';
 import JobList from '@/components/UI/jobs/JobList'
 import PageHeading from '@/components/UI/PageHeading'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import React from 'react'
 
 async function Jobs({ searchParams }) {
     const params = await searchParams;
     const t = await getTranslations("JobsPage");
+    const t2 = await getTranslations("CareersPage");
+    const locale = await getLocale();
 
     const formLabels = {
         title: t("FormTitle"),
@@ -23,6 +26,10 @@ async function Jobs({ searchParams }) {
                 title={t("Heading")}
                 description={t("SubHeading")}
                 image={"https://res.cloudinary.com/db3fd1qah/image/upload/v1766132761/careers_tkbmhq.avif"}
+            />
+            <Breadcrumb
+                segments={[{ label: t2("Page"), href: "/careers" }, { label: t("Page"), href: "/jobs" }]}
+                locale={locale}
             />
             <JobList params={params} formLabels={formLabels} />
         </main >

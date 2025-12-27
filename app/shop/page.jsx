@@ -11,12 +11,12 @@ async function Shop({ searchParams }) {
     const params = await searchParams;
     const locale = await getLocale();
     const search = params.search;
-    const translations = await getTranslations("ShopPage");
+    const t = await getTranslations("ShopPage");
 
     const partnerNames = await getPartnerNames();
     const filters = [
         {
-            title: translations("Partners"),
+            title: t("Partners"),
             key: "partners",
             options: partnerNames,
             count: partnerNames.length.toLocaleString(locale)
@@ -36,15 +36,15 @@ async function Shop({ searchParams }) {
     return (
         <main className="pb-14">
             <PageHeading
-                title={translations("Heading")}
-                description={translations("Description")}
+                title={t("Heading")}
+                description={t("Description")}
                 image={"/gallery/gallery-2.jpg"}
             />
-            <Breadcrumb />
+            <Breadcrumb segments={[{ label: t("Page"), href: "/shop" }]} locale={locale} />
             <div id="list" className="relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20" >
                 <Filters filters={filters} search={search} />
                 <div className="col-span-8">
-                    <div className="text-sm font-medium text-gray-700">{translations("Results")} ({items.length.toLocaleString(locale)})</div>
+                    <div className="text-sm font-medium text-gray-700">{t("Results")} ({items.length.toLocaleString(locale)})</div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
                         {items.map((item, i) => (
                             <div key={i}>
@@ -54,10 +54,10 @@ async function Shop({ searchParams }) {
                                     price={item.price}
                                     image={item.images[0]}
                                     href={`/shop/${item.id}`}
-                                    modelHeading={translations("Model")}
-                                    modelsHeading={translations("Models")}
-                                    currency={translations("Currency")}
-                                    buy={translations("Buy")}
+                                    modelHeading={t("Model")}
+                                    modelsHeading={t("Models")}
+                                    currency={t("Currency")}
+                                    buy={t("Buy")}
                                 />
                             </div>
                         ))}
