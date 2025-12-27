@@ -1,82 +1,85 @@
+import { getTranslations } from "next-intl/server";
+
 const products = [
     {
         id: 1,
-        name: "Pump",
-        models: [
-            "Model 1",
-            "Model 2",
-            "Model 3",
-        ],
-        images: ["/pump.png", "/pump2.png"],
-        price: 400000,
+        modelsCount: 3,
+        images: ["/products/pump.png", "/products/pump2.png"],
+        price: 4000,
         partnerId: 0
     },
     {
         id: 2,
-        name: "Pump",
-        models: [
-            "Model 1",
-            "Model 2",
-        ],
-        images: ["/pump.png"],
-        price: 400000,
+        modelsCount: 2,
+        images: ["/products/submersible-pump.png"],
+        price: 5000,
         partnerId: 0
     },
     {
         id: 3,
-        name: "Pump",
-        models: [
-            "Model 1",
-            "Model 2",
-            "Model 3",
-        ],
-        images: ["/pump.png"],
-        price: 4000,
+        modelsCount: 3,
+        images: ["/products/multistage-pump.png"],
+        price: 3000,
         partnerId: 3
     },
     {
         id: 4,
-        name: "Pump",
-        models: [
-            "Model 1",
-            "Model 2",
-            "Model 3",
-        ],
-        images: ["/pump.png"],
-        price: 4000,
+        modelsCount: 3,
+        images: ["/products/fire-fighting.png"],
+        price: 6000,
         partnerId: 4
     },
     {
         id: 5,
-        name: "Pump",
-        models: [
-            "Model 1",
-            "Model 2",
-            "Model 3",
-        ],
-        images: ["/pump.png"],
-        price: 4000,
+        modelsCount: 3,
+        images: ["/products/booster-skid.png"],
+        price: 7000,
         partnerId: 5
-    },
-    {
-        id: 6,
-        name: "Pump",
-        models: [
-            "Model 1",
-        ],
-        images: ["/pump.png"],
-        price: 4000,
-        partnerId: 6
-    },
+    }
 ];
 
-export const getProduct = (id) => {
-    return products.find(product => product.id === Number(id));
-}
+export const getProduct = async (id) => {
+    const t = await getTranslations("Products");
+    const product = products.find(p => p.id === Number(id));
+    if (!product) return null;
 
-export const getProducts = (ids) => {
+    let models = [];
+    for (let i = 1; i <= product.modelsCount; i++) {
+        models.push(t(`Product${product.id}.Models.Model${i}`));
+    }
+
+    return {
+        ...product,
+        name: t(`Product${product.id}.Name`),
+        models
+    };
+};
+
+export const getProducts = async () => {
+    const t = await getTranslations("Products");
+    return products.map(product => {
+        let models = [];
+        for (let i = 1; i < product.modelsCount; i++) {
+            models.push(t(`Product${product.id}.Models.Model${i}`));
+        }
+        return {
+            ...product,
+            name: t(`Product${product.id}.Name`),
+            models
+        };
+    });
+};
+
+export const getProductsByIds = async (ids) => {
+    const t = await getTranslations("Products");
     const idSet = ids.map(Number);
-    return products.filter(product => idSet.includes(product.id));
+
+    return products
+        .filter(product => idSet.includes(product.id))
+        .map(product => ({
+            ...product,
+            name: t(`Product${product.id}`)
+        }));
 };
 
 export const combineProductsWithCart = (products, cart) => {

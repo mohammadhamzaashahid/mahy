@@ -50,7 +50,7 @@ function ProductDetailSection({ product, model, locale }) {
                 ))}
             </div>
             <div className="lg:flex gap-4 mt-10">
-                <div className="bg-gray-50 rounded-xl py-2 px-6 flex justify-between gap-10 lg:w-fit">
+                <div className="bg-gray-50 rounded-xl py-2 px-6 flex justify-between items-center gap-10 lg:w-fit">
                     <button onClick={decrement}>
                         <HiMinus />
                     </button>

@@ -3,7 +3,7 @@ import Filters from "@/components/UI/companies/Filters";
 import PageHeading from "@/components/UI/PageHeading";
 import ProductCard from "@/components/UI/shop/ProductCard";
 import { getPartnerNames } from "@/constants/partners";
-import products from "@/constants/products";
+import products, { getProducts } from "@/constants/products";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 
@@ -20,13 +20,15 @@ async function Shop({ searchParams }) {
         },
     ];
 
-    const getItems = () => {
+    const getItems = async () => {
         const partnerIds = params.partners?.split(",").map(Number) || [];
+        const p = await getProducts();
 
-        return products.filter(
+        return p.filter(
             (item) => !partnerIds.length || partnerIds.includes(item.partnerId)
         );
     };
+    const items = await getItems();
 
     return (
         <main className="pb-14">
@@ -36,16 +38,12 @@ async function Shop({ searchParams }) {
                 image={"/gallery/gallery-2.jpg"}
             />
             <Breadcrumb />
-            <div
-                dir="ltr"
-                id="list"
-                className="relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20"
-            >
+            <div id="list" className="relative max-w-7xl mx-auto lg:grid gap-5 px-3 grid-cols-1 lg:grid-cols-10 pt-20" >
                 <Filters filters={filters} search={search} />
                 <div className="col-span-8">
-                    <div className="text-sm font-medium text-gray-700">Results ({getItems().length})</div>
+                    <div className="text-sm font-medium text-gray-700">{translations("Results")} ({items.length})</div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-                        {getItems().map((item, i) => (
+                        {items.map((item, i) => (
                             <div key={i}>
                                 <ProductCard
                                     title={item.name}
@@ -53,6 +51,10 @@ async function Shop({ searchParams }) {
                                     price={item.price}
                                     image={item.images[0]}
                                     href={`/shop/${item.id}`}
+                                    modelHeading={translations("Model")}
+                                    modelsHeading={translations("Models")}
+                                    currency={translations("Currency")}
+                                    buy={translations("Buy")}
                                 />
                             </div>
                         ))}

@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import ProductCard from './ProductCard'
 import ScrollButons from './ScrollButons';
 
-function MoreProducts({ products }) {
+function MoreProducts({ products, modelHeading, modelsHeading, currency, buy }) {
     const scrollRef = useRef(null);
     return (
         <section className='mt-40'>
@@ -17,6 +17,10 @@ function MoreProducts({ products }) {
                             models={product.models}
                             price={product.price}
                             href={`/shop/${product.id}`}
+                            modelHeading={modelHeading}
+                            modelsHeading={modelsHeading}
+                            currency={currency}
+                            buy={buy}
                         />
                     </div>
                 ))}

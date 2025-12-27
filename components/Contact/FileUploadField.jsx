@@ -36,9 +36,15 @@ export default function FileUploadField({ label, register, error }) {
         <input
           type="file"
           className="absolute inset-0 cursor-pointer opacity-0"
+          accept=".jpg,.jpeg,.png,.pdf"
+          multiple={false}
           {...register("attachment")}
           onChange={(e) => {
             const file = e.target.files?.[0];
+            if (!file || file.size > 5 * 1024 * 1024) {
+              alert("File must be JPG, PNG, or PDF and less than 5MB.");
+              return;
+            }
             setFileName(file ? file.name : null);
           }}
         />

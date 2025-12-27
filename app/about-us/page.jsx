@@ -117,6 +117,18 @@ async function About() {
     heading: translations("OurExcellence.Heading"),
     text: translations("OurExcellence.Text"),
   };
+  const industries = [
+    translations("Industries.Item1"),
+    translations("Industries.Item2"),
+    translations("Industries.Item3"),
+    translations("Industries.Item4"),
+    translations("Industries.Item5"),
+    translations("Industries.Item6"),
+    translations("Industries.Item7"),
+    translations("Industries.Item8"),
+    translations("Industries.Item9"),
+    translations("Industries.Item10")
+  ];
 
   return (
     <>
@@ -181,12 +193,9 @@ async function About() {
             },
           ]}
         />
-
-        <IndustriesGrid />
-
+        <IndustriesGrid heading={translations("Industries.Heading")} industries={industries} />
         {/* <ManufacturingNetworkMap /> */}
         <ManufacturingNetworkSection />
-
         <ValuesSection
           title={ourPeople.heading}
           description={ourPeople.text}

@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function ProductCard({ title, image, models, price, href }) {
+export default function ProductCard({ title, image, models, price, href, modelHeading, modelsHeading, currency, buy }) {
   const [selectedModel, setSelectedModel] = useState(0);
 
   return (
@@ -19,15 +18,15 @@ export default function ProductCard({ title, image, models, price, href }) {
         />
       </div>
       <h3 className="text-xl font-semibold text-gray-700 mt-8">{title}</h3>
-      <p className="mt-4 text-sm text-gray-500 font-medium uppercase">{models.length > 1 ? "Models" : "Model"}</p>
+      <p className="mt-4 text-sm text-gray-500 font-medium uppercase">{models.length > 1 ? modelsHeading : modelHeading}</p>
       <div className="flex gap-1 flex-wrap mt-2">
         {models.map((model, i) => (
           <button onClick={() => setSelectedModel(i)} key={i} className={`py-1 px-3 text-sm rounded-2xl border-base ${i === selectedModel ? "b-base text-white" : "t-base"}`}>{model}</button>
         ))}
       </div>
-      <p className="font-medium mt-6 text-lg">{price.toLocaleString()} AED</p>
+      <p className="font-medium mt-6 text-lg">{price.toLocaleString()} {currency}</p>
       <Link href={`${href}?model=${selectedModel}`}>
-        <button className="py-2 w-full b-base text-white text-center rounded-2xl mt-4 text-sm">Buy</button>
+        <button className="py-2 w-full b-base text-white text-center rounded-2xl mt-4 text-sm">{buy}</button>
       </Link>
     </div>
   );

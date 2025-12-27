@@ -40,6 +40,13 @@ export default async function Home() {
     translations("FloatingMenu.Item6"),
     translations("FloatingMenu.Item7"),
   ];
+  const galleryItems = [
+    translations("Gallery.Item1"),
+    translations("Gallery.Item2"),
+    translations("Gallery.Item3"),
+    translations("Gallery.Item4"),
+    translations("Gallery.Item5")
+  ];
 
   return (
     <main className="bg-white min-h-screen overflow-x-hidden">
@@ -54,7 +61,7 @@ export default async function Home() {
       </section>
 
       <section id="gallery">
-        <Gallery />
+        <Gallery galleryItems={galleryItems} />
       </section>
 
       <KeyStatsSection />
