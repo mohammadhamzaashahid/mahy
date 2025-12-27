@@ -3,14 +3,12 @@
 import React, { useState } from "react";
 import { FiUploadCloud, FiFileText } from "react-icons/fi";
 
-export default function FileUploadField({ label, register, error }) {
+export default function FileUploadField({ label, register, error, upload }) {
   const [fileName, setFileName] = useState(null);
 
   return (
     <div>
-      <label className="mb-1 block text-sm font-medium text-slate-700">
-        {label}
-      </label>
+      <label className="mb-1 block text-sm font-medium text-slate-700">{label}</label>
 
       <label
         className="
@@ -54,11 +52,11 @@ export default function FileUploadField({ label, register, error }) {
             <FiUploadCloud className="text-2xl text-slate-500" />
             <div className="text-sm text-slate-600">
               <span className="font-medium text-[#3F3C8F]">
-                Click to upload
+                {upload[0]}
               </span>{" "}
-              or drag & drop
+              {upload[1]}
               <div className="mt-1 text-xs text-slate-500">
-                PDF, JPG, PNG (max 5MB)
+                {upload[2]}
               </div>
             </div>
           </>

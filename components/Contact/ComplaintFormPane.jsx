@@ -36,7 +36,7 @@ const schema = z.object({
   attachment: z.any().optional(),
 });
 
-export default function ComplaintFormPane() {
+export default function ComplaintFormPane({ data, upload, submit }) {
   const {
     register,
     handleSubmit,
@@ -64,26 +64,26 @@ export default function ComplaintFormPane() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="max-w-3xl">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
-        <Field label="Customer Name" error={errors.customerName}>
+        <Field label={data[0]} error={errors.customerName}>
           <input {...register("customerName")} />
         </Field>
 
-        <Field label="Email" error={errors.email}>
+        <Field label={data[0]} error={errors.email}>
           <input {...register("email")} />
         </Field>
 
-        <Field label="Phone" error={errors.phone}>
+        <Field label={data[0]} error={errors.phone}>
           <input {...register("phone")} />
         </Field>
 
-        <Field label="Product / Services" error={errors.productService}>
+        <Field label={data[0]} error={errors.productService}>
           <input {...register("productService")} />
         </Field>
       </div>
 
       <div className="mt-6 space-y-5">
         <SelectField
-          label="Complaint Category"
+          label={data[0]}
           options={COMPLAINT_CATEGORIES}
           error={errors.category}
           {...register("category")}
@@ -101,7 +101,8 @@ export default function ComplaintFormPane() {
         </div> */}
 
         <FileUploadField
-          label="Attachment (optional)"
+          label={data[0]}
+          upload={upload}
           register={register}
           error={errors.attachment}
         />
@@ -114,7 +115,7 @@ export default function ComplaintFormPane() {
           <p className="text-sm text-red-500">{errors.captcha.message}</p>
         )} */}
 
-        <SubmitButton label="Submit Complaint" loading={isSubmitting} />
+        <SubmitButton label={submit} loading={isSubmitting} />
       </div>
     </form>
   );

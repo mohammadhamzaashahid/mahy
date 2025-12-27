@@ -23,7 +23,7 @@ const schema = z.object({
   }),
 });
 
-export default function ContactFormPane() {
+export default function ContactFormPane({ data, agreement, submit }) {
   const {
     register,
     handleSubmit,
@@ -53,55 +53,55 @@ export default function ContactFormPane() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="pt-4 max-w-3xl">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
-        <Field label="First Name" error={errors.firstName}>
+        <Field label={data[0]} error={errors.firstName}>
           <input {...register("firstName")} />
         </Field>
 
-        <Field label="Last Name" error={errors.lastName}>
+        <Field label={data[1]} error={errors.lastName}>
           <input {...register("lastName")} />
         </Field>
 
-        <Field label="Company Name" error={errors.companyName}>
+        <Field label={data[2]} error={errors.companyName}>
           <input {...register("companyName")} />
         </Field>
 
-        <Field label="Company Website" error={errors.companyWebsite}>
+        <Field label={data[3]} error={errors.companyWebsite}>
           <input {...register("companyWebsite")} />
         </Field>
 
-        <Field label="Email" error={errors.businessEmail}>
+        <Field label={data[4]} error={errors.businessEmail}>
           <input {...register("businessEmail")} />
         </Field>
 
-        <Field label="Mobile Number" error={errors.mobileNumber}>
+        <Field label={data[5]} error={errors.mobileNumber}>
           <input {...register("mobileNumber")} />
         </Field>
       </div>
 
       <div className="mt-6 space-y-5">
         <SelectField
-          label="Select Country"
+          label={data[6]}
           error={errors.country}
           {...register("country")}
           options={COUNTRIES}
         />
 
         <SelectField
-          label="Select Enquiry Type"
+          label={data[7]}
           error={errors.enquiryType}
           {...register("enquiryType")}
           options={ENQUIRY_TYPES}
         />
 
-        <Field label="Message">
+        <Field label={data[8]}>
           <textarea rows={4} {...register("message")} />
         </Field>
 
-        <div className="flex items-start gap-3">
+        <div className="flex items-center gap-3">
           <input type="checkbox" {...register("agreed")} />
           <p className="text-sm text-slate-600">
-            I agree to the <span className="underline">Terms & Conditions</span>{" "}
-            and <span className="underline">Privacy Policy</span>
+            {agreement[0]} <span className="underline">{agreement[1]}</span>{" "}
+            {agreement[2]} <span className="underline">{agreement[3]}</span>
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function ContactFormPane() {
           <p className="text-sm text-red-500">{errors.agreed.message}</p>
         )}
 
-        <SubmitButton label="Submit" loading={isSubmitting} />
+        <SubmitButton label={submit} loading={isSubmitting} />
       </div>
     </form>
   );
