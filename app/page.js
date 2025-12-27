@@ -10,6 +10,7 @@ import BusinessStepsContainer from "@/components/UI/home/BusinessStepsContainer"
 import WhyUsContainer from "@/components/UI/home/WhyUsContainer";
 import MissionVisionValuesSection from "@/components/MissionVisionValuesSection";
 import SustainabilityPanels from "@/components/SustainabilityPanels";
+import NextAdvantagesSection from "@/components/NextAdvantagesSection";
 
 export default async function Home() {
   const translations = await getTranslations("HomePage");
@@ -105,6 +106,8 @@ export default async function Home() {
         {/* <HeroCarousel slides={HERO_SLIDES} /> */}
         <HeroVideo slides={slides} />
       </div>
+
+      <NextAdvantagesSection/>
 
       <section id="about">
         <DesignProcessContainer />
