@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 
-function ScrollButons({ scrollRef, length }) {
+function ScrollButons({ scrollRef, length, locale }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const getOffset = () => {
@@ -36,21 +36,43 @@ function ScrollButons({ scrollRef, length }) {
 
     return (
         <div className="relative mt-10 flex items-center justify-between lg:justify-center px-7 gap-3">
-            <button
-                onClick={handlePrev}
-                disabled={isPrevDisabled}
-                aria-label="Previous"
-                className={`${baseBtn} ${isPrevDisabled ? disabledBtn : enabledBtn}`}>
-                <HiChevronLeft className="text-3xl text-black transition-all duration-300 group-hover:text-white group-hover:-translate-x-0.5" />
-            </button>
-            <button
-                onClick={handleNext}
-                disabled={isNextDisabled}
-                aria-label="Next"
-                className={`${baseBtn} ${isNextDisabled ? disabledBtn : enabledBtn}`}>
-                <HiChevronRight className="text-3xl text-black transition-all duration-300 group-hover:text-white group-hover:translate-x-0.5" />
-            </button>
-        </div>
+            {locale === "ar" ? (
+                <>
+                    <button
+                        onClick={handlePrev}
+                        disabled={isPrevDisabled}
+                        aria-label="Previous"
+                        className={`${baseBtn} ${isPrevDisabled ? disabledBtn : enabledBtn}`}>
+                        <HiChevronRight className="text-3xl text-black transition-all duration-300 group-hover:text-white group-hover:-translate-x-0.5" />
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        disabled={isNextDisabled}
+                        aria-label="Next"
+                        className={`${baseBtn} ${isNextDisabled ? disabledBtn : enabledBtn}`}>
+                        <HiChevronLeft className="text-3xl text-black transition-all duration-300 group-hover:text-white group-hover:translate-x-0.5" />
+                    </button>
+                </>
+            ) : (
+                <>
+                    <button
+                        onClick={handlePrev}
+                        disabled={isPrevDisabled}
+                        aria-label="Previous"
+                        className={`${baseBtn} ${isPrevDisabled ? disabledBtn : enabledBtn}`}>
+                        <HiChevronLeft className="text-3xl text-black transition-all duration-300 group-hover:text-white group-hover:-translate-x-0.5" />
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        disabled={isNextDisabled}
+                        aria-label="Next"
+                        className={`${baseBtn} ${isNextDisabled ? disabledBtn : enabledBtn}`}>
+                        <HiChevronRight className="text-3xl text-black transition-all duration-300 group-hover:text-white group-hover:translate-x-0.5" />
+                    </button>
+                </>
+            )}
+        </div >
+
     )
 }
 

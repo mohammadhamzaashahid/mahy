@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import ProductCard from './ProductCard'
 import ScrollButons from './ScrollButons';
 
-function MoreProducts({ products, modelHeading, modelsHeading, currency, buy }) {
+function MoreProducts({ products, modelHeading, modelsHeading, currency, buy, locale }) {
     const scrollRef = useRef(null);
     return (
         <section className='mt-40'>
@@ -25,7 +25,7 @@ function MoreProducts({ products, modelHeading, modelsHeading, currency, buy }) 
                     </div>
                 ))}
             </div>
-            <ScrollButons scrollRef={scrollRef} length={products.length} />
+            <ScrollButons scrollRef={scrollRef} length={products.length} locale={locale} />
         </section>
     )
 }

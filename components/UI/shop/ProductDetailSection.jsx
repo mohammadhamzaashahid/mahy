@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { HiMinus, HiPlus } from 'react-icons/hi';
 import { toast } from 'react-toastify';
 
-function ProductDetailSection({ product, model, locale }) {
+function ProductDetailSection({ product, model, locale, modelHeading, modelsHeading }) {
     const [modelIndex, setModelIndex] = useState(Number(model || 0));
     const [quantity, setQuantity] = useState(1);
     const productId = product.id;
@@ -41,7 +41,7 @@ function ProductDetailSection({ product, model, locale }) {
                 <li>Compatible with 2026+ Rivian vehicles</li>
             </ul>
             <div className='mt-10'>
-                <p className='font-medium uppercase text-sm text-gray-600 mb-2'>Models</p>
+                <p className='font-medium uppercase text-sm text-gray-600 mb-2'>{product.models.length > 1 ? modelsHeading : modelHeading}</p>
                 {product.models.map((model, i) => (
                     <button key={i} onClick={() => setModelIndex(i)}
                         className={`rounded-xl border border-[#79c4e7] ${i === modelIndex ? "text-white bg-[#79c4e7]" : "text-[#79c4e7]"}  py-1 px-4 mr-2 text-sm hover:text-white hover:bg-[#79c4e7] transition-colors duration-300`}>
