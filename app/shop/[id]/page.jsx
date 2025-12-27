@@ -8,21 +8,24 @@ async function ProductPage({ params, searchParams }) {
     const { id } = await params;
     const { model } = await searchParams;
 
-    const translations = await getTranslations('ShopPage');
+    const t = await getTranslations('ShopPage');
     const product = await getProduct(id);
     const moreProducts = await getProducts();
     const locale = await getLocale();
 
     return (
         <main className='max-w-6xl mx-auto pt-22 pb-15 '>
-            <Product product={product} model={model} locale={locale} />
+            <Product product={product} model={model} locale={locale}
+                modelHeading={t("Model")} modelsHeading={t("Models")} />
             <Specs />
             <MoreProducts
                 products={moreProducts}
-                modelHeading={translations("Model")}
-                modelsHeading={translations("Models")}
-                currency={translations("Currency")}
-                buy={translations("Buy")} />
+                modelHeading={t("Model")}
+                modelsHeading={t("Models")}
+                currency={t("Currency")}
+                buy={t("Buy")}
+                locale={locale}
+            />
         </main>
     )
 }
