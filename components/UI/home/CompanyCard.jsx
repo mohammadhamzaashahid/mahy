@@ -1,37 +1,43 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 function CompanyCard({ item }) {
     const videoRef = useRef(null);
 
-    const play = () => {
-        const v = videoRef.current;
-        if (v && v.paused) v.play().catch(() => { });
-    };
+    /*
+     * Hover/touch playback controls (kept for future reference).
+     *
+     * const play = () => {
+     *     const v = videoRef.current;
+     *     if (v && v.paused) v.play().catch(() => {});
+     * };
+     *
+     * const pause = () => {
+     *     const v = videoRef.current;
+     *     if (v && !v.paused) {
+     *         v.pause();
+     *         v.currentTime = 0;
+     *     }
+     * };
+     *
+     * const toggle = () => {
+     *     const v = videoRef.current;
+     *     if (!v) return;
+     *     v.paused ? play() : pause();
+     * };
+     */
 
-    const pause = () => {
-        const v = videoRef.current;
-        if (v && !v.paused) {
-            v.pause();
-            v.currentTime = 0;
-        }
-    };
-
-    const toggle = () => {
+    useEffect(() => {
         const v = videoRef.current;
         if (!v) return;
-        v.paused ? play() : pause();
-    };
+        v.play().catch(() => { });
+    }, []);
 
     return (
-        <div
-            className="relative h-60 md:h-45 group overflow-hidden"
-            onMouseEnter={play}
-            onMouseLeave={pause}
-            onTouchEnd={toggle}
-        >
+        <div className="relative h-60 md:h-45 group overflow-hidden">
             <div className="absolute inset-0 transition-all duration-500 ease-out group-hover:scale-[1.3]">
                 <video
                     ref={videoRef}
+                    autoPlay
                     muted
                     loop
                     playsInline

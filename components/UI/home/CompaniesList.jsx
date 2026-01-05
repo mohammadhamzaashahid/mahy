@@ -8,7 +8,10 @@ import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion"
 import IndustryCard from './IndustryCard';
 import CompanyCard from './CompanyCard';
 
-const tabs = ["Industeries", "Companies"];
+const tabs = [
+    { id: "companies", label: "Companies" },
+    { id: "industeries", label: "Industeries" },
+];
 const industeries = [
     { label: "Trading", image: "/gallery/gallery-1.jpg" },
     { label: "Manufacturing", image: "/gallery/gallery-2.jpg" },
@@ -74,10 +77,12 @@ function CompaniesList() {
                     <h2 className='uppercase text-3xl md:text-4xl font-semibold text-gray-700'>Businesses</h2>
                     <div className=' '>
                         <TabList className={"flex items-center gap-5"}>
-                            {tabs.map((tab, i) => (
-                                <Tab key={i}
-                                    className={"border-b-4 py-3 px-7 border-transparent focus:outline-0 text-gray-400 data-selected:border-[#79c4e7] data-selected:text-[#79c4e7] transition-all duration-300"}>
-                                    {tab}
+                            {tabs.map((tab) => (
+                                <Tab
+                                    key={tab.id}
+                                    className={"border-b-4 py-3 px-7 border-transparent focus:outline-0 text-gray-400 data-selected:border-[#79c4e7] data-selected:text-[#79c4e7] transition-all duration-300"}
+                                >
+                                    {tab.label}
                                 </Tab>
                             ))}
                         </TabList>
@@ -85,46 +90,49 @@ function CompaniesList() {
                 </div>
                 <TabPanels className="mt-7 md:mt-10">
                     <AnimatePresence mode="wait">
-                        <TabPanel
-                            key="industries"
-                            className="grid grid-cols-1 lg:grid-cols-2 gap-3"
-                            as={motion.div}
-                            initial={{ y: 10, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: false, margin: "-100px" }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
-                        >
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                                {industeries.map((industry, i) => (
-                                    <IndustryCard key={i} item={industry} />
-                                ))}
-                            </div>
-                            <div className="relative h-120 md:h-full w-158">
-                                <Image src="/gallery/gallery-9.jpeg" alt="Companies" fill />
-                                <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
-                                <div className='absolute bottom-7 left-7 text-gray-200'>
-                                    <div className='flex flex-wrap gap-3 mb-4'>
-                                        {moreIndusteries.map((item, i) => (
-                                            <Link href={"/"} key={i} className='bg-black/40 py-2 px-4 rounded-xl text-sm'>{item}</Link>
+                        {tabs.map((tab) => (
+                            <TabPanel
+                                key={tab.id}
+                                as={motion.div}
+                                initial={{ y: 10, opacity: 0 }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                viewport={{ once: false, margin: "-100px" }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                            >
+                                {tab.id === "companies" ? (
+                                    <div className="flex gap-1 overflow-x-auto pb-4 snap-x snap-mandatory sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 sm:gap-1 sm:overflow-visible sm:snap-none">
+                                        {companies.map((company, i) => (
+                                            <div
+                                                key={i}
+                                                className="min-w-[78%] snap-center sm:min-w-0 sm:snap-none"
+                                            >
+                                                <CompanyCard item={company} />
+                                            </div>
                                         ))}
                                     </div>
-                                    <Link href={"/"} className='border-b border-gray-200  pb-1'>Explore More</Link>
-                                </div>
-                            </div>
-                        </TabPanel>
-                        <TabPanel
-                            key="companies"
-                            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3"
-                            as={motion.div}
-                            initial={{ y: 10, opacity: 0 }}
-                            whileInView={{ y: 0, opacity: 1 }}
-                            viewport={{ once: false, margin: "-100px" }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
-                        >
-                            {companies.map((company, i) => (
-                                <CompanyCard key={i} item={company} />
-                            ))}
-                        </TabPanel>
+                                ) : (
+                                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                            {industeries.map((industry, i) => (
+                                                <IndustryCard key={i} item={industry} />
+                                            ))}
+                                        </div>
+                                        <div className="relative h-120 md:h-full w-full lg:w-158">
+                                            <Image src="/gallery/gallery-9.jpeg" alt="Companies" fill />
+                                            <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
+                                            <div className='absolute bottom-7 left-7 text-gray-200'>
+                                                <div className='flex flex-wrap gap-3 mb-4'>
+                                                    {moreIndusteries.map((item, i) => (
+                                                        <Link href={"/"} key={i} className='bg-black/40 py-2 px-4 rounded-xl text-sm'>{item}</Link>
+                                                    ))}
+                                                </div>
+                                                <Link href={"/"} className='border-b border-gray-200  pb-1'>Explore More</Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                            </TabPanel>
+                        ))}
                     </AnimatePresence>
                 </TabPanels>
             </TabGroup>
