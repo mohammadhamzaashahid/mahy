@@ -45,6 +45,30 @@ export default function ContactUsSection({ contactUs }) {
     }
   };
 
+  const renderActivePanel = () => {
+    if (activeTab === "contact") {
+      return (
+        <ContactFormPane
+          data={contactUs.form1}
+          agreement={contactUs.agreement}
+          submit={contactUs.submit[0]}
+        />
+      );
+    }
+
+    if (activeTab === "complaint") {
+      return (
+        <ComplaintFormPane
+          data={contactUs.form2}
+          upload={contactUs.upload}
+          submit={contactUs.submit[1]}
+        />
+      );
+    }
+
+    return <SiteVisitRequisitionForm />;
+  };
+
   return (
     <section className="relative bg-white">
       <div className="mx-auto max-w-7xl px-6 pt-2 lg:pt-8 pb-16">
@@ -124,49 +148,15 @@ export default function ContactUsSection({ contactUs }) {
         <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-20 items-start">
           <ContactTextPane data={contactUs.headings} />
           <AnimatePresence mode="wait">
-            {activeTab === "contact" && (
-              <motion.div
-                key="contact"
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              >
-                <ContactFormPane
-                  data={contactUs.form1}
-                  agreement={contactUs.agreement}
-                  submit={contactUs.submit[0]}
-                />
-              </motion.div>
-            )}
-
-            {activeTab === "complaint" && (
-              <motion.div
-                key="complaint"
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              >
-                <ComplaintFormPane
-                  data={contactUs.form2}
-                  upload={contactUs.upload}
-                  submit={contactUs.submit[1]}
-                />
-              </motion.div>
-            )}
-
-            {activeTab === "sitevisit" && (
-              <motion.div
-                key="sitevisit"
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              >
-                <SiteVisitRequisitionForm />
-              </motion.div>
-            )}
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -16 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+            >
+              {renderActivePanel()}
+            </motion.div>
           </AnimatePresence>
         </div>
       </div>

@@ -26,6 +26,8 @@ function Qms() {
         },
     ];
     const [currentIndex, setCurrentIndex] = useState(0);
+    const currentItem = items[currentIndex] ?? items[0];
+    const isAnimatedImage = currentItem?.image?.toLowerCase().endsWith(".gif");
 
     return (
         <section className="bg-[#002A41] pb-15">
@@ -47,10 +49,11 @@ function Qms() {
                             transition={{ duration: 0 }}
                         >
                             <Image
-                                src={items[currentIndex].image}
-                                alt={items[currentIndex].title}
+                                src={currentItem.image}
+                                alt={currentItem.title}
                                 fill
                                 style={{ objectFit: "cover" }}
+                                unoptimized={isAnimatedImage}
                             />
                         </motion.div>
                     </div>
@@ -63,10 +66,10 @@ function Qms() {
                             className="flex items-center gap-4 text-white"
                         >
                             <div className="relative h-12 w-12">
-                                <Image src={items[currentIndex].icon} alt="" fill />
+                                <Image src={currentItem.icon} alt="" fill />
                             </div>
                             <h2 className="font-semibold text-4xl">
-                                {items[currentIndex].title}
+                                {currentItem.title}
                             </h2>
                         </motion.div>
 
@@ -77,7 +80,7 @@ function Qms() {
                             transition={{ duration: 0.5 }}
                             className="text-gray-100 text-lg"
                         >
-                            {items[currentIndex].text}
+                            {currentItem.text}
                         </motion.p>
                     </div>
                 </motion.div>

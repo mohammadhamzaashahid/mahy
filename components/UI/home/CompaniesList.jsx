@@ -77,7 +77,7 @@ function CompaniesList() {
                     </div>
                 </div>
                 <TabPanels className="mt-7 md:mt-10">
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence>
                         <TabPanel
                             key="companies"
                             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-0.5"
