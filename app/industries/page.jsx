@@ -4,7 +4,7 @@ import React from 'react'
 
 function IndusteriesPage() {
     return (
-        <main className='pb-25'>
+        <main>
             <SubPageHeading
                 title={"Our Industeries"}
                 description={"We operate across diverse industries, delivering reliable solutions tailored to evolving market needs. Our expertise spans technology, infrastructure, energy, and industrial sectors. We help organizations enhance efficiency, sustainability, and long-term growth."}

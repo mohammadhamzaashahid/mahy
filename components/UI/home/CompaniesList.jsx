@@ -118,11 +118,11 @@ const IndustriesTab = ({ industeries, moreIndusteries }) => (
                 <IndustryCard key={i} item={industry} />
             ))}
         </div>
-        <div className="relative h-120 md:h-full w-158">
+        <div className="relative h-120 md:h-full">
             <Image src="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772869180/trading-mahy_wdglvr.jpg" alt="Companies" fill />
             <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
             <div className='absolute bottom-7 left-7 text-gray-200'>
-                <div className='flex flex-wrap gap-3 mb-4'>
+                <div className='flex flex-wrap gap-x-3 gap-y-2 mb-4'>
                     {moreIndusteries.map((item, i) => (
                         <Link href={"/"} key={i} className='bg-black/40 py-2 px-4 rounded-xl text-sm'>{item}</Link>
                     ))}
