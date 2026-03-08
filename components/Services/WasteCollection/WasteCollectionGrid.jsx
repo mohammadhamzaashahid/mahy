@@ -33,7 +33,7 @@ function WasteCollectionGrid({
             src="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772868588/policies.jpg_i284wc.jpg"
             alt="Waste Collection Grid"
             fill
-            className="object-fill"
+            className="object-cover"
           />
         </div>
         <div className="py-8 md:py-20 px-5 max-w-lg mx-auto">
