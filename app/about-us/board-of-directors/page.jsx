@@ -9,16 +9,16 @@ function DirectorsPage() {
     ];
     return (
         <main className='pt-30 pb-10'>
-            <AnimatedLines />
+            <AnimatedLines marginBottom='' />
             <h1 className='text-center uppercase text-4xl lg:text-6xl font-bold pt-3'>
                 <span className='text-black'>
                     Senior Leaders
                 </span>
-                <span className='text-red-800'>
+                <span className='text-[#2da5dc]'>
                     .
                 </span>
             </h1>
-            <p className='max-w-2xl mx-auto text-xl mt-8 lg:mt-12 mb-12 lg:mb-20 text-justify px-5'>Our senior team has many years collective investment and operational experience at MAHY. Meet the team here.</p>
+            <p className='max-w-2xl mx-auto text-xl mt-8 lg:mt-10 mb-12 lg:mb-20 text-justify px-5'>Our senior team has many years collective investment and operational experience at MAHY. Meet the team here.</p>
             <VerticalLine />
             {items.map((item, i) => (
                 <Director key={i} item={item} index={i} />

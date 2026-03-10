@@ -13,9 +13,8 @@ function MissionStatement({ missionStatement }) {
             viewport={{ once: true }}>
             <div className='py-18 px-10 lg:py-16 border-b border-gray-300'>
                 <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
-                    <AnimatedLines />
-                    <h2 className='uppercase font-bold'>{missionStatement.heading}</h2>
-                    <p className="font-bold uppercase mt-2 lg:mt-6 text-3xl sm:text-4xl lg:text-5xl">
+                    <AnimatedLines heading={missionStatement.heading} size="text-2xl" marginBottom="mb-4" />
+                    <p className="font-bold uppercase text-3xl sm:text-4xl lg:text-5xl">
                         {missionStatement.subHeading}
                     </p>
                     <p className='mt-7 lg:mt-10 sm:text-lg leading-relaxed font-light text-gray-800'>{missionStatement.text}</p>

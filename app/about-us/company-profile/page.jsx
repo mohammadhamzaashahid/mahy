@@ -244,9 +244,7 @@ const companyProfile = () => {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 lg:py-28 text-center bg-black">
         {/* Decorative divider */}
-        <div className="flex justify-center mb-8">
-          <AnimatedLines bg="bg-gray-300" />
-        </div>
+        <AnimatedLines bg="bg-gray-300" marginBottom="mb-8" />
 
         {/* Statement */}
         <p
@@ -273,11 +271,8 @@ const companyProfile = () => {
 
       <CompanyStructure data={structure} />
 
-      <div className="text-center px-4 bg-black p-20">
-        <AnimatedLines bg="bg-gray-200" />
-        <h2 className="text-heading text-4xl sm:text-5xl font-semibold text-gray-100">
-          What Defines The Group
-        </h2>
+      <div className="bg-black p-16">
+        <AnimatedLines heading={"What Defines The Group"} text="text-gray-100" bg="bg-gray-200" marginBottom="" gap="mb-4" />
       </div>
       <SustainabilityPanels items={sustainability} cols={4} />
       <GroupCompaniesGrid companies={companies} />

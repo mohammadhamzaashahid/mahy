@@ -19,10 +19,7 @@ function KitchenItems({
     return (
         <section className="max-w-7xl mx-auto px-5 py-12">
             {heading && (
-                <>
-                    <AnimatedLines />
-                    <h2 className="text-4xl md:text-5xl pt-2 text-center font-semibold">{heading}</h2>
-                </>
+                <AnimatedLines heading={heading} />
             )}
             {text && <p className="mt-4 md:mt-6 text-center max-w-4xl mx-auto text-gray-600">{text}</p>}
             <div className="rounded-2xl p-5 md:p-8 border border-gray-300 grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 md:mt-10">

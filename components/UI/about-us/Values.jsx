@@ -9,7 +9,6 @@ const containerVariants = {
 function Values({ items }) {
     return (
         <motion.div
-            className="p-10"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

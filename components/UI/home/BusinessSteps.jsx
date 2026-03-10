@@ -19,8 +19,7 @@ function BusinessSteps({ items, steps }) {
 
     return (
         <div className="py-20 bg-slate-900 text-white">
-            <AnimatedLines bg="bg-gray-200" />
-            <h2 className="text-center font-bold text-4xl mb-35 mx-5">{items.heading}</h2>
+            <AnimatedLines bg="bg-gray-200" text="text-gray-100" marginBottom="mb-35" gap="mb-5" heading={items.heading} />
             <div className="grid lg:grid-cols-2 gap-32 gap-x-20 lg:gap-30 px-4 lg:px-40 xl:grid-cols-3">
                 {steps.map((step, i) => (
                     <motion.div

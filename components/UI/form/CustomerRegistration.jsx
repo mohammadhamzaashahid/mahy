@@ -1164,7 +1164,7 @@ export default function CustomerRegistration() {
                         {isSubmitting ? (
                           <>Submitting...</>
                         ) : (
-                          <>Submit Registration</>
+                          <>Submit</>
                         )}
                       </Button>
                     </motion.div>

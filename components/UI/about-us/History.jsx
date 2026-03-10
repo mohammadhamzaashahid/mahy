@@ -42,9 +42,8 @@ function History({ history }) {
                 transition={{ duration: 0.55, ease: "easeOut" }}
                 viewport={{ once: true }}>
                 <div className='flex flex-col justify-center items-center max-w-4xl mx-auto text-center'>
-                    <AnimatedLines />
-                    <h2 className='text-3xl lg:text-4xl font-bold uppercase px-10'>{history.heading}</h2>
-                    <p className="mt-6 font-light px-10 mb-8">{history.subHeading}</p>
+                    <AnimatedLines heading={history.heading} marginBottom='mb-4' />
+                    <p className="font-light text-xl px-10 mb-8">{history.subHeading}</p>
                 </div>
                 <div className="relative">
                     <div

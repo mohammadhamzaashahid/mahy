@@ -82,30 +82,7 @@ export default function ProjectsSection() {
     "
               />
 
-              <AnimatedLines />
-
-              {/* <h2
-                className="
-      text-ui
-      text-[26px]
-      tracking-[0.22em]
-      text-[#2c3b45]
-      text-center
-      leading-relaxed
-    "
-              >
-                OUR <br />
-                PROJECTS
-              </h2> */}
-              <h2
-                className="text-[36px] font-semibold
-      tracking-[0.22em]
-      text-[#2c3b45]
-      text-center leading-[1] tracking-tight text-black"
-              >
-                OUR <br />
-                PROJECTS
-              </h2>
+              <AnimatedLines heading={"OUR PROJECTS"} size="text-[36px] tracking-[0.22em] leading-[1] tracking-tight pt-2" />
             </div>
 
             <div className="max-w-[780px] text-body text-[#23313a] ml-4">

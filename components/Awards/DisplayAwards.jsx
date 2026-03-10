@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import AnimatedLines from "../UI/AnimatedLines";
 
 const awards = [
   {
@@ -49,14 +50,12 @@ export default function DisplayAwards() {
     <section className="bg-[#F7F7F8] py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-4">
+          {/* <div className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-4">
             <span className="w-4 h-4 bg-gray-400 rounded-sm" />
             Awards
-          </div>
+          </div> */}
 
-          <h2 className="text-[36px] md:text-[52px] font-semibold text-gray-900">
-            Meet Our Expert Members
-          </h2>
+          <AnimatedLines heading={"Meet Our Expert Members"} gap="mb-4" />
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="relative w-full h-full min-h-[520px] overflow-hidden bg-black">
@@ -87,9 +86,8 @@ export default function DisplayAwards() {
                 <motion.div
                   key={item.id}
                   onMouseEnter={() => setActive(item)}
-                  className={`cursor-pointer px-6 py-7 transition-colors duration-300 ${
-                    isActive ? "bg-[#4A4A55] text-white" : "hover:bg-gray-100"
-                  }`}
+                  className={`cursor-pointer px-6 py-7 transition-colors duration-300 ${isActive ? "bg-[#4A4A55] text-white" : "hover:bg-gray-100"
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-2 text-sm">
                     <div className="flex gap-6">

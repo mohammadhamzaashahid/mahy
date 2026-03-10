@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import AnimatedLines from "../AnimatedLines";
 
 export default function GroupCompaniesGrid({ companies }) {
   return (
@@ -9,18 +10,16 @@ export default function GroupCompaniesGrid({ companies }) {
 
         {/* Header */}
         <div className="text-center">
-          <h2 className="text-[28px] sm:text-[32px] font-medium text-gray-900">
-            Group Companies
-          </h2>
+          <AnimatedLines heading={"Group Companies"} marginBottom="mb-5" />
 
-          <p className="mt-2 text-[12px] sm:text-[13px] text-gray-500 max-w-xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed">
             A diversified portfolio of specialized companies operating across
             industrial, commercial, engineering, and service sectors.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {companies.map((company, i) => (
             <div
               key={i}

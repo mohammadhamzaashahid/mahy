@@ -37,8 +37,7 @@ function CorporateCulture() {
     const [currentIndex, setCurrentIndex] = useState(0);
     return (
         <section className='max-w-6xl mx-auto mt-20 lg:mt-30'>
-            <AnimatedLines />
-            <h2 className='font-semibold text-3xl pt-1 text-center'>Corporate Culture</h2>
+            <AnimatedLines heading={"Corporate Culture"} />
             <div className='lg:h-100 relative lg:rounded-3xl overflow-hidden mt-12'>
                 <div className='relative z-10 grid grid-cols-1 lg:grid-cols-3 h-full'>
                     {items.map((item, i) => (

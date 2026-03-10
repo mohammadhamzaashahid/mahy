@@ -1003,11 +1003,11 @@ export default function VendorRegistration() {
                         placeholder="Enter telephone number"
                         {...register("telephone", {
                           onChange: (e) => {
-                            const countryCode = watch("telCountryCode"); 
-                            let value = e.target.value.replace(/\D/g, ""); 
+                            const countryCode = watch("telCountryCode");
+                            let value = e.target.value.replace(/\D/g, "");
 
                             if (countryCode === "+971") {
-                              value = value.slice(0, 7); 
+                              value = value.slice(0, 7);
                             } else {
                               value = value.slice(0, 10);
                             }
@@ -1123,7 +1123,7 @@ export default function VendorRegistration() {
                       {isSubmitting ? (
                         <>Submitting...</>
                       ) : (
-                        <>Submit Registration</>
+                        <>Submit</>
                       )}
                     </Button>
                   </motion.div>

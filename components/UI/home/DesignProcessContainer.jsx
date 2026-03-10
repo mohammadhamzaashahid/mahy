@@ -49,8 +49,7 @@ async function DesignProcessContainer({ heading, text1, text2, text3, processes,
     return (
         <div className="max-w-7xl mx-auto mb-20">
             <div className="text-center font-bold text-4xl mt-20 mx-5">
-                <AnimatedLines />
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">{heading}</h2>
+                <AnimatedLines heading={heading} />
             </div>
             <div className="mx-5">
                 {text1 && <p className="md:text-lg mt-6 lg:mt-10 text-slate-700">{text1}</p>}

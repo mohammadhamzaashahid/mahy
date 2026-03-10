@@ -33,10 +33,7 @@ const itemVariants = {
 function KeyStats({ heading, stats }) {
     return (
         <div className="bg-slate-900 py-10 md:py-20">
-            <div className="text-center mb-12 px-4">
-                <AnimatedLines bg="bg-gray-200" />
-                <h2 className="text-heading text-4xl sm:text-5xl font-semibold text-gray-100">{heading}</h2>
-            </div>
+            <AnimatedLines text="text-gray-100" bg="bg-gray-200" heading={heading} />
             <section className="w-full pb-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
