@@ -56,16 +56,16 @@ const Desktop = ({ sectors }) => {
 
     return (
         <div className="hidden lg:block">
-            <AnimatedLines />
-            <motion.div
+            <AnimatedLines heading={"Our Sectors"} />
+            {/* <motion.div
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
             >
                 <h2 className="text-4xl md:text-5xl font-semibold text-center text-gray-900 pt-2">
-                    Our Sectors
+                    
                 </h2>
-            </motion.div>
+            </motion.div> */}
 
             <div className="mt-14 h-[640px] flex overflow-hidden rounded-none">
                 {sectors.map((sector, i) => {

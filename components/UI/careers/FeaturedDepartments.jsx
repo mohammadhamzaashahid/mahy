@@ -47,8 +47,7 @@ function FeaturedDepartments({ title, departments }) {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.55, ease: "easeOut" }}
                     viewport={{ once: true }}>
-                    <AnimatedLines />
-                    <h2 className='text-4xl font-semibold mb-7 sm:mb-16 lg:mb-16 text-center'>{title}</h2>
+                    <AnimatedLines heading={title} />
                 </motion.div>
                 <div className="overflow-hidden">
                     <motion.div

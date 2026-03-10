@@ -13,8 +13,8 @@ export default function CareersShowcaseSection({
       <div className="mx-auto w-full max-w-screen-xl px-6 sm:px-8 lg:px-12 overflow-x-hidden">
 
         <div className="text-center">
-          <AnimatedLines />
-          <h2
+          <AnimatedLines heading={"title"} />
+          {/* <h2
             className="
               text-[28px]
               sm:text-[34px]
@@ -24,8 +24,8 @@ export default function CareersShowcaseSection({
               text-slate-900
             "
           >
-            {title}
-          </h2>
+            {}
+          </h2> */}
         </div>
 
         <div className="mt-7 sm:mt-16 lg:mt-16">

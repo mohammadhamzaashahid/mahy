@@ -17,7 +17,7 @@ export default function CodeOfConductSection() {
             className="text-center lg:text-left"
           >
             <div className="mb-4 flex justify-center lg:justify-start">
-              <AnimatedLines bg="bg-neutral-400" />
+              <AnimatedLines bg="bg-neutral-400" marginBottom="" />
             </div>
 
             <h2 className="mb-6 text-[32px] sm:text-[36px] lg:text-[40px] font-semibold leading-tight text-black">

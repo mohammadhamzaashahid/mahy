@@ -36,8 +36,7 @@ function SustainabilitySection({
 }) {
     return (
         <div className="my-15 max-w-6xl mx-auto">
-            <AnimatedLines />
-            <h2 className='text-center text-3xl font-semibold pt-1'>{heading}</h2>
+            <AnimatedLines heading={heading} />
             <div className='grid grid-cols-1 lg:grid-cols-3 lg:gap-5 mt-10'>
                 {items.map((items, i) => (
                     <div key={i} className={`${i === 0 && "lg:col-span-2"} relative lg:rounded-3xl overflow-hidden lg:h-65 flex flex-col justify-end group`}>

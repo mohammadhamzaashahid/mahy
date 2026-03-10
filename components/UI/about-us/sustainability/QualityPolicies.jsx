@@ -12,8 +12,7 @@ function QualityPolicies() {
     return (
         <div className='relative mt-20 lg:mt-30'>
             <div className='relative z-10 max-w-6xl mx-auto px-5 pt-18 pb-12 lg:py-25'>
-                <AnimatedLines bg='bg-white' />
-                <h2 className='text-center text-3xl text-white font-semibold pt-1'>Quality Policies</h2>
+                <AnimatedLines bg='bg-white' heading={"Quality Policies"} />
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10 mt-12 lg:mt-18'>
                     {items.map((item, i) => (
                         <div key={i} className='flex gap-4 border-t border-white/40 pt-5'>
