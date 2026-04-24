@@ -9,7 +9,7 @@ function HospitalityPage() {
   return (
     <main>
       <SubPageHeading
-        title="Hospitality & Food"
+        title="Hospitality"
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886121/receptionists-elegant-suits-work-hours.jpg_pboawv.jpg"
         align="center"
@@ -21,7 +21,7 @@ function HospitalityPage() {
           image={
             "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886116/business-partners.jpg_pubbpk.jpg"
           }
-          title={"Hospitality & Food"}
+          title={"Hospitality"}
           texts={[
             "This sector operates serviced accommodation along with casual dining and food-service concepts, delivering a complete hospitality experience.",
             "The Hospitality & Food & Beverage sector provides high-quality serviced hotel apartments for business and leisure travellers, combining hotel services with residential comfort in strategic urban locations. Alongside accommodation, the sector offers professionally managed restaurant and cafe operations, delivering quality dining experiences to both residents and the wider community.",

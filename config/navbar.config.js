@@ -8,7 +8,7 @@ export function getNavigation(t) {
       {
         id: "about",
         label: t("AboutUs"),
-        href: "/about-us",
+        href: "/",
         linkType: "mega",
         columns: [
           {
@@ -264,7 +264,7 @@ export function getNavigation(t) {
       {
         id: "product-services",
         label: "Product & Services",
-        href: "/products-and-services",
+        href: "/",
         linkType: "mega",
         columns: [
           {
@@ -442,10 +442,10 @@ export function getNavigation(t) {
                 label: t("Engineering&TechnicalServices"),
                 href: "/services/engineering-services",
               },
-              {
-                label: t("PumpingSystemServices"),
-                href: "/services/pumping-system-services",
-              },
+              // {
+              //   label: t("PumpingSystemServices"),
+              //   href: "/services/pumping-system-services",
+              // },
               {
                 label: t("AnnualMaintenanceContracts"),
                 href: "/services/annual-maintenance-contracts",
@@ -481,7 +481,9 @@ export function getNavigation(t) {
       {
         id: "shop",
         label: t("Shop"),
-        href: `${process.env.NEXT_PUBLIC_MAHY_SHOP_URL}`,
+        // href: `${process.env.NEXT_PUBLIC_MAHY_SHOP_URL}`,
+       href: `/under-maintenance`,
+
         // linkType: "mega",
         // columns: [
         //   {
@@ -642,7 +644,7 @@ export function getNavigation(t) {
           {
             title: t("Contact"),
             links: [
-              { label: t("ContactInformation"), href: "/contact-us" },
+              // { label: t("ContactInformation"), href: "/contact-us" },
               {
                 label: t("OfficeLocationsMaps"),
                 href: "/contact-us/locations",

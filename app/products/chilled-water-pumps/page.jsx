@@ -59,17 +59,18 @@ function ChilldWaterPumpsPage() {
       text: "Ensures efficient circulation between chillers, AHUs, FCUs, and cooling coils.",
     },
     {
-      title: "District Cooling Plants",
-      text: "Ideal for primary, secondary, and tertiary pumping systems across large cooling networks.",
+      title: "Central A/C Systems",
+      text: "Supports centralized chilled-water air-conditioning systems in mixed-use developments.",
     },
+    // {
+    //   title: "District Cooling Plants",
+    //   text: "Ideal for primary, secondary, and tertiary pumping systems across large cooling networks.",
+    // },
     {
       title: "Commercial Building Cooling Loops",
       text: "Used in malls, hotels, hospitals, residential towers, and office complexes requiring reliable cooling water distribution.",
     },
-    {
-      title: "Central A/C Systems",
-      text: "Supports centralized chilled-water air-conditioning systems in mixed-use developments.",
-    },
+    
     {
       title: "Industrial Cooling Processes",
       text: "Suitable for industrial heat exchangers, machinery cooling loops, process chillers, and production facility cooling lines.",
@@ -97,6 +98,7 @@ function ChilldWaterPumpsPage() {
           items={overviewItems}
           text1="Trusted"
           text2="for Thermal Stability"
+          
         />
       </div>
       <WasteCollectionItems

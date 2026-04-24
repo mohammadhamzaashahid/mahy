@@ -38,9 +38,19 @@ function CompanyDetailMenu({
                                         {item.label && (
                                             <h2 className="font-semibold">{item.label}</h2>
                                         )}
-                                        {item.text && item.text.map((text, i) => (
-                                            <p key={i} className="text-gray-200 mt-2 text-sm">{text}</p>
-                                        ))}
+                                        {item.text && (
+    Array.isArray(item.text) ? (
+        item.text.map((text, i) => (
+            <p key={i} className="text-gray-200 mt-2 text-sm">
+                {text}
+            </p>
+        ))
+    ) : (
+        <p className="text-gray-200 mt-2 text-sm">
+            {item.text}
+        </p>
+    )
+)}
                                         {item.subItems && (
                                             <ul className="list-disc pl-5 mb-4 text-sm mt-2">
                                                 {item.subItems.map((bullet, index) => (

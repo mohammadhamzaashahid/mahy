@@ -46,6 +46,7 @@ function CreativeSolutionsPage() {
                 quoteText="Clients include developers, architects, consultants, asset owners, and public-sector entities seeking improved operational efficiency, regulatory compliance, and reduced environmental impact."
             />
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Technology and Innovation"
                 texts={[
                     "The consultancy leverages advanced digital tools, including energy-modeling software, daylight simulations, and Building Information Modeling (BIM). Its team includes U.S. Department of Energy–certified Pumping Systems Assessors and internationally accredited sustainability professionals.",

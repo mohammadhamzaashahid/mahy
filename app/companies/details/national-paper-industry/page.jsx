@@ -52,6 +52,7 @@ function NationalPaperIndustryPage() {
                 />
             </section>
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Market Focus and Client Sectors"
                 texts={["NPI serves a wide range of industries across domestic and regional markets. Key client sectors include:"]}
                 bullets={[

@@ -16,6 +16,7 @@ function UnionSustainablePackagingPage() {
                 ]}
             />
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Products and Solutions"
                 texts={[
                     "USPS offers a comprehensive wooden packaging portfolio tailored for industrial needs. Its product range includes new and refurbished wooden pallets (Euro-format, block pallets, A/B/C grade reused pallets) and pallet collars; crates, boxes and timber containers; as well as packaging accessories and dunnage—all designed for durability and reuse. The company also provides pallet repair, pooling, buy-back and rental services, extending pallet life and reducing waste.",

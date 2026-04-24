@@ -78,6 +78,7 @@ function UnionWoodWorksPage() {
                 imagePosition="left"
             />
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Background and Development"
                 texts={[
                     "Established as part of MAHY Khoory Group’s manufacturing expansion, Union Wood Works was created to address two parallel challenges: the growing volume of wood waste and increasing market demand for cost-effective, sustainable alternatives to solid timber.",

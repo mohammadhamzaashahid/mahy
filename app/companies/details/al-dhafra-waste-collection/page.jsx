@@ -60,6 +60,7 @@ function AlDhafraWasteCollectionPage() {
                 imagePosition="left"
             />
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Background and Development"
                 texts={[
                     "Al Dhafra Waste Collection was established to replicate and extend the Group’s successful recycling model implemented in Dubai. The company was formed to serve Abu Dhabi’s growing demand for organized, large-scale recyclable waste collection while strengthening local supply chains for recycled paper manufacturing.",

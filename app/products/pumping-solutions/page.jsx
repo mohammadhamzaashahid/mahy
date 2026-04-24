@@ -64,6 +64,7 @@ function PumpingSystemServicesPage() {
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776796417/products-service-optimization-and-consultancy-heroimage-master_1800x500_vussf6.avif"
       />
       <TrustedAdvisorSection
+      object="Employees"
       images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017542/psol1_ae3dip.png", "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017526/press-material-products-industrial-pumping-systems-Grundfos-master_320x220_pn4ovk.jpg"]}
         heading="Overview"
         texts={[

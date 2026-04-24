@@ -253,22 +253,22 @@ function CustomerSupportOverviewPage() {
       <SolarPanelImageGrid
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016541/laptop-meeting-business-people-with-cooperation-group-project-proposal-sharing-ideas-office-corporate-employees-computer-brainstorming-feedback-report-online-marketing_zsldhp.jpg"
         // bulletItems={bulletItems}
-        text="We make it easy for you to connect with us and get the support you need without delays or complications. Whether you have a question, need technical assistance, or require service support, our team is ready to respond quickly and professionally."
+        text="We make it simple for you to connect with us and get the support you need without delays or unnecessary complications. Whether you have a question, require technical assistance, or need service support, our team is always ready to respond promptly and professionally."
         items={[
           {
-            title: "You can reach out through our website or contact us directly via:",
+            title: "You can reach us conveniently through our website or by contacting us directly Via: ",
             textItems: [
-              "📧 Email: info@mahykhoory.com (mailto:info@mahykhoory.com)",
-              "📞 Telephone: +971 4 6067300",
+              "📧 Email: info@mahykhoory.com or (mailto:info@mahykhoory.com)",
+              "📞 Phone: +971 4 6067300",
             ],
           },
           {
             title: "We are committed to providing support",
-            text: "No matter how you choose to contact us, you can expect a consistent level of service built on responsiveness, reliability, and clear communication. Our focus is always on delivering timely and effective support that meets your needs and exceeds your expectations.",
+            text: "No matter how you choose to get in touch, you can expect a consistent standard of service built on responsiveness, reliability, and clear communication. Our priority is to deliver timely and effective support that not only meets your needs but consistently exceeds your expectations",
           },
           {
             title: "Our goal is clear",
-            text: "We aim to build lasting relationships with our customers and partners by ensuring you feel supported, confident, and valued at every interaction.",
+            text: "At the heart of our approach is a clear goal: to build long-term relationships with our customers and partners by ensuring that every interaction leaves you feeling supported, confident, and valued.",
           },
         ]}
       />

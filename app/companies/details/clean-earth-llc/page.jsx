@@ -82,6 +82,7 @@ function CleanEarthLLCPage() {
         />
       </section>
       <TrustedAdvisorSection
+      object="Employees"
         heading="Market Focus"
         texts={["Clean Earth LLC serves a diverse client base, including:"]}
         bullets={[

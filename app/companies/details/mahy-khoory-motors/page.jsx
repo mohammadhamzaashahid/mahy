@@ -62,6 +62,7 @@ function MahyKhooryMotorsPage() {
                 imagePosition="left"
             />
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Background and Formation"
                 texts={[
                     "MAHY Khoory Motors represents the latest phase in the Group’s automotive evolution. With a legacy dating back to the early 20th century and previous partnerships with major global automotive brands, the MAHY Khoory Group re-entered the automotive sector in 2024 through its national partnership with Dongfeng Motor Corporation.",
