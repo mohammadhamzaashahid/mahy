@@ -78,8 +78,8 @@ function SustainabilityPage() {
                 cardHeight="lg:h-100"
                 items={items}
             />
-            <RandD />
             <CorporateCulture />
+            <RandD />
         </main>
     )
 }

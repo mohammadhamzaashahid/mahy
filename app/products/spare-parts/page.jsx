@@ -79,7 +79,7 @@ function SparePartsPage() {
       />
       <ValuesSection
         description="Our Spare Parts Division provides a comprehensive inventory of genuine, manufacturer-approved spare parts to support all the products we supply—including pumps, engines, motors, and power tools. By maintaining a robust stock of critical components, we ensure fast turnaround, minimized downtime, and reliable after-sales service for customers across the UAE and the wider GCC region."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769421596/515qTE0N52L._AC_SL1200__vw9mug.png"
         imageAlt="Spare Parts Division"
         ctaHref={false}
         width="max-w-7xl mx-auto"
@@ -87,7 +87,7 @@ function SparePartsPage() {
       />
       <ValuesSection
         description="Every spare part is sourced directly from leading global brands and engineered to deliver long service life, optimal compatibility, and consistent performance in the region’s demanding operating conditions."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769421591/61_8ev0eJXL._AC_SL1000__vbdhct.png"
         imageAlt="Spare Part"
         width="max-w-7xl mx-auto"
         ctaHref={false}

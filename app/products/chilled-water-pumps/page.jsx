@@ -97,6 +97,7 @@ function ChilldWaterPumpsPage() {
           items={overviewItems}
           text1="Trusted"
           text2="for Thermal Stability"
+          
         />
       </div>
       <WasteCollectionItems
