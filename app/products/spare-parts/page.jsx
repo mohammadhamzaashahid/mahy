@@ -1,8 +1,6 @@
-import CompaniesSectors from "@/components/CompaniesSectors";
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection";
 import OfferingsSection from "@/components/Services/OfferingsSection";
 import SparePartsTimeline from "@/components/Shop/SparePartsTimeline";
-import TrustedAdvisorSection from "@/components/TrustedAdvisorSection";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
@@ -74,25 +72,26 @@ function SparePartsPage() {
   return (
     <main>
       <SubPageHeading
+      title={"Spare Parts"}
         fullHeight
         image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776984818/spare-parts-background-beautiful-illustration-picture-generative-ai.jpg_yanoie.jpg"}
       />
       <ValuesSection
-        description="Our Spare Parts Division provides a comprehensive inventory of genuine, manufacturer-approved spare parts to support all the products we supply—including pumps, engines, motors, and power tools. By maintaining a robust stock of critical components, we ensure fast turnaround, minimized downtime, and reliable after-sales service for customers across the UAE and the wider GCC region."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769421596/515qTE0N52L._AC_SL1200__vw9mug.png"
+        description="Our Spare Parts Division is built on a strong operational framework that prioritizes accuracy, efficiency, and reliability at every stage. From identifying the correct component to final delivery, our processes are designed to eliminate delays and ensure that customers receive exactly what they need, when they need it. Leveraging deep product knowledge and technical expertise, our team supports clients in selecting the right parts for both routine maintenance and complex repair requirements. We understand that equipment downtime can directly impact productivity and operational continuity. That is why we focus on maintaining optimal inventory levels, streamlined logistics, and responsive service support across all our locations. Our integrated supply chain enables us to respond quickly to urgent requirements, ensuring that critical components are readily available and delivered with minimal lead time, helping businesses maintain smooth and uninterrupted operations. Beyond supply, we are committed to building long-term partnerships by delivering consistent value through dependable service and technical support. Our customers rely on us not only for genuine spare parts, but also for expert guidance, transparency, and after-sales support that enhances the lifecycle and performance of their equipment. This commitment reinforces our position as a trusted partner for industries and organizations across the region."
+        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777059436/car-parts-grey-background_1_qfnlsp.jpg"
         imageAlt="Spare Parts Division"
         ctaHref={false}
         width="max-w-7xl mx-auto"
         imagePosition="left"
       />
-      <ValuesSection
+      {/* <ValuesSection
         description="Every spare part is sourced directly from leading global brands and engineered to deliver long service life, optimal compatibility, and consistent performance in the region’s demanding operating conditions."
         imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769421591/61_8ev0eJXL._AC_SL1000__vbdhct.png"
         imageAlt="Spare Part"
         width="max-w-7xl mx-auto"
         ctaHref={false}
         imagePosition="right"
-      />
+      /> */}
       <FeaturesEngineeringSection image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776984884/transportation.jpg_f3k4sm.jpg" heading="Product Coverage" items={coverage} />
       <OfferingsSection
         heading="Service Support & Availability"

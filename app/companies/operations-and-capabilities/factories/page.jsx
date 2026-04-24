@@ -14,6 +14,7 @@ function FactoriesPage() {
       />
 
       <TrustedAdvisorSection
+      object="Employees"
         heading="Manufacturing Facilities"
         numbers_1="30+ Nationalities"
         numbers_2="96 Years"

@@ -35,6 +35,7 @@ function MahyKhooryAutomotivePage() {
                 imagePosition="left"
             />
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Our Story"
                 texts={[
                     "Building on the MAHY Khoory Group’s 96 years of legacy as a distributor of global brands, including established American automotive marques, the Automotive division was launched as part of the Group’s diversification strategy. The decision to partner with Dongfeng reflects a forward-looking approach, recognizing the rising global competitiveness and technological maturity of Chinese automotive manufacturers.",

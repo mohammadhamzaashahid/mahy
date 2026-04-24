@@ -46,6 +46,7 @@ function SolidWasteManagementDivision() {
         ]}
       />
       <TrustedAdvisorSection
+      object="Employees"
         heading="Our Role"
         texts={[
           "SWMD is a trusted partner in sustainable industrial waste management, delivering integrated solutions across wood waste recovery, biomass fuel preparation, pulper reject recovery, RDF production, and industrial solid waste processing.",

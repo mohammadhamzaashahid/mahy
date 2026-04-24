@@ -13,6 +13,7 @@ function AristonWaterHeatersPage() {
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016874/arinston-image1_fg7cmd.png"
       />
       <TrustedAdvisorSection
+      object="Employees"
       images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016872/arinston-image2_ofdbsu.png", "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016869/arinston-image3_azwec3.png"]}
         heading="ARISTON Water Heaters"
         texts={[

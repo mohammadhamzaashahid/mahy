@@ -77,6 +77,7 @@ function SenanIndustryPage() {
 
             {/* Market Focus */}
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Market Focus and Client Sectors"
                 texts={[
                     "Senan Industry serves industries including automotive and lubricants, food and beverage packaging, chemical and industrial products, and agriculture.",

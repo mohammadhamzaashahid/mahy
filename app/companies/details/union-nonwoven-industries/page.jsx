@@ -45,6 +45,7 @@ function UnionNonWovenIndustriesPage() {
                 endText={"The company also supports landscaping and civil-engineering projects through geotextile solutions used in erosion control, soil stabilization, and drainage systems. Clients range from government and public-sector entities to private industrial and commercial organizations seeking locally manufactured, high-quality technical textiles."}
             />
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Technology, Innovation, and R&D"
                 texts={[
                     "Manufacturing operations are supported by advanced spunbond, meltblown, and needle-punch technologies, enabling the production of both single-layer and composite nonwoven structures. Union Nonwoven continuously invests in research and process optimization to enhance fabric strength, absorbency, filtration efficiency, and cost performance.",

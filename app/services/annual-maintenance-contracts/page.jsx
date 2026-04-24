@@ -83,7 +83,7 @@ function AnnualMaintenanceContractsPage() {
                 "Refrigerant leak testing and system recharging",
                 "Ventilation system inspection & exhaust system servicing"
             ],
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017212/chilled-water-pumps1_n8dxpq.png"
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777063305/car-service-repair-maintenance-people-concept-auto-mechanic-man-smith-writing-clipboard-workshop-warehouse_akpmbw.jpg"
         },
         {
             title: "Why Choose Our Air Conditioning Services?",
@@ -128,6 +128,9 @@ function AnnualMaintenanceContractsPage() {
                 icon={<HiLightBulb size={25} />}
             />
             <WasteCollectionTimeline
+            bottomImage='https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777063203/man-standing-road-front-skyscraper-sunset_y5zykp.jpg'
+            endHeading=''
+            endText='Our Annual Maintenance Contract (AMC) services ensure proactive upkeep through scheduled inspections, preventive maintenance, and priority support to keep your systems running efficiently. By minimizing downtime and extending asset lifespan, we deliver reliable performance and cost-effective maintenance tailored to your needs.'
                 heading='Assured Performance All Year Round'
                 text="Our Annual Maintenance Contracts ensure consistent system performance, reduced downtime, and total peace of mind—allowing property managers, facility teams, and homeowners to focus on daily operations without worrying about equipment failures."
                 items={timelineItems}

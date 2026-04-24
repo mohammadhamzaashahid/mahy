@@ -72,6 +72,7 @@ function AlEtihadWasteManagementServicesPage() {
                 imagePosition="left"
             />
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Establishment and Growth"
                 texts={[
                     "Launched in 2013 in Muscat, Al Etihad Waste Management was established as a strategic partnership between the MAHY Khoory Group and a prominent local firm, enabling immediate market access and regulatory alignment. Over the past decade, the company has expanded rapidly in scale, coverage, and operational capability.",

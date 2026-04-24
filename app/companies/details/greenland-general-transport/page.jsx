@@ -66,6 +66,7 @@ function GreenlandGeneralTransportPage() {
             />
 
             <TrustedAdvisorSection
+            object="Employees"
                 heading="Background and Development"
                 texts={[
                     "Greenland General Transport was established in response to the MAHY Khoory Group’s expanding operational footprint and increasing demand for centralized logistics control.",
