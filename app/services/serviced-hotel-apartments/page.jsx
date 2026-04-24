@@ -115,7 +115,7 @@ function ServicedHotelApartmentsPage() {
                     "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016448/modern-studio-apartment-design-with-bedroom-living-space_l4vewk.jpg"
                 ]}
             />
-            <ServicedHotelApartments />
+         {/* <ServicedHotelApartments /> */}
         </main>
     )
 }

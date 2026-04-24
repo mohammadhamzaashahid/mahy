@@ -63,7 +63,7 @@ function WasteCollectionServicesPage() {
     {
       label: "Reliable Daily Coverage",
       text: "Ensures your property remains clean, compliant, and well-maintained at all times.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776936151/waste-management-site-with-trucks-piles-debris-materials_kempsn.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935983/waste-management-truck-landfill-site-surrounded-by-heaps-garbage-bright-blue-sky_gfnjsi.jpg",
     },
     {
       label: "Transparent Reporting & Documentation",
@@ -73,7 +73,7 @@ function WasteCollectionServicesPage() {
     {
       label: "Custom-Tailored Solutions",
       text: "Waste collection schedules, container sizes, and recycling programs can be designed according to the specific needs of each facility.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935983/waste-management-truck-landfill-site-surrounded-by-heaps-garbage-bright-blue-sky_gfnjsi.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776936151/waste-management-site-with-trucks-piles-debris-materials_kempsn.jpg",
     },
     {
       label: "Safety & Environmental Compliance",
@@ -124,15 +124,15 @@ function WasteCollectionServicesPage() {
         items={advantages}
       />
       <WhyUs items={trust} reverse={true} image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935960/smart-waste-management-systems-recycling-tech-waste-reduction-strategies_qxqmrc.jpg" />
-      <WasteCollectionTimeline />
-      <WasteCollectionMenu />
-      <WasteCollectionItems />
-      <WasteCollectionScrollMovingCards />
-      <WasteCollectionGrid
+      {/* <WasteCollectionTimeline /> */}
+      {/* <WasteCollectionMenu /> */}
+      {/* <WasteCollectionItems /> */}
+      {/* <WasteCollectionScrollMovingCards /> */}
+      {/* <WasteCollectionGrid
         image={
           "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776627437/digital-document-online-electronic-signature-document-management-paperless-office-e-signing-signing-business-contract-concept-metaverse.jpg_zvimmr.jpg"
         }
-      />
+      /> */}
     </main>
   );
 }
