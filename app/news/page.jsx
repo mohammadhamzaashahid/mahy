@@ -9,7 +9,7 @@ import SwipeableNewsGrid from "@/components/UI/news/SwipeableNewsGrid";
 import { getTranslations } from "next-intl/server";
 
 import { getLocale } from "@/utlils";
-import { articles } from "@/constants/news"; // my correct one now please use this
+import { articles } from "@/constants/news"; 
 
 const itemsPerPage = 3;
 
