@@ -15,7 +15,7 @@ export default function ValuesSection({
     ctaHref,
     priority = false,
     className = "",
-    width = "max-w-6xl mx-auto",
+    width = "max-w-7xl mx-auto",
     gap = "gap-28 lg:gap-38 lg:grid-cols-2",
     padding = "px-6 sm:px-10 lg:px-12 pt-20 pb-10 sm:py-24 lg:pt-28 lg:pb-16",
     col1,
