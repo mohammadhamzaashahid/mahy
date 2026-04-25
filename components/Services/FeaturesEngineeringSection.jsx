@@ -63,7 +63,7 @@ export default function FeaturesEngineeringSection({
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-80px" }} // ✅ FIXED per card
+                viewport={{ once: true, margin: "-80px" }} 
                 className="lg:col-span-1 group bg-[#E3EBEA] px-6 md:px-8 lg:px-10 py-8 md:py-10 lg:py-12 min-h-[280px] md:min-h-[320px] lg:min-h-[340px] flex flex-col justify-between transition-colors duration-700 hover:bg-[#1F2C30]"
               >
                 <div>
@@ -103,8 +103,8 @@ export default function FeaturesEngineeringSection({
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-80px" }} // ✅ FIXED
-                className="relative overflow-hidden min-h-[280px] md:min-h-[320px] lg:min-h-[340px] col-span-1 md:col-span-2 lg:col-span-2 group"
+                viewport={{ once: true, margin: "-80px" }} 
+                className="relative overflow-hidden min-h-[280px] md:min-h-[320px] lg:min-h-[340px] col-span-3 md:col-span-3 lg:col-span-3 group"
               >
                 <div className="absolute inset-0">
                   <Image
@@ -117,7 +117,7 @@ export default function FeaturesEngineeringSection({
 
                 <div className="absolute inset-0 bg-black/55 group-hover:bg-black/65 transition-colors duration-700" />
 
-                <div className="relative z-10 h-full p-6 md:p-8 lg:p-12 flex items-start">
+                <div className="relative z-10 h-full p-6 md:p-8 lg:p-12 flex items-end">
                   <div className="max-w-md">
                     <h3 className="text-[20px] md:text-[22px] font-semibold text-white">
                       {item.heading}

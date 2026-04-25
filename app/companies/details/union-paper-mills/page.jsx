@@ -150,7 +150,7 @@ The manufacturing process involves advanced pulping and cleaning system and cont
         //   "M.A.H.Y. Khoory Trading is a GCC-wide procurement and distribution division that delivers compliant, energy-efficient solutions through strong infrastructure, technical support, and global partnerships, driving consistent quality, operational efficiency, and long-term growth across the Group."
         // }
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777115296/image010_r5rssl.png"
       />
     </main>
   );
