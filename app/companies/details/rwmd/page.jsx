@@ -108,8 +108,8 @@ function RecyclableWasteManagementDivision() {
   return (
     <main>
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
-        heading="Recyclable Waste Management Division"
+video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1773132024/RWMD_lrlpyc.mp4"}
+heading="Recyclable Waste Management Division"
         texts={[
           "The Recyclable Waste Management Division (RWMD) is the Dubai-based recycling arm of the MAHY Khoory Group, supporting its integrated recycling and manufacturing ecosystem.",
           "RWMD plays a critical role in the collection, consolidation, and supply of recyclable materials—primarily waste paper and cardboard—to the Group’s manufacturing facilities.",

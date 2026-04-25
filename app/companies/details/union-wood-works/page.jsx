@@ -5,6 +5,7 @@ import TrustedAdvisorSection from "@/components/TrustedAdvisorSection"
 import ValuesSection from "@/components/UI/about-us/ValuesSection"
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
+import WhoWeAre from "@/components/UI/home/WhoWeAre"
 
 function UnionWoodWorksPage() {
     const overview = [
@@ -54,16 +55,41 @@ function UnionWoodWorksPage() {
     return (
         <main>
             <CompanyOverview
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772790516/uww_jac3pt.mp4"}
+                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
                 heading="Union Wood Works"
                 texts={[
                     "Union Wood Works is the dedicated wood recycling and engineered wood manufacturing subsidiary of the MAHY Khoory Group. The company is a regional leader in the production of compressed wood blocks manufactured entirely from 100% recycled wood fibers, supplying sustainable alternatives to virgin timber for industrial, construction, packaging, and furniture applications.",
                     "By transforming wood waste into high-performance engineered products, Union Wood Works plays a vital role in advancing circular manufacturing practices and reducing dependence on natural forest resources.",
                 ]}
             />
-            <ValuesSection
+
+
+  <WhoWeAre
+        heading="Our Mission"
+        topHeading=""
+        text="o transform reclaimed wood into durable, high‑performance engineered materials that serve industrial, construction, and packaging needs while protecting natural resources. Union Wood Works is dedicated to sustainable manufacturing through advanced recycling technology, operational precision, and continuous innovation—delivering eco‑wood products that combine strength, reliability, and environmental responsibility."
+        showButton={false}
+        invert={false}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+        imageAlt="Our Mission"
+      />
+
+      <WhoWeAre
+        heading="Our Vision"
+        topHeading=""
+        text="To be the GCC’s leading provider of sustainable engineered wood solutions, recognized for innovation, quality, and environmental stewardship.
+Union Wood Works strives to redefine industrial wood use by promoting circular manufacturing, reducing waste, and pioneering next‑generation eco‑wood products that support a greener, more resource‑efficient future."
+        showButton={false}
+        invert={true}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+        imageAlt="Our Vision"
+      />
+
+
+
+            {/* <ValuesSection
                 title="Our Mission"
-                description="Union Wood Works is committed to converting discarded wood into durable, high-quality engineered materials that meet industrial performance requirements while preserving the environment."
                 imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
                 imageAlt="Our Mission"
                 ctaHref={false}
@@ -76,7 +102,7 @@ function UnionWoodWorksPage() {
                 imageAlt="Our Vision"
                 ctaHref={false}
                 imagePosition="left"
-            />
+            /> */}
             <TrustedAdvisorSection
             object="Employees"
                 heading="Background and Development"

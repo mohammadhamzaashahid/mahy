@@ -38,10 +38,10 @@ function MahyKhooryGroupPage() {
         ]}
         quoteText="By leveraging its established expertise across pumping systems, electromechanical solutions, recycling, and environmental services, the MAHY Khoory Group is well positioned to deliver sustainable long-term value for customers, partners, and stakeholders."
         quoteItems={[
-          "Controlled Diversification Strategy",
-          "Geographic Expansion Across Regions",
-          "Investment in Digital Transformation",
-          "Focus on Sustainability & Innovation",
+          "",
+          "",
+          "",
+          "",
         ]}
       />
       <CompanyDetailCards

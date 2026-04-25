@@ -38,7 +38,8 @@ function SolidWasteManagementDivision() {
   return (
     <main>
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+      video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/q_auto/v1770201910/Solid_Waste_Management_Division_imhdko.mp4"}
+        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="Solid Waste Management Division (SWMD)"
         texts={[
           "The Solid Waste Management Division (SWMD) of the MAHY Khoory Group delivers integrated, sustainable industrial waste management solutions across the UAE. Through advanced processing systems, disciplined operations, and full regulatory compliance, SWMD converts waste into valuable resources—supporting circular economy objectives, reducing landfill dependency, and generating measurable environmental and commercial value.",

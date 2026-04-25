@@ -1,9 +1,7 @@
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection";
 import SolarPanelQuoteGrid from "@/components/Services/SolarPanel/SolarPanelQuoteGrid";
-import CompanyDetailCards from "@/components/UI/companies/detail/CompanyDetailCards";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import CompanyTextGrid from "@/components/UI/companies/detail/CompanyTextGrid";
-import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground";
 
 function MahyKhooryTradingPage() {
   const overview = [
@@ -47,7 +45,8 @@ function MahyKhooryTradingPage() {
   return (
     <main>
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+      video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772794234/M.A.H.Y._KHOORY_CO._jtklrf.mp4"}
+      //   image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="MAHY Khoory Trading"
         texts={[
           "M.A.H.Y. Khoory Trading is the commercial and distribution arm of the MAHY Khoory Group, serving as a key supplier of industrial, electromechanical, and building services equipment across the GCC and selected international markets. The division plays a central role in supporting infrastructure, construction, industrial, and utility sectors through the supply of reliable, high-quality products sourced from leading global manufacturers. With decades of experience in import, distribution, and project supply, M.A.H.Y. Khoory Trading has established itself as a trusted partner for contractors, developers, and institutional clients, delivering both products and technical support at scale.",

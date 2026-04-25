@@ -3,6 +3,7 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 
 
 function AlDhafraPaper() {
@@ -83,28 +84,66 @@ function AlDhafraPaper() {
   ];
 
   const features = [
-    {
+      {
       title: "Union Testliner (90–200 GSM)",
-      text: "High-strength linerboard for corrugated packaging.",
-      image: "/gallery/gallery-1.jpg",
+      text: "High-quality recycled linerboard suitable for outer layers of corrugated packaging, offering strength, printability, and cost efficiency.",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
     },
     {
-      title: "Unionflute (90–200 GSM)",
-      text: "Recycled fluting medium providing rigidity and cushioning.",
-      image: "/gallery/gallery-2.jpg",
+      title: "Unionflute (90–175 GSM)",
+      text: "Durable fluting medium designed for corrugated board applications, providing excellent rigidity, cushioning, and structural performance.",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+    },
+    {
+      title: "Unioncore Board (190–450 GSM)",
+      text: "Heavy-duty core board used in paper tubes, cores, and industrial applications, delivering superior strength and load-bearing capacity.",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104674/coreboard_ysfopp.png",
+    },
+    {
+      title: "Semikraft Liner (125–200 GSM)",
+      text: "Semi-chemical kraft liner combining strength and surface quality, ideal for packaging solutions requiring enhanced durability and appearance.",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Semikraft_knjtkd.png",
     },
   ];
   return (
     <main>
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+      video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777119932/Video_Project_7_z3gnr8.mp4"}
+        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="Al Dhafra Paper Manufacturing"
         texts={[
           "Al Dhafra Paper Manufacturing is the MAHY Khoory Group’s dedicated recycled containerboard manufacturing facility, located in Abu Dhabi. Established in 2017, Al Dhafra Paper Manufacturing operates as a fully integrated mill converting 100% recovered wastepaper into high-quality Test liner and Fluting Medium for the packaging industry.With an average production capacity of approximately 690 tonnes per day, the mill operates in compliance with leading environmental, technical, and regulatory standards. Situated within ICAD III, the facility is equipped with state-of-the-art production lines and benefits from continuous technology upgrades, ensuring operational efficiency and product consistency aligned with international benchmarks.",
         ]}
       />
 
-      <ValuesSection
+
+<WhoWeAre
+        heading="Our Mission"
+        topHeading=""
+        text="To manufacture high‑quality recycled containerboard that drives sustainable packaging solutions across the region. Al Dhafra Paper Manufacturing is committed to transforming 100% recovered wastepaper into reliable, eco‑friendly products through advanced technology, operational excellence, and responsible resource management—supporting the MAHY Khoory Group’s vision of circular manufacturing and environmental stewardship."
+        showButton={false}
+        invert={false}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+        imageAlt="Our Mission"
+      />
+
+    
+
+      <WhoWeAre
+      topHeading=""
+        heading="Our Vision"
+        text="To be the Middle East’s benchmark for sustainable containerboard production by leading in innovation, efficiency, and environmental responsibility. Al Dhafra Paper Manufacturing aims to strengthen regional self‑sufficiency in recycled paper, expand the use of recovered fibre, and continuously advance manufacturing practices that contribute to a cleaner, greener future."
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+        imageAlt="Our Vision"
+        
+        showButton={false}
+        invert={true}
+      /> 
+      {/* <ValuesSection
         title="Our Mission"
         description="Al Dhafra Paper Manufacturing’s mission is to be a regional leader in sustainable containerboard manufacturing, fully aligned with the MAHY Khoory Group’s commitment to delivering solutions that enhance quality of life while protecting the environment."
         imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
@@ -120,7 +159,7 @@ function AlDhafraPaper() {
         imageAlt="Our Vision"
         ctaHref={false}
         imagePosition="left"
-      />
+      /> */}
 
       <KitchenMenu
         heading="Products and Capabilities"

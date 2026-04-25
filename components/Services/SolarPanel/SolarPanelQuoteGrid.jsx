@@ -49,7 +49,7 @@ function SolarPanelQuoteGrid({
               {quoteItems && (
                 <div className="mt-3 space-y-2 italic">
                   {quoteItems.map((item, i) => (
-                    <p key={i}>{item}</p>
+                    <p key={i}>{item || ''}</p>
                   ))}
                 </div>
               )}

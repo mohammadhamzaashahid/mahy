@@ -39,7 +39,8 @@ function GreenlandGeneralTransportPage() {
     return (
         <main>
             <CompanyOverview
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772478875/0205_tlzogv.mp4"}
+                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
                 heading="Greenland General Transport"
                 texts={[
                     "Greenland General Transport is the in-house logistics and transportation division of the MAHY Khoory Group, established to provide reliable, efficient, and fully integrated transport services across the Group’s diverse business operations.",

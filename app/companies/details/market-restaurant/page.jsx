@@ -48,7 +48,7 @@ function MarketRestarauntPage() {
     return (
         <main>
             <CompanyOverview
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777149800/Video_Project_10_eosc43.mp4"}
                 heading="Market Restaurant & Café"
                 texts={[
                     "Market Restaurant & Café is a contemporary casual dining destination located in Dubai Marina, operating under the hospitality portfolio of the MAHY Khoory Group. Positioned as a modern neighborhood restaurant, the concept combines seasonally inspired cuisine with a relaxed and welcoming atmosphere. Situated adjacent to Pearl Marina Hotel Apartments, the restaurant serves both hotel guests and the wider public, offering a convenient and approachable dining experience within one of Dubai’s most vibrant residential and leisure districts.",

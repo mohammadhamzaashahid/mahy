@@ -28,7 +28,7 @@ function NationalPaperIndustryPage() {
     return (
         <main>
             <CompanyOverview
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772793964/National_Paper_Industries_bhhmav.mp4"}
                 heading="National Paper Industry (S.P.S – L.L.C)"
                 texts={[
                     "National Paper Industry (S.P.S – L.L.C)   (NPI) is a leading manufacturer of corrugated cartons and packaging solutions in the United Arab Emirates. Headquartered in Ajman, NPI operates as part of the MAHY Khoory Group’s manufacturing division, serving a broad customer base across the UAE and selected regional markets.",

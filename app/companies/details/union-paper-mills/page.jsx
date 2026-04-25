@@ -3,6 +3,7 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 
 function UnionPaperMills() {
   const upmCardsData = [
@@ -111,23 +112,28 @@ function UnionPaperMills() {
         ]}
       />
 
-      <ValuesSection
-        title="Our Mission"
-        description="At Union Paper Mills, our mission is to manufacture high-quality recycled paperboard by efficiently transforming post-consumer and industrial waste into valuable packaging materials. We are committed to minimizing environmental impact by reducing reliance on virgin raw materials, optimizing energy and water usage, and continuously improving waste recovery processes. Through advanced technology, operational excellence, and strict adherence to international quality and environmental standards, we aim to deliver consistent, reliable products that support the needs of corrugated packaging manufacturers and industrial users. As an integral part of the MAHY Khoory Group’s circular ecosystem, we strive to create sustainable value for our customers, partners, and the wider community while contributing to the UAE’s environmental and industrial development goals."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777103591/Our_Mission_juz165.jpg"
+      <WhoWeAre
+        heading="Our Mission"
+        topHeading=""
+        text="At Union Paper Mills, our mission is to manufacture high-quality recycled paperboard by efficiently transforming post-consumer and industrial waste into valuable packaging materials. We are committed to minimizing environmental impact by reducing reliance on virgin raw materials, optimizing energy and water usage, and continuously improving waste recovery processes. Through advanced technology, operational excellence, and strict adherence to international quality and environmental standards, we aim to deliver consistent, reliable products that support the needs of corrugated packaging manufacturers and industrial users. As an integral part of the MAHY Khoory Group’s circular ecosystem, we strive to create sustainable value for our customers, partners, and the wider community while contributing to the UAE’s environmental and industrial development goals."
+        showButton={false}
+        invert={false}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777103591/Our_Mission_juz165.jpg"
         imageAlt="Our Mission"
-        ctaHref={false}
-        imagePosition="right"
       />
 
-      <ValuesSection
-        title="Our Vision"
-        description="Our vision is to be a leading and most trusted recycled paper manufacturer in the region, recognized for our commitment to sustainability, innovation, and excellence in manufacturing. We aspire to strengthen our position within the regional and international packaging value chain through continuous investment in advanced technologies, capacity expansion, and product development. By enhancing our integrated recycling model and adopting smarter, more efficient production practices, we aim to set industry benchmarks in quality, environmental responsibility, and operational performance. Ultimately, we seek to play a key role in advancing the circular economy, supporting sustainable industrial growth, and shaping the future of eco-friendly packaging solutions in the region."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1770199645/UPM.4_ir521p.jpg"
+    
+
+      <WhoWeAre
+      topHeading=""
+        heading="Our Vision"
+        text="Our vision is to be a leading and most trusted recycled paper manufacturer in the region, recognized for our commitment to sustainability, innovation, and excellence in manufacturing. We aspire to strengthen our position within the regional and international packaging value chain through continuous investment in advanced technologies, capacity expansion, and product development. By enhancing our integrated recycling model and adopting smarter, more efficient production practices, we aim to set industry benchmarks in quality, environmental responsibility, and operational performance. Ultimately, we seek to play a key role in advancing the circular economy, supporting sustainable industrial growth, and shaping the future of eco-friendly packaging solutions in the region."
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1770199645/UPM.4_ir521p.jpg"
         imageAlt="Our Vision"
-        ctaHref={false}
-        imagePosition="left"
-      />
+        
+        showButton={false}
+        invert={true}
+      /> 
 
       <KitchenMenu
         heading="Products and Manufacturing Capabilities"

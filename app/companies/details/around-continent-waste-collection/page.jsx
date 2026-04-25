@@ -113,7 +113,7 @@ function AroundContinentWasteCollection() {
   return (
     <main>
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+      video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772794963/Around_Continent_Waste_Collection_Green_Arabia_mgylog.mp4"}
         heading="Around Continent Waste Collection"
         texts={[
           "Around Continent Waste Collection is an environmental services subsidiary within the MAHY Khoory Group, specializing in the collection, handling, and transportation of general waste, construction and demolition waste, hazardous waste, and solid and liquid waste.",

@@ -81,7 +81,7 @@ async function Companies({ searchParams }) {
     {
       name: "Al Khoory Engineering",
       slug: "al-khoory-engineering",
-      image: "/gallery/icon.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777123613/32f40b96-2c09-4429-99c1-a4ea6b99c595.png",
       sector: "engineering",
       size: "large",
       location: "uae",
@@ -282,7 +282,7 @@ async function Companies({ searchParams }) {
     {
       name: "Union Nonwoven Industries",
       slug: "union-nonwoven-industries",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900741/MKA_wwor7m.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900951/mahy-comp-removebg-preview_p7rg9d.png",
       sector: "industries",
       size: "large",
       location: "uae",
@@ -327,7 +327,7 @@ async function Companies({ searchParams }) {
       <PageHeading
         title={t("Heading")}
         description={t("Description")}
-        image={"/gallery/gallery-2.jpg"}
+        image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777123325/abstract-business-office-building-london_rrnpsd.jpg"}
       />
 
       <Breadcrumb

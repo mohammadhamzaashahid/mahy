@@ -40,7 +40,7 @@ function PearlMarinaPage() {
     return (
         <main>
             <CompanyOverview
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777151259/ChatGPT_Image_Feb_5_2026_11_42_00_AM_pglvjk.png"
                 heading="Market Restaurant & Café"
                 texts={[
                     "Pearl Marina Hotel Apartments is a boutique hospitality property located in the heart of Dubai Marina, offering upscale, fully furnished serviced apartments designed for both short- and long-term stays. Operated as part of the MAHY Khoory Group’s hospitality portfolio, the property combines contemporary elegance with the dynamic lifestyle of Dubai’s Marina waterfront.",
@@ -49,7 +49,7 @@ function PearlMarinaPage() {
             />
             <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
                 <CompaniesSectors
-                    image={"/gallery/gallery-1.jpg"}
+                    image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777151258/ChatGPT_Image_Feb_5_2026_11_43_53_AM_k9nebs.png"}
                     title={"Accommodation and Guest Services"}
                     texts={[
                         "Pearl Marina Hotel Apartments delivers a comprehensive serviced-apartment experience, combining hotel-level service with residential comfort. Core offerings include:"

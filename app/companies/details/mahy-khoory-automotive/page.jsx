@@ -9,7 +9,8 @@ function MahyKhooryAutomotivePage() {
     return (
         <main>
             <CompanyOverview
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777148084/Mka_Mkm_wu2ejg.mp4"}
+                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
                 heading="MAHY Khoory Automotive"
                 texts={[
                     "MAHY Khoory Automotive represents the MAHY Khoory Group’s strategic expansion into the automotive sector introducing modern, valuedriven and technology-forward mobility solutions to the UAE. As the Group’s curated entry into the automotive sector, the division has forged a strong partnership with Dongfeng Motor Corporation, one of China’s most respected and innovative automotive manufacturers.",
