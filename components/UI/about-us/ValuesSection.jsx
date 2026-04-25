@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import SecondaryButton from "@/components/UI/SecondaryButton";
 import ArrowActionButton from "./ArrowActionButton";
 
 export default function ValuesSection({
@@ -87,7 +86,7 @@ export default function ValuesSection({
 
                         {involvement && (
                             <>
-                                <h2 className="font-semibold mt-3">MAHY Khoory's Involvement</h2>
+                                <h2 className="font-semibold mt-3">MAHY Khoory&apos;s Involvement</h2>
                                 <p className="mt-2 font-light leading-relaxed text-slate-700 text-sm">{involvement}</p>
                                 {involvement2 &&
                                     <p className="mt-1.5 font-light leading-relaxed text-slate-700 text-sm">{involvement2}</p>
