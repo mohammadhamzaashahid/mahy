@@ -3,26 +3,32 @@
 import { useEffect, useRef } from "react";
 import lottie from "lottie-web";
 
-export default function MahyraAvatar({ visible, locale }) {
+export default function MahyraAvatar({ visible, locale, isIdle }) {
   const animRef = useRef(null);
   const lottieInstance = useRef(null);
 
   useEffect(() => {
-    if (!animRef.current || lottieInstance.current) return;
+    if (!animRef.current ) return;
+
+     lottieInstance.current?.destroy();
+    lottieInstance.current = null;
+
+        const path = isIdle ? "/lottie/sad-mahy.json" : "/lottie/t5d42NEZJZ.json";
+
 
     lottieInstance.current = lottie.loadAnimation({
       container: animRef.current,
       renderer: "svg",
       loop: true,
       autoplay: true,
-      path: "/lottie/t5d42NEZJZ.json",
+      path,
     });
 
     return () => {
       lottieInstance.current?.destroy();
       lottieInstance.current = null;
     };
-  }, []);
+  }, [isIdle]);
 
   useEffect(() => {
     if (!lottieInstance.current) return;

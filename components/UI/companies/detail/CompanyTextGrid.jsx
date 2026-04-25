@@ -131,17 +131,17 @@ function CompanyTextGrid({
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={viewport}
               >
-               {typeof rightText === "string" ? (
-  <p className="">
-    <FaQuoteLeft size={20} className="mt-1 shrink-0" />
-    
-    <span className="italic">{rightText}</span>
-    
-    <FaQuoteRight size={20} className="mt-1 shrink-0" />
-  </p>
-) : (
-  rightText
-)}
+                {typeof rightText === "string" ? (
+                  <p className="">
+                    <FaQuoteLeft size={22} className="mb-1 shrink-0" />
+
+                    <span className="italic">{rightText}</span>
+
+                    <FaQuoteRight size={22} className="mt-1 shrink-0" />
+                  </p>
+                ) : (
+                  rightText
+                )}
               </motion.div>
             </>
           )}

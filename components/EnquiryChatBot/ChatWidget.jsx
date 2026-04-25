@@ -28,16 +28,31 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
   const IDLE_DELAY = 12000;
 
   const idleTimer = useRef(null);
-  const [showIdlePrompt, setShowIdlePrompt] = useState(false);
+  const [showIdlePrompt, setShowIdlePrompt] = useState(true);
+  const [isSadMood, setIsSadMood] = useState(false); 
+  const [avatarVisible, setAvatarVisible] = useState(true);
+
   const idleChimeRef = useRef(null);
   const idleChimePlayed = useRef(false);
 
-  function startIdleCountdown() {
-    if (idleTimer.current) clearTimeout(idleTimer.current);
-    idleTimer.current = setTimeout(() => {
-      if (!isWidgetOpen) setShowIdlePrompt(true);
-    }, IDLE_DELAY);
-  }
+  const isWidgetOpenRef = useRef(false);
+
+useEffect(() => {
+  isWidgetOpenRef.current = isWidgetOpen;
+}, [isWidgetOpen]);
+
+
+ function startIdleCountdown() {
+  if (idleTimer.current) clearTimeout(idleTimer.current);
+  idleTimer.current = setTimeout(() => {
+    if (!isWidgetOpenRef.current) {  
+      setShowIdlePrompt(true);
+      setIsSadMood(true);
+      idleChimePlayed.current = false;
+    }
+  }, IDLE_DELAY);
+}
+
 
   useEffect(() => {
     if (isWidgetOpen) {
@@ -51,24 +66,43 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
     };
   }, [isWidgetOpen]);
 
-  function handleIdleTease() {
+useEffect(() => {
+  if (isWidgetOpen) {
     setShowIdlePrompt(false);
-    if (!isWidgetOpen) startIdleCountdown();
+    setIsSadMood(false);
+    setAvatarVisible(false);
+    if (idleTimer.current) clearTimeout(idleTimer.current);
+    return;
   }
 
-  useEffect(() => {
-    if (isWidgetOpen) {
-      setShowIdlePrompt(false);
-      if (idleTimer.current) clearTimeout(idleTimer.current);
-      return;
-    }
+  setAvatarVisible(true);
+  setIsSadMood(false);     
+  startIdleCountdown();
 
-    startIdleCountdown();
+  return () => {
+    if (idleTimer.current) clearTimeout(idleTimer.current);
+  };
+}, [isWidgetOpen]);
 
-    return () => {
-      if (idleTimer.current) clearTimeout(idleTimer.current);
-    };
-  }, [isWidgetOpen]);
+
+  function handleIdleTease() {
+  setShowIdlePrompt(false);  
+  setIsSadMood(false);     
+  if (!isWidgetOpen) startIdleCountdown(); 
+}
+
+  // useEffect(() => {
+  //   if (isWidgetOpen) {
+  //     setShowIdlePrompt(false);
+  //     if (idleTimer.current) clearTimeout(idleTimer.current);
+  //     return;
+  //   }
+  //   startIdleCountdown();
+
+  //   return () => {
+  //     if (idleTimer.current) clearTimeout(idleTimer.current);
+  //   };
+  // }, [isWidgetOpen]);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -378,7 +412,7 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
             className="relative w-full max-w-65 sm:max-w-70 pointer-events-auto"
             style={{ width: "min(80vw, 280px)" }}
           >
-            <MahyraAvatar visible={showIdlePrompt} locale={locale} />
+            <MahyraAvatar visible={avatarVisible} locale={locale} isIdle={isSadMood}/>
             <IdlePrompt
               locale={locale}
               data={data.idle}

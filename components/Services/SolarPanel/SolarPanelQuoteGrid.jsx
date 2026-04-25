@@ -1,7 +1,6 @@
-import { ArrowRight, Check, Quote } from "lucide-react";
+import { Check } from "lucide-react";
 import Image from "next/image";
-import { FaQuoteRight } from "react-icons/fa";
-import { FaQuoteLeft } from "react-icons/fa6";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 
 function SolarPanelQuoteGrid({
   heading = "",
@@ -30,7 +29,6 @@ function SolarPanelQuoteGrid({
         </div>
         <div className="pt-7 pb-5 md:py-10 px-5 md:px-10 md:col-span-3">
           <h2 className="uppercase font-semibold">{heading}</h2>
-          {/* <p className="mt-5 text-3xl font-medium">Tailored Business Consulting For Optimal Success</p> */}
           <p className="mt-3 text-gray-700">{text}</p>
           {text2 && <p className="mt-3 text-gray-700">{text2}</p>}
           <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 gap-3 md:gap-0">
@@ -49,7 +47,7 @@ function SolarPanelQuoteGrid({
               <FaQuoteLeft size={30} />
               <p className="mt-5 italic">{quoteText}</p>
               {quoteItems && (
-                <div className="mt-3 space-y-2 text-sm italic">
+                <div className="mt-3 space-y-2 italic">
                   {quoteItems.map((item, i) => (
                     <p key={i}>{item}</p>
                   ))}
