@@ -75,29 +75,35 @@ function UnionPaperMills() {
     {
       title: "Union Testliner (90–200 GSM)",
       text: "High-quality recycled linerboard suitable for outer layers of corrugated packaging, offering strength, printability, and cost efficiency.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
     },
     {
       title: "Unionflute (90–175 GSM)",
       text: "Durable fluting medium designed for corrugated board applications, providing excellent rigidity, cushioning, and structural performance.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
     },
     {
       title: "Unioncore Board (190–450 GSM)",
       text: "Heavy-duty core board used in paper tubes, cores, and industrial applications, delivering superior strength and load-bearing capacity.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104674/coreboard_ysfopp.png",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104674/coreboard_ysfopp.png",
     },
     {
       title: "Semikraft Liner (125–200 GSM)",
       text: "Semi-chemical kraft liner combining strength and surface quality, ideal for packaging solutions requiring enhanced durability and appearance.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Semikraft_knjtkd.png",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Semikraft_knjtkd.png",
     },
   ];
 
   return (
     <main>
       <CompanyOverview
-      video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772478743/Union_Paper_Mills_Reel_q14iax.mp4"}
+        video={
+          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772478743/Union_Paper_Mills_Reel_q14iax.mp4"
+        }
         // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="Union Paper Mills"
         texts={[
