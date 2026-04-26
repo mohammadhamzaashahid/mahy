@@ -122,18 +122,16 @@ function UnionPaperMills() {
         imageAlt="Our Mission"
       />
 
-    
-
       <WhoWeAre
-      topHeading=""
+        topHeading=""
         heading="Our Vision"
         text="Our vision is to be a leading and most trusted recycled paper manufacturer in the region, recognized for our commitment to sustainability, innovation, and excellence in manufacturing. We aspire to strengthen our position within the regional and international packaging value chain through continuous investment in advanced technologies, capacity expansion, and product development. By enhancing our integrated recycling model and adopting smarter, more efficient production practices, we aim to set industry benchmarks in quality, environmental responsibility, and operational performance. Ultimately, we seek to play a key role in advancing the circular economy, supporting sustainable industrial growth, and shaping the future of eco-friendly packaging solutions in the region."
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1770199645/UPM.4_ir521p.jpg"
         imageAlt="Our Vision"
-        
+
         showButton={false}
         invert={true}
-      /> 
+      />
 
       <KitchenMenu
         heading="Products and Manufacturing Capabilities"

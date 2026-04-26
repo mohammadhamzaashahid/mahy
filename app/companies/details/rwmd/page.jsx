@@ -3,6 +3,7 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 
 function RecyclableWasteManagementDivision() {
   const services = [
@@ -108,31 +109,49 @@ function RecyclableWasteManagementDivision() {
   return (
     <main>
       <CompanyOverview
-video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1773132024/RWMD_lrlpyc.mp4"}
-heading="Recyclable Waste Management Division"
+        video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1773132024/RWMD_lrlpyc.mp4"}
+        heading="Recyclable Waste Management Division"
         texts={[
           "The Recyclable Waste Management Division (RWMD) is the Dubai-based recycling arm of the MAHY Khoory Group, supporting its integrated recycling and manufacturing ecosystem.",
           "RWMD plays a critical role in the collection, consolidation, and supply of recyclable materials—primarily waste paper and cardboard—to the Group’s manufacturing facilities.",
           "With the capacity to process over 1,300 metric tonnes of waste paper per day, RWMD ensures a consistent and sustainable supply of recovered fibre within the Group’s circular economy model.",
         ]}
       />
-      <ValuesSection
+      <WhoWeAre
+        heading="Our Mission"
+        topHeading=""
+        text="To maximize landfill diversion by providing efficient, reliable, and scalable recycling solutions, supporting UAE environmental objectives and reducing dependence on virgin materials."
+        showButton={false}
+        invert={false}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+        imageAlt="Our Mission"
+      />
+
+      <WhoWeAre
+        heading="Our Vision"
+        topHeading=""
+        text="To continuously enhance recycling operations through modern equipment, optimized logistics, and customer-focused programs aligned with innovation and sustainability."
+        showButton={false}
+        invert={true}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+        imageAlt="Our Vision"
+      />
+      {/* <ValuesSection
         title="Mission"
-        description="To maximize landfill diversion by providing efficient, reliable, and scalable recycling solutions, supporting UAE environmental objectives and reducing dependence on virgin materials."
+        description=""
         imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776682027/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"
         imageAlt="Mission"
         ctaHref={false}
         imagePosition="right"
       />
-
       <ValuesSection
         title="Vision"
-        description="To continuously enhance recycling operations through modern equipment, optimized logistics, and customer-focused programs aligned with innovation and sustainability."
+        description=""
         imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776761407/comprehensive-growth_irbplq.jpg"
         imageAlt="Vision"
         ctaHref={false}
         imagePosition="left"
-      />
+      /> */}
       <KitchenMenu
         heading="Services and Capabilities"
         text="RWMD delivers comprehensive recyclable waste management services across industrial, commercial, and institutional sectors."

@@ -55,7 +55,7 @@ function UnionWoodWorksPage() {
     return (
         <main>
             <CompanyOverview
-            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772790516/uww_jac3pt.mp4"}
+                video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772790516/uww_jac3pt.mp4"}
                 // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
                 heading="Union Wood Works"
                 texts={[
@@ -64,29 +64,25 @@ function UnionWoodWorksPage() {
                 ]}
             />
 
+            <WhoWeAre
+                heading="Our Mission"
+                topHeading=""
+                text="To transform reclaimed wood into durable, high‑performance engineered materials that serve industrial, construction, and packaging needs while protecting natural resources. Union Wood Works is dedicated to sustainable manufacturing through advanced recycling technology, operational precision, and continuous innovation—delivering eco‑wood products that combine strength, reliability, and environmental responsibility."
+                showButton={false}
+                invert={false}
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+                imageAlt="Our Mission"
+            />
 
-  <WhoWeAre
-        heading="Our Mission"
-        topHeading=""
-        text="o transform reclaimed wood into durable, high‑performance engineered materials that serve industrial, construction, and packaging needs while protecting natural resources. Union Wood Works is dedicated to sustainable manufacturing through advanced recycling technology, operational precision, and continuous innovation—delivering eco‑wood products that combine strength, reliability, and environmental responsibility."
-        showButton={false}
-        invert={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
-        imageAlt="Our Mission"
-      />
-
-      <WhoWeAre
-        heading="Our Vision"
-        topHeading=""
-        text="To be the GCC’s leading provider of sustainable engineered wood solutions, recognized for innovation, quality, and environmental stewardship.
-Union Wood Works strives to redefine industrial wood use by promoting circular manufacturing, reducing waste, and pioneering next‑generation eco‑wood products that support a greener, more resource‑efficient future."
-        showButton={false}
-        invert={true}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
-        imageAlt="Our Vision"
-      />
-
-
+            <WhoWeAre
+                heading="Our Vision"
+                topHeading=""
+                text="To be the GCC’s leading provider of sustainable engineered wood solutions, recognized for innovation, quality, and environmental stewardship. Union Wood Works strives to redefine industrial wood use by promoting circular manufacturing, reducing waste, and pioneering next‑generation eco‑wood products that support a greener, more resource‑efficient future."
+                showButton={false}
+                invert={true}
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+                imageAlt="Our Vision"
+            />
 
             {/* <ValuesSection
                 title="Our Mission"
@@ -104,7 +100,7 @@ Union Wood Works strives to redefine industrial wood use by promoting circular m
                 imagePosition="left"
             /> */}
             <TrustedAdvisorSection
-            object="Employees"
+                object="Employees"
                 heading="Background and Development"
                 texts={[
                     "Established as part of MAHY Khoory Group’s manufacturing expansion, Union Wood Works was created to address two parallel challenges: the growing volume of wood waste and increasing market demand for cost-effective, sustainable alternatives to solid timber.",

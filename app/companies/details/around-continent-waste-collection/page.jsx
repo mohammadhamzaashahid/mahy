@@ -3,6 +3,7 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 
 function AroundContinentWasteCollection() {
   const services = [
@@ -113,7 +114,7 @@ function AroundContinentWasteCollection() {
   return (
     <main>
       <CompanyOverview
-      video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772794963/Around_Continent_Waste_Collection_Green_Arabia_mgylog.mp4"}
+        video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772794963/Around_Continent_Waste_Collection_Green_Arabia_mgylog.mp4"}
         heading="Around Continent Waste Collection"
         texts={[
           "Around Continent Waste Collection is an environmental services subsidiary within the MAHY Khoory Group, specializing in the collection, handling, and transportation of general waste, construction and demolition waste, hazardous waste, and solid and liquid waste.",
@@ -121,10 +122,28 @@ function AroundContinentWasteCollection() {
           "It supports industrial, commercial, and project-based operations by ensuring waste is collected, transported, and directed to approved treatment or disposal facilities in strict compliance with UAE environmental, health, and safety regulations.",
         ]}
       />
+      <WhoWeAre
+        heading="Our Mission"
+        topHeading=""
+        text="To deliver safe, reliable, and fully compliant waste collection and transportation services, protecting public health, infrastructure assets, and the environment."
+        showButton={false}
+        invert={false}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+        imageAlt="Our Mission"
+      />
 
-      <ValuesSection
+      <WhoWeAre
+        heading="Our Vision"
+        topHeading=""
+        text="To become a trusted national partner for organizations requiring professional waste management solutions, particularly in general, construction-related, and hazardous waste, while maintaining high operational and regulatory standards."
+        showButton={false}
+        invert={true}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+        imageAlt="Our Vision"
+      />
+      {/* <ValuesSection
         title="Mission"
-        description="To deliver safe, reliable, and fully compliant waste collection and transportation services, protecting public health, infrastructure assets, and the environment."
+        description=""
         imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
         imageAlt="Mission"
         ctaHref={false}
@@ -133,12 +152,12 @@ function AroundContinentWasteCollection() {
 
       <ValuesSection
         title="Vision"
-        description="To become a trusted national partner for organizations requiring professional waste management solutions, particularly in general, construction-related, and hazardous waste, while maintaining high operational and regulatory standards."
+        description=""
         imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
         imageAlt="Vision"
         ctaHref={false}
         imagePosition="left"
-      />
+      /> */}
 
       <KitchenMenu
         heading="Services and Licensed Capabilities"

@@ -52,7 +52,7 @@ export default function FeaturesEngineeringSection({
         )}
 
         {/* Cards */}
-        <div className="mt-12 md:mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-6 md:gap-8 lg:gap-10">
+        <div className={`mt-12 md:mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 ${items.length % 5 === 0 ? "lg:grid-cols-4 lg:gap-2" : "lg:grid-cols-3 lg:gap-10"}  auto-rows-fr gap-6 md:gap-8`}>
           {items.map((item, i) => {
             const isLastSpecial =
               i === items.length - 1 && items.length % 3 !== 0;
@@ -63,8 +63,8 @@ export default function FeaturesEngineeringSection({
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-80px" }} 
-                className="lg:col-span-1 group bg-[#E3EBEA] px-6 md:px-8 lg:px-10 py-8 md:py-10 lg:py-12 min-h-[280px] md:min-h-[320px] lg:min-h-[340px] flex flex-col justify-between transition-colors duration-700 hover:bg-[#1F2C30]"
+                viewport={{ once: true, margin: "-80px" }}
+                className={` ${items.length % 5 === 0 ? "lg:px-6 lg:py-6" : "lg:px-10 lg:py-12"} lg:col-span-1 group bg-[#E3EBEA] px-6 md:px-8  py-8 md:py-10 min-h-[280px] md:min-h-[320px] lg:min-h-[340px] flex flex-col justify-between transition-colors duration-700 hover:bg-[#1F2C30]`}
               >
                 <div>
                   <div className="mb-8 md:mb-10 h-10 w-10 rounded-full border border-current text-[#1F2C30] group-hover:text-white transition-colors duration-700" />
@@ -103,8 +103,8 @@ export default function FeaturesEngineeringSection({
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-80px" }} 
-                className="relative overflow-hidden min-h-[280px] md:min-h-[320px] lg:min-h-[340px] col-span-3 md:col-span-3 lg:col-span-3 group"
+                viewport={{ once: true, margin: "-80px" }}
+                className={`relative overflow-hidden min-h-[280px] md:min-h-[320px] lg:min-h-[340px] col-span-3 md:col-span-3 ${items.length % 5 === 0 ? "lg:col-span-4" : "lg:col-span-3"}  group`}
               >
                 <div className="absolute inset-0">
                   <Image

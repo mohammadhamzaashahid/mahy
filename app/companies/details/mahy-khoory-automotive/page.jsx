@@ -4,12 +4,13 @@ import TrustedAdvisorSection from "@/components/TrustedAdvisorSection"
 import ValuesSection from "@/components/UI/about-us/ValuesSection"
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
+import WhoWeAre from "@/components/UI/home/WhoWeAre"
 
 function MahyKhooryAutomotivePage() {
     return (
         <main>
             <CompanyOverview
-            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777148084/Mka_Mkm_wu2ejg.mp4"}
+                video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777148084/Mka_Mkm_wu2ejg.mp4"}
                 // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
                 heading="MAHY Khoory Automotive"
                 texts={[
@@ -17,9 +18,28 @@ function MahyKhooryAutomotivePage() {
                     "Through Dongfeng, MAHY Khoory Automotive introduces a new generation of vehicles engineered for modern lifestyles - combining futuristic design, intelligent technology, and reliable performance. The wide range of model line-up from sub compact crossovers, off-road capable pickup trucks to electric vehicles, reflects the division’s commitment to accessible, highquality mobility."
                 ]}
             />
-            <ValuesSection
+            <WhoWeAre
+                heading="Our Mission"
+                topHeading=""
+                text="To offer intelligent and reliable mobility solutions that enhance everyday life through engineering excellence, professional service, and a deeply customercentric approach."
+                showButton={false}
+                invert={false}
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+                imageAlt="Our Mission"
+            />
+
+            <WhoWeAre
+                heading="Our Vision"
+                topHeading=""
+                text="To become a market-leading automotive provider in the UAE, championing advanced mobility technologies while building a network and portfolio that exceed the standards of modern motoring and client experience."
+                showButton={false}
+                invert={true}
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+                imageAlt="Our Vision"
+            />
+            {/* <ValuesSection
                 title="Our Mission"
-                description="To offer intelligent and reliable mobility solutions that enhance everyday life through engineering excellence, professional service, and a deeply customercentric approach."
+                description=""
                 imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
                 imageAlt="Our Mission"
                 ctaHref={false}
@@ -28,15 +48,15 @@ function MahyKhooryAutomotivePage() {
             />
             <ValuesSection
                 title="Our Vision"
-                description="To become a market-leading automotive provider in the UAE, championing advanced mobility technologies while building a network and portfolio that exceed the standards of modern motoring and client experience."
+                description=""
                 imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
                 imageAlt="Our Vision"
                 width="max-w-7xl mx-auto"
                 ctaHref={false}
                 imagePosition="left"
-            />
+            /> */}
             <TrustedAdvisorSection
-            object="Employees"
+                object="Employees"
                 heading="Our Story"
                 texts={[
                     "Building on the MAHY Khoory Group’s 96 years of legacy as a distributor of global brands, including established American automotive marques, the Automotive division was launched as part of the Group’s diversification strategy. The decision to partner with Dongfeng reflects a forward-looking approach, recognizing the rising global competitiveness and technological maturity of Chinese automotive manufacturers.",

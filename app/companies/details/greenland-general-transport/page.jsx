@@ -5,6 +5,7 @@ import TrustedAdvisorSection from "@/components/TrustedAdvisorSection"
 import ValuesSection from "@/components/UI/about-us/ValuesSection"
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
+import WhoWeAre from "@/components/UI/home/WhoWeAre"
 
 function GreenlandGeneralTransportPage() {
 
@@ -39,7 +40,7 @@ function GreenlandGeneralTransportPage() {
     return (
         <main>
             <CompanyOverview
-            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772478875/0205_tlzogv.mp4"}
+                video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772478875/0205_tlzogv.mp4"}
                 // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
                 heading="Greenland General Transport"
                 texts={[
@@ -48,9 +49,29 @@ function GreenlandGeneralTransportPage() {
                 ]}
             />
 
-            <ValuesSection
+            <WhoWeAre
+                heading="Our Mission"
+                topHeading=""
+                text="Greenland General Transport’s mission is to deliver safe, dependable, and timely transportation solutions that connect MAHY Khoory Group companies, partners, and customers. The division is committed to operational excellence, service reliability, and continuous improvement across all logistics activities."
+                showButton={false}
+                invert={false}
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+                imageAlt="Our Mission"
+            />
+
+            <WhoWeAre
+                heading="Our Vision"
+                topHeading=""
+                text="Its vision is to develop into a leading regional logistics provider recognized for efficiency, safety, and technology-enabled fleet management, while supporting the Group’s long-term growth, diversification, and project execution capabilities."
+                showButton={false}
+                invert={true}
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+                imageAlt="Our Vision"
+            />
+
+            {/* <ValuesSection
                 title="Our Mission"
-                description="Greenland General Transport’s mission is to deliver safe, dependable, and timely transportation solutions that connect MAHY Khoory Group companies, partners, and customers. The division is committed to operational excellence, service reliability, and continuous improvement across all logistics activities."
+                description=""
                 imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
                 imageAlt="Mission"
                 ctaHref={false}
@@ -59,15 +80,15 @@ function GreenlandGeneralTransportPage() {
 
             <ValuesSection
                 title="Our Vision"
-                description="Its vision is to develop into a leading regional logistics provider recognized for efficiency, safety, and technology-enabled fleet management, while supporting the Group’s long-term growth, diversification, and project execution capabilities."
+                description=""
                 imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
                 imageAlt="Vision"
                 ctaHref={false}
                 imagePosition="left"
-            />
+            /> */}
 
             <TrustedAdvisorSection
-            object="Employees"
+                object="Employees"
                 heading="Background and Development"
                 texts={[
                     "Greenland General Transport was established in response to the MAHY Khoory Group’s expanding operational footprint and increasing demand for centralized logistics control.",
