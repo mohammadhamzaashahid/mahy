@@ -1,11 +1,58 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection"
+import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu"
+import PumpingServiceCards from "@/components/Services/PumpingServiceCards"
 import SolarPanelQuoteGrid from "@/components/Services/SolarPanel/SolarPanelQuoteGrid"
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
 
 function MarketRestarauntPage() {
+    const features = [
+        {
+            text: "Freshly prepared salads and starters",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+        },
+        {
+            text: "Grilled meats and seafood dishes",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+        },
+        {
+            text: "Specialty brunch selections",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+        },
+        {
+            text: "Desserts and café-style beverages",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+        },
+        {
+            text: "In addition to dine-in service, the restaurant provides takeaway, delivery, and catering services, and is well suited for private gatherings, corporate lunches, and small social events.",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+        }
+    ];
+    const adpmCardsData = [
+        {
+            text: "Guests of Pearl Marina Hotel Apartments",
+            image: "/solar/solar-1.svg",
+        },
+        {
+            text: "Local residents of Dubai Marina and JBR",
+            image: "/solar/solar-2.svg",
+        },
+        {
+            text: "Business professionals and office workers in the area",
+            image: "/solar/solar-2.svg",
+        },
+        {
+            text: "Tourists seeking relaxed, quality dining options",
+            image: "/solar/solar-1.svg",
+        }
+    ];
     const overview = [
+        {
+            heading: "Operations and Guest Experience",
+            text: "Market Restaurant & Café places strong emphasis on service quality, consistency, and attention to detail. The dining space is designed to offer a contemporary and comfortable setting, encouraging repeat visits and a sense of community.",
+            lastText: "Operational efficiency is supported through modern point-of-sale and reservation systems, enabling smooth order management and guest handling. Digital engagement through online platforms and social media helps maintain visibility and customer interaction."
+        },
         {
             heading: "Technology and Innovation",
             text: "The restaurant utilizes modern hospitality technologies to enhance both front-of-house and back-of-house operations. These include:",
@@ -48,52 +95,32 @@ function MarketRestarauntPage() {
     return (
         <main>
             <CompanyOverview
-            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777149800/Video_Project_10_eosc43.mp4"}
+                video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777149800/Video_Project_10_eosc43.mp4"}
                 heading="Market Restaurant & Café"
                 texts={[
                     "Market Restaurant & Café is a contemporary casual dining destination located in Dubai Marina, operating under the hospitality portfolio of the MAHY Khoory Group. Positioned as a modern neighborhood restaurant, the concept combines seasonally inspired cuisine with a relaxed and welcoming atmosphere. Situated adjacent to Pearl Marina Hotel Apartments, the restaurant serves both hotel guests and the wider public, offering a convenient and approachable dining experience within one of Dubai’s most vibrant residential and leisure districts.",
                     "The restaurant emphasizes quality ingredients, thoughtful preparation, and consistent service, reflecting the Group’s standards in hospitality operations."
                 ]}
             />
-            <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
-                <CompaniesSectors
-                    image={"/gallery/gallery-1.jpg"}
-                    title={"Dining Concept and Offerings"}
-                    texts={[
-                        "Market Restaurant & Café offers an all-day dining experience, serving breakfast, lunch, and dinner. The menu features a carefully curated selection of international and regional dishes, prepared fresh and designed to appeal to a broad audience. Key offerings include:"
-                    ]}
-                    items={[
-                        "Freshly prepared salads and starters",
-                        "Grilled meats and seafood dishes",
-                        "International comfort food and regional favorites",
-                        "Specialty brunch selections",
-                        "Desserts and café-style beverages"
-                    ]}
-                    text2="In addition to dine-in service, the restaurant provides takeaway, delivery, and catering services, and is well suited for private gatherings, corporate lunches, and small social events."
-                />
-            </section>
-            <SolarPanelQuoteGrid
-                heading="Target Market and Customer Segments"
-                text="The restaurant caters to a diverse clientele, including:"
-                items={[
-                    "Guests of Pearl Marina Hotel Apartments",
-                    "Local residents of Dubai Marina and JBR",
-                    "Business professionals and office workers in the area",
-                    "Tourists seeking relaxed, quality dining options"
-                ]}
-                quoteText="Its casual yet refined positioning makes it attractive to families, individuals, and groups looking for a comfortable dining environment without formality."
+            <KitchenMenu
+                heading="Dining Concept and Offerings"
+                text={"Market Restaurant & Café offers an all-day dining experience, serving breakfast, lunch, and dinner. The menu features a carefully curated selection of international and regional dishes, prepared fresh and designed to appeal to a broad audience. Key offerings include:"}
+                items={features}
             />
-            <div className="mt-15">
-                <CompanyTextOnBackground
-                    heading="Operations and Guest Experience"
-                    image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776762183/commitment-to-growth_qhzgjt.jpg"
-                    align="left"
-                    text="Market Restaurant & Café places strong emphasis on service quality, consistency, and attention to detail. The dining space is designed to offer a contemporary and comfortable setting, encouraging repeat visits and a sense of community."
-                    endText={"Operational efficiency is supported through modern point-of-sale and reservation systems, enabling smooth order management and guest handling. Digital engagement through online platforms and social media helps maintain visibility and customer interaction."}
-                />
-            </div>
+            <PumpingServiceCards
+                cards={adpmCardsData}
+                heading="Target Market and Customer Segments"
+                tag="[ RESTAURANT ]"
+                text={"The restaurant caters to a diverse clientele, including:"}
+                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
+                endText={"Its casual yet refined positioning makes it attractive to families, individuals, and groups looking for a comfortable dining environment without formality."}
+            />
+            <CompanyTextOnBackground
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776762183/commitment-to-growth_qhzgjt.jpg"
+                align="left"
+            />
             <FeaturesEngineeringSection
-                heading="MAHY Khoory Motors Overview"
+                heading="Company Overview"
                 items={overview}
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
             />

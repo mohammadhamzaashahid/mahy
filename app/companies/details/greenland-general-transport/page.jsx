@@ -1,5 +1,7 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection"
+import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu"
+import PumpingServiceCards from "@/components/Services/PumpingServiceCards"
 import SolarPanelImageGrid from "@/components/Services/SolarPanel/SolarPanelImageGrid"
 import TrustedAdvisorSection from "@/components/TrustedAdvisorSection"
 import ValuesSection from "@/components/UI/about-us/ValuesSection"
@@ -8,7 +10,40 @@ import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTex
 import WhoWeAre from "@/components/UI/home/WhoWeAre"
 
 function GreenlandGeneralTransportPage() {
-
+    const features = [
+        {
+            title: "Strategic Foundation",
+            text: "Greenland General Transport was established in response to the MAHY Khoory Group’s expanding operational footprint and increasing demand for centralized logistics control.",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+        },
+        {
+            title: "Growth & Operational Expansion",
+            text: "As the Group diversified into manufacturing, engineering, waste management, renewable energy, automotive, and hospitality sectors, the need for an internal, dependable transportation network became strategically essential. Over time, the division has expanded in scale and capability, growing alongside the Group.",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+        }
+    ];
+    const adpmCardsData = [
+        {
+            title: "Intra-Group Logistics",
+            text: "Scheduled and on-demand transportation of goods, equipment, and materials between MAHY Khoory facilities, warehouses, factories, and project sites.",
+            image: "/solar/solar-1.svg",
+        },
+        {
+            title: "Project and Heavy Transport",
+            text: "Specialized transportation for large pumps, machinery, industrial equipment, and construction materials supporting infrastructure and industrial projects.",
+            image: "/solar/solar-2.svg",
+        },
+        {
+            title: "Staff Transportation Services",
+            text: "Operation of buses and passenger vehicles for employee transport and project-related mobility requirements.",
+            image: "/solar/solar-2.svg",
+        },
+        {
+            title: "General Cargo and Distribution",
+            text: "Cargo haulage and delivery services for spare parts, retail distribution, and selected external clients, optimizing fleet utilization and service efficiency.",
+            image: "/solar/solar-1.svg",
+        }
+    ];
     const overview = [
         {
             heading: "Operations and Execution",
@@ -48,7 +83,6 @@ function GreenlandGeneralTransportPage() {
                     "As a dedicated internal logistics arm, the division owns and operates a modern fleet of heavy-duty trucks, delivery vehicles, and passenger buses, ensuring seamless movement of goods, equipment, and personnel across the UAE while supporting multiple business sectors."
                 ]}
             />
-
             <WhoWeAre
                 heading="Our Mission"
                 topHeading=""
@@ -58,7 +92,6 @@ function GreenlandGeneralTransportPage() {
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
                 imageAlt="Our Mission"
             />
-
             <WhoWeAre
                 heading="Our Vision"
                 topHeading=""
@@ -68,66 +101,22 @@ function GreenlandGeneralTransportPage() {
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
                 imageAlt="Our Vision"
             />
-
-            {/* <ValuesSection
-                title="Our Mission"
-                description=""
-                imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
-                imageAlt="Mission"
-                ctaHref={false}
-                imagePosition="right"
-            />
-
-            <ValuesSection
-                title="Our Vision"
-                description=""
-                imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
-                imageAlt="Vision"
-                ctaHref={false}
-                imagePosition="left"
-            /> */}
-
-            <TrustedAdvisorSection
-                object="Employees"
+            <KitchenMenu
                 heading="Background and Development"
-                texts={[
-                    "Greenland General Transport was established in response to the MAHY Khoory Group’s expanding operational footprint and increasing demand for centralized logistics control.",
-                    "As the Group diversified into manufacturing, engineering, waste management, renewable energy, automotive, and hospitality sectors, the need for an internal, dependable transportation network became strategically essential. Over time, the division has expanded in scale and capability, growing alongside the Group."
-                ]}
+                items={features}
             />
-
-            <SolarPanelImageGrid
-                subHeading={"Core Services and Capabilities"}
-                text={"Greenland General Transport delivers a comprehensive range of logistics and transportation services, including:"}
-                items={[
-                    {
-                        title: "Intra-Group Logistics",
-                        text: "Scheduled and on-demand transportation of goods, equipment, and materials between MAHY Khoory facilities, warehouses, factories, and project sites."
-                    },
-                    {
-                        title: "Project and Heavy Transport",
-                        text: "Specialized transportation for large pumps, machinery, industrial equipment, and construction materials supporting infrastructure and industrial projects."
-                    },
-                    {
-                        title: "Staff Transportation Services",
-                        text: "Operation of buses and passenger vehicles for employee transport and project-related mobility requirements."
-                    },
-                    {
-                        title: "General Cargo and Distribution",
-                        text: "Cargo haulage and delivery services for spare parts, retail distribution, and selected external clients, optimizing fleet utilization and service efficiency."
-                    },
-                ]}
-                endText="These services ensure continuity, responsiveness, and reliability across the Group’s operations."
+            <PumpingServiceCards
+                cards={adpmCardsData}
+                heading="Core Services and Capabilities"
+                tag="[ TRANSPORT ]"
+                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
+                endText={"These services ensure continuity, responsiveness, and reliability across the Group’s operations."}
             />
-
-
             <FeaturesEngineeringSection
                 heading="Greenland General Transport Overview"
                 items={overview}
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
             />
-
-
             <CompanyTextOnBackground
                 heading="Sustainability and Environmental Responsibility"
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776762183/commitment-to-growth_qhzgjt.jpg"
@@ -135,7 +124,6 @@ function GreenlandGeneralTransportPage() {
                 text="Greenland General Transport actively supports the MAHY Khoory Group’s sustainability objectives through responsible fleet and route management."
                 endText="The division operates modern, fuel-efficient vehicles and applies route optimization technologies to reduce fuel consumption and emissions, with future initiatives including lower-emission and alternative-fuel vehicles."
             />
-
             <ValuesSection
                 width="max-w-7xl mx-auto"
                 title="Infrastructure and Fleet"

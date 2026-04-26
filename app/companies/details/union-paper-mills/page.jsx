@@ -135,11 +135,10 @@ function UnionPaperMills() {
 
       <KitchenMenu
         heading="Products and Manufacturing Capabilities"
-        text="Union Paper Mills produces a comprehensive range of recycled paperboard grades used in corrugated packaging and industrial applications. Its core product lines include: These products form the essential components of corrugated cartons, packaging sheets, and industrial boards. The mill is also capable of producing specialty grades on demand, serving applications such as gypsum liner, tube and core board, and other niche industrial uses.
-The manufacturing process involves advanced pulping and cleaning system and continuous paper-forming systems that ensure consistency, strength, and reliability across all grades.
-"
+        text="Union Paper Mills produces a comprehensive range of recycled paperboard grades used in corrugated packaging and industrial applications. Its core product lines include: These products form the essential components of corrugated cartons, packaging sheets, and industrial boards. The mill is also capable of producing specialty grades on demand, serving applications such as gypsum liner, tube and core board, and other niche industrial uses. The manufacturing process involves advanced pulping and cleaning system and continuous paper-forming systems that ensure consistency, strength, and reliability across all grades."
         items={features}
       />
+
       <PumpingServiceCards
         cards={upmCardsData}
         heading="Union Paper Mills"

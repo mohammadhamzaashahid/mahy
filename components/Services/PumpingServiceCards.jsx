@@ -33,8 +33,9 @@ const cardVariants = (direction = "left") => ({
 
 export default function PumpingServiceCards({
   heading = "The Easy Journey",
-  subHeading = "From Concept to Creation",
+  subHeading,
   tag = "[ PROCESS ]",
+  text,
   backgroundImage = "/gallery/gallery-1.jpg",
   cards = [
     {
@@ -58,6 +59,7 @@ export default function PumpingServiceCards({
       image: "/solar/solar-1.svg",
     },
   ],
+  endText,
 }) {
   return (
     <section className="relative py-24 md:py-32 text-white overflow-hidden">
@@ -90,6 +92,7 @@ export default function PumpingServiceCards({
               </span>
             )}
           </h2>
+          {text && <p className="mt-3">{text}</p>}
         </div>
 
         {/* Cards */}
@@ -118,7 +121,7 @@ export default function PumpingServiceCards({
                     <div className="relative w-8 h-8 md:w-10 md:h-10 opacity-80">
                       <Image
                         src={item.image}
-                        alt={item.title}
+                        alt={item.title || ""}
                         fill
                         className="object-contain"
                       />
@@ -138,6 +141,7 @@ export default function PumpingServiceCards({
             );
           })}
         </div>
+        {endText && <p className="mt-12">{endText}</p>}
       </div>
     </section>
   );

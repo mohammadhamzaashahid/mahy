@@ -1,10 +1,23 @@
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection";
+import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import TrustedAdvisorSection from "@/components/TrustedAdvisorSection";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import WhoWeAre from "@/components/UI/home/WhoWeAre";
 
 function MahyKhooryMotorsPage() {
+  const features = [
+    {
+      title: "Re-Entry into Automotive Sector",
+      text: "MAHY Khoory Motors represents the latest phase in the Group’s automotive evolution. With a legacy dating back to the early 20th century and previous partnerships with major global automotive brands, the MAHY Khoory Group re-entered the automotive sector in 2024 through its national partnership with Dongfeng Motor Corporation.",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+    },
+    {
+      title: "Strategic Expansion with New-Age Brands",
+      text: "Building on this foundation and recognizing the rapid advancement of Chinese automotive technology, the Group established MAHY Khoory Motors as a dedicated entity exclusively for OMODA and JAECOO, next-generation marques under the Chery Automobile umbrella. This move reflects strategic agility and a forward-looking response to growing demand for technologically advanced electric and hybrid vehicles in the UAE.",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+    }
+  ];
   const overview = [
     {
       heading: "Exclusive Partnership with OMODA & JAECOO",
@@ -52,7 +65,6 @@ function MahyKhooryMotorsPage() {
           "The establishment of MAHY Khoory Motors reflects the Group’s commitment to expanding its automotive footprint and supporting the region’s transition toward advanced hybrid, electric, and intelligent mobility solutions. As the exclusive partner for OMODA and JAECOO in the capital region, the company aims to deliver a refined customer experience backed by modern facilities, professional service standards, and a long-term vision aligned with the UAE’s mobility ambitions.",
         ]}
       />
-
       <WhoWeAre
         heading="Our Mission"
         topHeading=""
@@ -62,7 +74,6 @@ function MahyKhooryMotorsPage() {
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
         imageAlt="Our Mission"
       />
-
       <WhoWeAre
         topHeading=""
         heading="Our Vision"
@@ -72,32 +83,9 @@ function MahyKhooryMotorsPage() {
         showButton={false}
         invert={true}
       />
-      {/* <ValuesSection
-                title="Our Mission"
-                description="To offer intelligent and reliable mobility solutions that enhance everyday life through engineering excellence, professional service, and a deeply customercentric approach."
-                imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
-                imageAlt="Our Mission"
-                ctaHref={false}
-                width="max-w-7xl mx-auto"
-                imagePosition="right"
-            />
-            <ValuesSection
-                title="Our Vision"
-                description="To become a leading automotive provider in the Abu Dhabi & Western Region by championing innovative, sustainable, and technologically advanced mobility. MAHY Khoory Motors aims to set new standards in modern motoring by building a strong, futureready network and delivering a customer experience that exceeds expectations at every stage."
-                imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
-                imageAlt="Our Vision"
-                width="max-w-7xl mx-auto"
-                ctaHref={false}
-                imagePosition="left"
-            /> */}
-
-      <TrustedAdvisorSection
-        object="Employees"
+      <KitchenMenu
         heading="Background and Formation"
-        texts={[
-          "MAHY Khoory Motors represents the latest phase in the Group’s automotive evolution. With a legacy dating back to the early 20th century and previous partnerships with major global automotive brands, the MAHY Khoory Group re-entered the automotive sector in 2024 through its national partnership with Dongfeng Motor Corporation.",
-          "Building on this foundation and recognizing the rapid advancement of Chinese automotive technology, the Group established MAHY Khoory Motors as a dedicated entity exclusively for OMODA and JAECOO, next-generation marques under the Chery Automobile umbrella. This move reflects strategic agility and a forward-looking response to growing demand for technologically advanced electric and hybrid vehicles in the UAE.",
-        ]}
+        items={features}
       />
       <FeaturesEngineeringSection
         heading="MAHY Khoory Motors Overview"

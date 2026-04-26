@@ -27,7 +27,7 @@ const container2 = {
 
 function WhoWeAre({
   image,
-  topHeading = "Who We Are",
+  topHeading,
   heading = "MAHY Khoory",
   text = `MAHY Khoory Group of Companies is a Dubai-based diversified
 holding group comprising 25+ operating companies and business
@@ -59,9 +59,8 @@ traditional industries and future-focused sectors.`,
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className={`flex flex-col justify-center max-w-xl ${
-              invert ? "md:order-2" : "md:order-1"
-            }`}
+            className={`flex flex-col justify-center max-w-xl ${invert ? "md:order-2" : "md:order-1"
+              }`}
           >
             <h2 className="text-sm font-semibold tracking-[0.2em] text-gray-400 uppercase">
               {topHeading || ""}
@@ -89,9 +88,8 @@ traditional industries and future-focused sectors.`,
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className={`relative h-[420px] md:h-[560px] w-full overflow-hidden ${
-              invert ? "md:order-1" : "md:order-2"
-            }`}
+            className={`relative h-[420px] md:h-[560px] w-full overflow-hidden ${invert ? "md:order-1" : "md:order-2"
+              }`}
           >
             <Image
               src={image}

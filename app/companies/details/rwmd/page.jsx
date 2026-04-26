@@ -126,7 +126,6 @@ function RecyclableWasteManagementDivision() {
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
         imageAlt="Our Mission"
       />
-
       <WhoWeAre
         heading="Our Vision"
         topHeading=""
@@ -136,28 +135,11 @@ function RecyclableWasteManagementDivision() {
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
         imageAlt="Our Vision"
       />
-      {/* <ValuesSection
-        title="Mission"
-        description=""
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776682027/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"
-        imageAlt="Mission"
-        ctaHref={false}
-        imagePosition="right"
-      />
-      <ValuesSection
-        title="Vision"
-        description=""
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776761407/comprehensive-growth_irbplq.jpg"
-        imageAlt="Vision"
-        ctaHref={false}
-        imagePosition="left"
-      /> */}
       <KitchenMenu
         heading="Services and Capabilities"
         text="RWMD delivers comprehensive recyclable waste management services across industrial, commercial, and institutional sectors."
         items={services}
       />
-
       <PumpingServiceCards
         cards={cards}
         heading="Recyclable Waste Management Division"
@@ -165,7 +147,6 @@ function RecyclableWasteManagementDivision() {
         tag="[ RECYCLING DIVISION ]"
         backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
       />
-
       <FeaturesEngineeringSection
         heading="RWMD Overview"
         items={overview}

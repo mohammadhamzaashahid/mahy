@@ -1,7 +1,7 @@
 import CompaniesSectors from "@/components/CompaniesSectors";
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection";
-import SolarPanelImageGrid from "@/components/Services/SolarPanel/SolarPanelImageGrid";
-import TrustedAdvisorSection from "@/components/TrustedAdvisorSection";
+import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
+import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground";
@@ -41,6 +41,42 @@ function AlEtihadWasteManagementPage() {
     },
   ];
 
+  const features = [
+    {
+      title: "Establishment & Growth",
+      text: "Launched in 2013 in Muscat, Al Etihad Waste Management was established as a strategic partnership between the MAHY Khoory Group and a prominent local firm, enabling immediate market access and regulatory alignment.",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+    },
+    {
+      title: "Expansion & National Impact",
+      text: "Over the past decade, the company has expanded rapidly in scale, coverage, and operational capability through continuous investment in infrastructure, fleet, and workforce development.",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+    }
+  ];
+
+  const adpmCardsData = [
+    {
+      title: "Collection and Recycling Services",
+      text: "Collection of paper, plastics, metals, and other recyclable materials from residential, commercial, and institutional clients.",
+      image: "/solar/solar-1.svg",
+    },
+    {
+      title: "Waste Containers and Segregation Solutions",
+      text: "Deployment of bins, skips, and segregation systems to promote effective waste separation at source.",
+      image: "/solar/solar-2.svg",
+    },
+    {
+      title: "On-Site Industrial Services",
+      text: "Provision of balers, compactors, and customized collection schedules for industrial and high-volume waste generators.",
+      image: "/solar/solar-2.svg",
+    },
+    {
+      title: "Awareness and Engagement Programs",
+      text: "Community outreach and education initiatives to increase recycling participation and promote best practices.",
+      image: "/solar/solar-1.svg",
+    },
+  ];
+
   return (
     <main>
       {/* OVERVIEW */}
@@ -73,60 +109,17 @@ function AlEtihadWasteManagementPage() {
         invert={true}
       />
 
-      {/* MISSION */}
-      {/* <ValuesSection
-        title="Our Mission"
-        description="Al Etihad Waste Management’s mission is to advance sustainable waste practices in Oman by providing reliable, efficient, and world-class recycling and waste management services."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
-        imageAlt="Mission"
-        ctaHref={false}
-        imagePosition="right"
-      />
-
- 
-      <ValuesSection
-        title="Our Vision"
-        description="Its vision reflects the MAHY Khoory Group’s broader strategy of geographic expansion and environmental stewardship, positioning the company as a long-term partner in Oman’s transition toward a circular and resource-efficient economy."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
-        imageAlt="Vision"
-        ctaHref={false}
-        imagePosition="left"
-      /> */}
-
-      {/* BACKGROUND */}
-      <TrustedAdvisorSection
-        object="Employees"
+      <KitchenMenu
         heading="Establishment and Growth"
-        texts={[
-          "Launched in 2013 in Muscat, Al Etihad Waste Management was established as a strategic partnership between the MAHY Khoory Group and a prominent local firm, enabling immediate market access and regulatory alignment.",
-          "Over the past decade, the company has expanded rapidly in scale, coverage, and operational capability through continuous investment in infrastructure, fleet, and workforce development.",
-        ]}
+        items={features}
       />
 
-      {/* SERVICES */}
-      <SolarPanelImageGrid
-        subHeading={"Services and Capabilities"}
-        text={
-          "Al Etihad Waste Management focuses on recyclable waste collection, processing, and awareness, offering:"
-        }
-        items={[
-          {
-            title: "Collection and Recycling Services",
-            text: "Collection of paper, plastics, metals, and other recyclable materials from residential, commercial, and institutional clients.",
-          },
-          {
-            title: "Waste Containers and Segregation Solutions",
-            text: "Deployment of bins, skips, and segregation systems to promote effective waste separation at source.",
-          },
-          {
-            title: "On-Site Industrial Services",
-            text: "Provision of balers, compactors, and customized collection schedules for industrial and high-volume waste generators.",
-          },
-          {
-            title: "Awareness and Engagement Programs",
-            text: "Community outreach and education initiatives to increase recycling participation and promote best practices.",
-          },
-        ]}
+      <PumpingServiceCards
+        cards={adpmCardsData}
+        heading="Services and Capabilities"
+        tag="[ WASTE MANAGEMENT ]"
+        text={"Al Etihad Waste Management focuses on recyclable waste collection, processing, and awareness, offering:"}
+        backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
         endText="Collected materials are sorted and baled at company facilities before being directed to approved recycling processors or export markets."
       />
 

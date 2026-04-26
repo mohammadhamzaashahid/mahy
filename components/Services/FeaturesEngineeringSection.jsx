@@ -67,18 +67,18 @@ export default function FeaturesEngineeringSection({
                 className={` ${items.length % 5 === 0 ? "lg:px-6 lg:py-6" : "lg:px-10 lg:py-12"} lg:col-span-1 group bg-[#E3EBEA] px-6 md:px-8  py-8 md:py-10 min-h-[280px] md:min-h-[320px] lg:min-h-[340px] flex flex-col justify-between transition-colors duration-700 hover:bg-[#1F2C30]`}
               >
                 <div>
-                  <div className="mb-8 md:mb-10 h-10 w-10 rounded-full border border-current text-[#1F2C30] group-hover:text-white transition-colors duration-700" />
+                  <div className="mb-8 md:mb-4 size-6 rounded-full border border-current text-[#1F2C30] group-hover:text-white transition-colors duration-700" />
 
-                  <h3 className="text-[20px] md:text-[22px] font-semibold text-[#1F2C30] group-hover:text-white transition-colors duration-700">
+                  <h3 className="text-[16px] md:text-[18px] font-semibold text-[#1F2C30] group-hover:text-white transition-colors duration-700">
                     {item.heading}
                   </h3>
 
-                  <p className="mt-4 text-[#526064] group-hover:text-gray-300 leading-relaxed transition-colors duration-700">
+                  <p className="mt-2 text-[#526064] group-hover:text-gray-300 leading-relaxed transition-colors duration-700 text-sm">
                     {item.text}
                   </p>
 
                   {item.bullets && (
-                    <ul className="mt-3 list-disc pl-5 space-y-2 text-[15px]">
+                    <ul className="mt-3 list-disc pl-5 space-y-2 text-[13px]">
                       {item.bullets.map((textItem, j) => (
                         <li
                           key={j}
@@ -91,7 +91,7 @@ export default function FeaturesEngineeringSection({
                   )}
 
                   {item.lastText && (
-                    <p className="mt-3 text-[#526064] group-hover:text-gray-300 transition-colors duration-700 leading-relaxed">
+                    <p className="mt-2 text-[#526064] group-hover:text-gray-300 transition-colors duration-700 leading-relaxed text-sm">
                       {item.lastText}
                     </p>
                   )}
@@ -104,7 +104,12 @@ export default function FeaturesEngineeringSection({
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-80px" }}
-                className={`relative overflow-hidden min-h-[280px] md:min-h-[320px] lg:min-h-[340px] col-span-3 md:col-span-3 ${items.length % 5 === 0 ? "lg:col-span-4" : "lg:col-span-3"}  group`}
+                className={`relative overflow-hidden min-h-[280px] md:min-h-[320px] lg:min-h-[340px]  ${items.length === 2
+                  ? "col-span-2"
+                  : items.length % 5 === 0
+                    ? "lg:col-span-4 md:col-span-3"
+                    : "lg:col-span-3 md:col-span-3 col-span-3"}
+                      group`}
               >
                 <div className="absolute inset-0">
                   <Image

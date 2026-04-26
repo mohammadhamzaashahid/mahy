@@ -146,7 +146,7 @@ function AlKhooryEngineering() {
         ]}
       />
 
-       <WhoWeAre
+      <WhoWeAre
         heading="Our Mission"
         topHeading=""
         text="To engineer and deliver high‑performance, energy‑efficient pumping and fluid‑handling solutions that enhance infrastructure reliability, optimize resource utilization, and support sustainable development across the region. Al Khoory Engineering is committed to technical excellence, precise system integration, and dependable project execution—ensuring every installation meets the highest standards of safety, quality, and long‑term operational performance."
@@ -156,33 +156,15 @@ function AlKhooryEngineering() {
         imageAlt="Our Mission"
       />
       <WhoWeAre
-      topHeading=""
+        topHeading=""
         heading="Our Vision"
         text="To be the region’s most trusted engineering partner for advanced pumping systems by leading in innovation, customization, and intelligent system design. Al Khoory Engineering aims to shape the future of fluid‑handling technology through sustainable engineering practices, smart solutions, and continuous investment in technical capability and industry expertise."
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
         imageAlt="Our Vision"
-        
+
         showButton={false}
         invert={true}
-      /> 
-
-      {/* <ValuesSection
-        title="Our Mission "
-        description="Aligned with the MAHY Khoory Group’s corporate values, Al Khoory Engineering’s mission is to deliver high-performance pumping solutions that enhance infrastructure reliability, optimize resource utilization, and support sustainable development."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
-        imageAlt="Our Mission"
-        ctaHref={false}
-        imagePosition="right"
       />
-
-      <ValuesSection
-        title="Our Vision "
-        description="The company’s vision centers on technical excellence, customization, and intelligent system design, positioning Al Khoory Engineering as a trusted engineering partner for complex fluid-handling applications."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
-        imageAlt="Our Vision"
-        ctaHref={false}
-        imagePosition="left"
-      /> */}
 
       <PumpingServiceCards
         cards={pumpingCardsData}

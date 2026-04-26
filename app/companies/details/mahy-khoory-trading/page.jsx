@@ -1,9 +1,36 @@
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection";
+import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import SolarPanelQuoteGrid from "@/components/Services/SolarPanel/SolarPanelQuoteGrid";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import CompanyTextGrid from "@/components/UI/companies/detail/CompanyTextGrid";
 
 function MahyKhooryTradingPage() {
+  const features = [
+    {
+      text: "Channel Partners",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+    },
+    {
+      text: "MEP and EPC contractors",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+    },
+    {
+      text: "Real estate developers",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+    },
+    {
+      text: "Government and municipal utilities",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+    },
+    {
+      text: "Industrial and manufacturing operators",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+    },
+    {
+      text: "Hospitality and commercial facility owners",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+    },
+  ];
   const overview = [
     {
       heading: "Geographic Coverage",
@@ -45,14 +72,13 @@ function MahyKhooryTradingPage() {
   return (
     <main>
       <CompanyOverview
-      video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772794234/M.A.H.Y._KHOORY_CO._jtklrf.mp4"}
-      //   image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+        video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772794234/M.A.H.Y._KHOORY_CO._jtklrf.mp4"}
+        //   image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="MAHY Khoory Trading"
         texts={[
           "M.A.H.Y. Khoory Trading is the commercial and distribution arm of the MAHY Khoory Group, serving as a key supplier of industrial, electromechanical, and building services equipment across the GCC and selected international markets. The division plays a central role in supporting infrastructure, construction, industrial, and utility sectors through the supply of reliable, high-quality products sourced from leading global manufacturers. With decades of experience in import, distribution, and project supply, M.A.H.Y. Khoory Trading has established itself as a trusted partner for contractors, developers, and institutional clients, delivering both products and technical support at scale.",
         ]}
       />
-
       <CompanyTextGrid
         showImage={false}
         heading="Market Experience and Project Support"
@@ -62,29 +88,13 @@ function MahyKhooryTradingPage() {
         image="/MAHY.png"
         rightText="The division works closely with consultants, contractors, and developers from early design stages through delivery, commissioning, and after-sales support. This project-oriented approach ensures technical compatibility, timely execution, and long-term system reliability."
       />
-
-      <SolarPanelQuoteGrid
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773042594/Dubai_business_district_at_night_with_illuminated_skyscrapers.jpg_inqewf.jpg"
+      <KitchenMenu
         heading="Client Segments"
-        text="The Trading division serves a diverse client base that includes"
-        // text2="Looking ahead, M.A.H.Y. Khoory & Co. LLC continues to guide the Group with a long-term perspective focused on controlled diversification, geographic expansion, and technology adoption. Ongoing investment in digital initiatives and operational optimization supports the Group’s ambition to remain competitive and resilient in evolving markets."
-        items={[
-          "Channel Partners",
-          "MEP and EPC contractors",
-          "Real estate developers",
-          "Government and municipal utilities",
-          "Industrial and manufacturing operators",
-          "Hospitality and commercial facility owners",
-        ]}
-        quoteText="Its ability to supply multiple product categories under a single commercial platform makes it a preferred partner for large, multi-discipline projects."
-      // quoteItems={[
-      //   "Controlled Diversification Strategy",
-      //   "Geographic Expansion Across Regions",
-      //   "Investment in Digital Transformation",
-      //   "Focus on Sustainability & Innovation",
-      // ]}
+        text={"Its ability to supply multiple product categories under a single commercial platform makes it a preferred partner for large, multi-discipline projects. The Trading division serves a diverse client base that includes:"}
+        items={features}
       />
       <FeaturesEngineeringSection
+        heading="Company Overview"
         text={
           "M.A.H.Y. Khoory Trading is a GCC-wide procurement and distribution division that delivers compliant, energy-efficient solutions through strong infrastructure, technical support, and global partnerships, driving consistent quality, operational efficiency, and long-term growth across the Group."
         }

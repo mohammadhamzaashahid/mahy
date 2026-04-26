@@ -143,7 +143,7 @@ function AllCompaniesPage() {
             ],
             image:
                 "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774438739/12_-_etihad-waste-management_y5mnza.jpg",
-            href: "/companies/details/etihad-waste-management",
+            href: "/companies/details/al-etihad-waste-management-services-llc",
         },
         {
             title: "Clean Earth LLC",

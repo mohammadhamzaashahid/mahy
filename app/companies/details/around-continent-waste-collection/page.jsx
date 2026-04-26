@@ -144,20 +144,20 @@ function AroundContinentWasteCollection() {
       {/* <ValuesSection
         title="Mission"
         description=""
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
-        imageAlt="Mission"
-        ctaHref={false}
-        imagePosition="right"
-      />
+          imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+          imageAlt="Mission"
+          ctaHref={false}
+          imagePosition="right"
+        />
 
-      <ValuesSection
-        title="Vision"
-        description=""
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
-        imageAlt="Vision"
-        ctaHref={false}
-        imagePosition="left"
-      /> */}
+        <ValuesSection
+          title="Vision"
+          description=""
+          imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+          imageAlt="Vision"
+          ctaHref={false}
+          imagePosition="left"
+        /> */}
 
       <KitchenMenu
         heading="Services and Licensed Capabilities"

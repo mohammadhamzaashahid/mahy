@@ -64,7 +64,7 @@ export const companyDescriptions = [
   {
     name: "Etihad Waste Management",
     logo: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900738/al-etihad_iml1nr.png",
-    href: "/companies/details/etihad-waste-management",
+    href: "/companies/details/al-etihad-waste-management-services-llc",
     preview:
       "Provides large-scale recyclable waste collection and processing services across Oman, supporting national sustainability goals and circular economy initiatives.",
   },

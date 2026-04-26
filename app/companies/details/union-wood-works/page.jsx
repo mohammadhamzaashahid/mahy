@@ -1,5 +1,6 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection"
+import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu"
 import SolarPanelQuoteGrid from "@/components/Services/SolarPanel/SolarPanelQuoteGrid"
 import TrustedAdvisorSection from "@/components/TrustedAdvisorSection"
 import ValuesSection from "@/components/UI/about-us/ValuesSection"
@@ -8,6 +9,18 @@ import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTex
 import WhoWeAre from "@/components/UI/home/WhoWeAre"
 
 function UnionWoodWorksPage() {
+    const services = [
+        {
+            title: "Sustainable Origins",
+            text: "Established as part of MAHY Khoory Group’s manufacturing expansion, Union Wood Works was created to address two parallel challenges: the growing volume of wood waste and increasing market demand for cost-effective, sustainable alternatives to solid timber.",
+            image: "/gallery/gallery-1.jpg",
+        },
+        {
+            title: "Advanced Recycling Facility",
+            text: "Since its inception, the company has evolved into one of the region’s most advanced recycled-wood facilities, supporting both domestic demand and export markets.",
+            image: "/gallery/gallery-1.jpg",
+        }
+    ];
     const overview = [
         {
             heading: "Operations and Market Reach",
@@ -83,29 +96,9 @@ function UnionWoodWorksPage() {
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
                 imageAlt="Our Vision"
             />
-
-            {/* <ValuesSection
-                title="Our Mission"
-                imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
-                imageAlt="Our Mission"
-                ctaHref={false}
-                imagePosition="right"
-            />
-            <ValuesSection
-                title="Our Vision"
-                description="Its vision is to become the preferred eco-wood supplier across the GCC, driven by advanced processing technology, operational excellence, and strict environmental compliance."
-                imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
-                imageAlt="Our Vision"
-                ctaHref={false}
-                imagePosition="left"
-            /> */}
-            <TrustedAdvisorSection
-                object="Employees"
+            <KitchenMenu
                 heading="Background and Development"
-                texts={[
-                    "Established as part of MAHY Khoory Group’s manufacturing expansion, Union Wood Works was created to address two parallel challenges: the growing volume of wood waste and increasing market demand for cost-effective, sustainable alternatives to solid timber.",
-                    "Since its inception, the company has evolved into one of the region’s most advanced recycled-wood facilities, supporting both domestic demand and export markets."
-                ]}
+                items={services}
             />
             <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
                 <CompaniesSectors

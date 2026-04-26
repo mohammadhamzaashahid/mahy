@@ -1,5 +1,7 @@
 import CompaniesSectors from "@/components/CompaniesSectors";
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection";
+import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
+import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import SolarPanelImageGrid from "@/components/Services/SolarPanel/SolarPanelImageGrid";
 import TrustedAdvisorSection from "@/components/TrustedAdvisorSection";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
@@ -37,6 +39,40 @@ function AlDhafraWasteCollectionPage() {
     },
   ];
 
+  const features = [
+    {
+      text: "Al Dhafra Waste Collection was established to replicate and extend the Group’s successful recycling model implemented in Dubai. The company was formed to serve Abu Dhabi’s growing demand for organized, large-scale recyclable waste collection while strengthening local supply chains for recycled paper manufacturing.",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+    },
+    {
+      text: "By working closely with Al Dhafra Paper Manufacturing and Union Paper Mills, the company helps close the material loop locally, reducing reliance on long-distance transport and ensuring a stable flow of recovered raw materials into the Group’s recycling operations.",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+    }
+  ];
+
+  const adpmCardsData = [
+    {
+      title: "Paper and Cardboard Collection",
+      text: "Scheduled collection services for commercial, residential, and industrial clients, ensuring consistent feedstock supply for recycling.",
+      image: "/solar/solar-1.svg",
+    },
+    {
+      title: "Recyclable Segregation and Handling",
+      text: "On-site sorting support, provision of baling equipment, and customized solutions for high-volume waste generators.",
+      image: "/solar/solar-2.svg",
+    },
+    {
+      title: "Multi-Material Recycling Services",
+      text: "In addition to paper and cardboard, the company manages plastics, metals, and other recyclable materials, supporting clients with comprehensive recycling solutions.",
+      image: "/solar/solar-2.svg",
+    },
+    {
+      title: "Services",
+      text: "These services are designed to meet the needs of businesses, institutions, and communities seeking compliant and efficient recycling partners.",
+      image: "/solar/solar-1.svg",
+    },
+  ];
+
   return (
     <main>
       <CompanyOverview
@@ -50,7 +86,6 @@ function AlDhafraWasteCollectionPage() {
           "Operating in close coordination with the Group’s recycling and paper manufacturing entities, Al Dhafra Waste Collection ensures that recovered materials from Abu Dhabi are efficiently collected, processed, and directed into the Group’s circular manufacturing value chain. Its operations are aligned with the Group’s long-term objective of sustainable waste diversion and resource recovery.",
         ]}
       />
-
       <WhoWeAre
         heading="Our Mission"
         topHeading=""
@@ -60,7 +95,6 @@ function AlDhafraWasteCollectionPage() {
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
         imageAlt="Our Mission"
       />
-
       <WhoWeAre
         topHeading=""
         heading="Our Vision"
@@ -70,51 +104,16 @@ function AlDhafraWasteCollectionPage() {
         showButton={false}
         invert={true}
       />
-
-      {/* <ValuesSection
-                title="Our Mission"
-                description="The mission of Al Dhafra Waste Collection is to deliver reliable, efficient, and environmentally responsible recyclable waste collection services across Abu Dhabi, supporting the Group’s broader sustainability vision."
-                imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
-                imageAlt="Our Mission"
-                ctaHref={false}
-                imagePosition="right"
-            />
-            <ValuesSection
-                title="Our Vision"
-                description="Its vision is to maximize recycling rates and resource recovery within the emirate, contributing to national waste reduction goals and supporting Abu Dhabi’s transition toward a more circular and sustainable economy."
-                imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
-                imageAlt="Our Vision"
-                ctaHref={false}
-                imagePosition="left"
-            /> */}
-      <TrustedAdvisorSection
-        object="Employees"
+      <KitchenMenu
         heading="Background and Development"
-        texts={[
-          "Al Dhafra Waste Collection was established to replicate and extend the Group’s successful recycling model implemented in Dubai. The company was formed to serve Abu Dhabi’s growing demand for organized, large-scale recyclable waste collection while strengthening local supply chains for recycled paper manufacturing.",
-          "By working closely with Al Dhafra Paper Manufacturing and Union Paper Mills, the company helps close the material loop locally, reducing reliance on long-distance transport and ensuring a stable flow of recovered raw materials into the Group’s recycling operations.",
-        ]}
+        items={features}
       />
-      <SolarPanelImageGrid
-        subHeading={"Services and Capabilities"}
-        text={
-          "Al Dhafra Waste Collection provides a range of recyclable waste management services, including:"
-        }
-        items={[
-          {
-            title: "Paper and Cardboard Collection",
-            text: "Scheduled collection services for commercial, residential, and industrial clients, ensuring consistent feedstock supply for recycling.",
-          },
-          {
-            title: "Recyclable Segregation and Handling",
-            text: "On-site sorting support, provision of baling equipment, and customized solutions for high-volume waste generators.",
-          },
-          {
-            title: "Multi-Material Recycling Services",
-            text: "In addition to paper and cardboard, the company manages plastics, metals, and other recyclable materials, supporting clients with comprehensive recycling solutions.",
-          },
-        ]}
-        endText="These services are designed to meet the needs of businesses, institutions, and communities seeking compliant and efficient recycling partners."
+      <PumpingServiceCards
+        cards={adpmCardsData}
+        heading="Services and Capabilities"
+        tag="[ WASTE COLLECTION ]"
+        text={"Al Dhafra Waste Collection provides a range of recyclable waste management services, including:"}
+        backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
       />
       <FeaturesEngineeringSection
         heading="Al Dhafra Waste Collection LLC Overview"
