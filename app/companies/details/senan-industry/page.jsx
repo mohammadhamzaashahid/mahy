@@ -1,17 +1,19 @@
 import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection";
 import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
+import { image } from "d3";
 
 function SenanIndustryPage() {
   const services = [
     {
       title: "Plastic Jerrycans",
       text: "Used for automotive oils, lubricants, and coolants.",
-      image: "/gallery/gallery-1.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777221847/white-plastic-jerry-cans-with-red-caps_dpavcl.jpg",
     },
     {
       title: "Industrial Containers and Drums",
       text: "Designed for chemicals and agrochemicals.",
+      image : "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777221847/white-plastic-jerry-cans-with-red-caps_dpavcl.jpg"
     },
     {
       title: "Bottles and Containers",

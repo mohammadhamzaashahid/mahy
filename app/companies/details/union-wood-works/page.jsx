@@ -102,7 +102,7 @@ function UnionWoodWorksPage() {
             />
             <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
                 <CompaniesSectors
-                    image={"/gallery/gallery-1.jpg"}
+                    image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777220684/3d-view-puzzle-pieces_ng78lk.jpg"}
                     title={"Products and Manufacturing Capabilities"}
                     texts={[
                         "Union Wood Works specializes in the production of compressed wood blocks (eco-wood blocks). These blocks are manufactured by processing reclaimed wood waste such as sawdust, shavings, and scrap timber combined with bonding agents and compressed under high pressure to achieve consistent density and strength.",

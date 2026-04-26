@@ -32,7 +32,7 @@ function KitchenMenu({
                                 exit={{ opacity: 0, scale: 1.02 }}
                                 transition={{ duration: 0.45, ease: "easeOut" }}
                                 className="relative w-full h-100 md:h-150">
-                                <Image src={items[currentIndex].image} alt="Kitchen Menu" fill style={{ objectFit: "cover" }} />
+                                <Image src={items[currentIndex].image} alt="" fill style={{ objectFit: "cover" }} />
                             </motion.div>
                         </AnimatePresence>
                     </div>

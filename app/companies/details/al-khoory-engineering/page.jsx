@@ -152,14 +152,14 @@ function AlKhooryEngineering() {
         text="To engineer and deliver high‑performance, energy‑efficient pumping and fluid‑handling solutions that enhance infrastructure reliability, optimize resource utilization, and support sustainable development across the region. Al Khoory Engineering is committed to technical excellence, precise system integration, and dependable project execution—ensuring every installation meets the highest standards of safety, quality, and long‑term operational performance."
         showButton={false}
         invert={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777223831/Our_Mission_bnyyqu.jpg"
         imageAlt="Our Mission"
       />
       <WhoWeAre
         topHeading=""
         heading="Our Vision"
         text="To be the region’s most trusted engineering partner for advanced pumping systems by leading in innovation, customization, and intelligent system design. Al Khoory Engineering aims to shape the future of fluid‑handling technology through sustainable engineering practices, smart solutions, and continuous investment in technical capability and industry expertise."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777223845/Copilot_20260425_160109_wxccao.png"
         imageAlt="Our Vision"
 
         showButton={false}
@@ -180,7 +180,7 @@ function AlKhooryEngineering() {
         //   "M.A.H.Y. Khoory Trading is a GCC-wide procurement and distribution division that delivers compliant, energy-efficient solutions through strong infrastructure, technical support, and global partnerships, driving consistent quality, operational efficiency, and long-term growth across the Group."
         // }
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777222436/Copilot_20260425_153801_nxlyei.png"
       />
     </main>
   );

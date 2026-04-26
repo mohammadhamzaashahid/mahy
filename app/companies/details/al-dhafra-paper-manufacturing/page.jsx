@@ -126,15 +126,15 @@ function AlDhafraPaper() {
         text="To manufacture high‑quality recycled containerboard that drives sustainable packaging solutions across the region. Al Dhafra Paper Manufacturing is committed to transforming 100% recovered wastepaper into reliable, eco‑friendly products through advanced technology, operational excellence, and responsible resource management—supporting the MAHY Khoory Group’s vision of circular manufacturing and environmental stewardship."
         showButton={false}
         invert={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777222146/Our_Mission_2_rxnnh3.jpg"
         imageAlt="Our Mission"
       />
 
       <WhoWeAre
         topHeading=""
         heading="Our Vision"
-        text="To be the Middle East’s benchmark for sustainable containerboard production by leading in innovation, efficiency, and environmental responsibility. Al Dhafra Paper Manufacturing aims to strengthen regional self‑sufficiency in recycled paper, expand the use of recovered fibre, and continuously advance manufacturing practices that contribute to a cleaner, greener future."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+        text="o be the Middle East’s benchmark for sustainable containerboard production by leading in innovation, efficiency, and environmental responsibility. Al Dhafra Paper Manufacturing aims to strengthen regional self‑sufficiency in recycled paper, expand the use of recovered fibre, and continuously advance manufacturing practices that contribute to a cleaner, greener future."
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777222159/Our_Vision_idubjb.jpg"
         imageAlt="Our Vision"
 
         showButton={false}

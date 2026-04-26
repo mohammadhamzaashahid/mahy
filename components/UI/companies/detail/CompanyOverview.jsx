@@ -97,7 +97,7 @@ function CompanyOverview({
                   transition={{ duration: 0.5, delay: 0.25 + i * 0.1 }}
                   className="text-white/90 leading-relaxed text-sm sm:text-[12px] md:text-[15px]"
                 >
-                  {text}
+                  {text || ''}
                 </motion.p>
               ))}
             </div>

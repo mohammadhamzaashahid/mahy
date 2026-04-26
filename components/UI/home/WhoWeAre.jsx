@@ -48,7 +48,7 @@ traditional industries and future-focused sectors.`,
   const router = useRouter();
 
   return (
-    <section className="relative py-15 md:py-20 overflow-hidden">
+    <section className="relative py-12 md:py-14 overflow-hidden">
       <div className="max-w-7xl mx-auto px-5">
         <div
           className="grid grid-cols-1 md:grid-cols-2
@@ -66,7 +66,7 @@ traditional industries and future-focused sectors.`,
               {topHeading || ""}
             </h2>
 
-            <p className="font-semibold text-4xl md:text-5xl mt-3 leading-tight text-slate-900">
+            <p className="font-semibold text-4xl md:text-5xl mt-3 leading-tight t-base">
               {heading}
             </p>
 

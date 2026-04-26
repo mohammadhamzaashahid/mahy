@@ -36,11 +36,10 @@ export default function FeaturesEngineeringSection({
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-80px" }} // ✅ FIXED trigger
+        viewport={{ once: true, margin: "-80px" }} 
       >
-        {/* Heading */}
         <div className="text-center max-w-[880px] mx-auto">
-          <h2 className="text-[30px] sm:text-[34px] md:text-[46px] lg:text-[54px] font-semibold leading-tight text-[#1E2629]">
+          <h2 className="text-[30px] sm:text-[34px] md:text-[46px] lg:text-[54px] font-semibold leading-tight t-base">
             {heading}
           </h2>
         </div>
@@ -51,7 +50,6 @@ export default function FeaturesEngineeringSection({
           </p>
         )}
 
-        {/* Cards */}
         <div className={`mt-12 md:mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 ${items.length % 5 === 0 ? "lg:grid-cols-4 lg:gap-2" : "lg:grid-cols-3 lg:gap-10"}  auto-rows-fr gap-6 md:gap-8`}>
           {items.map((item, i) => {
             const isLastSpecial =

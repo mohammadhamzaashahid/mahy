@@ -5,32 +5,38 @@ import CompanyTextGrid from "@/components/UI/companies/detail/CompanyTextGrid";
 
 function MahyKhooryGroupPage() {
   const features = [
-    {
-      text: "Centralized & Regional Warehousing",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
-    },
+    
     {
       text: "Advanced Automated Manufacturing Facilities",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124189/Manufactring_hsht41.jpg",
+    },
+    {
+      text: "Centralized & Regional Warehousing",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124123/Engineering_k7gzg4.jpg",
     },
     {
       text: "Specialized Workshops & Technical Capabilities",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777030779/3_a8sput.jpg",
     },
     {
       text: "Integrated Logistics & Supply Chain Network",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124121/transp_mqqea6.jpg",
     },
     {
       text: "By leveraging its established expertise across pumping systems, electromechanical solutions, recycling, and environmental services, the MAHY Khoory Group is well positioned to deliver sustainable long-term value for customers, partners, and stakeholders.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124203/Waste_Management_s1kndw.jpg",
     }
   ];
   const overview = [
     {
       heading: "Operating Across Industries and Markets",
       text: "As a holding company, M.A.H.Y. Khoory & Co. LLC provides strategic leadership, governance, and centralized oversight across the Group’s subsidiaries. The holding structure is designed to ensure clarity of ownership, consistency in governance standards, and alignment with the Group’s long-term strategic objectives. While each subsidiary operates as an independent legal entity with responsibility for its day-to-day operations and sector-specific performance, all companies function within a unified framework of governance, values, and performance expectations established at the Group level.",
-      lastText: "The MAHY Khoory Group employs over 3,100 professionals representing more than 30 nationalities, reflecting a diverse and experienced workforce that supports the Group’s operations across its various sectors and geographies. The Group places strong emphasis on professional development, technical capability, and operational discipline, enabling its companies to deliver reliable solutions and maintain long-standing relationships with customers, partners, and suppliers.",
+      lastText: "",
+    },
+    {
+      heading: "Our Workforce",
+      text: "The MAHY Khoory Group employs over 3,100 professionals representing more than 30 nationalities, reflecting a diverse and experienced workforce that supports the Group’s operations across its various sectors and geographies. The Group places strong emphasis on professional development, technical capability, and operational discipline, enabling its companies to deliver reliable solutions and maintain long-standing relationships with customers, partners, and suppliers.",
+      lastText: "",
     },
     {
       heading: "Partnerships",
@@ -47,7 +53,8 @@ function MahyKhooryGroupPage() {
   return (
     <main>
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+      video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1770212592/Large-Industrial-Pumping-Structure-Releasing-Waste-2025-12-09-08-06-36-Utc_heqlt4.mp4"}
+        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="MAHY Khoory Group"
         texts={[
           "M.A.H.Y. Khoory & Co. LLC is the holding company of the MAHY Khoory Group, a diversified enterprise group headquartered in Dubai with a distinguished heritage dating back to 1930. Over more than nine decades, the Group has grown from a pioneering entrepreneurial venture into a well-established organization with a strong reputation for technical expertise, operational reliability, and long-term value creation across the Middle East and selected international markets.",
@@ -71,7 +78,7 @@ function MahyKhooryGroupPage() {
       <FeaturesEngineeringSection
         heading="Company Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777222436/Copilot_20260425_153801_nxlyei.png"
       />
     </main>
   );
