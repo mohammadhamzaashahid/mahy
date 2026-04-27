@@ -8,27 +8,27 @@ function MahyKhooryTradingPage() {
   const features = [
     {
       text: "Channel Partners",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273389/Channel_Partners_dnqnjz.jpg",
     },
     {
       text: "MEP and EPC contractors",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273426/MEP_and_PEC_Contractors_io2u3c.jpg",
     },
     {
       text: "Real estate developers",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273409/Real_Estate_Develolopers_gqozxh.jpg",
     },
     {
       text: "Government and municipal utilities",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273398/Government_and_Municipality_na3sgn.jpg",
     },
     {
       text: "Industrial and manufacturing operators",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273420/Industrial_and_Manufacturing_mgdvo9.jpg",
     },
     {
       text: "Hospitality and commercial facility owners",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273419/Hospitality_and_Commercial_xktgcp.jpg",
     },
   ];
   const overview = [

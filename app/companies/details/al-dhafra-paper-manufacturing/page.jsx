@@ -133,7 +133,7 @@ function AlDhafraPaper() {
       <WhoWeAre
         topHeading=""
         heading="Our Vision"
-        text="o be the Middle East’s benchmark for sustainable containerboard production by leading in innovation, efficiency, and environmental responsibility. Al Dhafra Paper Manufacturing aims to strengthen regional self‑sufficiency in recycled paper, expand the use of recovered fibre, and continuously advance manufacturing practices that contribute to a cleaner, greener future."
+        text="To be the Middle East’s benchmark for sustainable containerboard production by leading in innovation, efficiency, and environmental responsibility. Al Dhafra Paper Manufacturing aims to strengthen regional self‑sufficiency in recycled paper, expand the use of recovered fibre, and continuously advance manufacturing practices that contribute to a cleaner, greener future."
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777222159/Our_Vision_idubjb.jpg"
         imageAlt="Our Vision"
 

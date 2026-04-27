@@ -36,7 +36,7 @@ export default function FeaturesEngineeringSection({
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-80px" }} 
+        viewport={{ once: true, margin: "-80px" }}
       >
         <div className="text-center max-w-[880px] mx-auto">
           <h2 className="text-[30px] sm:text-[34px] md:text-[46px] lg:text-[54px] font-semibold leading-tight t-base">
@@ -50,7 +50,9 @@ export default function FeaturesEngineeringSection({
           </p>
         )}
 
-        <div className={`mt-12 md:mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 ${items.length % 5 === 0 ? "lg:grid-cols-4 lg:gap-2" : "lg:grid-cols-3 lg:gap-10"}  auto-rows-fr gap-6 md:gap-8`}>
+        <div
+          className={`mt-12 md:mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 ${items.length % 5 === 0 ? "lg:grid-cols-4 lg:gap-2" : "lg:grid-cols-3 lg:gap-10"}  auto-rows-fr gap-6 md:gap-8`}
+        >
           {items.map((item, i) => {
             const isLastSpecial =
               i === items.length - 1 && items.length % 3 !== 0;
@@ -102,11 +104,13 @@ export default function FeaturesEngineeringSection({
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-80px" }}
-                className={`relative overflow-hidden min-h-[280px] md:min-h-[320px] lg:min-h-[340px]  ${items.length === 2
-                  ? "col-span-2"
-                  : items.length % 5 === 0
-                    ? "lg:col-span-4 md:col-span-3"
-                    : "lg:col-span-3 md:col-span-3 col-span-3"}
+                className={`relative overflow-hidden min-h-[280px] md:min-h-[320px] lg:min-h-[340px]  ${
+                  items.length === 2
+                    ? "col-span-2"
+                    : items.length % 5 === 0
+                      ? "lg:col-span-4 md:col-span-3"
+                      : "lg:col-span-3 md:col-span-3 col-span-3"
+                }
                       group`}
               >
                 <div className="absolute inset-0">
@@ -120,16 +124,15 @@ export default function FeaturesEngineeringSection({
 
                 <div className="absolute inset-0 bg-black/55 group-hover:bg-black/65 transition-colors duration-700" />
 
-                <div className="relative z-10 h-full p-6 md:p-8 lg:p-12 flex items-end">
-                  <div className="max-w-md">
+                <div className="relative z-10 h-full">
+                  <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 w-[65%] text-left">
+                    {" "}
                     <h3 className="text-[20px] md:text-[22px] font-semibold text-white">
                       {item.heading}
                     </h3>
-
                     <p className="mt-3 text-gray-200 leading-relaxed">
                       {item.text}
                     </p>
-
                     {item.bullets && (
                       <ul className="mt-3 list-disc pl-5 space-y-2 text-[15px]">
                         {item.bullets.map((textItem, j) => (
@@ -142,7 +145,6 @@ export default function FeaturesEngineeringSection({
                         ))}
                       </ul>
                     )}
-
                     {item.lastText && (
                       <p className="mt-3 text-[#b9b9b9] group-hover:text-gray-300 transition-colors duration-700 leading-relaxed">
                         {item.lastText}

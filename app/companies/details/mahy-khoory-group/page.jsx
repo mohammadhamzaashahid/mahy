@@ -2,6 +2,7 @@ import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineerin
 import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import CompanyTextGrid from "@/components/UI/companies/detail/CompanyTextGrid";
+import { text } from "d3";
 
 function MahyKhooryGroupPage() {
   const features = [
@@ -23,7 +24,8 @@ function MahyKhooryGroupPage() {
       image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124121/transp_mqqea6.jpg",
     },
     {
-      text: "By leveraging its established expertise across pumping systems, electromechanical solutions, recycling, and environmental services, the MAHY Khoory Group is well positioned to deliver sustainable long-term value for customers, partners, and stakeholders.",
+      text: "Headquartered in Dubai, the MAHY Khoory Group maintains a strong operational footprint across the United Arab Emirates, with offices, warehouses, manufacturing facilities, and service centers in Abu Dhabi, Al Ain, Sharjah, and Ras Al Khaimah. Beyond the UAE, the Group serves customers and supports projects in more than 29 countries, spanning the GCC, Africa, and South Asia. This geographic reach allows the Group to combine deep local market knowledge with the capability to support regional and international projects of varying scale and complexity.",
+      // text: "By leveraging its established expertise across pumping systems, electromechanical solutions, recycling, and environmental services, the MAHY Khoory Group is well positioned to deliver sustainable long-term value for customers, partners, and stakeholders.",
       image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124203/Waste_Management_s1kndw.jpg",
     }
   ];

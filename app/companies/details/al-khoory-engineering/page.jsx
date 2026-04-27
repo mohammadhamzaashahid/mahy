@@ -180,7 +180,7 @@ function AlKhooryEngineering() {
         //   "M.A.H.Y. Khoory Trading is a GCC-wide procurement and distribution division that delivers compliant, energy-efficient solutions through strong infrastructure, technical support, and global partnerships, driving consistent quality, operational efficiency, and long-term growth across the Group."
         // }
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777222436/Copilot_20260425_153801_nxlyei.png"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273529/AKE_-_Bottom_Image_bjsv2n.jpg"
       />
     </main>
   );

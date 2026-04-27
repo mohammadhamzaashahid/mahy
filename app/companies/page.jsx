@@ -92,7 +92,7 @@ async function Companies({ searchParams }) {
       name: "Union Paper Mills",
       slug: "union-paper-mills",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900739/unionpm_s0fddv.png",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Union_Paper_Mills_yg4zsr.png",
       sector: "manufacturing",
       size: "large",
       location: "uae",
@@ -103,7 +103,7 @@ async function Companies({ searchParams }) {
       name: "Al Dhafra Paper Manufacturing",
       slug: "al-dhafra-paper-manufacturing",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774901240/al-dfhara-ppr_xvf7ur.png",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272940/Al_Dhafra_Paper_Manufacturing_ibg1np.png",
       sector: "manufacturing",
       size: "large",
       location: "uae",
@@ -114,7 +114,7 @@ async function Companies({ searchParams }) {
       name: "Union Wood Works",
       slug: "union-wood-works",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900738/unw_jcgehq.png",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Union_Wood_Works_zah5u9.png",
       sector: "manufacturing",
       size: "medium",
       location: "uae",
@@ -125,7 +125,7 @@ async function Companies({ searchParams }) {
       name: "Recyclable Waste Management Division",
       slug: "rwmd",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900739/unionpm_s0fddv.png",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Al_Dhafra_Waste_Collection_yihnwv.png",
       sector: "waste management",
       size: "large",
       location: "uae",
@@ -136,7 +136,7 @@ async function Companies({ searchParams }) {
       name: "Al Dhafra Waste Collection",
       slug: "al-dhafra-waste-collection",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900738/al-dhafra_uvrwjp.png",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Al_Dhafra_Waste_Collection_yihnwv.png",
       sector: "waste management",
       size: "medium",
       location: "uae",
@@ -180,7 +180,7 @@ async function Companies({ searchParams }) {
       name: "Solid Waste Management Division",
       slug: "solid-waste-management-division",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900739/unionpm_s0fddv.png",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Al_Dhafra_Waste_Collection_yihnwv.png",
       sector: "waste management",
       size: "small",
       location: "uae",
