@@ -148,7 +148,7 @@ function UnionWoodWorksPage() {
             <div className="mt-8 md:mt-10">
                 <CompanyTextOnBackground
                     heading="Innovation and Strategic Direction"
-                    image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+                    image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276347/UWW_base_image_gvtyky.png"
                     align="left"
                     text="The company continuously invests in process optimization and product innovation. Recent initiatives include:"
                     items={[
