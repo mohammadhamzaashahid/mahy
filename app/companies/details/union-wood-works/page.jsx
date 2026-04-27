@@ -13,12 +13,12 @@ function UnionWoodWorksPage() {
         {
             title: "Sustainable Origins",
             text: "Established as part of MAHY Khoory Group’s manufacturing expansion, Union Wood Works was created to address two parallel challenges: the growing volume of wood waste and increasing market demand for cost-effective, sustainable alternatives to solid timber.",
-            image: "/gallery/gallery-1.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275351/Sustainable_Origins_ttvxce.jpg",
         },
         {
             title: "Advanced Recycling Facility",
             text: "Since its inception, the company has evolved into one of the region’s most advanced recycled-wood facilities, supporting both domestic demand and export markets.",
-            image: "/gallery/gallery-1.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275348/Advance_recycling_n7hyqc.jpg",
         }
     ];
     const overview = [
@@ -126,13 +126,10 @@ function UnionWoodWorksPage() {
                     endText={"The production process is highly automated, ensuring repeatable quality and large-volume output."}
                 />
             </section>
-            <FeaturesEngineeringSection
-                heading="Union Wood Works Overview"
-                items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
-            />
-            <SolarPanelQuoteGrid
+
+             <SolarPanelQuoteGrid
                 heading="Infrastructure and Technology"
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275477/IMG_gzq8fj.png"
                 text="Union Wood Works operates a state-of-the-art automated facility, incorporating:"
                 items={[
                     "Industrial shredders and material preparation systems",
@@ -142,6 +139,12 @@ function UnionWoodWorksPage() {
                 ]}
                 quoteText="This infrastructure allows the plant to produce thousands of blocks per day with high consistency, short lead times, and minimal manual intervention."
             />
+            <FeaturesEngineeringSection
+                heading="Union Wood Works Overview"
+                items={overview}
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275858/IMG_-_2_stmfpe.png"
+            />
+           
             <div className="mt-8 md:mt-10">
                 <CompanyTextOnBackground
                     heading="Innovation and Strategic Direction"
