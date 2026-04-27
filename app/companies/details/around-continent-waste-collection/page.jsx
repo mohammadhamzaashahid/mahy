@@ -10,27 +10,27 @@ function AroundContinentWasteCollection() {
     {
       title: "General Waste Collection and Transportation",
       text: "Collection and transport of non-recyclable general waste from commercial, industrial, and project sites to approved disposal facilities.",
-      image: "/gallery/gallery-1.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291655/general_waste_collection_and_transportation_nxxytu.jpg",
     },
     {
       title: "Construction and Demolition (C&D) Waste",
       text: "Handling and transportation of construction debris, demolition waste, and project-related waste materials generated from infrastructure and development activities.",
-      image: "/gallery/gallery-2.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291667/construction_waste_nxffs8.jpg",
     },
     {
       title: "Hazardous Waste Transportation",
       text: "Collection and transport of regulated hazardous waste in accordance with UAE environmental and safety regulations, including controlled solid and liquid waste streams.",
-      image: "/gallery/gallery-3.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291652/hazardous_waste_r3w6sh.jpg",
     },
     {
       title: "Solid and Liquid Waste Handling",
       text: "Authorized handling and transportation of solid waste materials, liquid waste including oils, sludge, and chemical residues, and industrial by-products requiring controlled disposal.",
-      image: "/gallery/gallery-4.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291678/Liquid_waste_pdr9ve.jpg",
     },
     {
       title: "Disposal and Treatment Coordination",
       text: "Coordinates closely with licensed treatment and disposal facilities to ensure all waste is processed in full regulatory compliance.",
-      image: "/gallery/gallery-1.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291646/Disposal_of_waste_rllbyw.jpg",
     },
   ];
 
@@ -176,7 +176,7 @@ function AroundContinentWasteCollection() {
       <FeaturesEngineeringSection
         heading="Company Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777292190/Base_image_-_Around_continet_sr0aob.jpg"
       />
     </main>
   );
