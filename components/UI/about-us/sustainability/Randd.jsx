@@ -13,7 +13,7 @@ function RandD() {
   return (
     <div className='max-w-6xl mx-auto lg:mt-10 px-4 lg:px-0'>
       <AnimatedLines />
-      <h2 className='text-center font-semibold text-3xl pt-1'>R&D investment</h2>
+      <h2 className='text-center t-base font-semibold text-3xl pt-1'>R&D investment</h2>
       <div className='grid grid-cols-1 lg:grid-cols-3 mt-10 bg-[#e3eaee] p-8 lg:p-15 gap-12 rounded-3xl'>
         {items.map((items, i) => (
           <div key={i}>

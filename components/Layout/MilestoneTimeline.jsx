@@ -133,7 +133,7 @@ const MilestoneTimeline = ({ title, milestones }) => {
         >
             <div className="sticky top-8 h-screen overflow-hidden">
                 <div className="absolute top-16 left-8 right-8 z-20">
-                    <h2 className="text-3xl md:text-5xl font-semibold text-foreground text-center">
+                    <h2 className="text-3xl md:text-5xl font-semibold text-foreground text-center t-base">
                         {title}
                     </h2>
                 </div>

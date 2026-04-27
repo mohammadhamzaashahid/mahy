@@ -19,7 +19,7 @@ function ServicesGlobally({
       {heading && (
         <>
           <AnimatedLines />
-          <h2 className="pt-2 text-4xl md:text-5xl font-semibold text-center leading-12">
+          <h2 className="pt-2 text-4xl md:text-5xl font-semibold t-base text-center leading-12">
             {heading}
           </h2>
         </>

@@ -11,10 +11,10 @@ function DirectorsPage() {
         <main className='pt-30 pb-10'>
             <AnimatedLines />
             <h1 className='text-center uppercase text-4xl lg:text-6xl font-bold pt-3'>
-                <span className='text-black'>
+                <span className='t-base'>
                     Senior Leaders
                 </span>
-                <span className='text-red-800'>
+                <span className='t-base'>
                     .
                 </span>
             </h1>

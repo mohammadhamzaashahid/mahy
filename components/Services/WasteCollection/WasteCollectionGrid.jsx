@@ -70,7 +70,7 @@ function WasteCollectionGrid({
         )}
 
         <div className="py-8 md:py-20 px-5 max-w-lg mx-auto">
-          <h2 className="text-3xl md:text-4xl font-semibold mt-2">
+          <h2 className="text-3xl md:text-4xl font-semibold t-base mt-2">
             {heading}
           </h2>
 
@@ -78,7 +78,7 @@ function WasteCollectionGrid({
 
           <div className="relative mt-5">
             {text2 && (
-              <p className="text-sm text-gray-600 mb-6">{text2}</p>
+              <p className="text-sm t-base mb-6">{text2}</p>
             )}
 
             <div className="relative space-y-6 text-sm">

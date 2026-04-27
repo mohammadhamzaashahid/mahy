@@ -79,7 +79,7 @@ function Qms() {
               <div className="relative h-12 w-12">
                 <Image src={items[currentIndex].icon} alt="" fill />
               </div>
-              <h2 className="font-semibold text-4xl">
+              <h2 className="font-semibold text-4xl t-base">
                 {items[currentIndex].title}
               </h2>
             </motion.div>

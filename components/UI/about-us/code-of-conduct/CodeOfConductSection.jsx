@@ -20,7 +20,7 @@ export default function CodeOfConductSection() {
               <AnimatedLines bg="bg-neutral-400" />
             </div>
 
-            <h2 className="mb-6 text-[32px] sm:text-[36px] lg:text-[40px] font-semibold leading-tight text-black">
+            <h2 className="mb-6 text-[32px] sm:text-[36px] lg:text-[40px] font-semibold leading-tight t-base">
               Our Code of Conduct
             </h2>
 

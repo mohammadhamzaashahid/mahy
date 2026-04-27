@@ -4,7 +4,7 @@ export default async function OperationsAndCapabilitiesLayout({ children }) {
     return (
         <main>
             {children}
-            <OperationsAndCapabilitiesOverview />
+            {/* <OperationsAndCapabilitiesOverview /> */}
         </main>
     );
 }

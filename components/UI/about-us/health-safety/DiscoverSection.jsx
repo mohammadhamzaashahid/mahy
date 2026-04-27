@@ -76,7 +76,7 @@ export default function DiscoverSection({
                 leading-[1.15]
                 font-extralight
                 tracking-[-0.015em]
-                text-gray-900
+                t-base
               "
             >
               {title}

@@ -131,7 +131,7 @@ async function companyProfile() {
         </p>
       </div> */}
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 lg:py-28 text-center bg-black">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 lg:py-28 text-center b-base">
         <div className="flex justify-center mb-8">
           <AnimatedLines bg="bg-gray-300" />
         </div>

@@ -16,7 +16,7 @@ export default function AwardsSection() {
       <div className="mx-auto max-w-7xl px-6">
         <AnimatedLines />
 
-        <h2 className="mb-16 text-center text-[38px] font-semibold text-[#2F3A40]">
+        <h2 className="mb-16 text-center text-[38px] font-semibold t-base">
           ISO Certifications
         </h2>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">

@@ -40,12 +40,12 @@ export default function ManufacturingNetworkSection({ network, locale }) {
             className="max-w-275 mx-auto px-4 sm:px-8 pt-20 sm:pt-24 md:pt-28 text-center text-white">
             <motion.h2
               variants={prefersReducedMotion ? {} : fadeUp}
-              className="text-[22px] sm:text-[28px] md:text-[34px] font-medium leading-tight">
+              className="text-[22px] t-base sm:text-[28px] md:text-[34px] font-medium leading-tight">
               {network.text[0]}
             </motion.h2>
             <motion.p
               variants={prefersReducedMotion ? {} : fadeUp}
-              className="mt-5 text-sm sm:text-base md:text-lg leading-relaxed opacity-90 max-w-225 mx-auto">
+              className="mt-5 t-base text-sm sm:text-base md:text-lg leading-relaxed opacity-90 max-w-225 mx-auto">
               {network.text[1]}
             </motion.p>
             <motion.div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-y-12 gap-x-6"

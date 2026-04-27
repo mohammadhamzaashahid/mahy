@@ -37,7 +37,7 @@ function CompanyStructure({
         <section className='max-w-7xl mx-auto py-12 lg:pt-20 lg:pb-20 border-b border-gray-300'>
             <AnimatedLines />
             <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                <h2 className='font-bold text-2xl lg:text-4xl text-center uppercase'>{data.heading}</h2>
+                <h2 className='font-bold text-2xl lg:text-4xl text-center t-base uppercase'>{data.heading}</h2>
             </motion.div>
             <p className={textClassesVariants[textClasses]}>{data.company}</p>
             <DesktopStructure

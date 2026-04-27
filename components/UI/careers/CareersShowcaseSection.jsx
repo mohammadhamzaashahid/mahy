@@ -21,7 +21,7 @@ export default function CareersShowcaseSection({
               lg:text-[40px]
               font-semibold
               tracking-tight
-              text-slate-900
+              t-base
             "
           >
             {title}

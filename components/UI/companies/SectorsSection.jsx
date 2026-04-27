@@ -62,7 +62,7 @@ const Desktop = ({ sectors }) => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
             >
-                <h2 className="text-4xl md:text-5xl font-semibold text-center text-gray-900 pt-2">
+                <h2 className="text-4xl md:text-5xl font-semibold text-center t-base pt-2">
                     Our Sectors
                 </h2>
             </motion.div>
