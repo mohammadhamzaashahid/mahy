@@ -8,12 +8,12 @@ function SolidWasteManagementDivision() {
     {
       title: "Integrated Waste Management Solutions",
       text: "SWMD is a trusted partner in sustainable industrial waste management, delivering integrated solutions across wood waste recovery, biomass fuel preparation, pulper reject recovery, RDF production, and industrial solid waste processing.",
-      image: "/gallery/gallery-1.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311001/Integrated_Waste_collection_skjoy7.jpg",
     },
     {
       title: "Sustainability & Environmental Impact",
       text: "Through innovation, skilled manpower, and environmentally responsible practices, SWMD plays a vital role in enhancing resource efficiency and supporting the UAE’s long-term sustainability vision.",
-      image: "/gallery/gallery-1.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311167/Sustainability_and_environemnt-2_xdfmnf.jpg",
     }
   ];
   const adpmCardsData = [

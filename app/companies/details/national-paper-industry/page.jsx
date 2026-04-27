@@ -7,24 +7,24 @@ function NationalPaperIndustryPage() {
     const features = [
         {
             text: "Single-wall and double-wall corrugated cartons",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311479/Single_wall_double_wall_v9gkge.jpg",
         },
         {
             text: "Custom-designed boxes and die-cut packaging",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311514/Custom_Designed_boxes_uqistj.jpg",
         },
         {
             text: "Heavy-duty and specialty packaging configurations",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311548/Heavy_Duty_boxes_sew5y5.jpg",
         },
         {
             text: "Printed corrugated solutions",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311490/Printed_Cartoon_boxes_cllghh.jpg",
         },
-        {
-            text: "The company offers end-to-end packaging services, supporting customers from initial design and prototyping through large-scale production and delivery. This integrated approach ensures consistency in quality, performance, and lead times.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
-        }
+        // {
+        //     text: "The company offers end-to-end packaging services, supporting customers from initial design and prototyping through large-scale production and delivery. This integrated approach ensures consistency in quality, performance, and lead times.",
+        //     image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+        // }
     ];
     const adpmCardsData = [
         {
@@ -85,7 +85,7 @@ function NationalPaperIndustryPage() {
             />
             <KitchenMenu
                 heading="Products and Services"
-                text={"NPI specializes in the design, manufacture, and supply of customized corrugated packaging solutions tailored to diverse industry requirements. Its product range includes:"}
+                text={"The company offers end-to-end packaging services, supporting customers from initial design and prototyping through large-scale production and delivery. This integrated approach ensures consistency in quality, performance, and lead times."}
                 items={features}
             />
             <PumpingServiceCards
@@ -99,7 +99,7 @@ function NationalPaperIndustryPage() {
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311768/IMG_-_44_yw68el.jpg"
             />
         </main>
     )

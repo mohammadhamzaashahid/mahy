@@ -45,13 +45,15 @@ function AlEtihadWasteManagementPage() {
     {
       title: "Establishment & Growth",
       text: "Launched in 2013 in Muscat, Al Etihad Waste Management was established as a strategic partnership between the MAHY Khoory Group and a prominent local firm, enabling immediate market access and regulatory alignment.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777307167/Establishment_and_Growth_dnusgs.jpg",
     },
     {
       title: "Expansion & National Impact",
       text: "Over the past decade, the company has expanded rapidly in scale, coverage, and operational capability through continuous investment in infrastructure, fleet, and workforce development.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
-    }
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777307152/Expansion_and_National_Impact_oozjjj.jpg",
+    },
   ];
 
   const adpmCardsData = [
@@ -81,7 +83,10 @@ function AlEtihadWasteManagementPage() {
     <main>
       {/* OVERVIEW */}
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+        video={
+          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777307313/Al_Ethihad_Video_bxlvlg.mp4"
+        }
+        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="Al Etihad Waste Management Services LLC"
         texts={[
           "Al Etihad Waste Management Services LLC is the MAHY Khoory Group’s recyclable waste management subsidiary in the Sultanate of Oman. Established in 2013 through a joint venture with local partners and now fully owned by the Group, the company has grown to become one of Oman’s largest recyclable waste management operators.",
@@ -92,68 +97,63 @@ function AlEtihadWasteManagementPage() {
       <WhoWeAre
         heading="Our Mission"
         topHeading=""
-        text="Al Etihad Waste Management’s mission is to advance sustainable waste practices in Oman by providing reliable, efficient, and world-class recycling and waste management services."
+        text="Al Etihad Waste Management Services LLC is committed to advancing sustainable waste practices across Oman by delivering reliable, efficient, and world‑class recycling and waste management solutions. The company strives to reduce environmental impact through innovation, operational excellence, and community engagement, ensuring that recyclable materials are transformed into valuable resources supporting a cleaner, greener future."
         showButton={false}
         invert={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777307082/Our_Mission_mbwcnw.jpg"
         imageAlt="Our Mission"
       />
 
       <WhoWeAre
         topHeading=""
         heading="Our Vision"
-        text="Its vision reflects the MAHY Khoory Group’s broader strategy of geographic expansion and environmental stewardship, positioning the company as a long-term partner in Oman’s transition toward a circular and resource-efficient economy."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+        text="o be Oman’s leading partner in sustainable waste management, driving the nation’s transition toward a circular and resource‑efficient economy. Al Etihad Waste Management Services LLC envisions a future where environmental responsibility and technological progress work hand‑in‑hand to create lasting value for communities, industries, and the environment."
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777307088/Our_Vision_i5osfh.jpg"
         imageAlt="Our Vision"
         showButton={false}
         invert={true}
       />
 
-      <KitchenMenu
-        heading="Establishment and Growth"
-        items={features}
-      />
+      <KitchenMenu heading="Establishment and Growth" items={features} />
 
       <PumpingServiceCards
         cards={adpmCardsData}
         heading="Services and Capabilities"
         tag="[ WASTE MANAGEMENT ]"
-        text={"Al Etihad Waste Management focuses on recyclable waste collection, processing, and awareness, offering:"}
+        text={
+          "Al Etihad Waste Management focuses on recyclable waste collection, processing, and awareness, offering:"
+        }
         backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
         endText="Collected materials are sorted and baled at company facilities before being directed to approved recycling processors or export markets."
       />
 
-      {/* OVERVIEW */}
       <FeaturesEngineeringSection
         heading="Al Etihad Waste Management Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777307306/Image_-_Al_Etihad_dgv2kq.jpg"
       />
 
-      {/* SUSTAINABILITY */}
       <CompanyTextOnBackground
         heading="Environmental Impact and Sustainability Contribution"
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776762183/commitment-to-growth_qhzgjt.jpg"
-        align="left"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777307932/environmental-conservation-garden-children_r6eyc2.jpg"
+        align="right"
         text="The company’s core objective is to convert waste into valuable resources, reducing landfill dependency and supporting Oman’s circular economy ambitions."
         endText="Through systematic recycling operations and partnerships with processors, it contributes to environmental protection, resource conservation, and emissions reduction."
       />
 
-      {/* INFRASTRUCTURE */}
-      <ValuesSection
-        width="max-w-7xl mx-auto"
-        title="Infrastructure and Fleet"
-        description="Al Etihad Waste Management operates a modern fleet of compactor trucks, collection vehicles, and material handling equipment designed for Oman’s geographic needs. Each branch includes sorting lines, baling equipment, and storage yards to ensure efficient processing and timely collections."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
-        imageAlt="Infrastructure"
-        ctaHref={false}
-        imagePosition="left"
+      <WhoWeAre
+        heading="Infrastructure and Fleet"
+        topHeading=""
+        text="Al Etihad Waste Management operates a modern fleet of compactor trucks, collection vehicles, and material handling equipment designed for Oman’s geographic needs. Each branch includes sorting lines, baling equipment, and storage yards to ensure efficient processing and timely collections."
+        showButton={false}
+        invert={true}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+        imageAlt="Infrastructure and Fleet"
       />
 
-      {/* INNOVATION */}
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
-          image={"/gallery/gallery-1.jpg"}
+          image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777307832/innovation-technology-be-creative-futuristic-concept_kkofpi.jpg"}
           title={"Innovation and Continuous Development"}
           texts={[
             "The company introduces advanced recycling techniques including mechanized baling, data-driven route planning, and performance monitoring systems.",
