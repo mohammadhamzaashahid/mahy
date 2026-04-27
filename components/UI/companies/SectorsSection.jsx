@@ -22,13 +22,13 @@ const Mobile = ({ sectors }) => (
                 <Link href={`/sectors/${i + 1}`}>
                     <Image
                         src={sector.image}
-                        alt={sector.title}
+                        alt={sector.title || ''}
                         fill
                         style={{ objectFit: "cover" }}
                     />
                     <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
                     <div className="absolute bottom-7 left-6 right-6 text-2xl text-white uppercase">
-                        <h2 className="text-white text-lg font-semibold">{sector.title}</h2>
+                        <h2 className="text-white text-lg font-semibold">{sector.title || ''} </h2>
                         <div className="text-gray-100 mt-3">
                             <p className="font-medium text-xs border-b border-gray-100 pb-1 w-fit">
                                 Companies:
@@ -93,7 +93,7 @@ const Desktop = ({ sectors }) => {
                             <Link href={`/sectors/${i + 1}`}>
                                 <Image
                                     src={sector.image}
-                                    alt={sector.title}
+                                    alt={sector.title || ''}
                                     fill
                                     className="object-cover"
                                 />
@@ -110,7 +110,7 @@ const Desktop = ({ sectors }) => {
                 `}
                                 >
                                     <p className="text-white font-semibold uppercase tracking-wide">
-                                        {sector.title}
+                                        {sector.title || ''}
                                     </p>
                                 </div>
                                 <div
@@ -124,7 +124,7 @@ const Desktop = ({ sectors }) => {
                 `}
                                 >
                                     <h3 className="text-white text-xl font-semibold">
-                                        {sector.title}
+                                        {sector.title || ''}
                                     </h3>
 
                                     <div className="text-gray-100 mt-4">

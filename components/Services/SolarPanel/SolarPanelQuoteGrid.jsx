@@ -1,59 +1,65 @@
-import { ArrowRight, Check, Quote } from "lucide-react"
-import Image from "next/image"
-import { FaQuoteLeft } from "react-icons/fa6"
+import { Check } from "lucide-react";
+import Image from "next/image";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 
 function SolarPanelQuoteGrid({
-    heading = "",
-    image = "/gallery/gallery-1.jpg",
-    text = "Lorem ipsum Suspendisse a massa vel sem ornare tincidunt eu sed ipsum Suspendisse commodo finibus nibh ac pretium turpis molestie",
-    text2,
-    items = [
-        "Strategize For Success",
-        "Optimize Your Resources",
-        "Innovate With Purpose",
-        "Align For Growth"
-    ],
-    quoteText = "Gravida et sit arcu est id massa aliquam. Ac orci aliquam lacus eros convallis molestie. Eget nisl in ut et neque quisque nunc.",
-    quoteItems
+  heading = "",
+  image = "/gallery/gallery-1.jpg",
+  text = "Lorem ipsum Suspendisse a massa vel sem ornare tincidunt eu sed ipsum Suspendisse commodo finibus nibh ac pretium turpis molestie",
+  text2,
+  items = [
+    "Strategize For Success",
+    "Optimize Your Resources",
+    "Innovate With Purpose",
+    "Align For Growth",
+  ],
+  quoteText = "Gravida et sit arcu est id massa aliquam. Ac orci aliquam lacus eros convallis molestie. Eget nisl in ut et neque quisque nunc.",
+  quoteItems,
 }) {
-    return (
-        <section className="max-w-7xl mx-auto md:px-5">
-            <div className="grid grid-cols-1 md:grid-cols-5">
-                <div className="relative h-80 md:h-full md:col-span-2">
-                    <Image src={image} alt="Solar Panel OEM Grid" fill style={{ objectFit: "cover" }} />
+  return (
+    <section className="max-w-7xl mx-auto md:px-5">
+      <div className="grid grid-cols-1 md:grid-cols-5">
+        <div className="relative h-80 md:h-full md:col-span-2">
+          <Image
+            src={image}
+            alt="Solar Panel OEM Grid"
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </div>
+        <div className="pt-7 pb-5 md:py-10 px-5 md:px-10 md:col-span-3">
+          <h2 className="uppercase font-semibold">{heading}</h2>
+          <p className="mt-3 text-gray-700">{text}</p>
+          {text2 && <p className="mt-3 text-gray-700">{text2}</p>}
+          <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 gap-3 md:gap-0">
+            <div className="pr-3">
+              {items.map((item, i) => (
+                <div
+                  key={i}
+                  className={`flex gap-3 items-center pb-4 ${i < items.length - 1 && "border-b border-gray-400"} ${i > 0 && "pt-4"}`}
+                >
+                  <Check size={18} />
+                  <span className="font-medium">{item}</span>
                 </div>
-                <div className="pt-7 pb-5 md:py-10 px-5 md:px-10 md:col-span-3">
-                    <h2 className="uppercase font-semibold">{heading}</h2>
-                    {/* <p className="mt-5 text-3xl font-medium">Tailored Business Consulting For Optimal Success</p> */}
-                    <p className="mt-3 text-gray-700">{text}</p>
-                    {text2 && (
-                        <p className="mt-3 text-gray-700">{text2}</p>
-                    )}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 gap-3 md:gap-0">
-                        <div className="pr-3">
-                            {items.map((item, i) => (
-                                <div key={i} className={`flex gap-3 items-center pb-4 ${i < (items.length - 1) && "border-b border-gray-400"} ${i > 0 && "pt-4"}`}>
-                                    <Check size={18} />
-                                    <span className="font-medium">{item}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="bg-slate-900 text-white p-5">
-                            <FaQuoteLeft size={30} />
-                            <p className="mt-5">{quoteText}</p>
-                            {quoteItems && (
-                                <div className="mt-3 space-y-2 text-sm">
-                                    {quoteItems.map((item, i) => (
-                                        <p key={i}>{item}</p>
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
+              ))}
             </div>
-        </section>
-    )
+            <div className="bg-slate-900 text-white p-5">
+              <FaQuoteLeft size={30} />
+              <p className="mt-5 italic">{quoteText}</p>
+              {quoteItems && (
+                <div className="mt-3 space-y-2 italic">
+                  {quoteItems.map((item, i) => (
+                    <p key={i}>{item || ''}</p>
+                  ))}
+                </div>
+              )}
+              <FaQuoteRight className="mt-5" size={30} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default SolarPanelQuoteGrid
+export default SolarPanelQuoteGrid;

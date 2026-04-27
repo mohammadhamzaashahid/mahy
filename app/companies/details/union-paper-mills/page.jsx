@@ -3,6 +3,7 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 
 function UnionPaperMills() {
   const upmCardsData = [
@@ -75,60 +76,69 @@ function UnionPaperMills() {
     {
       title: "Union Testliner (90–200 GSM)",
       text: "High-quality recycled linerboard suitable for outer layers of corrugated packaging, offering strength, printability, and cost efficiency.",
-      image: "/gallery/gallery-1.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
     },
     {
       title: "Unionflute (90–175 GSM)",
       text: "Durable fluting medium designed for corrugated board applications, providing excellent rigidity, cushioning, and structural performance.",
-      image: "/gallery/gallery-2.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
     },
     {
       title: "Unioncore Board (190–450 GSM)",
       text: "Heavy-duty core board used in paper tubes, cores, and industrial applications, delivering superior strength and load-bearing capacity.",
-      image: "/gallery/gallery-3.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104674/coreboard_ysfopp.png",
     },
     {
       title: "Semikraft Liner (125–200 GSM)",
       text: "Semi-chemical kraft liner combining strength and surface quality, ideal for packaging solutions requiring enhanced durability and appearance.",
-      image: "/gallery/gallery-4.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Semikraft_knjtkd.png",
     },
   ];
 
   return (
     <main>
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+        video={
+          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772478743/Union_Paper_Mills_Reel_q14iax.mp4"
+        }
+        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="Union Paper Mills"
         texts={[
           "Union Paper Mills (UPM) is the flagship recycled paper manufacturing facility of the MAHY Khoory Group, and one of the UAE’s pioneering large-scale paper recycling operations. Established in 1988, UPM specializes in converting post-consumer and industrial waste paper into high-quality recycled paperboard products that serve the regional and international packaging industry.Located in Dubai, the mill operates as a critical pillar of the Group’s circular manufacturing ecosystem, supplying recycled linerboard and fluting medium to corrugated box manufacturers and packaging converters across the UAE and the wider Gulf region.",
         ]}
       />
 
-      <ValuesSection
-        title="Our Mission"
-        description="Union Paper Mills is driven by a clear sustainability-focused mission: to deliver premium recycled paper products while minimizing environmental impact and reducing reliance on virgin raw materials"
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+      <WhoWeAre
+        heading="Our Mission"
+        topHeading=""
+        text="At Union Paper Mills, our mission is to manufacture high-quality recycled paperboard by efficiently transforming post-consumer and industrial waste into valuable packaging materials. We are committed to minimizing environmental impact by reducing reliance on virgin raw materials, optimizing energy and water usage, and continuously improving waste recovery processes. Through advanced technology, operational excellence, and strict adherence to international quality and environmental standards, we aim to deliver consistent, reliable products that support the needs of corrugated packaging manufacturers and industrial users. As an integral part of the MAHY Khoory Group’s circular ecosystem, we strive to create sustainable value for our customers, partners, and the wider community while contributing to the UAE’s environmental and industrial development goals."
+        showButton={false}
+        invert={false}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777103591/Our_Mission_juz165.jpg"
         imageAlt="Our Mission"
-        ctaHref={false}
-        imagePosition="right"
       />
 
-      <ValuesSection
-        title="Our Vision"
-        description="Our vision is to remain a regional leader in sustainable paper manufacturing through continuous investment in technology, capacity expansion, and operational excellence."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+      <WhoWeAre
+        topHeading=""
+        heading="Our Vision"
+        text="Our vision is to be a leading and most trusted recycled paper manufacturer in the region, recognized for our commitment to sustainability, innovation, and excellence in manufacturing. We aspire to strengthen our position within the regional and international packaging value chain through continuous investment in advanced technologies, capacity expansion, and product development. By enhancing our integrated recycling model and adopting smarter, more efficient production practices, we aim to set industry benchmarks in quality, environmental responsibility, and operational performance. Ultimately, we seek to play a key role in advancing the circular economy, supporting sustainable industrial growth, and shaping the future of eco-friendly packaging solutions in the region."
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1770199645/UPM.4_ir521p.jpg"
         imageAlt="Our Vision"
-        ctaHref={false}
-        imagePosition="left"
+
+        showButton={false}
+        invert={true}
       />
 
       <KitchenMenu
         heading="Products and Manufacturing Capabilities"
-        text="Union Paper Mills produces a comprehensive range of recycled paperboard grades used in corrugated packaging and industrial applications. Its core product lines include: These products form the essential components of corrugated cartons, packaging sheets, and industrial boards. The mill is also capable of producing specialty grades on demand, serving applications such as gypsum liner, tube and core board, and other niche industrial uses.
-The manufacturing process involves advanced pulping and cleaning system and continuous paper-forming systems that ensure consistency, strength, and reliability across all grades.
-"
+        text="Union Paper Mills produces a comprehensive range of recycled paperboard grades used in corrugated packaging and industrial applications. Its core product lines include: These products form the essential components of corrugated cartons, packaging sheets, and industrial boards. The mill is also capable of producing specialty grades on demand, serving applications such as gypsum liner, tube and core board, and other niche industrial uses. The manufacturing process involves advanced pulping and cleaning system and continuous paper-forming systems that ensure consistency, strength, and reliability across all grades."
         items={features}
       />
+
       <PumpingServiceCards
         cards={upmCardsData}
         heading="Union Paper Mills"
@@ -143,7 +153,8 @@ The manufacturing process involves advanced pulping and cleaning system and cont
         //   "M.A.H.Y. Khoory Trading is a GCC-wide procurement and distribution division that delivers compliant, energy-efficient solutions through strong infrastructure, technical support, and global partnerships, driving consistent quality, operational efficiency, and long-term growth across the Group."
         // }
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777115296/image010_r5rssl.png"
+        textPosition="left"
       />
     </main>
   );

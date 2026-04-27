@@ -20,10 +20,12 @@ function NewsroomSection({ articles, locale }) {
                     <Link href={`/news/${articles[0].id}`}>
                         <div className='pt-8 lg:pr-8 border-b lg:border-b-0 pb-8 lg:pb-0 lg:border-r lg:h-full border-gray-700'>
                             <div className='relative h-100'>
-                                <Image src={articles[0].image} alt={articles[0].heading} fill style={{ objectFit: "cover" }} />
+                                <Image src={articles[0].image} alt={articles[0].heading} fill style={{ objectFit: "contain", objectPosition: "left" }} />
                             </div>
                             <p className='font-semibold mt-5 pr-2'>{articles[0].heading}</p>
-                            <p className='mt-6'>{articles[0].date.toLocaleString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                            <p className='line-clamp-3 text-sm text-gray-300 mt-2 pr-3'>{articles[0].article}</p>
+                            <p className='mt-2 text-sm'>Read More...</p>
+                            <p className='mt-4 text-sm'>{articles[0].date.toLocaleString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}</p>
                         </div>
                     </Link>
                     <div className='lg:pl-8'>
@@ -31,11 +33,17 @@ function NewsroomSection({ articles, locale }) {
                             <Link href={`/news/${articles[i + 1].id}`} key={i}>
                                 <div className='flex justify-between py-8 border-b border-gray-700' >
                                     <div className='flex flex-col justify-between'>
-                                        <p>{articles[i + 1].heading}</p>
-                                        <p>{articles[i + 1].date.toLocaleString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                                        <div className=''>
+                                            <p>{articles[i + 1].heading}</p>
+                                            <p className='line-clamp-3 max-w-xs text-sm text-gray-300 mt-2'>{articles[i + 1].article}</p>
+                                            <p className='mt-2 text-sm'>Read More...</p>
+                                        </div>
+                                        <div className='text-sm'>
+                                            <p className=''>{articles[i + 1].date.toLocaleString(locale, { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                                        </div>
                                     </div>
                                     <div className='relative h-40 w-100'>
-                                        <Image src={articles[i + 1].image} alt={articles[i + 1].heading} fill style={{ objectFit: "cover" }} />
+                                        <Image src={articles[i + 1].image} alt={articles[i + 1].heading} fill style={{ objectFit: "contain", objectPosition: "right" }} />
                                     </div>
                                 </div>
                             </Link>

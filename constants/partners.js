@@ -1,23 +1,71 @@
 import { getTranslations } from "next-intl/server";
+import { id } from "zod/v4/locales";
 
 const partners = [
-    { id: 0, image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771178552/Grundfos_kie0kp.jpg", name: "Grundfos" },
-    { id: 1, image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771178557/partners-gaia_awpjog.jpg", name: "Gaia" },
-    { id: 2, image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771178553/oventop_hykzpm.jpg", name: "Oventrop" },
-    { id: 3, image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771178584/partners-lister-petter_jexgqd.jpg", name: "Lister Petter" },
-    { id: 4, image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771178586/partners-marathon-motor_zbdrme.jpg", name: "Marathon Motor" },
-    { id: 5, image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771178556/partners-ariston_gmgj3s.jpg", name: "Ariston" },
-    { id: 6, image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771178589/partners-pakawaste_tcdj3m.jpg", name: "Pakawaste" }
+  {
+    id: 0,
+    image:
+      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276027/grundfos_mgr1iy.png",
+    name: "Grundfos",
+  },
+  {
+    id: 1,
+    image:
+      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276027/GAIA_drogzh.png",
+    name: "Gaia",
+  },
+  {
+    id: 2,
+    image:
+      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276035/oventrop_lcfzj9.png",
+    name: "Oventrop",
+  },
+  {
+    id: 3,
+    image:
+      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276030/ListerPetter_zoul9w.png",
+    name: "Lister Petter",
+  },
+  {
+    id: 4,
+    image:
+      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276031/Marathon_nzfxf7.png",
+    name: "Marathon Motor",
+  },
+  {
+    id: 5,
+    image:
+      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276025/Artiston_muldmh.png",
+    name: "Ariston",
+  },
+  {
+    id: 6,
+    image:
+      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276036/PakaWaste_dh4pkx.png",
+    name: "Pakawaste",
+  },
+  {
+    id: 7,
+    image:
+      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276033/MKA_z1fx1q.png",
+    name: "Mahy Khoory Motors",
+  },
+  {
+    id: 8,
+    image:
+      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276028/Havells_akbdxh.png",
+    name: "Havells",
+  },
 ];
 
 export const getPartnerNames = async () => {
-    const t = await getTranslations("Partners");
-    return partners.map((partner, i) => {
-        return {
-            id: i,
-            label: t(`Partner${i + 1}`)
-        }
-    });
-}
+  const t = await getTranslations("Partners");
+  return partners.map((partner, i) => {
+    return {
+      id: i,
+      label: t(`Partner${i + 1}`),
+    };
+  });
+};
 
 export default partners;

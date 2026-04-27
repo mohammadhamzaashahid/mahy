@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import SecondaryButton from "@/components/UI/SecondaryButton";
 import ArrowActionButton from "./ArrowActionButton";
 
 export default function ValuesSection({
@@ -16,7 +15,7 @@ export default function ValuesSection({
     ctaHref,
     priority = false,
     className = "",
-    width = "max-w-6xl mx-auto",
+    width = "max-w-7xl mx-auto",
     gap = "gap-28 lg:gap-38 lg:grid-cols-2",
     padding = "px-6 sm:px-10 lg:px-12 pt-20 pb-10 sm:py-24 lg:pt-28 lg:pb-16",
     col1,
@@ -87,7 +86,7 @@ export default function ValuesSection({
 
                         {involvement && (
                             <>
-                                <h2 className="font-semibold mt-3">MAHY Khoory's Involvement</h2>
+                                <h2 className="font-semibold mt-3">MAHY Khoory&apos;s Involvement</h2>
                                 <p className="mt-2 font-light leading-relaxed text-slate-700 text-sm">{involvement}</p>
                                 {involvement2 &&
                                     <p className="mt-1.5 font-light leading-relaxed text-slate-700 text-sm">{involvement2}</p>

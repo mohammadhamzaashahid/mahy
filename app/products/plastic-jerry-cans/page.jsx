@@ -21,7 +21,7 @@ function PlasticJerryCansPage() {
           text: "Available from small household sizes (0.5L–5L) to industrial bulk sizes (15L–25L), with multiple ergonomic designs for ease of use and optimized storage.",
         },
         {
-          image: "/gallery/gallery-3.jpg",
+          image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-4_sxwojv.jpg",
           title: "Industry-Specific Variants",
           items: [
             "Lubricant - grade jerry cans for engine oils, hydraulic oils, and greases",
@@ -31,7 +31,7 @@ function PlasticJerryCansPage() {
           ],
         },
         {
-          image: "/gallery/gallery-3.jpg",
+          image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-4_sxwojv.jpg",
           title: "Flexible Cap & Closure Options",
           text: "Choose from:",
           items: [
@@ -47,7 +47,7 @@ function PlasticJerryCansPage() {
     },
     {
       label: "Branding & Customization Services",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-4_sxwojv.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777221750/male-self-care-items-arrangement_blbewn.jpg",
       items: [
         {
           title: "Labelling Service",

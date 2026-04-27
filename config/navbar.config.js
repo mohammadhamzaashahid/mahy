@@ -257,8 +257,13 @@ export function getNavigation(t) {
                 label: t("AllGroupCompanies"),
                 href: "/companies/all",
               },
+                {
+                label: "Explore Companies",
+                href: "/companies/",
+              },
             ],
           },
+          
         ],
       },
       {
@@ -439,6 +444,10 @@ export function getNavigation(t) {
             title: "Services & Solutions",
             links: [
               {
+                label: t("KitchenDesigningSolutions"),
+                href: "/services/kitchen-designing-solutions",
+              },
+              {
                 label: t("Engineering&TechnicalServices"),
                 href: "/services/engineering-services",
               },
@@ -466,10 +475,7 @@ export function getNavigation(t) {
               //   label: t("Restaurant&DiningServices"),
               //   href: "/services/restaurant-dining-services",
               // },
-              {
-                label: t("KitchenDesigningSolutions"),
-                href: "/services/kitchen-designing-solutions",
-              },
+              
               {
                 label: t("SpareParts"),
                 href: "/products/spare-parts",

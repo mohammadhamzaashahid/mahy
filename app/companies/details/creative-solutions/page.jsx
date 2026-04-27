@@ -1,10 +1,93 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
+import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineeringSection"
+import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu"
+import PumpingServiceCards from "@/components/Services/PumpingServiceCards"
 import SolarPanelQuoteGrid from "@/components/Services/SolarPanel/SolarPanelQuoteGrid"
 import TrustedAdvisorSection from "@/components/TrustedAdvisorSection"
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
 
 function CreativeSolutionsPage() {
+    const services = [
+        {
+            text: "Green-building assessments and certification advisory",
+            image: "/gallery/gallery-1.jpg",
+        },
+        {
+            text: "LEED, WELL, ESTIDAMA, and Dubai Green Building compliance",
+            image: "/gallery/gallery-2.jpg",
+        },
+        {
+            text: "Energy audits and performance benchmarking",
+            image: "/gallery/gallery-3.jpg",
+        },
+        {
+            text: "Energy and water modeling and optimization",
+            image: "/gallery/gallery-4.jpg",
+        },
+        {
+            text: "Mechanical and electrical system commissioning",
+            image: "/gallery/gallery-4.jpg",
+        },
+        {
+            text: "Post-occupancy performance monitoring",
+            image: "/gallery/gallery-4.jpg",
+        }
+    ];
+    const cards = [
+        {
+            title: "Developments",
+            text: "Commercial and office developments",
+            image: "/solar/solar-1.svg",
+        },
+        {
+            title: "Projects",
+            text: "Hospitality and mixed-use projects",
+            image: "/solar/solar-2.svg",
+        },
+        {
+            title: "Buildings",
+            text: "Residential and institutional buildings",
+            image: "/solar/solar-2.svg",
+        },
+        {
+            title: "Infrastructure",
+            text: "Public infrastructure and government facilities",
+            image: "/solar/solar-1.svg",
+        },
+        {
+            title: "Sites",
+            text: "Industrial and manufacturing sites",
+            image: "/solar/solar-1.svg",
+        },
+        {
+            title: "Clients",
+            text: "Clients include developers, architects, consultants, asset owners, and public-sector entities seeking improved operational efficiency, regulatory compliance, and reduced environmental impact.",
+            image: "/solar/solar-1.svg",
+        },
+    ];
+    const overview = [
+        {
+            heading: "Technology and Innovation",
+            text: "The consultancy leverages advanced digital tools, including energy-modeling software, daylight simulations, and Building Information Modeling (BIM). Its team includes U.S. Department of Energy–certified Pumping Systems Assessors and internationally accredited sustainability professionals.",
+            lastText: "Creative Solutions remains actively engaged with global green-building platforms and professional forums, ensuring access to the latest sustainability technologies, smart-building systems, and renewable-energy integration strategies."
+        },
+        {
+            heading: "Strategic Projects and Partnerships",
+            text: "Creative Solutions has contributed to high-profile projects, including sustainability initiatives within MAHY Khoory Group’s own facilities and advisory roles on environmentally responsible developments across Dubai and the wider UAE.",
+            lastText: "The consultancy collaborates with international technology providers, certification bodies, architecture firms, and engineering consultants, delivering integrated sustainability solutions aligned with project objectives and regulatory frameworks."
+        },
+        {
+            heading: "Sustainability Impact",
+            text: "The firm measures success through quantifiable energy and water savings, reduced operating costs, and verified certification outcomes. By training facility operators and implementing continuous monitoring, Creative Solutions ensures that sustainability measures translate into long-term performance gains.",
+            lastText: "Its role within the Group enables knowledge transfer across MAHY Khoory’s industrial, hospitality, and real-estate assets, strengthening sustainability performance at a group-wide level."
+        },
+        {
+            heading: "Leadership and Team",
+            text: "Creative Solutions is led by senior professionals with recognized credentials in green architecture, energy engineering, and sustainability management. The team operates in close alignment with MAHY Khoory Group leadership, ensuring strategic consistency and technical excellence.",
+        }
+    ];
+
     return (
         <main>
             <CompanyOverview
@@ -15,66 +98,23 @@ function CreativeSolutionsPage() {
                     "Serving as the Group’s center of excellence for sustainable development, Creative Solutions translates MAHY Khoory’s sustainability commitments into practical, measurable building strategies across the UAE."
                 ]}
             />
-            <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
-                <CompaniesSectors
-                    image={"/gallery/gallery-1.jpg"}
-                    title={"Services and Expertise"}
-                    texts={[
-                        "Creative Solutions provides end-to-end sustainability consultancy services, including:",
-                    ]}
-                    items={[
-                        "Green-building assessments and certification advisory",
-                        "LEED, WELL, ESTIDAMA, and Dubai Green Building compliance",
-                        "Energy audits and performance benchmarking",
-                        "Energy and water modeling and optimization",
-                        "Mechanical and electrical system commissioning",
-                        "Post-occupancy performance monitoring"
-                    ]}
-                    endText={"The consultancy supports projects from early design through construction and operational handover, ensuring that sustainability goals are embedded throughout the building lifecycle."}
-                />
-            </section>
-            <SolarPanelQuoteGrid
+            <KitchenMenu
+                heading="Services and Expertise"
+                text="Creative Solutions provides end-to-end sustainability consultancy services. The consultancy supports projects from early design through construction and operational handover, ensuring that sustainability goals are embedded throughout the building lifecycle."
+                items={services}
+            />
+            <PumpingServiceCards
+                cards={cards}
                 heading="Markets and Client Sectors"
-                text="Creative Solutions serves clients across:"
-                items={[
-                    "Commercial and office developments",
-                    "Hospitality and mixed-use projects",
-                    "Residential and institutional buildings",
-                    "Public infrastructure and government facilities",
-                    "Industrial and manufacturing sites"
-                ]}
-                quoteText="Clients include developers, architects, consultants, asset owners, and public-sector entities seeking improved operational efficiency, regulatory compliance, and reduced environmental impact."
+                text={"Creative Solutions serves clients across:"}
+                tag="[ CREATIVE SOLUTIONS ]"
+                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776682027/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"
+                endText={""}
             />
-            <TrustedAdvisorSection
-            object="Employees"
-                heading="Technology and Innovation"
-                texts={[
-                    "The consultancy leverages advanced digital tools, including energy-modeling software, daylight simulations, and Building Information Modeling (BIM). Its team includes U.S. Department of Energy–certified Pumping Systems Assessors and internationally accredited sustainability professionals.",
-                    "Creative Solutions remains actively engaged with global green-building platforms and professional forums, ensuring access to the latest sustainability technologies, smart-building systems, and renewable-energy integration strategies."
-                ]}
-            />
-            <CompanyTextOnBackground
-                heading="Strategic Projects and Partnerships"
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776592634/Engineering-services-Advanced_System_Design.jpg_amb0ik.jpg"
-                align="left"
-                text="Creative Solutions has contributed to high-profile projects, including sustainability initiatives within MAHY Khoory Group’s own facilities and advisory roles on environmentally responsible developments across Dubai and the wider UAE."
-                endText={"The consultancy collaborates with international technology providers, certification bodies, architecture firms, and engineering consultants, delivering integrated sustainability solutions aligned with project objectives and regulatory frameworks."}
-            />
-            <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
-                <CompaniesSectors
-                    image={"/gallery/gallery-1.jpg"}
-                    title={"Sustainability Impact"}
-                    texts={[
-                        "The firm measures success through quantifiable energy and water savings, reduced operating costs, and verified certification outcomes. By training facility operators and implementing continuous monitoring, Creative Solutions ensures that sustainability measures translate into long-term performance gains.",
-                        "Its role within the Group enables knowledge transfer across MAHY Khoory’s industrial, hospitality, and real-estate assets, strengthening sustainability performance at a group-wide level."
-                    ]}
-                />
-            </section>
-            <CompanyTextOnBackground
-                heading="Leadership and Team"
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
-                align="left"
-                text="Creative Solutions is led by senior professionals with recognized credentials in green architecture, energy engineering, and sustainability management. The team operates in close alignment with MAHY Khoory Group leadership, ensuring strategic consistency and technical excellence."
+            <FeaturesEngineeringSection
+                heading="Company Overview"
+                items={overview}
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
             />
         </main>
     )

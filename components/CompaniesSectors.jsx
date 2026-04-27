@@ -8,10 +8,10 @@ function CompaniesSectors({ image, image2, title, texts, companiesHeading = fals
             <SlideReveal direction="left">
                 <div>
                     {title &&
-                        <h2 className="text-4xl font-semibold t-base">{title}</h2>
+                        <h2 className="font-semibold text-4xl md:text-5xl mt-3 leading-tight t-base">{title}</h2>
                     }
                     {texts && texts.map((text, i) => (
-                        <p key={i} className="text-gray-600 mt-4">{text}</p>
+                        <p key={i} className="mt-6 font-light text-gray-600 leading-relaxed">{text}</p>
                     ))}
                     <div className="mt-6">
                         {companiesHeading &&
@@ -60,12 +60,12 @@ function CompaniesSectors({ image, image2, title, texts, companiesHeading = fals
                 <div className="h-full grid grid-cols-1 md:grid-cols-2 grid-rows-2 gap-4 md:gap-0">
                     <div className="hidden md:block" />
                     <SlideReveal direction="right">
-                        <div className="relative h-80 md:h-full w-full rounded-2xl overflow-hidden">
+                        <div className="relative h-80 md:h-full w-full overflow-hidden">
                             <Image src={image} alt={"img"} fill style={{ objectFit: "cover" }} />
                         </div>
                     </SlideReveal>
                     <SlideReveal>
-                        <div className="relative h-80 md:h-full w-full rounded-2xl overflow-hidden">
+                        <div className="relative h-80 md:h-full w-full overflow-hidden">
                             <Image src={image2} alt={"img"} fill style={{ objectFit: "cover" }} />
                         </div>
                     </SlideReveal>
@@ -73,7 +73,7 @@ function CompaniesSectors({ image, image2, title, texts, companiesHeading = fals
                 </div>
             ) : (
                 <SlideReveal>
-                    <div className="relative h-full rounded-2xl overflow-hidden">
+                    <div className="relative h-full overflow-hidden">
                         <Image src={image} alt={"img"} fill style={{ objectFit: "cover" }} />
                     </div>
                 </SlideReveal>

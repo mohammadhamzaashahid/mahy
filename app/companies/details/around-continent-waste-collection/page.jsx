@@ -3,33 +3,34 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 
 function AroundContinentWasteCollection() {
   const services = [
     {
       title: "General Waste Collection and Transportation",
       text: "Collection and transport of non-recyclable general waste from commercial, industrial, and project sites to approved disposal facilities.",
-      image: "/gallery/gallery-1.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291655/general_waste_collection_and_transportation_nxxytu.jpg",
     },
     {
       title: "Construction and Demolition (C&D) Waste",
       text: "Handling and transportation of construction debris, demolition waste, and project-related waste materials generated from infrastructure and development activities.",
-      image: "/gallery/gallery-2.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291667/construction_waste_nxffs8.jpg",
     },
     {
       title: "Hazardous Waste Transportation",
       text: "Collection and transport of regulated hazardous waste in accordance with UAE environmental and safety regulations, including controlled solid and liquid waste streams.",
-      image: "/gallery/gallery-3.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291652/hazardous_waste_r3w6sh.jpg",
     },
     {
       title: "Solid and Liquid Waste Handling",
       text: "Authorized handling and transportation of solid waste materials, liquid waste including oils, sludge, and chemical residues, and industrial by-products requiring controlled disposal.",
-      image: "/gallery/gallery-4.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291678/Liquid_waste_pdr9ve.jpg",
     },
     {
       title: "Disposal and Treatment Coordination",
       text: "Coordinates closely with licensed treatment and disposal facilities to ensure all waste is processed in full regulatory compliance.",
-      image: "/gallery/gallery-1.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291646/Disposal_of_waste_rllbyw.jpg",
     },
   ];
 
@@ -113,7 +114,7 @@ function AroundContinentWasteCollection() {
   return (
     <main>
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+        video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772794963/Around_Continent_Waste_Collection_Green_Arabia_mgylog.mp4"}
         heading="Around Continent Waste Collection"
         texts={[
           "Around Continent Waste Collection is an environmental services subsidiary within the MAHY Khoory Group, specializing in the collection, handling, and transportation of general waste, construction and demolition waste, hazardous waste, and solid and liquid waste.",
@@ -121,24 +122,42 @@ function AroundContinentWasteCollection() {
           "It supports industrial, commercial, and project-based operations by ensuring waste is collected, transported, and directed to approved treatment or disposal facilities in strict compliance with UAE environmental, health, and safety regulations.",
         ]}
       />
+      <WhoWeAre
+        heading="Our Mission"
+        topHeading=""
+        text="The mission of Around Continent Waste Collection is to deliver safe, compliant, and dependable waste collection and transportation services that protect public health, preserve environmental quality, and support the operational continuity of industries across the UAE. The company is dedicated to ensuring that every waste stream—whether general waste, construction debris, or hazardous solid and liquid waste—is handled with strict regulatory discipline, secure containment, and complete traceability. Through a trained workforce, purpose-built vehicles, and rigorous adherence to environmental and safety standards, Around Continent Waste Collection strives to provide clients with reliable, transparent, and risk‑controlled waste logistics that minimize environmental impact and uphold the highest levels of operational integrity."
+        showButton={false}
+        invert={false}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291459/Our_Mission_pbud9l.png"
+        imageAlt="Our Mission"
+      />
 
-      <ValuesSection
+      <WhoWeAre
+        heading="Our Vision"
+        topHeading=""
+        text="The vision of Around Continent Waste Collection is to become the UAE’s leading specialized waste logistics provider, recognized for excellence in the safe handling, transportation, and management of regulated waste across all emirates. The company aims to set the national benchmark for compliance-driven waste movement by continuously enhancing its fleet capabilities, operational systems, and safety protocols. It aspires to be the trusted partner of choice for organizations requiring professional waste management solutions, particularly in general, construction, and hazardous waste categories. By integrating advanced tracking technologies, strengthening regulatory alignment, and supporting the MAHY Khoory Group’s broader environmental services portfolio, Around Continent Waste Collection seeks to build a future where waste logistics are managed with precision, responsibility, and unwavering commitment to environmental protection."
+        showButton={false}
+        invert={true}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291373/Our_Vision_yv0c4h.jpg"
+        imageAlt="Our Vision"
+      />
+      {/* <ValuesSection
         title="Mission"
-        description="To deliver safe, reliable, and fully compliant waste collection and transportation services, protecting public health, infrastructure assets, and the environment."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
-        imageAlt="Mission"
-        ctaHref={false}
-        imagePosition="right"
-      />
+        description=""
+          imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+          imageAlt="Mission"
+          ctaHref={false}
+          imagePosition="right"
+        />
 
-      <ValuesSection
-        title="Vision"
-        description="To become a trusted national partner for organizations requiring professional waste management solutions, particularly in general, construction-related, and hazardous waste, while maintaining high operational and regulatory standards."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
-        imageAlt="Vision"
-        ctaHref={false}
-        imagePosition="left"
-      />
+        <ValuesSection
+          title="Vision"
+          description=""
+          imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+          imageAlt="Vision"
+          ctaHref={false}
+          imagePosition="left"
+        /> */}
 
       <KitchenMenu
         heading="Services and Licensed Capabilities"
@@ -157,7 +176,7 @@ function AroundContinentWasteCollection() {
       <FeaturesEngineeringSection
         heading="Company Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777292190/Base_image_-_Around_continet_sr0aob.jpg"
       />
     </main>
   );

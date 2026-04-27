@@ -2,7 +2,7 @@ import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineerin
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
-
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 
 function AlKhooryEngineering() {
   const pumpingCardsData = [
@@ -105,19 +105,19 @@ function AlKhooryEngineering() {
       lastText:
         "These practices reduce power consumption, lifecycle costs, and environmental impact across projects.",
     },
-    {
-      heading: "Infrastructure and Technical Resources",
-      text: "The company is supported by specialized infrastructure and technical capabilities to ensure efficient project delivery.",
-      bullets: [
-        "Engineering offices with 3D modeling and hydraulic simulation tools",
-        "In-house workshops for pump assembly and system integration",
-        "On-site commissioning and technical support teams",
-        "Central warehouse with pumps and spare parts",
-        "Dedicated service center at Ras Al Khor",
-      ],
-      lastText:
-        "These resources support system design, installation, maintenance, and troubleshooting throughout the project lifecycle.",
-    },
+    // {
+    //   heading: "Infrastructure and Technical Resources",
+    //   text: "The company is supported by specialized infrastructure and technical capabilities to ensure efficient project delivery.",
+    //   bullets: [
+    //     "Engineering offices with 3D modeling and hydraulic simulation tools",
+    //     "In-house workshops for pump assembly and system integration",
+    //     "On-site commissioning and technical support teams",
+    //     "Central warehouse with pumps and spare parts",
+    //     "Dedicated service center at Ras Al Khor",
+    //   ],
+    //   lastText:
+    //     "These resources support system design, installation, maintenance, and troubleshooting throughout the project lifecycle.",
+    // },
     {
       heading: "Innovation and Strategic Direction",
       text: "Al Khoory Engineering invests in innovation to stay at the forefront of pumping technology.",
@@ -136,29 +136,34 @@ function AlKhooryEngineering() {
   return (
     <main>
       <CompanyOverview
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+        video={
+          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777120904/Video_Project_8_wlbli0.mp4"
+        }
+        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="Al Khoory Engineering"
         texts={[
           "Al Khoory Engineering, a key subsidiary within the MAHY Khoory Group, is a specialist engineering company focused on the design, supply, and implementation of water and wastewater pumping systems. As part of the Group’s long-established legacy in pumping and fluid management, the company delivers comprehensive engineering solutions for complex infrastructure and industrial projects. Leveraging decades of collective experience within the Group, Al Khoory Engineering supports large-scale, mission-critical installations, providing technically robust and reliable pumping systems tailored to project-specific requirements.",
         ]}
       />
 
-      <ValuesSection
-        title="Our Mission "
-        description="Aligned with the MAHY Khoory Group’s corporate values, Al Khoory Engineering’s mission is to deliver high-performance pumping solutions that enhance infrastructure reliability, optimize resource utilization, and support sustainable development."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+      <WhoWeAre
+        heading="Our Mission"
+        topHeading=""
+        text="To engineer and deliver high‑performance, energy‑efficient pumping and fluid‑handling solutions that enhance infrastructure reliability, optimize resource utilization, and support sustainable development across the region. Al Khoory Engineering is committed to technical excellence, precise system integration, and dependable project execution—ensuring every installation meets the highest standards of safety, quality, and long‑term operational performance."
+        showButton={false}
+        invert={false}
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777223831/Our_Mission_bnyyqu.jpg"
         imageAlt="Our Mission"
-        ctaHref={false}
-        imagePosition="right"
       />
-
-      <ValuesSection
-        title="Our Vision "
-        description="The company’s vision centers on technical excellence, customization, and intelligent system design, positioning Al Khoory Engineering as a trusted engineering partner for complex fluid-handling applications."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+      <WhoWeAre
+        topHeading=""
+        heading="Our Vision"
+        text="To be the region’s most trusted engineering partner for advanced pumping systems by leading in innovation, customization, and intelligent system design. Al Khoory Engineering aims to shape the future of fluid‑handling technology through sustainable engineering practices, smart solutions, and continuous investment in technical capability and industry expertise."
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777223845/Copilot_20260425_160109_wxccao.png"
         imageAlt="Our Vision"
-        ctaHref={false}
-        imagePosition="left"
+
+        showButton={false}
+        invert={true}
       />
 
       <PumpingServiceCards
@@ -175,7 +180,8 @@ function AlKhooryEngineering() {
         //   "M.A.H.Y. Khoory Trading is a GCC-wide procurement and distribution division that delivers compliant, energy-efficient solutions through strong infrastructure, technical support, and global partnerships, driving consistent quality, operational efficiency, and long-term growth across the Group."
         // }
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273529/AKE_-_Bottom_Image_bjsv2n.jpg"
+        textPosition="left"
       />
     </main>
   );
