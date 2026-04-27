@@ -174,7 +174,7 @@ function AlDhafraPaper() {
       <FeaturesEngineeringSection
         heading="Al Dhafra Paper Mills Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273746/ADPMCL_Base_image_rc71lw.png"
       />
     </main>
   );
