@@ -125,20 +125,20 @@ function AroundContinentWasteCollection() {
       <WhoWeAre
         heading="Our Mission"
         topHeading=""
-        text="To deliver safe, reliable, and fully compliant waste collection and transportation services, protecting public health, infrastructure assets, and the environment."
+        text="The mission of Around Continent Waste Collection is to deliver safe, compliant, and dependable waste collection and transportation services that protect public health, preserve environmental quality, and support the operational continuity of industries across the UAE. The company is dedicated to ensuring that every waste stream—whether general waste, construction debris, or hazardous solid and liquid waste—is handled with strict regulatory discipline, secure containment, and complete traceability. Through a trained workforce, purpose-built vehicles, and rigorous adherence to environmental and safety standards, Around Continent Waste Collection strives to provide clients with reliable, transparent, and risk‑controlled waste logistics that minimize environmental impact and uphold the highest levels of operational integrity."
         showButton={false}
         invert={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291459/Our_Mission_pbud9l.png"
         imageAlt="Our Mission"
       />
 
       <WhoWeAre
         heading="Our Vision"
         topHeading=""
-        text="To become a trusted national partner for organizations requiring professional waste management solutions, particularly in general, construction-related, and hazardous waste, while maintaining high operational and regulatory standards."
+        text="The vision of Around Continent Waste Collection is to become the UAE’s leading specialized waste logistics provider, recognized for excellence in the safe handling, transportation, and management of regulated waste across all emirates. The company aims to set the national benchmark for compliance-driven waste movement by continuously enhancing its fleet capabilities, operational systems, and safety protocols. It aspires to be the trusted partner of choice for organizations requiring professional waste management solutions, particularly in general, construction, and hazardous waste categories. By integrating advanced tracking technologies, strengthening regulatory alignment, and supporting the MAHY Khoory Group’s broader environmental services portfolio, Around Continent Waste Collection seeks to build a future where waste logistics are managed with precision, responsibility, and unwavering commitment to environmental protection."
         showButton={false}
         invert={true}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777291373/Our_Vision_yv0c4h.jpg"
         imageAlt="Our Vision"
       />
       {/* <ValuesSection

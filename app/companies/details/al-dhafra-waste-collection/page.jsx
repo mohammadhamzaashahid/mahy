@@ -118,7 +118,8 @@ function AlDhafraWasteCollectionPage() {
       <FeaturesEngineeringSection
         heading="Al Dhafra Waste Collection LLC Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        textPosition="left"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777290525/IMG_izk6sc.png"
       />
       <CompanyTextOnBackground
         heading="Environmental Impact and Sustainability Contribution"
@@ -129,18 +130,19 @@ function AlDhafraWasteCollectionPage() {
           "Its activities directly support UAE national objectives related to waste reduction, recycling, and circular economy development, while enabling customers to meet their own sustainability targets."
         }
       />
-      <ValuesSection
-        width="max-w-7xl mx-auto"
-        title="Infrastructure and Fleet"
-        description="The company operates a modern fleet of compactor trucks, flatbed vehicles, and baling trailers, supported by standardized recycling containers deployed across Abu Dhabi. Mobile balers and container exchange systems are used to service high-volume clients efficiently."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+  
+       <WhoWeAre
+        topHeading=""
+        heading="Infrastructure and Fleet"
+        text="The company operates a modern fleet of compactor trucks, flatbed vehicles, and baling trailers, supported by standardized recycling containers deployed across Abu Dhabi. Mobile balers and container exchange systems are used to service high-volume clients efficiently."
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777290688/infrasturcture_and_fleet_uy9pan.jpg"
         imageAlt="Infrastructure and Fleet"
-        ctaHref={false}
-        imagePosition="left"
+        showButton={false}
+        invert={true}
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
-          image={"/gallery/gallery-1.jpg"}
+          image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777290763/Innovation_and_continuous_improvement_drrkrv.jpg"}
           title={"Innovation and Continuous Improvement"}
           texts={[
             "Al Dhafra Waste Collection continuously enhances operational efficiency through route-planning and logistics optimization software, reducing fuel consumption and emissions. The company has also introduced customer feedback and service monitoring tools to improve responsiveness and service quality.",
