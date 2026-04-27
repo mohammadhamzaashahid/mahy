@@ -143,6 +143,7 @@ function UnionWoodWorksPage() {
                 heading="Union Wood Works Overview"
                 items={overview}
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275858/IMG_-_2_stmfpe.png"
+                textPosition="left"
             />
            
             <div className="mt-8 md:mt-10">

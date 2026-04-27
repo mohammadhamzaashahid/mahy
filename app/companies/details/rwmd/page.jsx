@@ -10,22 +10,27 @@ function RecyclableWasteManagementDivision() {
     {
       title: "Waste Paper and Cardboard Collection",
       text: "Scheduled collection of commercial, industrial, and institutional paper waste using roll-off containers, compactors, and pickup vehicles.",
-      image: "/gallery/gallery-1.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288916/Waste_Paper_and_Cartboard_collection_y4aqvf.jpg",
     },
     {
       title: "Multi-Recyclables Management",
       text: "Collection and segregation of additional recyclable materials such as plastics, metals, and beverage cans.",
-      image: "/gallery/gallery-2.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777289029/Multi_recylable_Mangement-2_fkt6uo.jpg",
     },
+
     {
       title: "On-Site Recycling Solutions",
       text: "Provision of balers, bins, dumpsters, and staff training to enable effective source segregation at client locations.",
-      image: "/gallery/gallery-3.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288912/On_Site_Recycling_Solution_owmis2.jpg",
     },
     {
       title: "Closed-Loop Recycling Support",
       text: "Direct coordination with the Group’s paper mills to ensure recovered materials are efficiently reintegrated into production.",
-      image: "/gallery/gallery-4.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288897/Closed_loop_recycling_support_hs0ynv.jpg",
     },
   ];
 
@@ -109,7 +114,9 @@ function RecyclableWasteManagementDivision() {
   return (
     <main>
       <CompanyOverview
-        video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1773132024/RWMD_lrlpyc.mp4"}
+        video={
+          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1773132024/RWMD_lrlpyc.mp4"
+        }
         heading="Recyclable Waste Management Division"
         texts={[
           "The Recyclable Waste Management Division (RWMD) is the Dubai-based recycling arm of the MAHY Khoory Group, supporting its integrated recycling and manufacturing ecosystem.",
@@ -120,19 +127,23 @@ function RecyclableWasteManagementDivision() {
       <WhoWeAre
         heading="Our Mission"
         topHeading=""
-        text="To maximize landfill diversion by providing efficient, reliable, and scalable recycling solutions, supporting UAE environmental objectives and reducing dependence on virgin materials."
+        text="RWMD’s mission is to drive the UAE’s transition toward a fully circular, resource‑efficient economy by delivering high‑performance, reliable, and scalable recyclable waste management solutions.
+The division is dedicated to maximizing landfill diversion, improving recycling participation across commercial and industrial sectors, and ensuring a continuous supply of high‑quality recovered fibre for the Group’s manufacturing units.
+Through modern equipment, optimized logistics, digital monitoring, and customer‑focused recycling programs, RWMD strives to enhance operational efficiency, reduce environmental impact, and support national sustainability objectives while maintaining the highest standards of safety, compliance, and service excellence."
         showButton={false}
         invert={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777287829/Mission-2_uxdx8g.jpg"
         imageAlt="Our Mission"
       />
       <WhoWeAre
         heading="Our Vision"
         topHeading=""
-        text="To continuously enhance recycling operations through modern equipment, optimized logistics, and customer-focused programs aligned with innovation and sustainability."
+        text="RWMD envisions becoming the UAE’s leading and most innovative recyclable waste management provider—recognized for its environmental impact, operational excellence, and seamless integration within the MAHY Khoory Group’s recycling‑to‑manufacturing value chain.
+The division aims to set new benchmarks in recycling efficiency, digital transformation, and sustainable resource recovery by expanding its capabilities, adopting low‑emission technologies, and strengthening partnerships across industries and communities.
+RWMD aspires to shape a future where waste is viewed as a valuable resource, enabling a fully circular manufacturing ecosystem that supports national sustainability goals and reinforces the Group’s leadership in responsible, future‑ready recycling solutions."
         showButton={false}
         invert={true}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777287703/Vision_kd0x6t.jpg"
         imageAlt="Our Vision"
       />
       <KitchenMenu
@@ -150,7 +161,8 @@ function RecyclableWasteManagementDivision() {
       <FeaturesEngineeringSection
         heading="RWMD Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776767418/dubai-city-skyline-showing-burj-khalifa-2014.jpg_jx4cxo.jpg"
+        textPosition="right"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288921/RWMD_-_Base_image_pwl9eh.png"
       />
     </main>
   );

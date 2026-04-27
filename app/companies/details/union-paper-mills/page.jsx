@@ -154,6 +154,7 @@ function UnionPaperMills() {
         // }
         items={overview}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777115296/image010_r5rssl.png"
+        textPosition="left"
       />
     </main>
   );

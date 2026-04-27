@@ -174,6 +174,7 @@ function AlDhafraPaper() {
       <FeaturesEngineeringSection
         heading="Al Dhafra Paper Mills Overview"
         items={overview}
+        textPosition="left"
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273746/ADPMCL_Base_image_rc71lw.png"
       />
     </main>

@@ -42,11 +42,11 @@ function AlDhafraWasteCollectionPage() {
   const features = [
     {
       text: "Al Dhafra Waste Collection was established to replicate and extend the Group’s successful recycling model implemented in Dubai. The company was formed to serve Abu Dhabi’s growing demand for organized, large-scale recyclable waste collection while strengthening local supply chains for recycled paper manufacturing.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777289157/01_izgytr.png",
     },
     {
       text: "By working closely with Al Dhafra Paper Manufacturing and Union Paper Mills, the company helps close the material loop locally, reducing reliance on long-distance transport and ensuring a stable flow of recovered raw materials into the Group’s recycling operations.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777289159/02_gxquft.png",
     }
   ];
 
@@ -89,7 +89,7 @@ function AlDhafraWasteCollectionPage() {
       <WhoWeAre
         heading="Our Mission"
         topHeading=""
-        text="The mission of Al Dhafra Waste Collection is to deliver reliable, efficient, and environmentally responsible recyclable waste collection services across Abu Dhabi, supporting the Group’s broader sustainability vision."
+        text="Al Dhafra Waste Collection LLC is dedicated to providing efficient, reliable, and environmentally responsible waste collection and recycling services across Abu Dhabi. The company’s mission is to ensure that recyclable materials are systematically recovered, processed, and reintegrated into productive use—supporting the MAHY Khoory Group’s broader sustainability vision and commitment to circular manufacturing. Through operational excellence, regulatory compliance, and continuous innovation, Al Dhafra Waste Collection strives to minimize landfill dependency and promote resource conservation across the emirate."
         showButton={false}
         invert={false}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
@@ -98,7 +98,7 @@ function AlDhafraWasteCollectionPage() {
       <WhoWeAre
         topHeading=""
         heading="Our Vision"
-        text="Its vision is to maximize recycling rates and resource recovery within the emirate, contributing to national waste reduction goals and supporting Abu Dhabi’s transition toward a more circular and sustainable economy."
+        text="To be Abu Dhabi’s leading provider of sustainable waste collection and recycling solutions, recognized for its contribution to national waste reduction goals and the advancement of a circular economy. Al Dhafra Waste Collection envisions a future where every recyclable material is efficiently recovered and reused, enabling cleaner cities, reduced carbon emissions, and a fully integrated recycling ecosystem that supports the UAE’s long-term environmental objectives."
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
         imageAlt="Our Vision"
         showButton={false}

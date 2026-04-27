@@ -181,6 +181,7 @@ function AlKhooryEngineering() {
         // }
         items={overview}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777273529/AKE_-_Bottom_Image_bjsv2n.jpg"
+        textPosition="left"
       />
     </main>
   );
