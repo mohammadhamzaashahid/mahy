@@ -15,46 +15,6 @@ async function Companies({ searchParams }) {
 
   const sectorsI = companiesSectors;
 
-  const sectors = [
-    { id: "group", label: "Group" },
-    { id: "trading", label: "Trading" },
-    { id: "automotive", label: "Automotive" },
-    { id: "manufacturing", label: "Manufacturing" },
-  ];
-
-  const sizes = [
-    { id: "small", label: "Small" },
-    { id: "medium", label: "Medium" },
-    { id: "large", label: "Large" },
-  ];
-
-  const locations = [
-    { id: "uae", label: "UAE" },
-    { id: "ksa", label: "KSA" },
-    { id: "pakistan", label: "Pakistan" },
-  ];
-
-  const filters = [
-    {
-      title: "Sector",
-      key: "sector",
-      options: sectors,
-      count: sectors.length,
-    },
-    {
-      title: "Company Size",
-      key: "size",
-      options: sizes,
-      count: sizes.length,
-    },
-    {
-      title: "Location",
-      key: "location",
-      options: locations,
-      count: locations.length,
-    },
-  ];
-
   const companies = [
     {
       name: "MAHY Khoory Group of Companies",
@@ -301,16 +261,74 @@ async function Companies({ searchParams }) {
     },
   ];
 
+  const filterLabelOverrides = {
+    ksa: "KSA",
+    oman: "Oman",
+    uae: "UAE",
+  };
+
+  const formatFilterLabel = (value) =>
+    filterLabelOverrides[value] ||
+    value
+      .split(/[\s-]+/)
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
+  const createFilterOptions = (key) =>
+    Array.from(new Set(companies.map((company) => company[key]).filter(Boolean)))
+      .sort((a, b) => formatFilterLabel(a).localeCompare(formatFilterLabel(b)))
+      .map((value) => ({
+        id: value,
+        label: formatFilterLabel(value),
+      }));
+
+  const sectors = createFilterOptions("sector");
+  const sizes = createFilterOptions("size");
+  const locations = createFilterOptions("location");
+
+  const filters = [
+    {
+      title: "Sector",
+      key: "sector",
+      options: sectors,
+      count: sectors.length,
+    },
+    {
+      title: "Company Size",
+      key: "size",
+      options: sizes,
+      count: sizes.length,
+    },
+    {
+      title: "Location",
+      key: "location",
+      options: locations,
+      count: locations.length,
+    },
+  ];
+
   const getCompanies = () => {
-    let filtered = search
-      ? companies.filter((c) =>
-        c.name.toLowerCase().includes(search.toLowerCase()),
-      )
+    const normalizedSearch = search.trim().toLowerCase();
+    let filtered = normalizedSearch
+      ? companies.filter((company) => {
+        const searchableText = [
+          company.name,
+          company.slug,
+          company.sector,
+          company.location,
+          company.preview,
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+
+        return searchableText.includes(normalizedSearch);
+      })
       : companies;
 
-    const sectorValues = params.sector?.split(",") || [];
-    const sizeValues = params.size?.split(",") || [];
-    const locationValues = params.location?.split(",") || [];
+    const sectorValues = params.sector?.split(",").filter(Boolean) || [];
+    const sizeValues = params.size?.split(",").filter(Boolean) || [];
+    const locationValues = params.location?.split(",").filter(Boolean) || [];
 
     return filtered.filter((company) => {
       if (sectorValues.length && !sectorValues.includes(company.sector))

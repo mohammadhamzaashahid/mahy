@@ -3,6 +3,14 @@ import { motion } from "framer-motion";
 import CompaniesCard from './CompaniesCard';
 
 function List({ companies, locale }) {
+    if (!companies.length) {
+        return (
+            <div className="rounded-3xl border border-[#E7E3DA] bg-white p-10 text-center">
+                <p className="text-sm font-medium text-gray-700">No companies match the selected filters.</p>
+            </div>
+        );
+    }
+
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
             {companies.map((company, index) => (

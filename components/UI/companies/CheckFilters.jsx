@@ -7,7 +7,7 @@ function CheckFilters({ searchKey, label, list, count }) {
     const searchParams = useSearchParams();
 
     const searchValues =
-        searchParams.get(searchKey)?.split(",") || [];
+        searchParams.get(searchKey)?.split(",").filter(Boolean) || [];
 
     const handleClick = (searchValue) => {
         const values = new Set(searchValues);
@@ -31,14 +31,19 @@ function CheckFilters({ searchKey, label, list, count }) {
         <div className="mb-6">
             <p className="text-sm font-medium text-gray-700 mb-4">{label} ({count})</p>
             <div className="flex flex-wrap gap-2">
-                {list.map((item, index) => (
+                {list.map((item) => {
+                    const itemValue = String(item.id);
+                    const isSelected = searchValues.includes(itemValue);
+
+                    return (
                     <button className={`flex items-center gap-2 border text-sm px-3 py-1 rounded-lg hover:bg-[#2c3f6e] hover:text-white hover:border-[#2c3f6e] transition-colors duration-300
-                        ${searchValues.includes(index.toString()) ? "bg-[#2c3f6e] text-white border-[#2c3f6e]" : "border-gray-500 text-gray-500"}`}
-                        onClick={() => handleClick(index.toString())} key={item.id}>
-                        {searchValues.includes(index.toString()) && <Check />}
+                        ${isSelected ? "bg-[#2c3f6e] text-white border-[#2c3f6e]" : "border-gray-500 text-gray-500"}`}
+                        onClick={() => handleClick(itemValue)} key={item.id}>
+                        {isSelected && <Check />}
                         <div>{item.label}</div>
                     </button>
-                ))}
+                    );
+                })}
             </div>
         </div >
     )
