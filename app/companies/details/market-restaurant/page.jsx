@@ -115,10 +115,10 @@ function MarketRestarauntPage() {
                 backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
                 endText={"Its casual yet refined positioning makes it attractive to families, individuals, and groups looking for a comfortable dining environment without formality."}
             />
-            <CompanyTextOnBackground
+            {/* <CompanyTextOnBackground
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776762183/commitment-to-growth_qhzgjt.jpg"
                 align="left"
-            />
+            /> */}
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}

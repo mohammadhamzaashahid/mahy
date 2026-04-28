@@ -48,7 +48,7 @@ traditional industries and future-focused sectors.`,
   const router = useRouter();
 
   return (
-    <section className="relative py-12 md:py-14 overflow-hidden">
+    <section className="relative py-6 md:py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-5">
         <div
           className="grid grid-cols-1 md:grid-cols-2
