@@ -73,6 +73,7 @@ function MahyKhooryMotorsPage() {
         invert={false}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
         imageAlt="Our Mission"
+        gap
       />
       <WhoWeAre
         topHeading=""

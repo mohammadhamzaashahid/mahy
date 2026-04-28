@@ -14,37 +14,40 @@ function SubmitCv() {
         image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776984212/people-working-with-computers.jpg_s9wcea.jpg"}
         fullHeight
       />
-      <ServicesGlobally
-        heading="Submit Your CV"
-        text={false}
-        texts1={[
-          { text: "You may submit your updated CV directly to:", link: false },
-          { text: "careers@mahykhoory.com", link: true },
-          {
-            text: "When sending your application, please include:",
-            link: false,
-          },
-        ]}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767093/upload-cv-page_fizfrq.jpg"
-        items={[
-          "Your full name",
-          "Area of expertise or desired department",
-          "Years of experience",
-          "Current location and contact details",
-          "Any relevant certifications or licenses",
-        ]}
-      />
-
-      <ServicesGloballyTemp
-        invert
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767213/business-people-meeting-conference-discussion-corporate-concept.jpg_jfwfzf.jpg"
-        texts2={[
-          "Our Human Resources team will review your profile and maintain it within our centralized talent database. As a holding group comprising 25 companies across manufacturing, trading, engineering, logistics, waste management, automotive, hospitality, and other sectors, opportunities may arise within different subsidiaries based on operational requirements.",
-          "You are also encouraged to explore the individual websites of the companies listed under the Companies section of our website. Several subsidiaries may have dedicated career pages where you can apply directly for company-specific roles aligned with your professional background.",
-          "All applications are handled with strict confidentiality and are evaluated based on qualifications, experience, and alignment with organizational needs.",
-          "We look forward to connecting with talented individuals who are ready to contribute to a performance-driven and technology-focused organization.",
-        ]}
-      />
+      <div className="pt-5">
+        <ServicesGlobally
+          heading="Submit Your CV"
+          text={false}
+          texts1={[
+            { text: "You may submit your updated CV directly to:", link: false },
+            { text: "careers@mahykhoory.com", link: true },
+            {
+              text: "When sending your application, please include:",
+              link: false,
+            },
+          ]}
+          image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767093/upload-cv-page_fizfrq.jpg"
+          items={[
+            "Your full name",
+            "Area of expertise or desired department",
+            "Years of experience",
+            "Current location and contact details",
+            "Any relevant certifications or licenses",
+          ]}
+        />
+      </div>
+      <div className="pb-10">
+        <ServicesGloballyTemp
+          invert
+          image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767213/business-people-meeting-conference-discussion-corporate-concept.jpg_jfwfzf.jpg"
+          texts2={[
+            "Our Human Resources team will review your profile and maintain it within our centralized talent database. As a holding group comprising 25 companies across manufacturing, trading, engineering, logistics, waste management, automotive, hospitality, and other sectors, opportunities may arise within different subsidiaries based on operational requirements.",
+            "You are also encouraged to explore the individual websites of the companies listed under the Companies section of our website. Several subsidiaries may have dedicated career pages where you can apply directly for company-specific roles aligned with your professional background.",
+            "All applications are handled with strict confidentiality and are evaluated based on qualifications, experience, and alignment with organizational needs.",
+            "We look forward to connecting with talented individuals who are ready to contribute to a performance-driven and technology-focused organization.",
+          ]}
+        />
+      </div>
     </main>
   );
 }

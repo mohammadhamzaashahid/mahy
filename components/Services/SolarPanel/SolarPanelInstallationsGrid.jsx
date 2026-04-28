@@ -28,26 +28,26 @@ function SolarPanelInstallationsGrid({
 
   const images = propImages?.length ? propImages : defaultImages;
   return (
-    <section className="max-w-7xl mx-auto px-5 py-10 md:py-20">
+    <section className="max-w-7xl mx-auto px-5 py-8 md:py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20">
         <div className="pb-4 md:py-10">
-          <h2 className="uppercase font-bold text-xl">{heading}</h2>
+          <h2 className="uppercase font-bold text-xl t-base">{heading}</h2>
 
           {text && <p className="text-gray-700 mt-4">{text}</p>}
 
           <div className="border-t border-gray-400 mt-8 md:mt-10 pt-10 space-y-10">
             {itemsTitle && <h3 className="font-bold text-xl">{itemsTitle}</h3>}
 
-                        {items.map((item, i) => (
-                            <div key={i} className="flex gap-3">
-                                <div className="flex-none h-fit">
-                                    <div className="relative text-slate-500 size-10">
-                                        <Image src={"/bullet-point.svg"} alt="Bullet Point" fill style={{ objectFit: "cover" }} />
-                                    </div>
-                                </div>
+            {items.map((item, i) => (
+              <div key={i} className="flex gap-3">
+                <div className="flex-none h-fit">
+                  <div className="relative text-slate-500 size-10">
+                    <Image src={"/bullet-point.svg"} alt="Bullet Point" fill style={{ objectFit: "cover" }} />
+                  </div>
+                </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <h3 className="text-xl font-semibold t-base">{item.title}</h3>
                   <p className="mt-1 text-gray-700">{item.text}</p>
 
                   {item.list && (

@@ -28,7 +28,7 @@ export default function FeaturesEngineeringSection({
   text,
   image = "/gallery/gallery-1.jpg",
   items = [],
-  textPosition = "right", 
+  textPosition = "right",
 }) {
   const textPositionClasses = {
     left: "bottom-6 left-6 md:bottom-8 md:left-8 lg:bottom-12 lg:left-12 text-left w-[65%]",
@@ -37,7 +37,7 @@ export default function FeaturesEngineeringSection({
   };
 
   return (
-    <section className="bg-white py-20 md:py-24 lg:py-28">
+    <section className="bg-white py-6 md:py-10">
       <motion.div
         className="max-w-7xl mx-auto px-5 md:px-6"
         variants={containerVariants}
@@ -58,11 +58,10 @@ export default function FeaturesEngineeringSection({
         )}
 
         <div
-          className={`mt-12 md:mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 ${
-            items.length % 5 === 0
-              ? "lg:grid-cols-4 lg:gap-2"
-              : "lg:grid-cols-3 lg:gap-10"
-          } auto-rows-fr gap-6 md:gap-8`}
+          className={`mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 ${items.length % 5 === 0
+            ? "lg:grid-cols-4 lg:gap-4"
+            : "lg:grid-cols-3 lg:gap-6"
+            } gap-6 md:gap-8 `}
         >
           {items.map((item, i) => {
             const isLastSpecial =
@@ -75,9 +74,8 @@ export default function FeaturesEngineeringSection({
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-80px" }}
-                className={`${
-                  items.length % 5 === 0 ? "lg:px-6 lg:py-6" : "lg:px-10 lg:py-12"
-                } lg:col-span-1 group bg-[#E3EBEA] px-6 md:px-8 py-8 md:py-10 min-h-[280px] md:min-h-[320px] lg:min-h-[340px] flex flex-col justify-between transition-colors duration-700 hover:bg-[#1F2C30]`}
+                className={`${items.length % 5 === 0 ? "lg:px-6 lg:py-6" : "lg:px-10 lg:py-12"
+                  } lg:col-span-1 group bg-[#E3EBEA] px-6 md:px-8 py-8 md:py-10 min-h-[280px] md:min-h-[320px] lg:min-h-[340px] flex flex-col justify-between transition-colors duration-700 hover:bg-[#1F2C30]`}
               >
                 <div>
                   <div className="mb-8 md:mb-4 size-6 rounded-full border border-current text-[#1F2C30] group-hover:text-white transition-colors duration-700" />
@@ -117,20 +115,19 @@ export default function FeaturesEngineeringSection({
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-80px" }}
-                className={`relative overflow-hidden min-h-[280px] md:min-h-[320px] lg:min-h-[340px] ${
-                  items.length === 2
-                    ? "col-span-2"
-                    : items.length % 5 === 0
-                      ? "lg:col-span-4 md:col-span-3"
-                      : "lg:col-span-3 md:col-span-3 col-span-3"
-                } group`}
+                className={`relative overflow-hidden min-h-70 md:min-h-80 lg:min-h-120 ${items.length === 2
+                  ? "col-span-2"
+                  : items.length % 5 === 0
+                    ? "lg:col-span-4 md:col-span-3"
+                    : "lg:col-span-3 md:col-span-2 col-span-1"
+                  } group`}
               >
                 <div className="absolute inset-0">
                   <Image
                     src={image}
                     alt="Operational excellence"
                     fill
-                    className="object-cover scale-100 group-hover:scale-105 transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]"
+                    className="object-cover scale-100 group-hover:scale-105 transition-transform duration-900 ease-[cubic-bezier(0.22,1,0.36,1)]"
                   />
                 </div>
 
