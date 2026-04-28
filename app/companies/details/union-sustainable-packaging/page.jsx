@@ -68,6 +68,7 @@ function UnionSustainablePackagingPage() {
         invert={false}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
         imageAlt="Technology, Design, and Manufacturing Capabilities"
+        gap
       />
 
       <WhoWeAre

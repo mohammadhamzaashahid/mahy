@@ -17,8 +17,6 @@ function HeroVideo({ slides }) {
         return () => clearInterval(id);
     }, [slides.length]);
 
-
-
     return (
         <section className="relative h-screen">
             <video

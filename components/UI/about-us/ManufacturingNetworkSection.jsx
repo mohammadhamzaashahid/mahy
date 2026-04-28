@@ -37,18 +37,18 @@ export default function ManufacturingNetworkSection({ network, locale }) {
         <motion.div className="relative z-10" initial="hidden" animate="visible"
           variants={prefersReducedMotion ? {} : stagger}>
           <div
-            className="max-w-275 mx-auto px-4 sm:px-8 pt-20 sm:pt-24 md:pt-28 text-center text-white">
+            className="max-w-7xl mx-auto px-4 sm:px-8 pt-12 sm:pt-24 md:pt-28 text-center text-white">
             <motion.h2
               variants={prefersReducedMotion ? {} : fadeUp}
-              className="text-[22px] t-base sm:text-[28px] md:text-[34px] font-medium leading-tight">
+              className="text-[22px] text-white sm:text-[28px] md:text-[34px] font-medium leading-tight">
               {network.text[0]}
             </motion.h2>
             <motion.p
               variants={prefersReducedMotion ? {} : fadeUp}
-              className="mt-5 t-base text-sm sm:text-base md:text-lg leading-relaxed opacity-90 max-w-225 mx-auto">
+              className="mt-5 text-gray-100 text-sm sm:text-base md:text-lg leading-relaxed opacity-90 max-w-7xl mx-auto">
               {network.text[1]}
             </motion.p>
-            <motion.div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-y-12 gap-x-6"
+            <motion.div className="mt-8 md:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-y-7 md:gap-y-12 gap-x-6"
               variants={prefersReducedMotion ? {} : stagger}>
               <Stat value={network.statsNo[0]} label={network.stats[0]} />
               <Stat value={network.statsNo[1]} label={network.stats[1]} />
@@ -60,10 +60,10 @@ export default function ManufacturingNetworkSection({ network, locale }) {
           className="
             relative
             z-20
-            mt-20
-            sm:mt-28
-            md:mt-32
-            lg:mt-36
+            mt-10
+            sm:mt-12
+            md:mt-15
+            lg:mt-20
           "
           initial={prefersReducedMotion ? false : { opacity: 0, y: 40 }}
           animate={prefersReducedMotion ? false : { opacity: 1, y: 0 }}
@@ -94,7 +94,7 @@ function Stat({ value, label }) {
           },
         },
       }}
-      className="max-w-[360px] mx-auto text-center"
+      className="max-w-7xl mx-auto text-center"
     >
       <div
         className="

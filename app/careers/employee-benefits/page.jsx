@@ -11,7 +11,7 @@ function EmployeeBenefitsPage() {
           "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776764649/employee-benefits.jpg_czxz7n.jpg"
         }
       />
-      <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
+      <section className="max-w-7xl mx-auto px-5 py-8 md:py-12">
         <CompaniesSectors
           image={
             "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776985047/young-smiling-professional-woman-having-coffee-break-her-full-working-day-she-holds-paper-cup-outdoors-near-business-building-while-relaxing-enjoying-her-beverage.jpg_pqypyo.jpg"

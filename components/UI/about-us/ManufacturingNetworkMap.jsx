@@ -58,7 +58,7 @@ export default function ManufacturingNetworkMap({ data, locations }) {
 
   const animRef = useRef({ raf: null, start: 0 });
   const hoverStateRef = useRef(false);
-  const controlsRef = useRef({ start: () => {}, stop: () => {} });
+  const controlsRef = useRef({ start: () => { }, stop: () => { } });
   const worldDataRef = useRef(null);
 
   useEffect(() => {
@@ -473,7 +473,7 @@ export default function ManufacturingNetworkMap({ data, locations }) {
 
   return (
     <section className="pb-16 sm:pb-20">
-      <div className="max-w-[1500px] mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div
           className="
             bg-white
@@ -481,10 +481,10 @@ export default function ManufacturingNetworkMap({ data, locations }) {
             shadow-[0_30px_90px_rgba(15,23,42,0.12)]
             px-6
             sm:px-10
-            py-10
+            py-6
           "
         >
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(260px,320px)_1fr] items-center gap-10 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(260px,320px)_1fr] items-center gap-2 lg:gap-16">
             <div className="order-2 lg:order-1 text-center lg:text-start">
               <p className="text-xs sm:text-sm font-semibold uppercase text-[#1C4C9A]">
                 {data[0]}
@@ -492,7 +492,7 @@ export default function ManufacturingNetworkMap({ data, locations }) {
               <h2 className="mt-4 text-[30px] sm:text-[36px] lg:text-[40px] font-semibold leading-tight text-gray-900">
                 {data[1]}
               </h2>
-              <p className="mt-6 text-base sm:text-lg leading-7 text-gray-600 max-w-xl mx-auto lg:mx-0">
+              <p className="mt-6 leading-7 text-gray-600 max-w-xl mx-auto lg:mx-0">
                 {data[2]}
               </p>
             </div>

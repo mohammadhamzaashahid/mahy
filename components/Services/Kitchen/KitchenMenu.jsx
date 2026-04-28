@@ -15,7 +15,7 @@ function KitchenMenu({
       text: "We start by understanding your business at its core. Ourteam of seasoned consultants collaborates with you to craft a strategic vision that aligns with your goals.",
       image:
         "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937366/fusion-03-pg30_qsuufj.jpg",
-      objectFit: "cover",  
+      objectFit: "cover",
     },
     {
       title: "Customized Solutions",
@@ -36,7 +36,7 @@ function KitchenMenu({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <section className="max-w-7xl mx-auto px-5 py-8 md:py-12">
+    <section className="max-w-7xl mx-auto px-5 py-6 md:py-8">
       <h1 className="t-base font-bold text-3xl text-center md:text-start">
         {heading}
       </h1>
@@ -44,7 +44,7 @@ function KitchenMenu({
         <div className="md:col-span-4">
           <p className="mt-3 text-gray-600 text-center md:text-start">{text}</p>
           {text2 && (
-            <p className="mt-3 text-gray-600 text-center md:text-start mb-8">
+            <p className="mt-3 text-gray-600 text-center md:text-start mb-2 md:mb-8">
               {text2}
             </p>
           )}
@@ -68,7 +68,7 @@ function KitchenMenu({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex flex-col justify-center space-y-16 md:col-span-5">
+        <div className="flex flex-col justify-center space-y-5 md:space-y-8 md:col-span-5">
           {items.map((item, i) => (
             <button
               key={i}

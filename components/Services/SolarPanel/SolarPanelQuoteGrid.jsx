@@ -27,12 +27,12 @@ function SolarPanelQuoteGrid({
             style={{ objectFit: "cover" }}
           />
         </div>
-        <div className="pt-7 pb-5 md:py-10 px-5 md:px-10 md:col-span-3">
+        <div className="pt-7 pb-5 md:py-10 px-5 md:px-6 md:col-span-3">
           <h2 className="uppercase font-semibold">{heading}</h2>
-          <p className="mt-3 text-gray-700">{text}</p>
-          {text2 && <p className="mt-3 text-gray-700">{text2}</p>}
-          <div className="grid grid-cols-1 sm:grid-cols-2 mt-8 gap-3 md:gap-0">
-            <div className="pr-3">
+          <p className="mt-1.5 text-gray-700">{text}</p>
+          {text2 && <p className="mt-1.5 text-gray-700">{text2}</p>}
+          <div className="grid grid-cols-1 sm:grid-cols-2 mt-6 gap-3 md:gap-0">
+            <div className="pr-4">
               {items.map((item, i) => (
                 <div
                   key={i}

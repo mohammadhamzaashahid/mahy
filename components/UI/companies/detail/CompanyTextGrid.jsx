@@ -36,12 +36,11 @@ function CompanyTextGrid({
     <section
       id={id}
       aria-labelledby={id ? `${id}-heading` : undefined}
-      className={`max-w-7xl mx-auto px-5 py-12 md:py-20 ${className}`}
+      className={`max-w-7xl mx-auto px-5 py-6 md:py-12 ${className}`}
     >
       <div
-        className={`grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center ${
-          reversed ? "md:[direction:rtl] [&>*]:[direction:ltr]" : ""
-        }`}
+        className={`grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16 items-center ${reversed ? "md:[direction:rtl] [&>*]:[direction:ltr]" : ""
+          }`}
       >
         <div>
           {subheading && (
@@ -68,7 +67,7 @@ function CompanyTextGrid({
           </motion.h2>
 
           {gridParas.length > 0 && (
-            <div className="mt-6 space-y-4 text-gray-600">
+            <div className="mt-3 md:mt-6 space-y-4 text-gray-600">
               {gridParas.map((text, i) => (
                 <motion.p
                   key={i}
@@ -123,9 +122,8 @@ function CompanyTextGrid({
               )}
 
               <motion.div
-                className={`${cardTextColor} leading-relaxed ${
-                  showImage && image ? "mt-8" : ""
-                }`}
+                className={`${cardTextColor} leading-relaxed ${showImage && image ? "mt-8" : ""
+                  }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}

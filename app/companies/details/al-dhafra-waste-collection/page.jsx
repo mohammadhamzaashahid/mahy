@@ -94,6 +94,7 @@ function AlDhafraWasteCollectionPage() {
         invert={false}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
         imageAlt="Our Mission"
+        gap={true}
       />
       <WhoWeAre
         topHeading=""
@@ -130,8 +131,8 @@ function AlDhafraWasteCollectionPage() {
           "Its activities directly support UAE national objectives related to waste reduction, recycling, and circular economy development, while enabling customers to meet their own sustainability targets."
         }
       />
-  
-       <WhoWeAre
+
+      <WhoWeAre
         topHeading=""
         heading="Infrastructure and Fleet"
         text="The company operates a modern fleet of compactor trucks, flatbed vehicles, and baling trailers, supported by standardized recycling containers deployed across Abu Dhabi. Mobile balers and container exchange systems are used to service high-volume clients efficiently."

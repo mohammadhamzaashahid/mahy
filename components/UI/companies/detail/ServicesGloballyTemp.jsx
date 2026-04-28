@@ -15,20 +15,19 @@ function ServicesGloballyTemp({
   invert = false,
 }) {
   return (
-    <section className="max-w-7xl mx-auto px-5 mb-1.5">
+    <section className="max-w-7xl mx-auto px-3 mb-1.5">
       <motion.div
-        className="mt-3 md:mt-6 p-8 md:p-12 rounded-3xl grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 bg-blue-100"
+        className="mt-3 md:mt-6 p-6 md:p-10 rounded-3xl grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-8 b-base text-white"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
       >
         <div
-          className={`md:py-4 md:col-span-2 ${
-            invert ? "md:order-2" : "md:order-1"
-          }`}
+          className={`md:py-4 md:col-span-2 ${invert ? "md:order-2" : "md:order-1"
+            }`}
         >
-          {text && <p className="leading-7 text-gray-700">{text}</p>}
+          {text && <p className="leading-7 text-white">{text}</p>}
 
           {texts1 && (
             <div>
@@ -37,7 +36,7 @@ function ServicesGloballyTemp({
                   <a
                     key={i}
                     href={`mailto:${item.text}`}
-                    className="block text-blue-600 underline hover:text-blue-800"
+                    className="block text-blue-300 underline hover:text-blue-200"
                   >
                     {item.text}
                   </a>
@@ -54,7 +53,7 @@ function ServicesGloballyTemp({
             <ul className="mt-2 space-y-2">
               {items.map((item, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="mt-[0.55em] h-1.5 w-1.5 rounded-full bg-gray-700" />
+                  <span className="mt-[0.55em] h-1.5 w-1.5 rounded-full bg-white" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -64,7 +63,7 @@ function ServicesGloballyTemp({
           {texts2 && (
             <div className="mt-3 space-y-2">
               {texts2.map((item, i) => (
-                <p className="text-gray-700" key={i}>
+                <p className="text-white" key={i}>
                   {item}
                 </p>
               ))}
@@ -73,9 +72,8 @@ function ServicesGloballyTemp({
         </div>
 
         <div
-          className={`rounded-3xl overflow-hidden relative h-60 md:h-full md:col-span-3 ${
-            invert ? "md:order-1" : "md:order-2"
-          }`}
+          className={`rounded-3xl overflow-hidden relative h-60 md:h-full md:col-span-3 ${invert ? "md:order-1" : "md:order-2"
+            }`}
         >
           <Image src={image} alt="Services" fill style={{ objectFit: "cover" }} />
         </div>
