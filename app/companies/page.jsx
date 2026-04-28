@@ -344,7 +344,7 @@ async function Companies({ searchParams }) {
     <main className="bg-gray-50 pb-14">
       <PageHeading
         title={t("Heading")}
-        description={t("Description")}
+        description={"MAHY Khoory Group of Companies is a Dubai-based diversified holding group comprising 25+ operating companies and business divisions across multiple industries. The Group has built a strong presence in the UAE and the wider region through long-term commercial relationships, technical capability, and integrated operations. With businesses spanning trading, engineering, industrial manufacturing, recycling, sustainability, logistics, automotive, hospitality, and food & beverage, the Group operates a balanced and resilient portfolio designed to support both traditional industries and future-focused sectors."}
         image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777123325/abstract-business-office-building-london_rrnpsd.jpg"}
       />
 
