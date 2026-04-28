@@ -253,19 +253,32 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
     progress(nextKey);
   }
 
-  function handleTextSubmit(text) {
+  function handleTextSubmit(text, meta = null) {
     const question = flow[current];
     if (!question) return;
     addUser(text);
+    const answerValue = question.type === "phone" && meta?.fullPhoneNumber
+      ? meta.fullPhoneNumber
+      : text;
     const updatedAnswers = {
       ...answers,
-      [question.field]: text,
+      [question.field]: answerValue,
+      ...(question.type === "phone" && meta
+        ? {
+            phoneCountryCode: meta.countryCode,
+            phoneNumber: meta.phoneNumber,
+          }
+        : {}),
       _qmap: [
         ...(answers._qmap || []),
-        { question: question.text, answer: text },
+        { question: question.text, answer: answerValue },
       ],
     };
     setAnswers(updatedAnswers);
+    if (question.next) {
+      progress(question.next);
+      return;
+    }
     if (question.submit) {
       finalizeSubmission(updatedAnswers);
       return;
@@ -285,7 +298,7 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
     setIsTyping(true);
     addBot(layout.submit1);
     setTimeout(async () => {
-      await submitToCRM({ answers, conversation: messages });
+      await submitToCRM({ answers: finalAnswers, conversation: messages });
       setIsTyping(false);
       addBot(layout.submit2);
       setCurrent("done");
@@ -306,7 +319,7 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
       const nextQuestion = flow[nextKey];
       addBot(nextQuestion.text);
       if (nextQuestion.submit && nextQuestion.type === "info") {
-        await submitToCRM({ answers: finalAnswers, conversation: messages });
+        await submitToCRM({ answers, conversation: messages });
         setIsTyping(false);
         setCurrent("done");
         setHistory((prev) => [...prev, "done"]);
@@ -333,7 +346,7 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
   function getPlaceholder() {
     if (!question) return layout.type;
     if (question.type === "email") return "name@company.com";
-    if (question.type === "phone") return "+971 55 123 4567";
+    if (question.type === "phone") return "55 123 4567";
     return layout.type;
   }
 
@@ -490,6 +503,7 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
                     onSubmit={handleTextSubmit}
                     type={question.type}
                     data={layout}
+                    isSubmitStage={Boolean(question.submit && !question.next)}
                   />
                 )}
 

@@ -179,9 +179,12 @@ export default function VendorRegistration() {
   const vendorType = watch("vendorType");
   const vendorClassificationGroup = watch("vendorClassificationGroup");
   const trnType = watch("trnType");
+  const trn = watch("trn");
   const countryRegion = watch("countryRegion");
   const telCountryCode = watch("telCountryCode");
   const mobileCountryCode = watch("mobileCountryCode");
+  const mobileAreaCode = watch("mobileAreaCode");
+  const mobileNumber = watch("mobileNumber");
 
   const {
     data: cities = [],
@@ -202,6 +205,9 @@ export default function VendorRegistration() {
   const showExtendedAddress = (isOrganization && isRegular) || isPerson;
   const showTelAreaCodeLookup = telCountryCode === UAE_DIALING_CODE;
   const showMobileAreaCodeLookup = mobileCountryCode === UAE_DIALING_CODE;
+  const isMobileRequired = isPerson;
+  const isMobileAreaCodeRequired =
+    isPerson || Boolean(mobileAreaCode || mobileNumber);
 
   useEffect(() => {
     setValue("city", "");
@@ -219,6 +225,27 @@ export default function VendorRegistration() {
       setValue("mobileAreaCode", "");
     }
   }, [showMobileAreaCodeLookup, setValue]);
+
+  useEffect(() => {
+    if (trnType !== "with_trn" || !trn) {
+      setValue("verifyTrnFile", null);
+      clearErrors("verifyTrnFile");
+    }
+  }, [clearErrors, setValue, trn, trnType]);
+
+  useEffect(() => {
+    if (isPerson) {
+      setValue("termsOfPayment", "NET000D", {
+        shouldDirty: true,
+        shouldValidate: true,
+      });
+      return;
+    }
+
+    if (!mobileNumber) {
+      clearErrors(["mobileCountryCode", "mobileAreaCode", "mobileNumber"]);
+    }
+  }, [clearErrors, isPerson, mobileNumber, setValue]);
 
   const sanitizeDigits = (value, maxLength) =>
     value.replace(/\D/g, "").slice(0, maxLength);
@@ -270,6 +297,15 @@ export default function VendorRegistration() {
         ),
       };
 
+      if (
+        isOrganization &&
+        !values.mobileAreaCode &&
+        !values.mobileNumber
+      ) {
+        delete payloadValues.mobileCountryCode;
+        delete payloadValues.mobileNumber;
+      }
+
       if (isUAE) {
         delete payloadValues.passportNumber;
         delete payloadValues.passportDateOfIssue;
@@ -286,6 +322,7 @@ export default function VendorRegistration() {
           value === null ||
           value === "" ||
           key.endsWith("File") ||
+          key === "verifyTrn" ||
           key === "telAreaCode" ||
           key === "mobileAreaCode"
         ) {
@@ -306,6 +343,10 @@ export default function VendorRegistration() {
       }
 
       normalizeFiles(values.tradeLicenseFile).forEach((file) =>
+        formData.append("files", file),
+      );
+
+      normalizeFiles(values.verifyTrnFile).forEach((file) =>
         formData.append("files", file),
       );
 
@@ -423,10 +464,11 @@ export default function VendorRegistration() {
                         render={({ field }) => (
                           <RadioGroupField
                             label="Vendor classification group"
-                            required
+                            required={isPerson}
                             value={field.value || ""}
                             onChange={field.onChange}
                             options={[...VENDOR_CLASSIFICATION_GROUPS]}
+                            error={errors.vendorClassificationGroup?.message}
                           />
                         )}
                       />
@@ -436,7 +478,7 @@ export default function VendorRegistration() {
                         control={control}
                         label="Terms of payment"
                         enableSearch
-                        required
+                        required={isPerson}
                         searchPlaceholder={"Search Payment Terms"}
                         data={paymentTerms}
                         loading={ptLoading}
@@ -456,7 +498,7 @@ export default function VendorRegistration() {
                         enableSearch
                         searchPlaceholder={"Search Dlv Terms"}
                         label="Delivery Terms"
-                        required
+                        required={isPerson}
                         data={deliveryTerms}
                         loading={dlvTermsLoading}
                         onOpen={() => setOpenLookup("deliveryTerms")}
@@ -590,7 +632,6 @@ export default function VendorRegistration() {
                                 field.onChange(date);
                               }}
                               error={fieldState.error?.message}
-                              required
                             />
                           )}
                         />
@@ -603,7 +644,8 @@ export default function VendorRegistration() {
                               label="Trade license expiry date"
                               value={field.value}
                               onChange={field.onChange}
-                              disabled={(date) => date < new Date()}
+                              error={errors.tradeLicenseExpiryDate?.message}
+                              required
                             />
                           )}
                         />
@@ -616,6 +658,8 @@ export default function VendorRegistration() {
                               label="Attach trade license"
                               value={field.value}
                               onChange={field.onChange}
+                              required
+                              error={errors.tradeLicenseFile?.message}
                             />
                           )}
                         />
@@ -666,31 +710,49 @@ export default function VendorRegistration() {
                           />
                         </AnimatedField>
 
-                        <AnimatedField show={trnType === "with_trn"}>
-                          <Controller
-                            name="trn"
-                            control={control}
-                            render={({ field }) => (
-                              <InputField
-                                label="TRN"
-                                required
-                                error={errors.trn?.message}
-                                inputMode="numeric"
-                                autoComplete="off"
-                                placeholder="Enter 15-digit TRN"
-                                value={field.value || ""}
-                                onChange={(e) => {
-                                  const sanitized = e.target.value
-                                    .replace(/\D/g, "")
-                                    .slice(0, 15);
-                                  field.onChange(sanitized);
-                                }}
-                                onBlur={field.onBlur}
-                                name={field.name}
-                                ref={field.ref}
+                        <AnimatedField show={trnType === "with_trn"} className="col-span-full">
+                          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                            <Controller
+                              name="trn"
+                              control={control}
+                              render={({ field }) => (
+                                <InputField
+                                  label="TRN"
+                                  required
+                                  error={errors.trn?.message}
+                                  inputMode="numeric"
+                                  autoComplete="off"
+                                  placeholder="Enter 15-digit TRN"
+                                  value={field.value || ""}
+                                  onChange={(e) => {
+                                    const sanitized = e.target.value
+                                      .replace(/\D/g, "")
+                                      .slice(0, 15);
+                                    field.onChange(sanitized);
+                                  }}
+                                  onBlur={field.onBlur}
+                                  name={field.name}
+                                  ref={field.ref}
+                                />
+                              )}
+                            />
+
+                            {trn && (
+                              <Controller
+                                name="verifyTrnFile"
+                                control={control}
+                                render={({ field }) => (
+                                  <FileUploadField
+                                    label="Verify TRN"
+                                    value={field.value}
+                                    onChange={field.onChange}
+                                    required
+                                    error={errors.verifyTrnFile?.message}
+                                  />
+                                )}
                               />
                             )}
-                          />
+                          </div>
                         </AnimatedField>
                       </FormSection>
                     </motion.div>
@@ -1168,7 +1230,7 @@ export default function VendorRegistration() {
                           name="mobileCountryCode"
                           control={control}
                           label="Country code"
-                          required
+                          required={isMobileRequired}
                           data={COUNTRY_CODES}
                           columns={[{ key: "label", label: "Country code" }]}
                           placeholder="Select country code"
@@ -1180,7 +1242,7 @@ export default function VendorRegistration() {
                             name="mobileAreaCode"
                             control={control}
                             label="Code/ Area code"
-                            required
+                            required={isMobileAreaCodeRequired}
                             data={UAE_MOBILE_AREA_CODES}
                             columns={[
                               { key: "countryCode", label: "Country code" },
@@ -1197,7 +1259,7 @@ export default function VendorRegistration() {
                           render={({ field }) => (
                             <InputField
                               label="Mobile Number"
-                              required
+                              required={isMobileRequired}
                               type="tel"
                               placeholder="Enter mobile number"
                               error={errors.mobileNumber?.message}
@@ -1238,7 +1300,12 @@ export default function VendorRegistration() {
                         {...register("confirmEmail")}
                       />
 
-                      <InputField label="Website" {...register("website")} />
+                      <InputField
+                        label="Website"
+                        placeholder="www.example.com"
+                        error={errors.website?.message}
+                        {...register("website")}
+                      />
                     </FormSection>
                   </motion.div>
                   <Controller
