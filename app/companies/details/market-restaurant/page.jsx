@@ -10,23 +10,23 @@ function MarketRestarauntPage() {
     const features = [
         {
             text: "Freshly prepared salads and starters",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405490/vinn-koonyosying-Ul4sgxQMmHU-unsplash_tud7ki.jpg",
         },
         {
             text: "Grilled meats and seafood dishes",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405482/hanxiao-xu-OLuduycPvSE-unsplash_h2q3ln.jpg",
         },
         {
             text: "Specialty brunch selections",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405275/simon-karemann-p85-MG66GRY-unsplash_o54igo.jpg",
         },
         {
             text: "Desserts and café-style beverages",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405474/brooke-lark-V4MBq8kue3U-unsplash_yorhbk.jpg",
         },
         {
             text: "In addition to dine-in service, the restaurant provides takeaway, delivery, and catering services, and is well suited for private gatherings, corporate lunches, and small social events.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405278/kayleigh-harrington-yhn4okt6ci0-unsplash_zb5fn1.jpg",
         }
     ];
     const adpmCardsData = [
@@ -112,7 +112,7 @@ function MarketRestarauntPage() {
                 heading="Target Market and Customer Segments"
                 tag="[ RESTAURANT ]"
                 text={"The restaurant caters to a diverse clientele, including:"}
-                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
+                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405269/albert-YYZU0Lo1uXE-unsplash_e8shgs.jpg"
                 endText={"Its casual yet refined positioning makes it attractive to families, individuals, and groups looking for a comfortable dining environment without formality."}
             />
             {/* <CompanyTextOnBackground
