@@ -12,7 +12,7 @@ function AnnualMaintenanceContracts() {
     return (
         <section className="max-w-7xl mx-auto py-10 md:pt-25 md:pb-20 px-5">
             <AnimatedLines />
-            <h1 className="text-6xl text-center pt-3 font-semibold">Services</h1>
+            <h1 className="text-6xl text-center t-base pt-3 font-semibold">Services</h1>
             <p className="mt-5 text-center text-2xl text-gray-700">Comprehensive Legal Services</p>
             <div className="mt-12 border-t border-gray-300">
                 {items.map((item, i) => (

@@ -131,14 +131,13 @@ async function companyProfile() {
         </p>
       </div> */}
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 lg:py-28 text-center bg-black">
-        <div className="flex justify-center mb-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-10 lg:py-20 text-center b-base">
+        <div className="flex justify-center mb-2 md:mb-6">
           <AnimatedLines bg="bg-gray-300" />
         </div>
         <p
           className="
       text-gray-100
-      font-medium
       leading-relaxed
       tracking-wide
       max-w-4xl
@@ -167,9 +166,9 @@ async function companyProfile() {
 
       <ManufacturingNetworkSection network={network} locale={locale} />
 
-      <div className="text-center px-4 bg-black p-20">
+      <div className="text-center px-4 bg-black p-12 md:p-20">
         <AnimatedLines bg="bg-gray-200" />
-        <h2 className="text-heading text-4xl sm:text-5xl font-semibold text-gray-100">
+        <h2 className="text-heading text-2xl sm:text-3xl lg:text-5xl font-semibold text-gray-100 pt-1 lg:pt-2">
           What Defines The Group
         </h2>
       </div>

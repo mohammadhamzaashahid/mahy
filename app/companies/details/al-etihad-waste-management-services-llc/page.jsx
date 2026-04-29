@@ -6,6 +6,7 @@ import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground";
 import WhoWeAre from "@/components/UI/home/WhoWeAre";
+import { object } from "zod";
 
 function AlEtihadWasteManagementPage() {
   const overview = [
@@ -50,6 +51,7 @@ function AlEtihadWasteManagementPage() {
     },
     {
       title: "Expansion & National Impact",
+      objectFit: "contain",
       text: "Over the past decade, the company has expanded rapidly in scale, coverage, and operational capability through continuous investment in infrastructure, fleet, and workforce development.",
       image:
         "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777307152/Expansion_and_National_Impact_oozjjj.jpg",

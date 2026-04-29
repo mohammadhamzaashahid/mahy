@@ -62,7 +62,7 @@ export default function PumpingServiceCards({
   endText,
 }) {
   return (
-    <section className="relative py-24 md:py-32 text-white overflow-hidden">
+    <section className="relative py-12 md:py-18 text-white overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <Image
@@ -77,7 +77,7 @@ export default function PumpingServiceCards({
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-6">
         {/* Heading */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="text-center mb-12 md:mb-16">
           {tag && (
             <span className="block text-sm tracking-widest text-gray-300 mb-4">
               {tag}
@@ -96,7 +96,7 @@ export default function PumpingServiceCards({
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 lg:gap-14">
           {cards.map((item, i) => {
             const direction = i % 2 === 0 ? "left" : "right";
 

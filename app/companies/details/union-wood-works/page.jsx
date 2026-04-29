@@ -100,7 +100,7 @@ function UnionWoodWorksPage() {
                 heading="Background and Development"
                 items={services}
             />
-            <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
+            <section className="max-w-7xl mx-auto px-5 pt-8 pb-14">
                 <CompaniesSectors
                     image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777220684/3d-view-puzzle-pieces_ng78lk.jpg"}
                     title={"Products and Manufacturing Capabilities"}
@@ -127,7 +127,7 @@ function UnionWoodWorksPage() {
                 />
             </section>
 
-             <SolarPanelQuoteGrid
+            <SolarPanelQuoteGrid
                 heading="Infrastructure and Technology"
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275477/IMG_gzq8fj.png"
                 text="Union Wood Works operates a state-of-the-art automated facility, incorporating:"
@@ -145,8 +145,8 @@ function UnionWoodWorksPage() {
                 image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275858/IMG_-_2_stmfpe.png"
                 textPosition="left"
             />
-           
-            <div className="mt-8 md:mt-10">
+
+            <div className="mt-8 md:mt-6">
                 <CompanyTextOnBackground
                     heading="Innovation and Strategic Direction"
                     image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276347/UWW_base_image_gvtyky.png"

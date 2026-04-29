@@ -25,20 +25,23 @@ export default function TrustedAdvisorSection({
     second: images[1] || defaultFallBack[1],
   };
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+    <section className="bg-white py-6 lg:py-12">
+      <div className="max-w-7xl mx-auto px-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-20 items-center">
           {/* LEFT CONTENT */}
           <div>
-            <h2 className="text-[42px] md:text-[50px] leading-tight font-bold text-[#0B1320]">
+            <h2 className="text-[42px] md:text-[50px] leading-tight font-bold t-base mb-5">
               {heading}
             </h2>
-            {texts &&
-              texts.map((text, i) => (
-                <p key={i} className="text-gray-600 mt-6">
-                  {text}
-                </p>
-              ))}
+            {texts && (
+              <div className="space-y-4">
+                {texts.map((text, i) => (
+                  <p key={i} className="text-gray-600">
+                    {text}
+                  </p>
+                ))}
+              </div>
+            )}
             {bulletsTitle && (
               <h3 className="leading-tight font-bold text-[#0B1320] mt-6">
                 {bulletsTitle}
@@ -71,9 +74,9 @@ export default function TrustedAdvisorSection({
             </div> */}
           </div>
 
-          <div className="grid grid-cols-2 gap-8">
-            <div className="flex flex-col gap-8 -translate-y-6">
-              <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            <div className="flex flex-col gap-6 md:gap-8 md:-translate-y-6">
+              <div className="relative h-100 md:aspect-4/5 overflow-hidden">
                 <Image
                   // src="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773042303/Dubai_skyline_at_twilight_with_glowing_connection.jpg_vctmco.jpg"
                   src={Images.first}
@@ -89,7 +92,7 @@ export default function TrustedAdvisorSection({
                   backgroundColor: "#0A6CF1",
                 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
-                className="aspect-[4/5] bg-[#0B1320] text-white flex items-center justify-center text-center cursor-pointer"
+                className="h-80 md:aspect-4/5 bg-[#0B1320] text-white flex items-center justify-center text-center cursor-pointer"
               >
                 <div>
                   <h3 className="text-4xl font-bold">{numbers_2}</h3>
@@ -100,24 +103,24 @@ export default function TrustedAdvisorSection({
               </motion.div>
             </div>
 
-            <div className="flex flex-col gap-8 translate-y-6">
+            <div className="flex flex-col gap-6 md:gap-8 md:translate-y-6">
               <motion.div
                 whileHover={{
                   scale: 1.05,
                   backgroundColor: "#0B1320",
                 }}
                 transition={{ duration: 0.45, ease: "easeOut" }}
-                className="aspect-[4/5] bg-slate-700 text-white flex items-center justify-center text-center cursor-pointer"
+                className="h-80 md:aspect-4/5 bg-slate-700 text-white flex items-center justify-center text-center cursor-pointer"
               >
                 <div>
-                  <h3 className="text-3xl font-bold">{numbers_1}</h3>
+                  <h3 className="text-xl font-bold">{numbers_1}</h3>
                   <p className="mt-2 tracking-widest text-sm font-semibold">
                     {object}
                   </p>
                 </div>
               </motion.div>
 
-              <div className="relative aspect-[4/5] overflow-hidden">
+              <div className="relative h-100 md:aspect-4/5 overflow-hidden">
                 <Image
                   // src="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773042303/corporate_tower_with_multiple_illuminated_floors_visible.jpg_wgx927.jpg"
                   src={Images.second}

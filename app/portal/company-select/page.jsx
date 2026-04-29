@@ -2,48 +2,74 @@
 
 import { motion } from "framer-motion";
 import Cookies from "js-cookie";
+import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+
+const BLOCKED_ENTITIES = ["DAT", "RWMD", "ADWC", "SWMD", "GLT", "GAWM"];
+
+const MK_MOTORS_LOGO =
+  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175772/image-21_rmr4xp.jpg";
+const FALLBACK_COMPANY_LOGO =
+  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175772/image-21_rmr4xp.jpg";
+
+const COMPANY_IMAGE_MAP = {
+  "Mohd Abdulla Haji Yousuf (MAHY) Khoory & CO.,LLC":
+    "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175782/image-1_o4wida.png",
+
+  "Emirates International Equipments Machinery LLC.":
+    "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175783/image-3_sdiod9.jpg",
+
+  "Greenland Equipment & Machinery EST. L.L.C":
+    "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175789/image-4_lcsxcf.jpg",
+
+  "Al Mehwar Al Fde General Trading L.L.C":
+    "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175788/image-5_xlekgs.png",
+
+  "Al Khoory Engineering":
+    "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175787/image-6_ids5vt.png",
+
+  "Union Paper Mills":
+    "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175787/image-7_wqqqtt.png",
+
+  "Al Dhafra Paper Manufacturing":
+    "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774901240/al-dfhara-ppr_xvf7ur.png",
+
+  "Union Wood Works":
+    "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175763/image-9_qon0ki.png",
+
+  "MAHY Khoory Automotive Division": MK_MOTORS_LOGO,
+  "MK Motors Cars Traiding L.L.C SPC": MK_MOTORS_LOGO,
+  "MK Motors Cars Trading L.L.C SPC": MK_MOTORS_LOGO,
+};
+
+const NORMALIZED_COMPANY_IMAGE_MAP = Object.fromEntries(
+  Object.entries(COMPANY_IMAGE_MAP).map(([name, image]) => [
+    name.toLowerCase().replace(/\s+/g, " ").trim(),
+    image,
+  ]),
+);
+
+function getCompanyImage(name) {
+  const normalizedName = String(name || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return (
+    NORMALIZED_COMPANY_IMAGE_MAP[normalizedName] ||
+    FALLBACK_COMPANY_LOGO
+  );
+}
 
 export default function CompanySelect() {
   const router = useRouter();
   const params = useSearchParams();
   const redirectParam = params.get("redirect");
 
-  const COMPANY_IMAGE_MAP = {
-    "Mohd Abdulla Haji Yousuf (MAHY) Khoory & CO.,LLC":
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175782/image-1_o4wida.png",
-
-    "Emirates International Equipments Machinery LLC.":
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175783/image-3_sdiod9.jpg",
-
-    "Greenland Equipment & Machinery EST. L.L.C":
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175789/image-4_lcsxcf.jpg",
-
-    "Al Mehwar Al Fde General Trading L.L.C":
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175788/image-5_xlekgs.png",
-
-    "Al Khoory Engineering":
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175787/image-6_ids5vt.png",
-
-    "Union Paper Mills":
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175787/image-7_wqqqtt.png",
-
-    "Al Dhafra Paper Manufacturing":
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175764/image-8_f8yris.png",
-
-    "Union Wood Works":
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175763/image-9_qon0ki.png",
-
-    "MAHY Khoory Automotive Division":
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1771175772/image-21_rmr4xp.jpg",
-  };
-
   const [companies, setCompanies] = useState([]);
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(true);
-
-  const BLOCKED_ENTITIES = ["DAT", "RWMD", "ADWC", "SWMD", "GLT", "GAWM"];
 
   useEffect(() => {
     const API_BASE = process.env.NEXT_PUBLIC_BASE_URL;
@@ -58,9 +84,7 @@ export default function CompanySelect() {
           .map((c) => ({
             id: c.LegalEntityId,
             name: c.Name,
-            image:
-              COMPANY_IMAGE_MAP[c.Name] ||
-              "https://via.placeholder.com/400x240?text=Company",
+            image: getCompanyImage(c.Name),
           }));
 
         setCompanies(mapped);
@@ -112,9 +136,11 @@ export default function CompanySelect() {
                 }`}
               >
                 <div className="h-36 w-full bg-white flex items-center justify-center p-6">
-                  <img
+                  <Image
                     src={c.image}
                     alt={c.name}
+                    width={400}
+                    height={280}
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>

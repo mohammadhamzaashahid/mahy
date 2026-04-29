@@ -9,28 +9,28 @@ function PureEnergyConstructionPage() {
     const features = [
         {
             text: "Feasibility studies and site assessments",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457606/Feasibility_Study_jyrbyq.png",
         },
         {
             text: "System design and detailed engineering",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457951/System_Design-2-2-2-2_kcu7ag.png",
         },
         {
             text: "Procurement of solar modules, inverters, batteries, and balance-of-system components are systems with energy storage",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457450/Procurement_of_Solar_lzk7k3.jpg",
         },
         {
             text: "Operations and maintenance (O&M) services",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457439/Operation_and_Maintainance_domjru.jpg",
         },
         {
             text: "EV charging infrastructure design, supply, and installation",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457433/EV_charging_txkwm2.jpg",
         },
-        {
-            text: "This turnkey approach enables clients to adopt renewable energy solutions with minimal complexity while ensuring regulatory compliance, optimized system performance and long-term operational reliability.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
-        }
+        // {
+        //     text: "This turnkey approach enables clients to adopt renewable energy solutions with minimal complexity while ensuring regulatory compliance, optimized system performance and long-term operational reliability.",
+        //     image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+        // }
     ];
     const overview = [
         {
@@ -76,7 +76,8 @@ function PureEnergyConstructionPage() {
     return (
         <main>
             <CompanyOverview
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777457314/Video_Project_16_-_pure_koqyzk.mp4"}
+                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
                 heading="Pure Energy Construction LLC"
                 texts={[
                     "Pure Energy Construction LLC is the renewable energy engineering, procurement, and construction (EPC) arm of the MAHY Khoory Group, established in 2017 to support the UAE’s transition toward clean, reliable, and sustainable energy solutions.",
@@ -92,7 +93,7 @@ function PureEnergyConstructionPage() {
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457448/sustainable-energy-breathtaking-sunset-landscape-dotted-with-solar-panels-wind-turbines-symbolizing-clean-energy-environmental-responsibility_p7sclx.jpg"
             />
         </main>
     )

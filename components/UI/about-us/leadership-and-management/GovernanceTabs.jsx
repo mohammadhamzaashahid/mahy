@@ -64,7 +64,7 @@ export default function GovernanceTabs() {
                       layoutId="governance-underline"
                       className="
                         absolute left-0 right-0 -bottom-px
-                        h-[2px] bg-red-600
+                        h-[2px] bg-blue-900
                       "
                       transition={{
                         type: "spring",

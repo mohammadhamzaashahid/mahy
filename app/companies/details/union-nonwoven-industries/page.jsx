@@ -6,16 +6,16 @@ import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 function UnionNonWovenIndustriesPage() {
     const services = [
         {
-            text: "Spunbond and meltblown nonwoven fabrics",
-            image: "/gallery/gallery-1.jpg",
+            text: "Composite and laminated nonwoven sheets",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467332/composite_fabrics_d6kyeb.jpg",
         },
         {
-            text: "Composite and laminated nonwoven sheets",
-            image: "/gallery/gallery-1.jpg",
+            text: "Spunbond and meltblown nonwoven fabrics",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467426/spunbond_and-2_zjzau4.jpg",
         },
         {
             text: "Geotextile felts and industrial textile layers",
-            image: "/gallery/gallery-1.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467334/geotextile-roll-construction-site_rtobee.jpg",
         }
     ];
     const adpmCardsData = [
@@ -55,7 +55,8 @@ function UnionNonWovenIndustriesPage() {
     return (
         <main className="pb-12">
             <CompanyOverview
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777467364/Video_Project_19_bxkpbt.mp4d"}
+                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
                 heading="Union Nonwoven Industries"
                 texts={[
                     "Union Nonwoven Industries is a MAHY Khoory Group–affiliated manufacturer specializing in advanced nonwoven textile solutions for industrial, healthcare, hygiene, filtration, and construction applications. Building on the Group’s long-standing expertise in recycling and industrial manufacturing, Union Nonwoven produces high-performance polypropylene and polyester nonwoven fabrics engineered to meet demanding functional and regulatory requirements.",

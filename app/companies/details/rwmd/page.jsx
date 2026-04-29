@@ -4,6 +4,7 @@ import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import WhoWeAre from "@/components/UI/home/WhoWeAre";
+import { object } from "zod";
 
 function RecyclableWasteManagementDivision() {
   const services = [
@@ -12,12 +13,14 @@ function RecyclableWasteManagementDivision() {
       text: "Scheduled collection of commercial, industrial, and institutional paper waste using roll-off containers, compactors, and pickup vehicles.",
       image:
         "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288916/Waste_Paper_and_Cartboard_collection_y4aqvf.jpg",
+        objectFit: "cover",
     },
     {
       title: "Multi-Recyclables Management",
       text: "Collection and segregation of additional recyclable materials such as plastics, metals, and beverage cans.",
       image:
         "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777289029/Multi_recylable_Mangement-2_fkt6uo.jpg",
+        objectFit: "cover",
     },
 
     {
@@ -25,12 +28,14 @@ function RecyclableWasteManagementDivision() {
       text: "Provision of balers, bins, dumpsters, and staff training to enable effective source segregation at client locations.",
       image:
         "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288912/On_Site_Recycling_Solution_owmis2.jpg",
+        objectFit: "cover",
     },
     {
       title: "Closed-Loop Recycling Support",
       text: "Direct coordination with the Group’s paper mills to ensure recovered materials are efficiently reintegrated into production.",
       image:
         "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288897/Closed_loop_recycling_support_hs0ynv.jpg",
+        objectFit: "contain",
     },
   ];
 

@@ -38,7 +38,7 @@ function CorporateCulture() {
   return (
     <section className="max-w-6xl mx-auto mt-20 lg:mt-30">
       <AnimatedLines />
-      <h2 className="font-semibold text-3xl pt-1 text-center">
+      <h2 className="font-semibold text-3xl pt-1 text-center t-base">
         Corporate Culture
       </h2>
       <div className="lg:h-100 relative lg:rounded-3xl overflow-hidden mt-12">

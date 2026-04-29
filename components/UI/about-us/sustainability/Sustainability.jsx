@@ -79,7 +79,7 @@ function SustainabilitySection({
   return (
     <section ref={sectionRef} className="my-15 max-w-6xl mx-auto">
       <AnimatedLines />
-      <h2 className="text-center text-3xl font-semibold pt-1">{heading}</h2>
+      <h2 className="text-center text-3xl t-base font-semibold pt-1">{heading}</h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-5 mt-10">
         {items.map((item, i) => {

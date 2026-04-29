@@ -43,7 +43,7 @@ export default function ProjectsSection() {
                 className="text-[36px] font-semibold
       tracking-[0.22em]
       text-[#2c3b45]
-      text-center leading-[1] tracking-tight text-black"
+      text-center leading-[1] tracking-tight t-base"
               >
                 OUR <br />
                 PROJECTS

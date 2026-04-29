@@ -4,36 +4,38 @@ import SlideReveal from "./UI/SlideReveal"
 
 function CompaniesSectors({ image, image2, title, texts, companiesHeading = false, items, text2, items2, noCheck = [], boldLabels = false, endText }) {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-18">
             <SlideReveal direction="left">
                 <div>
                     {title &&
-                        <h2 className="font-semibold text-4xl md:text-5xl mt-3 leading-tight t-base">{title}</h2>
+                        <h2 className="font-semibold text-4xl md:text-5xl leading-tight t-base mb-5">{title}</h2>
                     }
                     {texts && texts.map((text, i) => (
-                        <p key={i} className="mt-6 font-light text-gray-600 leading-relaxed">{text}</p>
+                        <p key={i} className="font-light text-gray-600 leading-relaxed">{text}</p>
                     ))}
-                    <div className="mt-6">
-                        {companiesHeading &&
-                            <p className="text-gray-600 font-semibold mb-5">Companies</p>
-                        }
-                        {items && (
-                            <div className="space-y-4">
-                                {items.map((item, i) => (
-                                    <div key={i} className="flex gap-3">
-                                        {!noCheck.includes(i) && (
-                                            <div className="b-base rounded-full p-1 h-fit">
-                                                <Check size={13} color="white" />
-                                            </div>
-                                        )}
-                                        <p className={`text-sm text-gray-700 ${boldLabels && noCheck.includes(i) ? "font-semibold" : ""}`}>
-                                            {item}
-                                        </p>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                    </div>
+                    {companiesHeading || items && (
+                        <div className="mt-6">
+                            {companiesHeading &&
+                                <p className="text-gray-600 font-semibold mb-5">Companies</p>
+                            }
+                            {items && (
+                                <div className="space-y-4">
+                                    {items.map((item, i) => (
+                                        <div key={i} className="flex gap-3">
+                                            {!noCheck.includes(i) && (
+                                                <div className="b-base rounded-full p-1 h-fit">
+                                                    <Check size={13} color="white" />
+                                                </div>
+                                            )}
+                                            <p className={`text-sm text-gray-700 ${boldLabels && noCheck.includes(i) ? "font-semibold" : ""}`}>
+                                                {item}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    )}
                     {text2 && (
                         <p className="text-gray-600 mt-6">{text2}</p>
                     )}
@@ -73,7 +75,7 @@ function CompaniesSectors({ image, image2, title, texts, companiesHeading = fals
                 </div>
             ) : (
                 <SlideReveal>
-                    <div className="relative h-full overflow-hidden">
+                    <div className="relative  h-80 md:h-full overflow-hidden">
                         <Image src={image} alt={"img"} fill style={{ objectFit: "cover" }} />
                     </div>
                 </SlideReveal>

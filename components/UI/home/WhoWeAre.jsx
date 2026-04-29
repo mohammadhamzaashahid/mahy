@@ -44,16 +44,14 @@ traditional industries and future-focused sectors.`,
   buttonHref = "/about-us",
   imageAlt = "About Us",
   invert = false,
+  gap = false
 }) {
   const router = useRouter();
 
   return (
-    <section className="relative py-12 md:py-14 overflow-hidden">
+    <section className={`relative pt-3 ${gap ? "py-6 md:py-8" : "md:pt-0"} overflow-hidden`}>
       <div className="max-w-7xl mx-auto px-5">
-        <div
-          className="grid grid-cols-1 md:grid-cols-2
- gap-12 md:gap-16 items-center"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <motion.div
             variants={container1}
             initial="hidden"
@@ -66,11 +64,11 @@ traditional industries and future-focused sectors.`,
               {topHeading || ""}
             </h2>
 
-            <p className="font-semibold text-4xl md:text-5xl mt-3 leading-tight t-base">
+            <p className="font-semibold text-4xl md:text-5xl mt-2 md:mt-3 leading-tight t-base">
               {heading}
             </p>
 
-            <p className="mt-6 font-light text-gray-600 leading-relaxed">
+            <p className="mt-2 md:mt-3 font-light text-gray-600 leading-relaxed">
               {text}
             </p>
 
@@ -88,7 +86,7 @@ traditional industries and future-focused sectors.`,
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className={`relative h-[420px] md:h-[560px] w-full overflow-hidden ${invert ? "md:order-1" : "md:order-2"
+            className={`relative min-h-80 md:min-h-120 w-full overflow-hidden ${invert ? "md:order-1" : "md:order-2"
               }`}
           >
             <Image

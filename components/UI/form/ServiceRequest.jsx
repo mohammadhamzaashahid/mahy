@@ -50,9 +50,57 @@ import {
 
 import { serviceRequestFormSchema } from "@/lib/serviceRequestFormSchema";
 import { TextareaField } from "@/components/form/TextAreaField";
-import Button from "../Button";
 import { useCreateServiceRequest } from "@/lib/hooks/useCreateServiceRequest";
-import { fileToBase64 } from "@/lib/fileToBase64";
+
+const MAX_PHONE_DIGITS = 15;
+
+const limitPhoneDigits = (value) =>
+  String(value || "")
+    .replace(/\D/g, "")
+    .slice(0, MAX_PHONE_DIGITS);
+
+const isPastDate = (date) => {
+  if (!(date instanceof Date)) return false;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const selected = new Date(date);
+  selected.setHours(0, 0, 0, 0);
+
+  return selected < today;
+};
+
+const isFutureDate = (date) => {
+  if (!(date instanceof Date)) return false;
+
+  const today = new Date();
+  today.setHours(23, 59, 59, 999);
+
+  return date > today;
+};
+
+const getFirstErrorMessage = (formErrors, seen = new WeakSet()) => {
+  if (!formErrors || typeof formErrors !== "object") return null;
+  if (seen.has(formErrors)) return null;
+
+  seen.add(formErrors);
+
+  if (typeof formErrors.message === "string") {
+    return formErrors.message;
+  }
+
+  for (const [key, error] of Object.entries(formErrors)) {
+    if (key === "ref" || !error) continue;
+
+    if (typeof error === "object") {
+      const nestedMessage = getFirstErrorMessage(error, seen);
+      if (nestedMessage) return nestedMessage;
+    }
+  }
+
+  return null;
+};
 
 // Page animation variants
 const pageVariants = {
@@ -88,6 +136,8 @@ export default function ServiceRequest() {
     handleSubmit,
     control,
     watch,
+    setError,
+    clearErrors,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(serviceRequestFormSchema),
@@ -104,8 +154,8 @@ export default function ServiceRequest() {
       warningLights: "",
       businessImpact: "",
     },
+    mode: "onChange",
   });
-  console.log(errors);
 
   const customerType = watch("customerType");
   const productCategory = watch("productCategory");
@@ -118,6 +168,7 @@ export default function ServiceRequest() {
   const showProblemDescription = productCategory && !isPump && !isAC && !isCar;
 
   const createMutation = useCreateServiceRequest();
+  const mobileNumberField = register("mobileNumber");
 
   //   const onSubmit = async (values) => {
 
@@ -220,20 +271,6 @@ export default function ServiceRequest() {
       const screenshot = normalizeFiles(values.errorScreenshot)[0];
       if (screenshot) formData.append("errorScreenshot", screenshot);
 
-      // debug (remove later)
-      console.log(
-        "Photos:",
-        photos.map((f) => ({ name: f.name, type: f.type, size: f.size })),
-      );
-      console.log("Video:", video?.name, video?.type, video?.size);
-      console.log("Voice:", voice?.name, voice?.type, voice?.size);
-      console.log(
-        "Screenshot:",
-        screenshot?.name,
-        screenshot?.type,
-        screenshot?.size,
-      );
-
       await createMutation.mutateAsync(formData);
 
 
@@ -244,6 +281,16 @@ export default function ServiceRequest() {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const onInvalid = (formErrors) => {
+    const firstMessage =
+      getFirstErrorMessage(formErrors) ||
+      "Please fix the highlighted fields before submitting.";
+
+    toast.error(firstMessage, {
+      position: "top-right",
+    });
   };
 
   return (
@@ -281,7 +328,10 @@ export default function ServiceRequest() {
               </CardHeader>
 
               <CardContent className="p-4 md:p-6">
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+                <form
+                  onSubmit={handleSubmit(onSubmit, onInvalid)}
+                  className="space-y-8"
+                >
                   {/* Customer & Site Information Section */}
                   <motion.div variants={sectionVariants}>
                     <FormSection title="Customer & Site Information">
@@ -335,14 +385,25 @@ export default function ServiceRequest() {
                             required
                             onChange={field.onChange}
                             options={[...COUNTRY_CODES]}
+                            error={errors.mobileCountryCode?.message}
                           />
                         )}
                       />
                       <InputField
                         label="Mobile number"
+                        type="tel"
                         required
+                        inputMode="numeric"
+                        maxLength={MAX_PHONE_DIGITS}
+                        placeholder="e.g., 551234567"
                         error={errors.mobileNumber?.message}
-                        {...register("mobileNumber")}
+                        {...mobileNumberField}
+                        onChange={(event) => {
+                          event.target.value = limitPhoneDigits(
+                            event.target.value,
+                          );
+                          mobileNumberField.onChange(event);
+                        }}
                       />
 
                       <Controller
@@ -366,8 +427,21 @@ export default function ServiceRequest() {
                           <DatePickerField
                             label="Contract Expiry"
                             value={field.value}
-                            onChange={field.onChange}
-                            disabled={(date) => date < new Date()}
+                            onChange={(date) => {
+                              field.onChange(date);
+
+                              if (isPastDate(date)) {
+                                setError("contractExpiry", {
+                                  type: "manual",
+                                  message:
+                                    "Contract expiry cannot be in the past",
+                                });
+                                return;
+                              }
+
+                              clearErrors("contractExpiry");
+                            }}
+                            error={errors.contractExpiry?.message}
                           />
                         )}
                       />
@@ -391,6 +465,7 @@ export default function ServiceRequest() {
                       <InputField
                         label="Location Pin (Google Maps)"
                         placeholder="Paste Google Maps link"
+                        error={errors.locationPin?.message}
                         {...register("locationPin")}
                       />
 
@@ -436,7 +511,11 @@ export default function ServiceRequest() {
                         {...register("brand")}
                       />
 
-                      <InputField label="Model" {...register("model")} />
+                      <InputField
+                        label="Model"
+                        error={errors.model?.message}
+                        {...register("model")}
+                      />
 
                       <Controller
                         name="installationDate"
@@ -445,8 +524,21 @@ export default function ServiceRequest() {
                           <DatePickerField
                             label="Installation Date"
                             value={field.value}
-                            onChange={field.onChange}
-                            disabled={(date) => date < new Date()}
+                            onChange={(date) => {
+                              field.onChange(date);
+
+                              if (isFutureDate(date)) {
+                                setError("installationDate", {
+                                  type: "manual",
+                                  message:
+                                    "Installation date cannot be in the future",
+                                });
+                                return;
+                              }
+
+                              clearErrors("installationDate");
+                            }}
+                            error={errors.installationDate?.message}
                           />
                         )}
                       />
@@ -463,7 +555,11 @@ export default function ServiceRequest() {
                         )}
                       />
 
-                      <InputField label="Asset Tag" {...register("assetTag")} />
+                      <InputField
+                        label="Asset Tag"
+                        error={errors.assetTag?.message}
+                        {...register("assetTag")}
+                      />
                     </FormSection>
                   </motion.div>
 
@@ -509,6 +605,7 @@ export default function ServiceRequest() {
                               label="Suction Pressure"
                               value={field.value}
                               onChange={field.onChange}
+                              error={errors.suctionPressure?.message}
                             />
                           )}
                         />
@@ -521,6 +618,7 @@ export default function ServiceRequest() {
                               label="Discharge Pressure"
                               value={field.value}
                               onChange={field.onChange}
+                              error={errors.dischargePressure?.message}
                             />
                           )}
                         />
@@ -533,6 +631,7 @@ export default function ServiceRequest() {
                               label="Flow Rate"
                               value={field.value}
                               onChange={field.onChange}
+                              error={errors.flowRate?.message}
                             />
                           )}
                         />
@@ -545,6 +644,7 @@ export default function ServiceRequest() {
                               label="Voltage Available"
                               value={field.value}
                               onChange={field.onChange}
+                              error={errors.voltageAvailable?.message}
                             />
                           )}
                         />
@@ -627,6 +727,7 @@ export default function ServiceRequest() {
 
                         <InputField
                           label="Error Code"
+                          error={errors.acErrorCode?.message}
                           {...register("acErrorCode")}
                         />
 
@@ -675,6 +776,7 @@ export default function ServiceRequest() {
                               suffix="°C"
                               value={field.value}
                               onChange={field.onChange}
+                              error={errors.roomTemp?.message}
                             />
                           )}
                         />
@@ -688,6 +790,7 @@ export default function ServiceRequest() {
                               suffix="°C"
                               value={field.value}
                               onChange={field.onChange}
+                              error={errors.setTemp?.message}
                             />
                           )}
                         />
@@ -781,6 +884,7 @@ export default function ServiceRequest() {
                               suffix="KM"
                               value={field.value}
                               onChange={field.onChange}
+                              error={errors.mileage?.message}
                             />
                           )}
                         />
@@ -815,6 +919,7 @@ export default function ServiceRequest() {
 
                         <InputField
                           label="VIN Number"
+                          error={errors.vinNumber?.message}
                           {...register("vinNumber")}
                         />
                       </FormSection>
@@ -877,6 +982,7 @@ export default function ServiceRequest() {
                               suffix="°C"
                               value={field.value}
                               onChange={field.onChange}
+                              error={errors.engineTemperature?.message}
                             />
                           )}
                         />
@@ -890,6 +996,7 @@ export default function ServiceRequest() {
                               suffix="V"
                               value={field.value}
                               onChange={field.onChange}
+                              error={errors.batteryVoltage?.message}
                             />
                           )}
                         />
@@ -905,6 +1012,7 @@ export default function ServiceRequest() {
                               onChange={field.onChange}
                               min={0}
                               max={100}
+                              error={errors.fuelLevel?.message}
                             />
                           )}
                         />
@@ -986,6 +1094,7 @@ export default function ServiceRequest() {
                       <FormSection title="Car Diagnostics - Error Codes">
                         <InputField
                           label="Error Code (OBD/Manual)"
+                          error={errors.carErrorCode?.message}
                           {...register("carErrorCode")}
                         />
 
@@ -1137,6 +1246,7 @@ export default function ServiceRequest() {
                       <div className="col-span-full">
                         <TextareaField
                           label="Additional Notes"
+                          error={errors.additionalNotes?.message}
                           {...register("additionalNotes")}
                         />
                       </div>
@@ -1150,13 +1260,17 @@ export default function ServiceRequest() {
                     transition={{ delay: 0.5 }}
                     className="flex justify-end gap-4 pt-4 border-t border-gray-300"
                   >
-                    <Button type="submit" disabled={isSubmitting} bg={true}>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="b-base inline-flex items-center justify-center rounded-full px-8 py-3 text-sm font-semibold text-white shadow-sm transition-opacity disabled:cursor-not-allowed disabled:opacity-60"
+                    >
                       {isSubmitting ? (
                         <>Submitting...</>
                       ) : (
                         <>Submit Registration</>
                       )}
-                    </Button>
+                    </button>
                   </motion.div>
                 </form>
               </CardContent>

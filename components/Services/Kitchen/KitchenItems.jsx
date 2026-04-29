@@ -22,7 +22,7 @@ function KitchenItems({
             {heading && (
                 <>
                     <AnimatedLines />
-                    <h2 className="text-4xl md:text-5xl pt-2 text-center font-semibold">{heading}</h2>
+                    <h2 className="text-4xl md:text-5xl pt-2 t-base text-center font-semibold">{heading}</h2>
                 </>
             )}
             {text && <p className="mt-4 md:mt-6 text-center max-w-4xl mx-auto">{text}</p>}

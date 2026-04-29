@@ -85,7 +85,7 @@ stakeholders.`,
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-heading text-3xl mb-4">{visionTitle}</h2>
+            <h2 className="text-heading text-3xl mb-4 t-base">{visionTitle}</h2>
             <div className="h-px w-20 b-base mb-6" />
             <p className="text-body text-[15px] text-gray-700 whitespace-pre-line">
               {visionText}
@@ -97,7 +97,7 @@ stakeholders.`,
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-heading text-3xl mb-4">{missionTitle}</h2>
+            <h2 className="text-heading text-3xl mb-4 t-base">{missionTitle}</h2>
             <div className="h-px w-20 b-base mb-6" />
             <p className="text-body text-[15px] text-gray-700 whitespace-pre-line">
               {missionText}
@@ -110,7 +110,7 @@ stakeholders.`,
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-heading text-3xl mb-4">Our Values</h2>
+            <h2 className="text-heading text-3xl mb-4 t-base">Our Values</h2>
             <div className="h-px w-20 b-base mb-10" />
 
             <div className="space-y-6">

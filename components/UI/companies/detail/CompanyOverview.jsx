@@ -62,7 +62,7 @@ function CompanyOverview({
       <div className="absolute inset-0 bg-black/60" />
 
       <div
-        className="absolute inset-0 z-9 flex flex-col justify-center px-4 sm:px-6 md:px-10 lg:px-16"
+        className="absolute inset-0 z-50 flex flex-col justify-center px-4 sm:px-6 md:px-10 lg:px-16"
         style={{ paddingTop: "clamp(77px, 20vh, 160px)" }}
       >
         <div className="max-w-2xl md:max-w-3xl w-full">
@@ -70,7 +70,7 @@ function CompanyOverview({
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="rounded-xl px-6 py-7 sm:px-8 sm:py-8 md:px-10 md:py-10"
+            className="rounded-xl px-6 py-7 sm:px-8 sm:py-8 md:px-10 md:py-10 z-50 relative"
             style={{
               background: "rgba(0, 0, 0, 0.45)",
               backdropFilter: "blur(7px)",

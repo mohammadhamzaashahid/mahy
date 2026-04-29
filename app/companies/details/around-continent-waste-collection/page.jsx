@@ -4,6 +4,7 @@ import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import WhoWeAre from "@/components/UI/home/WhoWeAre";
+import { object } from "zod";
 
 function AroundContinentWasteCollection() {
   const services = [

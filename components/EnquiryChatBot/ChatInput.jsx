@@ -1,6 +1,44 @@
 "use client";
 
 import { useState } from "react";
+import { COUNTRY_CODES } from "@/lib/formConstants";
+
+const DEFAULT_COUNTRY_CODE = "+971";
+const MIN_PHONE_DIGITS = 7;
+const MAX_PHONE_CHARS = 15;
+
+function getMaxLocalPhoneDigits(countryCode = "") {
+  return Math.max(0, MAX_PHONE_CHARS - String(countryCode).length);
+}
+
+function normalizePhoneNumber(value = "", countryCode = "") {
+  const rawValue = String(value).trim();
+  const countryDigits = String(countryCode).replace(/\D/g, "");
+  let phoneDigits = String(value).replace(/\D/g, "");
+
+  if (
+    countryDigits &&
+    (rawValue.startsWith("+") || rawValue.startsWith("00")) &&
+    phoneDigits.startsWith(countryDigits)
+  ) {
+    phoneDigits = phoneDigits.slice(countryDigits.length);
+  }
+
+  return phoneDigits.slice(0, getMaxLocalPhoneDigits(countryCode));
+}
+
+function isValidPhoneNumber(countryCode, phoneNumber) {
+  const countryDigits = String(countryCode || "").replace(/\D/g, "");
+  const phoneDigits = normalizePhoneNumber(phoneNumber, countryCode);
+  const fullPhoneNumber = `${countryCode}${phoneDigits}`;
+
+  return (
+    countryDigits.length > 0 &&
+    phoneDigits.length >= MIN_PHONE_DIGITS &&
+    phoneDigits.length <= getMaxLocalPhoneDigits(countryCode) &&
+    fullPhoneNumber.length <= MAX_PHONE_CHARS
+  );
+}
 
 export default function ChatInput({
   placeholder,
@@ -8,8 +46,10 @@ export default function ChatInput({
   disabled = false,
   type = "text",
   data,
+  isSubmitStage = false,
 }) {
   const [value, setValue] = useState("");
+  const [countryCode, setCountryCode] = useState(DEFAULT_COUNTRY_CODE);
   const [error, setError] = useState("");
 
   function isValidEmail(email) {
@@ -19,16 +59,25 @@ export default function ChatInput({
   function handleChange(event) {
     let input = event.target.value;
     if (type === "phone") {
-      input = input.replace(/[^\d+]/g, "");
+      input = normalizePhoneNumber(input, countryCode);
     }
 
     setValue(input);
     setError("");
   }
 
+  function handleCountryCodeChange(event) {
+    const nextCountryCode = event.target.value;
+    setCountryCode(nextCountryCode);
+    setValue((currentValue) => normalizePhoneNumber(currentValue, nextCountryCode));
+    setError("");
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     const trimmed = value.trim();
+    let submitValue = trimmed;
+    let submitMeta = null;
 
     if (!trimmed || disabled) return;
 
@@ -37,12 +86,24 @@ export default function ChatInput({
       return;
     }
 
-    if (type === "phone" && trimmed.replace(/\D/g, "").length < 7) {
-      setError("Please enter a valid phone number");
-      return;
+    if (type === "phone") {
+      const phoneNumber = normalizePhoneNumber(trimmed, countryCode);
+      const fullPhoneNumber = `${countryCode}${phoneNumber}`;
+
+      if (!isValidPhoneNumber(countryCode, phoneNumber)) {
+        setError("Please enter a valid phone number with 15 characters or less");
+        return;
+      }
+
+      submitValue = fullPhoneNumber;
+      submitMeta = {
+        countryCode,
+        phoneNumber,
+        fullPhoneNumber,
+      };
     }
 
-    onSubmit(trimmed);
+    onSubmit(submitValue, submitMeta);
     setValue("");
     setError("");
   }
@@ -51,34 +112,56 @@ export default function ChatInput({
     value.trim().length > 0 &&
     !disabled &&
     (type !== "email" || isValidEmail(value.trim())) &&
-    (type !== "phone" || value.trim().length >= 7);
+    (type !== "phone" || isValidPhoneNumber(countryCode, value));
+  const actionLabel = type === "phone"
+    ? isSubmitStage ? "Submit" : "Next"
+    : data.send;
 
   return (
     <div className="space-y-1.5">
       <form
         onSubmit={handleSubmit}
-        className="flex items-center gap-3 rounded-2xl border border-slate-200/90 bg-white px-5 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.08)] transition focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100"
+        className="flex items-center gap-3 rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.08)] transition focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100 sm:px-5"
       >
+        {type === "phone" && (
+          <select
+            aria-label="Country code"
+            value={countryCode}
+            disabled={disabled}
+            onChange={handleCountryCodeChange}
+            className="w-24 shrink-0 bg-transparent text-sm font-semibold text-slate-800 focus:outline-none disabled:text-slate-400 sm:w-32"
+          >
+            {COUNTRY_CODES.map((country) => (
+              <option key={country.value} value={country.value}>
+                {country.label}
+              </option>
+            ))}
+          </select>
+        )}
+
         <input
           type={type === "phone" ? "tel" : type === "email" ? "email" : "text"}
-          className="flex-1 bg-transparent text-[15px] font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none disabled:text-slate-400"
+          className="min-w-0 flex-1 bg-transparent text-[15px] font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none disabled:text-slate-400"
           placeholder={placeholder}
           value={value}
           disabled={disabled}
+          maxLength={type === "phone" ? getMaxLocalPhoneDigits(countryCode) : undefined}
           onChange={handleChange}
         />
 
         <button
           type="submit"
-          aria-label="Send message"
+          aria-label={actionLabel}
           disabled={!canSend}
-          className={`inline-flex h-11 min-w-[3rem] items-center justify-center gap-2 rounded-full bg-slate-900 px-5 text-sm font-semibold text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/30 ${
+          className={`inline-flex h-11 min-w-[3rem] shrink-0 items-center justify-center gap-2 rounded-full bg-slate-900 px-4 text-sm font-semibold text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/30 sm:px-5 ${
             canSend
               ? "hover:-translate-y-0.5"
               : "opacity-40 hover:translate-y-0"
           }`}
         >
-          <span className="hidden sm:inline">{data.send}</span>
+          <span className={type === "phone" ? "inline" : "hidden sm:inline"}>
+            {actionLabel}
+          </span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

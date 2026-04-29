@@ -31,7 +31,7 @@ export default function GovernanceContent() {
               text-[34px]
               font-semibold
               tracking-tight
-              text-gray-900
+              t-base
             "
           >
             {content.title}

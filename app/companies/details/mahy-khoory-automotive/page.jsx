@@ -8,19 +8,22 @@ import ValuesSection from "@/components/UI/about-us/ValuesSection"
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
 import WhoWeAre from "@/components/UI/home/WhoWeAre"
+import { object } from "zod"
 
 function MahyKhooryAutomotivePage() {
     const features = [
         {
-            title: "Automotive Division Launch",
-            text: "Building on the MAHY Khoory Group’s 96 years of legacy as a distributor of global brands, including established American automotive marques, the Automotive division was launched as part of the Group’s diversification strategy. The decision to partner with Dongfeng reflects a forward-looking approach, recognizing the rising global competitiveness and technological maturity of Chinese automotive manufacturers.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+            title: "Market Entry & Expansion",
+            objectFit: "contain",
+            text: "The brand’s debut was marked by the opening of a flagship showroom and service facility in Dubai, followed by showrooms in Abu Dhabi and ongoing expansion plans, establishing a strong foundation for national expansion.",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777460007/Startegic_expansion_yswyze.png",
         },
         {
-            title: "Market Entry & Expansion",
-            text: "he brand’s debut was marked by the opening of a flagship showroom and service facility in Dubai, followed by showrooms in Abu Dhabi and ongoing expansion plans, establishing a strong foundation for national expansion.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
-        }
+            title: "Automotive Division Launch",
+            objectFit: "contain",
+            text: "Building on the MAHY Khoory Group’s 96 years of legacy as a distributor of global brands, including established American automotive marques, the Automotive division was launched as part of the Group’s diversification strategy. The decision to partner with Dongfeng reflects a forward-looking approach, recognizing the rising global competitiveness and technological maturity of Chinese automotive manufacturers.",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459995/Re-entry_into_automotive_section_pjhg1t.png",
+        },
     ];
     const adpmCardsData = [
         {
@@ -37,7 +40,13 @@ function MahyKhooryAutomotivePage() {
             title: "Customer Support Solutions",
             text: "From warranty services and roadside assistance to finance solutions, we provide comprehensive support designed to ensure confidence and convenience throughout the ownership experience.",
             image: "/solar/solar-2.svg",
+        },
+        {
+            title: "Future Mobility Solutions",
+            text: "As the automotive landscape evolves, we are committed to introducing electric vehicles and smart mobility solutions from Dongfeng, aligning with the UAE’s sustainability goals and consumer demand for innovative transportation options.",
+            image: "/solar/solar-1.svg",
         }
+
     ];
     const overview = [
         {
@@ -65,36 +74,43 @@ function MahyKhooryAutomotivePage() {
             <WhoWeAre
                 heading="Our Mission"
                 topHeading=""
-                text="To offer intelligent and reliable mobility solutions that enhance everyday life through engineering excellence, professional service, and a deeply customercentric approach."
+                text="To deliver intelligent, reliable, and future ready mobility solutions that elevate everyday life in the UAE.
+MAHY Khoory Automotive is committed to combining engineering excellence, advanced technology, and uncompromising service standards to provide customers with vehicles that inspire confidence, convenience, and long term value.
+Through a customer centric culture, professional expertise, and a fully integrated sales to service ecosystem, we aim to create an ownership experience defined by trust, transparency, and continuous support."
                 showButton={false}
                 invert={false}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459866/Mission_toqp8t.jpg"
                 imageAlt="Our Mission"
             />
             <WhoWeAre
                 heading="Our Vision"
                 topHeading=""
-                text="To become a market-leading automotive provider in the UAE, championing advanced mobility technologies while building a network and portfolio that exceed the standards of modern motoring and client experience."
+                text="To become one of the UAE’s most trusted and forward thinking automotive providers, recognized for championing next‑generation mobility technologies, sustainable transportation solutions, and exceptional customer experiences.
+MAHY Khoory Automotive aspires to build a nationwide network of modern automotive facilities, introduce a diverse portfolio of innovative vehicles, and set new benchmarks in quality, accessibility, and service excellence—shaping the future of mobility in alignment with the UAE’s progressive vision."
                 showButton={false}
                 invert={true}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459877/visiion_ccccqb.webp"
                 imageAlt="Our Vision"
             />
             <KitchenMenu
                 heading="Our Story"
                 items={features}
+                text={"MAHY Khoory Automotive introduces a new generation of vehicles engineered for modern lifestyles combining futuristic design, intelligent technology, and reliable performance. The wide range of model line-up from sub compact crossovers, off-road capable pickup trucks to electric vehicles, reflects the division’s commitment to accessible, highquality mobility."}
+
             />
             <PumpingServiceCards
                 cards={adpmCardsData}
                 heading="Products and Services"
                 tag="[ AUTOMOTIVE ]"
                 text={"MAHY Khoory Automotive delivers a fully integrated automotive offering, covering sales, after-sales, and customer support:"}
-                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
+                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459877/visiion_ccccqb.webp"
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+                textPosition="left"
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777460215/car-is-moving-up-graph-with-yellow-arrow-pointing-up_m85bck.jpg"
+                
             />
         </main>
     )

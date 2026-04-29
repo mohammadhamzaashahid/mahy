@@ -28,12 +28,12 @@ export default function WhyUs({
                     transition={{ duration: 0.6, ease: "easeOut" }}
                     viewport={{ once: true }}
                 >
-                    <p className="text-[16px] font-semibold uppercase tracking-[0.14em] text-gray-400 mb-5">
+                    <p className="text-[16px] font-semibold uppercase tracking-[0.14em] t-base mb-5">
                         Why choose us
                     </p>
 
                     {items.heading && (
-                        <h2 className="text-3xl lg:text-[32px] font-semibold leading-snug text-gray-900 mb-4 max-w-sm">
+                        <h2 className="text-3xl lg:text-[32px] font-semibold leading-snug t-base mb-4 max-w-sm">
                             {items.heading}
                         </h2>
                     )}

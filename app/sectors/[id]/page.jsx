@@ -26,7 +26,7 @@ async function CompanySectorsPage({ params }) {
             </section>
             <section className="max-w-7xl mx-auto px-5 pb-10 md:pb-20">
                 <AnimatedLines />
-                <h2 className="text-3xl md:text-5xl pt-4 font-semibold text-center">Companies in this sector</h2>
+                <h2 className="text-3xl md:text-5xl pt-4 font-semibold text-center t-base">Companies in this sector</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mt-10 md:mt-15">
                     {sector.companies.map((item, i) => (
                         <CompaniesCard key={i} id={i} title={item}

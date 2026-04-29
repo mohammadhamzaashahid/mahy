@@ -1,14 +1,22 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Cookies from "js-cookie";
 
-function SelectedCompany({ currentPage }) {
-    const [selectedCompany, setSelectedCompany] = useState({ id: "", name: "", image: "" });
+const EMPTY_COMPANY = { id: "", name: "", image: "" };
 
-    useEffect(() => {
-        const cookie = Cookies.get("mahy_company");
-        setSelectedCompany(JSON.parse(cookie));
-    }, []);
+function getSelectedCompanyFromCookie() {
+    const cookie = Cookies.get("mahy_company");
+    if (!cookie) return EMPTY_COMPANY;
+
+    try {
+        return JSON.parse(cookie) || EMPTY_COMPANY;
+    } catch {
+        return EMPTY_COMPANY;
+    }
+}
+
+function SelectedCompany({ currentPage }) {
+    const [selectedCompany] = useState(getSelectedCompanyFromCookie);
 
     return (
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm max-w-md mb-4">
@@ -20,7 +28,7 @@ function SelectedCompany({ currentPage }) {
             </p>
             <Link
                 href={`/portal/company-select?redirect=/contact-us/${currentPage}`}
-                className="inline-block mt-3 text-sm font-medium text-white bg-black px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-300"
+                className="inline-block mt-3 text-sm font-medium text-white b-base px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-300"
             >
                 Change Selected Company
             </Link>

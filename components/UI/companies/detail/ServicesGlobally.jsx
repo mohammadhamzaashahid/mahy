@@ -15,17 +15,17 @@ function ServicesGlobally({
   invert = false,
 }) {
   return (
-    <section className="max-w-7xl mx-auto py-4 md:py-10 px-5">
+    <section className="max-w-7xl mx-auto py-4 md:pt-10 px-3">
       {heading && (
         <>
           <AnimatedLines />
-          <h2 className="pt-2 text-4xl md:text-5xl font-semibold text-center leading-12">
+          <h2 className="text-3xl md:text-4xl font-semibold t-base text-center leading-12">
             {heading}
           </h2>
         </>
       )}
       <motion.div
-        className="mt-10 md:mt-14 p-8 md:p-12 rounded-3xl grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 bg-blue-100 md:min-h-100"
+        className="mt-6 md:mt-8 p-6 md:p-10 rounded-3xl grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-8 b-base md:min-h-100 text-white"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
@@ -44,7 +44,7 @@ function ServicesGlobally({
                   <a
                     key={i}
                     href={`mailto:${item.text}`}
-                    className="block text-blue-600 underline hover:text-blue-800"
+                    className="block text-blue-300 underline hover:text-blue-200"
                   >
                     {item.text}
                   </a>
@@ -61,7 +61,7 @@ function ServicesGlobally({
             <ul className="mt-2 space-y-2">
               {items.map((item, i) => (
                 <li key={i} className="flex gap-3">
-                  <span className="mt-[0.55em] h-1.5 w-1.5 rounded-full bg-gray-700" />
+                  <span className="mt-[0.55em] h-1.5 w-1.5 rounded-full bg-white" />
                   <span>{item}</span>
                 </li>
               ))}

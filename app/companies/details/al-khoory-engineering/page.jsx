@@ -154,6 +154,7 @@ function AlKhooryEngineering() {
         invert={false}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777223831/Our_Mission_bnyyqu.jpg"
         imageAlt="Our Mission"
+        gap={true}
       />
       <WhoWeAre
         topHeading=""
@@ -161,7 +162,7 @@ function AlKhooryEngineering() {
         text="To be the region’s most trusted engineering partner for advanced pumping systems by leading in innovation, customization, and intelligent system design. Al Khoory Engineering aims to shape the future of fluid‑handling technology through sustainable engineering practices, smart solutions, and continuous investment in technical capability and industry expertise."
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777223845/Copilot_20260425_160109_wxccao.png"
         imageAlt="Our Vision"
-
+        gap={true}
         showButton={false}
         invert={true}
       />

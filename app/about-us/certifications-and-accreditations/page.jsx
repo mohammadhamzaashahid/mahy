@@ -23,7 +23,7 @@ function CapabilitiesPage() {
       <section className="bg-white py-24">
         <div className="mx-auto max-w-7xl px-6">
           <AnimatedLines />
-          <h2 className="mb-16 text-center text-[38px] font-semibold text-[#2F3A40]">
+          <h2 className="mb-16 text-center text-[38px] font-semibold t-base">
             Achievements
           </h2>
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -42,7 +42,7 @@ function CapabilitiesPage() {
         </p>
 
         {/* Pull-quote spanning full width */}
-        <p className="text-xl md:text-3xl font-semibold text-gray-800 leading-relaxed max-w-4xl mb-12">
+        <p className="text-xl md:text-3xl font-semibold t-base leading-relaxed max-w-4xl mb-12">
           Our certifications are not just formal achievements — they are a clear
           demonstration of our dedication to operating at the highest standards
           in every sector we serve.

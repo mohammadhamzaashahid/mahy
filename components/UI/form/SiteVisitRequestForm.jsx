@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useMemo } from "react";
+import React from "react";
 import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { FormSection } from "@/components/form/FormSection";
 import { InputField, TextareaField } from "@/components/form/InputField";
@@ -14,13 +16,8 @@ import {
   AnimatedGroup,
   AnimatedGroupItem,
 } from "@/components/form/AnimatedField";
-import Button from "../Button";
 import { TimePickerField } from "./TimePickerField";
 import { useCreateSiteVisit } from "@/lib/hooks/useCreateSiteVisit";
-import { fileToBase64 } from "@/lib/fileToBase64";
-
-// If you already have your own Button component, replace this import with yours.
-// This import matches your existing shadcn-like setup used by DatePicker/FileUpload.
 
 /** ---------- Options (exactly as provided) ---------- */
 const SECTORS = [
@@ -62,73 +59,133 @@ const HEAR_ABOUT = [
   "Other",
 ];
 
-const phoneRegex = /^[+]?[\d\s()-]{7,20}$/;
-const phoneRegexUAE = /^(?:\+971|971|0)?5\d{8}$/;
-const phoneRegexInternational = /^\+?[1-9]\d{6,14}$/;
+const phoneDigitsRegex = /^\d+$/;
+const MAX_PHONE_DIGITS = 15;
+
+const emptyToUndefined = (value) =>
+  typeof value === "string" && value.trim() === "" ? undefined : value;
+
+const optionalTrimmedString = (max, message) =>
+  z.preprocess(
+    emptyToUndefined,
+    z.string().trim().max(max, message).optional(),
+  );
+
+const phoneNumberSchema = (fieldName, { required = false } = {}) => {
+  const addPhoneValidation = (schema) =>
+    schema
+      .refine((value) => phoneDigitsRegex.test(value), {
+        message: `${fieldName} can only contain digits`,
+      })
+      .refine((value) => {
+        return value.length >= 7 && value.length <= MAX_PHONE_DIGITS;
+      }, `${fieldName} must contain 7 to 15 digits`);
+
+  const stringSchema = z.string().trim();
+
+  if (required) {
+    return addPhoneValidation(
+      stringSchema.min(1, `${fieldName} is required`),
+    );
+  }
+
+  return z.preprocess(
+    emptyToUndefined,
+    addPhoneValidation(stringSchema).optional(),
+  );
+};
+
+const isPastDate = (date) => {
+  if (!(date instanceof Date)) return false;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const selected = new Date(date);
+  selected.setHours(0, 0, 0, 0);
+
+  return selected < today;
+};
+
+const limitPhoneDigits = (value) =>
+  String(value || "")
+    .replace(/\D/g, "")
+    .slice(0, MAX_PHONE_DIGITS);
 
 const schema = z.object({
-  companyName: z.string().min(1, "Company Name is required"),
+  companyName: z
+    .string()
+    .trim()
+    .min(1, "Company Name is required")
+    .max(100, "Company Name is too long"),
   sector: z.string().optional(),
-  companyAddress: z.string().optional(),
-  city: z.string().optional(),
+  companyAddress: optionalTrimmedString(250, "Company address is too long"),
+  city: optionalTrimmedString(80, "City is too long"),
   country: z.string().optional(),
 
   // Contact Person
-  contactPerson: z.string().min(1, "Contact Person is required"),
-  jobTitle: z.string().optional(),
+  contactPerson: z
+    .string()
+    .trim()
+    .min(1, "Contact Person is required")
+    .max(80, "Contact Person is too long"),
+  jobTitle: optionalTrimmedString(80, "Job title is too long"),
   emailAddress: z
     .string()
+    .trim()
     .min(1, "Email Address is required")
-    .email("Enter a valid email"),
-  mobileNumber: z
-    .string()
-    .optional()
-    .refine(
-      (val) =>
-        !val || phoneRegexUAE.test(val) || phoneRegexInternational.test(val),
-      {
-        message: "Enter a valid mobile number (UAE or international format)",
-      },
-    ),
-
-  alternativeContactNumber: z
-    .string()
-    .optional()
-    .refine(
-      (val) =>
-        !val || phoneRegexUAE.test(val) || phoneRegexInternational.test(val),
-      {
-        message:
-          "Enter a valid alternative contact number (UAE or international format)",
-      },
-    ),
+    .email("Enter a valid email")
+    .max(100, "Email Address is too long"),
+  mobileNumber: phoneNumberSchema("Mobile Number", { required: true }),
+  alternativeContactNumber: phoneNumberSchema("Alternative Contact Number"),
   // Site Details
-  siteLocation: z.string().min(1, "Site Location is required"),
+  siteLocation: z
+    .string()
+    .trim()
+    .min(1, "Site Location is required")
+    .max(250, "Site Location is too long"),
   typeOfSite: z.string().optional(),
   // natureOfRequirement: z.array(z.string()).optional(),
   natureOfRequirement: z.string().optional(),
 
-  preferredVisitDate: z.date().optional(),
-  preferredVisitTime: z
-    .object({
-      hours: z.number(),
-      minutes: z.number(),
-      seconds: z.number(),
-      formatted: z.string(),
+  preferredVisitDate: z
+    .date({
+      error: "Preferred Visit Date is required",
     })
-    .optional(),
+    .refine((date) => !isPastDate(date), {
+      message: "Preferred Visit Date cannot be in the past",
+    }),
+  preferredVisitTime: z
+    .preprocess(
+      emptyToUndefined,
+      z
+        .object({
+          hours: z.number(),
+          minutes: z.number(),
+          seconds: z.number(),
+          formatted: z.string(),
+        })
+        .optional(),
+    ),
   urgencyLevel: z.enum(["Normal", "High", "Critical"]).optional(),
 
   // Technical Information
-  briefDescription: z.string().min(1, "Brief Description is required"),
-  existingSystem: z.string().optional(),
-  safetyRequirements: z.string().optional(),
+  briefDescription: z
+    .string()
+    .trim()
+    .min(1, "Brief Description is required")
+    .max(1000, "Brief Description is too long"),
+  existingSystem: optionalTrimmedString(1000, "Existing System is too long"),
+  safetyRequirements: optionalTrimmedString(
+    1000,
+    "Safety Requirements is too long",
+  ),
   attachFile: z.any().optional(),
 
   // Consent & Submission
   howDidYouHear: z.string().optional(),
   consent: z.literal(true, {
-    errorMap: () => ({ message: "Consent is required" }),
+    error: "Consent is required",
   }),
 });
 
@@ -168,17 +225,20 @@ export default function SiteVisitRequestForm() {
     control,
     register,
     handleSubmit,
-    setValue,
-    watch,
+    reset,
+    setError,
+    clearErrors,
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(schema),
     defaultValues,
-    mode: "onTouched",
+    mode: "onChange",
   });
 
   // const selectedNature = watch("natureOfRequirement") || [];
   const createMutation = useCreateSiteVisit();
+  const mobileNumberField = register("mobileNumber");
+  const alternativeContactNumberField = register("alternativeContactNumber");
 
   const onSubmit = async (values) => {
     try {
@@ -203,9 +263,16 @@ export default function SiteVisitRequestForm() {
 
       await createMutation.mutateAsync(formData);
 
-      alert("site visit form submitted");
+      toast.success("Site visit request submitted successfully.");
+      reset(defaultValues);
     } catch (error) {
-      console.error("error", error);
+      const errorMessage =
+        error?.response?.data?.message ||
+        error?.response?.data?.error ||
+        error?.message ||
+        "Failed to submit site visit request.";
+
+      toast.error(errorMessage);
     }
   };
 
@@ -226,6 +293,18 @@ export default function SiteVisitRequestForm() {
 
   return (
     <section className="w-full bg-white">
+      <ToastContainer
+        position="top-right"
+        autoClose={4000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        pauseOnFocusLoss={false}
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+
       <div className="max-w-6xl mx-auto px-6 sm:px-10 py-12">
         {/* Header */}
         <div className="text-center">
@@ -325,16 +404,30 @@ export default function SiteVisitRequestForm() {
 
                   <InputField
                     label="Mobile Number"
-                    placeholder="e.g., +971 5X XXX XXXX"
-                    {...register("mobileNumber")}
+                    type="tel"
+                    required
+                    inputMode="numeric"
+                    maxLength={MAX_PHONE_DIGITS}
+                    placeholder="e.g., 971551234567"
+                    {...mobileNumberField}
+                    onChange={(event) => {
+                      event.target.value = limitPhoneDigits(event.target.value);
+                      mobileNumberField.onChange(event);
+                    }}
                     error={errors.mobileNumber?.message}
                   />
 
                   <InputField
                     label="Alternative Contact Number"
                     type="tel"
+                    inputMode="numeric"
+                    maxLength={MAX_PHONE_DIGITS}
                     placeholder="Optional"
-                    {...register("alternativeContactNumber")}
+                    {...alternativeContactNumberField}
+                    onChange={(event) => {
+                      event.target.value = limitPhoneDigits(event.target.value);
+                      alternativeContactNumberField.onChange(event);
+                    }}
                     error={errors.alternativeContactNumber?.message}
                   />
                 </FormSection>
@@ -448,10 +541,23 @@ export default function SiteVisitRequestForm() {
                     render={({ field }) => (
                       <DatePickerField
                         label="Preferred Visit Date"
+                        required
                         value={field.value}
-                        onChange={field.onChange}
+                        onChange={(date) => {
+                          field.onChange(date);
+
+                          if (isPastDate(date)) {
+                            setError("preferredVisitDate", {
+                              type: "manual",
+                              message:
+                                "Preferred Visit Date cannot be in the past",
+                            });
+                            return;
+                          }
+
+                          clearErrors("preferredVisitDate");
+                        }}
                         error={errors.preferredVisitDate?.message}
-                        disabled={(date) => date < new Date()}
                       />
                     )}
                   />
@@ -592,13 +698,13 @@ export default function SiteVisitRequestForm() {
                   </FormField>
 
                   <div className="md:col-span-2 lg:col-span-3 flex items-center justify-center gap-3 pt-2">
-                    <Button
+                    <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="h-11 px-6 rounded-xl"
+                      className="b-base inline-flex h-11 items-center justify-center rounded-xl px-6 text-sm font-semibold text-white shadow-sm transition-opacity disabled:cursor-not-allowed disabled:opacity-60"
                     >
                       {isSubmitting ? "Submitting..." : "Request Site Visit"}
-                    </Button>
+                    </button>
                   </div>
                 </FormSection>
               </AnimatedGroupItem>
