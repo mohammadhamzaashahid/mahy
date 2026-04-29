@@ -6,32 +6,35 @@ import SolarPanelQuoteGrid from "@/components/Services/SolarPanel/SolarPanelQuot
 import TrustedAdvisorSection from "@/components/TrustedAdvisorSection"
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
+import { object } from "zod"
 
 function CreativeSolutionsPage() {
     const services = [
         {
             text: "Green-building assessments and certification advisory",
-            image: "/gallery/gallery-1.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777468005/green_building-2_ei71gx.jpg",
         },
-        {
-            text: "LEED, WELL, ESTIDAMA, and Dubai Green Building compliance",
-            image: "/gallery/gallery-2.jpg",
-        },
+        // {
+        //     text: "LEED, WELL, ESTIDAMA, and Dubai Green Building compliance",
+        //     image: "/gallery/gallery-2.jpg",
+        // },
         {
             text: "Energy audits and performance benchmarking",
-            image: "/gallery/gallery-3.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467928/energy_audits_qsb37r.jpg",
         },
         {
             text: "Energy and water modeling and optimization",
-            image: "/gallery/gallery-4.jpg",
+            objectFit: "contain",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467898/Energy_and_water_modeling_am6bpz.jpg",
         },
         {
             text: "Mechanical and electrical system commissioning",
-            image: "/gallery/gallery-4.jpg",
+            objectFit: "contain",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467943/mechanical_and_electrical_system_sqknrp.jpg",
         },
         {
             text: "Post-occupancy performance monitoring",
-            image: "/gallery/gallery-4.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467990/Performance_monitoring_ral6mx.jpg",
         }
     ];
     const cards = [
@@ -91,7 +94,8 @@ function CreativeSolutionsPage() {
     return (
         <main>
             <CompanyOverview
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777467997/Video_Project_19_k9zzvb.mp4"}
+                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
                 heading="Creative Solutions Green Building Consultancy"
                 texts={[
                     "Creative Solutions Green Building Consultancy is MAHY Khoory Group’s specialized sustainability and green-building advisory arm, established to support environmentally responsible design, energy efficiency, and high-performance building operations. The consultancy integrates architectural insight with environmental and energy engineering expertise to help clients achieve internationally recognized green-building standards.",
@@ -108,13 +112,13 @@ function CreativeSolutionsPage() {
                 heading="Markets and Client Sectors"
                 text={"Creative Solutions serves clients across:"}
                 tag="[ CREATIVE SOLUTIONS ]"
-                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776682027/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"
+                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777063203/man-standing-road-front-skyscraper-sunset_y5zykp.jpg"
                 endText={""}
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467933/magnified-analysis-data-graphs-monitoring-screen_ju82mb.jpg"
             />
         </main>
     )

@@ -2,28 +2,31 @@ import FeaturesEngineeringSection from "@/components/Services/FeaturesEngineerin
 import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import { image } from "d3";
+import { object } from "zod";
 
 function SenanIndustryPage() {
   const services = [
     {
       title: "Plastic Jerrycans",
       text: "Used for automotive oils, lubricants, and coolants.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777221847/white-plastic-jerry-cans-with-red-caps_dpavcl.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457159/Plastic_Jerry_cans_evksua.jpg",
     },
     {
       title: "Industrial Containers and Drums",
       text: "Designed for chemicals and agrochemicals.",
-      image : "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777221847/white-plastic-jerry-cans-with-red-caps_dpavcl.jpg"
+      objectFit: "contain",
+      image : "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457158/Indistrial_Containers_and_Drums_cgvyha.jpg"
     },
     {
       title: "Bottles and Containers",
       text: "Used for food and beverage applications.",
-      image: "/gallery/gallery-3.jpg",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457157/Bottles_and_Containers_lyprlc.jpg",
     },
     {
       title: "Custom Packaging Solutions",
       text: "Tailored plastic packaging for private-label brands.",
-      image: "/gallery/gallery-4.jpg",
+      objectFit: "contain",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457156/Custom_Plastic_Cans_kir57g.jpg",
     },
   ];
   const overview = [

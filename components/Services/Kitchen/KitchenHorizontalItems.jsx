@@ -105,7 +105,7 @@ const data = [
     return (
         <section ref={sectionRef} className="max-w-7xl mx-auto px-5 py-8 md:py-20 md:h-screen">
             <div className="flex flex-wrap justify-between gap-5 items-start md:pt-15">
-                <h2 className="text-3xl md:text-6xl font-semibold max-w-4xl">Our approach to perfect outcomes</h2>
+                <h2 className="text-3xl md:text-6xl t-base font-semibold max-w-4xl">Our approach to perfect outcomes</h2>
                 <div className="flex gap-2 items-center">
                     <div className="size-4 rounded-full b-base" />
                     <span className="uppercase font-semibold md:text-xl text-gray-700">Process</span>

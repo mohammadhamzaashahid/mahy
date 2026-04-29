@@ -10,12 +10,12 @@ function MahyKhooryMotorsPage() {
     {
       title: "Re-Entry into Automotive Sector",
       text: "MAHY Khoory Motors represents the latest phase in the Group’s automotive evolution. With a legacy dating back to the early 20th century and previous partnerships with major global automotive brands, the MAHY Khoory Group re-entered the automotive sector in 2024 through its national partnership with Dongfeng Motor Corporation.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467098/re-entry_into_l22d57.jpg",
     },
     {
       title: "Strategic Expansion with New-Age Brands",
       text: "Building on this foundation and recognizing the rapid advancement of Chinese automotive technology, the Group established MAHY Khoory Motors as a dedicated entity exclusively for OMODA and JAECOO, next-generation marques under the Chery Automobile umbrella. This move reflects strategic agility and a forward-looking response to growing demand for technologically advanced electric and hybrid vehicles in the UAE.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
+      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467102/startegic_expansion_kc50pe.jpg",
     }
   ];
   const overview = [
@@ -55,7 +55,7 @@ function MahyKhooryMotorsPage() {
     <main>
       <CompanyOverview
         video={
-          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777148084/Mka_Mkm_wu2ejg.mp4"
+          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777467113/Video_Project_18_zhdwpz.mp4"
         }
         // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="MAHY Khoory Motors"
@@ -68,18 +68,21 @@ function MahyKhooryMotorsPage() {
       <WhoWeAre
         heading="Our Mission"
         topHeading=""
-        text="To offer intelligent and reliable mobility solutions that enhance everyday life through engineering excellence, professional service, and a deeply customercentric approach."
+        text="To deliver intelligent, sustainable, and customer‑focused mobility solutions that redefine automotive excellence in Abu Dhabi and the Western Region.
+MAHY Khoory Motors is dedicated to combining engineering innovation, global brand partnerships, and professional service standards to provide vehicles that embody reliability, technology, and modern design.
+Through a deeply customer‑centric approach, we aim to create a seamless ownership experience supported by advanced facilities, transparent processes, and a commitment to long‑term satisfaction."
         showButton={false}
         invert={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776762183/commitment-to-growth_qhzgjt.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467095/Misison_t9weaj.jpg"
         imageAlt="Our Mission"
         gap
       />
       <WhoWeAre
         topHeading=""
         heading="Our Vision"
-        text="To become a leading automotive provider in the Abu Dhabi & Western Region by championing innovative, sustainable, and technologically advanced mobility. MAHY Khoory Motors aims to set new standards in modern motoring by building a strong, futureready network and delivering a customer experience that exceeds expectations at every stage."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+        text="To establish MAHY Khoory Motors as the leading automotive distributor and mobility innovator in Abu Dhabi and the Western Region—recognized for introducing next‑generation hybrid, electric, and intelligent vehicles that align with the UAE’s sustainability and smart mobility goals.
+We aspire to build a future‑ready network that sets new benchmarks in service quality, technological advancement, and customer engagement, positioning MAHY Khoory Motors as a trusted name in the evolution of modern motoring."
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467107/Visiion_f9avin.jpg"
         imageAlt="Our Vision"
         showButton={false}
         invert={true}
@@ -91,7 +94,7 @@ function MahyKhooryMotorsPage() {
       <FeaturesEngineeringSection
         heading="MAHY Khoory Motors Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467099/SL_052021_43150_03_mmsiny.jpg"
       />
     </main>
   );

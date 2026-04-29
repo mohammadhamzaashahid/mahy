@@ -10,23 +10,23 @@ function MarketRestarauntPage() {
     const features = [
         {
             text: "Freshly prepared salads and starters",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405490/vinn-koonyosying-Ul4sgxQMmHU-unsplash_tud7ki.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459586/salad_hpftaj.jpg",
         },
         {
             text: "Grilled meats and seafood dishes",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405482/hanxiao-xu-OLuduycPvSE-unsplash_h2q3ln.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459585/grills_pvtzgw.jpg",
         },
         {
             text: "Specialty brunch selections",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405275/simon-karemann-p85-MG66GRY-unsplash_o54igo.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459567/brunch_ogrd4c.jpg",
         },
         {
             text: "Desserts and café-style beverages",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405474/brooke-lark-V4MBq8kue3U-unsplash_yorhbk.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459573/dessert_daynah.jpg",
         },
         {
             text: "In addition to dine-in service, the restaurant provides takeaway, delivery, and catering services, and is well suited for private gatherings, corporate lunches, and small social events.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405278/kayleigh-harrington-yhn4okt6ci0-unsplash_zb5fn1.jpg",
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459569/delivery_yx0mar.jpg",
         }
     ];
     const adpmCardsData = [
