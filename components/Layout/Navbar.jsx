@@ -12,7 +12,7 @@ import {
 } from "react-icons/hi";
 import Cookies from "js-cookie";
 import MegaMenuFlyOut from "../MegaMenuFlyOut";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import ScrollToTop from "../UI/ScrollToTop";
 import CartLauncher from "../UI/cart/CartLauncher";
 
@@ -30,6 +30,7 @@ export default function Navbar({ navigation }) {
   const locale = useLocale();
   const [currentLocale, setCurrentLocale] = useState(locale);
   const languageMenuRef = useRef(null);
+  const pathname = usePathname();
 
   const toggleMobileMenu = () => {
     setMobileOpen((prev) => {
@@ -63,6 +64,13 @@ export default function Navbar({ navigation }) {
   }, [locale]);
 
   useEffect(() => {
+    setOpenMenu(null);
+    setMobileOpen(false);
+    setMobileDropdown(null);
+    setLanguageMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
     } else {
@@ -92,7 +100,7 @@ export default function Navbar({ navigation }) {
     languageOptions[0];
 
   return (
-    <header className="fixed top-0 left-0 z-50 w-full">
+    <header className="fixed top-0 left-0 z-[10000] w-full">
       {" "}
       <nav
         className="
@@ -143,6 +151,7 @@ export default function Navbar({ navigation }) {
               <div className="flex items-center xl:gap-1">
                 <ScrollToTop
                   href={item.href}
+                  onClick={() => setOpenMenu(null)}
                   className="xl:px-2 2xl:px-4 py-2 rounded-full hover:bg-white/10 transition"
                 >
                   {item.label}

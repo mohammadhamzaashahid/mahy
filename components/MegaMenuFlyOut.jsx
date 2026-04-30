@@ -98,6 +98,7 @@ export default function MegaMenuFlyOut({
                       <li key={i}>
                         <ScrollToTop
                           href={link.href}
+                          onClick={onClose}
                           className="
                             block
                             text-[14px]

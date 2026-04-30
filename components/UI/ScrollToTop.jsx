@@ -1,4 +1,5 @@
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import Cookies from "js-cookie";
 
 function ScrollToTop({ href, children, className, ariaLabel, onClick }) {
@@ -9,37 +10,44 @@ function ScrollToTop({ href, children, className, ariaLabel, onClick }) {
         const cookie = Cookies.get("mahy_company");
         if (!cookie) return href;
 
-        const company = JSON.parse(cookie);
-        const url = new URL(href, window.location.origin);
-        url.searchParams.set("company", company.id);
-        return url.pathname + url.search;
+        try {
+            const company = JSON.parse(cookie);
+            const url = new URL(href, window.location.origin);
+            if (company?.id) url.searchParams.set("company", company.id);
+            return url.pathname + url.search;
+        } catch {
+            return href;
+        }
     };
 
-    const scrollToTop = () => {
+    const scrollToTop = (event) => {
+        if (
+            event.defaultPrevented ||
+            event.button !== 0 ||
+            event.metaKey ||
+            event.altKey ||
+            event.ctrlKey ||
+            event.shiftKey
+        ) {
+            return;
+        }
+
+        event.preventDefault();
         if (onClick) onClick();
 
         const finalUrl = buildUrl();
 
-        if (window.scrollY === 0) {
-            router.push(finalUrl);
-            return;
-        }
-
-        const onScrollEnd = () => {
-            if (window.scrollY <= 0) {
-                window.removeEventListener("scroll", onScrollEnd);
-                router.push(finalUrl);
-            }
-        };
-
-        window.addEventListener("scroll", onScrollEnd, { passive: true });
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        router.push(finalUrl, { scroll: false });
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+        requestAnimationFrame(() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        });
     };
 
     return (
-        <button className={className} onClick={scrollToTop} aria-label={ariaLabel}>
+        <Link href={href} className={className} onClick={scrollToTop} aria-label={ariaLabel}>
             {children}
-        </button>
+        </Link>
     );
 }
 
