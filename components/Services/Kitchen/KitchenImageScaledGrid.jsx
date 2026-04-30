@@ -4,7 +4,7 @@ function KitchenImageScaledGrid({
     heading = "Our vision for lasting impact",
     texts,
     items = [
-        { text: "Lorem ipsum dolor sit amet consectetur. Ultricies blandit libero leo ut turpis cras amet sed.", icon: "/kitchen/kitchenGrid-1.svg" },
+        { text: "Lorem ipsum dolor sit amet consectetur. Ultricies blandit libero leo ut turpis cras amet sed.", icon: "/kitchen/1.svg" },
         { text: "Lorem ipsum dolor sit amet consectetur. Ultricies blandit libero leo ut turpis cras amet sed.", icon: "/kitchen/kitchenGrid-2.svg" }
     ],
     image = "/gallery/gallery-2.jpg"

@@ -3,7 +3,7 @@ import SolarPanelQuoteGrid from '@/components/Services/SolarPanel/SolarPanelQuot
 import WasteCollectionGrid from '@/components/Services/WasteCollection/WasteCollectionGrid'
 import WasteCollectionTimeline from '@/components/Services/WasteCollection/WasteCollectionTimeline'
 import SubPageHeading from '@/components/UI/SubPageHeading'
-import { HiLightBulb } from 'react-icons/hi'
+import { HiWrench } from "react-icons/hi2"
 
 function AnnualMaintenanceContractsPage() {
     const systemsCovered = [
@@ -125,8 +125,7 @@ function AnnualMaintenanceContractsPage() {
                 image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017292/ptanks2_uafxz4.png"}
                 heading="Why Choose Our AMC Services?"
                 items={whyChooseUs}
-                icon={<HiLightBulb size={25} />}
-            />
+icon={<HiWrench size={25} />}            />
             <WasteCollectionTimeline
             bottomImage='https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777063203/man-standing-road-front-skyscraper-sunset_y5zykp.jpg'
             endHeading=''

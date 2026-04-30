@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Cooktop body -->
+  <rect x="6" y="14" width="52" height="36" rx="4" stroke="white" stroke-width="2.5" fill="none"/>
+  <!-- Left burner ring outer -->
+  <circle cx="21" cy="27" r="9" stroke="white" stroke-width="2" fill="none"/>
+  <!-- Left burner ring inner -->
+  <circle cx="21" cy="27" r="4" stroke="white" stroke-width="1.5" fill="none"/>
+  <!-- Left burner center dot -->
+  <circle cx="21" cy="27" r="1.5" fill="white"/>
+  <!-- Right burner ring outer -->
+  <circle cx="43" cy="27" r="9" stroke="white" stroke-width="2" fill="none"/>
+  <!-- Right burner ring inner -->
+  <circle cx="43" cy="27" r="4" stroke="white" stroke-width="1.5" fill="none"/>
+  <!-- Right burner center dot -->
+  <circle cx="43" cy="27" r="1.5" fill="white"/>
+  <!-- Bottom small burner -->
+  <circle cx="32" cy="44" r="5" stroke="white" stroke-width="2" fill="none"/>
+  <circle cx="32" cy="44" r="1.5" fill="white"/>
+  <!-- Control knobs -->
+  <rect x="10" y="10" width="5" height="5" rx="2.5" fill="white"/>
+  <rect x="22" y="10" width="5" height="5" rx="2.5" fill="white"/>
+  <rect x="37" y="10" width="5" height="5" rx="2.5" fill="white"/>
+  <rect x="49" y="10" width="5" height="5" rx="2.5" fill="white"/>
+</svg>

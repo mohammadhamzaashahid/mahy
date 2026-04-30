@@ -173,6 +173,7 @@ export default async function Home() {
           image={
             "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
           }
+          padding="xl"
         />
       </section>
 

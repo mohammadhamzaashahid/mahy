@@ -24,11 +24,11 @@ function BoosterPumpSlideRevealSection({
     return (
         <section className="max-w-7xl mx-auto px-5 py-8 md:py-20">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="max-w-md flex flex-col justify-between gap-10">
+                <div className="max-w-md flex flex-col justify-between gap-10 t-base">
                     <div>
                         <div className="flex gap-2 items-center t-base">
                             <StarsIcon fill="#2c3f6e" size={15} />
-                            <span>{heading}</span>
+                            <span className="t-base">{heading}</span>
                         </div>
                         <h2 className="text-4xl tracking-tight font-semibold mt-3 leading-11">{subHeading}</h2>
                     </div>

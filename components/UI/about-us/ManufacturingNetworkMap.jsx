@@ -489,7 +489,7 @@ export default function ManufacturingNetworkMap({ data, locations }) {
               <p className="text-xs sm:text-sm font-semibold uppercase text-[#1C4C9A]">
                 {data[0]}
               </p>
-              <h2 className="mt-4 text-[30px] sm:text-[36px] lg:text-[40px] font-semibold leading-tight text-gray-900">
+              <h2 className="mt-4 text-[30px] sm:text-[36px] lg:text-[40px] font-semibold leading-tight t-base">
                 {data[1]}
               </h2>
               <p className="mt-6 leading-7 text-gray-600 max-w-xl mx-auto lg:mx-0">

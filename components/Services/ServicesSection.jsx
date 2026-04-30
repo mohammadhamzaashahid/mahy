@@ -140,14 +140,13 @@ export default function ServicesSection({
   return (
     <section className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        {/* Heading */}
         <div className="mx-auto max-w-3xl text-center">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.6 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[34px] sm:text-[42px] md:text-[52px] font-semibold tracking-tight text-slate-900"
+            className="text-[34px] sm:text-[42px] md:text-[52px] font-semibold tracking-tight t-base"
           >
             {title}
           </motion.h2>

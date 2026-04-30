@@ -16,7 +16,7 @@ export default function GroupCompaniesGrid({
     <section className="bg-white w-full">
       <div className="max-w-7xl mx-auto px-5 py-10">
         <div className="text-center">
-          <h2 className="text-[28px] sm:text-[32px] font-medium t-base">
+          <h2 className="text-[48px] sm:text-[32px] font-medium t-base">
             {title}
           </h2>
 

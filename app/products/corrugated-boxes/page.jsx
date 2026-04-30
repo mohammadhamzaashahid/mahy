@@ -3,54 +3,63 @@ import ServicesSection from "@/components/Services/ServicesSection";
 import SolarPanelInstallationsGrid from "@/components/Services/SolarPanel/SolarPanelInstallationsGrid";
 import PageHeading from "@/components/UI/PageHeading";
 import SubPageHeading from "@/components/UI/SubPageHeading";
+import { EvChargerIcon } from "lucide-react";
+import { HiColorSwatch, HiPrinter, HiScissors, HiShieldCheck, HiSwitchHorizontal, HiViewGrid } from "react-icons/hi";
+import { HiOutlineMagnifyingGlassPlus } from "react-icons/hi2";
 
 function CorrugatedBoxesPage() {
-  const features = [
-    {
-      title: "Wide Range of Board Grades",
-      text: "Available in 2-ply, 3-ply, 5-ply, and 7-ply configurations, offering tailored performance for lightweight, medium-duty, and heavy-duty packaging applications.",
-    },
-    {
-      title: "High Structural Strength",
-      text: "Engineered to deliver:",
-      list: [
-        "Excellent compression strength",
-        "High burst resistance",
-        "Strong edge crush (ECT/RCT) values",
-        "Superior stacking stability",
-      ],
-      endText:
-        "These features ensure reliable protection during handling, transport, and storage.",
-    },
-    {
-      title: "Multiple Flute Types",
-      text: "Customizable flute profiles including A, B, C, E, and F flutes, as well as double-wall combinations, to meet performance and cushioning requirements.",
-    },
-    {
-      title: "Precision Die-Cutting & Box Forming",
-      text: "Advanced die-cutting technology enables accurate shapes, slots, and folds for special designs, promotional packaging, and retail-ready formats.",
-    },
-    {
-      title: "Premium Printing Options",
-      text: "High-quality flexographic and digital printing available for logos, product details, barcodes, and branding elements—ensuring sharp, durable, and aesthetically strong print finishes.",
-    },
-    {
-      title: "Custom Design Services",
-      text: "Cartons can be fully customized for:",
-      list: [
-        "Dimensions",
-        "Handle cut-outs",
-        "Perforations",
-        "Window openings",
-        "Internal partitions",
-        "Special inserts or dividers",
-      ],
-    },
-    {
-      title: "Eco-Friendly Manufacturing",
-      text: "Produced using recyclable paper, optimized energy processes, and sustainable sourcing practices, supporting UAE eco-compliance requirements.",
-    },
-  ];
+const features = [
+  {
+    title: "Wide Range of Board Grades",
+    icon: <HiViewGrid size={30} />,
+    text: "Available in 2-ply, 3-ply, 5-ply, and 7-ply configurations, offering tailored performance for lightweight, medium-duty, and heavy-duty packaging applications.",
+  },
+  {
+    title: "High Structural Strength",
+    icon: <HiShieldCheck size={30} />,
+    text: "Engineered to deliver:",
+    list: [
+      "Excellent compression strength",
+      "High burst resistance",
+      "Strong edge crush (ECT/RCT) values",
+      "Superior stacking stability",
+    ],
+    endText: "These features ensure reliable protection during handling, transport, and storage.",
+  },
+  {
+    title: "Multiple Flute Types",
+    icon: <HiSwitchHorizontal size={30} />,
+    text: "Customizable flute profiles including A, B, C, E, and F flutes, as well as double-wall combinations, to meet performance and cushioning requirements.",
+  },
+  {
+    title: "Precision Die-Cutting & Box Forming",
+    icon: <HiScissors size={30} />,
+    text: "Advanced die-cutting technology enables accurate shapes, slots, and folds for special designs, promotional packaging, and retail-ready formats.",
+  },
+  {
+    title: "Premium Printing Options",
+    icon: <HiPrinter size={30} />,
+    text: "High-quality flexographic and digital printing available for logos, product details, barcodes, and branding elements—ensuring sharp, durable, and aesthetically strong print finishes.",
+  },
+  {
+    title: "Custom Design Services",
+    icon: <HiColorSwatch size={30} />,
+    text: "Cartons can be fully customized for:",
+    list: [
+      "Dimensions",
+      "Handle cut-outs",
+      "Perforations",
+      "Window openings",
+      "Internal partitions",
+      "Special inserts or dividers",
+    ],
+  },
+  {
+    title: "Eco-Friendly Manufacturing",
+    icon: <EvChargerIcon size={30} />,
+    text: "Produced using recyclable paper, optimized energy processes, and sustainable sourcing practices, supporting UAE eco-compliance requirements.",
+  },
+];
   const applications = [
     {
       key: "strategy",

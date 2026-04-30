@@ -14,11 +14,11 @@ function KitchenDesignPage() {
   const overviewItems = [
     {
       text: "We proudly represent world-class brands such as Siemens, Bosch, MVP, and luxury Italian kitchen brands ARREDO3 and COMPOSIT, offering unmatched craftsmanship and design excellence.",
-      icon: "/kitchen/kitchen1.svg",
+      icon: "/kitchen/1.svg",
     },
     {
       text: "Whether you are building a new kitchen or upgrading an existing one, we provide end-to-end design, manufacturing, supply, and installation services, including complete kitchen re-design projects.",
-      icon: "/kitchen/kitchen2.svg",
+      icon: "/kitchen/2.svg",
     },
   ];
   const featuresData = [

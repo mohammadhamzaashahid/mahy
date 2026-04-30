@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import React from "react";
 import PrimaryButton from "../PrimaryButton";
@@ -25,6 +24,14 @@ const container2 = {
   },
 };
 
+const paddingMap = {
+  none:    "py-0",
+  sm:      "py-4 md:py-6",
+  default: "py-6 md:py-10",
+  lg:      "py-10 md:py-16",
+  xl:      "py-16 md:py-24",
+};
+
 function WhoWeAre({
   image,
   topHeading,
@@ -44,12 +51,12 @@ traditional industries and future-focused sectors.`,
   buttonHref = "/about-us",
   imageAlt = "About Us",
   invert = false,
-  gap = false
+  padding = "default", // "none" | "sm" | "default" | "lg" | "xl"
 }) {
   const router = useRouter();
 
   return (
-    <section className={`relative pt-3 ${gap ? "py-6 md:py-8" : "md:pt-0"} overflow-hidden`}>
+    <section className={`relative overflow-hidden ${paddingMap[padding]}`}>
       <div className="max-w-7xl mx-auto px-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
           <motion.div
@@ -57,21 +64,19 @@ traditional industries and future-focused sectors.`,
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className={`flex flex-col justify-center max-w-xl ${invert ? "md:order-2" : "md:order-1"
-              }`}
+            className={`flex flex-col justify-center max-w-xl ${
+              invert ? "md:order-2" : "md:order-1"
+            }`}
           >
             <h2 className="text-sm font-semibold tracking-[0.2em] text-gray-400 uppercase">
               {topHeading || ""}
             </h2>
-
             <p className="font-semibold text-4xl md:text-5xl mt-2 md:mt-3 leading-tight t-base">
               {heading}
             </p>
-
             <p className="mt-2 md:mt-3 font-light text-gray-600 leading-relaxed">
               {text}
             </p>
-
             {showButton && (
               <PrimaryButton
                 onClick={() => scrollToTop(buttonHref, router)}
@@ -86,8 +91,9 @@ traditional industries and future-focused sectors.`,
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className={`relative min-h-80 md:min-h-120 w-full overflow-hidden ${invert ? "md:order-1" : "md:order-2"
-              }`}
+            className={`relative min-h-80 md:min-h-120 w-full overflow-hidden ${
+              invert ? "md:order-1" : "md:order-2"
+            }`}
           >
             <Image
               src={image}
@@ -97,7 +103,6 @@ traditional industries and future-focused sectors.`,
               sizes="(max-width: 800px) 100vw, 66vw"
               priority
             />
-
             <div className="absolute inset-0 bg-gradient-to-r from-white/8 via-transparent to-transparent pointer-events-none" />
           </motion.div>
         </div>
@@ -107,150 +112,3 @@ traditional industries and future-focused sectors.`,
 }
 
 export default WhoWeAre;
-
-// "use client";
-
-// import Image from "next/image";
-// import React from "react";
-// import PrimaryButton from "../PrimaryButton";
-// import { motion } from "framer-motion";
-// import { scrollToTop } from "@/lib/utils";
-// import { useRouter } from "next/navigation";
-
-// const container1 = {
-//   hidden: { opacity: 0, x: -20 },
-//   visible: {
-//     opacity: 1,
-//     x: 0,
-//     transition: { duration: 0.6, ease: "easeOut" },
-//   },
-// };
-// const container2 = {
-//   hidden: { opacity: 0, x: 20 },
-//   visible: {
-//     opacity: 1,
-//     x: 0,
-//     transition: { duration: 0.6, ease: "easeOut", delay: 0.2 },
-//   },
-// };
-
-// function WhoWeAre({ image, showButton = true }) {
-//   const router = useRouter();
-//   return (
-//     <section className="relative py-15 md:py-20 overflow-hidden">
-//       <div className="max-w-7xl mx-auto px-5">
-//         <div className="grid grid-cols-1 md:grid-cols-[0.85fr_1.15fr] gap-12 md:gap-16 items-center">
-//           <motion.div
-//             variants={container1}
-//             initial="hidden"
-//             whileInView="visible"
-//             viewport={{ once: true }}
-//             className="flex flex-col justify-center max-w-xl"
-//           >
-//             <h2 className="text-sm font-semibold tracking-[0.2em] text-gray-400 uppercase">
-//               Who We Are
-//             </h2>
-
-//             <p className="font-semibold text-4xl md:text-5xl mt-3 leading-tight text-slate-900">
-//               MAHY Khoory
-//             </p>
-
-//             <p className="mt-6 font-light text-gray-600 leading-relaxed">
-//               MAHY Khoory Group of Companies is a Dubai-based diversified
-//               holding group comprising 25+ operating companies and business
-//               divisions across multiple industries. The Group has built a strong
-//               presence in the UAE and the wider region through long-term
-//               commercial relationships, technical capability, and integrated
-//               operations. With businesses spanning trading, engineering,
-//               industrial manufacturing, recycling, sustainability, logistics,
-//               automotive, hospitality, and food & beverage, the Group operates a
-//               balanced and resilient portfolio designed to support both
-//               traditional industries and future-focused sectors.
-//             </p>
-//             {showButton && (
-//               <PrimaryButton
-//                 onClick={() => scrollToTop("/about-us", router)}
-//                 className="w-fit mt-8"
-//                 label="Learn more about us"
-//               />
-//             )}
-//           </motion.div>
-//           <motion.div
-//             variants={container2}
-//             initial="hidden"
-//             whileInView="visible"
-//             viewport={{ once: true }}
-//             className="relative h-[420px] md:h-[560px] w-full overflow-hidden"
-//           >
-//             <Image
-//               src={image}
-//               alt="About Us"
-//               fill
-//               className="object-cover object-center"
-//               sizes="(max-width: 768px) 100vw, 60vw"
-//               priority
-//             />
-//             <div className="absolute inset-0 bg-gradient-to-r from-white/8 via-transparent to-transparent pointer-events-none" />
-//           </motion.div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default WhoWeAre;
-
-// {
-//   /* <section className="max-w-7xl mx-auto py-15 md:py-20">
-//         <div className="grid grid-cols-1 md:grid-cols-2 gap-18 md:h-[80vh]">
-//           <motion.div
-//             variants={container1}
-//             initial="hidden"
-//             whileInView="visible"
-//             viewport={{ once: true }}
-//             className="w-full px-5 flex flex-col justify-center"
-//           >
-//             <h2 className="t-base text-xl font-semibold tracking-tighter">
-//               Who We Are
-//             </h2>
-//             <p className="font-semibold text-4xl md:text-5xl mt-3 leading-12 md:leading-15">
-//               MAHY Khoory
-//             </p>
-//             <p className="mt-5 md:mt-8 font-light text-gray-700">
-//               MAHY Khoory Group of Companies is a Dubai-based diversified
-//               holding group comprising 25+ operating companies and business
-//               divisions across multiple industries. The Group has built a strong
-//               presence in the UAE and the wider region through long-term
-//               commercial relationships, technical capability, and integrated
-//               operations. With businesses spanning trading, engineering,
-//               industrial manufacturing, recycling, sustainability, logistics,
-//               automotive, hospitality, and food & beverage, the Group operates a
-//               balanced and resilient portfolio designed to support both
-//               traditional industries and future-focused sectors.
-//             </p>
-//             <PrimaryButton
-//               onClick={() => {
-//                 scrollToTop("/about-us", router);
-//               }}
-//               className={"w-fit mt-8 md:mt-10"}
-//               label="Learn more about us"
-//             />
-//           </motion.div>
-//           <motion.div
-//             variants={container2}
-//             initial="hidden"
-//             whileInView="visible"
-//             viewport={{ once: true }}
-//             className="relative h-100 md:h-full"
-//           >
-//             <Image
-//               src={image}
-//               alt="About Us"
-//               fill
-//               className="object-cover object-center md:object-[center_top]"
-//               sizes="(max-width: 768px) 100vw, 50vw"
-//             />
-//           </motion.div>
-//         </div>
-//       </section> */
-// }
