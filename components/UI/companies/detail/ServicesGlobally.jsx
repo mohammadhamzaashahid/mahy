@@ -4,12 +4,14 @@ import AnimatedLines from "../../AnimatedLines"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import PrimaryButton from "../../PrimaryButton"
+import { object } from "zod"
 
 function ServicesGlobally({
   heading = "",
   text,
   texts1,
   texts2,
+  objectFit = "cover",
   items,
   image = "/gallery/gallery-3.jpg",
   invert = false,
@@ -25,7 +27,7 @@ function ServicesGlobally({
         </>
       )}
       <motion.div
-        className="mt-6 md:mt-8 p-6 md:p-10 rounded-3xl grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-8 b-base md:min-h-100 text-white"
+        className="mt-6 md:mt-8 p-6 md:p-10 grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-8 b-base md:min-h-100 text-white"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
@@ -35,7 +37,7 @@ function ServicesGlobally({
           className={`md:py-4 md:col-span-2 ${invert ? "md:order-2" : "md:order-1"
             }`}
         >
-          {text && <p className="leading-7 text-gray-700">{text}</p>}
+          {text && <p className="leading-7 text-amber-50">{text}</p>}
 
           {texts1 && (
             <div>
@@ -71,7 +73,7 @@ function ServicesGlobally({
           {texts2 && (
             <div className="mt-3 space-y-2">
               {texts2.map((item, i) => (
-                <p className="text-gray-700" key={i}>
+                <p className="text-amber-50" key={i}>
                   {item}
                 </p>
               ))}
@@ -80,10 +82,10 @@ function ServicesGlobally({
         </div>
 
         <div
-          className={`rounded-3xl overflow-hidden relative h-60 md:h-full md:col-span-3 ${invert ? "md:order-1" : "md:order-2"
+          className={`overflow-hidden relative h-60 md:h-full md:col-span-3 ${invert ? "md:order-1" : "md:order-2"
             }`}
         >
-          <Image src={image} alt="Services" fill style={{ objectFit: "cover" }} />
+          <Image src={image} alt="Services" fill style={{ objectFit: {objectFit} }} />
         </div>
       </motion.div>
     </section>

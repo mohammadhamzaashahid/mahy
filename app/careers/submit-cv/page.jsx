@@ -1,5 +1,6 @@
 import ServicesGlobally from "@/components/UI/companies/detail/ServicesGlobally";
 import ServicesGloballyTemp from "@/components/UI/companies/detail/ServicesGloballyTemp";
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import React from "react";
 

@@ -46,17 +46,17 @@ function WasteCollectionServicesPage() {
         "Metal cans",
         "Reusable industrial materials",
       ],
-      icon: "/kitchen/kitchenGrid-1.svg",
+      icon: "/waste-collection/1.svg",
     },
     {
       title: "Sustainable Processing Channels",
       text: "All recyclables are routed through approved recycling partners and environmentally responsible facilities, supporting UAE’s sustainability goals and waste diversion targets.",
-      icon: "/kitchen/kitchenGrid-2.svg",
+      icon: "/waste-collection/2.svg",
     },
     {
       title: "Supporting Circular Economy Initiatives",
       text: "Our recycling programs help reduce landfill dependency, promote material recovery, and support national strategies for a greener, more sustainable future.",
-      icon: "/kitchen/kitchenGrid-1.svg",
+      icon: "/waste-collection/3.svg",
     },
   ];
   const advantages = [
@@ -117,7 +117,7 @@ function WasteCollectionServicesPage() {
       <KitchenImageScaledGrid
         heading="Recycling & Material Recovery"
         items={recovery}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935933/plastic-garbage-conveyor-belt-waste-recycling-factory-workers-background_uh341v.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777552244/couple-collects-garbage-garbage-bags-park_efwxbe.jpg"
       />
       <TrustedBusinessAdvisor
         heading="Service Advantages & Value Proposition"

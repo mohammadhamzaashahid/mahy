@@ -1,7 +1,44 @@
 import CompaniesSectors from "@/components/CompaniesSectors";
+import EngProcessSection from "@/components/Services/EngProcessSection";
 import PageHeading from "@/components/UI/PageHeading";
+import { text } from "d3";
 
 function VinzorAluminumLaddersPage() {
+
+    const advantages = [
+    {
+      heading: "Premium Aluminum Construction",
+      text: "Crafted from high grade, corrosion resistant aluminum designed for long term durability across all ladder types.",
+    },
+    {
+      heading: "Lightweight Yet High Strength Design",
+      text: "Engineered to offer maximum stability while remaining easy to carry, position, and store",
+    },
+    {
+      heading: "Enhanced Safety StandardsPrecision",
+      text: "Equipped with anti slip steps, reinforced side rails, and secure locking mechanisms across the full range",
+    },
+    {
+      heading: "Versatile Product Range",
+      text: "Includes step ladders, platform ladders, extension ladders, and multipurpose configurations to suit residential, commercial, and industrial needs.",
+    },
+    {
+      heading: "Precision Engineering",
+      text: "Manufactured with strict quality control to ensure consistent performance, structural integrity, and user safety.",
+    },
+    {
+      heading: "Ergonomic & User Friendly",
+      text: "Designed for comfortable climbing, stable footing, and smooth operation in both indoor and outdoor environments",
+    },
+    {
+      heading: "Weather & Rust Resistant",
+      text: "Built to withstand harsh climates, moisture, and heavy usage without compromising strength"
+    },
+    {
+      heading: "Trusted for Professional Use",
+      text: "Suitable for contractors, technicians, warehouses, retail spaces, and home maintenance tasks.",
+    },
+  ];
   return (
     <main>
       <PageHeading
@@ -26,6 +63,18 @@ function VinzorAluminumLaddersPage() {
             "Long-lasting and corrosion-resistant",
           ]}
         />
+
+         <EngProcessSection
+                heading="Vinzor Aluminum Ladders"
+                items={advantages}
+                images={[
+                  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777574362/manual-worker-leaning-ladder_zxfo9v.jpg",
+                  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777574360/silver-aluminum-step-ladder-standing-glossy-floor-modern-hangar_svuvrv.jpg",
+                  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777574348/metal-staircase-stands-near-beautifully-textured-black-concrete-wall-lit-from_wwgozl.jpg",
+                  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777574342/front-view-girl-cute-dog-christmas-concept_lwqzl9.jpg"
+                   
+                ]}
+              />
       </section>
     </main>
   );

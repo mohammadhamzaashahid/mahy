@@ -94,7 +94,6 @@ function WasteCollectionMenu({
     <section className="bg-gray-100">
       <div className="grid grid-cols-1 md:grid-cols-2">
         
-        {/* ✅ IMAGE SECTION */}
         <div className="relative h-[300px] md:h-[500px] lg:h-full min-h-[400px] overflow-hidden">
           <Image
             src={image}

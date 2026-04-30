@@ -19,9 +19,9 @@ function SolarPanelImageGrid({
             <div className="grid grid-cols-1 md:grid-cols-5">
                 <div className="md:col-span-3 py-8 md:py-10 max-w-xl">
                     <div className="text-center md:text-start">
-                        <h2 className="uppercase font-semibold tracking-wide">{heading}</h2>
+                        <h2 className="uppercase font-semibold tracking-wide t-base">{heading}</h2>
                         {subHeading && (
-                            <p className="text-2xl md:text-4xl font-semibold mt-3 md:mt-4 mb-5">{subHeading}</p>
+                            <p className="text-2xl md:text-4xl font-semibold mt-3 md:mt-4 mb-5 t-base">{subHeading}</p>
                         )}
                         {bulletItems && (
                             <ul className="mt-6 list-disc list-inside space-y-1.5 text-sm">
@@ -40,7 +40,7 @@ function SolarPanelImageGrid({
                                 <div className="p-1 rounded-full b-base text-white">
                                     <Check size={15} />
                                 </div>
-                                <h3 className="font-medium text-lg">{item.title}</h3>
+                                <h3 className="font-medium text-lg t-base">{item.title}</h3>
                             </div>
                             {item.textItems && (
                                 <ul className="mt-2.5 space-y-1">

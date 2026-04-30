@@ -5,7 +5,8 @@ import WasteCollectionGrid from "@/components/Services/WasteCollection/WasteColl
 import SustainabilitySection from "@/components/UI/about-us/sustainability/Sustainability";
 import DesignProcessContainer from "@/components/UI/home/DesignProcessContainer";
 import PageHeading from "@/components/UI/PageHeading";
-import { HiLightBulb } from "react-icons/hi";
+import { TbAirConditioning } from "react-icons/tb";
+
 
 function AirConditioningServicesPage() {
   const installation = [
@@ -177,13 +178,13 @@ function AirConditioningServicesPage() {
         heading="Additional Support Services"
         items={services}
       />
+      <AirConditioningServicesItems />
       <WasteCollectionGrid
         image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777024582/air-condioning-8_fxkhqs.png"}
         heading="Why Choose Our Air Conditioning Services?"
         items={whyChooseUs}
-        icon={<HiLightBulb size={25} />}
+        icon={<TbAirConditioning size={25} />}
       />
-      <AirConditioningServicesItems />
     </main>
   );
 }

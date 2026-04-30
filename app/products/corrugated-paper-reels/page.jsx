@@ -5,46 +5,46 @@ import ServicesPumping from "@/components/ServicesPumping";
 import PageHeading from "@/components/UI/PageHeading";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import React from "react";
-import { HiLightBulb } from "react-icons/hi";
+import { TbPaperBag } from "react-icons/tb";
 
 function CorrugatedPaperReelsPage() {
   const keyProductFeatures = [
     {
-      title: "Wide GSM & Kraft Grade Selection",
-      desc: "Available in multiple GSM ranges and kraft qualities (including high-burst, semi-kraft, and premium kraft), ensuring suitability for light-, medium-, and heavy-duty packaging requirements.",
+      title: "Union Testliner (90–200 GSM)",
+      desc: "High-quality recycled linerboard suitable for outer layers of corrugated packaging, offering strength, printability, and cost efficiency.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822181/gallery-3_exvuhu.jpg",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
     },
     {
-      title: "Excellent Strength & Durability",
-      desc: "Manufactured to deliver high burst strength, ring crush value (RCT), and tensile durability, ensuring strong board formation and reliable packaging integrity.",
+      title: "Unionflute (90–175 GSM)",
+      desc: "Durable fluting medium designed for corrugated board applications, providing excellent rigidity, cushioning, and structural performance.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822181/gallery-3_exvuhu.jpg",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Union_Flute_scjkz4.png",
     },
     {
-      title: "Smooth Runability on Machines",
-      desc: "Precision-wound reels with uniform surface finish provide excellent runability on high-speed corrugators, sheet plants, die-cutting lines, and automatic box-making machines.",
+      title: "Unioncore Board (190–450 GSM)",
+      desc: "Heavy-duty core board used in paper tubes, cores, and industrial applications, delivering superior strength and load-bearing capacity.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822181/gallery-3_exvuhu.jpg",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104674/coreboard_ysfopp.png",
     },
     {
-      title: "Uniform GSM & Moisture Control",
-      desc: "Strict quality inspection ensures consistent GSM uniformity, moisture balance, and reel profile, resulting in fewer machine stoppages and increased production efficiency.",
+      title: "Semikraft Liner (125–200 GSM)",
+      desc: "Semi-chemical kraft liner combining strength and surface quality, ideal for packaging solutions requiring enhanced durability and appearance.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822181/gallery-3_exvuhu.jpg",
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104675/Semikraft_knjtkd.png",
     },
-    {
-      title: "Customizable Widths & Specifications",
-      desc: "Reels can be supplied in tailored widths to fit any corrugator or converting line, with options for:• Kraft liner• Test liner• Fluting paper• Medium paper",
-      image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822181/gallery-3_exvuhu.jpg",
-    },
-    {
-      title: "Eco-Friendly Manufacturing",
-      desc: "Produced using recycled fiber, optimized resource consumption, and environmentally responsible processes to support sustainable packaging.",
-      image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822181/gallery-3_exvuhu.jpg",
-    },
+    // {
+    //   title: "Customizable Widths & Specifications",
+    //   desc: "Reels can be supplied in tailored widths to fit any corrugator or converting line, with options for:• Kraft liner• Test liner• Fluting paper• Medium paper",
+    //   image:
+    //     "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822181/gallery-3_exvuhu.jpg",
+    // },
+    // {
+    //   title: "Eco-Friendly Manufacturing",
+    //   desc: "Produced using recycled fiber, optimized resource consumption, and environmentally responsible processes to support sustainable packaging.",
+    //   image:
+    //     "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822181/gallery-3_exvuhu.jpg",
+    // },
   ];
 
   const applications = [
@@ -93,20 +93,20 @@ function CorrugatedPaperReelsPage() {
         // description={
         //   "Global Water Solutions Pressure Tanks are engineered to ensure efficient pressure control, system stability, and long service life in water supply applications. Designed for consistent performance, these tanks support smooth operation of pumps and water networks."
         // }
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776795755/financial-chart-blurred-skyscraper-office-background_hbc40c.jpg"
+        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777103591/Our_Mission_juz165.jpg"
       />
-      <BoosterPumpRevealSection text="Our high-quality corrugated paper reels are available in a comprehensive range of widths, kraft grades, and GSM options, making them the preferred choice for packaging manufacturers, carton converters, and industrial packing operations across the UAE. Engineered for superior strength, stability, and smooth machinability, these reels deliver consistent performance in demanding converting and packaging applications." />
+      <BoosterPumpRevealSection image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1770199645/UPM.4_ir521p.jpg" text="Our high-quality corrugated paper reels are available in a comprehensive range of widths, kraft grades, and GSM options, making them the preferred choice for packaging manufacturers, carton converters, and industrial packing operations across the UAE. Engineered for superior strength, stability, and smooth machinability, these reels deliver consistent performance in demanding converting and packaging applications." />
       <ServicesPumping
         title1="Our Key"
         title2="Product Features"
         items={keyProductFeatures}
       />
-      <HoverableColumns title="Applications" items={applications} />
+      {/* <HoverableColumns title="Applications" items={applications} /> */}
       <WasteCollectionGrid
-      image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776627437/digital-document-online-electronic-signature-document-management-paperless-office-e-signing-signing-business-contract-concept-metaverse.jpg_zvimmr.jpg"
+      image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777115296/image010_r5rssl.png"
         heading="Why Choose Our Corrugated Paper Reels?"
         items={whyChooseUs}
-        icon={<HiLightBulb size={25} />}
+        icon={<TbPaperBag size={25} />}
       />
     </main>
   );

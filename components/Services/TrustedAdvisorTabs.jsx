@@ -46,7 +46,7 @@ export default function TrustedBusinessAdvisor({
       <div className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-stretch">
           <div className="lg:col-span-5">
-            <h2 className="text-[42px] font-semibold leading-tight text-slate-900">
+            <h2 className="text-[42px] font-semibold leading-tight t-base">
               {heading}
             </h2>
             {text && (
@@ -77,7 +77,7 @@ export default function TrustedBusinessAdvisor({
                     onClick={() => setActive(idx)}
                     className="block text-left"
                   >
-                    <h3 className="text-[20px] font-semibold text-slate-900">
+                    <h3 className="text-[20px] font-semibold t-base">
                       {item.label}
                     </h3>
                     <p className="mt-2 max-w-md text-[15px] leading-7 text-slate-500">

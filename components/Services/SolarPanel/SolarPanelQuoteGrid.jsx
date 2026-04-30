@@ -28,7 +28,7 @@ function SolarPanelQuoteGrid({
           />
         </div>
         <div className="pt-7 pb-5 md:py-10 px-5 md:px-6 md:col-span-3">
-          <h2 className="uppercase font-semibold">{heading}</h2>
+          <h1 className="uppercase font-semibold t-base">{heading}</h1>
           <p className="mt-1.5 text-gray-700">{text}</p>
           {text2 && <p className="mt-1.5 text-gray-700">{text2}</p>}
           <div className="grid grid-cols-1 sm:grid-cols-2 mt-6 gap-3 md:gap-0">

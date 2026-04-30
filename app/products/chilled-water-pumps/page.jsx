@@ -8,11 +8,26 @@ function ChilldWaterPumpsPage() {
   const overviewItems = [
     {
       title: "Optimized for HVAC & District Cooling",
+      bgImage:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017207/chilled-water-pumps2.png_tslxu6.jpg",
       text: "Chilled water pumps are purpose-built for HVAC circulation, district cooling systems, and centralized air-conditioning networks, ensuring highly efficient cooling water movement and stable thermal performance.",
     },
+
     {
       title: "Reliable Continuous-Duty Performance",
+      bgImage: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776795078/factory-with-blue-pipe-blue-pipe-with-word-power-it_fseudd.jpg",
       text: "Designed for continuous-duty operation, these pumps maintain precise flow rates and consistent pressure to support heat exchangers, AHUs, FCUs, and large-scale cooling loops. Their robust construction, energy-efficient motors, and compatibility with modern control systems make them essential for high-performance HVAC infrastructure.",
+    },
+    {
+      title: "Energy-Efficient Operation",
+      bgImage: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025247/comprehensive-pumping-system-4_do1k9f.jpg",
+      text: "Engineered with high-efficiency motors and optimized hydraulic design, these pumps significantly reduce energy consumption while maintaining optimal performance. Their ability to adapt to variable load conditions ensures cost-effective operation in both commercial and industrial cooling applications.",
+    },
+
+    {
+      title: "Robust & Low-Maintenance Design",
+      bgImage: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777020161/tpumps2_qbtnwi.jpg",
+      text: "Built with durable materials and precision engineering, these pumps are designed to withstand demanding environments with minimal maintenance requirements. Their reliability reduces downtime and ensures long-term operational stability across HVAC and district cooling systems.",
     },
   ];
   const features = [
@@ -57,10 +72,14 @@ function ChilldWaterPumpsPage() {
     {
       title: "HVAC Chilled Water Networks",
       text: "Ensures efficient circulation between chillers, AHUs, FCUs, and cooling coils.",
+      bgImage:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777543751/HVAC_Chilled_water_network_ohvuyf.jpg",
     },
     {
       title: "Central A/C Systems",
       text: "Supports centralized chilled-water air-conditioning systems in mixed-use developments.",
+      bgImage:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777543748/Central_AC_System_uqjejj.jpg",
     },
     // {
     //   title: "District Cooling Plants",
@@ -68,12 +87,16 @@ function ChilldWaterPumpsPage() {
     // },
     {
       title: "Commercial Building Cooling Loops",
+      bgImage:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777543749/Commercial_Building_loops_lazkbs.jpg",
       text: "Used in malls, hotels, hospitals, residential towers, and office complexes requiring reliable cooling water distribution.",
     },
-    
+
     {
       title: "Industrial Cooling Processes",
       text: "Suitable for industrial heat exchangers, machinery cooling loops, process chillers, and production facility cooling lines.",
+      bgImage:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777543751/Industrial_Cooling_process_k1maer.jpg",
     },
   ];
 
@@ -93,12 +116,16 @@ function ChilldWaterPumpsPage() {
       />
       <div className="my-20">
         <SolarPanelImagesGrid
-        images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017207/chilled-water-pumps2.png_tslxu6.jpg", "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017208/chilled-water-pumps3.png_lug0j8.jpg"]}
+          images={[
+            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776795333/Copilot_20260421_090656_huhtpp.png",
+            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017208/chilled-water-pumps3.png_lug0j8.jpg",
+            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017207/chilled-water-pumps2.png_tslxu6.jpg",
+            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776795344/vertical-shot-river-roads-city-clear-blue-sky_rbu8an.jpg",
+          ]}
           heading="Overview"
           items={overviewItems}
           text1="Trusted"
           text2="for Thermal Stability"
-          
         />
       </div>
       <WasteCollectionItems

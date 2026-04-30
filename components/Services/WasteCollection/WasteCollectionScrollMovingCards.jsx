@@ -15,18 +15,17 @@ function WasteCollectionScrollMovingCards({
     heading = "",
     items = defaultItems
 }) {
-
     return (
         <section className="overflow-hidden">
             <Mobile heading={heading} items={items} />
             <Desktop heading={heading} items={items} />
         </section>
-    )
-};
+    );
+}
 
 const Mobile = ({ heading, items }) => (
     <div className="px-5 pt-14 pb-8 md:py-20 relative lg:hidden">
-        <h2 className="max-w-2xl mx-auto text-center text-3xl md:text-5xl font-semibold">{heading}</h2>
+        <h2 className="max-w-2xl mx-auto text-center text-3xl md:text-5xl font-semibold t-base">{heading}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
             {items.map((item, i) => (
                 <MobileCard key={i} item={item} i={i} />
@@ -35,23 +34,42 @@ const Mobile = ({ heading, items }) => (
     </div>
 );
 
-const MobileCard = ({ item, i }) => (
-    <div className={`${i % 2 === 0 ? "bg-slate-300" : "bg-slate-400"} p-5 h-110 rounded-2xl`}>
-        <div className="flex flex-col justify-between h-full">
-            <div className="relative size-15">
-                <Image src={"/waste/logo.svg"} alt={`Logo ${i + 1}`} fill style={{ objectFit: "contain" }} />
-            </div>
-            <div>
-                {item.title && <h3 className="font-medium mb-1">{item.title}</h3>}
-                <p>{item.text}</p>
-            </div>
-            <div>
-                <p className="font-medium">{item.person}</p>
-                <span className="text-sm text-gray-900">{item.company}</span>
+const MobileCard = ({ item, i }) => {
+    const hasBg = Boolean(item.bgImage);
+
+    return (
+        <div className={`relative overflow-hidden p-5 h-110 rounded-2xl ${!hasBg ? (i % 2 === 0 ? "bg-slate-300" : "bg-slate-400") : ""}`}>
+            {hasBg && (
+                <>
+                    <Image
+                        src={item.bgImage}
+                        alt=""
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="z-0"
+                    />
+                    <div className="absolute inset-0 bg-black/65 z-10 rounded-2xl" />
+                </>
+            )}
+
+            <div className={`relative flex flex-col justify-between h-full ${hasBg ? "z-20 text-white" : ""}`}>
+                <div className="relative size-15 flex-shrink-0">
+                    <Image src={"/waste/logo.svg"} alt={`Logo ${i + 1}`} fill style={{ objectFit: "contain" }} />
+                </div>
+
+                <div className="flex-1 flex flex-col justify-center py-4">
+                    {item.title && <h3 className="font-semibold text-base leading-snug mb-1">{item.title}</h3>}
+                    <p className="text-sm leading-relaxed line-clamp-6">{item.text}</p>
+                </div>
+
+                <div>
+                    <p className="font-semibold text-sm">{item.person}</p>
+                    <span className={`text-xs ${hasBg ? "text-white/70" : "text-gray-700"}`}>{item.company}</span>
+                </div>
             </div>
         </div>
-    </div >
-);
+    );
+};
 
 const Desktop = ({ heading, items }) => {
     const ref = useRef(null);
@@ -60,15 +78,18 @@ const Desktop = ({ heading, items }) => {
         offset: ["start end", "end start"],
     });
     const rotate = useTransform(scrollYProgress, [0, 1], [-20, 20]);
+
     return (
         <div ref={ref} className="px-5 pt-40 pb-40 relative hidden lg:block">
             <motion.div style={{ rotate }} className="absolute top-20 -left-30 size-60">
                 <Image src="/waste/waste-bg2.svg" alt="" fill />
             </motion.div>
-            <motion.div style={{ rotate }} className="absolute top-20 -right-30 size-60" >
+            <motion.div style={{ rotate }} className="absolute top-20 -right-30 size-60">
                 <Image src="/waste/waste-bg3.svg" alt="" fill />
             </motion.div>
-            <h2 className="max-w-2xl mx-auto text-center text-5xl font-semibold">{heading}</h2>
+
+            <h2 className="max-w-2xl mx-auto text-center text-5xl font-semibold t-base">{heading}</h2>
+
             <div className="grid grid-cols-4 gap-5 mt-50">
                 {items.map((item, i) => (
                     <DesktopCard key={i} item={item} i={i} scrollYProgress={scrollYProgress} />
@@ -76,32 +97,48 @@ const Desktop = ({ heading, items }) => {
             </div>
         </div>
     );
-}
+};
 
 const DesktopCard = ({ item, i, scrollYProgress }) => {
     const direction = i % 2 === 0 ? -1 : 1;
-    const y = useTransform(
-        scrollYProgress,
-        [0, 1],
-        [0, 80 * direction]
-    );
+    const y = useTransform(scrollYProgress, [0, 1], [0, 80 * direction]);
+    const hasBg = Boolean(item.bgImage);
+
     return (
-        <motion.div style={{ y }} className={`${i % 2 === 0 ? "bg-slate-300" : "bg-slate-400"} p-5 h-110 rounded-2xl`}>
-            <div className="flex flex-col justify-between h-full">
-                <div className="relative size-15">
+        <motion.div
+            style={{ y }}
+            className={`relative overflow-hidden p-5 h-110 rounded-2xl ${!hasBg ? (i % 2 === 0 ? "bg-slate-300" : "bg-slate-400") : ""}`}
+        >
+            {hasBg && (
+                <>
+                    <Image
+                        src={item.bgImage}
+                        alt=""
+                        fill
+                        style={{ objectFit: "cover" }}
+                        className="z-0"
+                    />
+                    <div className="absolute inset-0 bg-black/15 z-10 rounded-2xl" />
+                </>
+            )}
+
+            <div className={`relative flex flex-col justify-between h-full ${hasBg ? "z-20 text-white" : ""}`}>
+                <div className="relative size-15 flex-shrink-0">
                     <Image src="/waste/logo.svg" alt="" fill />
                 </div>
-                <div>
-                    {item.title && <h3 className="font-medium mb-1">{item.title}</h3>}
-                    <p>{item.text}</p>
+
+                <div className="flex-1 flex flex-col justify-end py-4">
+                    {item.title && <h3 className="font-semibold text-base leading-snug mb-1">{item.title}</h3>}
+                    <p className="text-sm leading-relaxed line-clamp-6">{item.text}</p>
                 </div>
+
                 <div>
-                    <p className="font-medium">{item.person}</p>
-                    <span className="text-sm text-gray-900">{item.company}</span>
+                    <p className="font-semibold text-sm">{item.person}</p>
+                    <span className={`text-xs ${hasBg ? "text-white/70" : "text-gray-700"}`}>{item.company}</span>
                 </div>
             </div>
         </motion.div>
     );
 };
 
-export default WasteCollectionScrollMovingCards
+export default WasteCollectionScrollMovingCards;

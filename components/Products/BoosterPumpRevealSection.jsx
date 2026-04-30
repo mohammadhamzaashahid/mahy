@@ -4,11 +4,13 @@ import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { image } from "d3";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function BoosterPumpRevealSection({
-    text = "We believe in pushing boundaries, into stunning digital masterpieces."
+    text = "We believe in pushing boundaries, into stunning digital masterpieces.",
+    image = "/gallery/gallery-2.jpg"
 }) {
     const sectionRef = useRef(null);
     const boxRef = useRef(null);
@@ -47,7 +49,7 @@ export default function BoosterPumpRevealSection({
                 <h2 className="text-2xl md:text-3xl font-semibold md:leading-10 tracking-tighter max-w-6xl text-justify px-5">{text}</h2>
             </div>
             <div ref={boxRef} className="absolute inset-0 flex items-center justify-center">
-                <Image src={"/gallery/gallery-2.jpg"} alt="Booster Pump Reveal Image" fill style={{ objectFit: "cover" }} />
+                <Image src={image} alt="Booster Pump Reveal Image" fill style={{ objectFit: "cover" }} />
             </div>
         </section>
     );

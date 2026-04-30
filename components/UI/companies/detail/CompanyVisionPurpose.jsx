@@ -101,13 +101,13 @@ export default function CompanyVisionPurpose({
               }}
             >
 
-              {/* Image */}
               <div className="relative w-full aspect-4/3 sm:aspect-16/10 overflow-hidden rounded-sm">
                 <Image
                   src={items[activeIndex].image}
                   alt=""
                   fill
-                  className="object-cover"
+                  // className="object-contain"
+                  className={items[activeIndex].imageClassName || "object-cover"}
                   priority
                 />
               </div>

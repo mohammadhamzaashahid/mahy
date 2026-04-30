@@ -17,7 +17,7 @@ function ServicesGloballyTemp({
   return (
     <section className="max-w-7xl mx-auto px-3 mb-1.5">
       <motion.div
-        className="mt-3 md:mt-6 p-6 md:p-10 rounded-3xl grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-8 b-base text-white"
+        className="mt-3 md:mt-6 p-6 md:p-10 grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-8 b-base text-white"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
@@ -72,7 +72,7 @@ function ServicesGloballyTemp({
         </div>
 
         <div
-          className={`rounded-3xl overflow-hidden relative h-60 md:h-full md:col-span-3 ${invert ? "md:order-1" : "md:order-2"
+          className={`overflow-hidden relative h-60 md:h-full md:col-span-3 ${invert ? "md:order-1" : "md:order-2"
             }`}
         >
           <Image src={image} alt="Services" fill style={{ objectFit: "cover" }} />

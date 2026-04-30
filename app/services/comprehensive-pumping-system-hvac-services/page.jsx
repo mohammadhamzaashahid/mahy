@@ -6,6 +6,7 @@ import SolarPanelImageGrid from "@/components/Services/SolarPanel/SolarPanelImag
 import SolarPanelQuoteGrid from "@/components/Services/SolarPanel/SolarPanelQuoteGrid";
 import ServicesPumping from "@/components/ServicesPumping";
 import ServicesGlobally from "@/components/UI/companies/detail/ServicesGlobally";
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 import PageHeading from "@/components/UI/PageHeading";
 
 function PumpingSystemServicesPage() {
@@ -101,13 +102,12 @@ function PumpingSystemServicesPage() {
         ]}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025219/comprehensive-pumping-system-1_tzdqvk.jpg"
       />
-      <ServicesGlobally
-        heading="Your Single-Point Solution for Mechanical System Reliability"
-        text="Whether you need a one-time repair, a full system overhaul, or a long-term maintenance partner, our service team delivers reliability, accountability, and technical excellence."
-        texts2={[
-          "Talk to us today to discuss a service plan or AMC tailored to your building and operational needs.",
-        ]}
+
+      <WhoWeAre
+        showButton={false}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776840944/maintenance-gas-pipeline-specialist-checks-gas-pipeline_xca8ji.jpg"
+        text="Whether you need a one-time repair, a full system overhaul, or a long-term maintenance partner, our service team delivers reliability, accountability, and technical excellence. Talk to us today to discuss a service plan or AMC tailored to your building and operational needs."
+        heading="Your Single-Point Solution for Mechanical System Reliability"
       />
       <HoverableColumns />
       <ServicedHotelApartments />

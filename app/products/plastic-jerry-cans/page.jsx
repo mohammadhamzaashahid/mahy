@@ -1,12 +1,15 @@
 import CompanyVisionPurpose from "@/components/UI/companies/detail/CompanyVisionPurpose";
 import ServicesGlobally from "@/components/UI/companies/detail/ServicesGlobally";
+import WhoWeAre from "@/components/UI/home/WhoWeAre";
 import PageHeading from "@/components/UI/PageHeading";
 
 function PlasticJerryCansPage() {
   const features = [
     {
       label: "Product-Oriented Features",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026203/plastic-jerry-cans-3_eloxwq.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026203/plastic-jerry-cans-3_eloxwq.jpg",
+      imageClassName: "object-cover",
       items: [
         {
           title: "High-Strength Material Construction",
@@ -21,7 +24,8 @@ function PlasticJerryCansPage() {
           text: "Available from small household sizes (0.5L–5L) to industrial bulk sizes (15L–25L), with multiple ergonomic designs for ease of use and optimized storage.",
         },
         {
-          image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-4_sxwojv.jpg",
+          image:
+            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-4_sxwojv.jpg",
           title: "Industry-Specific Variants",
           items: [
             "Lubricant - grade jerry cans for engine oils, hydraulic oils, and greases",
@@ -31,8 +35,10 @@ function PlasticJerryCansPage() {
           ],
         },
         {
-          image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-4_sxwojv.jpg",
+          image:
+            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-4_sxwojv.jpg",
           title: "Flexible Cap & Closure Options",
+          imageClassName: "object-cover",
           text: "Choose from:",
           items: [
             "Standard screw caps",
@@ -47,7 +53,9 @@ function PlasticJerryCansPage() {
     },
     {
       label: "Branding & Customization Services",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777221750/male-self-care-items-arrangement_blbewn.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777221750/male-self-care-items-arrangement_blbewn.jpg",
+      imageClassName: "object-contain",
       items: [
         {
           title: "Labelling Service",
@@ -70,7 +78,9 @@ function PlasticJerryCansPage() {
     },
     {
       label: "Performance Advantages",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-5_mkjrru.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-5_mkjrru.jpg",
+      imageClassName: "object-cover",
       items: [
         {
           title: "Performance Advantages",
@@ -86,7 +96,9 @@ function PlasticJerryCansPage() {
     },
     {
       label: "Applications",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026206/plastic-jerry-cans-6_wgoyps.jpg",
+      image:
+        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026206/plastic-jerry-cans-6_wgoyps.jpg",
+      imageClassName: "object-cover",
       items: [
         {
           title: "Applications",
@@ -108,7 +120,19 @@ function PlasticJerryCansPage() {
         title={"Plastic Jerry Cans"}
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026200/plastic-jerry-cans-1_dx8oeo.jpg"
       />
+
+      <WhoWeAre
+        showButton={false}
+        image={
+          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777570061/detergents-with-flowers-on-a-pink-background-2026-01-09-07-49-51-utc_bkz1mj.jpg"
+        }
+        padding="xl"
+        heading="Versatile Packaging Solutions"
+        text="Our comprehensive range of plastic jerry cans is available in multiple capacities — 0.5L, 1L, 3L, 4L, 5L, 15L, 20L, and 25L — designed to meet the versatile packaging requirements of lubricant manufacturers, petroleum distributors, chemical suppliers, cleaning product producers, and food-processing industries across the UAE. Each jerry can is manufactured using premium-grade, high-density raw materials, ensuring durability, leak resistance, dimensional stability, and safe handling in harsh operational environments."
+      />
+
       <ServicesGlobally
+        objectFit="contain"
         text="Our comprehensive range of plastic jerry cans is available in multiple capacities — 0.5L, 1L, 3L, 4L, 5L, 15L, 20L, and 25L — designed to meet the versatile packaging requirements of lubricant manufacturers, petroleum distributors, chemical suppliers, cleaning product producers, and food-processing industries across the UAE. Each jerry can is manufactured using premium-grade, high-density raw materials, ensuring durability, leak resistance, dimensional stability, and safe handling in harsh operational environments."
         image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026202/plastic-jerry-cans-2_wdcmkm.png"
       />
