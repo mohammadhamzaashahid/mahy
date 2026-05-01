@@ -147,7 +147,7 @@ export default function HoverableColumns({
                         left-0
                         right-0
                         bottom-0
-                        h-[520px]
+                        h-[630px]
                         bg-[#3f4e69]/95
                         px-10
                         py-12
