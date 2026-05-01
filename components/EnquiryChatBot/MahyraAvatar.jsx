@@ -13,7 +13,7 @@ export default function MahyraAvatar({ visible, locale, isIdle }) {
      lottieInstance.current?.destroy();
     lottieInstance.current = null;
 
-        const path = isIdle ? "/lottie/sad-mahy.json" : "/lottie/t5d42NEZJZ.json";
+        const path = isIdle ? "/lottie/sad.json" : "/lottie/t5d42NEZJZ.json";
 
 
     lottieInstance.current = lottie.loadAnimation({

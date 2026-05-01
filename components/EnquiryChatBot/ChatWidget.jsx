@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import ChatLayout from "./ChatLayout";
 import ChatMessages from "./ChatMessages";
@@ -13,8 +13,17 @@ import LottieButton from "./LottieButton";
 import IdlePrompt from "./IdlePrompt";
 import MahyraAvatar from "./MahyraAvatar";
 import { useCart } from "@/components/Providers/CartProvider";
+import { useLoaderReady } from "@/components/LoaderWrapper";
 
-export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen }) {
+let sessionChimePlayed = false;
+
+
+export default function ChatWidget({
+  data,
+  locale,
+  isWidgetOpen,
+  setIsWidgetOpen,
+}) {
   const { flow, layout } = data;
   const [messages, setMessages] = useState([
     { from: "bot", text: flow.q1_business.text },
@@ -24,8 +33,9 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
   const [answers, setAnswers] = useState({});
   const [isTyping, setIsTyping] = useState(false);
   const { isOpen: isCartOpen } = useCart();
+  const loaderReady = useLoaderReady();
 
-  const IDLE_DELAY = 12000;
+  const IDLE_DELAY = 20000;
   const SAD_DURATION = 15000;
 
   const idleTimer = useRef(null);
@@ -34,26 +44,29 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
   const idleChimePlayed = useRef(false);
   const isWidgetOpenRef = useRef(false);
 
-  const [showIdlePrompt, setShowIdlePrompt] = useState(true);  // show prompt on load (happy)
+  const [showIdlePrompt, setShowIdlePrompt] = useState(false);
   const [isSadMood, setIsSadMood] = useState(false);
-  const [avatarVisible, setAvatarVisible] = useState(true);
+  const [avatarVisible, setAvatarVisible] = useState(false);
 
   // Keep ref in sync with state for use inside timeouts
   useEffect(() => {
     isWidgetOpenRef.current = isWidgetOpen;
   }, [isWidgetOpen]);
 
-  function startIdleCountdown() {
+  const startIdleCountdown = useCallback(() => {
+    console.log("startIdleCountdown called, loaderReady:", loaderReady);
+    if (!loaderReady) return;
     if (idleTimer.current) clearTimeout(idleTimer.current);
     if (sadResetTimer.current) clearTimeout(sadResetTimer.current);
     idleTimer.current = setTimeout(() => {
       if (!isWidgetOpenRef.current) {
         setShowIdlePrompt(true);
         setIsSadMood(true);
-        idleChimePlayed.current = false;
+        // idleChimePlayed.current = false;
+        sessionChimePlayed;
       }
     }, IDLE_DELAY);
-  }
+  }, [loaderReady]);
 
   // After SAD_DURATION, auto-reset to happy with prompt visible, then restart idle countdown
   // useEffect(() => {
@@ -93,38 +106,40 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
   // }, [isSadMood, isWidgetOpen]);
 
   useEffect(() => {
-  if (!isSadMood || isWidgetOpen) {
-    if (sadResetTimer.current) clearTimeout(sadResetTimer.current);
-    return;
-  }
+    if (!loaderReady || !isSadMood || isWidgetOpen) {
+      if (sadResetTimer.current) clearTimeout(sadResetTimer.current);
+      return;
+    }
 
-  sadResetTimer.current = setTimeout(() => {
-    setShowIdlePrompt(false);
-    setIsSadMood(false);
-    setAvatarVisible(false);
-    idleChimePlayed.current = false;
+    sadResetTimer.current = setTimeout(() => {
+      setShowIdlePrompt(false);
+      setIsSadMood(false);
+      setAvatarVisible(false);
+      // idleChimePlayed.current = false;
+      sessionChimePlayed;
 
-    setTimeout(() => {
-      if (!isWidgetOpenRef.current) {
-        setAvatarVisible(true);
-        setShowIdlePrompt(true);
+      setTimeout(() => {
+        if (!isWidgetOpenRef.current) {
+          setAvatarVisible(true);
+          setShowIdlePrompt(true);
 
-        if (idleTimer.current) clearTimeout(idleTimer.current);
-        idleTimer.current = setTimeout(() => {
-          if (!isWidgetOpenRef.current) {
-            setShowIdlePrompt(true);
-            setIsSadMood(true);
-            idleChimePlayed.current = false;
-          }
-        }, IDLE_DELAY);
-      }
-    }, 7500);
-  }, SAD_DURATION);
+          if (idleTimer.current) clearTimeout(idleTimer.current);
+          idleTimer.current = setTimeout(() => {
+            if (!isWidgetOpenRef.current) {
+              setShowIdlePrompt(true);
+              setIsSadMood(true);
+              // idleChimePlayed.current = false;
+              sessionChimePlayed;
+            }
+          }, IDLE_DELAY);
+        }
+      }, 7500);
+    }, SAD_DURATION);
 
-  return () => {
-    if (sadResetTimer.current) clearTimeout(sadResetTimer.current);
-  };
-}, [isSadMood, isWidgetOpen]);
+    return () => {
+      if (sadResetTimer.current) clearTimeout(sadResetTimer.current);
+    };
+  }, [loaderReady, isSadMood, isWidgetOpen]);
 
   // Lock body scroll when widget is open
   useEffect(() => {
@@ -140,6 +155,15 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
 
   // When widget opens: hide everything. When it closes: show avatar + prompt (happy).
   useEffect(() => {
+    if (!loaderReady) {
+      setShowIdlePrompt(false);
+      setIsSadMood(false);
+      setAvatarVisible(false);
+      if (idleTimer.current) clearTimeout(idleTimer.current);
+      if (sadResetTimer.current) clearTimeout(sadResetTimer.current);
+      return;
+    }
+
     if (isWidgetOpen) {
       setShowIdlePrompt(false);
       setIsSadMood(false);
@@ -158,41 +182,73 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
     return () => {
       if (idleTimer.current) clearTimeout(idleTimer.current);
     };
-  }, [isWidgetOpen]);
+  }, [loaderReady, isWidgetOpen, startIdleCountdown]);
 
   function handleIdleTease() {
     setShowIdlePrompt(false);
     setIsSadMood(false);
-    if (!isWidgetOpen) startIdleCountdown();
+    if (loaderReady && !isWidgetOpen) startIdleCountdown();
   }
 
   // Init audio
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    idleChimeRef.current = new Audio("/audio/idle-pop.wav");
-    idleChimeRef.current.volume = 0.4;
-    return () => {
-      idleChimeRef.current?.pause();
-      idleChimeRef.current = null;
-    };
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window === "undefined") return;
+  //   idleChimeRef.current = new Audio("/audio/idle-pop.wav");
+  //   idleChimeRef.current.volume = 0.4;
+  //   return () => {
+  //     idleChimeRef.current?.pause();
+  //     idleChimeRef.current = null;
+  //   };
+  // }, []);
+
+useEffect(() => {
+  if (typeof window === "undefined") return;
+  if (sessionChimePlayed) return;
+  
+  if (sessionStorage.getItem("chimePlayed")) {
+    sessionChimePlayed = true;
+    return;
+  }
+
+  if (!loaderReady) return;
+
+  const audio = new Audio("/audio/idle-pop.wav");
+  audio.volume = 0.4;
+
+  const playOnce = () => {
+    if (sessionChimePlayed) return;
+    sessionChimePlayed = true;
+    sessionStorage.setItem("chimePlayed", "1");
+    audio.play().catch(() => {});
+  };
+
+  window.addEventListener("pointerdown", playOnce, { once: true });
+  window.addEventListener("keydown", playOnce, { once: true });
+
+  return () => {
+    window.removeEventListener("pointerdown", playOnce);
+    window.removeEventListener("keydown", playOnce);
+  };
+}, [loaderReady]);
 
   // Play chime when idle prompt appears (only for sad state)
-  useEffect(() => {
-    if (!showIdlePrompt || !isSadMood || idleChimePlayed.current) return;
-    if (!idleChimeRef.current) return;
-    const playSound = async () => {
-      try {
-        idleChimeRef.current.currentTime = 0;
-        await idleChimeRef.current.play();
-      } catch (error) {
-        console.warn("Idle prompt sound blocked", error);
-      } finally {
-        idleChimePlayed.current = true;
-      }
-    };
-    playSound();
-  }, [showIdlePrompt, isSadMood]);
+  // useEffect(() => {
+  //   console.log("chime effect fired", { showIdlePrompt, isSadMood, sessionChimePlayed });
+  //   if (!showIdlePrompt || !isSadMood || sessionChimePlayed) return;
+  //   if (!idleChimeRef.current) return;
+  //   const playSound = async () => {
+  //     try {
+  //       idleChimeRef.current.currentTime = 0;
+  //       await idleChimeRef.current.play();
+  //     } catch (error) {
+  //       console.warn("Idle prompt sound blocked", error);
+  //     } finally {
+  //       // idleChimePlayed.current = true;
+  //       sessionChimePlayed = true;
+  //     }
+  //   };
+  //   playSound();
+  // }, [showIdlePrompt, isSadMood]);
 
   const messagesRef = useRef(null);
 
@@ -257,9 +313,10 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
     const question = flow[current];
     if (!question) return;
     addUser(text);
-    const answerValue = question.type === "phone" && meta?.fullPhoneNumber
-      ? meta.fullPhoneNumber
-      : text;
+    const answerValue =
+      question.type === "phone" && meta?.fullPhoneNumber
+        ? meta.fullPhoneNumber
+        : text;
     const updatedAnswers = {
       ...answers,
       [question.field]: answerValue,
@@ -403,7 +460,11 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
             className="relative w-full max-w-65 sm:max-w-70 pointer-events-auto"
             style={{ width: "min(80vw, 280px)" }}
           >
-            <MahyraAvatar visible={avatarVisible} locale={locale} isIdle={isSadMood} />
+            <MahyraAvatar
+              visible={avatarVisible}
+              locale={locale}
+              isIdle={isSadMood}
+            />
             <IdlePrompt
               locale={locale}
               data={data.idle}
@@ -534,16 +595,6 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
   );
 }
 
-
-
-
-
-
-
-
-
-
-
 // "use client";
 
 // import { useEffect, useRef, useState } from "react";
@@ -575,7 +626,7 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
 
 //   const idleTimer = useRef(null);
 //   const [showIdlePrompt, setShowIdlePrompt] = useState(true);
-//   const [isSadMood, setIsSadMood] = useState(false); 
+//   const [isSadMood, setIsSadMood] = useState(false);
 //   const [avatarVisible, setAvatarVisible] = useState(true);
 
 //   const idleChimeRef = useRef(null);
@@ -588,11 +639,10 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
 //   isWidgetOpenRef.current = isWidgetOpen;
 // }, [isWidgetOpen]);
 
-
 // //  function startIdleCountdown() {
 // //   if (idleTimer.current) clearTimeout(idleTimer.current);
 // //   idleTimer.current = setTimeout(() => {
-// //     if (!isWidgetOpenRef.current) {  
+// //     if (!isWidgetOpenRef.current) {
 // //       setShowIdlePrompt(true);
 // //       setIsSadMood(true);
 // //       idleChimePlayed.current = false;
@@ -601,7 +651,6 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
 // // }
 
 // const startIdleCountdownRef = useRef(null);
-
 
 // function startIdleCountdown() {
 //   if (idleTimer.current) clearTimeout(idleTimer.current);
@@ -637,7 +686,7 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
 //   }
 
 //   setAvatarVisible(true);
-//   setIsSadMood(false);     
+//   setIsSadMood(false);
 //   startIdleCountdown();
 
 //   return () => {
@@ -645,11 +694,10 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
 //   };
 // }, [isWidgetOpen]);
 
-
 //   function handleIdleTease() {
-//   setShowIdlePrompt(false);  
-//   setIsSadMood(false);     
-//   if (!isWidgetOpen) startIdleCountdown(); 
+//   setShowIdlePrompt(false);
+//   setIsSadMood(false);
+//   if (!isWidgetOpen) startIdleCountdown();
 // }
 
 //   // useEffect(() => {
@@ -703,7 +751,7 @@ export default function ChatWidget({ data, locale, isWidgetOpen, setIsWidgetOpen
 //       setShowIdlePrompt(false);
 //       setIsSadMood(false);
 //       idleChimePlayed.current = false;
-//       startIdleCountdownRef.current?.(); 
+//       startIdleCountdownRef.current?.();
 //     }, 20000);
 //   }
 

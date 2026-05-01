@@ -1,13 +1,25 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import FullScreenLoader from "./FullScreenLoader";
 
+const LoaderReadyContext = createContext(false);
+
+export function useLoaderReady() {
+  return useContext(LoaderReadyContext);
+}
+
 export default function LoaderWrapper({ children }) {
-  const [loading, setLoading] = useState(true);
+  const [pageLoaded, setPageLoaded] = useState(false);
+  const [loaderFinished, setLoaderFinished] = useState(false);
+  const loading = !pageLoaded || !loaderFinished;
+
+  const handleLoaderFinish = useCallback(() => {
+    setLoaderFinished(true);
+  }, []);
 
   useEffect(() => {
-    const handleLoad = () => setLoading(false);
+    const handleLoad = () => setPageLoaded(true);
 
     if (document.readyState === "complete") {
       handleLoad();
@@ -23,8 +35,8 @@ export default function LoaderWrapper({ children }) {
     : undefined;
 
   return (
-    <>
-      {loading && <FullScreenLoader />}
+    <LoaderReadyContext.Provider value={!loading}>
+      {loading && <FullScreenLoader onFinish={handleLoaderFinish} />}
       <div
         aria-hidden={loading}
         className={`transition-opacity duration-300 ${
@@ -34,6 +46,6 @@ export default function LoaderWrapper({ children }) {
       >
         {children}
       </div>
-    </>
+    </LoaderReadyContext.Provider>
   );
 }
