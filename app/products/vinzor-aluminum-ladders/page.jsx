@@ -74,6 +74,7 @@ function VinzorAluminumLaddersPage() {
                   "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777574342/front-view-girl-cute-dog-christmas-concept_lwqzl9.jpg"
                    
                 ]}
+                imageAspect={"portrait"}
               />
       </section>
     </main>

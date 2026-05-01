@@ -84,13 +84,13 @@ function BoosterPumpsPage() {
         items={timelineItems}
         bottomSection={false}
       />
-      <WasteCollectionMenu
+      {/* <WasteCollectionMenu
       image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017066/booster-pumps7_ufjl42.png"
         heading="Applications"
         tabs={tabItems.map((item) => item.title)}
         items={tabItems.map((item) => item.text)}
         imageFit="contain"
-      />
+      /> */}
       {/* <BoosterPumpRevealSection />
             <BoosterPumpSlideRevealSection /> */}
     </main>

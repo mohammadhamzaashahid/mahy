@@ -34,7 +34,7 @@ function SustainabilityPage() {
             title: "Continuous Improvement & Long-Term Commitment",
             text: "Sustainability and CSR at MAHY Khoory Group are ongoing commitments. We continuously review our practices, monitor performance, and enhance systems to respond to evolving regulatory requirements, industry standards, and stakeholder expectations.",
             text2: "Through responsible operations, environmental stewardship, and community engagement, the Group seeks to support sustainable growth and long-term value creation across all sectors in which it operates.",
-            image: "/gallery/gallery-4.jpg"
+            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777616983/businessman-touching-glowing-increasing-arrow-business-profit-investment-growth-concept_fagrjk.jpg"
         }
     ];
 

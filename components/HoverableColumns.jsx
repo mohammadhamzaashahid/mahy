@@ -40,7 +40,8 @@ const defaultItems = [
   {
     no: "04",
     title: "Finance strategy",
-    desc: "",
+    desc:
+      "Lorem ipsum dolor sit amet consectetur. Id purus enim diam felis. Pharetra ut posuere sem vitae dui nec velit.",
     image:
       "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822205/gallery-4_oxzrpw.jpg",
   },
@@ -98,6 +99,7 @@ export default function HoverableColumns({
                 onMouseEnter={() => setActive(idx)}
                 onFocus={() => setActive(idx)}
               >
+                {/* Collapsed state — anchored to bottom, slides up when active */}
                 <motion.div
                   animate={{ y: isActive ? -160 : 0 }}
                   transition={{
@@ -131,6 +133,8 @@ export default function HoverableColumns({
                     </div>
                   </div>
                 </motion.div>
+
+                {/* Expanded state — anchored to bottom, taller to fit description */}
                 <AnimatePresence>
                   {isActive && (
                     <motion.div
@@ -143,7 +147,7 @@ export default function HoverableColumns({
                         left-0
                         right-0
                         bottom-0
-                        h-[460px]
+                        h-[520px]
                         bg-[#3f4e69]/95
                         px-10
                         py-12
@@ -167,15 +171,6 @@ export default function HoverableColumns({
                           </p>
                         )}
                       </div>
-
-                      {item.desc && (
-                        <Link
-                          href="/"
-                          className="text-[#ff4d4f] text-sm font-medium inline-flex items-center gap-2"
-                        >
-                          Read more <span>→</span>
-                        </Link>
-                      )}
                     </motion.div>
                   )}
                 </AnimatePresence>

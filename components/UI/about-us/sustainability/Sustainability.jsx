@@ -95,7 +95,7 @@ function SustainabilitySection({
               transition={{ duration: 0.7, delay: i * 0.08, ease: "easeOut" }}
               className={`${
                 i === 0 ? "lg:col-span-2" : ""
-              } relative lg:rounded-3xl overflow-hidden ${cardHeight} flex flex-col justify-end group cursor-pointer`}
+              } relative lg:rounded-3xl overflow-hidden ${cardHeight} flex flex-col justify-end group`}
             >
               <motion.div
                 animate={{
