@@ -13,9 +13,42 @@ import "react-toastify/dist/ReactToastify.css";
 
 const COUNTRY_VALUES = new Set(COUNTRIES.map(({ value }) => value));
 const ENQUIRY_TYPE_VALUES = new Set(ENQUIRY_TYPES.map(({ value }) => value));
-const COUNTRY_LABELS = new Map(COUNTRIES.map(({ value, label }) => [value, label]));
+const COUNTRY_LABELS = new Map(
+  COUNTRIES.map(({ value, label }) => [value, label]),
+);
 const nameRegex = /^[A-Za-z][A-Za-z\s'-]*$/;
+const websiteRegex =
+  /^www\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
 const phoneFormatRegex = /^\+?[\d\s()-]+$/;
+const MIN_PHONE_DIGITS = 7;
+const MAX_PHONE_DIGITS = 15;
+
+const limitPhoneInput = (value) => {
+  let digitCount = 0;
+  let hasPlus = false;
+  let nextValue = "";
+
+  for (const char of value) {
+    if (/\d/.test(char)) {
+      if (digitCount >= MAX_PHONE_DIGITS) continue;
+      digitCount += 1;
+      nextValue += char;
+      continue;
+    }
+
+    if (char === "+" && !hasPlus && nextValue.length === 0) {
+      hasPlus = true;
+      nextValue += char;
+      continue;
+    }
+
+    if (/[\s()-]/.test(char)) {
+      nextValue += char;
+    }
+  }
+
+  return nextValue;
+};
 
 const emptyToUndefined = (value) =>
   typeof value === "string" && value.trim() === "" ? undefined : value;
@@ -53,7 +86,7 @@ const schema = z.object({
     z
       .string()
       .trim()
-      .url("Enter a valid URL, including https://")
+      .regex(websiteRegex, "Enter a valid website URL, like www.example.com")
       .max(200, "Website URL is too long")
       .optional(),
   ),
@@ -72,8 +105,10 @@ const schema = z.object({
     })
     .refine((value) => {
       const digits = value.replace(/\D/g, "");
-      return digits.length >= 7 && digits.length <= 15;
-    }, "Mobile number must contain 7 to 15 digits"),
+      return (
+        digits.length >= MIN_PHONE_DIGITS && digits.length <= MAX_PHONE_DIGITS
+      );
+    }, `Mobile number must contain ${MIN_PHONE_DIGITS} to ${MAX_PHONE_DIGITS} digits`),
   country: z
     .string()
     .min(1, "Country is required")
@@ -102,6 +137,7 @@ export default function ContactFormPane({ data, agreement, submit }) {
     mode: "onTouched",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const mobileNumberField = register("mobileNumber");
 
   // const { executeRecaptcha } = useGoogleReCaptcha();
 
@@ -168,8 +204,8 @@ export default function ContactFormPane({ data, agreement, submit }) {
 
           <Field label={data[3]} error={errors.companyWebsite}>
             <input
-              type="url"
-              placeholder="https://example.com"
+              type="text"
+              placeholder="www.example.com"
               {...register("companyWebsite")}
             />
           </Field>
@@ -185,9 +221,14 @@ export default function ContactFormPane({ data, agreement, submit }) {
           <Field label={data[5]} error={errors.mobileNumber} required>
             <input
               type="tel"
+              inputMode="tel"
               autoComplete="tel"
               placeholder="+971 55 123 4567"
-              {...register("mobileNumber")}
+              {...mobileNumberField}
+              onChange={(event) => {
+                event.target.value = limitPhoneInput(event.target.value);
+                mobileNumberField.onChange(event);
+              }}
             />
           </Field>
         </div>
