@@ -1,6 +1,9 @@
 import { z } from "zod";
 
 const yearRegex = /^\d{1,4}$/;
+const digitsRegex = /^\d+$/;
+export const MIN_MOBILE_NUMBER_DIGITS = 7;
+export const MAX_MOBILE_NUMBER_DIGITS = 15;
 
 const isFutureDate = (date) => {
   if (!date) return false;
@@ -18,7 +21,21 @@ export const complaintSchema = z
     contactPerson: z.string().optional(),
     companyName: z.string().optional(),
 
-    mobileNumber: z.string().min(1, "Mobile Number is required"),
+    mobileNumber: z
+      .string()
+      .trim()
+      .min(1, "Mobile Number is required")
+      .refine((value) => digitsRegex.test(value), {
+        message: "Mobile Number must contain digits only",
+      })
+      .refine(
+        (value) =>
+          value.length >= MIN_MOBILE_NUMBER_DIGITS &&
+          value.length <= MAX_MOBILE_NUMBER_DIGITS,
+        {
+          message: `Mobile Number must contain ${MIN_MOBILE_NUMBER_DIGITS} to ${MAX_MOBILE_NUMBER_DIGITS} digits`,
+        },
+      ),
 
     email: z.string().email("Enter a valid email").optional(),
     year: z

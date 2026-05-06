@@ -15,7 +15,10 @@ import {
   AnimatedGroupItem,
 } from "@/components/form/AnimatedField";
 import Button from "../Button";
-import { complaintSchema } from "./ComplaintSchema";
+import {
+  complaintSchema,
+  MAX_MOBILE_NUMBER_DIGITS,
+} from "./ComplaintSchema";
 import { submitCustomerComplaint } from "@/lib/api/customerComplaint";
 import { useMutation } from "@tanstack/react-query";
 
@@ -87,15 +90,6 @@ const sanitizeDigits = (value = "", limit) =>
     .replace(/\D/g, "")
     .slice(0, limit);
 
-const isFutureDate = (date) => {
-  if (!date) return false;
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const candidate = new Date(date);
-  candidate.setHours(0, 0, 0, 0);
-  return candidate > today;
-};
-
 export default function CustomerComplaintForm() {
   const {
     control,
@@ -103,6 +97,7 @@ export default function CustomerComplaintForm() {
     watch,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(complaintSchema),
@@ -128,6 +123,9 @@ export default function CustomerComplaintForm() {
   });
 
   const customerType = watch("customerType");
+  const mobileNumberField = register("mobileNumber", {
+    setValueAs: (value) => sanitizeDigits(value, MAX_MOBILE_NUMBER_DIGITS),
+  });
 
   const onSubmit = (data) => {
     mutation.mutate(data);
@@ -202,8 +200,17 @@ export default function CustomerComplaintForm() {
                     label="Mobile Number"
                     required
                     type="tel"
-                    inputMode="tel"
-                    {...register("mobileNumber")}
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    maxLength={MAX_MOBILE_NUMBER_DIGITS}
+                    {...mobileNumberField}
+                    onChange={(event) => {
+                      event.target.value = sanitizeDigits(
+                        event.target.value,
+                        MAX_MOBILE_NUMBER_DIGITS,
+                      );
+                      mobileNumberField.onChange(event);
+                    }}
                     error={errors.mobileNumber?.message}
                   />
 
@@ -297,14 +304,24 @@ export default function CustomerComplaintForm() {
                   <Controller
                     control={control}
                     name="incidentDate"
-                    render={({ field }) => (
-                      <DatePickerField
-                        label="Incident Date"
-                        error={errors.incidentDate?.message}
-                        disabled={isFutureDate}
-                        {...field}
-                      />
-                    )}
+                    render={({ field }) => {
+                      const handleIncidentDateChange = (date) => {
+                        setValue("incidentDate", date, {
+                          shouldDirty: true,
+                          shouldTouch: true,
+                          shouldValidate: true,
+                        });
+                      };
+
+                      return (
+                        <DatePickerField
+                          label="Incident Date"
+                          error={errors.incidentDate?.message}
+                          {...field}
+                          onChange={handleIncidentDateChange}
+                        />
+                      );
+                    }}
                   />
 
                   <FormField label="Frequency">
