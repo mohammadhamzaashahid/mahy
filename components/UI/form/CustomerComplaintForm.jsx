@@ -403,7 +403,7 @@ export default function CustomerComplaintForm() {
                     render={({ field }) => (
                       <FileUploadField
                         label="Photos"
-                        accept=".jpg,.png"
+                        accept=".jpg,.jpeg,.png"
                         multiple
                         {...field}
                       />
