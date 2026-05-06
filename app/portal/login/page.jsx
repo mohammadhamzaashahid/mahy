@@ -31,11 +31,15 @@ export default function PortalLogin() {
   const [otpOpen, setOtpOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const cookieOptions = { expires: 1, path: "/" };
+
   const set = (k) => (e) =>
     setForm({ ...form, [k]: e.target.value });
 
   const afterAuth = () => {
-    router.push(`/portal/company-select?redirect=${redirect}`);
+    router.push(
+      `/portal/company-select?redirect=${encodeURIComponent(redirect)}`,
+    );
   };
 
   const submit = async (e) => {
@@ -49,7 +53,7 @@ export default function PortalLogin() {
           password: form.password,
         });
 
-        Cookies.set("mahy_portal_auth", res.data.token, { expires: 1 });
+        Cookies.set("mahy_portal_auth", res.data.token, cookieOptions);
         afterAuth();
       } else {
         await api("api/auth/signup", {
@@ -78,7 +82,7 @@ export default function PortalLogin() {
       password: form.password,
     });
 
-    Cookies.set("mahy_portal_auth", login.data.token, { expires: 1 });
+    Cookies.set("mahy_portal_auth", login.data.token, cookieOptions);
     setOtpOpen(false);
     afterAuth();
   };

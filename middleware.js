@@ -5,6 +5,7 @@ export function middleware(req) {
   const company = req.cookies.get("mahy_company")?.value;
 
   const pathname = req.nextUrl.pathname;
+  const redirectTarget = `${pathname}${req.nextUrl.search}`;
 
   const isCustomer =
     pathname.startsWith("/contact-us/customer-registration");
@@ -14,13 +15,13 @@ export function middleware(req) {
   if (isCustomer || isVendor) {
     if (!token) {
       const url = new URL("/portal/login", req.url);
-      url.searchParams.set("redirect", pathname);
+      url.searchParams.set("redirect", redirectTarget);
       return NextResponse.redirect(url);
     }
     if (!company) {
-      return NextResponse.redirect(
-        new URL("/portal/company-select", req.url)
-      );
+      const url = new URL("/portal/company-select", req.url);
+      url.searchParams.set("redirect", redirectTarget);
+      return NextResponse.redirect(url);
     }
   }
 

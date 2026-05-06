@@ -72,6 +72,15 @@ export default function CompanySelect() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    if (Cookies.get("mahy_portal_auth")) return;
+
+    const redirect = redirectParam || "/contact-us";
+    router.replace(
+      `/portal/login?redirect=${encodeURIComponent(redirect)}`,
+    );
+  }, [redirectParam, router]);
+
+  useEffect(() => {
     const API_BASE = process.env.NEXT_PUBLIC_BASE_URL;
 
     fetch(`${API_BASE}api/companies/legal-entities`)
@@ -98,6 +107,7 @@ export default function CompanySelect() {
 
     Cookies.set("mahy_company", JSON.stringify(selected), {
       expires: 1,
+      path: "/",
     });
 
     const decodedRedirect = redirectParam
