@@ -31,6 +31,14 @@ function MapController({ center }) {
   const map = useMap();
 
   useEffect(() => {
+    const resizeTimer = window.setTimeout(() => {
+      map.invalidateSize();
+    }, 100);
+
+    return () => window.clearTimeout(resizeTimer);
+  }, [map]);
+
+  useEffect(() => {
     if (center) {
       map.flyTo(center, 14, { animate: true, duration: 0.8 });
     }
@@ -49,24 +57,18 @@ export default function ChatLocationPickerMap({ onSelect, strings = {} }) {
   const [statusTone, setStatusTone] = useState("muted");
 
   const promptText =
-    strings.prompt ||
-    "Tap anywhere on the map or use your current location.";
-  const hintText =
-    strings.hint || "Tap again to fine-tune the pin if needed.";
-  const useCurrentText =
-    strings.useCurrent || "Use Current Location";
-  const fetchingText =
-    strings.fetching || "Detecting your location…";
-  const shareText =
-    strings.share || "Share This Location";
+    strings.prompt || "Tap anywhere on the map or use your current location.";
+  const hintText = strings.hint || "Tap again to fine-tune the pin if needed.";
+  const useCurrentText = strings.useCurrent || "Use Current Location";
+  const fetchingText = strings.fetching || "Detecting your location…";
+  const shareText = strings.share || "Share This Location";
   const approxText =
     strings.approx || "Used approximate location. Please confirm.";
   const fallbackText =
     strings.fallback ||
     "Unable to detect your location. Please pin the site manually.";
   const successText =
-    strings.success ||
-    "Pin placed. Share this location to continue.";
+    strings.success || "Pin placed. Share this location to continue.";
 
   const handleStatus = useCallback((message, tone = "muted") => {
     setStatus(message);
@@ -82,14 +84,14 @@ export default function ChatLocationPickerMap({ onSelect, strings = {} }) {
       }
       handleStatus(message ?? successText, tone);
     },
-    [handleStatus, successText]
+    [handleStatus, successText],
   );
 
   const handleMapClick = useCallback(
     (latlng) => {
       dropMarker(latlng.lat, latlng.lng, false);
     },
-    [dropMarker]
+    [dropMarker],
   );
 
   const fallbackToApproximateLocation = useCallback(async () => {
@@ -103,7 +105,7 @@ export default function ChatLocationPickerMap({ onSelect, strings = {} }) {
           Number(data.longitude),
           true,
           approxText,
-          "info"
+          "info",
         );
       } else {
         throw new Error("Missing coordinates");
@@ -137,7 +139,7 @@ export default function ChatLocationPickerMap({ onSelect, strings = {} }) {
       {
         enableHighAccuracy: true,
         timeout: 10000,
-      }
+      },
     );
   }, [dropMarker, fallbackToApproximateLocation]);
 
@@ -154,18 +156,19 @@ export default function ChatLocationPickerMap({ onSelect, strings = {} }) {
   }, [statusTone]);
 
   return (
-    <div className="space-y-4 rounded-[28px] border border-slate-100 bg-white p-4 shadow-sm shadow-slate-900/5 sm:p-5">
+    <div className="space-y-3 rounded-[24px] border border-slate-100 bg-white p-3 shadow-sm shadow-slate-900/5 sm:space-y-4 sm:p-4">
       <div>
         <p className="text-sm font-semibold text-slate-800">{promptText}</p>
         <p className="text-xs text-slate-500">{hintText}</p>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-slate-200">
+      <div className="relative rounded-2xl border border-slate-200">
         <MapContainer
           center={mapCenter}
           zoom={12}
           scrollWheelZoom={false}
-          className="h-[220px] w-full"
+          className="relative z-0 w-full"
+          style={{ height: "200px", width: "100%" }}
         >
           <TileLayer
             attribution="© OpenStreetMap contributors"
@@ -196,9 +199,7 @@ export default function ChatLocationPickerMap({ onSelect, strings = {} }) {
         </button>
       </div>
 
-      {status && (
-        <p className={`text-xs ${statusClasses}`}>{status}</p>
-      )}
+      {status && <p className={`text-xs ${statusClasses}`}>{status}</p>}
     </div>
   );
 }

@@ -9,6 +9,7 @@ import CountryDropdown from "./CountryDropdown";
 import ChatInput from "./ChatInput";
 import ChatLocationPicker from "./ChatLocationPicker";
 import { COUNTRY_LIST } from "@/utils/countries";
+import { getDialingCodeForCountry } from "@/lib/formConstants";
 import LottieButton from "./LottieButton";
 import IdlePrompt from "./IdlePrompt";
 import MahyraAvatar from "./MahyraAvatar";
@@ -399,6 +400,14 @@ useEffect(() => {
   const prompt = current !== "done" ? question?.text : null;
   const canChangeSelection =
     history.length > 1 && current !== "done" && !isTyping;
+  const selectedPhoneCountry =
+    answers.country ||
+    answers.gccCountry ||
+    (answers.location === "UAE" ? "UAE" : "");
+  const selectedPhoneCountryCode =
+    question?.type === "phone"
+      ? getDialingCodeForCountry(selectedPhoneCountry)
+      : undefined;
 
   function getPlaceholder() {
     if (!question) return layout.type;
@@ -560,11 +569,13 @@ useEffect(() => {
 
                 {canInteract && isTextStage && (
                   <ChatInput
+                    key={`${current}-${selectedPhoneCountryCode || "default"}`}
                     placeholder={getPlaceholder()}
                     onSubmit={handleTextSubmit}
                     type={question.type}
                     data={layout}
                     isSubmitStage={Boolean(question.submit && !question.next)}
+                    initialCountryCode={selectedPhoneCountryCode}
                   />
                 )}
 

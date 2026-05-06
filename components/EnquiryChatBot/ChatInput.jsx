@@ -47,9 +47,10 @@ export default function ChatInput({
   type = "text",
   data,
   isSubmitStage = false,
+  initialCountryCode = DEFAULT_COUNTRY_CODE,
 }) {
   const [value, setValue] = useState("");
-  const [countryCode, setCountryCode] = useState(DEFAULT_COUNTRY_CODE);
+  const [countryCode, setCountryCode] = useState(initialCountryCode);
   const [error, setError] = useState("");
 
   function isValidEmail(email) {
@@ -116,20 +117,25 @@ export default function ChatInput({
   const actionLabel = type === "phone"
     ? isSubmitStage ? "Submit" : "Next"
     : data.send;
+  const isPhoneInput = type === "phone";
 
   return (
     <div className="space-y-1.5">
       <form
         onSubmit={handleSubmit}
-        className="flex items-center gap-3 rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.08)] transition focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100 sm:px-5"
+        className={`flex rounded-2xl border border-slate-200/90 bg-white px-4 py-3 shadow-[0_12px_30px_rgba(15,23,42,0.08)] transition focus-within:border-slate-400 focus-within:ring-2 focus-within:ring-slate-100 sm:px-5 ${
+          isPhoneInput
+            ? "flex-col items-stretch gap-3"
+            : "items-center gap-3"
+        }`}
       >
-        {type === "phone" && (
+        {isPhoneInput && (
           <select
             aria-label="Country code"
             value={countryCode}
             disabled={disabled}
             onChange={handleCountryCodeChange}
-            className="w-24 shrink-0 bg-transparent text-sm font-semibold text-slate-800 focus:outline-none disabled:text-slate-400 sm:w-32"
+            className="h-11 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 text-sm font-semibold text-slate-800 focus:border-slate-400 focus:bg-white focus:outline-none disabled:text-slate-400"
           >
             {COUNTRY_CODES.map((country) => (
               <option key={country.value} value={country.value}>
@@ -141,7 +147,11 @@ export default function ChatInput({
 
         <input
           type={type === "phone" ? "tel" : type === "email" ? "email" : "text"}
-          className="min-w-0 flex-1 bg-transparent text-[15px] font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none disabled:text-slate-400"
+          className={`min-w-0 flex-1 bg-transparent text-[15px] font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none disabled:text-slate-400 ${
+            isPhoneInput
+              ? "h-11 w-full rounded-xl border border-slate-200 bg-slate-50 px-3 focus:border-slate-400 focus:bg-white"
+              : ""
+          }`}
           placeholder={placeholder}
           value={value}
           disabled={disabled}
@@ -154,6 +164,8 @@ export default function ChatInput({
           aria-label={actionLabel}
           disabled={!canSend}
           className={`inline-flex h-11 min-w-[3rem] shrink-0 items-center justify-center gap-2 rounded-full bg-slate-900 px-4 text-sm font-semibold text-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900/30 sm:px-5 ${
+            isPhoneInput ? "w-full" : ""
+          } ${
             canSend
               ? "hover:-translate-y-0.5"
               : "opacity-40 hover:translate-y-0"
