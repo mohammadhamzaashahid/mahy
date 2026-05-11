@@ -5,6 +5,8 @@ import { getCompaniesBySector } from "@/constants/companyGroups";
 
 function TransportationLogisticsPage() {
   const companies = getCompaniesBySector("transportation-logistics");
+  console.log(companies);
+  
 
   return (
     <main>

@@ -200,7 +200,7 @@ function AllCompaniesPage() {
             ],
             image:
                 "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774438744/17_-_greenland-transport_voakzk.jpg",
-            href: "/companies/details/greenland-transport",
+            href: "/companies/details/greenland-general-transport",
         },
         {
             title: "Senan Industry LLC",
