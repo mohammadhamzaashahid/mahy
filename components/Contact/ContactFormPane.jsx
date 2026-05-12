@@ -16,6 +16,10 @@ const ENQUIRY_TYPE_VALUES = new Set(ENQUIRY_TYPES.map(({ value }) => value));
 const COUNTRY_LABELS = new Map(
   COUNTRIES.map(({ value, label }) => [value, label]),
 );
+
+const ENQUIRY_TYPE_LABELS = new Map(
+  ENQUIRY_TYPES.map(({ value, label }) => [value, label]),
+);
 const nameRegex = /^[A-Za-z][A-Za-z\s'-]*$/;
 const websiteRegex =
   /^www\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?)+$/;
@@ -160,7 +164,8 @@ export default function ContactFormPane({ data, agreement, submit }) {
         businessEmail: values.businessEmail,
         mobileNumber: values.mobileNumber,
         country: COUNTRY_LABELS.get(values.country) || values.country,
-        enquiryType: values.enquiryType,
+        enquiryType:
+          ENQUIRY_TYPE_LABELS.get(values.enquiryType) || values.enquiryType,
         message: values.message || "",
         agreed: values.agreed,
       };
@@ -249,7 +254,7 @@ export default function ContactFormPane({ data, agreement, submit }) {
             options={ENQUIRY_TYPES}
           />
 
-          <Field label={data[8]}>
+          <Field label={data[8]} error={errors.message}>
             <textarea rows={4} {...register("message")} />
           </Field>
 

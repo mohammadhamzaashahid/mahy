@@ -84,9 +84,7 @@ const phoneNumberSchema = (fieldName, { required = false } = {}) => {
   const stringSchema = z.string().trim();
 
   if (required) {
-    return addPhoneValidation(
-      stringSchema.min(1, `${fieldName} is required`),
-    );
+    return addPhoneValidation(stringSchema.min(1, `${fieldName} is required`));
   }
 
   return z.preprocess(
@@ -136,7 +134,7 @@ const schema = z.object({
     .min(1, "Email Address is required")
     .email("Enter a valid email")
     .max(100, "Email Address is too long"),
-  mobileNumber: phoneNumberSchema("Mobile Number", { required: true }),
+  mobileNumber: phoneNumberSchema("Mobile Number"),
   alternativeContactNumber: phoneNumberSchema("Alternative Contact Number"),
   // Site Details
   siteLocation: z
@@ -145,8 +143,8 @@ const schema = z.object({
     .min(1, "Site Location is required")
     .max(250, "Site Location is too long"),
   typeOfSite: z.string().optional(),
-  // natureOfRequirement: z.array(z.string()).optional(),
-  natureOfRequirement: z.string().optional(),
+  natureOfRequirement: z.array(z.string()).optional(),
+  // natureOfRequirement: z.string().optional(),
 
   preferredVisitDate: z
     .date({
@@ -155,18 +153,17 @@ const schema = z.object({
     .refine((date) => !isPastDate(date), {
       message: "Preferred Visit Date cannot be in the past",
     }),
-  preferredVisitTime: z
-    .preprocess(
-      emptyToUndefined,
-      z
-        .object({
-          hours: z.number(),
-          minutes: z.number(),
-          seconds: z.number(),
-          formatted: z.string(),
-        })
-        .optional(),
-    ),
+  preferredVisitTime: z.preprocess(
+    emptyToUndefined,
+    z
+      .object({
+        hours: z.number(),
+        minutes: z.number(),
+        seconds: z.number(),
+        formatted: z.string(),
+      })
+      .optional(),
+  ),
   urgencyLevel: z.enum(["Normal", "High", "Critical"]).optional(),
 
   // Technical Information
@@ -184,9 +181,7 @@ const schema = z.object({
 
   // Consent & Submission
   howDidYouHear: z.string().optional(),
-  consent: z.literal(true, {
-    error: "Consent is required",
-  }),
+  consent: z.boolean().optional(),
 });
 
 const defaultValues = {
@@ -204,8 +199,8 @@ const defaultValues = {
 
   siteLocation: "",
   typeOfSite: "",
-  // natureOfRequirement: [],
-  natureOfRequirement: "",
+  natureOfRequirement: [],
+  // natureOfRequirement: "",
 
   preferredVisitDate: undefined,
   preferredVisitTime: "",
@@ -228,6 +223,8 @@ export default function SiteVisitRequestForm() {
     reset,
     setError,
     clearErrors,
+    watch,
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm({
     resolver: zodResolver(schema),
@@ -239,6 +236,21 @@ export default function SiteVisitRequestForm() {
   const createMutation = useCreateSiteVisit();
   const mobileNumberField = register("mobileNumber");
   const alternativeContactNumberField = register("alternativeContactNumber");
+
+  const selectedNature = watch("natureOfRequirement") || [];
+  const natureToggle = (item) => {
+    const current = new Set(selectedNature);
+    if (current.has(item)) {
+      current.delete(item);
+    } else {
+      current.add(item);
+    }
+    setValue("natureOfRequirement", Array.from(current), {
+      shouldValidate: true,
+      shouldDirty: true,
+      shouldTouch: true,
+    });
+  };
 
   const onSubmit = async (values) => {
     try {
@@ -405,7 +417,6 @@ export default function SiteVisitRequestForm() {
                   <InputField
                     label="Mobile Number"
                     type="tel"
-                    required
                     inputMode="numeric"
                     maxLength={MAX_PHONE_DIGITS}
                     placeholder="e.g., 971551234567"
@@ -508,7 +519,7 @@ export default function SiteVisitRequestForm() {
                     </div>
                   </FormField> */}
 
-                  <FormField
+                  {/* <FormField
                     label="Nature of Requirement"
                     error={errors.natureOfRequirement?.message}
                     className="md:col-span-2 lg:col-span-2"
@@ -531,6 +542,54 @@ export default function SiteVisitRequestForm() {
                             </span>
                           </label>
                         ))}
+                      </div>
+                    </div>
+                  </FormField> */}
+
+                  <FormField
+                    label="Nature of Requirement"
+                    error={errors.natureOfRequirement?.message}
+                    className="md:col-span-2 lg:col-span-2"
+                  >
+                    <div className={boxClass}>
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        {selectedNature.length ? (
+                          selectedNature.map((tag) => (
+                            <span
+                              key={tag}
+                              className="inline-flex items-center rounded-full border border-gray-200 bg-white px-2 py-0.5 text-xs text-gray-700"
+                            >
+                              {tag}
+                            </span>
+                          ))
+                        ) : (
+                          <span className="text-xs text-gray-400">
+                            Select one or more
+                          </span>
+                        )}
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {NATURE_OF_REQUIREMENT.map((item) => {
+                          const checked = selectedNature.includes(item);
+
+                          return (
+                            <label
+                              key={item}
+                              className="flex items-center gap-2 rounded-md border border-gray-200 bg-white px-3 py-2 cursor-pointer hover:bg-gray-50"
+                            >
+                              <input
+                                type="checkbox"
+                                checked={checked}
+                                onChange={() => natureToggle(item)}
+                                className="h-4 w-4"
+                              />
+                              <span className="text-sm text-gray-700">
+                                {item}
+                              </span>
+                            </label>
+                          );
+                        })}
                       </div>
                     </div>
                   </FormField>
@@ -681,7 +740,6 @@ export default function SiteVisitRequestForm() {
 
                   <FormField
                     label="Consent"
-                    required
                     error={errors.consent?.message}
                     className="md:col-span-2 lg:col-span-3"
                   >

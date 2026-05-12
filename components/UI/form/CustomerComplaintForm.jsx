@@ -15,10 +15,7 @@ import {
   AnimatedGroupItem,
 } from "@/components/form/AnimatedField";
 import Button from "../Button";
-import {
-  complaintSchema,
-  MAX_MOBILE_NUMBER_DIGITS,
-} from "./ComplaintSchema";
+import { complaintSchema, MAX_MOBILE_NUMBER_DIGITS } from "./ComplaintSchema";
 import { submitCustomerComplaint } from "@/lib/api/customerComplaint";
 import { useMutation } from "@tanstack/react-query";
 
@@ -128,6 +125,8 @@ export default function CustomerComplaintForm() {
   });
 
   const onSubmit = (data) => {
+    console.log(data);
+
     mutation.mutate(data);
   };
 
@@ -145,84 +144,93 @@ export default function CustomerComplaintForm() {
         theme="light"
       />
       <section className="w-full bg-white">
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 py-12">
-        {/* Header */}
-        <div className="text-center">
-          <h1 className="text-[26px] sm:text-[32px] font-semibold text-gray-900">
-            Customer Complaint
-          </h1>
-        </div>
+        <div className="max-w-6xl mx-auto px-6 sm:px-10 py-12">
+          {/* Header */}
+          <div className="text-center">
+            <h1 className="text-[26px] sm:text-[32px] font-semibold text-gray-900">
+              Customer Complaint
+            </h1>
+          </div>
 
-        <div className="mt-10 rounded-2xl border border-gray-200 bg-white shadow-sm">
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="p-6 sm:p-8 space-y-10"
-          >
-            <AnimatedGroup className="space-y-10">
-              <AnimatedGroupItem>
-                <FormSection title="Customer Information">
-                  <FormField label="Organization / Person" required>
-                    <div className="flex gap-6 mt-1">
-                      {["Organization", "Person"].map((opt) => (
-                        <label
-                          key={opt}
-                          className="flex items-center gap-2 text-sm"
-                        >
-                          <input
-                            type="radio"
-                            value={opt}
-                            {...register("customerType")}
-                            className="h-4 w-4 accent-black"
-                          />
-                          {opt}
-                        </label>
-                      ))}
-                    </div>
-                  </FormField>
+          <div className="mt-10 rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="p-6 sm:p-8 space-y-10"
+            >
+              <AnimatedGroup className="space-y-10">
+                <AnimatedGroupItem>
+                  <FormSection title="Customer Information">
+                    <FormField label="Organization / Person" required>
+                      <div className="flex gap-6 mt-1">
+                        {["Organization", "Person"].map((opt) => (
+                          <label
+                            key={opt}
+                            className="flex items-center gap-2 text-sm"
+                          >
+                            <input
+                              type="radio"
+                              value={opt}
+                              {...register("customerType")}
+                              className="h-4 w-4 accent-black"
+                            />
+                            {opt}
+                          </label>
+                        ))}
+                      </div>
+                    </FormField>
 
-                  {customerType === "Person" && (
+                    {customerType === "Person" && (
+                      <InputField
+                        label="Contact Person"
+                        required
+                        {...register("contactPerson")}
+                        error={errors.contactPerson?.message}
+                      />
+                    )}
+
+                    {customerType === "Organization" && (
+                      <InputField
+                        label="Contact Person"
+                        required
+                        {...register("contactPerson")}
+                        error={errors.contactPerson?.message}
+                      />
+                    )}
+
                     <InputField
-                      label="Contact Person"
+                      label="Company Name"
                       required
-                      {...register("contactPerson")}
-                      error={errors.contactPerson?.message}
+                      {...register("companyName")}
+                      error={errors.companyName?.message}
                     />
-                  )}
 
-                  <InputField
-                    label="Company Name"
-                    required
-                    {...register("companyName")}
-                    error={errors.companyName?.message}
-                  />
+                    <InputField
+                      label="Mobile Number"
+                      required
+                      type="tel"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      maxLength={MAX_MOBILE_NUMBER_DIGITS}
+                      {...mobileNumberField}
+                      onChange={(event) => {
+                        event.target.value = sanitizeDigits(
+                          event.target.value,
+                          MAX_MOBILE_NUMBER_DIGITS,
+                        );
+                        mobileNumberField.onChange(event);
+                      }}
+                      error={errors.mobileNumber?.message}
+                    />
 
-                  <InputField
-                    label="Mobile Number"
-                    required
-                    type="tel"
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    maxLength={MAX_MOBILE_NUMBER_DIGITS}
-                    {...mobileNumberField}
-                    onChange={(event) => {
-                      event.target.value = sanitizeDigits(
-                        event.target.value,
-                        MAX_MOBILE_NUMBER_DIGITS,
-                      );
-                      mobileNumberField.onChange(event);
-                    }}
-                    error={errors.mobileNumber?.message}
-                  />
-
-                  <InputField
-                    label="Email"
-                    type="email"
-                    {...register("email")}
-                    error={errors.email?.message}
-                  />
-                </FormSection>
-              </AnimatedGroupItem>
-              <AnimatedGroupItem>
+                    <InputField
+                      label="Email"
+                      type="email"
+                      {...register("email")}
+                      error={errors.email?.message}
+                    />
+                  </FormSection>
+                </AnimatedGroupItem>
+                {/* <AnimatedGroupItem>
                 <FormSection title="Complaint Reference">
                   <FormField label="Source" required>
                     <select
@@ -238,143 +246,143 @@ export default function CustomerComplaintForm() {
                     </select>
                   </FormField>
                 </FormSection>
-              </AnimatedGroupItem>
+              </AnimatedGroupItem> */}
 
-              <AnimatedGroupItem>
-                <FormSection title="Product / Service Details">
-                  <FormField label="Complaint Type" required>
-                    <select
-                      {...register("complaintType")}
-                      className="w-full h-11 rounded-md border px-3 text-sm"
-                    >
-                      <option value="">Select complaint type</option>
-                      {COMPLAINT_TYPES.map((c) => (
-                        <option key={c} value={c}>
-                          {c}
-                        </option>
-                      ))}
-                    </select>
-                  </FormField>
+                <AnimatedGroupItem>
+                  <FormSection title="Product / Service Details">
+                    <FormField label="Complaint Type" required>
+                      <select
+                        {...register("complaintType")}
+                        className="w-full h-11 rounded-md border px-3 text-sm"
+                      >
+                        <option value="">Select complaint type</option>
+                        {COMPLAINT_TYPES.map((c) => (
+                          <option key={c} value={c}>
+                            {c}
+                          </option>
+                        ))}
+                      </select>
+                    </FormField>
 
-                  <FormField label="Product Category" required>
-                    <select
-                      {...register("productCategory")}
-                      className="w-full h-11 rounded-md border px-3 text-sm"
-                    >
-                      <option value="">Select product category</option>
-                      {PRODUCT_CATEGORIES.map((p) => (
-                        <option key={p} value={p}>
-                          {p}
-                        </option>
-                      ))}
-                    </select>
-                  </FormField>
+                    <FormField label="Product Category" required>
+                      <select
+                        {...register("productCategory")}
+                        className="w-full h-11 rounded-md border px-3 text-sm"
+                      >
+                        <option value="">Select product category</option>
+                        {PRODUCT_CATEGORIES.map((p) => (
+                          <option key={p} value={p}>
+                            {p}
+                          </option>
+                        ))}
+                      </select>
+                    </FormField>
 
-                  <InputField
-                    label="Sales Person"
-                    {...register("salesPerson")}
-                  />
-                  <InputField label="Brand" {...register("brand")} />
-                  <InputField label="Model" {...register("model")} />
-                  <InputField
-                    label="Year"
-                    maxLength={4}
-                    inputMode="numeric"
-                    pattern="[0-9]*"
-                    {...register("year", {
-                      setValueAs: (value) => sanitizeDigits(value, 4),
-                    })}
-                    error={errors.year?.message}
-                  />
-                  <InputField label="Serial No" {...register("serialNo")} />
-                  <InputField label="Invoice No" {...register("invoiceNo")} />
-                </FormSection>
-              </AnimatedGroupItem>
+                    <InputField
+                      label="Sales Person"
+                      {...register("salesPerson")}
+                    />
+                    <InputField label="Brand" {...register("brand")} />
+                    <InputField label="Model" {...register("model")} />
+                    <InputField
+                      label="Year"
+                      maxLength={4}
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      {...register("year", {
+                        setValueAs: (value) => sanitizeDigits(value, 4),
+                      })}
+                      error={errors.year?.message}
+                    />
+                    <InputField label="Serial No" {...register("serialNo")} />
+                    <InputField label="Invoice No" {...register("invoiceNo")} />
+                  </FormSection>
+                </AnimatedGroupItem>
 
-              <AnimatedGroupItem>
-                <FormSection title="Complaint Core">
-                  <TextareaField
-                    label="Problem Description"
-                    required
-                    rows={5}
-                    {...register("problemDescription")}
-                    error={errors.problemDescription?.message}
-                  />
+                <AnimatedGroupItem>
+                  <FormSection title="Complaint Core">
+                    <TextareaField
+                      label="Problem Description"
+                      required
+                      rows={5}
+                      {...register("problemDescription")}
+                      error={errors.problemDescription?.message}
+                    />
 
-                  <Controller
-                    control={control}
-                    name="incidentDate"
-                    render={({ field }) => {
-                      const handleIncidentDateChange = (date) => {
-                        setValue("incidentDate", date, {
-                          shouldDirty: true,
-                          shouldTouch: true,
-                          shouldValidate: true,
-                        });
-                      };
+                    <Controller
+                      control={control}
+                      name="incidentDate"
+                      render={({ field }) => {
+                        const handleIncidentDateChange = (date) => {
+                          setValue("incidentDate", date, {
+                            shouldDirty: true,
+                            shouldTouch: true,
+                            shouldValidate: true,
+                          });
+                        };
 
-                      return (
-                        <DatePickerField
-                          label="Incident Date"
-                          error={errors.incidentDate?.message}
-                          {...field}
-                          onChange={handleIncidentDateChange}
-                        />
-                      );
-                    }}
-                  />
-
-                  <FormField label="Frequency">
-                    <select
-                      {...register("frequency")}
-                      className="w-full h-11 rounded-md border px-3 text-sm"
-                    >
-                      <option value="">Select frequency</option>
-                      <option value="once">Once</option>
-                      <option value="intermittent">Intermittent</option>
-                      <option value="frequent">Frequent</option>
-                      <option value="always">Always</option>
-                    </select>
-                  </FormField>
-                </FormSection>
-              </AnimatedGroupItem>
-
-              <AnimatedGroupItem>
-                <FormSection title="Category & Severity">
-                  <FormField label="Issue Category" required>
-                    <select
-                      {...register("issueCategory")}
-                      className="w-full h-11 rounded-md border px-3 text-sm"
-                    >
-                      <option value="">Select issue category</option>
-                      {ISSUE_CATEGORIES.map((i) => (
-                        <option key={i.value} value={i.value}>
-                          {i.label}
-                        </option>
-                      ))}
-                    </select>
-                  </FormField>
-
-                  <FormField label="Severity Level" required>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-3 mt-2">
-                      {SEVERITY_LEVELS.map((lvl) => (
-                        <label
-                          key={lvl.value}
-                          className="flex items-center gap-2 text-sm"
-                        >
-                          <input
-                            type="radio"
-                            value={lvl.value}
-                            {...register("severityLevel")}
-                            className="h-4 w-4 accent-black"
+                        return (
+                          <DatePickerField
+                            label="Incident Date"
+                            error={errors.incidentDate?.message}
+                            {...field}
+                            onChange={handleIncidentDateChange}
                           />
-                          {lvl.label}
-                        </label>
-                      ))}
-                    </div>
-                  </FormField>
+                        );
+                      }}
+                    />
 
-                  <FormField label="Business Impact">
+                    <FormField label="Frequency">
+                      <select
+                        {...register("frequency")}
+                        className="w-full h-11 rounded-md border px-3 text-sm"
+                      >
+                        <option value="">Select frequency</option>
+                        <option value="once">Once</option>
+                        <option value="intermittent">Intermittent</option>
+                        <option value="frequent">Frequent</option>
+                        <option value="always">Always</option>
+                      </select>
+                    </FormField>
+                  </FormSection>
+                </AnimatedGroupItem>
+
+                <AnimatedGroupItem>
+                  <FormSection title="Category & Severity">
+                    <FormField label="Issue Category" required>
+                      <select
+                        {...register("issueCategory")}
+                        className="w-full h-11 rounded-md border px-3 text-sm"
+                      >
+                        <option value="">Select issue category</option>
+                        {ISSUE_CATEGORIES.map((i) => (
+                          <option key={i.value} value={i.value}>
+                            {i.label}
+                          </option>
+                        ))}
+                      </select>
+                    </FormField>
+
+                    <FormField label="Severity Level" required>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-3 mt-2">
+                        {SEVERITY_LEVELS.map((lvl) => (
+                          <label
+                            key={lvl.value}
+                            className="flex items-center gap-2 text-sm"
+                          >
+                            <input
+                              type="radio"
+                              value={lvl.value}
+                              {...register("severityLevel")}
+                              className="h-4 w-4 accent-black"
+                            />
+                            {lvl.label}
+                          </label>
+                        ))}
+                      </div>
+                    </FormField>
+
+                    {/* <FormField label="Business Impact">
                     <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
                       {BUSINESS_IMPACT.map((b) => (
                         <label
@@ -391,73 +399,101 @@ export default function CustomerComplaintForm() {
                         </label>
                       ))}
                     </div>
-                  </FormField>
-                </FormSection>
-              </AnimatedGroupItem>
+                  </FormField> */}
 
-              <AnimatedGroupItem>
-                <FormSection title="Evidence">
-                  <Controller
-                    control={control}
-                    name="photos"
-                    render={({ field }) => (
-                      <FileUploadField
-                        label="Photos"
-                        accept=".jpg,.jpeg,.png"
-                        multiple
-                        {...field}
-                      />
-                    )}
-                  />
-                  <Controller
-                    control={control}
-                    name="videos"
-                    render={({ field }) => (
-                      <FileUploadField
-                        label="Videos"
-                        accept=".mp4"
-                        {...field}
-                      />
-                    )}
-                  />
-                  <Controller
-                    control={control}
-                    name="documents"
-                    render={({ field }) => (
-                      <FileUploadField
-                        label="Documents"
-                        accept=".pdf,.doc,.docx"
-                        multiple
-                        {...field}
-                      />
-                    )}
-                  />
-                  <Controller
-                    control={control}
-                    name="voiceNote"
-                    render={({ field }) => (
-                      <FileUploadField
-                        label="Voice Note"
-                        accept=".mp3"
-                        {...field}
-                      />
-                    )}
-                  />
-                </FormSection>
-              </AnimatedGroupItem>
+                    <FormField label="Business Impact">
+                      <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6">
+                        {BUSINESS_IMPACT.map((b) => (
+                          <label
+                            key={b.value}
+                            className="flex items-center gap-2 text-sm"
+                          >
+                            <input
+                              type="checkbox"
+                              value={b.value}
+                              {...register("businessImpact")}
+                              className="h-4 w-4 accent-black"
+                            />
 
-              <AnimatedGroupItem>
-                <div className="flex justify-center pt-4">
-                  <Button type="submit" disabled={mutation.isPending}>
-                    {mutation.isPending ? "Submitting..." : "Submit Complaint"}
-                  </Button>
-                </div>
-              </AnimatedGroupItem>
-            </AnimatedGroup>
-          </form>
+                            {b.label}
+                          </label>
+                        ))}
+                      </div>
+
+                      {errors.businessImpact?.message && (
+                        <p className="mt-1 text-xs text-red-600">
+                          {errors.businessImpact.message}
+                        </p>
+                      )}
+                    </FormField>
+                  </FormSection>
+                </AnimatedGroupItem>
+
+                <AnimatedGroupItem>
+                  <FormSection title="Evidence">
+                    <Controller
+                      control={control}
+                      name="photos"
+                      render={({ field }) => (
+                        <FileUploadField
+                          label="Photos"
+                          accept=".jpg,.jpeg,.png"
+                          multiple
+                          {...field}
+                        />
+                      )}
+                    />
+                    <Controller
+                      control={control}
+                      name="videos"
+                      render={({ field }) => (
+                        <FileUploadField
+                          label="Videos"
+                          accept=".mp4"
+                          {...field}
+                        />
+                      )}
+                    />
+                    <Controller
+                      control={control}
+                      name="documents"
+                      render={({ field }) => (
+                        <FileUploadField
+                          label="Documents"
+                          accept=".pdf,.doc,.docx"
+                          multiple
+                          {...field}
+                        />
+                      )}
+                    />
+                    <Controller
+                      control={control}
+                      name="voiceNote"
+                      render={({ field }) => (
+                        <FileUploadField
+                          label="Voice Note"
+                          accept=".mp3"
+                          {...field}
+                        />
+                      )}
+                    />
+                  </FormSection>
+                </AnimatedGroupItem>
+
+                <AnimatedGroupItem>
+                  <div className="flex justify-center pt-4">
+                    <Button type="submit" disabled={mutation.isPending}>
+                      {mutation.isPending
+                        ? "Submitting..."
+                        : "Submit Complaint"}
+                    </Button>
+                  </div>
+                </AnimatedGroupItem>
+              </AnimatedGroup>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 }

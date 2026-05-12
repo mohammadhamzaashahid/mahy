@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast, ToastContainer } from "react-toastify";
@@ -21,7 +21,7 @@ import { CheckboxGroupField } from "@/components/form/CheckboxGroupField";
 import { BooleanField } from "@/components/form/BooleanField";
 import { NumberField } from "@/components/form/NumberField";
 
-import { COUNTRY_CODES } from "@/lib/formConstants";
+import { COUNTRY_CODES, UAE_DIALING_CODE } from "@/lib/formConstants";
 
 import {
   CUSTOMER_TYPES,
@@ -53,11 +53,15 @@ import { TextareaField } from "@/components/form/TextAreaField";
 import { useCreateServiceRequest } from "@/lib/hooks/useCreateServiceRequest";
 
 const MAX_PHONE_DIGITS = 15;
+const UAE_MOBILE_DIGITS = 9;
 
-const limitPhoneDigits = (value) =>
+const getMaxMobileDigits = (countryCode) =>
+  countryCode === UAE_DIALING_CODE ? UAE_MOBILE_DIGITS : MAX_PHONE_DIGITS;
+
+const limitPhoneDigits = (value, countryCode) =>
   String(value || "")
     .replace(/\D/g, "")
-    .slice(0, MAX_PHONE_DIGITS);
+    .slice(0, getMaxMobileDigits(countryCode));
 
 const isPastDate = (date) => {
   if (!(date instanceof Date)) return false;
@@ -136,6 +140,7 @@ export default function ServiceRequest() {
     handleSubmit,
     control,
     watch,
+    setValue,
     setError,
     clearErrors,
     formState: { errors },
@@ -159,6 +164,8 @@ export default function ServiceRequest() {
 
   const customerType = watch("customerType");
   const productCategory = watch("productCategory");
+  const mobileCountryCode = watch("mobileCountryCode");
+  const mobileNumber = watch("mobileNumber");
 
   const isPerson = customerType === "person";
   const isOrganization = customerType === "organization";
@@ -169,6 +176,22 @@ export default function ServiceRequest() {
 
   const createMutation = useCreateServiceRequest();
   const mobileNumberField = register("mobileNumber");
+
+  useEffect(() => {
+    if (mobileNumber === undefined || mobileNumber === null) return;
+
+    const limitedMobileNumber = limitPhoneDigits(
+      mobileNumber,
+      mobileCountryCode,
+    );
+
+    if (mobileNumber !== limitedMobileNumber) {
+      setValue("mobileNumber", limitedMobileNumber, {
+        shouldDirty: true,
+        shouldValidate: true,
+      });
+    }
+  }, [mobileCountryCode, mobileNumber, setValue]);
 
   //   const onSubmit = async (values) => {
 
@@ -394,13 +417,14 @@ export default function ServiceRequest() {
                         type="tel"
                         required
                         inputMode="numeric"
-                        maxLength={MAX_PHONE_DIGITS}
+                        maxLength={getMaxMobileDigits(mobileCountryCode)}
                         placeholder="e.g., 551234567"
                         error={errors.mobileNumber?.message}
                         {...mobileNumberField}
                         onChange={(event) => {
                           event.target.value = limitPhoneDigits(
                             event.target.value,
+                            mobileCountryCode,
                           );
                           mobileNumberField.onChange(event);
                         }}

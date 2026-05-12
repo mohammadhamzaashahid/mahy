@@ -46,7 +46,7 @@ export const complaintSchema = z
       }),
 
     // Complaint Reference
-    source: z.enum(["phone", "email", "website", "whatsapp", "walk-in"]),
+    // source: z.enum(["phone", "email", "website", "whatsapp", "walk-in"]),
 
     // Product / Service Details
     complaintType: z.string().min(1, "Complaint Type is required"),
@@ -72,7 +72,8 @@ export const complaintSchema = z
     // Category & Severity
     issueCategory: z.string().min(1, "Issue Category is required"),
     severityLevel: z.enum(["critical", "high", "medium", "low"]),
-    businessImpact: z.string().optional(),
+    // businessImpact: z.string().optional(),
+    businessImpact: z.array(z.string()).optional().default([]),
 
     // Evidence
     photos: z.any().optional(),
