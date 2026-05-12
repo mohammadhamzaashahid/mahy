@@ -85,6 +85,29 @@ const isFutureDate = (date) => {
   return normalizedDate > today;
 };
 
+const toastContainerProps = {
+  position: "top-center",
+  autoClose: 4000,
+  hideProgressBar: true,
+  newestOnTop: true,
+  closeOnClick: true,
+  pauseOnFocusLoss: false,
+  draggable: true,
+  pauseOnHover: true,
+  theme: "light",
+  style: {
+    zIndex: 20000,
+    top: "5.5rem",
+  },
+};
+
+const getSubmitErrorMessage = (error, fallback) =>
+  error?.response?.data?.message ||
+  error?.response?.data?.error ||
+  error?.data?.message ||
+  error?.message ||
+  fallback;
+
 const CUSTOMER_FORM_DEFAULT_VALUES = {
   customerType: "organization",
   classificationGroup: "credit",
@@ -351,7 +374,7 @@ export default function CustomerRegistration() {
       toast.success("Customer registered successfully");
     } catch (err) {
       console.error(err);
-      toast.error("Failed to register customer");
+      toast.error(getSubmitErrorMessage(err, "Failed to register customer."));
     } finally {
       setIsSubmitting(false);
     }
@@ -370,12 +393,12 @@ export default function CustomerRegistration() {
       formErrors?.[firstKey]?.message ||
       "Please correct the highlighted fields.";
 
-    toast.error(firstMessage, { position: "top-right" });
+    toast.error(firstMessage, { position: "top-center" });
   };
 
   return (
     <>
-      <ToastContainer />
+      <ToastContainer {...toastContainerProps} />
       <motion.div
         initial="hidden"
         animate="visible"

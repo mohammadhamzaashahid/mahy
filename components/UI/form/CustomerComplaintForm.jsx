@@ -87,6 +87,32 @@ const sanitizeDigits = (value = "", limit) =>
     .replace(/\D/g, "")
     .slice(0, limit);
 
+const getSubmitErrorMessage = (error, fallback) =>
+  error?.response?.data?.message ||
+  error?.response?.data?.error ||
+  error?.data?.message ||
+  error?.message ||
+  fallback;
+
+const getFirstFormErrorMessage = (formErrors) => {
+  for (const error of Object.values(formErrors || {})) {
+    if (!error) continue;
+    if (typeof error.message === "string") return error.message;
+
+    if (typeof error === "object") {
+      const nestedMessage = getFirstFormErrorMessage(error);
+      if (nestedMessage) return nestedMessage;
+    }
+  }
+
+  return "Please correct the highlighted fields.";
+};
+
+const toastContainerStyle = {
+  zIndex: 20000,
+  top: "5.5rem",
+};
+
 export default function CustomerComplaintForm() {
   const {
     control,
@@ -115,7 +141,9 @@ export default function CustomerComplaintForm() {
       reset();
     },
     onError: (error) => {
-      toast.error(error.message || "Failed to submit complaint.");
+      toast.error(
+        getSubmitErrorMessage(error, "Failed to submit complaint."),
+      );
     },
   });
 
@@ -130,10 +158,14 @@ export default function CustomerComplaintForm() {
     mutation.mutate(data);
   };
 
+  const onInvalid = (formErrors) => {
+    toast.error(getFirstFormErrorMessage(formErrors));
+  };
+
   return (
     <>
       <ToastContainer
-        position="top-right"
+        position="top-center"
         autoClose={4000}
         hideProgressBar
         newestOnTop
@@ -142,6 +174,7 @@ export default function CustomerComplaintForm() {
         draggable
         pauseOnHover
         theme="light"
+        style={toastContainerStyle}
       />
       <section className="w-full bg-white">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 py-12">
@@ -154,7 +187,7 @@ export default function CustomerComplaintForm() {
 
           <div className="mt-10 rounded-2xl border border-gray-200 bg-white shadow-sm">
             <form
-              onSubmit={handleSubmit(onSubmit)}
+              onSubmit={handleSubmit(onSubmit, onInvalid)}
               className="p-6 sm:p-8 space-y-10"
             >
               <AnimatedGroup className="space-y-10">

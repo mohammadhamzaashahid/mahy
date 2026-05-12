@@ -110,6 +110,32 @@ const limitPhoneDigits = (value) =>
     .replace(/\D/g, "")
     .slice(0, MAX_PHONE_DIGITS);
 
+const getSubmitErrorMessage = (error, fallback) =>
+  error?.response?.data?.message ||
+  error?.response?.data?.error ||
+  error?.data?.message ||
+  error?.message ||
+  fallback;
+
+const getFirstFormErrorMessage = (formErrors) => {
+  for (const error of Object.values(formErrors || {})) {
+    if (!error) continue;
+    if (typeof error.message === "string") return error.message;
+
+    if (typeof error === "object") {
+      const nestedMessage = getFirstFormErrorMessage(error);
+      if (nestedMessage) return nestedMessage;
+    }
+  }
+
+  return "Please correct the highlighted fields.";
+};
+
+const toastContainerStyle = {
+  zIndex: 20000,
+  top: "5.5rem",
+};
+
 const schema = z.object({
   companyName: z
     .string()
@@ -252,6 +278,10 @@ export default function SiteVisitRequestForm() {
     });
   };
 
+  const onInvalid = (formErrors) => {
+    toast.error(getFirstFormErrorMessage(formErrors));
+  };
+
   const onSubmit = async (values) => {
     try {
       const formData = new FormData();
@@ -278,13 +308,9 @@ export default function SiteVisitRequestForm() {
       toast.success("Site visit request submitted successfully.");
       reset(defaultValues);
     } catch (error) {
-      const errorMessage =
-        error?.response?.data?.message ||
-        error?.response?.data?.error ||
-        error?.message ||
-        "Failed to submit site visit request.";
-
-      toast.error(errorMessage);
+      toast.error(
+        getSubmitErrorMessage(error, "Failed to submit site visit request."),
+      );
     }
   };
 
@@ -306,7 +332,7 @@ export default function SiteVisitRequestForm() {
   return (
     <section className="w-full bg-white">
       <ToastContainer
-        position="top-right"
+        position="top-center"
         autoClose={4000}
         hideProgressBar
         newestOnTop
@@ -315,6 +341,7 @@ export default function SiteVisitRequestForm() {
         draggable
         pauseOnHover
         theme="light"
+        style={toastContainerStyle}
       />
 
       <div className="max-w-6xl mx-auto px-6 sm:px-10 py-12">
@@ -332,7 +359,7 @@ export default function SiteVisitRequestForm() {
         {/* Form Card */}
         <div className="mt-10 rounded-2xl border border-gray-200 bg-white shadow-sm">
           <form
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit(onSubmit, onInvalid)}
             className="p-6 sm:p-8 space-y-10"
           >
             <AnimatedGroup className="space-y-10">

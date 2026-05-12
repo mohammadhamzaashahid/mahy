@@ -106,6 +106,22 @@ const getFirstErrorMessage = (formErrors, seen = new WeakSet()) => {
   return null;
 };
 
+const toastContainerProps = {
+  position: "top-center",
+  autoClose: 4000,
+  hideProgressBar: true,
+  newestOnTop: true,
+  closeOnClick: true,
+  pauseOnFocusLoss: false,
+  draggable: true,
+  pauseOnHover: true,
+  theme: "light",
+  style: {
+    zIndex: 20000,
+    top: "5.5rem",
+  },
+};
+
 // Page animation variants
 const pageVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -311,14 +327,12 @@ export default function ServiceRequest() {
       getFirstErrorMessage(formErrors) ||
       "Please fix the highlighted fields before submitting.";
 
-    toast.error(firstMessage, {
-      position: "top-right",
-    });
+    toast.error(firstMessage, { position: "top-center" });
   };
 
   return (
     <>
-      <ToastContainer />
+      <ToastContainer {...toastContainerProps} />
       <motion.div
         initial="hidden"
         animate="visible"

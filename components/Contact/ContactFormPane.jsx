@@ -57,6 +57,32 @@ const limitPhoneInput = (value) => {
 const emptyToUndefined = (value) =>
   typeof value === "string" && value.trim() === "" ? undefined : value;
 
+const getSubmitErrorMessage = (error, fallback) =>
+  error?.response?.data?.message ||
+  error?.response?.data?.error ||
+  error?.data?.message ||
+  error?.message ||
+  fallback;
+
+const getFirstFormErrorMessage = (formErrors) => {
+  for (const error of Object.values(formErrors || {})) {
+    if (!error) continue;
+    if (typeof error.message === "string") return error.message;
+
+    if (typeof error === "object") {
+      const nestedMessage = getFirstFormErrorMessage(error);
+      if (nestedMessage) return nestedMessage;
+    }
+  }
+
+  return "Please correct the highlighted fields.";
+};
+
+const toastContainerStyle = {
+  zIndex: 20000,
+  top: "5.5rem",
+};
+
 const optionalTrimmedString = (max, message) =>
   z.preprocess(
     emptyToUndefined,
@@ -174,15 +200,20 @@ export default function ContactFormPane({ data, agreement, submit }) {
       toast.success(response?.message || "Enquiry submitted successfully.");
       reset();
     } catch (error) {
-      toast.error(error.message || "Failed to submit enquiry.");
+      toast.error(getSubmitErrorMessage(error, "Failed to submit enquiry."));
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  const onInvalid = (formErrors) => {
+    toast.error(getFirstFormErrorMessage(formErrors));
+  };
+
   return (
     <>
       <ToastContainer
-        position="top-right"
+        position="top-center"
         autoClose={4000}
         hideProgressBar
         newestOnTop
@@ -191,9 +222,13 @@ export default function ContactFormPane({ data, agreement, submit }) {
         draggable
         pauseOnHover
         theme="light"
+        style={toastContainerStyle}
       />
 
-      <form onSubmit={handleSubmit(onSubmit)} className="pt-4 max-w-3xl">
+      <form
+        onSubmit={handleSubmit(onSubmit, onInvalid)}
+        className="pt-4 max-w-3xl"
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5">
           <Field label={data[0]} error={errors.firstName} required>
             <input autoComplete="given-name" {...register("firstName")} />
