@@ -498,6 +498,11 @@ export default function CustomerRegistration() {
                       <AnimatedField>
                         <InputField
                           label="Customer Account"
+                          readOnly
+                          aria-readonly="true"
+                          placeholder="System Field - Auto Generated"
+                          // title="Customer Account is locked and cannot be entered manually."
+                          inputClassName="cursor-not-allowed border-gray-200 bg-gray-100 text-gray-500 placeholder:text-gray-500 focus-visible:ring-gray-300"
                           // required={isCredit && isOrganization}
                           // error={errors.customerAccount?.message}
                           {...register("customerAccount")}

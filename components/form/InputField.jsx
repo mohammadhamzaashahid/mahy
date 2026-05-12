@@ -4,10 +4,10 @@ import { Input } from "../UI/form/input";
 import { Textarea } from "../UI/form/textArea";
 
 export const InputField = forwardRef(
-    ({ label, error, required, className, ...props }, ref) => {
+    ({ label, error, required, className, inputClassName, ...props }, ref) => {
         return (
             <FormField label={label} required={required} error={error} className={className}>
-                <Input ref={ref} className="h-10 mt-1 bg-gray-50" {...props} />
+                <Input ref={ref} className={`h-10 mt-1 bg-gray-50 ${inputClassName || ""}`} {...props} />
             </FormField>
         );
     }
