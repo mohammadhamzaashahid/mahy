@@ -229,6 +229,7 @@ export function TimePickerField({ label, value, onChange, error }) {
   // Keep local state in sync if external value changes
   useEffect(() => {
     if (!value) return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setHours(value.hours ?? 12);
     setMinutes(value.minutes ?? 0);
     setSeconds(value.seconds ?? 0);

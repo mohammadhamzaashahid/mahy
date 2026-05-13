@@ -173,7 +173,7 @@ export default function ServiceRequest() {
       carObservedSigns: "",
       performanceIssues: "",
       warningLights: "",
-      businessImpact: "",
+      businessImpact: [],
     },
     mode: "onChange",
   });
@@ -290,8 +290,18 @@ export default function ServiceRequest() {
           return;
         }
 
+        // if (value instanceof Date) {
+        //   formData.append(key, value.toISOString());
+        // } else {
+        //   formData.append(key, String(value));
+        // }
+
         if (value instanceof Date) {
           formData.append(key, value.toISOString());
+        } else if (Array.isArray(value)) {
+          value.forEach((item) => {
+            formData.append(key, item);
+          });
         } else {
           formData.append(key, String(value));
         }
@@ -311,7 +321,6 @@ export default function ServiceRequest() {
       if (screenshot) formData.append("errorScreenshot", screenshot);
 
       await createMutation.mutateAsync(formData);
-
 
       toast.success("Service request submitted successfully");
     } catch (err) {
@@ -1248,7 +1257,7 @@ export default function ServiceRequest() {
                         )}
                       />
 
-                      <div className="col-span-full">
+                      {/* <div className="col-span-full">
                         <Controller
                           name="businessImpact"
                           control={control}
@@ -1263,8 +1272,26 @@ export default function ServiceRequest() {
                             />
                           )}
                         />
-                      </div>
+                      </div> */}
 
+                      <div className="col-span-full">
+                        <Controller
+                          name="businessImpact"
+                          control={control}
+                          render={({ field }) => (
+                            <CheckboxGroupField
+                              label="Business Impact"
+                              options={[...BUSINESS_IMPACTS]}
+                              value={
+                                Array.isArray(field.value) ? field.value : []
+                              }
+                              onChange={field.onChange}
+                              required
+                              error={errors.businessImpact?.message}
+                            />
+                          )}
+                        />
+                      </div>
                       <Controller
                         name="preferredVisit"
                         control={control}

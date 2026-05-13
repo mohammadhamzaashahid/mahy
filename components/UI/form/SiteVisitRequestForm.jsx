@@ -19,7 +19,6 @@ import {
 import { TimePickerField } from "./TimePickerField";
 import { useCreateSiteVisit } from "@/lib/hooks/useCreateSiteVisit";
 
-/** ---------- Options (exactly as provided) ---------- */
 const SECTORS = [
   "Trading & Distribution",
   "Engineering",
@@ -31,6 +30,37 @@ const SECTORS = [
   "Other",
 ];
 
+const PREFERRED_VISIT_TIME_SLOTS = [
+  {
+    value: "08_10",
+
+    label: "08:00 AM To 10:00 AM",
+  },
+
+  {
+    value: "10_12",
+
+    label: "10:00 AM To 12:00 PM",
+  },
+
+  {
+    value: "12_14",
+
+    label: "12:00 PM To 02:00 PM",
+  },
+
+  {
+    value: "14_16",
+
+    label: "02:00 PM To 04:00 PM",
+  },
+
+  {
+    value: "16_18",
+
+    label: "04:00 PM To 06:00 PM",
+  },
+];
 const COUNTRIES = ["UAE", "KSA", "Oman", "Qatar", "Bahrain", "Kuwait", "Other"];
 
 const SITE_TYPES = [
@@ -160,7 +190,7 @@ const schema = z.object({
     .min(1, "Email Address is required")
     .email("Enter a valid email")
     .max(100, "Email Address is too long"),
-  mobileNumber: phoneNumberSchema("Mobile Number"),
+  mobileNumber: phoneNumberSchema("Mobile Number", { required: true }),
   alternativeContactNumber: phoneNumberSchema("Alternative Contact Number"),
   // Site Details
   siteLocation: z
@@ -179,17 +209,22 @@ const schema = z.object({
     .refine((date) => !isPastDate(date), {
       message: "Preferred Visit Date cannot be in the past",
     }),
-  preferredVisitTime: z.preprocess(
-    emptyToUndefined,
-    z
-      .object({
-        hours: z.number(),
-        minutes: z.number(),
-        seconds: z.number(),
-        formatted: z.string(),
-      })
-      .optional(),
-  ),
+  // preferredVisitTime: z.preprocess(
+  //   emptyToUndefined,
+  //   z
+  //     .object({
+  //       hours: z.number(),
+  //       minutes: z.number(),
+  //       seconds: z.number(),
+  //       formatted: z.string(),
+  //     })
+  //     .optional(),
+  // ),
+  preferredVisitTime: z
+    .enum(["08_10", "10_12", "12_14", "14_16", "16_18"])
+    .optional()
+    .or(z.literal("")),
+
   urgencyLevel: z.enum(["Normal", "High", "Critical"]).optional(),
 
   // Technical Information
@@ -207,7 +242,7 @@ const schema = z.object({
 
   // Consent & Submission
   howDidYouHear: z.string().optional(),
-  consent: z.boolean().optional(),
+  consent: z.literal(true, { error: "Consent is required" }),
 });
 
 const defaultValues = {
@@ -444,6 +479,7 @@ export default function SiteVisitRequestForm() {
                   <InputField
                     label="Mobile Number"
                     type="tel"
+                    required
                     inputMode="numeric"
                     maxLength={MAX_PHONE_DIGITS}
                     placeholder="e.g., 971551234567"
@@ -659,7 +695,7 @@ export default function SiteVisitRequestForm() {
                     />
                   </FormField> */}
 
-                  <Controller
+                  {/* <Controller
                     control={control}
                     name="preferredVisitTime"
                     render={({ field }) => (
@@ -670,7 +706,25 @@ export default function SiteVisitRequestForm() {
                         error={errors.preferredVisitTime?.message}
                       />
                     )}
-                  />
+                  /> */}
+
+                  <FormField
+                    label="Preferred Visit Time"
+                    error={errors.preferredVisitTime?.message}
+                  >
+                    <select
+                      className={selectClass}
+                      {...register("preferredVisitTime")}
+                    >
+                      <option value="">Select preferred time slot</option>
+
+                      {PREFERRED_VISIT_TIME_SLOTS.map((slot) => (
+                        <option key={slot.value} value={slot.value}>
+                          {slot.label}
+                        </option>
+                      ))}
+                    </select>
+                  </FormField>
 
                   {/* Urgency Level */}
                   <FormField
@@ -767,6 +821,7 @@ export default function SiteVisitRequestForm() {
 
                   <FormField
                     label="Consent"
+                    required
                     error={errors.consent?.message}
                     className="md:col-span-2 lg:col-span-3"
                   >
