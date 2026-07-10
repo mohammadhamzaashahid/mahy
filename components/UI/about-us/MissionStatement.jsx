@@ -21,6 +21,7 @@ function MissionStatement({ missionStatement }) {
                     <p className='mt-7 lg:mt-10 sm:text-lg leading-relaxed font-light text-gray-800'>{missionStatement.text}</p>
                     <Link className="mt-10" href={"/"}>
                         <PrimaryButton
+                        href={"/companies"}
                             label={missionStatement.button}
                             size="md"
                             radius="rounded-full"

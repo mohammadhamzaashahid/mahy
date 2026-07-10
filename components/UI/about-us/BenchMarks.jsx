@@ -27,10 +27,17 @@ export default function VisionBenchmarkSection({
     },
   ],
 
+
   images = [
     "/gallery/gallery-1.jpg",
     "/gallery/gallery-2.jpg",
     "/gallery/gallery-3.jpg",
+  ],
+
+  stats = [
+    { value: "", label: "" },
+    { value: "", label: "" },
+    { value: "", label: "" },
   ],
 }) {
   return (
@@ -41,8 +48,8 @@ export default function VisionBenchmarkSection({
           <div className="grid grid-cols-3 gap-6 items-end h-[620px]">
             <div className="flex flex-col items-center justify-end relative">
               <div className="absolute -top-24 text-center text-gray-300">
-                <p className="text-[42px] font-light leading-none">3267+</p>
-                <p className="text-sm mt-1">Team members</p>
+                <p className="text-[42px] font-light leading-none">{stats[0].value ||  ""}</p>
+                <p className="text-sm mt-1">{stats[0].label}</p>
               </div>
 
               <motion.div
@@ -64,8 +71,8 @@ export default function VisionBenchmarkSection({
 
             <div className="flex flex-col items-center justify-end relative">
               <div className="absolute -top-24 text-center text-gray-300">
-                <p className="text-[42px] font-light leading-none">100+</p>
-                <p className="text-sm mt-1">Awards received</p>
+                <p className="text-[42px] font-light leading-none">{stats[1].value ||  ""}</p>
+                <p className="text-sm mt-1">{stats[1].label}</p>
               </div>
 
               <motion.div
@@ -88,8 +95,8 @@ export default function VisionBenchmarkSection({
 
             <div className="flex flex-col items-center justify-end relative">
               <div className="absolute -top-24 text-center text-gray-300">
-                <p className="text-[42px] font-light leading-none">100+</p>
-                <p className="text-sm mt-1">Awards received</p>
+                <p className="text-[42px] font-light leading-none">{stats[2].value ||  ""}</p>
+                <p className="text-sm mt-1">{stats[2].label}</p>
               </div>
 
               <motion.div

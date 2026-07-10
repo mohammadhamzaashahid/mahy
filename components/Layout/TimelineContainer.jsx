@@ -35,12 +35,12 @@ function TimelineContainer({ title }) {
     //   title: "Emirates International Equipment & Machinery (EIEM) established",
     //   text: "EIEM supplies pumps, pumping solutions, and water heaters for residential, commercial, and industrial applications.",
     // },
-    {
-      year: "1994",
-      title:
-        "Official Partner & Distributor of a Spanish Origin Water Pumping Manufacturer",
-      text: "MAHY Khoory became the UAE partner and distributor for a well established Spanish origin producer of water pumping technologies, expanding its portfolio of advanced water pumps and comprehensive pumping solutions.",
-    },
+    // {
+    //   year: "1994",
+    //   title:
+    //     "Official Partner & Distributor of a Spanish Origin Water Pumping Manufacturer",
+    //   text: "MAHY Khoory became the UAE partner and distributor for a well established Spanish origin producer of water pumping technologies, expanding its portfolio of advanced water pumps and comprehensive pumping solutions.",
+    // },
     // {
     //   year: "1996",
     //   title: "Greenland Equipment & Machinery established",

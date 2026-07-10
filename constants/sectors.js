@@ -9,7 +9,13 @@ export const companiesSectors = [
         //     "Through innovation and disciplined manufacturing, the sector contributes both environmental value and commercial viability to the Group's portfolio."
         // ],
         companies: [
-            "Union Wood Works"
+            "Union Wood Works",
+            "Al Dhafra Paper Manufacturing",
+            "Union Paper Mills",
+            "National Paper Industries",
+            "Union Sustainable Packaging Solutions LLC",
+            "Senan Industry LLC",
+            "Al Khoory Engineering",
         ],
         image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1777124189/Manufactring_hsht41.jpg"
     },
@@ -24,7 +30,12 @@ export const companiesSectors = [
 
         // ],
         companies: [
-            "Al Khoory Engineering"
+            "Al Khoory Engineering",
+            "Clean Earth LLC",
+            "Al Dhafra Waste Collection",
+            "Solid Waste Management Division",
+            "Around Continent Waste Collection",
+            "Recyclable Waste Management Division",
         ],
         image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1777124203/Waste_Management_s1kndw.jpg"
     },
@@ -38,9 +49,9 @@ export const companiesSectors = [
         //     "As sustainability expectations increase globally, this sector continues to innovate in lightweight designs, recyclable materials, and performance optimization, reinforcing the Group’s leadership in responsible packaging manufacturing."
         // ],
         companies: [
-            "National Paper Industries",
-            "Union Sustainable Packaging Solutions LLC",
-            "Senan Industry LLC"
+
+            "Pearl Marina Hotel Apartments",
+            "Market Resturant And Cafe"
         ],
         image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777124269/Hospitality-2_onqzpn.jpg"
     },
@@ -55,8 +66,8 @@ export const companiesSectors = [
 
         // ],
         companies: [
-            "Union Paper Mills",
-            "Al Dhafra Paper Manufacturing"
+            "MAHY Khoory Trading",
+            "Pure Energy Construction LLC"
         ],
         image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124156/Trading_hoeowy.jpg"
     },
@@ -70,7 +81,8 @@ export const companiesSectors = [
         //     "This sector positions the Group within high-value industrial value chains that demand innovation, technical expertise, and manufacturing precision."
         // ],
         companies: [
-            "Union Nonwoven Industries"
+            "MAHY Khoory Automotive",
+            "MAHY Khoory Motors",
         ],
         image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124116/Automotive_q5rutz.jpg"
     },
@@ -84,7 +96,7 @@ export const companiesSectors = [
         //     "This sector positions the Group within high-value industrial value chains that demand innovation, technical expertise, and manufacturing precision."
         // ],
         companies: [
-            "Union Nonwoven Industries"
+            "Creative Solutions Green Building Consultancy",
         ],
         image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124142/Solar_Panel_tmy4tx.jpg"
     },
@@ -99,7 +111,7 @@ export const companiesSectors = [
         //     "This sector positions the Group within high-value industrial value chains that demand innovation, technical expertise, and manufacturing precision."
         // ],
         companies: [
-            "Union Nonwoven Industries"
+            "Al Khoory Engineering"
         ],
         image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124123/Engineering_k7gzg4.jpg"
     },
@@ -113,7 +125,7 @@ export const companiesSectors = [
         //     "This sector positions the Group within high-value industrial value chains that demand innovation, technical expertise, and manufacturing precision."
         // ],
         companies: [
-            "Union Nonwoven Industries"
+            "Greenland Transport"
         ],
         image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124121/transp_mqqea6.jpg"
     },

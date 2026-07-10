@@ -258,7 +258,7 @@ function CustomerSupportOverviewPage() {
           {
             title: "You can reach us conveniently through our website or by contacting us directly Via: ",
             textItems: [
-              "📧 Email: info@mahykhoory.com or (mailto:info@mahykhoory.com)",
+              "📧 Email: info@mahykhoory.com",
               "📞 Phone: +971 4 6067300",
             ],
           },

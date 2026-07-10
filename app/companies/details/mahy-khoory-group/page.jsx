@@ -37,7 +37,7 @@ function MahyKhooryGroupPage() {
     },
     {
       heading: "Our Workforce",
-      text: "The MAHY Khoory Group employs over 3,100 professionals representing more than 30 nationalities, reflecting a diverse and experienced workforce that supports the Group’s operations across its various sectors and geographies. The Group places strong emphasis on professional development, technical capability, and operational discipline, enabling its companies to deliver reliable solutions and maintain long-standing relationships with customers, partners, and suppliers.",
+      text: "The MAHY Khoory Group employs over 4200 professionals representing more than 30 nationalities, reflecting a diverse and experienced workforce that supports the Group’s operations across its various sectors and geographies. The Group places strong emphasis on professional development, technical capability, and operational discipline, enabling its companies to deliver reliable solutions and maintain long-standing relationships with customers, partners, and suppliers.",
       lastText: "",
     },
     {
@@ -59,7 +59,7 @@ function MahyKhooryGroupPage() {
         // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
         heading="MAHY Khoory Group"
         texts={[
-          "M.A.H.Y. Khoory & Co. LLC is the holding company of the MAHY Khoory Group, a diversified enterprise group headquartered in Dubai with a distinguished heritage dating back to 1930. Over more than nine decades, the Group has grown from a pioneering entrepreneurial venture into a well-established organization with a strong reputation for technical expertise, operational reliability, and long-term value creation across the Middle East and selected international markets.",
+          "M.A.H.Y. Khoory & Co. LLC is the holding company of the MAHY Khoory Group, a diversified enterprise group headquartered in Dubai with a distinguished heritage dating back to 1929. Over more than nine decades, the Group has grown from a pioneering entrepreneurial venture into a well-established organization with a strong reputation for technical expertise, operational reliability, and long-term value creation across the Middle East and selected international markets.",
         ]}
       />
       <CompanyTextGrid

@@ -83,14 +83,14 @@ export default function NarrativeCard({
           </p>
         )}
 
-        {cta && (
+        {/* {cta && (
           <PrimaryButton
             label={cta}
             size="md"
             radius="rounded-full"
             className="mt-12"
           />
-        )}
+        )} */}
 
         {image && (
           <motion.div

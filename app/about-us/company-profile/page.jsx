@@ -73,7 +73,7 @@ async function companyProfile() {
       "The Group operates through a network of specialized subsidiaries and divisions, each focused on a defined business activity, while benefiting from centralized governance, shared infrastructure, and group-wide management standards. This structure enables efficiency, accountability, and consistency across all operations.",
     items: [
       {
-        title: "25+",
+        title: "25",
         subTitle: "Companies & Operating divisions",
         text: "",
       },

@@ -24,6 +24,7 @@ async function Companies({ searchParams }) {
       sector: "group",
       size: "large",
       location: "uae",
+      emirate: "dubai",
       preview:
         "A diversified conglomerate operating across manufacturing, trading, engineering, logistics, automotive, hospitality, and sustainability sectors.",
     },
@@ -35,6 +36,7 @@ async function Companies({ searchParams }) {
       sector: "trading",
       size: "medium",
       location: "ksa",
+      emirate: "dubai",
       preview:
         "The Group's commercial arm supplying industrial, electromechanical, HVAC, and infrastructure equipment across the GCC.",
     },
@@ -45,6 +47,7 @@ async function Companies({ searchParams }) {
       sector: "engineering",
       size: "large",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Provides end-to-end engineering, design, and turnkey execution of water and wastewater pumping systems.",
     },
@@ -56,6 +59,7 @@ async function Companies({ searchParams }) {
       sector: "manufacturing",
       size: "large",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Manufactures recycled linerboard and fluting medium from waste paper for sustainable packaging.",
     },
@@ -67,6 +71,7 @@ async function Companies({ searchParams }) {
       sector: "manufacturing",
       size: "large",
       location: "uae",
+      emirate: "abu-dhabi",
       preview:
         "Produces high-quality recycled containerboard for packaging industries.",
     },
@@ -78,6 +83,7 @@ async function Companies({ searchParams }) {
       sector: "manufacturing",
       size: "medium",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Produces compressed wood blocks from recycled fibers for industrial applications.",
     },
@@ -89,6 +95,7 @@ async function Companies({ searchParams }) {
       sector: "waste management",
       size: "large",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Handles large-scale recyclable waste processing supporting circular economy initiatives.",
     },
@@ -100,6 +107,7 @@ async function Companies({ searchParams }) {
       sector: "waste management",
       size: "medium",
       location: "uae",
+      emirate: "abu-dhabi",
       preview:
         "Provides waste collection services across Abu Dhabi supporting recycling supply chains.",
     },
@@ -111,6 +119,7 @@ async function Companies({ searchParams }) {
       sector: "waste management",
       size: "medium",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Licensed hazardous waste collection and transport services ensuring compliance.",
     },
@@ -133,6 +142,7 @@ async function Companies({ searchParams }) {
       sector: "clean earth",
       size: "large",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Recycling services for oils, metals, and glass supporting circular economy.",
     },
@@ -144,6 +154,7 @@ async function Companies({ searchParams }) {
       sector: "waste management",
       size: "small",
       location: "uae",
+      emirate: "dubai",
       preview: "Comprehensive solid waste collection and disposal services.",
     },
     {
@@ -154,6 +165,7 @@ async function Companies({ searchParams }) {
       sector: "manufacturing",
       size: "medium",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Designs eco-friendly packaging solutions using recycled materials.",
     },
@@ -165,6 +177,7 @@ async function Companies({ searchParams }) {
       sector: "manufacturing",
       size: "medium",
       location: "uae",
+      emirate: "ajman",
       preview: "Produces corrugated cartons and packaging solutions.",
     },
     {
@@ -175,6 +188,7 @@ async function Companies({ searchParams }) {
       sector: "logistics",
       size: "medium",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Provides logistics and transportation services for group operations.",
     },
@@ -186,6 +200,7 @@ async function Companies({ searchParams }) {
       sector: "manufacturing",
       size: "medium",
       location: "uae",
+      emirate: "dubai",
       preview: "Manufactures rigid plastic packaging solutions.",
     },
     {
@@ -196,6 +211,7 @@ async function Companies({ searchParams }) {
       sector: "energy",
       size: "medium",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Provides solar EPC solutions for commercial and industrial clients.",
     },
@@ -207,6 +223,7 @@ async function Companies({ searchParams }) {
       sector: "hospitality",
       size: "medium",
       location: "uae",
+      emirate: "dubai",
       preview: "Upscale serviced apartments in Dubai Marina.",
     },
     {
@@ -217,6 +234,7 @@ async function Companies({ searchParams }) {
       sector: "hospitality",
       size: "small",
       location: "uae",
+      emirate: "dubai",
       preview: "Contemporary dining restaurant offering international cuisine.",
     },
     {
@@ -227,6 +245,7 @@ async function Companies({ searchParams }) {
       sector: "automotive",
       size: "large",
       location: "uae",
+      emirate: "abu-dhabi",
       preview: "Distributor of OMODA and JAECOO vehicles.",
     },
     {
@@ -237,6 +256,7 @@ async function Companies({ searchParams }) {
       sector: "automotive",
       size: "large",
       location: "uae",
+      emirate: "dubai",
       preview: "Represents Dongfeng vehicles with integrated services.",
     },
     {
@@ -246,6 +266,7 @@ async function Companies({ searchParams }) {
       sector: "industries",
       size: "large",
       location: "uae",
+      emirate: "abu-dhabi",
       preview: "Union Nonwoven Industries",
     },
     {
@@ -256,6 +277,7 @@ async function Companies({ searchParams }) {
       sector: "consultancy",
       size: "medium",
       location: "uae",
+      emirate: "dubai",
       preview:
         "Provides sustainability and green building consultancy services.",
     },
@@ -285,6 +307,7 @@ async function Companies({ searchParams }) {
   const sectors = createFilterOptions("sector");
   const sizes = createFilterOptions("size");
   const locations = createFilterOptions("location");
+  const emirates = createFilterOptions("emirate");
 
   const filters = [
     {
@@ -305,6 +328,12 @@ async function Companies({ searchParams }) {
       options: locations,
       count: locations.length,
     },
+    {
+      title: "Emirate",
+      key: "emirate",
+      options: emirates,
+      count: emirates.length,
+    },
   ];
 
   const getCompanies = () => {
@@ -316,6 +345,7 @@ async function Companies({ searchParams }) {
           company.slug,
           company.sector,
           company.location,
+          company.emirate,
           company.preview,
         ]
           .filter(Boolean)
@@ -329,12 +359,15 @@ async function Companies({ searchParams }) {
     const sectorValues = params.sector?.split(",").filter(Boolean) || [];
     const sizeValues = params.size?.split(",").filter(Boolean) || [];
     const locationValues = params.location?.split(",").filter(Boolean) || [];
+    const emirateValues = params.emirate?.split(",").filter(Boolean) || [];
 
     return filtered.filter((company) => {
       if (sectorValues.length && !sectorValues.includes(company.sector))
         return false;
       if (sizeValues.length && !sizeValues.includes(company.size)) return false;
       if (locationValues.length && !locationValues.includes(company.location))
+        return false;
+      if (emirateValues.length && !emirateValues.includes(company.emirate))
         return false;
       return true;
     });
@@ -344,7 +377,7 @@ async function Companies({ searchParams }) {
     <main className="bg-gray-50 pb-14">
       <PageHeading
         title={t("Heading")}
-        description={"MAHY Khoory Group of Companies is a Dubai-based diversified holding group comprising 25+ operating companies and business divisions across multiple industries. The Group has built a strong presence in the UAE and the wider region through long-term commercial relationships, technical capability, and integrated operations. With businesses spanning trading, engineering, industrial manufacturing, recycling, sustainability, logistics, automotive, hospitality, and food & beverage, the Group operates a balanced and resilient portfolio designed to support both traditional industries and future-focused sectors."}
+        description={"MAHY Khoory Group of Companies is a Dubai-based diversified holding group comprising 25 operating companies and business divisions across multiple industries. The Group has built a strong presence in the UAE and the wider region through long-term commercial relationships, technical capability, and integrated operations. With businesses spanning trading, engineering, industrial manufacturing, recycling, sustainability, logistics, automotive, hospitality, and food & beverage, the Group operates a balanced and resilient portfolio designed to support both traditional industries and future-focused sectors."}
         image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777123325/abstract-business-office-building-london_rrnpsd.jpg"}
       />
 

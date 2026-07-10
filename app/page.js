@@ -19,15 +19,15 @@ export default async function Home() {
 
   const slides = [
     {
-      title: "Driving Sustainable Growth Across Industries",
+      title: "Nearly a Century of Building the UAE",
       subtitle:
-        "With a strong foundation in diverse sectors, we deliver integrated solutions that support long-term development and responsible growth.",
+        "Founded in Dubai in 1930, M.A.H.Y. Khoory Group has grown from a single trading enterprise into 25 operating companies across 10 industries trusted by the UAE's developers, municipalities and industrial operators for nearly a century.",
       cta: { label: "Explore Companies", href: "/companies/all" },
     },
     {
-      title: "Powering Industries with Innovation and Reliability",
+      title: "Engineering Infrastructure That Powers the UAE",
       subtitle:
-        "We combine technical expertise with innovative thinking to deliver dependable solutions that meet evolving industry demands.",
+        "From district cooling plants and high rise towers to municipal water stations and industrial facilities Al Khoory Engineering has delivered pumping and MEP systems to landmark projects across the Emirates for decades.",
       cta: {
         label: "Engineering Services",
         href: "/companies/engineering-services",
@@ -37,36 +37,36 @@ export default async function Home() {
       title: "Excellence Built on Experience and Commitment",
       subtitle:
         "Our decades of industry knowledge enable us to provide consistent quality and trusted services across every business we operate.",
-      cta: { label: "Shop Products", href: "/shop" },
+      cta: { label: "Shop Products", href: "/under-maintenance" },
     },
     {
-      title: "Delivering Value Through Integrated Solutions",
+      title: "From Waste Paper to Finished Packaging Under One Roof",
       subtitle:
-        "From trading to manufacturing and beyond, we create seamless solutions that enhance efficiency and performance.",
+        "Our integrated recycling and manufacturing ecosystem collects waste paper converts it into recycled containerboard and supplies it to corrugated packaging producers across the UAE and Gulf a closed loop that few regional groups can offer.",
       cta: { label: "Explore Companies", href: "/companies/all" },
     },
     {
-      title: "Strengthening Industries Through Expertise and Trust",
+      title: "Authorized Distributors of the World's Leading Engineering Brands",
       subtitle:
-        "We work closely with our partners to deliver reliable products and services that drive operational success.",
+        "As the UAE's authorized partner for Grundfos, Samsung, Ariston, Dewalt and other globally recognized manufacturers, we bring world-class engineering technology backed by decades of local installation and after sales expertise.",
       cta: { label: "View Services", href: "/companies/engineering-services" },
     },
     {
-      title: "Sustainable Solutions for a Better Tomorrow",
+      title: "Solar EPC. Paper Manufacturing. Automotive. Waste Management.",
       subtitle:
-        "Our focus on responsible practices ensures that our operations contribute positively to the environment and society.",
+        "Our 25 companies operate independently, each a specialist in its field from pumping systems and LED lighting to solar EPC, hotel operations and vehicle distribution. One Group. Ten industries. No compromises.",
       cta: { label: "Learn More", href: "/companies/all" },
     },
     {
-      title: "Building Reliable Foundations for Future Growth",
+      title: "UAE-National Owned. Dubai Founded. Built to Last",
       subtitle:
-        "We support businesses with scalable solutions designed to adapt, perform, and grow in a changing world.",
+        "M.A.H.Y. Khoory Group is one of the few UAE national-owned industrial holding groups with roots stretching back to 1930. Our ownership, our people and our purpose are all rooted in this country.",
       cta: { label: "Explore Solutions", href: "/companies/all" },
     },
     {
-      title: "Committed to Quality, Driven by Performance",
+      title: "1,300 Tonnes of Waste Recovered. Every Single Day.",
       subtitle:
-        "Every solution we deliver reflects our dedication to high standards, operational excellence, and customer satisfaction.",
+        "Through our waste collection, recycling and manufacturing operations across Dubai, Abu Dhabi and Oman, we divert over 1,300 metric tonnes of recyclable material from landfill daily turning waste into industrial raw material.",
       cta: { label: "Discover More", href: "/companies/all" },
     },
   ];

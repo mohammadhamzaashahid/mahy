@@ -14,7 +14,7 @@ export const GOVERNANCE_CONTENT = {
     body: [
       `MAHY Khoory Group is led by an experienced leadership team with deep industry knowledge and a long-term perspective on growth, governance, and operational excellence. With a strong foundation built over decades, the Group’s leadership continues to guide a diversified portfolio of businesses across industrial, manufacturing, environmental, logistics, energy, automotive, hospitality, and food service sectors.`,
 
-      `What began as a small entrepreneurial enterprise has grown into a group employing more than 2,000 people across the Middle East, serving regional and international markets. This growth has been driven by disciplined decision-making, strong partnerships, and a consistent focus on quality, reliability, and performance.`,
+      `What began as a small entrepreneurial enterprise has grown into a group employing more than 4,200 people across the Middle East, serving regional and international markets. This growth has been driven by disciplined decision-making, strong partnerships, and a consistent focus on quality, reliability, and performance.`,
     ],
   },
 

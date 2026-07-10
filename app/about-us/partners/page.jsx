@@ -5,6 +5,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 async function StrategicPartnershipsPage() {
     const t = await getTranslations("HomePage");
     const locale = await getLocale();
+    const linknext = false;
 
     const announcements = [
         {
@@ -72,7 +73,7 @@ async function StrategicPartnershipsPage() {
                 description2={"These partnerships are founded on mutual trust, transparency, and shared objectives, enabling the Group to deliver reliable products, integrated solutions, and consistent value to customers across the UAE and beyond."}
                 image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776975437/king-leadership-reflected-victorious-chess-strategy-generated-by-ai.jpg_af3dyn.jpg"}
             />
-            <Announcements items={announcements} cta={t("Announcements.Button")} locale={locale} />
+            <Announcements items={announcements} cta={t("Announcements.Button")} locale={locale} linknext={linknext} />
         </main>
     )
 }

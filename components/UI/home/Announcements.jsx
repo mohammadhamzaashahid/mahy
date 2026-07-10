@@ -11,19 +11,19 @@ const containerVariants = {
     visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
 };
 
-function Announcements({ items, cta, locale }) {
+function Announcements({ items, cta, locale, linknext }) {
     return (
         <section className='max-w-7xl mx-auto py-20'>
             <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className='flex flex-nowrap overflow-x-scroll hide-scrollbar lg:overflow-visible lg:grid grid-cols-3 gap-6 px-5 lg:px-0'>
                 {items.map((item, i) => (
-                    <Card key={i} item={item} cta={cta} locale={locale} />
+                    <Card key={i} item={item} cta={cta} locale={locale} linknext={linknext} />
                 ))}
             </motion.div>
         </section>
     );
 };
 
-const Card = ({ item, cta, locale }) => {
+const Card = ({ item, cta, locale, linknext = false }) => {
     const [show, setShow] = useState(false);
     return (
         <div className='flex-none lg:h-125 w-[70vw] lg:w-full relative b-base text-white group hover:scale-[103%] transition-transform duration-500 ease-in-out overflow-hidden select-none'>
@@ -52,22 +52,25 @@ const Card = ({ item, cta, locale }) => {
                         {item.text2}
                     </p>
                 </div>
-                <div className={`absolute right-6 bottom-6 flex justify-end mt-8 lg:mt-2 ${show ? "translate-y-0 opacity-100" : "translate-y-15 opacity-0"}
-                    group-hover:translate-y-0 group-hover:opacity-100 transition-all ease-in-out duration-500`}>
-                    <Link href={"/"} className='flex gap-2 items-center group/btn overflow-hidden relative z-30'>
-                        <div>
-                            <p className='text-sm'>{cta}</p>
-                            <div className={`w-full h-px bg-white mt-1 ${show ? "translate-x-0" : "-translate-x-25"}
-                                group-hover/btn:translate-x-0 transition-all ease-in-out duration-500`}></div>
-                        </div>
-                        {locale === "ar"
-                            ? (
-                                <ChevronLeft className='mb-1' stroke='white' size={16} />
-                            ) : (
-                                <ChevronRight className='mb-1' stroke='white' size={16} />
-                            )}
-                    </Link>
-                </div>
+                {linknext && (
+                    <div className={`absolute right-6 bottom-6 flex justify-end mt-8 lg:mt-2 ${show ? "translate-y-0 opacity-100" : "translate-y-15 opacity-0"}
+                        group-hover:translate-y-0 group-hover:opacity-100 transition-all ease-in-out duration-500`}>
+
+                        <Link href={"/"} className='flex gap-2 items-center group/btn overflow-hidden relative z-30'>
+                            <div>
+                                <p className='text-sm'>{cta}</p>
+                                <div className={`w-full h-px bg-white mt-1 ${show ? "translate-x-0" : "-translate-x-25"}
+                                    group-hover/btn:translate-x-0 transition-all ease-in-out duration-500`}></div>
+                            </div>
+                            {locale === "ar"
+                                ? (
+                                    <ChevronLeft className='mb-1' stroke='white' size={16} />
+                                ) : (
+                                    <ChevronRight className='mb-1' stroke='white' size={16} />
+                                )}
+                        </Link>
+                    </div>
+                )}
             </div>
             {item.img && (
                 <div className={`absolute inset-0 origin-top-left transition-all duration-700 ease-out

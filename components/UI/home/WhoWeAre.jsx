@@ -37,7 +37,7 @@ function WhoWeAre({
   topHeading,
   heading = "MAHY Khoory",
   text = `MAHY Khoory Group of Companies is a Dubai-based diversified
-holding group comprising 25+ operating companies and business
+holding group comprising 25 operating companies and business
 divisions across multiple industries. The Group has built a strong
 presence in the UAE and the wider region through long-term
 commercial relationships, technical capability, and integrated

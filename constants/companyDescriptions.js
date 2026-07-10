@@ -43,7 +43,7 @@ export const companyDescriptions = [
   {
     name: "Recyclable Waste Management Division",
     logo: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900739/unionpm_s0fddv.png",
-    href: "/companies/details/recyclable-waste-management",
+    href: "/companies/details/recyclable-waste-management-division",
     preview:
       "Manages large-scale collection and processing of recyclable waste in Dubai, supplying recovered fibre to the Group’s paper manufacturing facilities to support its circular economy model.",
   },
