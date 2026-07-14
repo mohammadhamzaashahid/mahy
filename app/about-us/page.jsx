@@ -264,7 +264,7 @@ async function About() {
       <TimelineContainer title={"History Of MAHY Khoory"} milestones={milestones} />
       <CompanyStructure data={structure} />
       <Purpose purpose={purpose} />
-      <History history={history} />
+      {/* <History history={history} /> */}
       {/* <HistoryTimelineClient
         title={t("History.Heading")}
         items={[

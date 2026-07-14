@@ -279,7 +279,7 @@ const MilestoneTimeline = ({ title, milestones }) => {
                         />
                     </div>
                     <div className="flex justify-between mt-3 text-xs text-muted-foreground">
-                        <span>1929</span>
+                        <span>1930</span>
                         <span>2026</span>
                     </div>
                     <div className="absolute left-0 right-0 bottom-3 flex justify-center items-center">

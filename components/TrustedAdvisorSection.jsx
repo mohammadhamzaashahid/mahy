@@ -12,7 +12,7 @@ export default function TrustedAdvisorSection({
   images = [],
   object = "",
   subject = " Years of Excellence",
-  numbers_1 = "4200+",
+  numbers_1 = "4200",
   numbers_2 = "96"
 }) {
   const defaultFallBack = [

@@ -66,11 +66,11 @@ async function GroupHistoryAndLegacyPage() {
 
   const data = {
     text1: [
-      "MAHY Khoory Group was established in 1929 as a trading enterprise and has since grown into one of the UAE's diversified business groups, operating across multiple strategic sectors. Over the decades, the Group expanded from trading into engineering, manufacturing, infrastructure solutions, environmental services, logistics, hospitality, energy, and automotive supporting the evolving needs of the UAE economy.",
+      "MAHY Khoory Group was established in 1930 as a trading enterprise and has since grown into one of the UAE's diversified business groups, operating across multiple strategic sectors. Over the decades, the Group expanded from trading into engineering, manufacturing, infrastructure solutions, environmental services, logistics, hospitality, energy, and automotive supporting the evolving needs of the UAE economy.",
       "The Group's journey has been marked by long-standing partnerships with leading global brands and continuous investments in new industries. From water and power solutions to paper manufacturing, recycling, packaging, and renewable energy, MAHY Khoory Group has consistently evolved by aligning its businesses with national development priorities and market demands.",
     ],
     items1: [
-      "Founded in 1929 as a trading enterprise.",
+      "Founded in 1930 as a trading enterprise.",
       "Expanded across industries with strategic growth.",
       "Supporting the UAE's economic development for nearly a century.",
     ],
