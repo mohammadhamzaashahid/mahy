@@ -50,9 +50,11 @@ function Filters({ filters, search }) {
                 {showFilters ? "Close" : "Filters"}
             </button>
 
-            <div className={`
+            <div
+                data-lenis-prevent
+                className={`
                 ${showFilters ? "h-screen pt-20 opacity-100 px-5" : "opacity-0 pointer-events-none lg:pointer-events-auto lg:opacity-100"}
-                overflow-y-scroll fixed z-40 transition-opacity duration-500 inset-0 col-span-2 pt-7 px-5 pb-12 lg:pb-7 bg-white rounded-3xl border border-[#E7E3DA] lg:sticky lg:top-20 h-fit mb-10 lg:mb-0`}>
+                overflow-y-scroll overscroll-contain fixed z-40 transition-opacity duration-500 inset-0 col-span-2 pt-7 px-5 pb-12 lg:pb-7 bg-white rounded-3xl border border-[#E7E3DA] lg:sticky lg:top-20 lg:right-auto lg:bottom-auto lg:left-auto h-fit lg:max-h-[calc(100vh-6rem)] mb-10 lg:mb-0`}>
                 <div className="relative mb-7 group">
                     <form onSubmit={onSubmit}>
                         <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} name='search' className="border border-gray-300 f-base rounded-xl py-2 px-4 w-full text-sm pr-8 relative z-10" placeholder="" />

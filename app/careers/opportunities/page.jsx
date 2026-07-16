@@ -41,7 +41,7 @@ function OpportunitiesPage() {
       <div className="mt-8 lg:mb-260 xl:mb-22">
         <SolarPanelImagesGrid
           items={items}
-          text1="4200+"
+          text1="4200"
           text2="Employees"
           images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776763660/businessman-climbed-stairs-double-exposure-with-new-york-office-buildings-night-concept-business-achievement-goal-leadership.jpg_z9q04v.jpg", "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776764495/businessman-analyzing-data-computer-screen.jpg_nynwvg.jpg"]}
         />

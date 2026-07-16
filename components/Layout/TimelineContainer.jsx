@@ -4,7 +4,7 @@ import MobileTimeline from "./MobileTimeline";
 function TimelineContainer({ title }) {
   const milestones = [
     {
-      year: "1929",
+      year: "1930",
       title: "MAHY Khoory was established",
       text: "MAHY Khoory was founded as a trading enterprise and has grown into a diversified UAE-based business group operating across multiple sectors.",
     },

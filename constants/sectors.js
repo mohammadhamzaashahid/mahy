@@ -30,7 +30,7 @@ export const companiesSectors = [
 
         // ],
         companies: [
-            "Al Khoory Engineering",
+            "Etihad Waste Management",
             "Clean Earth LLC",
             "Al Dhafra Waste Collection",
             "Solid Waste Management Division",
