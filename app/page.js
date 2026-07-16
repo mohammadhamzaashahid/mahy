@@ -34,9 +34,9 @@ export default async function Home() {
       },
     },
     {
-      title: "Excellence Built on Experience and Commitment",
+      title: "4,200+ Professionals. 38 Nationalities. One Group",
       subtitle:
-        "Our decades of industry knowledge enable us to provide consistent quality and trusted services across every business we operate.",
+        "Across 20+ UAE offices, our workforce brings together engineers, technicians, logistics specialists, hospitality professionals and environmental experts united by the standards the Khoory family established in 1930",
       cta: { label: "Shop Products", href: "/under-maintenance" },
     },
     {
@@ -54,7 +54,7 @@ export default async function Home() {
     {
       title: "Solar EPC. Paper Manufacturing. Automotive. Waste Management.",
       subtitle:
-        "Our 25 companies operate independently, each a specialist in its field from pumping systems and LED lighting to solar EPC, hotel operations and vehicle distribution. One Group. Ten industries. No compromises.",
+        "Our 25 companies operate independently, each a specialist in its field from pumping systems and LED lighting to solar EPC, hotel operations and vehicle distribution.\nOne Group. Ten industries. No compromises.",
       cta: { label: "Learn More", href: "/companies/all" },
     },
     {

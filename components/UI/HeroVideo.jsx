@@ -43,7 +43,7 @@ function HeroVideo({ slides }) {
                         {currentSlide.title}
                     </h1>
                     {currentSlide.subtitle && (
-                        <p className="mt-4 text-gray-200 font-light">{currentSlide.subtitle}</p>
+                        <p className="mt-4 text-gray-200 font-light whitespace-pre-line">{currentSlide.subtitle}</p>
                     )}
                     <div className="flex flex-wrap gap-3">
                         {currentSlide.cta && (
