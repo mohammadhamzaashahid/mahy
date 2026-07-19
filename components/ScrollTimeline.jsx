@@ -3,7 +3,8 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import SlideReveal from "./UI/SlideReveal";
-import Link from "next/link";
+import PrimaryButton from "./UI/PrimaryButton";
+import { FiDownload } from "react-icons/fi";
 
 export default function ScrollTimeline({ items, size = "lg" }) {
   const containerRef = useRef(null);
@@ -82,6 +83,7 @@ export default function ScrollTimeline({ items, size = "lg" }) {
                 end={items[items.length - 1].title}
                 image={item.image}
                 href={item.href}
+                brochure={item.brochure}
               />
             ) : (
               <Sections
@@ -91,6 +93,7 @@ export default function ScrollTimeline({ items, size = "lg" }) {
                 image={item.image}
                 dark={i % 2 !== 0}
                 href={item.href}
+                brochure={item.brochure}
               />
             )}
           </div>
@@ -100,7 +103,7 @@ export default function ScrollTimeline({ items, size = "lg" }) {
   );
 }
 
-const FirstSection = ({ title, start, end, image, texts, href }) => (
+const FirstSection = ({ title, start, end, image, texts, href, brochure }) => (
   <div className="relative max-w-6xl px-5 xl:px-0 mt-5 xl:mt-0">
     <div className="relative z-10">
       {/* <SlideReveal direction="up" triggerOnce={false}>
@@ -129,13 +132,27 @@ const FirstSection = ({ title, start, end, image, texts, href }) => (
             {text}
           </p>
         ))}
-        <Link href={href} className="border-b pb-1">Read More</Link>
+        <div className="flex flex-wrap items-center gap-3 xl:gap-4 pt-2">
+          <PrimaryButton href={href} label="Read More" size="sm" />
+          {brochure && (
+            <PrimaryButton
+              href={brochure}
+              download
+              label="Download Brochure"
+              icon={FiDownload}
+              size="sm"
+              bg="bg-white border border-gray-300"
+              hoverBg="hover:bg-black"
+              textColor="text-black hover:text-white"
+            />
+          )}
+        </div>
       </div>
     </SlideReveal>
   </div>
 );
 
-const Sections = ({ title, heading, texts, image, dark, href }) => (
+const Sections = ({ title, heading, texts, image, dark, href, brochure }) => (
   <div
     className={`grid grid-cols-1 xl:grid-cols-2 gap-6 xl:gap-15 py-8 px-5 xl:px-0 xl:py-20 ${dark ? "text-white" : "t-base"} relative`}
   >
@@ -166,17 +183,40 @@ const Sections = ({ title, heading, texts, image, dark, href }) => (
                 {text}
               </p>
             ))}
-            <Link href={href} className="border-b pb-1">Read More</Link>
           </div>
         </SlideReveal>
       </div>
     </div>
-    <div className="flex items-center overflow-hidden">
-      <SlideReveal direction="right" delay={0.4} triggerOnce={false}>
-        <div className="relative w-full xl:w-170 h-90 xl:h-100">
-          <Image src={image} alt={title} style={{ objectFit: "cover" }} fill />
-        </div>
-      </SlideReveal>
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center overflow-hidden">
+        <SlideReveal direction="right" delay={0.4} triggerOnce={false}>
+          <div className="relative w-full xl:w-170 h-90 xl:h-100">
+            <Image src={image} alt={title} style={{ objectFit: "cover" }} fill />
+          </div>
+        </SlideReveal>
+      </div>
+      <div className="flex flex-wrap items-center gap-3 xl:gap-4 mt-7">
+        <PrimaryButton
+          href={href}
+          label="Read More"
+          size="sm"
+          {...(dark
+            ? { bg: "bg-white", hoverBg: "hover:bg-gray-200", textColor: "text-black" }
+            : {})}
+        />
+        {brochure && (
+          <PrimaryButton
+            href={brochure}
+            download
+            label="Download Brochure"
+            icon={FiDownload}
+            size="sm"
+            bg={dark ? "bg-transparent border border-white" : "bg-white border border-gray-300"}
+            hoverBg={dark ? "hover:bg-white" : "hover:bg-black"}
+            textColor={dark ? "text-white hover:text-black" : "text-black hover:text-white"}
+          />
+        )}
+      </div>
     </div>
   </div>
 );

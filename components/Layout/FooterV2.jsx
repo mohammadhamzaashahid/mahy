@@ -255,7 +255,7 @@ export default function FooterV2() {
               </p>
               <p className="mt-4 text-sm leading-relaxed text-slate-400">
                 We are a conglomerate of diverse companies and business units,
-                with a workforce of over 3100+ people.
+                with a workforce of over 4000+ people.
               </p>
 
               <Link
