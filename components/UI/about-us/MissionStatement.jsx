@@ -1,6 +1,5 @@
 "use client"
 import { motion } from "framer-motion";
-import Link from "next/link";
 import PrimaryButton from "../PrimaryButton";
 import AnimatedLines from "../AnimatedLines";
 
@@ -19,14 +18,13 @@ function MissionStatement({ missionStatement }) {
                         {missionStatement.subHeading}
                     </p>
                     <p className='mt-7 lg:mt-10 sm:text-lg leading-relaxed font-light text-gray-800'>{missionStatement.text}</p>
-                    <Link className="mt-10" href={"/"}>
-                        <PrimaryButton
+                    <PrimaryButton
+                        className="mt-10"
                         href={"/companies"}
-                            label={missionStatement.button}
-                            size="md"
-                            radius="rounded-full"
-                        />
-                    </Link>
+                        label={missionStatement.button}
+                        size="md"
+                        radius="rounded-full"
+                    />
                 </div>
             </div>
         </motion.div>

@@ -18,6 +18,7 @@ export default function PrimaryButton({
   motionEnabled = true,
   className,
   href,
+  download,
   onClick,
 }) {
   const sizeClasses = {
@@ -67,6 +68,7 @@ export default function PrimaryButton({
     return (
       <MotionLink
         href={href}
+        download={download}
         {...motionProps}
         className={classes}
       >
