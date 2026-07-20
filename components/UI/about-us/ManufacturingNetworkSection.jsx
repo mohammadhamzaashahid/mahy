@@ -48,11 +48,11 @@ export default function ManufacturingNetworkSection({ network, locale }) {
               className="mt-5 text-gray-100 text-sm sm:text-base md:text-lg leading-relaxed opacity-90 max-w-7xl mx-auto">
               {network.text[1]}
             </motion.p>
-            <motion.div className="mt-8 md:mt-14 grid grid-cols-1 sm:grid-cols-3 gap-y-7 md:gap-y-12 gap-x-6"
+            <motion.div className="mt-8 md:mt-14 grid grid-cols-1 sm:grid-cols-2 gap-y-7 md:gap-y-12 gap-x-6"
               variants={prefersReducedMotion ? {} : stagger}>
               <Stat value={network.statsNo[0]} label={network.stats[0]} />
               <Stat value={network.statsNo[1]} label={network.stats[1]} />
-              <Stat value={network.statsNo[2]} label={network.stats[2]} />
+              {/* <Stat value={network.statsNo[2]} label={network.stats[2]} /> */}
             </motion.div>
           </div>
         </motion.div>

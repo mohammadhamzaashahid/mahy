@@ -2,7 +2,8 @@
 
 import { usePathname } from "next/navigation";
 import Navbar from "./Navbar";
-import Footer from "./Footer";
+import FooterV2 from "./FooterV2";
+
 import ChatBot from "../EnquiryChatBot/FloatingWrapper/Chatbot";
 import { useState } from "react";
 // import { getTranslations } from "next-intl/server";
@@ -10,7 +11,6 @@ import { useState } from "react";
 export default function LayoutWrapper({
   children,
   navigation,
-  footerData,
   chatbotData,
   locale,
 }) {
@@ -32,7 +32,7 @@ export default function LayoutWrapper({
 
       {!isPortal && (
         <section id="useful-links">
-          <Footer data={footerData} setIsWidgetOpen={setIsWidgetOpen} />
+          <FooterV2 />
         </section>
       )}
 

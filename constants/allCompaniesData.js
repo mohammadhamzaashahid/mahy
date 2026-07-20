@@ -274,7 +274,7 @@ export const allCompanies = [
             image:
                 "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774438750/23_-_mahy-automotive_la0ndw.jpg",
             href: "/companies/details/mahy-khoory-automotive",
-            brochure: "/brochures/mahy-khoory-automotive.pdf",
+            brochure: "/brochures/MKA-Brochure.pdf",
         },
         {
             title: "Union Nonwoven Industries",

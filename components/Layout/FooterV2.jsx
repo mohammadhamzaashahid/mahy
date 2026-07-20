@@ -3,125 +3,31 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { MapPin, Phone, Mail, Globe, ArrowRight } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 import {
-  FaLinkedinIn,
-  FaFacebookF,
-  FaInstagram,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
-
-const columnsRow1 = [
-  {
-    title: "About Us",
-    links: [
-      { label: "About Us", href: "/about-us" },
-      { label: "Our History", href: "/about-us/group-history-and-legacy" },
-      { label: "Vision, Mission & Values", href: "/about-us/mission-vision-values" },
-      { label: "Company Profile", href: "/about-us/company-profile" },
-      { label: "Group History & Legacy", href: "/about-us/group-history-and-legacy" },
-    ],
-  },
-  {
-    title: "Leadership & Governance",
-    links: [
-      { label: "Leadership & Management", href: "/about-us/leadership-and-management" },
-      { label: "Leadership Philosophy", href: "/about-us/leadership-and-management" },
-      { label: "Management Structure", href: "/about-us/leadership-and-management" },
-      { label: "Governance", href: "/about-us/corporate-governance" },
-    ],
-  },
-  {
-    title: "Our Companies",
-    links: [
-      { label: "All Group Companies", href: "/companies/all" },
-      { label: "Explore Companies", href: "/companies/group-structure" },
-    ],
-  },
-  {
-    title: "Industries & Solutions",
-    links: [
-      { label: "Industries We Serve", href: "/industries" },
-      { label: "Solutions & Services", href: "/products-and-services" },
-      { label: "Case Studies", href: "/projects" },
-      {
-        label: "Innovations",
-        href: "/companies/operations-and-capabilities/technology-innovation",
-      },
-    ],
-  },
-  {
-    title: "Products & Services",
-    links: [
-      { label: "Products & Services", href: "/products-and-services" },
-      { label: "Shop", href: "/shop" },
-    ],
-  },
-];
-
-const columnsRow2 = [
-  {
-    title: "Investors",
-    links: [
-      { label: "Investors Overview", href: "#" },
-      { label: "Financial Reports", href: "#" },
-      { label: "Presentations", href: "#" },
-      { label: "Share Information", href: "#" },
-    ],
-  },
-  {
-    title: "Careers",
-    links: [
-      { label: "Careers", href: "/careers" },
-      { label: "Why Join Us", href: "/careers/why-join-us" },
-      { label: "Life at MAHY", href: "/careers/life-at-mahy" },
-      { label: "Current Openings", href: "/careers/opportunities" },
-    ],
-  },
-  {
-    title: "News & Media",
-    links: [
-      { label: "News & Updates", href: "/news" },
-      { label: "Media Center", href: "/news" },
-      { label: "Blog", href: "#" },
-    ],
-  },
-  {
-    title: "Sustainability",
-    links: [
-      { label: "Sustainability & CSR", href: "/about-us/sustainability" },
-      { label: "Our Initiatives", href: "/about-us/sustainability" },
-      { label: "ESG Reports", href: "#" },
-    ],
-  },
-];
-
-const contactInfo = [
-  { icon: MapPin, text: "P.O. Box 123456, Dubai, United Arab Emirates" },
-  { icon: Phone, text: "+971 4 123 4567", href: "tel:+97141234567" },
-  { icon: Mail, text: "info@mahy.com", href: "mailto:info@mahy.com" },
-  { icon: Globe, text: "www.mahy.com", href: "https://www.mahy.com" },
-];
-
-const socials = [
-  { icon: FaLinkedinIn, href: "https://www.linkedin.com/company/m-a-h-y-khoory-co", label: "LinkedIn" },
-  { icon: FaFacebookF, href: "https://www.facebook.com/MAHYKHOORYLLC", label: "Facebook" },
-  { icon: FaInstagram, href: "https://www.instagram.com/mahykhooryllc", label: "Instagram" },
-  { icon: FaXTwitter, href: "https://x.com/mahykhooryllc?ct=google-seo", label: "X (Twitter)" },
-  { icon: FaYoutube, href: "https://www.youtube.com/@mahykhoory8592", label: "YouTube" },
-];
-
-const legalLinks = [
-  { label: "Terms of Use", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Cookie Policy", href: "#" },
-  { label: "Refund Policy", href: "#" },
-  { label: "Sitemap", href: "#" },
-];
+  footerBrand,
+  footerNavColumnsRow1,
+  footerNavColumnsRow2,
+  footerDefaultContact,
+  footerContactIcons,
+  footerSocialLinks,
+  footerLegalLinks,
+  footerNewsletter,
+  footerSocialSectionLabel,
+  footerCertifications,
+  footerCopyrightTemplate,
+} from "@/config/footerV2.config";
+import { getCompanyContactFromPathname } from "@/config/footerCompanyContacts.config";
 
 const focusRing =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-(--gold) focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A1220]";
+
+function buildTelHref(telephone) {
+  const firstNumber = telephone?.split(",")[0]?.trim();
+  const digits = firstNumber?.replace(/[^\d+]/g, "");
+  return digits ? `tel:${digits}` : undefined;
+}
 
 function ColumnHeading({ children }) {
   return (
@@ -154,50 +60,74 @@ function LinkColumn({ title, links }) {
   );
 }
 
-function IsoBadge() {
+function IsoBadge({ data }) {
   return (
     <div
       className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-sky-400/70 bg-white/5"
       role="img"
-      aria-label="ISO certified company"
+      aria-label={data.ariaLabel}
     >
       <div className="flex h-11 w-11 flex-col items-center justify-center rounded-full border border-white/30 text-center">
-        <span className="text-[10px] font-bold leading-none text-sky-300">ISO</span>
+        <span className="text-[10px] font-bold leading-none text-sky-300">{data.label}</span>
         <span className="mt-1 text-[6.5px] font-medium leading-none tracking-wide text-slate-300">
-          CERTIFIED
+          {data.sub1}
         </span>
         <span className="text-[6.5px] font-medium leading-none tracking-wide text-slate-300">
-          COMPANY
+          {data.sub2}
         </span>
       </div>
     </div>
   );
 }
 
-function IasBadge() {
+function IasBadge({ data }) {
   return (
     <div
       className="flex h-14 w-16 shrink-0 flex-col items-center justify-center gap-0.5 rounded-md border-2 border-emerald-500/60 bg-emerald-500/5 text-center"
       role="img"
-      aria-label="IAS accredited management systems certification body, MSCB-113"
+      aria-label={data.ariaLabel}
     >
-      <span className="text-[11px] font-bold leading-none text-emerald-400">IAS</span>
+      <span className="text-[11px] font-bold leading-none text-emerald-400">{data.label}</span>
       <span className="text-[6.5px] font-semibold leading-none tracking-wide text-slate-300">
-        ACCREDITED
+        {data.sub}
       </span>
       <span className="px-1 text-[5.5px] leading-tight text-slate-500">
-        Management Systems
+        {data.body[0]}
         <br />
-        Certification Body
+        {data.body[1]}
       </span>
-      <span className="text-[5.5px] leading-none text-slate-500">MSCB-113</span>
+      <span className="text-[5.5px] leading-none text-slate-500">{data.code}</span>
     </div>
   );
 }
 
 export default function FooterV2() {
   const [email, setEmail] = useState("");
+  const pathname = usePathname();
   const year = new Date().getFullYear();
+
+  const companyContact = getCompanyContactFromPathname(pathname);
+  const contact = {
+    address: companyContact?.address || footerDefaultContact.address,
+    telephone: companyContact?.telephone || footerDefaultContact.telephone,
+    email: companyContact?.email || footerDefaultContact.email,
+  };
+
+  const contactItems = [
+    { key: "address", icon: footerContactIcons.address, text: contact.address },
+    {
+      key: "telephone",
+      icon: footerContactIcons.telephone,
+      text: contact.telephone,
+      href: buildTelHref(contact.telephone),
+    },
+    {
+      key: "email",
+      icon: footerContactIcons.email,
+      text: contact.email,
+      href: contact.email ? `mailto:${contact.email}` : undefined,
+    },
+  ];
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -238,31 +168,31 @@ export default function FooterV2() {
                 className={`inline-flex items-center rounded-xs ${focusRing}`}
               >
                 <Image
-                  src="/MAHY.png"
-                  alt="MAHY Khoory & Co."
-                  width={220}
-                  height={100}
+                  src={footerBrand.logo}
+                  alt={footerBrand.logoAlt}
+                  width={footerBrand.logoWidth}
+                  height={footerBrand.logoHeight}
                   className="h-10 w-auto object-contain"
                 />
               </Link>
               <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-(--gold)">
-                Holding Company
+                {footerBrand.tagline}
               </p>
 
-              <p className="mt-5 text-sm leading-relaxed text-slate-400">
-                We are the M.A.H.Y. Khoory Group, one of the leaders in
-                innovation and technology in the region and beyond.
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-slate-400">
-                We are a conglomerate of diverse companies and business units,
-                with a workforce of over 4000+ people.
-              </p>
+              {footerBrand.description.map((paragraph, index) => (
+                <p
+                  key={paragraph}
+                  className={`text-sm leading-relaxed text-slate-400 ${index === 0 ? "mt-5" : "mt-4"}`}
+                >
+                  {paragraph}
+                </p>
+              ))}
 
               <Link
-                href="/about-us"
+                href={footerBrand.cta.href}
                 className={`group mt-6 inline-flex items-center gap-2 rounded-md border border-(--gold) px-5 py-2.5 text-sm font-semibold text-(--gold) transition-colors duration-200 hover:bg-(--gold) hover:text-[#0A1220] ${focusRing}`}
               >
-                Learn More About Us
+                {footerBrand.cta.label}
                 <ArrowRight
                   size={16}
                   className="transition-transform duration-200 group-hover:translate-x-1"
@@ -272,7 +202,7 @@ export default function FooterV2() {
 
             {/* Nav columns row 1 */}
             <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:col-span-9 lg:grid-cols-5 lg:gap-8">
-              {columnsRow1.map((col) => (
+              {footerNavColumnsRow1.map((col) => (
                 <LinkColumn key={col.title} title={col.title} links={col.links} />
               ))}
             </div>
@@ -280,15 +210,31 @@ export default function FooterV2() {
 
           {/* Nav columns row 2 */}
           <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-white/10 pt-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8">
-            {columnsRow2.map((col) => (
+            {footerNavColumnsRow2.map((col) => (
               <LinkColumn key={col.title} title={col.title} links={col.links} />
             ))}
 
             <div>
+              {/* {companyContact?.image && (
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-md border border-white/15 bg-white/5">
+                    <Image
+                      src={companyContact.image}
+                      alt={companyContact.title}
+                      fill
+                      sizes="40px"
+                      className="object-contain p-1"
+                    />
+                  </span>
+                  <span className="text-[13px] font-medium leading-tight text-slate-300">
+                    {companyContact.title}
+                  </span>
+                </div>
+              )} */}
               <ColumnHeading>Contact Us</ColumnHeading>
               <ul className="space-y-3">
-                {contactInfo.map((item) => (
-                  <li key={item.text} className="flex items-start gap-2.5">
+                {contactItems.map((item) => (
+                  <li key={item.key} className="flex items-start gap-2.5">
                     <item.icon size={15} className="mt-0.5 shrink-0 text-(--gold)" />
                     {item.href ? (
                       <Link
@@ -314,12 +260,12 @@ export default function FooterV2() {
           {/* Stay connected */}
           <div className="flex items-start gap-3 lg:max-w-xs">
             <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-(--gold)/40">
-              <Mail size={17} className="text-(--gold)" />
+              <footerContactIcons.email size={17} className="text-(--gold)" />
             </span>
             <div>
-              <p className="text-sm font-semibold text-white">Stay Connected</p>
+              <p className="text-sm font-semibold text-white">{footerNewsletter.title}</p>
               <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
-                Subscribe to our newsletter for the latest updates and insights.
+                {footerNewsletter.description}
               </p>
             </div>
           </div>
@@ -336,23 +282,25 @@ export default function FooterV2() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
+              placeholder={footerNewsletter.placeholder}
               className="w-full min-w-0 rounded-l-md border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:border-white/40"
             />
             <button
               type="submit"
               className={`flex shrink-0 items-center gap-1.5 rounded-r-md bg-(--gold) px-5 py-3 text-sm font-semibold text-[#0A1220] transition-colors duration-200 hover:bg-(--gold-dark) ${focusRing}`}
             >
-              Subscribe
+              {footerNewsletter.buttonLabel}
               <ArrowRight size={15} />
             </button>
           </form>
 
           {/* Follow us */}
           <div className="flex flex-col gap-3">
-            <p className="text-xs font-semibold uppercase tracking-wide text-white">Follow Us</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-white">
+              {footerSocialSectionLabel}
+            </p>
             <div className="flex items-center gap-3">
-              {socials.map((social) => (
+              {footerSocialLinks.map((social) => (
                 <Link
                   key={social.label}
                   href={social.href}
@@ -367,23 +315,10 @@ export default function FooterV2() {
             </div>
           </div>
 
-          {/* Global presence */}
-          {/* <div className="flex items-center gap-3">
-            <Globe size={28} className="shrink-0 text-(--gold)" />
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-white">
-                Global Presence
-              </p>
-              <p className="mt-0.5 max-w-[220px] text-xs leading-relaxed text-slate-500">
-                Operating across multiple regions worldwide.
-              </p>
-            </div>
-          </div> */}
-
           {/* Certifications */}
           <div className="flex items-center gap-4">
-            <IsoBadge />
-            <IasBadge />
+            <IsoBadge data={footerCertifications.iso} />
+            <IasBadge data={footerCertifications.ias} />
           </div>
         </div>
       </div>
@@ -391,9 +326,9 @@ export default function FooterV2() {
       {/* Bottom bar */}
       <div className="border-t border-white/10 bg-[#070C16]">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-5 text-xs text-slate-500 sm:flex-row lg:px-10">
-          <p>© {year} M.A.H.Y. Khoory & Co. LLC. All rights reserved.</p>
+          <p>{footerCopyrightTemplate(year)}</p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            {legalLinks.map((link) => (
+            {footerLegalLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}

@@ -25,12 +25,15 @@ function ImageBlock({ src, alt }) {
     )
 }
 
-function TextBlock({ title, texts, placeholder }) {
+function TextBlock({ title, texts, placeholder, mainTitle }) {
     const hasContent = title || (texts && texts.length > 0)
     return (
         <div>
+            {mainTitle && (
+                <h1 className="font-semibold text-2xl md:text-2xl leading-tight t-base mb-5">{mainTitle}</h1>
+            )}
             {title && (
-                <h2 className="font-semibold text-4xl md:text-5xl leading-tight t-base mb-5">{title}</h2>
+                <h2 className="font-semibold text-4xl md:text-5xl leading-tight t-base mb-5 italic">{title}</h2>
             )}
             {texts && texts.map((text, i) => (
                 <p key={i} className="font-light text-gray-600 leading-relaxed mb-4 last:mb-0">
@@ -46,11 +49,11 @@ function TextBlock({ title, texts, placeholder }) {
     )
 }
 
-function CompaniesSectorsGrid({ title, texts, image, imageAlt, image2, image2Alt, texts2 }) {
+function CompaniesSectorsGrid({ title, texts, image, imageAlt, image2, image2Alt, texts2, mainTitle }) {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-x-16 md:gap-y-14">
             <SlideReveal direction="left">
-                <TextBlock title={title} texts={texts} />
+                <TextBlock title={title} texts={texts} mainTitle={mainTitle} />
             </SlideReveal>
 
             <SlideReveal direction="right">

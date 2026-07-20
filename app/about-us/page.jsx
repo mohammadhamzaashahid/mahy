@@ -239,11 +239,11 @@ async function About() {
   // };
   const network = {
     text: ["Regional Reach. Global Presence.", "With a network of offices across all seven Emirates of the UAE and an international footprint in Oman, India, and Iraq, our teams work collaboratively to deliver exceptional service and support to customers across the region and beyond."],
-    stats: ["Employees", "Nationalities", "Industries"],
+    stats: ["Employees", "Nationalities"],
     statsNo: [
       (4000).toLocaleString(locale),
-      (38).toLocaleString(locale),
-      (10).toLocaleString(locale),
+      (35).toLocaleString(locale),
+  
     ],
     map: [t("Network.Map1"), t("Network.Map2"), t("Network.Map3")],
     locations: [
@@ -304,6 +304,7 @@ async function About() {
 
       <section className="max-w-7xl mx-auto px-5 py-15 md:py-25">
         <CompaniesSectorsGrid
+        mainTitle="Know About Us"
           title="Nearly a century of building the UAE's industrial future"
           texts={[
             "M.A.H.Y. Khoory & Co. LLC is one of the UAE's most established and trusted diversified industrial holding groups, founded in Dubai in 1930 by Mohd. Abdulla Haji Yousuf Khoory, a UAE-national family enterprise that has been part of this country's commercial and industrial fabric for nearly a century. What began as a single trading venture in the formative years of the region's economy has grown, across four generations and through disciplined, deliberate expansion, into a Group of 25 operating companies spanning ten industries and serving clients across the globe. ",
