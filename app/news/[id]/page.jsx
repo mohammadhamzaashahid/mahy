@@ -6,6 +6,26 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import React from "react";
 
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const article = articles.find((a) => a.id === Number(id));
+  if (!article) return {};
+
+  return {
+    title: article.heading,
+    description: article.subHeading,
+    alternates: { canonical: `/news/${id}` },
+    openGraph: {
+      title: article.heading,
+      description: article.subHeading,
+      url: `/news/${id}`,
+      type: "article",
+      publishedTime: article.date instanceof Date ? article.date.toISOString() : undefined,
+      images: [{ url: article.image }],
+    },
+  };
+}
+
 async function Article({ params }) {
   const { id } = await params;
   const article = articles.find((a) => a.id === Number(id));

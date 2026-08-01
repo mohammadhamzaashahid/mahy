@@ -123,7 +123,7 @@ export const footerSocialLinks = [
 export const footerLegalLinks = [
   { label: "Terms of Use", href: "#" },
   { label: "Privacy Policy", href: "#" },
-  { label: "Cookie Policy", href: "#" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
   { label: "Refund Policy", href: "#" },
   { label: "Sitemap", href: "#" },
 ];

@@ -3,12 +3,19 @@ import ServicesGlobally from "@/components/UI/companies/detail/ServicesGlobally"
 import WhoWeAre from "@/components/UI/home/WhoWeAre";
 import PageHeading from "@/components/UI/PageHeading";
 
+export const metadata = {
+  title: "Plastic Jerry Cans",
+  description:
+    "MAHY Khoory Group manufactures plastic jerry cans from HDPE and food-grade plastics, offering superior impact resistance and long-term reliability.",
+  alternates: { canonical: "/products/plastic-jerry-cans" },
+};
+
 function PlasticJerryCansPage() {
   const features = [
     {
       label: "Product-Oriented Features",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026203/plastic-jerry-cans-3_eloxwq.jpg",
+        "/assets/plastic-jerry-cans-3_eloxwq.jpg",
       imageClassName: "object-cover",
       items: [
         {
@@ -25,7 +32,7 @@ function PlasticJerryCansPage() {
         },
         {
           image:
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-4_sxwojv.jpg",
+            "/assets/plastic-jerry-cans-4_sxwojv.jpg",
           title: "Industry-Specific Variants",
           items: [
             "Lubricant - grade jerry cans for engine oils, hydraulic oils, and greases",
@@ -36,7 +43,7 @@ function PlasticJerryCansPage() {
         },
         {
           image:
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-4_sxwojv.jpg",
+            "/assets/plastic-jerry-cans-4_sxwojv.jpg",
           title: "Flexible Cap & Closure Options",
           imageClassName: "object-cover",
           text: "Choose from:",
@@ -54,7 +61,7 @@ function PlasticJerryCansPage() {
     {
       label: "Branding & Customization Services",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777221750/male-self-care-items-arrangement_blbewn.jpg",
+        "/assets/male-self-care-items-arrangement_blbewn.jpg",
       imageClassName: "object-contain",
       items: [
         {
@@ -79,7 +86,7 @@ function PlasticJerryCansPage() {
     {
       label: "Performance Advantages",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026205/plastic-jerry-cans-5_mkjrru.jpg",
+        "/assets/plastic-jerry-cans-5_mkjrru.jpg",
       imageClassName: "object-cover",
       items: [
         {
@@ -97,7 +104,7 @@ function PlasticJerryCansPage() {
     {
       label: "Applications",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026206/plastic-jerry-cans-6_wgoyps.jpg",
+        "/assets/plastic-jerry-cans-6_wgoyps.jpg",
       imageClassName: "object-cover",
       items: [
         {
@@ -118,13 +125,13 @@ function PlasticJerryCansPage() {
     <main>
       <PageHeading
         title={"Plastic Jerry Cans"}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026200/plastic-jerry-cans-1_dx8oeo.jpg"
+        image="/assets/plastic-jerry-cans-1_dx8oeo.jpg"
       />
 
       <WhoWeAre
         showButton={false}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777570061/detergents-with-flowers-on-a-pink-background-2026-01-09-07-49-51-utc_bkz1mj.jpg"
+          "/assets/detergents-with-flowers-on-a-pink-background-2026-01-09-07-49-51-utc_bkz1mj.jpg"
         }
         padding="xl"
         heading="Versatile Packaging Solutions"
@@ -134,7 +141,7 @@ function PlasticJerryCansPage() {
       {/* <ServicesGlobally
         objectFit="contain"
         text="Our comprehensive range of plastic jerry cans is available in multiple capacities — 0.5L, 1L, 3L, 4L, 5L, 15L, 20L, and 25L — designed to meet the versatile packaging requirements of lubricant manufacturers, petroleum distributors, chemical suppliers, cleaning product producers, and food-processing industries across the UAE. Each jerry can is manufactured using premium-grade, high-density raw materials, ensuring durability, leak resistance, dimensional stability, and safe handling in harsh operational environments."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026202/plastic-jerry-cans-2_wdcmkm.png"
+        image="/assets/plastic-jerry-cans-2_wdcmkm.png"
       /> */}
       <CompanyVisionPurpose
         heading="Features"

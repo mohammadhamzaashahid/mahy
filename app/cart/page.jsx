@@ -4,6 +4,10 @@ import { getTranslations } from 'next-intl/server';
 import { cookies } from 'next/headers';
 import React from 'react'
 
+export const metadata = {
+    robots: { index: false, follow: false },
+};
+
 async function CartPage() {
     const cookieStore = await cookies();
     const cart = cookieStore.get("cart")

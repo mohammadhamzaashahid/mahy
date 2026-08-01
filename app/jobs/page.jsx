@@ -4,6 +4,13 @@ import PageHeading from '@/components/UI/PageHeading'
 import { getLocale, getTranslations } from 'next-intl/server'
 import React from 'react'
 
+export const metadata = {
+  title: "Jobs",
+  description:
+    "Browse current job openings at MAHY Khoory Group across its 25 companies operating in manufacturing, trading, engineering, logistics, waste management, automotive and hospitality.",
+  alternates: { canonical: "/jobs" },
+};
+
 async function Jobs({ searchParams }) {
     const params = await searchParams;
     const t = await getTranslations("JobsPage");
@@ -25,7 +32,7 @@ async function Jobs({ searchParams }) {
             <PageHeading
                 title={t("Heading")}
                 description={t("SubHeading")}
-                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822107/careers_samv9o.webp"}
+                image={"/assets/careers_samv9o.webp"}
             />
             <Breadcrumb
                 segments={[{ label: t2("Page"), href: "/careers" }, { label: t("Page"), href: "/jobs" }]}

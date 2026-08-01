@@ -6,6 +6,13 @@ import DesignProcessContainer from "@/components/UI/home/DesignProcessContainer"
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { HiLightBulb, HiShieldCheck } from "react-icons/hi";
 
+export const metadata = {
+  title: "Code of Conduct",
+  description:
+    "M.A.H.Y. Khoory Group's Code of Conduct sets out the standards of integrity, compliance, fairness and ethical business practice expected across all Group companies.",
+  alternates: { canonical: "/about-us/code-of-conduct" },
+};
+
 export default function GovernancePage() {
   const codeOfConductItems = [
     {
@@ -79,18 +86,18 @@ export default function GovernancePage() {
       title: "Compliance & Accountability",
       text: "Compliance with the Group’s policies and Code of Conduct is mandatory for all employees and business units. Management teams are responsible for implementing policies within their operations and ensuring that employees are aware of and trained on relevant requirements.",
       text2: "The Group monitors compliance through internal controls, audits, reviews, and reporting mechanisms. Where violations are identified, appropriate corrective actions are taken to address issues and prevent recurrence.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772868971/code-of-coduct-images_aat7tx.jpg"
+      image: "/assets/code-of-coduct-images_aat7tx.jpg"
     },
     {
       title: "Speaking Up & Ethical Concerns",
       text: "MAHY Khoory Group encourages open communication and responsible reporting of concerns related to unethical behavior, policy violations, or misconduct. Employees are expected to raise concerns through appropriate internal channels without fear of retaliation.",
       text2: "All reported concerns are treated confidentially and investigated fairly, in line with established procedures.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772869033/code-of-coduct-images1_xfgcdy.jpg"
+      image: "/assets/code-of-coduct-images1_xfgcdy.jpg"
     },
     {
       title: "Commitment to Responsible Business",
       text: "Our policies and Code of Conduct reflect MAHY Khoory Group’s commitment to responsible business practices, long-term sustainability, and strong corporate governance. By adhering to these principles, we aim to build trust, protect our reputation, and create lasting value for our customers, partners, employees, and the communities we serve.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772869107/code-of-coduct-images-section_u1v6cf.jpg"
+      image: "/assets/code-of-coduct-images-section_u1v6cf.jpg"
     }
   ];
 
@@ -99,8 +106,8 @@ export default function GovernancePage() {
       <SubPageHeading
       fullHeight
         title="Code Of Conduct"
-        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772868318/Code_of_Conduct.jpg_qjqqzs.jpg"
-        image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776626763/code-of-conduct_hujjya.jpg"}
+        // image="/assets/Code_of_Conduct.jpg_qjqqzs.jpg"
+        image={"/assets/code-of-conduct_hujjya.jpg"}
         align="center"
       />
       <DesignProcessContainer
@@ -112,7 +119,7 @@ export default function GovernancePage() {
         space={"lg:space-y-10"}
       />
       <WasteCollectionGrid
-      images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776878538/concepts-practices-policies-company-articles-association-terms.jpg_jyxybb.jpg","https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776878543/professional-touching-policy-icon-digital-interface-networking-corporate-connections-with-technology-strategic-progress.jpg_pzmnti.jpg", "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776878527/digital-document-online-electronic-signature-document-management-paperless-office-e-signing-signing-business-contract-concept-metaverse_1.jpg_b8ydfi.jpg"]}
+      images={["/assets/concepts-practices-policies-company-articles-association-terms.jpg_jyxybb.jpg","/assets/professional-touching-policy-icon-digital-interface-networking-corporate-connections-with-technology-strategic-progress.jpg_pzmnti.jpg", "/assets/digital-document-online-electronic-signature-document-management-paperless-office-e-signing-signing-business-contract-concept-metaverse_1.jpg_b8ydfi.jpg"]}
         heading={"Group Policies"}
         text1={"MAHY Khoory Group maintains a comprehensive set of policies designed to support consistent governance, risk management, and operational discipline across all companies."}
         text2={"These policies cover, among others:"}

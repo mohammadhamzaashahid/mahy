@@ -9,6 +9,13 @@ import ServicesGlobally from "@/components/UI/companies/detail/ServicesGlobally"
 import WhoWeAre from "@/components/UI/home/WhoWeAre";
 import PageHeading from "@/components/UI/PageHeading";
 
+export const metadata = {
+  title: "Comprehensive Pumping System & HVAC Solutions",
+  description:
+    "MAHY Khoory Group delivers comprehensive pumping system and HVAC solutions, including detailed inspection of supplied pumps, accessories and full lifecycle support.",
+  alternates: { canonical: "/services/comprehensive-pumping-system-hvac-services" },
+};
+
 function PumpingSystemServicesPage() {
   const items = [
     "Pre-Installation Inspection",
@@ -53,7 +60,7 @@ function PumpingSystemServicesPage() {
     desc:
       "We support projects with structured planning, precise system selection, and technical guidance from concept to completion. Our development approach ensures every solution is engineered for efficiency, reliability, and long‑term performance.",
     image:
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777614302/industrial-ventilation-system-with-metal-ducts-hvac-units-2_uaydfh.jpg",
+      "/assets/industrial-ventilation-system-with-metal-ducts-hvac-units-2_uaydfh.jpg",
   },
   {
     no: "02",
@@ -61,7 +68,7 @@ function PumpingSystemServicesPage() {
     desc:
       "We analyze industry trends, customer needs, and competitive landscapes to guide smarter decision‑making and product positioning. Our insights help shape strategies that align with market demand and drive sustainable business growth.",
     image:
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777614151/air-conditioning-hvac-roof-industrial-building_yepg08.jpg",
+      "/assets/air-conditioning-hvac-roof-industrial-building_yepg08.jpg",
   },
   {
     no: "03",
@@ -69,7 +76,7 @@ function PumpingSystemServicesPage() {
     desc:
       "We provide strategic guidance that helps organizations streamline operations, strengthen decision‑making, and unlock new growth opportunities. Our consulting approach focuses on aligning processes, technology, and market needs to drive measurable, long‑term business performance.",
     image:
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777614146/3d-rendering-ventilation-system_sjedm3.jpg",
+      "/assets/3d-rendering-ventilation-system_sjedm3.jpg",
   },
   {
     no: "04",
@@ -77,7 +84,7 @@ function PumpingSystemServicesPage() {
     desc:
       "We strengthen project value by promoting energy‑efficient HVAC, water heating, and pumping technologies that reduce long‑term operating costs and improve lifecycle performance",
     image:
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777614146/industrial-hvac-system-manufacturing-plant_nioui4.jpg",
+      "/assets/industrial-hvac-system-manufacturing-plant_nioui4.jpg",
   },
 ];
   const acItems = [
@@ -112,17 +119,17 @@ function PumpingSystemServicesPage() {
     {
       title: "Collaborative",
       text: "We work collaboratively with clients, consultants, and contractors to ensure every system is seamlessly integrated and optimized for performance. Our team-driven approach fosters transparency, alignment, and efficiency, delivering solutions that meet project goals with precision.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777616461/Collabrative_gphizt.jpg",
+      image: "/assets/Collabrative_gphizt.jpg",
     },
     {
       title: "Proven Results",
       text: "Our track record spans decades of successful HVAC and pumping installations across major UAE developments. We consistently deliver systems that perform reliably, meet project demands, and exceed client expectations.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777616457/Proven_results_qgyjp4.jpg",
+      image: "/assets/Proven_results_qgyjp4.jpg",
     },
     {
       title: "Tailored Solutions",
       text: "We customize every HVAC, water heating, and pumping system to match each project’s unique technical, operational, and efficiency requirements. Our solutions are engineered around your environment, ensuring optimal performance, reliability, and long‑term value.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777616454/Tailored_Solutions_d6xth2.jpg",
+      image: "/assets/Tailored_Solutions_d6xth2.jpg",
     },
   ]
 
@@ -131,11 +138,11 @@ function PumpingSystemServicesPage() {
       <PageHeading
         title={"Comprehensive Pumping System & HVAC Solutions"}
         description="Expert installation, commissioning, repair, and Annual Maintenance Contracts (AMC) for air conditioning, pumping systems, water heaters, swimming pools, and fountains. Your single-point solution for mechanical system reliability."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776840938/maintenance-engineers-inspect-system-pumping-stations-pipes-delivering-clean-water-water-storage-tanks-community_zgcca6.jpg"
+        image="/assets/maintenance-engineers-inspect-system-pumping-stations-pipes-delivering-clean-water-water-storage-tanks-community_zgcca6.jpg"
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
-          image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025256/comprehensive-pumping-system-3_cvxj3a.jpg"
+          image="/assets/comprehensive-pumping-system-3_cvxj3a.jpg"
           title={"Precision from Start to Finish"}
           texts={[
             "We provide end-to-end services for chilled water, domestic water supply (transfer & booster), sewerage , and other pumping systems, focusing on optimal performance and minimal downtime.",
@@ -151,7 +158,7 @@ function PumpingSystemServicesPage() {
           "We offer complete solutions for air conditioning and ventilation systems, ensuring consistent comfort, reliability, and energy efficiency."
         }
         items={acItems}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025222/comprehensive-pumping-system-2_kt1cfj.png"
+        image="/assets/comprehensive-pumping-system-2_kt1cfj.png"
       />
       <SolarPanelQuoteGrid
         heading="Annual Maintenance Contracts (AMC): Proactive Peace of Mind"
@@ -174,12 +181,12 @@ function PumpingSystemServicesPage() {
           "Proper care and timely interventions that protect your investment over the long term.",
           "Fixed or structured costs that make it easier to plan and control maintenance expenses.",
         ]}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025219/comprehensive-pumping-system-1_tzdqvk.jpg"
+        image="/assets/comprehensive-pumping-system-1_tzdqvk.jpg"
       />
 
       <WhoWeAre
         showButton={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777613764/worker-refilling-hvac-system-refrigerant_r0wiym.jpg"
+        image="/assets/worker-refilling-hvac-system-refrigerant_r0wiym.jpg"
         text="Whether you need a one-time repair, a full system overhaul, or a long-term maintenance partner, our service team delivers reliability, accountability, and technical excellence. Talk to us today to discuss a service plan or AMC tailored to your building and operational needs."
         heading="Your Single-Point Solution for Mechanical System Reliability"
       />
@@ -189,7 +196,7 @@ function PumpingSystemServicesPage() {
       heading="Our Services"
       subHeading=""
       steps={steps}
-      image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777615511/freelancer-developing-startup-project-analyzing-financial-statistics_gclscz.jpg"
+      image="/assets/freelancer-developing-startup-project-analyzing-financial-statistics_gclscz.jpg"
       />
       {/* <ServicesPumping /> */}
     </main>

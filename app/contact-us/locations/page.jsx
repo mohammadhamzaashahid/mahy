@@ -4,6 +4,7 @@ import MahyLocationsMap from "@/components/Navigator/MahyLocationsMap";
 import OperationsAndCapabilitiesOverview from "@/components/UI/companies/operations-and-capabilities/OperationsAndCapabilitiesOverview"
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { companyDetails } from "@/constants/contactDetailsCompanies";
+
 const container = {
     hidden: { opacity: 0, x: -20 },
     visible: {
@@ -25,7 +26,7 @@ function locations() {
                 title={"Our Locations"}
                 fullHeight
                 description={"At MAHY Khoory Group, delivering reliable support and maintaining strong customer relationships is a core priority across all our sectors."}
-                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776592263/mahy-location-page.jpg_jdopju.jpg"}
+                image={"/assets/mahy-location-page.jpg_jdopju.jpg"}
             />
 
             <MahyLocationsMap/>

@@ -2,6 +2,13 @@ import AnimatedLines from '@/components/UI/AnimatedLines'
 import Image from 'next/image';
 import React from 'react'
 
+export const metadata = {
+    title: "Board of Directors & Senior Leadership",
+    description:
+        "Meet the senior leadership of M.A.H.Y. Khoory & Co. LLC, including Chairman Salahuddin Sharafi and Group CEO Shabbir Haideri, guiding the Group's strategy and operations across the UAE.",
+    alternates: { canonical: "/about-us/board-of-directors" },
+};
+
 function DirectorsPage() {
     const items = [
         { title: "Mr. Salahuddin Sharafi", text: "Mr. Salahuddin Sharafi is the esteemed Chairman of M.A.H.Y. Khoory & Co. LLC, guiding the company with vision and strategic leadership. With extensive experience across diverse industries, he has played a pivotal role in strengthening the organization's market presence. His commitment to excellence and innovation continues to drive sustainable growth. Under his leadership, the company has expanded its portfolio and reinforced its reputation for quality. Mr. Sharafi remains dedicated to fostering long-term partnerships and delivering value to stakeholders.", image: "/gallery/chairmanphoto.jpg" },

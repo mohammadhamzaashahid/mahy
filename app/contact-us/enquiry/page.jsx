@@ -2,6 +2,13 @@ import ContactUsForm from '@/components/Contact/contact-us-page/ContactUsForm';
 import ContactTextPane from '@/components/Contact/ContactTextPane'
 import { getTranslations } from 'next-intl/server';
 
+export const metadata = {
+    title: "Enquiry",
+    description:
+        "Send an enquiry to MAHY Khoory Group about our products, services or companies, and our team will respond promptly.",
+    alternates: { canonical: "/contact-us/enquiry" },
+};
+
 async function EnquiryPage() {
     const t = await getTranslations("ContactUsPage");
     const contactUs = {

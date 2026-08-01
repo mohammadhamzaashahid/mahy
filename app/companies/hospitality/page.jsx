@@ -1,6 +1,13 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 import SolarPanelInstallationsGrid from "@/components/Services/SolarPanel/SolarPanelInstallationsGrid"
 
+export const metadata = {
+  title: "Hospitality",
+  description:
+    "MAHY Khoory Group's hospitality sector operates serviced hotel apartments offering premium accommodation across the UAE.",
+  alternates: { canonical: "/companies/hospitality" },
+};
+
 function HospitalityPage() {
     return (
         <main>

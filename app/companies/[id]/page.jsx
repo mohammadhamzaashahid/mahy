@@ -6,6 +6,13 @@ import CompanyTextOnBackground from '@/components/UI/companies/detail/CompanyTex
 import CompanyVisionPurpose from '@/components/UI/companies/detail/CompanyVisionPurpose'
 import ServicesGlobally from '@/components/UI/companies/detail/ServicesGlobally'
 
+// This route renders identical placeholder content regardless of `id` (it
+// doesn't read params), so indexing it would create duplicate-content pages
+// for every id. The real per-company pages live under /companies/details/*.
+export const metadata = {
+    robots: { index: false, follow: false },
+};
+
 function CompanyDetailPage() {
     return (
         <main>

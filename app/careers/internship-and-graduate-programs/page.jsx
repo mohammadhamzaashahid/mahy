@@ -1,18 +1,25 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 import SubPageHeading from "@/components/UI/SubPageHeading"
 
+export const metadata = {
+    title: "Internship & Graduate Programs",
+    description:
+        "MAHY Khoory Group's internship and graduate programs give students and new graduates hands-on exposure to a diversified, multi-sector organization across the UAE.",
+    alternates: { canonical: "/careers/internship-and-graduate-programs" },
+};
+
 function InternshipAndGraduatePrograms() {
     return (
         <main>
             <SubPageHeading
                 title={"Internship & Graduate Program"}
                 fullHeight
-                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767567/internship-graduates-prog.jpg_uq1d6i.jpg"}
+                image={"/assets/internship-graduates-prog.jpg_uq1d6i.jpg"}
             />
             <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
                 <CompaniesSectors
-                    image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767418/dubai-city-skyline-showing-burj-khalifa-2014.jpg_jx4cxo.jpg"}
-                    image2={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767464/panoramic-view-dubai-city-illuminated-neon-spectrum.jpg_v9thiu.jpg"}
+                    image={"/assets/dubai-city-skyline-showing-burj-khalifa-2014.jpg_jx4cxo.jpg"}
+                    image2={"/assets/panoramic-view-dubai-city-illuminated-neon-spectrum.jpg_v9thiu.jpg"}
                     texts={[
                         "At MAHY Khoory Group, we recognize the importance of developing future professionals by providing meaningful early-career opportunities. Our Internship and Graduate Program is designed to give students and recent graduates practical exposure to real business environments across our diversified group.",
                         "From time to time, different departments within the group may require interns or entry-level graduates based on operational needs and project requirements. Opportunities may arise within engineering, finance, supply chain, logistics, technical services, administration, IT, digital transformation, hospitality, and other business functions across our subsidiaries.",

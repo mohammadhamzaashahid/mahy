@@ -1,5 +1,12 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 
+export const metadata = {
+  title: "Packaging Manufacturing & Sustainable Packaging Solutions",
+  description:
+    "MAHY Khoory Group transforms recycled and virgin materials into finished packaging products for FMCG, food and beverage, industrial, logistics, agriculture and export markets.",
+  alternates: { canonical: "/companies/packaging-manufacturing-sustainable-packaging-solutions" },
+};
+
 function PackagingManufacturingPage() {
     return (
         <main>

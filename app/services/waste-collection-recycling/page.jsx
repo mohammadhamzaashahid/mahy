@@ -10,6 +10,13 @@ import WhyUs from "@/components/UI/home/WhyUs";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { HiOfficeBuilding } from "react-icons/hi";
 
+export const metadata = {
+  title: "Waste Collection & Recycling Services",
+  description:
+    "MAHY Khoory Group operates a fleet of over 120 modern waste collection trucks, ensuring punctual, uninterrupted waste collection and recycling services across multiple UAE locations.",
+  alternates: { canonical: "/services/waste-collection-recycling" },
+};
+
 function WasteCollectionServicesPage() {
   const services = [
     {
@@ -63,22 +70,22 @@ function WasteCollectionServicesPage() {
     {
       label: "Reliable Daily Coverage",
       text: "Ensures your property remains clean, compliant, and well-maintained at all times.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935983/waste-management-truck-landfill-site-surrounded-by-heaps-garbage-bright-blue-sky_gfnjsi.jpg",
+      image: "/assets/waste-management-truck-landfill-site-surrounded-by-heaps-garbage-bright-blue-sky_gfnjsi.jpg",
     },
     {
       label: "Transparent Reporting & Documentation",
       text: "Optional reporting includes waste volumes, recycling rates, and environmental impact summaries for corporate sustainability audits.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935946/photo-realistic-concept-recycling-bin-with-green-arrows-icon-symbolizing-waste-management-s_a0xncd.jpg",
+      image: "/assets/photo-realistic-concept-recycling-bin-with-green-arrows-icon-symbolizing-waste-management-s_a0xncd.jpg",
     },
     {
       label: "Custom-Tailored Solutions",
       text: "Waste collection schedules, container sizes, and recycling programs can be designed according to the specific needs of each facility.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776936151/waste-management-site-with-trucks-piles-debris-materials_kempsn.jpg",
+      image: "/assets/waste-management-site-with-trucks-piles-debris-materials_kempsn.jpg",
     },
     {
       label: "Safety & Environmental Compliance",
       text: "All operations follow UAE municipal standards, environmental regulations, and international best practices in waste handling.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935944/supervising-waste-management-operations-factory-ensure-safety-efficiency-concept-waste-management-factory-operations-safety-procedures-efficiency-monitoring-supervision_fe7gpb.jpg",
+      image: "/assets/supervising-waste-management-operations-factory-ensure-safety-efficiency-concept-waste-management-factory-operations-safety-procedures-efficiency-monitoring-supervision_fe7gpb.jpg",
     },
   ];
   const trust = {
@@ -100,7 +107,7 @@ function WasteCollectionServicesPage() {
       <SubPageHeading
         fullHeight
         title={"Waste Collection & Recycling Services"}
-        image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935960/smart-waste-management-systems-recycling-tech-waste-reduction-strategies_qxqmrc.jpg"}
+        image={"/assets/smart-waste-management-systems-recycling-tech-waste-reduction-strategies_qxqmrc.jpg"}
       />
       <SolarPanelInstallationsGrid
         icon={<HiOfficeBuilding size={30} color="white" />}
@@ -110,27 +117,27 @@ function WasteCollectionServicesPage() {
         itemsTitle="Comprehensive Waste Collection Services"
         items={services}
         images={[
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935983/waste-management-truck-landfill-site-surrounded-by-heaps-garbage-bright-blue-sky_gfnjsi.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935944/supervising-waste-management-operations-factory-ensure-safety-efficiency-concept-waste-management-factory-operations-safety-procedures-efficiency-monitoring-supervision_fe7gpb.jpg"
+          "/assets/waste-management-truck-landfill-site-surrounded-by-heaps-garbage-bright-blue-sky_gfnjsi.jpg",
+          "/assets/supervising-waste-management-operations-factory-ensure-safety-efficiency-concept-waste-management-factory-operations-safety-procedures-efficiency-monitoring-supervision_fe7gpb.jpg"
         ]}
       />
       <KitchenImageScaledGrid
         heading="Recycling & Material Recovery"
         items={recovery}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777552244/couple-collects-garbage-garbage-bags-park_efwxbe.jpg"
+        image="/assets/couple-collects-garbage-garbage-bags-park_efwxbe.jpg"
       />
       <TrustedBusinessAdvisor
         heading="Service Advantages & Value Proposition"
         items={advantages}
       />
-      <WhyUs items={trust} reverse={true} image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776935960/smart-waste-management-systems-recycling-tech-waste-reduction-strategies_qxqmrc.jpg" />
+      <WhyUs items={trust} reverse={true} image="/assets/smart-waste-management-systems-recycling-tech-waste-reduction-strategies_qxqmrc.jpg" />
       {/* <WasteCollectionTimeline /> */}
       {/* <WasteCollectionMenu /> */}
       {/* <WasteCollectionItems /> */}
       {/* <WasteCollectionScrollMovingCards /> */}
       {/* <WasteCollectionGrid
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776627437/digital-document-online-electronic-signature-document-management-paperless-office-e-signing-signing-business-contract-concept-metaverse.jpg_zvimmr.jpg"
+          "/assets/digital-document-online-electronic-signature-document-management-paperless-office-e-signing-signing-business-contract-concept-metaverse.jpg_zvimmr.jpg"
         }
       /> */}
     </main>

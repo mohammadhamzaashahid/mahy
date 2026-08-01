@@ -2,6 +2,13 @@ import PalletProcessSection from "@/components/Products/PalletProcessSection";
 import CompanyDetailMenu from "@/components/UI/companies/detail/CompanyDetailMenu";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 
+export const metadata = {
+  title: "Pallet Blocks",
+  description:
+    "MAHY Khoory Group manufactures high-density compressed wood pallet blocks, a durable and sustainable alternative to solid timber for industrial packaging.",
+  alternates: { canonical: "/products/pallet-blocks" },
+};
+
 function PalletBlock() {
 
   const menuItems = [
@@ -67,7 +74,7 @@ function PalletBlock() {
           "Manufactured from 100% recycled wood chips, these blocks offer exceptional strength, dimensional stability, and long-term durability—providing an eco-friendly and cost-effective solution for building reliable wooden pallets and load-bearing structures.",
           "Available in multiple standard dimensions — 148 × 100 mm, 165 × 80 mm, 95 × 95 mm, 148 × 80 mm, and 155 × 100 mm — with custom sizes available upon request to meet specific industrial requirements."
         ]}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026081/pallet-blocks-1_scrhqr.png"
+        image="/assets/pallet-blocks-1_scrhqr.png"
       />
       <CompanyDetailMenu
         items={menuItems}

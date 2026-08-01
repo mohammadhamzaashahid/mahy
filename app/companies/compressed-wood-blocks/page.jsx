@@ -1,5 +1,12 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 
+export const metadata = {
+  title: "Compressed Wood Blocks",
+  description:
+    "This MAHY Khoory Group sector produces engineered wood products manufactured entirely from recycled wood waste, offering durable, cost-effective alternatives to virgin timber.",
+  alternates: { canonical: "/companies/compressed-wood-blocks" },
+};
+
 function CompressedWoodBlocksPage() {
     return (
         <main>

@@ -5,12 +5,19 @@ import AboutUsSection from "@/components/UI/about-us/mission-vision-values/About
 import MissionVisionSection from "@/components/UI/about-us/mission-vision-values/MissionVisionSection";
 import AnimatedLines from "@/components/UI/AnimatedLines";
 
+export const metadata = {
+  title: "Mission, Vision & Values",
+  description:
+    "Discover the mission, vision and core values that guide M.A.H.Y. Khoory Group's operations and long-term strategy across the UAE and beyond.",
+  alternates: { canonical: "/about-us/mission-vision-values" },
+};
+
 async function MissionVisionValues() {
 
   return (
     <main className="bg-gray-50">
-     <AboutUsSection image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776793808/young-company-colleagues-sitting-row-talking-each-other_2_wz1mth.jpg"/>
-     <MissionVisionSection image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776793661/designer-concept_axdjf2.jpg"/>
+     <AboutUsSection image="/assets/young-company-colleagues-sitting-row-talking-each-other.jpg"/>
+     <MissionVisionSection image="/assets/designer-concept_axdjf2.jpg"/>
     </main>
   );
 }

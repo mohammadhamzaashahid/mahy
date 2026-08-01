@@ -3,6 +3,13 @@ import CustomerComplaintForm from '@/components/UI/form/CustomerComplaintForm';
 import ComplaintForm from '@/components/UI/services/ComplaintForm';
 import { getTranslations } from 'next-intl/server';
 
+export const metadata = {
+    title: "Customer Complaint",
+    description:
+        "Submit a customer complaint to MAHY Khoory Group. We are committed to resolving issues promptly and maintaining strong customer relationships across all our sectors.",
+    alternates: { canonical: "/contact-us/customer-complaint" },
+};
+
 async function ComplaintPage() {
     // const t = await getTranslations("ContactUsPage");
     // const contactUs = {

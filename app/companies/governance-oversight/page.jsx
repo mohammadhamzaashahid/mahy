@@ -1,13 +1,20 @@
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
 import SubPageHeading from "@/components/UI/SubPageHeading"
 
+export const metadata = {
+  title: "Governance & Oversight",
+  description:
+    "Learn how MAHY Khoory Group's governance and oversight structure ensures transparency, accountability and effective decision-making across all Group companies.",
+  alternates: { canonical: "/companies/governance-oversight" },
+};
+
 function GovernanceOversightPage() {
     return (
         <main>
             <SubPageHeading
                 title={"Governance & Oversight"}
                 fullHeight
-                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776629821/governance-oversight_1_ssbsbx.jpg"}
+                image={"/assets/governance-oversight_1_kaybzq.jpg"}
             />
             <CompanyTextOnBackground />
         </main>

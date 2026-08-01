@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# local image assets (migrated from Cloudinary) - synced to VPS separately, never committed
+/public/assets/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

@@ -1,5 +1,12 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 
+export const metadata = {
+  title: "Containerboard Manufacturing",
+  description:
+    "MAHY Khoory Group's containerboard manufacturing sector anchors its circular manufacturing ecosystem through large-scale paper recycling and containerboard production.",
+  alternates: { canonical: "/companies/containerboard-manufacturing" },
+};
+
 function ContainerboardManufacturingPage() {
     return (
         <main>

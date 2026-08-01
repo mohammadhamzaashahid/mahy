@@ -3,6 +3,13 @@ import SubPageHeading from "@/components/UI/SubPageHeading";
 import { allCompanies } from "@/constants/allCompaniesData";
 import React from "react";
 
+export const metadata = {
+  title: "All Companies",
+  description:
+    "Browse the complete list of MAHY Khoory Group's 25 operating companies and business divisions across the UAE and the wider region.",
+  alternates: { canonical: "/companies/all" },
+};
+
 function AllCompaniesPage() {
    
     return (
@@ -11,7 +18,7 @@ function AllCompaniesPage() {
                 fullHeight
                 scrollReadText="View All Companies"
                 title={"All Companies"}
-                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776880631/back-view-thoughtful-businessman-looking-through-window-big-modern-cityplanning-future-project-concept-early-morning-scene.jpg_ayuw8c.jpg"}
+                image={"/assets/back-view-thoughtful-businessman-looking-through-window-big-modern-cityplanning-future-project-concept-early-morning-scene.jpg_ayuw8c.jpg"}
             />
             <ScrollTimeline
                 items={allCompanies}

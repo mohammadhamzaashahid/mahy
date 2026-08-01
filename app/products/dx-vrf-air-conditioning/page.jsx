@@ -6,6 +6,13 @@ import PageHeading from "@/components/UI/PageHeading";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { HiAnnotation, HiOutlinePlus } from "react-icons/hi";
 
+export const metadata = {
+  title: "DX & VRF Air Conditioning Systems",
+  description:
+    "MAHY Khoory Group supplies high-efficiency DX and VRF air conditioning systems designed for stable cooling performance with low energy consumption.",
+  alternates: { canonical: "/products/dx-vrf-air-conditioning" },
+};
+
 function DxArfAirConditioningPage() {
   const tabItems = [
     {
@@ -123,11 +130,11 @@ function DxArfAirConditioningPage() {
         // description={
         //   "Global Water Solutions Pressure Tanks are engineered to ensure efficient pressure control, system stability, and long service life in water supply applications. Designed for consistent performance, these tanks support smooth operation of pumps and water networks."
         // }
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776795158/air-conditioner-air-conditioning-system-industrial-house-generative-ai-illustrator_zl8nyt.jpg"
+        image="/assets/air-conditioner-air-conditioning-system-industrial-house-generative-ai-illustrator_zl8nyt.jpg"
       />
       <TrustedAdvisorSection
       object="Employees"
-      images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016516/1_xdkma2.png", "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016522/2_famb09.png"]}
+      images={["/assets/1_xdkma2.png", "/assets/2_famb09.png"]}
         heading=""
         texts={[
           "Our Air Conditioning Division provides a complete range of DX (Direct Expansion) and VRF (Variable Refrigerant Flow) systems engineered for high performance, energy efficiency, and long-term reliability. Designed for residential, commercial, and industrial applications, our solutions ensure optimal indoor comfort even in the harsh climatic conditions of the UAE.",
@@ -137,18 +144,18 @@ function DxArfAirConditioningPage() {
       />
       <WasteCollectionMenu
     
-      image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016383/air-conditioning_zoherk.png"
+      image="/assets/air-conditioning_zoherk.png"
         heading="Product-Oriented Features"
         tabs={tabItems.map((item) => item.title)}
         items={tabItems.map((item) => featuresElement({ item }))}
       />
       <SolarPanelInstallationsGrid
-      images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016515/4_pbropg.png", "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016518/3_nlkrvm.png", "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016519/5_hjecz7.png"]}
+      images={["/assets/4_pbropg.png", "/assets/3_nlkrvm.png", "/assets/5_hjecz7.png"]}
         heading="Service-Oriented Offerings"
         items={serviceOfferings}
           icon={<HiOutlinePlus size={30} color="white" />}
       />
-      <WhyUs items={applications} reverse={true} image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016526/6_hey3gy.png" />
+      <WhyUs items={applications} reverse={true} image="/assets/6_hey3gy.png" />
     </main>
   );
 }

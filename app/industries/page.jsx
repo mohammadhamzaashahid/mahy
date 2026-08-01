@@ -2,6 +2,13 @@ import CompaniesList from "@/components/UI/home/CompaniesList";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import React from "react";
 
+export const metadata = {
+  title: "Our Industries",
+  description:
+    "Explore the industries MAHY Khoory Group operates across, including water pumping, electrical & MEP engineering, paper recycling, waste management, logistics, automotive and hospitality.",
+  alternates: { canonical: "/industries" },
+};
+
 function IndusteriesPage() {
   return (
     <main className="pb-25">
@@ -11,7 +18,7 @@ function IndusteriesPage() {
         description={
           "We operate across diverse industries, delivering reliable solutions tailored to evolving market needs. Our expertise spans technology, infrastructure, energy, and industrial sectors. We help organizations enhance efficiency, sustainability, and long-term growth."
         }
-        image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776976409/group-young-modern-people-smart-casual-wear-communicating-using-modern-technologies-while-working-office.jpg_1_i2je89.jpg"}
+        image={"/assets/group-young-modern-people-smart-casual-wear-communicating-using-modern-technologies-while-working-office.jpg_1_i2je89.jpg"}
       />
       <CompaniesList />
       <section className="max-w-7xl mx-auto px-5 py-14 border-t border-gray-100">

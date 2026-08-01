@@ -3,6 +3,13 @@ import CompanyDetailCards from "@/components/UI/companies/detail/CompanyDetailCa
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { getLocale, getTranslations } from "next-intl/server";
 
+export const metadata = {
+  title: "Group History & Legacy",
+  description:
+    "Trace M.A.H.Y. Khoory Group's growth since 1930 from a single Dubai trading enterprise into 25 operating companies across 10 industries, driven by long-term partnerships and strategic expansion.",
+  alternates: { canonical: "/about-us/group-history-and-legacy" },
+};
+
 async function GroupHistoryAndLegacyPage() {
   const t = await getTranslations("AboutUsPage");
 
@@ -91,9 +98,9 @@ async function GroupHistoryAndLegacyPage() {
       <SubPageHeading
       fullHeight
         title={"Group History & Legacy"}
-        // image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776626064/formal-people-with-gadgets-meeting.jpg_et6idb.jpg"}
-        // image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776626413/grouphistory-legacy_ghps2d.png"}
-        image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1777026942/manhattan-new-york-city-las-americas-6th-av.jpg_h6ccdy.jpg"}
+        // image={"/assets/formal-people-with-gadgets-meeting.jpg_et6idb.jpg"}
+        // image={"/assets/grouphistory-legacy_ghps2d.png"}
+        image={"/assets/manhattan-new-york-city-las-americas-6th-av.jpg_h6ccdy.jpg"}
       />
       <TimelineContainer
         title={"History Of MAHY Khoory"}

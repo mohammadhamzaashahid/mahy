@@ -3,6 +3,13 @@ import Explore from "@/components/UI/about-us/Explore";
 import SubPageHeading from "@/components/UI/SubPageHeading"
 import { getTranslations } from "next-intl/server";
 
+export const metadata = {
+    title: "Our Capabilities",
+    description:
+        "Explore M.A.H.Y. Khoory Group's capabilities across trading and distribution, engineering and technical services, manufacturing, packaging, recycling, environmental services, logistics, energy, automotive and hospitality.",
+    alternates: { canonical: "/about-us/capabilities" },
+};
+
 async function CapabilitiesPage() {
     const t = await getTranslations("AboutUsPage.Explore");
     const data = [

@@ -3,6 +3,13 @@ import CompanyDetailMenu from '@/components/UI/companies/detail/CompanyDetailMen
 import SubPageHeading from '@/components/UI/SubPageHeading'
 import { lab, text } from 'd3';
 
+export const metadata = {
+  title: "Solar Panel Installation & O&M Services",
+  description:
+    "MAHY Khoory Group delivers solar panel installation, system testing, commissioning, grid synchronization and ongoing operations & maintenance services.",
+  alternates: { canonical: "/services/solar-panel-installation" },
+};
+
 function SolarPanelInstallationsPage() {
     const menuItems = [
         {
@@ -175,7 +182,7 @@ function SolarPanelInstallationsPage() {
             fullHeight
                 title={"Solar Panel Installation & O&M Services"}
                 description={"We deliver end-to-end solar energy solutions for residential, commercial, and industrial projects across the UAE covering system design, engineering, installation, commissioning, and long-term maintenance. Our solutions feature high-efficiency solar panels from globally trusted brands such as Astro Energy, GINKO, and LONGI, ensuring maximum energy generation, long-term stability, and superior performance under challenging UAE climate conditions."}
-                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777030778/1_o6b5gu.jpg"}
+                image={"/assets/1_o6b5gu.jpg"}
             />
             <CompanyDetailMenu
                 items={menuItems}

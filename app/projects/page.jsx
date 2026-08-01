@@ -5,6 +5,13 @@ import Pagination from "@/components/UI/shop/Pagination";
 import { getProjects, projectFilters } from "@/constants/projects";
 import { getLocale } from "next-intl/server";
 
+export const metadata = {
+  title: "Projects",
+  description:
+    "Browse MAHY Khoory Group's portfolio of completed and ongoing projects across residential, commercial, industrial and infrastructure sectors in the UAE.",
+  alternates: { canonical: "/projects" },
+};
+
 async function ProjectsPage({ searchParams }) {
   const params = await searchParams;
   const locale = await getLocale();

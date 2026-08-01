@@ -7,6 +7,13 @@ import { EvChargerIcon } from "lucide-react";
 import { HiColorSwatch, HiPrinter, HiScissors, HiShieldCheck, HiSwitchHorizontal, HiViewGrid } from "react-icons/hi";
 import { HiOutlineMagnifyingGlassPlus } from "react-icons/hi2";
 
+export const metadata = {
+  title: "Corrugated Boxes",
+  description:
+    "MAHY Khoory Group manufactures corrugated boxes in 2-ply to 7-ply configurations, offering tailored performance for lightweight, medium-duty and heavy-duty packaging applications.",
+  alternates: { canonical: "/products/corrugated-boxes" },
+};
+
 function CorrugatedBoxesPage() {
 const features = [
   {
@@ -127,15 +134,15 @@ const features = [
         // description={
         //   "Global Water Solutions Pressure Tanks are engineered to ensure efficient pressure control, system stability, and long service life in water supply applications. Designed for consistent performance, these tanks support smooth operation of pumps and water networks."
         // }
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025663/corrugated-boxes-1_hjkemf.png"
+        image="/assets/corrugated-boxes-1_hjkemf.png"
       />
       <SolarPanelInstallationsGrid
         text="Our high-quality corrugated boxes are available in a comprehensive range of sizes, flute profiles, board grades, and customization options, designed to meet the diverse packaging needs of industrial, commercial, and retail sectors across the UAE. Manufactured using premium kraft liners, high-strength fluting paper, and environmentally responsible raw materials, these cartons offer excellent durability, crush resistance, and printability—ensuring superior product protection and brand presentation."
         items={features}
         images={[
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025560/corrugated-boxes-2_fqyd2m.png",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025533/corrugated-boxes-3_e43tje.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025527/corrugated-boxes-4_dtlvfc.jpg"
+          "/assets/corrugated-boxes-2_fqyd2m.png",
+          "/assets/corrugated-boxes-3_e43tje.jpg",
+          "/assets/corrugated-boxes-4_dtlvfc.jpg"
         ]}
       />
       <ServicesSection title="Applications" items={applications} />

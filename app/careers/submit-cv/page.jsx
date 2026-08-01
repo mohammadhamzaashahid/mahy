@@ -4,6 +4,13 @@ import WhoWeAre from "@/components/UI/home/WhoWeAre";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import React from "react";
 
+export const metadata = {
+  title: "Submit Your CV",
+  description:
+    "Submit your CV to MAHY Khoory Group and start building a long-term career within a diversified, multi-sector organization operating across the UAE.",
+  alternates: { canonical: "/careers/submit-cv" },
+};
+
 function SubmitCv() {
   return (
     <main>
@@ -12,7 +19,7 @@ function SubmitCv() {
         description={
           "MAHY Khoory Group welcomes experienced professionals, specialists, and motivated individuals who are interested in building a long-term career within a diversified, multi-sector organization."
         }
-        image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776984212/people-working-with-computers.jpg_s9wcea.jpg"}
+        image={"/assets/people-working-with-computers.jpg_s9wcea.jpg"}
         fullHeight
       />
       <div className="pt-5">
@@ -27,7 +34,7 @@ function SubmitCv() {
               link: false,
             },
           ]}
-          image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767093/upload-cv-page_fizfrq.jpg"
+          image="/assets/upload-cv-page_fizfrq.jpg"
           items={[
             "Your full name",
             "Area of expertise or desired department",
@@ -40,7 +47,7 @@ function SubmitCv() {
       <div className="pb-10">
         <ServicesGloballyTemp
           invert
-          image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767213/business-people-meeting-conference-discussion-corporate-concept.jpg_jfwfzf.jpg"
+          image="/assets/business-people-meeting-conference-discussion-corporate-concept.jpg_jfwfzf.jpg"
           texts2={[
             "Our Human Resources team will review your profile and maintain it within our centralized talent database. As a holding group comprising 25 companies across manufacturing, trading, engineering, logistics, waste management, automotive, hospitality, and other sectors, opportunities may arise within different subsidiaries based on operational requirements.",
             "You are also encouraged to explore the individual websites of the companies listed under the Companies section of our website. Several subsidiaries may have dedicated career pages where you can apply directly for company-specific roles aligned with your professional background.",

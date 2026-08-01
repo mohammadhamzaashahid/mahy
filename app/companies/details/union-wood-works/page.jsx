@@ -8,17 +8,24 @@ import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
 import WhoWeAre from "@/components/UI/home/WhoWeAre"
 
+export const metadata = {
+  title: "Union Wood Works",
+  description:
+    "Union Wood Works converts wood waste into cost-effective, sustainable alternatives to solid timber, operating one of the region's most advanced recycled-wood facilities.",
+  alternates: { canonical: "/companies/details/union-wood-works" },
+};
+
 function UnionWoodWorksPage() {
     const services = [
         {
             title: "Sustainable Origins",
             text: "Established as part of MAHY Khoory Group’s manufacturing expansion, Union Wood Works was created to address two parallel challenges: the growing volume of wood waste and increasing market demand for cost-effective, sustainable alternatives to solid timber.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275351/Sustainable_Origins_ttvxce.jpg",
+            image: "/assets/Sustainable_Origins_ttvxce.jpg",
         },
         {
             title: "Advanced Recycling Facility",
             text: "Since its inception, the company has evolved into one of the region’s most advanced recycled-wood facilities, supporting both domestic demand and export markets.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275348/Advance_recycling_n7hyqc.jpg",
+            image: "/assets/Advance_recycling_n7hyqc.jpg",
         }
     ];
     const overview = [
@@ -68,8 +75,8 @@ function UnionWoodWorksPage() {
     return (
         <main>
             <CompanyOverview
-                video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772790516/uww_jac3pt.mp4"}
-                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+                video={"/assets/uww_jac3pt.mp4"}
+                // image="/assets/office_jaeuiz.webp"
                 heading="Union Wood Works"
                 texts={[
                     "Union Wood Works is the dedicated wood recycling and engineered wood manufacturing subsidiary of the MAHY Khoory Group. The company is a regional leader in the production of compressed wood blocks manufactured entirely from 100% recycled wood fibers, supplying sustainable alternatives to virgin timber for industrial, construction, packaging, and furniture applications.",
@@ -83,7 +90,7 @@ function UnionWoodWorksPage() {
                 text="To transform reclaimed wood into durable, high‑performance engineered materials that serve industrial, construction, and packaging needs while protecting natural resources. Union Wood Works is dedicated to sustainable manufacturing through advanced recycling technology, operational precision, and continuous innovation—delivering eco‑wood products that combine strength, reliability, and environmental responsibility."
                 showButton={false}
                 invert={false}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png"
+                image="/assets/image002_lmmmfu.png"
                 imageAlt="Our Mission"
             />
 
@@ -93,7 +100,7 @@ function UnionWoodWorksPage() {
                 text="To be the GCC’s leading provider of sustainable engineered wood solutions, recognized for innovation, quality, and environmental stewardship. Union Wood Works strives to redefine industrial wood use by promoting circular manufacturing, reducing waste, and pioneering next‑generation eco‑wood products that support a greener, more resource‑efficient future."
                 showButton={false}
                 invert={true}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png"
+                image="/assets/image003_je11qk.png"
                 imageAlt="Our Vision"
             />
             <KitchenMenu
@@ -102,7 +109,7 @@ function UnionWoodWorksPage() {
             />
             <section className="max-w-7xl mx-auto px-5 pt-8 pb-14">
                 <CompaniesSectors
-                    image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777220684/3d-view-puzzle-pieces_ng78lk.jpg"}
+                    image={"/assets/3d-view-puzzle-pieces_ng78lk.jpg"}
                     title={"Products and Manufacturing Capabilities"}
                     texts={[
                         "Union Wood Works specializes in the production of compressed wood blocks (eco-wood blocks). These blocks are manufactured by processing reclaimed wood waste such as sawdust, shavings, and scrap timber combined with bonding agents and compressed under high pressure to achieve consistent density and strength.",
@@ -129,7 +136,7 @@ function UnionWoodWorksPage() {
 
             <SolarPanelQuoteGrid
                 heading="Infrastructure and Technology"
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275477/IMG_gzq8fj.png"
+                image="/assets/IMG_gzq8fj.png"
                 text="Union Wood Works operates a state-of-the-art automated facility, incorporating:"
                 items={[
                     "Industrial shredders and material preparation systems",
@@ -142,14 +149,14 @@ function UnionWoodWorksPage() {
             <FeaturesEngineeringSection
                 heading="Union Wood Works Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275858/IMG_-_2_stmfpe.png"
+                image="/assets/IMG_-_2_stmfpe.png"
                 textPosition="left"
             />
 
             <div className="mt-8 md:mt-6">
                 <CompanyTextOnBackground
                     heading="Innovation and Strategic Direction"
-                    image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777276347/UWW_base_image_gvtyky.png"
+                    image="/assets/UWW_base_image_gvtyky.png"
                     align="left"
                     text="The company continuously invests in process optimization and product innovation. Recent initiatives include:"
                     items={[

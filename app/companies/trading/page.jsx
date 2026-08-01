@@ -3,6 +3,13 @@ import GroupCompaniesGrid from "@/components/UI/companies/GroupCompaniesGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { getCompaniesBySector } from "@/constants/companyGroups";
 
+export const metadata = {
+  title: "Trading",
+  description:
+    "Explore MAHY Khoory Group's trading division, sourcing and distributing industrial and building-services equipment from leading global manufacturers.",
+  alternates: { canonical: "/companies/trading" },
+};
+
 function TradingPage() {
   const companies = getCompaniesBySector("trading");
 
@@ -11,19 +18,19 @@ function TradingPage() {
       <SubPageHeading
         fullHeight
         title="Trading"
-        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772868318/Code_of_Conduct.jpg_qjqqzs.jpg"
+        // image="/assets/Code_of_Conduct.jpg_qjqqzs.jpg"
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776883124/business-meeting-office.jpg_ubgwsk.jpg"
+          "/assets/business-meeting-office.jpg_ubgwsk.jpg"
         }
         align="center"
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776883067/working-through-meeting-agenda-like-pros-shot-team-executives-having-formal-meeting-boardroom.jpg_nlnvae.jpg"
+            "/assets/working-through-meeting-agenda-like-pros-shot-team-executives-having-formal-meeting-boardroom.jpg_nlnvae.jpg"
           }
           image2={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776948899/business-meeting-office_c8qylz.jpg"
+            "/assets/business-meeting-office_c8qylz.jpg"
           }
           title={"Trading"}
           texts={[

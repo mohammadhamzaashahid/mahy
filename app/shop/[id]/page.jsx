@@ -8,6 +8,31 @@ import { getNewProduct, getNewProducts, getPaginatedRandomProducts, getProduct, 
 import { getLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
+export async function generateMetadata({ params }) {
+    const { id } = await params;
+    const product = getNewProduct(id);
+    if (!product) return {};
+
+    const title = product.overview || `${product.brand} ${product.category}`.trim();
+    const description = product.description
+        ? product.description.length > 200
+            ? `${product.description.slice(0, 197)}...`
+            : product.description
+        : `${title} — ${product.category || "industrial equipment"} supplied by MAHY Khoory Group.`;
+
+    return {
+        title,
+        description,
+        alternates: { canonical: `/shop/${id}` },
+        openGraph: {
+            title,
+            description,
+            url: `/shop/${id}`,
+            images: product.images?.length ? [{ url: product.images[0] }] : undefined,
+        },
+    };
+}
+
 async function ProductPage({ params, searchParams }) {
     const { id } = await params;
     const { model } = await searchParams;

@@ -4,6 +4,13 @@ import GovernanceContent from "@/components/UI/about-us/leadership-and-managemen
 import GovernanceTabs from "@/components/UI/about-us/leadership-and-management/GovernanceTabs";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Health, Safety & Environment",
+  description:
+    "MAHY Khoory Group's approach to health, safety and environmental management, supporting safe operations and environmental responsibility across all Group companies.",
+  alternates: { canonical: "/about-us/health-safety-environment" },
+};
+
 export default function GovernancePage() {
   return (
     <main className="bg-white">
@@ -18,7 +25,7 @@ export default function GovernancePage() {
         eyebrow="Discover More"
         title="MAHY Khoory Center"
         description="Find out more about MAHY events, read the latest media announcements and publications, or access our video and image gallery via the MAHY Media Centre."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776977658/woman-reading-diagrams-tablet-device-helped-by-specialist.jpg_epm3nu.jpg"
+        image="/assets/woman-reading-diagrams-tablet-device-helped-by-specialist.jpg_epm3nu.jpg"
       />
       <InfoNavigationSection />
     </main>

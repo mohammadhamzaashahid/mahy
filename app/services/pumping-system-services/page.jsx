@@ -9,6 +9,13 @@ import CompaniesSectors from "@/components/CompaniesSectors";
 import SolarPanelQuoteGrid from "@/components/Services/SolarPanel/SolarPanelQuoteGrid";
 import PalletProcessSection from "@/components/Products/PalletProcessSection";
 
+export const metadata = {
+  title: "Pumping System Services",
+  description:
+    "MAHY Khoory Group provides thorough pumping system inspections, installation and maintenance services, ensuring system readiness and preventing future operational issues.",
+  alternates: { canonical: "/services/pumping-system-services" },
+};
+
 function PumpingSystemServicesPage() {
   return (
     <main>
@@ -16,20 +23,20 @@ function PumpingSystemServicesPage() {
         title={"Pumping System Services"}
         fullHeight
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777020427/products-solutions-overview-heroimage_768x500_oashg5.jpg"
+          "/assets/products-solutions-overview-heroimage_768x500_oashg5.jpg"
         }
       />
       <ValuesSection
         title=""
         description="We provide a complete suite of specialized services to ensure the reliability, performance, and long-term efficiency of chilled water systems, domestic water supply pumps (transfer & booster), sewage pumps, and other critical pumping installations. Every stage—from pre-installation assessment to commissioning, repair, and ongoing maintenance—is executed with precision and adherence to industry-best standards."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777020429/2_uqw1x9.jpg"
+        imageSrc="/assets/2_uqw1x9.jpg"
         imageAlt="Our Services"
         ctaHref={false}
         imagePosition="right"
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
-          image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777020431/press-material-products-ALPHA-Grundfos-master_y4y36s.jpg"}
+          image={"/assets/press-material-products-ALPHA-Grundfos-master_y4y36s.jpg"}
           title={"Pre-Installation Inspections"}
           texts={[
             "Thorough inspections are performed prior to installation to ensure system readiness and prevent future operational issues:",
@@ -47,7 +54,7 @@ function PumpingSystemServicesPage() {
         />
       </section>
       <SolarPanelQuoteGrid
-      image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017551/psol8.jpg_njgwhj.png"
+      image="/assets/psol8.jpg_njgwhj.png"
         heading="Professional System Commissioning"
         text="Our commissioning services are designed to optimize system performance from the very first day of operation:"
         items={[
@@ -62,8 +69,8 @@ function PumpingSystemServicesPage() {
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
-        image2={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776838762/Chemical_dosing_pumps_and_solutions_1800x500_kgtpgu.avif"}
-          image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777020424/1_gcwfog.jpg"}
+        image2={"/assets/Chemical_dosing_pumps_and_solutions_1800x500_kgtpgu.avif"}
+          image={"/assets/1_gcwfog.jpg"}
           title={"Comprehensive Repair, Maintenance & Technical Support"}
           texts={[
             "We provide complete after-sales and lifecycle support to ensure minimal downtime and consistent operational reliability:",

@@ -4,6 +4,13 @@ import AnimatedLines from "@/components/UI/AnimatedLines";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { Fragment } from "react";
 
+export const metadata = {
+  title: "Sustainability & Environment",
+  description:
+    "Sustainability is embedded at the core of MAHY Khoory Group's operating model and long-term strategy across its manufacturing, recycling and waste management operations.",
+  alternates: { canonical: "/companies/operations-and-capabilities/sustainability-environment" },
+};
+
 function SustainabilityEnvironmentPage() {
   const sections = [
     {
@@ -13,7 +20,7 @@ function SustainabilityEnvironmentPage() {
         "The Group is a regional leader in circular-economy practices, integrating waste collection, recycling, manufacturing, and sustainable product development into a unified environmental ecosystem.",
       ],
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776679387/recycling-symbol-green-wall-modern-office.jpg_hflmu9.jpg",
+        "/assets/recycling-symbol-green-wall-modern-office.jpg_hflmu9.jpg",
     },
     {
       title: "Circular Economy & Resource Recovery",
@@ -22,7 +29,7 @@ function SustainabilityEnvironmentPage() {
         "This closed-loop approach significantly reduces landfill dependency and reliance on virgin resources.",
       ],
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg",
+        "/assets/skyscrapers-tokyo.jpg_e2niyf.jpg",
     },
     {
       title: "Comprehensive Environmental Services",
@@ -31,7 +38,7 @@ function SustainabilityEnvironmentPage() {
         "These operations support municipalities, industries, and commercial clients in meeting regulatory and sustainability objectives.",
       ],
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776761407/comprehensive-growth_irbplq.jpg",
+        "/assets/comprehensive-growth_irbplq.jpg",
     },
     {
       title: "Renewable Energy & Green Solutions",
@@ -39,14 +46,14 @@ function SustainabilityEnvironmentPage() {
         "The Group also invests in renewable energy solutions, energy-efficient systems, and green-building consultancy.",
         "It enables both internal operations and external clients to reduce carbon emissions and operating costs.",
       ],
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776762085/renewable-energy_nkj0in.jpg",
+      image: "/assets/renewable-energy_nkj0in.jpg",
     },
     {
       title: "Commitment to Sustainable Growth",
       bullets: [
         "Through responsible growth, continuous environmental investment, and measurable sustainability outcomes, the MAHY Khoory Group demonstrates that environmental stewardship and industrial scale can advance together.",
       ],
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776762183/commitment-to-growth_qhzgjt.jpg",
+      image: "/assets/commitment-to-growth_qhzgjt.jpg",
     },
   ];
 
@@ -56,7 +63,7 @@ function SustainabilityEnvironmentPage() {
         fullHeight
         title={"Sustainability & Environment"}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776677556/corporate-sustainability.jpg_vhc4mz.jpg"
+          "/assets/corporate-sustainability.jpg_vhc4mz.jpg"
         }
       />
       <EnterprisePinnedSection sections={sections} />

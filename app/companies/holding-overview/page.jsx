@@ -2,6 +2,13 @@ import CompanyTextGrid from "@/components/UI/companies/detail/CompanyTextGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Holding Company Overview",
+  description:
+    "M.A.H.Y. Khoory & Co. LLC is the Dubai-headquartered holding company overseeing a diversified portfolio spanning water pumping, electromechanical, HVAC, paper recycling, waste management, logistics and hospitality.",
+  alternates: { canonical: "/companies/holding-overview" },
+};
+
 function HoldingOverviewPage() {
   return (
     <main>
@@ -9,8 +16,8 @@ function HoldingOverviewPage() {
         fullHeight
         title={"Holding Company Overview"}
         image={
-          //   "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776593285/holding-overview-page.jpg_norjia.jpg"
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776629101/empty-corporate-boardroom-with-documents-city-skyline-twilight.jpg_bhsoze.jpg"
+          //   "/assets/holding-overview-page.jpg_norjia.jpg"
+          "/assets/empty-corporate-boardroom-with-documents-city-skyline-twilight.jpg_bhsoze.jpg"
         }
       />
       <CompanyTextGrid
@@ -45,7 +52,7 @@ function HoldingOverviewPage() {
 
       <section className="relative w-full h-[65vh] md:h-[85vh] overflow-hidden">
         <Image
-          src="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+          src="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
           alt="Business Growth"
           fill
           className="object-cover object-center"

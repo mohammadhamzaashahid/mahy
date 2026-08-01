@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { ArrowRight, Mail, Store, Wrench } from "lucide-react";
 
+export const metadata = {
+  robots: { index: false, follow: false },
+};
+
 function UnderMaintenancePage() {
   return (
     <main className="min-h-screen bg-[#f6f8fb] text-[#0B1320]">

@@ -1,6 +1,13 @@
 import SolarPanelImagesGrid from "@/components/Services/SolarPanel/SolarPanelImagesGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Career Opportunities",
+  description:
+    "Browse current career opportunities across MAHY Khoory Group's subsidiaries in manufacturing, trading, engineering, logistics, waste management, automotive and hospitality.",
+  alternates: { canonical: "/careers/opportunities" },
+};
+
 function OpportunitiesPage() {
   const items = [
     {
@@ -34,7 +41,7 @@ function OpportunitiesPage() {
       <SubPageHeading
         title={"Career Opportunities"}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776762320/career-oppurtunities_lyub4o.jpg"
+          "/assets/career-oppurtunities_lyub4o.jpg"
         }
         fullHeight
       />
@@ -43,7 +50,7 @@ function OpportunitiesPage() {
           items={items}
           text1="4200"
           text2="Employees"
-          images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776763660/businessman-climbed-stairs-double-exposure-with-new-york-office-buildings-night-concept-business-achievement-goal-leadership.jpg_z9q04v.jpg", "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776764495/businessman-analyzing-data-computer-screen.jpg_nynwvg.jpg"]}
+          images={["/assets/businessman-climbed-stairs-double-exposure-with-new-york-office-buildings-night-concept-business-achievement-goal-leadership.jpg_z9q04v.jpg", "/assets/businessman-analyzing-data-computer-screen.jpg_nynwvg.jpg"]}
         />
       </div>
     </main>

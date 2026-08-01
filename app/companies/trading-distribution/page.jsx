@@ -1,5 +1,12 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 
+export const metadata = {
+  title: "Trading & Distribution",
+  description:
+    "MAHY Khoory Group's trading, distribution and industrial supply sector supplies industrial, electromechanical, pumping, HVAC and building systems equipment across the region.",
+  alternates: { canonical: "/companies/trading-distribution" },
+};
+
 function TradingDistributionPage() {
     return (
         <main>

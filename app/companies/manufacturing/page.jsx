@@ -3,6 +3,13 @@ import GroupCompaniesGrid from "@/components/UI/companies/GroupCompaniesGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { getCompaniesBySector } from "@/constants/companyGroups";
 
+export const metadata = {
+  title: "Manufacturing",
+  description:
+    "Explore MAHY Khoory Group's manufacturing sector, spanning paper recycling, containerboard production, engineered wood products and industrial packaging.",
+  alternates: { canonical: "/companies/manufacturing" },
+};
+
 function ManufacturingPage() {
   const companies = getCompaniesBySector("manufacturing");
 
@@ -11,9 +18,9 @@ function ManufacturingPage() {
       <SubPageHeading
         fullHeight
         title="Manufacturing"
-        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772868318/Code_of_Conduct.jpg_qjqqzs.jpg"
+        // image="/assets/Code_of_Conduct.jpg_qjqqzs.jpg"
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776973912/close-up-data-center-engineer-using-tablet-doing-maintenance-ai-rigs.jpg_crlc14.jpg"
+          "/assets/close-up-data-center-engineer-using-tablet-doing-maintenance-ai-rigs.jpg_crlc14.jpg"
         }
         align="center"
       />
@@ -21,10 +28,10 @@ function ManufacturingPage() {
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776973905/close-up-data-center-computer-scientist-using-tablet-deploying-servers-network-hardware-it.jpg_lp83fn.jpg"
+            "/assets/close-up-data-center-computer-scientist-using-tablet-deploying-servers-network-hardware-it.jpg_lp83fn.jpg"
           }
           image2={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776973919/detail-shot-skyscrapers.jpg_jamp5y.jpg"
+            "/assets/detail-shot-skyscrapers.jpg_jamp5y.jpg"
           }
           title={"Manufacturing"}
           texts={[

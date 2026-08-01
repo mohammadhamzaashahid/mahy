@@ -3,6 +3,13 @@ import GroupCompaniesGrid from "@/components/UI/companies/GroupCompaniesGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { getCompaniesBySector } from "@/constants/companyGroups";
 
+export const metadata = {
+  title: "Automotive",
+  description:
+    "Explore MAHY Khoory Group's automotive division, including its Dongfeng distributorship and dealership network across the UAE.",
+  alternates: { canonical: "/companies/automotive" },
+};
+
 function AutomotivePage() {
   const companies = getCompaniesBySector("automotive");
 
@@ -11,14 +18,14 @@ function AutomotivePage() {
       <SubPageHeading
         title="Move That Spread Comfort "
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886838/traffic-light-trails-downtown.jpg_1_rpo8xg.jpg"
+        image="/assets/traffic-light-trails-downtown.jpg_1_rpo8xg.jpg"
         align="center"
         fullHeight
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886758/webp_mobile_listing_main_2023_DongFeng_AX7_Mache_Exterior_05_ttbcgg.webp"
+            "/assets/webp_mobile_listing_main_2023_DongFeng_AX7_Mache_Exterior_05_ttbcgg.webp"
           }
           title={"Automotive"}
           texts={[

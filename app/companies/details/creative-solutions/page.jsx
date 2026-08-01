@@ -8,11 +8,18 @@ import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
 import { object } from "zod"
 
+export const metadata = {
+  title: "Creative Solutions Green Building Consultancy",
+  description:
+    "Creative Solutions Green Building Consultancy supports developers, architects and public-sector clients with sustainability, regulatory compliance and green-building expertise.",
+  alternates: { canonical: "/companies/details/creative-solutions" },
+};
+
 function CreativeSolutionsPage() {
     const services = [
         {
             text: "Green-building assessments and certification advisory",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777468005/green_building-2_ei71gx.jpg",
+            image: "/assets/green_building-2_ei71gx.jpg",
         },
         // {
         //     text: "LEED, WELL, ESTIDAMA, and Dubai Green Building compliance",
@@ -20,21 +27,21 @@ function CreativeSolutionsPage() {
         // },
         {
             text: "Energy audits and performance benchmarking",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467928/energy_audits_qsb37r.jpg",
+            image: "/assets/energy_audits_qsb37r.jpg",
         },
         {
             text: "Energy and water modeling and optimization",
             objectFit: "contain",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467898/Energy_and_water_modeling_am6bpz.jpg",
+            image: "/assets/Energy_and_water_modeling_am6bpz.jpg",
         },
         {
             text: "Mechanical and electrical system commissioning",
             objectFit: "contain",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467943/mechanical_and_electrical_system_sqknrp.jpg",
+            image: "/assets/mechanical_and_electrical_system_sqknrp.jpg",
         },
         {
             text: "Post-occupancy performance monitoring",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467990/Performance_monitoring_ral6mx.jpg",
+            image: "/assets/Performance_monitoring_ral6mx.jpg",
         }
     ];
     const cards = [
@@ -94,8 +101,8 @@ function CreativeSolutionsPage() {
     return (
         <main>
             <CompanyOverview
-            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777467997/Video_Project_19_k9zzvb.mp4"}
-                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"/assets/Video_Project_19_k9zzvb.mp4"}
+                // image="/assets/office_jaeuiz.webp"
                 heading="Creative Solutions Green Building Consultancy"
                 texts={[
                     "Creative Solutions Green Building Consultancy is MAHY Khoory Group’s specialized sustainability and green-building advisory arm, established to support environmentally responsible design, energy efficiency, and high-performance building operations. The consultancy integrates architectural insight with environmental and energy engineering expertise to help clients achieve internationally recognized green-building standards.",
@@ -112,13 +119,13 @@ function CreativeSolutionsPage() {
                 heading="Markets and Client Sectors"
                 text={"Creative Solutions serves clients across:"}
                 tag="[ CREATIVE SOLUTIONS ]"
-                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777063203/man-standing-road-front-skyscraper-sunset_y5zykp.jpg"
+                backgroundImage="/assets/man-standing-road-front-skyscraper-sunset_y5zykp.jpg"
                 endText={""}
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467933/magnified-analysis-data-graphs-monitoring-screen_ju82mb.jpg"
+                image="/assets/magnified-analysis-data-graphs-monitoring-screen_ju82mb.jpg"
             />
         </main>
     )

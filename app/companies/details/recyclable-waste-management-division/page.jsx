@@ -4,6 +4,13 @@ import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import WhoWeAre from "@/components/UI/home/WhoWeAre";
+
+export const metadata = {
+  title: "Recyclable Waste Management Division",
+  description:
+    "The Recyclable Waste Management Division provides scheduled collection and segregation of paper, plastics, metals and other recyclable materials for commercial and industrial clients.",
+  alternates: { canonical: "/companies/details/recyclable-waste-management-division" },
+};
 import { object } from "zod";
 
 function RecyclableWasteManagementDivision() {
@@ -12,14 +19,14 @@ function RecyclableWasteManagementDivision() {
       title: "Waste Paper and Cardboard Collection",
       text: "Scheduled collection of commercial, industrial, and institutional paper waste using roll-off containers, compactors, and pickup vehicles.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288916/Waste_Paper_and_Cartboard_collection_y4aqvf.jpg",
+        "/assets/Waste_Paper_and_Cartboard_collection_y4aqvf.jpg",
         objectFit: "cover",
     },
     {
       title: "Multi-Recyclables Management",
       text: "Collection and segregation of additional recyclable materials such as plastics, metals, and beverage cans.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777289029/Multi_recylable_Mangement-2_fkt6uo.jpg",
+        "/assets/Multi_recylable_Mangement-2_fkt6uo.jpg",
         objectFit: "cover",
     },
 
@@ -27,14 +34,14 @@ function RecyclableWasteManagementDivision() {
       title: "On-Site Recycling Solutions",
       text: "Provision of balers, bins, dumpsters, and staff training to enable effective source segregation at client locations.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288912/On_Site_Recycling_Solution_owmis2.jpg",
+        "/assets/On_Site_Recycling_Solution_owmis2.jpg",
         objectFit: "cover",
     },
     {
       title: "Closed-Loop Recycling Support",
       text: "Direct coordination with the Group’s paper mills to ensure recovered materials are efficiently reintegrated into production.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288897/Closed_loop_recycling_support_hs0ynv.jpg",
+        "/assets/Closed_loop_recycling_support_hs0ynv.jpg",
         objectFit: "contain",
     },
   ];
@@ -120,7 +127,7 @@ function RecyclableWasteManagementDivision() {
     <main>
       <CompanyOverview
         video={
-          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1773132024/RWMD_lrlpyc.mp4"
+          "/assets/RWMD_lrlpyc.mp4"
         }
         heading="Recyclable Waste Management Division"
         texts={[
@@ -137,7 +144,7 @@ The division is dedicated to maximizing landfill diversion, improving recycling 
 Through modern equipment, optimized logistics, digital monitoring, and customer‑focused recycling programs, RWMD strives to enhance operational efficiency, reduce environmental impact, and support national sustainability objectives while maintaining the highest standards of safety, compliance, and service excellence."
         showButton={false}
         invert={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777287829/Mission-2_uxdx8g.jpg"
+        image="/assets/Mission-2_uxdx8g.jpg"
         imageAlt="Our Mission"
       />
       <WhoWeAre
@@ -148,7 +155,7 @@ The division aims to set new benchmarks in recycling efficiency, digital transfo
 RWMD aspires to shape a future where waste is viewed as a valuable resource, enabling a fully circular manufacturing ecosystem that supports national sustainability goals and reinforces the Group’s leadership in responsible, future‑ready recycling solutions."
         showButton={false}
         invert={true}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777287703/Vision_kd0x6t.jpg"
+        image="/assets/Vision_kd0x6t.jpg"
         imageAlt="Our Vision"
       />
       <KitchenMenu
@@ -161,13 +168,13 @@ RWMD aspires to shape a future where waste is viewed as a valuable resource, ena
         heading="Recyclable Waste Management Division"
         subHeading="Recycling Infrastructure & Circular Economy Solutions"
         tag="[ RECYCLING DIVISION ]"
-        backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
+        backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
       />
       <FeaturesEngineeringSection
         heading="RWMD Overview"
         items={overview}
         textPosition="right"
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777288921/RWMD_-_Base_image_pwl9eh.png"
+        image="/assets/RWMD_-_Base_image_pwl9eh.png"
       />
     </main>
   );

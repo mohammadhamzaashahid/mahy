@@ -7,7 +7,7 @@ import Image from "next/image"
 export default function WhyUs({
     items,
     reverse = true,
-    image = "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776679760/idea-creative-solving-question-icons.jpg_fahnp3.jpg"
+    image = "/assets/idea-creative-solving-question-icons.jpg"
 }) {
     const [openIndex, setOpenIndex] = React.useState(0)
     const contentClassName = "text-sm text-gray-500 leading-relaxed pb-4 pl-[30px] pr-6"

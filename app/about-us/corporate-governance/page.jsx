@@ -1,6 +1,13 @@
 import CorporateGovernance from '@/components/UI/about-us/CorporateGovernance'
 import SubPageHeading from '@/components/UI/SubPageHeading'
 
+export const metadata = {
+    title: "Corporate Governance",
+    description:
+        "MAHY Khoory Group's corporate governance framework ensures transparency, accountability and effective oversight across all Group businesses, supporting responsible decision-making and sustainable value creation.",
+    alternates: { canonical: "/about-us/corporate-governance" },
+};
+
 function CorporateGovernancePage() {
     return (
         <main>

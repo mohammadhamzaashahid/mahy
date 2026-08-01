@@ -3,6 +3,13 @@ import EngProcessSection from "@/components/Services/EngProcessSection";
 import PageHeading from "@/components/UI/PageHeading";
 import { text } from "d3";
 
+export const metadata = {
+  title: "VINZOR Aluminum Ladders",
+  description:
+    "MAHY Khoory Group supplies VINZOR aluminum ladders crafted from high-grade, corrosion-resistant aluminum designed for long-term durability across all ladder types.",
+  alternates: { canonical: "/products/vinzor-aluminum-ladders" },
+};
+
 function VinzorAluminumLaddersPage() {
 
     const advantages = [
@@ -46,11 +53,11 @@ function VinzorAluminumLaddersPage() {
         // description={
         //   "Global Water Solutions Pressure Tanks are engineered to ensure efficient pressure control, system stability, and long service life in water supply applications. Designed for consistent performance, these tanks support smooth operation of pumps and water networks."
         // }
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026747/ladders-1_fzdatr.jpg"
+        image="/assets/ladders-1_fzdatr.jpg"
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
-          image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777026753/ladders-2_bb8efs.png"}
+          image={"/assets/ladders-2_bb8efs.png"}
           title={"Key Highlights"}
           texts={[
             "VINZOR Aluminum Ladders are designed to deliver strength, stability, and lightweight performance for a wide range of applications. Manufactured using high-quality aluminum, these ladders offer excellent load-bearing capacity while remaining easy to handle and transport.",
@@ -68,10 +75,10 @@ function VinzorAluminumLaddersPage() {
                 heading="Vinzor Aluminum Ladders"
                 items={advantages}
                 images={[
-                  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777574362/manual-worker-leaning-ladder_zxfo9v.jpg",
-                  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777574360/silver-aluminum-step-ladder-standing-glossy-floor-modern-hangar_svuvrv.jpg",
-                  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777574348/metal-staircase-stands-near-beautifully-textured-black-concrete-wall-lit-from_wwgozl.jpg",
-                  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777574342/front-view-girl-cute-dog-christmas-concept_lwqzl9.jpg"
+                  "/assets/manual-worker-leaning-ladder_zxfo9v.jpg",
+                  "/assets/silver-aluminum-step-ladder-standing-glossy-floor-modern-hangar_svuvrv.jpg",
+                  "/assets/metal-staircase-stands-near-beautifully-textured-black-concrete-wall-lit-from_wwgozl.jpg",
+                  "/assets/front-view-girl-cute-dog-christmas-concept_lwqzl9.jpg"
                    
                 ]}
                 imageAspect={"portrait"}

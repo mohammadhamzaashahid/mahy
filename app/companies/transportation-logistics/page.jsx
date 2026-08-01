@@ -3,6 +3,13 @@ import GroupCompaniesGrid from "@/components/UI/companies/GroupCompaniesGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { getCompaniesBySector } from "@/constants/companyGroups";
 
+export const metadata = {
+  title: "Transportation & Logistics",
+  description:
+    "MAHY Khoory Group's transportation and logistics sector provides scheduled and on-demand transportation of goods, equipment and materials across the Group's facilities and project sites.",
+  alternates: { canonical: "/companies/transportation-logistics" },
+};
+
 function TransportationLogisticsPage() {
   const companies = getCompaniesBySector("transportation-logistics");
   console.log(companies);
@@ -13,14 +20,14 @@ function TransportationLogisticsPage() {
       <SubPageHeading
         title="Move That Bring Quality"
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886296/freight-truck-driving-winter-highway-through-snowy-countryside-landscape-transport-logistics.jpg_qftfwc.jpg"
+        image="/assets/freight-truck-driving-winter-highway-through-snowy-countryside-landscape-transport-logistics.jpg_qftfwc.jpg"
         align="center"
         fullHeight
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886237/line-trucks-with-word-ford-side.jpg_ljd5ih.jpg"
+            "/assets/line-trucks-with-word-ford-side.jpg_ljd5ih.jpg"
           }
           title={"Transportation & Logistics"}
           texts={[

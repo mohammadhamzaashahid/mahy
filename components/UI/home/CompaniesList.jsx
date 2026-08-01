@@ -11,14 +11,14 @@ import ScrollToTop from '../ScrollToTop';
 import { useRef, useState, useEffect } from "react";
 
 const industeries = [
-    { label: "Trading", href: "/companies/trading", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772869180/trading-mahy_wdglvr.jpg" },
-    { label: "Manufacturing", href: "/companies/manufacturing", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1770210649/factory-workers-operating-machinery-on-production-2026-01-09-10-18-36-utc_tsa0tc.jpg" },
-    { label: "Automotive", href: "/companies/automotive", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1770210379/two-businessmen-are-working-together-in-the-car-sh-2026-01-08-23-56-20-utc_tjv68e.jpg" },
-    { label: "Waste Management", href: "/companies/waste-management", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1770210761/joyful-indian-worker-in-protective-vest-and-gloves-2026-01-06-00-11-34-utc_m8310z.jpg" },
-    { label: "Transportation", href: "/companies/transportation-logistics", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776628975/free-photo-ai-generated-truck.jpg_xjeied.jpg" },
-    { label: "Energy & Sustainability Consulting", href: "/companies/energy-sustainability-consulting", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1770210530/businesswoman-with-solar-panels-model-having-prese-2026-01-09-09-42-23-utc_l5vlii.jpg" },
-    { label: "Hospitality", href: "/companies/energy-sustainability-consulting", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776628677/Hospitality_food_b3zern.jpg" },
-    { label: "Engineering", href: "/companies/energy-sustainability-consulting", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776628907/worker-working-factory.jpg_fqcfkn.jpg" },
+    { label: "Trading", href: "/companies/trading", image: "/assets/trading-mahy_wdglvr.jpg" },
+    { label: "Manufacturing", href: "/companies/manufacturing", image: "/assets/factory-workers-operating-machinery-on-production-2026-01-09-10-18-36-utc_tsa0tc.jpg" },
+    { label: "Automotive", href: "/companies/automotive", image: "/assets/two-businessmen-are-working-together-in-the-car-sh-2026-01-08-23-56-20-utc_tjv68e.jpg" },
+    { label: "Waste Management", href: "/companies/waste-management", image: "/assets/joyful-indian-worker-in-protective-vest-and-gloves-2026-01-06-00-11-34-utc_m8310z.jpg" },
+    { label: "Transportation", href: "/companies/transportation-logistics", image: "/assets/free-photo-ai-generated-truck.jpg_xjeied.jpg" },
+    { label: "Energy & Sustainability Consulting", href: "/companies/energy-sustainability-consulting", image: "/assets/businesswoman-with-solar-panels-model-having-prese-2026-01-09-09-42-23-utc_l5vlii.jpg" },
+    { label: "Hospitality", href: "/companies/energy-sustainability-consulting", image: "/assets/Hospitality_food_b3zern.jpg" },
+    { label: "Engineering", href: "/companies/energy-sustainability-consulting", image: "/assets/worker-working-factory.jpeg" },
 ];
 
 
@@ -155,7 +155,7 @@ const CompaniesTab = ({ companies }) => {
 //             ))}
 //         </div>
 //         {/* <div className="relative h-120 md:h-full w-full">
-//             <Image src="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772869180/trading-mahy_wdglvr.jpg" style={{ objectFit: "cover" }} alt="Companies" fill />
+//             <Image src="/assets/trading-mahy_wdglvr.jpg" style={{ objectFit: "cover" }} alt="Companies" fill />
 //             <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
 //             <div className='absolute bottom-7 left-7 text-gray-200'>
 //                 <div className='flex flex-wrap gap-3 mb-4'>

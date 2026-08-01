@@ -10,6 +10,13 @@ import SubPageHeading from "@/components/UI/SubPageHeading";
 import { text } from "d3";
 import React from "react";
 
+export const metadata = {
+  title: "Kitchen Designing Solutions",
+  description:
+    "MAHY Khoory Group represents world-class kitchen brands including Siemens, Bosch, MVP, ARREDO3 and COMPOSIT, delivering unmatched craftsmanship and kitchen design excellence.",
+  alternates: { canonical: "/services/kitchen-designing-solutions" },
+};
+
 function KitchenDesignPage() {
   const overviewItems = [
     {
@@ -173,7 +180,7 @@ function KitchenDesignPage() {
         fullHeight
         title={"Kitchen Designing Solutions"}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937226/collezioni-frida-03-pg126-127_olpgru.jpg"
+          "/assets/collezioni-frida-03-pg126-127_olpgru.jpg"
         }
       />
       <KitchenImageScaledGrid
@@ -183,20 +190,20 @@ function KitchenDesignPage() {
           "With a comprehensive range of premium appliances, custom cabinetry, high-quality countertops, sinks, and storage systems, we create kitchens that combine elegance, durability, and everyday practicality.",
         ]}
         items={overviewItems}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937209/collezioni-frida-03-pg129_qhzqdu.jpg"
+        image="/assets/collezioni-frida-03-pg129_qhzqdu.jpg"
       />
       <CompanyDetailMenu items={featuresData} />
-      <KitchenImageGrid image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937319/fusion-03-pg28-29_drgi9r.jpg" />
+      <KitchenImageGrid image="/assets/fusion-03-pg28-29_drgi9r.jpg" />
       <KitchenMenu />
       <KitchenBackgroundGrid
         items={cards}
-        bgImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937192/collezioni-asolo-03-pg152-153_rg2cfg.jpg" // <-- replace with your actual image path
+        bgImage="/assets/collezioni-asolo-03-pg152-153_rg2cfg.jpg" // <-- replace with your actual image path
       />{" "}
       <KitchenHorizontalItems />
-      <KitchenItems image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937155/collezioni-asolo-04-pg164-165-166_zrtzth.jpg" />
+      <KitchenItems image="/assets/collezioni-asolo-04-pg164-165-166_zrtzth.jpg" />
       <BlobImageSection
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776936979/collezioni-asolo-01-pg142-143_xxk9at.jpg"
+          "/assets/collezioni-asolo-01-pg142-143_xxk9at.jpg"
         }
       />
     </main>

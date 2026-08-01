@@ -3,6 +3,13 @@ import SolarPanelImageGrid from "@/components/Services/SolarPanel/SolarPanelImag
 import PageHeading from "@/components/UI/PageHeading";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "ECOLINK LED Bulbs & Lighting Products",
+  description:
+    "MAHY Khoory Group supplies ECOLINK LED bulbs and lighting products offering energy-efficient, cost-saving illumination for commercial and industrial use.",
+  alternates: { canonical: "/products/led-lighting-products" },
+};
+
 function LedLightningProducts() {
   const highlights = [
     {
@@ -31,7 +38,7 @@ function LedLightningProducts() {
     <main>
       <PageHeading
         title={"ECOLINK LED Bulbs & Lighting Products"}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025861/led-lightning-1_z6ycj6.jpg"
+        image="/assets/led-lightning-1_z6ycj6.jpg"
       />
       <SolarPanelImageGrid
         subHeading={"LED Bulbs & Lighting Products"}
@@ -48,13 +55,13 @@ function LedLightningProducts() {
             text: "With a strong focus on sustainability and cost efficiency, ECOLINK LED lighting supports greener operations by lowering energy usage and carbon footprint—without compromising on quality or aesthetics.",
           },
         ]}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025869/led-lightning-2_y1ke9v.png"
+        image="/assets/led-lightning-2_y1ke9v.png"
       />
       <ComprehensiveProcessSection
         heading="Key Highlights"
         subHeading="LED Bulbs & Lighting"
         steps={highlights}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777025863/led-lightning-3_mugfpo.png"
+        image="/assets/led-lightning-3_mugfpo.png"
         endText="ECOLINK LED Bulbs & Lighting Products offer a smart, sustainable lighting choice for projects that demand performance, durability, and efficiency."
       />
     </main>

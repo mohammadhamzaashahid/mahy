@@ -1,17 +1,24 @@
 import TrustedAdvisorSection from "@/components/TrustedAdvisorSection"
 import SubPageHeading from "@/components/UI/SubPageHeading"
 
+export const metadata = {
+    title: "Diversity & Inclusion",
+    description:
+        "MAHY Khoory Group's workforce of 4,200+ professionals represents more than 30 nationalities, reflecting a genuine commitment to diversity and inclusion across all Group companies.",
+    alternates: { canonical: "/careers/diversity-and-inclusion" },
+};
+
 function DiversityAndInclusionPage() {
     const Images = [
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767741/tall-steel-skyscraper-reflects-bright-city-lights-generated-by-ai.jpg_fluzra.jpg",
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767742/businessman-showing-changes-report.jpg_ojripq.jpg"
+        "/assets/tall-steel-skyscraper-reflects-bright-city-lights-generated-by-ai.png",
+        "/assets/businessman-showing-changes-report.jpg_ojripq.jpg"
     ]
     return (
         <main>
             <SubPageHeading
                 fullHeight
                 title={"Diversity & Inclusion"}
-                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776767690/diversity_inclusion.jpg_fomkzs.jpg"}
+                image={"/assets/diversity_inclusion.jpg_fomkzs.jpg"}
             />
             <TrustedAdvisorSection
                 numbers_1="30+ Nationalities"

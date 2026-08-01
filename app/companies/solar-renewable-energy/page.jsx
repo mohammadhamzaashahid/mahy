@@ -1,5 +1,12 @@
 import CompaniesSectors from "@/components/CompaniesSectors"
 
+export const metadata = {
+  title: "Solar & Renewable Energy",
+  description:
+    "MAHY Khoory Group's solar and renewable energy sector delivers end-to-end EPC services for solar photovoltaic systems, supporting commercial and industrial clients in reducing energy costs and emissions.",
+  alternates: { canonical: "/companies/solar-renewable-energy" },
+};
+
 function SolarRenewableEnergyPage() {
     return (
         <main>

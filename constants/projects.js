@@ -119,31 +119,31 @@ export const getFeaturedProjects = (ids = []) => {
         }));
 };
 
-const projects = [
-    { id: 1, name: "Cape Hayat Four Apartment Buildings", location: "Ras Al Khaimah", sector: "Luxury Residential", developer: "RAK Properties", scale: "Mega Project", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776590833/Cape_Hayat_Four_Apartment_Buildings.jpg_t5vxge.jpg" },
-    { id: 2, name: "Falcon Island Villas Development", location: "Ras Al Khaimah", sector: "Luxury Residential", developer: "Al Hamra Real Estate", scale: "Mega Project", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133437/falcon-island_cd8c8j.jpg" },
-    { id: 3, name: "Marbella Villa Extension Project (89 Villas, Mina Al Arab)", location: "Ras Al Khaimah", sector: "Residential", developer: "RAK Properties", scale: "Medium", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133403/marbella-villa_ppwlzs.jpg" },
-    { id: 4, name: "G+M+8+R Residential & Commercial Building - Al Rigga, Dubai", location: "Dubai", sector: "Mixed-Use", developer: "Al Wasl Properties", scale: "Medium", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133404/gm8r-residential_vd8hwy.jpg" },
-    { id: 5, name: "G+14 Mixed-Use Building - Al Furjan, Dubai", location: "Dubai", sector: "Mixed-Use", developer: "ASF Real Estate", scale: "Large", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133433/g14-mixed_fcjxbh.png" },
-    { id: 6, name: "Sunreef Yacht Manufacturing Facility - Dubai", location: "Dubai", sector: "Industrial", developer: "Sunreef Yachts", scale: "Large", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133423/sunreef-yacht_k1wtjv.png" },
-    { id: 7, name: "Paradise Hills - 170 Luxury Villas, Dubai", location: "Dubai", sector: "Luxury Residential", developer: "Gulf Land Properties", scale: "Large", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133452/paradise-hills_w0ofgv.jpg" },
-    { id: 8, name: "Nursery Building - Jumeirah Village Circle, Dubai", location: "Dubai", sector: "Education", developer: "Not specified", scale: "Small", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133445/nursery-building_qu8rd6.jpg" },
-    { id: 9, name: "364 Reem Townhouses - Nshama, Town Square Dubai", location: "Dubai", sector: "Residential", developer: "Nshama", scale: "Large", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133441/364-reem_sgbnb3.jpg" },
-    { id: 10, name: "Serbia Pavilion - Expo 2020 Dubai", location: "Dubai", sector: "Exhibition", developer: "Not specified", scale: "Mega Project", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133426/serbia-pavilion_xcn5a2.png" },
-    { id: 11, name: "Gardenia Living - Near Miracle Garden, Dubai", location: "Dubai", sector: "Residential", developer: "Not specified", scale: "Medium", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133413/gardenia-living_yyoooq.jpg" },
-    { id: 12, name: "The Place Business Chamber - Dubai Chambers", location: "Dubai", sector: "Commercial", developer: "Dubai Chambers", scale: "Small", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133448/place-business-chamber_jfgapw.jpg" },
-    { id: 13, name: "Emirates Golf Estate Villas - Dubai", location: "Dubai", sector: "Luxury Residential", developer: "Not specified", scale: "Medium", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133428/emirates-golf-estate_ekj9sd.jpg" },
-    { id: 14, name: "Sobha Construction - Chilled Water Pump Supply", location: "UAE", sector: "Infrastructure", developer: "Sobha Construction", scale: "Medium", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133444/sobha-construction_tihodg.png" },
-    { id: 15, name: "District Cooling Plant - AG Engineering", location: "UAE", sector: "District Cooling", developer: "AG Engineering", scale: "Large", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133435/district-cooling-plant_utlmgl.png" },
-    { id: 16, name: "Sobha District Cooling Plant - UAE", location: "UAE", sector: "District Cooling", developer: "Sobha Construction", scale: "Medium", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133450/sobha-district_ayy34g.jpg" },
-    { id: 17, name: "Maimoon Gardens - Jumeirah Village Circle (JVC), Dubai", location: "Dubai", sector: "Residential", developer: "Not specified", scale: "Large", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133431/maimoon-gardens_wdyuld.jpg" },
-    { id: 18, name: "JW Marriott Refurbishment - Dubai, UAE", location: "Dubai", sector: "Hospitality", developer: "Not specified", scale: "Small", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133424/jw-marriott_mdbqjh.jpg" },
-    { id: 19, name: "Hayyan Villas - Alef Group, Sharjah, UAE", location: "Sharjah", sector: "Residential", developer: "Alef Group", scale: "Medium", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133404/hayyan-villas_pvi9jy.jpg" },
-    { id: 20, name: "Burj Binghatti - Business Bay, Dubai", location: "Dubai", sector: "Mixed-Use", developer: "Not specified", scale: "Mega Project", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133416/burj-binghatti_ywurgd.jpg" },
-    { id: 21, name: "Expo City Dubai - UAE", location: "UAE", sector: "Infrastructure", developer: "Not specified", scale: "Mega Project", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133411/expo-city-dubai_z7cshz.jpg" },
-    { id: 22, name: "Dubai Design District (d3) - Dubai, UAE", location: "Dubai", sector: "Mixed-Use", developer: "TECOM Group", scale: "Mega Project", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133423/dubai-design-district_chyzyk.png" },
-    { id: 23, name: "Symbolic Aura - Al Furjan, Dubai", location: "Dubai", sector: "Residential", developer: "Symbolic Developments", scale: "Medium", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133440/symbolic-aura_l6yrdy.jpg" },
-    { id: 24, name: "DAMAC Canal Crown 1 & 2 - Business Bay, Dubai", location: "Dubai", sector: "Luxury Residential", developer: "DAMAC Properties", scale: "Mega Project", image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773133417/damac-canal_zhlem0.jpg" }
+export const projects = [
+    { id: 1, name: "Cape Hayat Four Apartment Buildings", location: "Ras Al Khaimah", sector: "Luxury Residential", developer: "RAK Properties", scale: "Mega Project", image: "/assets/Cape_Hayat_Four_Apartment_Buildings.jpg_t5vxge.jpg" },
+    { id: 2, name: "Falcon Island Villas Development", location: "Ras Al Khaimah", sector: "Luxury Residential", developer: "Al Hamra Real Estate", scale: "Mega Project", image: "/assets/falcon-island_cd8c8j.jpg" },
+    { id: 3, name: "Marbella Villa Extension Project (89 Villas, Mina Al Arab)", location: "Ras Al Khaimah", sector: "Residential", developer: "RAK Properties", scale: "Medium", image: "/assets/marbella-villa_ppwlzs.jpg" },
+    { id: 4, name: "G+M+8+R Residential & Commercial Building - Al Rigga, Dubai", location: "Dubai", sector: "Mixed-Use", developer: "Al Wasl Properties", scale: "Medium", image: "/assets/gm8r-residential_vd8hwy.jpg" },
+    { id: 5, name: "G+14 Mixed-Use Building - Al Furjan, Dubai", location: "Dubai", sector: "Mixed-Use", developer: "ASF Real Estate", scale: "Large", image: "/assets/g14-mixed_fcjxbh.png" },
+    { id: 6, name: "Sunreef Yacht Manufacturing Facility - Dubai", location: "Dubai", sector: "Industrial", developer: "Sunreef Yachts", scale: "Large", image: "/assets/sunreef-yacht_k1wtjv.png" },
+    { id: 7, name: "Paradise Hills - 170 Luxury Villas, Dubai", location: "Dubai", sector: "Luxury Residential", developer: "Gulf Land Properties", scale: "Large", image: "/assets/paradise-hills_w0ofgv.jpg" },
+    { id: 8, name: "Nursery Building - Jumeirah Village Circle, Dubai", location: "Dubai", sector: "Education", developer: "Not specified", scale: "Small", image: "/assets/nursery-building_qu8rd6.jpg" },
+    { id: 9, name: "364 Reem Townhouses - Nshama, Town Square Dubai", location: "Dubai", sector: "Residential", developer: "Nshama", scale: "Large", image: "/assets/364-reem_sgbnb3.jpg" },
+    { id: 10, name: "Serbia Pavilion - Expo 2020 Dubai", location: "Dubai", sector: "Exhibition", developer: "Not specified", scale: "Mega Project", image: "/assets/serbia-pavilion_xcn5a2.png" },
+    { id: 11, name: "Gardenia Living - Near Miracle Garden, Dubai", location: "Dubai", sector: "Residential", developer: "Not specified", scale: "Medium", image: "/assets/gardenia-living_yyoooq.jpg" },
+    { id: 12, name: "The Place Business Chamber - Dubai Chambers", location: "Dubai", sector: "Commercial", developer: "Dubai Chambers", scale: "Small", image: "/assets/place-business-chamber_jfgapw.jpg" },
+    { id: 13, name: "Emirates Golf Estate Villas - Dubai", location: "Dubai", sector: "Luxury Residential", developer: "Not specified", scale: "Medium", image: "/assets/emirates-golf-estate_ekj9sd.jpg" },
+    { id: 14, name: "Sobha Construction - Chilled Water Pump Supply", location: "UAE", sector: "Infrastructure", developer: "Sobha Construction", scale: "Medium", image: "/assets/sobha-construction_tihodg.png" },
+    { id: 15, name: "District Cooling Plant - AG Engineering", location: "UAE", sector: "District Cooling", developer: "AG Engineering", scale: "Large", image: "/assets/district-cooling-plant_utlmgl.png" },
+    { id: 16, name: "Sobha District Cooling Plant - UAE", location: "UAE", sector: "District Cooling", developer: "Sobha Construction", scale: "Medium", image: "/assets/sobha-district_ayy34g.jpg" },
+    { id: 17, name: "Maimoon Gardens - Jumeirah Village Circle (JVC), Dubai", location: "Dubai", sector: "Residential", developer: "Not specified", scale: "Large", image: "/assets/maimoon-gardens_wdyuld.jpg" },
+    { id: 18, name: "JW Marriott Refurbishment - Dubai, UAE", location: "Dubai", sector: "Hospitality", developer: "Not specified", scale: "Small", image: "/assets/jw-marriott_mdbqjh.jpg" },
+    { id: 19, name: "Hayyan Villas - Alef Group, Sharjah, UAE", location: "Sharjah", sector: "Residential", developer: "Alef Group", scale: "Medium", image: "/assets/hayyan-villas_pvi9jy.jpg" },
+    { id: 20, name: "Burj Binghatti - Business Bay, Dubai", location: "Dubai", sector: "Mixed-Use", developer: "Not specified", scale: "Mega Project", image: "/assets/burj-binghatti_ywurgd.jpg" },
+    { id: 21, name: "Expo City Dubai - UAE", location: "UAE", sector: "Infrastructure", developer: "Not specified", scale: "Mega Project", image: "/assets/expo-city-dubai_z7cshz.jpg" },
+    { id: 22, name: "Dubai Design District (d3) - Dubai, UAE", location: "Dubai", sector: "Mixed-Use", developer: "TECOM Group", scale: "Mega Project", image: "/assets/dubai-design-district_chyzyk.png" },
+    { id: 23, name: "Symbolic Aura - Al Furjan, Dubai", location: "Dubai", sector: "Residential", developer: "Symbolic Developments", scale: "Medium", image: "/assets/symbolic-aura_l6yrdy.jpg" },
+    { id: 24, name: "DAMAC Canal Crown 1 & 2 - Business Bay, Dubai", location: "Dubai", sector: "Luxury Residential", developer: "DAMAC Properties", scale: "Mega Project", image: "/assets/damac-canal_zhlem0.jpg" }
 ];
 
 const projectsDescriptions = [

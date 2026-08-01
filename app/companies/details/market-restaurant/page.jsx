@@ -6,27 +6,34 @@ import SolarPanelQuoteGrid from "@/components/Services/SolarPanel/SolarPanelQuot
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import CompanyTextOnBackground from "@/components/UI/companies/detail/CompanyTextOnBackground"
 
+export const metadata = {
+  title: "Market Restaurant & Café",
+  description:
+    "Market Restaurant & Café offers dine-in, takeaway, delivery and catering services in a contemporary setting suited for private gatherings and corporate events.",
+  alternates: { canonical: "/companies/details/market-restaurant" },
+};
+
 function MarketRestarauntPage() {
     const features = [
         {
             text: "Freshly prepared salads and starters",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459586/salad_hpftaj.jpg",
+            image: "/assets/salad_hpftaj.jpg",
         },
         {
             text: "Grilled meats and seafood dishes",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459585/grills_pvtzgw.jpg",
+            image: "/assets/grills_pvtzgw.jpg",
         },
         {
             text: "Specialty brunch selections",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459567/brunch_ogrd4c.jpg",
+            image: "/assets/brunch_ogrd4c.jpg",
         },
         {
             text: "Desserts and café-style beverages",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459573/dessert_daynah.jpg",
+            image: "/assets/dessert_daynah.jpg",
         },
         {
             text: "In addition to dine-in service, the restaurant provides takeaway, delivery, and catering services, and is well suited for private gatherings, corporate lunches, and small social events.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459569/delivery_yx0mar.jpg",
+            image: "/assets/delivery_yx0mar.jpg",
         }
     ];
     const adpmCardsData = [
@@ -95,7 +102,7 @@ function MarketRestarauntPage() {
     return (
         <main>
             <CompanyOverview
-                video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777149800/Video_Project_10_eosc43.mp4"}
+                video={"/assets/Video_Project_10_eosc43.mp4"}
                 heading="Market Restaurant & Café"
                 texts={[
                     "Market Restaurant & Café is a contemporary casual dining destination located in Dubai Marina, operating under the hospitality portfolio of the MAHY Khoory Group. Positioned as a modern neighborhood restaurant, the concept combines seasonally inspired cuisine with a relaxed and welcoming atmosphere. Situated adjacent to Pearl Marina Hotel Apartments, the restaurant serves both hotel guests and the wider public, offering a convenient and approachable dining experience within one of Dubai’s most vibrant residential and leisure districts.",
@@ -112,17 +119,17 @@ function MarketRestarauntPage() {
                 heading="Target Market and Customer Segments"
                 tag="[ RESTAURANT ]"
                 text={"The restaurant caters to a diverse clientele, including:"}
-                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405269/albert-YYZU0Lo1uXE-unsplash_e8shgs.jpg"
+                backgroundImage="/assets/albert-YYZU0Lo1uXE-unsplash_e8shgs.jpg"
                 endText={"Its casual yet refined positioning makes it attractive to families, individuals, and groups looking for a comfortable dining environment without formality."}
             />
             {/* <CompanyTextOnBackground
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776762183/commitment-to-growth_qhzgjt.jpg"
+                image="/assets/commitment-to-growth_qhzgjt.jpg"
                 align="left"
             /> */}
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+                image="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
             />
         </main>
     )

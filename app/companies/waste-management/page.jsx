@@ -3,6 +3,13 @@ import GroupCompaniesGrid from "@/components/UI/companies/GroupCompaniesGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { getCompaniesBySector } from "@/constants/companyGroups";
 
+export const metadata = {
+  title: "Waste Management",
+  description:
+    "MAHY Khoory Group's waste management sector collects, recycles and processes over 1,300 metric tonnes of material daily across the UAE and Oman.",
+  alternates: { canonical: "/companies/waste-management" },
+};
+
 function WasteManagementPage() {
   const companies = getCompaniesBySector("waste-management");
 
@@ -11,14 +18,14 @@ function WasteManagementPage() {
       <SubPageHeading
         title="Clean and Green World"
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776887081/person-business-attire-placing-recyclable-documents-into-recycling-bin-promoting-sustainability-ecofriendly-office-practices.jpg_c1xxjo.jpg"
+        image="/assets/person-business-attire-placing-recyclable-documents-into-recycling-bin-promoting-sustainability-ecofriendly-office-practices.jpg_c1xxjo.jpg"
         align="center"
         fullHeight
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776887072/arrangement-with-recycle-bin-countertop.jpg_o0vei8.jpg"
+            "/assets/arrangement-with-recycle-bin-countertop.jpg_o0vei8.jpg"
           }
           title={"Waste Management"}
           texts={[

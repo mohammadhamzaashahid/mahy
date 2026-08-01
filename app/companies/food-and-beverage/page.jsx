@@ -3,6 +3,13 @@ import GroupCompaniesGrid from "@/components/UI/companies/GroupCompaniesGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { getCompaniesBySector } from "@/constants/companyGroups";
 
+export const metadata = {
+  title: "Food & Beverage",
+  description:
+    "Explore MAHY Khoory Group's food & beverage and hospitality operations, including restaurant, café and dining services across the UAE.",
+  alternates: { canonical: "/companies/food-and-beverage" },
+};
+
 function HospitalityPage() {
   const companies = getCompaniesBySector("food-and-beverage");
 
@@ -11,15 +18,15 @@ function HospitalityPage() {
       <SubPageHeading
         title="Hospitality"
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886121/receptionists-elegant-suits-work-hours.jpg_pboawv.jpg"
+        image="/assets/receptionists-elegant-suits-work-hours.jpg_pboawv.jpg"
         align="center"
         fullHeight
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
-        image2={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886109/check-reception-mature-man-with-luggage-hotel-business-meeting-hospitality-travel-service-concierge-woman-person-with-suitcase-welcome-vacation-sales-convention.jpg_t05o9z.jpg"}
+        image2={"/assets/check-reception-mature-man-with-luggage-hotel-business-meeting-hospitality-travel-service-concierge-woman-person-with-suitcase-welcome-vacation-sales-convention.jpg_t05o9z.jpg"}
           image={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886116/business-partners.jpg_pubbpk.jpg"
+            "/assets/business-partners.jpg_pubbpk.jpg"
           }
           title={"Hospitality"}
           texts={[

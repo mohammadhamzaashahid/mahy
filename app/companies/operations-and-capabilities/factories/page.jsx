@@ -2,6 +2,13 @@ import TrustedAdvisorSection from "@/components/TrustedAdvisorSection";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { Fragment } from "react";
 
+export const metadata = {
+  title: "Manufacturing Facilities",
+  description:
+    "MAHY Khoory Group's manufacturing facilities combine advanced technology, efficient processes and sustainable practices to deliver high-quality products at scale.",
+  alternates: { canonical: "/companies/operations-and-capabilities/factories" },
+};
+
 function FactoriesPage() {
   return (
     <Fragment>
@@ -9,7 +16,7 @@ function FactoriesPage() {
         fullHeight
         title={"Manufacturing Facilities"}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776888552/factory-manager-holding-meeting-talking-his-employees-about-project-plans.jpg_1_vrmxzd.jpg"
+          "/assets/factory-manager-holding-meeting-talking-his-employees-about-project-plans.jpg_1_vrmxzd.jpg"
         }
       />
 
@@ -31,8 +38,8 @@ function FactoriesPage() {
         ]}
         lastText="Through continuous investment in technology, quality control, and sustainable practices, our manufacturing facilities enable us to deliver reliable products, reduce environmental impact, and support the growing needs of our customers and partners."
         images={[
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776629993/governance-oversight_1_kaybzq.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776888472/mid-adult-manager-car-mechanic-talking-while-using-computer-auto-repair-shop.jpg_ttjdu0.jpg",
+          "/assets/governance-oversight_1_kaybzq.jpg",
+          "/assets/mid-adult-manager-car-mechanic-talking-while-using-computer-auto-repair-shop.jpg_ttjdu0.jpg",
         ]}
       />
     </Fragment>

@@ -19,7 +19,7 @@ const defaultItems = [
     desc:
       "Lorem ipsum dolor sit amet consectetur. Id purus enim diam felis. Pharetra ut posuere sem vitae dui nec velit.",
     image:
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822187/gallery-1_exhyck.jpg",
+      "/assets/gallery-1_exhyck.jpg",
   },
   {
     no: "02",
@@ -27,7 +27,7 @@ const defaultItems = [
     desc:
       "Lorem ipsum dolor sit amet consectetur. Id purus enim diam felis. Pharetra ut posuere sem vitae dui nec velit.",
     image:
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822184/gallery-2_qwc2me.jpg",
+      "/assets/gallery-2_qwc2me.jpg",
   },
   {
     no: "03",
@@ -35,7 +35,7 @@ const defaultItems = [
     desc:
       "Lorem ipsum dolor sit amet consectetur. Id purus enim diam felis. Pharetra ut posuere sem vitae dui nec velit.",
     image:
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822181/gallery-3_exvuhu.jpg",
+      "/assets/gallery-3_exvuhu.jpg",
   },
   {
     no: "04",
@@ -43,7 +43,7 @@ const defaultItems = [
     desc:
       "Lorem ipsum dolor sit amet consectetur. Id purus enim diam felis. Pharetra ut posuere sem vitae dui nec velit.",
     image:
-      "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822205/gallery-4_oxzrpw.jpg",
+      "/assets/gallery-4_oxzrpw.jpg",
   },
 ];
 

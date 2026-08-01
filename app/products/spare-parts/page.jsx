@@ -5,6 +5,13 @@ import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Spare Parts",
+  description:
+    "MAHY Khoory Group supplies authentic spare parts including filters, pistons, injector nozzles, gaskets and overhaul kits for reliable generator and diesel engine maintenance.",
+  alternates: { canonical: "/products/spare-parts" },
+};
+
 function SparePartsPage() {
   const coverage = [
     {
@@ -74,9 +81,9 @@ function SparePartsPage() {
     <main>
       <CompanyOverview
         video={
-          "https://res.cloudinary.com/dpn6mdpxd/video/upload/q_auto/f_auto/v1777552035/Spare-parts_ar3bnn.mp4"
+          "/assets/Spare-parts_ar3bnn.mp4"
         }
-        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+        // image="/assets/office_jaeuiz.webp"
         heading="Spare Parts"
         texts={[
             "Our Spare Parts Division is built on a strong operational framework that prioritizes accuracy, efficiency, and reliability at every stage. From identifying the correct component to final delivery, our processes are designed to eliminate delays and ensure that customers receive exactly what they need, when they need it. Leveraging deep product knowledge and technical expertise, our team supports clients in selecting the right parts for both routine maintenance and complex repair requirements. We understand that equipment downtime can directly impact productivity and operational continuity. That is why we focus on maintaining optimal inventory levels, streamlined logistics, and responsive service support across all our locations.",
@@ -86,11 +93,11 @@ function SparePartsPage() {
     
       title={"Spare Parts"}
         fullHeight
-        image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776984818/spare-parts-background-beautiful-illustration-picture-generative-ai.jpg_yanoie.jpg"}
+        image={"/assets/spare-parts-background-beautiful-illustration-picture-generative-ai.jpg_yanoie.jpg"}
       /> */}
       <ValuesSection
         description="Our Spare Parts Division is built on a strong operational framework that prioritizes accuracy, efficiency, and reliability at every stage. From identifying the correct component to final delivery, our processes are designed to eliminate delays and ensure that customers receive exactly what they need, when they need it. Leveraging deep product knowledge and technical expertise, our team supports clients in selecting the right parts for both routine maintenance and complex repair requirements. We understand that equipment downtime can directly impact productivity and operational continuity. That is why we focus on maintaining optimal inventory levels, streamlined logistics, and responsive service support across all our locations. Our integrated supply chain enables us to respond quickly to urgent requirements, ensuring that critical components are readily available and delivered with minimal lead time, helping businesses maintain smooth and uninterrupted operations. Beyond supply, we are committed to building long-term partnerships by delivering consistent value through dependable service and technical support. Our customers rely on us not only for genuine spare parts, but also for expert guidance, transparency, and after-sales support that enhances the lifecycle and performance of their equipment. This commitment reinforces our position as a trusted partner for industries and organizations across the region."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto,f_auto/v1777059436/car-parts-grey-background_1_qfnlsp.jpg"
+        imageSrc="/assets/car-parts-grey-background_1_qfnlsp.jpg"
         imageAlt="Spare Parts Division"
         ctaHref={false}
         width="max-w-7xl mx-auto"
@@ -98,14 +105,14 @@ function SparePartsPage() {
       />
       {/* <ValuesSection
         description="Every spare part is sourced directly from leading global brands and engineered to deliver long service life, optimal compatibility, and consistent performance in the region’s demanding operating conditions."
-        imageSrc="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769421591/61_8ev0eJXL._AC_SL1000__vbdhct.png"
+        imageSrc="/assets/61_8ev0eJXL._AC_SL1000__vbdhct.png"
         imageAlt="Spare Part"
         width="max-w-7xl mx-auto"
         ctaHref={false}
         imagePosition="right"
       /> */}
       <FeaturesEngineeringSection
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto,f_auto/v1776984884/transportation.jpg_f3k4sm.jpg"
+        image="/assets/transportation.jpg_f3k4sm.jpg"
         heading="Product Coverage"
         items={coverage}
       />

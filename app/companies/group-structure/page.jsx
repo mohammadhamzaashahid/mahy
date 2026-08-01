@@ -1,6 +1,13 @@
 import GroupStructure from '@/components/UI/companies/GroupStructure'
 import SubPageHeading from '@/components/UI/SubPageHeading'
 
+export const metadata = {
+  title: "Group Structure",
+  description:
+    "An overview of MAHY Khoory Group's corporate structure, encompassing 25 operating companies and business divisions across 10 industries.",
+  alternates: { canonical: "/companies/group-structure" },
+};
+
 function GroupStructurePage() {
     return (
         <main>
@@ -9,8 +16,8 @@ function GroupStructurePage() {
                   fullHeight
                     title={"MAHY KHOORY GROUP"}
                     image={
-                    //   "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776593285/holding-overview-page.jpg_norjia.jpg"
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776629188/urban-jewel-tones-sunrise-paints-glass-facades.jpg_h5bjgi.jpg"
+                    //   "/assets/holding-overview-page.jpg_norjia.jpg"
+            "/assets/urban-jewel-tones-sunrise-paints-glass-facades.jpg_h5bjgi.jpg"
                 }
                   />
             <GroupStructure />

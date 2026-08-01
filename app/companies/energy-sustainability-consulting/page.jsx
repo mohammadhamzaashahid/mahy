@@ -3,6 +3,13 @@ import GroupCompaniesGrid from "@/components/UI/companies/GroupCompaniesGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { getCompaniesBySector } from "@/constants/companyGroups";
 
+export const metadata = {
+  title: "Energy & Sustainability Consulting",
+  description:
+    "MAHY Khoory Group's energy and sustainability consulting sector supports clients in reducing energy costs, improving efficiency and lowering carbon emissions through renewable energy solutions.",
+  alternates: { canonical: "/companies/energy-sustainability-consulting" },
+};
+
 function EnergySustainabilityConsulting() {
     const companies = getCompaniesBySector("energy-sustainability-consulting");
 
@@ -12,13 +19,13 @@ function EnergySustainabilityConsulting() {
              <SubPageHeading
         title="Sustainability Is Our Power"
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886426/investors-examine-solar-panel-surface-using-tablet-discussing-design-efficiency.jpg_plo6qi.jpg"
+        image="/assets/investors-examine-solar-panel-surface-using-tablet-discussing-design-efficiency.jpg_plo6qi.jpg"
         align="center"
         fullHeight
       />
             <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
                 <CompaniesSectors
-                    image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776886475/photovoltaics-factory-industrial-production-managers-looking-schematics.jpg_pric2u.jpg"}
+                    image={"/assets/photovoltaics-factory-industrial-production-managers-looking-schematics.jpg_pric2u.jpg"}
                     title={"Energy & Sustainability Consulting"}
                     texts={[
                         "This sector provides sustainability advisory and green-building consultancy services.",

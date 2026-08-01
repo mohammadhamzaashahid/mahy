@@ -1,12 +1,18 @@
 import CompanyVisionPurpose from "@/components/UI/companies/detail/CompanyVisionPurpose"
 import SubPageHeading from "@/components/UI/SubPageHeading"
 
+export const metadata = {
+    title: "Recruitment Process",
+    description:
+        "Learn how MAHY Khoory Group's structured, professional recruitment process ensures fair evaluation and appoints competent, accountable individuals.",
+    alternates: { canonical: "/careers/recruitment-process" },
+};
 
 function RecruitmentProcessPage() {
     const items = [
         {
             label: "Structured & Professional Evaluation",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773042594/Dubai_business_district_at_night_with_illuminated_skyscrapers.jpg_inqewf.jpg",
+            image: "/assets/Dubai_business_district_at_night_with_illuminated_skyscrapers.jpg_inqewf.jpg",
             items: [
                 {
                     title: "Structured & Professional Evaluation",
@@ -16,7 +22,7 @@ function RecruitmentProcessPage() {
         },
         {
             label: "Department & HR Assessment",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773042651/corporate_workspace_with_a_sleek_desk_displaying_organized_documents.jpg_h6ggoy.jpg",
+            image: "/assets/corporate_workspace_with_a_sleek_desk_displaying_organized_documents.jpg_h6ggoy.jpg",
             items: [
                 {
                     title: "Department & HR Assessment",
@@ -26,7 +32,7 @@ function RecruitmentProcessPage() {
         },
         {
             label: "Offer & Onboarding",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773042687/corporate_office_desk_with_a_formal_employment_offer_letter_placed.jpg_xuuxei.jpg",
+            image: "/assets/corporate_office_desk_with_a_formal_employment_offer_letter_placed.jpg_xuuxei.jpg",
             items: [
                 {
                     title: "Offer & Onboarding",
@@ -40,7 +46,7 @@ function RecruitmentProcessPage() {
             <SubPageHeading
             fullHeight
                 title={"Recruitment Process"}
-                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776766968/customer-relationship-management-concept-with-global-structure-human-resources-hr-management-recruit.jpg_hgiy6w.jpg"}
+                image={"/assets/customer-relationship-management-concept-with-global-structure-human-resources-hr-management-recruit.jpg_hgiy6w.jpg"}
             />
             <CompanyVisionPurpose
                 heading="Recruitment Process"

@@ -3,30 +3,37 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu"
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards"
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 import WhoWeAre from "@/components/UI/home/WhoWeAre"
+
+export const metadata = {
+  title: "Pearl Marina Hotel Apartments",
+  description:
+    "Pearl Marina Hotel Apartments offers fully furnished serviced apartments with modern hospitality technology for comfort, convenience and security.",
+  alternates: { canonical: "/companies/details/pearl-marina" },
+};
 import { object } from "zod"
 
 function PearlMarinaPage() {
     const features = [
         {
             text: "Fully furnished apartments with equipped kitchens or kitchenettes",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937267/collezioni-opera-02-pg199_vbgmzu.jpg",
+            image: "/assets/collezioni-opera-02-pg199_vbgmzu.jpg",
         },
         {
             text: "Spacious living and dining areas with private balconies",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777459182/Spacious_living_and_dining_azzfj9.jpg",
+            image: "/assets/Spacious_living_and_dining_azzfj9.jpg",
             objectFit: "contain",
         },
         {
             text: "24-hour front desk and concierge services",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016328/traveller-calling-hotel-concierge_mlmxzp.jpg",
+            image: "/assets/traveller-calling-hotel-concierge_mlmxzp.jpg",
         },
         {
             text: "Daily housekeeping and laundry support",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777124269/Hospitality-2_onqzpn.jpg",
+            image: "/assets/Hospitality-2_onqzpn.jpg",
         },
         {
             text: "On-site dining options",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016313/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_w7r5es.jpg",
+            image: "/assets/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_w7r5es.jpg",
         }
     ];
     const adpmCardsData = [
@@ -82,8 +89,8 @@ function PearlMarinaPage() {
     return (
         <main>
             <CompanyOverview
-            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777459204/Video_Project_17_vz30mp.mp4"}             
-                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777151259/ChatGPT_Image_Feb_5_2026_11_42_00_AM_pglvjk.png"
+            video={"/assets/Video_Project_17_vz30mp.mp4"}             
+                // image="/assets/ChatGPT_Image_Feb_5_2026_11_42_00_AM_pglvjk.png"
                 heading="Pearl Marina Hotel Apartments"
                 texts={[
                     "Pearl Marina Hotel Apartments is a boutique hospitality property located in the heart of Dubai Marina, offering upscale, fully furnished serviced apartments designed for both short- and long-term stays. Operated as part of the MAHY Khoory Group’s hospitality portfolio, the property combines contemporary elegance with the dynamic lifestyle of Dubai’s Marina waterfront.",
@@ -101,7 +108,7 @@ function PearlMarinaPage() {
                 text="The property is well suited to business travelers and corporate clients, offering dedicated business services, meeting rooms, and conference facilities. These amenities support executives, project teams, and long-stay corporate guests requiring a professional yet comfortable accommodation environment."
                 showButton={false}
                 invert={false}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016295/lobby-with-large-lobby-with-large-chandelier-plant-center_pznxim.jpg"
+                image="/assets/lobby-with-large-lobby-with-large-chandelier-plant-center_pznxim.jpg"
                 imageAlt="Business and Corporate Facilities"
             />
             <PumpingServiceCards
@@ -109,13 +116,13 @@ function PearlMarinaPage() {
                 heading="Target Market and Guest Segments"
                 tag="[ PEARL MARINA ]"
                 text={"Pearl Marina Hotel Apartments serves a diverse clientele, including:"}
-                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777405667/valeriia-bugaiova-_pPHgeHz1uk-unsplash_oqslxo.jpg"
+                backgroundImage="/assets/valeriia-bugaiova-_pPHgeHz1uk-unsplash_oqslxo.jpg"
                 endText={"Its strategic location near Dubai Internet City, Dubai Media City, major commercial districts, retail destinations, beaches, and leisure attractions makes it highly attractive to both regional and international guests."}
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776982981/businessman-summer-city-with-three-women.jpg_wriu63.jpg"
+                image="/assets/businessman-summer-city-with-three-women.jpg_wriu63.jpg"
             />
         </main>
     )

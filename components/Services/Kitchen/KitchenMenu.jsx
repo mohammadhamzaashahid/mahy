@@ -14,21 +14,21 @@ function KitchenMenu({
       title: "Strategic Visionaries",
       text: "We start by understanding your business at its core. Ourteam of seasoned consultants collaborates with you to craft a strategic vision that aligns with your goals.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937366/fusion-03-pg30_qsuufj.jpg",
+        "/assets/fusion-03-pg30_qsuufj.jpg",
       objectFit: "cover",
     },
     {
       title: "Customized Solutions",
       text: "No two businesses are alike, and we recognize that. Our team develops bespoke solutions tailored to your specific needs.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937209/collezioni-frida-03-pg129_qhzqdu.jpg",
+        "/assets/collezioni-frida-03-pg129_qhzqdu.jpg",
       objectFit: "cover",
     },
     {
       title: "Collaborative Execution",
       text: "We start by understanding your business at its core. Ourteam of seasoned consultants collaborates with you to craft a strategic vision that aligns with your goals.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776937267/collezioni-opera-02-pg199_vbgmzu.jpg",
+        "/assets/collezioni-opera-02-pg199_vbgmzu.jpg",
       objectFit: "cover",
     },
   ],

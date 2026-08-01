@@ -5,12 +5,19 @@ import WasteCollectionTimeline from "@/components/Services/WasteCollection/Waste
 import PageHeading from "@/components/UI/PageHeading";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Booster Pumps",
+  description:
+    "MAHY Khoory Group supplies booster pumps that deliver superior pressure boosting with optimized flow characteristics, reduced energy consumption and high operational performance.",
+  alternates: { canonical: "/products/booster-pumps" },
+};
+
 function BoosterPumpsPage() {
   const timelineItems = [
     {
       title: "High-Efficiency Hydraulic Design",
       text: "Delivers superior pressure boosting with optimized flow characteristics, ensuring reduced energy consumption and high operational performance.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017064/booster-pumps2_quf1si.png",
+      image: "/assets/booster-pumps2_quf1si.png",
     },
     {
       title: "Advanced Control Systems",
@@ -20,27 +27,27 @@ function BoosterPumpsPage() {
         "Variable Frequency Drive (VFD) systems for intelligent speed control, reduced power usage, and extended pump life",
         "Smart control panels with LCD displays, alarms, BMS connectivity, and system diagnostics",
       ],
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017064/booster-pumps3.png_zznjx5.jpg",
+      image: "/assets/booster-pumps3.png_zznjx5.jpg",
     },
     {
       title: "Flexible Pump Configurations",
       text: "Available in single, twin, and multi-pump (triplex/quadra) setups to meet varying flow rates and redundancy requirements.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017069/booster-pumps4.png_y77hkb.jpg",
+      image: "/assets/booster-pumps4.png_y77hkb.jpg",
     },
     {
       title: "Durable & Corrosion-Resistant Construction",
       text: "Built with stainless steel impellers, diffusers, and wetted components, ensuring long service life in harsh water conditions.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017068/booster-pumps4_v299pw.png",
+      image: "/assets/booster-pumps4_v299pw.png",
     },
     {
       title: "Low Noise Performance",
       text: "Engineered with vibration-dampened bases and balanced motors, making them ideal for indoor, residential, and noise-sensitive installations.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017067/booster-pumps5_uynqax.png",
+      image: "/assets/booster-pumps5_uynqax.png",
     },
     {
       title: "Dry-Run & Overload Protection",
       text: "Integrated safety mechanisms protect the motor and pump assembly, ensuring reliable long-term operation.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017066/booster-pumps6_l9zjty.png",
+      image: "/assets/booster-pumps6_l9zjty.png",
     },
   ];
   const tabItems = [
@@ -77,7 +84,7 @@ function BoosterPumpsPage() {
         // description={
         //   "Reliable pumping system services delivering optimal performance and long-term efficiency. From installation to maintenance, we ensure smooth and uninterrupted operations."
         // }
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017075/booster-pumps1_h6u2qe.png"
+        image="/assets/booster-pumps1_h6u2qe.png"
       />
       <WasteCollectionTimeline
         text="Booster pumps are engineered to elevate water pressure and maintain a consistent, reliable flow across residential, commercial, and industrial systems. Designed for continuous and stable performance, these pumps ensure uninterrupted water delivery even under fluctuating demand conditions. With advanced control technologies and robust construction, booster systems deliver long-term durability, energy efficiency, and user-friendly operation."
@@ -85,7 +92,7 @@ function BoosterPumpsPage() {
         bottomSection={false}
       />
       {/* <WasteCollectionMenu
-      image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017066/booster-pumps7_ufjl42.png"
+      image="/assets/booster-pumps7_ufjl42.png"
         heading="Applications"
         tabs={tabItems.map((item) => item.title)}
         items={tabItems.map((item) => item.text)}

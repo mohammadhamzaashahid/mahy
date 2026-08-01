@@ -13,6 +13,13 @@ import { getLocale, getTranslations } from "next-intl/server";
 import React from "react";
 import { Slide, ToastContainer } from "react-toastify";
 
+export const metadata = {
+    title: "Shop",
+    description:
+        "Shop MAHY Khoory Group's catalog of pumps, water heaters, power tools, ladders and industrial equipment from leading global brands.",
+    alternates: { canonical: "/shop" },
+};
+
 async function Shop({ searchParams }) {
     const params = await searchParams;
     const locale = await getLocale();
@@ -28,12 +35,12 @@ async function Shop({ searchParams }) {
     const t = await getTranslations("ShopPage");
 
     const topFilters = [
-        { key: "ariston", label: "Ariston", text: t("Filter1Text"), image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769338670/Picture1_ld0xap.png" },
-        { key: "crane", label: "Crane", text: t("Filter2Text"), image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769418510/valve_converted_xgfz0v.png" },
-        { key: "dewalt", label: "Dewalt Tools", text: t("Filter4Text"), image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769421634/61oaKFTEUJL._AC_SL1200__awsn9m.png" },
-        { key: "franklin", label: "Franklin Motors", text: t("Filter5Text"), image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769422322/Picture1_uvoma3.png" },
-        { key: "globalWater", label: "Global Water Solutions", text: t("Filter6Text"), image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769422636/Picture1_yiezev.png" },
-        { key: "grundfos", label: "Grundfos Pumps", text: t("Filter7Text"), image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1769423150/Picture1_eivc8u.png" },
+        { key: "ariston", label: "Ariston", text: t("Filter1Text"), image: "/assets/Picture1_ld0xap.png" },
+        { key: "crane", label: "Crane", text: t("Filter2Text"), image: "/assets/valve_converted_xgfz0v.png" },
+        { key: "dewalt", label: "Dewalt Tools", text: t("Filter4Text"), image: "/assets/61oaKFTEUJL._AC_SL1200__awsn9m.png" },
+        { key: "franklin", label: "Franklin Motors", text: t("Filter5Text"), image: "/assets/Picture1_uvoma3.png" },
+        { key: "globalWater", label: "Global Water Solutions", text: t("Filter6Text"), image: "/assets/Picture1_yiezev.png" },
+        { key: "grundfos", label: "Grundfos Pumps", text: t("Filter7Text"), image: "/assets/Picture1_eivc8u.png" },
     ];
 
     const { items, cookieKey, stored, total, totalPages } = await getNewProducts(brand, Number(page), category, Number(price_min), Number(price_max));

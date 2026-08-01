@@ -5,6 +5,13 @@ import PageHeading from "@/components/UI/PageHeading";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import React from "react";
 
+export const metadata = {
+  title: "Premium Wooden Pallets",
+  description:
+    "MAHY Khoory Group supplies premium wooden and metal pallets designed for demanding environments including manufacturing plants, heavy industries and cold-storage rooms.",
+  alternates: { canonical: "/products/premium-wooden-pallets" },
+};
+
 function PremiumWoodenPallets() {
   const features = [
     {
@@ -19,13 +26,13 @@ function PremiumWoodenPallets() {
       endText:
         "Ideal for industries requiring reusable, long-lasting, and contamination-free pallet solutions.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777029513/pure-wood-pure-pellets-factory-price_ggev6t.jpg",
+        "/assets/pure-wood-pure-pellets-factory-price_ggev6t.jpg",
     },
     {
       label: "Export-Ready Construction",
       text: "Our pallets comply with regional and international shipping standards, making them suitable for global logistics companies, export warehouses, and manufacturing hubs.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777029510/Pine-Wood-Pellets_mq1yfw.jpg",
+        "/assets/Pine-Wood-Pellets_mq1yfw.jpg",
     },
     {
       label: "Custom Engineering & Fabrication",
@@ -36,7 +43,7 @@ function PremiumWoodenPallets() {
         "Specialized coatings or treatments",
       ],
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777029521/firewood-fg55-64_1000_w42qyr.jpg",
+        "/assets/firewood-fg55-64_1000_w42qyr.jpg",
     },
   ];
   const advantages = [
@@ -78,13 +85,13 @@ function PremiumWoodenPallets() {
     <main>
       <PageHeading
         title={"Premium Wooden Pallets"}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275477/IMG_gzq8fj.png"
+        image="/assets/IMG_gzq8fj.png"
       />
       <TrustedBusinessAdvisor
         images={[
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146022/image002_lmmmfu.png",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275858/IMG_-_2_stmfpe.png",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777029517/biomass-wood-pellet-500x500_wxke1f.jpg",
+          "/assets/image002_lmmmfu.png",
+          "/assets/IMG_-_2_stmfpe.png",
+          "/assets/biomass-wood-pellet-500x500_wxke1f.jpg",
         ]}
         heading="Premium Wooden Pallets"
         text="Manufactured using heat-treated, high-density compressed wood blocks and quality timber, our wooden pallets are engineered for:"
@@ -101,12 +108,12 @@ function PremiumWoodenPallets() {
         heading="Premimun Pallets"
         items={advantages}
         images={[
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275351/Sustainable_Origins_ttvxce.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777146183/image003_je11qk.png",
+          "/assets/Sustainable_Origins_ttvxce.jpg",
+          "/assets/image003_je11qk.png",
            
         ]}
       />
-      <TrustedAdvisorSection images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777275348/Advance_recycling_n7hyqc.jpg", "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777220684/3d-view-puzzle-pieces_ng78lk.jpg"]} heading="Applications" bullets={applications} />
+      <TrustedAdvisorSection images={["/assets/Advance_recycling_n7hyqc.jpg", "/assets/3d-view-puzzle-pieces_ng78lk.jpg"]} heading="Applications" bullets={applications} />
     </main>
   );
 }

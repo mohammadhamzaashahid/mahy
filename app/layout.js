@@ -17,6 +17,7 @@ import ReactQueryProvider from "@/components/Providers/ReactQueryProvider";
 import LoaderWrapper from "@/components/LoaderWrapper";
 import LayoutWrapper from "@/components/Layout/LayoutWrapper";
 import { AuthContextProvider } from "@/context/AuthContext";
+import CookieConsentBanner from "@/components/CookieConsent/CookieConsentBanner";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -24,15 +25,35 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mahykhoory.com";
+const defaultTitle =
+  "M.A.H.Y. Khoory & CO. LLC | UAE Industrial Group Since 1930";
+const defaultDescription =
+  "M.A.H.Y. Khoory Group is a UAE national-owned industrial holding group operating 25 companies across 10 industries, including water pumping, electrical & MEP engineering, paper recycling, waste management, solar EPC and automotive, trusted across the Middle East since 1930.";
+
 export const metadata = {
-  metadataBase: new URL("https://mahy.vercel.app"),
-  title: "M.A.H.Y. Khoory & CO. LLC",
-  description:
-    "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: defaultTitle,
+    template: "%s | M.A.H.Y. Khoory & CO. LLC",
+  },
+  description: defaultDescription,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
   openGraph: {
-    title: "M.A.H.Y. Khoory & CO. LLC",
-    description:
-      "A name that is recognized across the Middle East as leaders in the fields of Water Pumping Solutions, Electrical Solutions, Paper Recycling, and Logistics",
+    siteName: "M.A.H.Y. Khoory & CO. LLC",
+    title: defaultTitle,
+    description: defaultDescription,
+    url: siteUrl,
+    type: "website",
+    locale: "en_AE",
     images: [
       {
         url: "/gallery/icon.png",
@@ -40,6 +61,12 @@ export const metadata = {
         height: 630,
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: ["/gallery/icon.png"],
   },
 };
 export const viewport = {
@@ -87,6 +114,7 @@ export default async function RootLayout({ children }) {
                     </AuthContextProvider>
                   </LayoutWrapper>
                   <CartDrawer />
+                  <CookieConsentBanner />
                 </CartProvider>
               </LoaderWrapper>
             </NextIntlClientProvider>

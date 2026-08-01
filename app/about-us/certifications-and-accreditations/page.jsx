@@ -3,6 +3,13 @@ import { awardsData } from "@/components/Awards/awardsData";
 import AnimatedLines from "@/components/UI/AnimatedLines";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Awards, Certifications & Accreditations",
+  description:
+    "Discover the international quality, environmental, health & safety and operational excellence certifications and industry accreditations held across the MAHY Khoory Group.",
+  alternates: { canonical: "/about-us/certifications-and-accreditations" },
+};
+
 function CapabilitiesPage() {
   const mid = Math.ceil(awardsData.length / 2);
 
@@ -13,7 +20,7 @@ function CapabilitiesPage() {
         fullHeight
         title={"Awards, Certifications & Accreditations"}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776594607/certifications-and-accreditations_a2ssqq.jpg"
+          "/assets/certifications-and-accreditations_a2ssqq.jpg"
         }
       />
 
@@ -96,7 +103,7 @@ export default CapabilitiesPage;
 //       fullHeight
 //         title={"Awards, Certifications & Accreditiations"}
 //         // description={"Our key capabilities and expertise span strategic planning, advanced technology integration, and operational excellence. We deliver tailored solutions through deep industry knowledge, innovation-driven processes, and skilled teams. This enables us to consistently achieve high-quality outcomes and long-term value for our partners."}
-//         image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776594607/certifications-and-accreditations_a2ssqq.jpg"}
+//         image={"/assets/certifications-and-accreditations_a2ssqq.jpg"}
 //       />
 //       <section className="bg-[#ffffff] py-24">
 //         <div className="mx-auto max-w-7xl px-6">

@@ -6,6 +6,13 @@ import PageHeading from "@/components/UI/PageHeading";
 import { getLocale, getTranslations } from "next-intl/server";
 import React from "react";
 
+export const metadata = {
+  title: "MAHY Servicing",
+  description:
+    "Submit a service request to MAHY Khoory Group's technical support team for pumping, HVAC and engineering system maintenance.",
+  alternates: { canonical: "/contact-us/service-request" },
+};
+
 async function ContactUs() {
   const t = await getTranslations("ContactUsPage");
   const locale = await getLocale();

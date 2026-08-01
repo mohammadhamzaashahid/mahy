@@ -2,10 +2,10 @@ import SubPageHeading from "@/components/UI/SubPageHeading";
 import CompaniesSectors from "@/components/CompaniesSectors";
 
 const HSE_IMAGES = {
-    "health-safety-management": "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776977327/flat-lay-arrangement-with-safety-equipment.jpg_qmca6i.jpg",
-    "environmental-management":  "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776977324/employees-with-masks-working-warehouse.jpg_w2gwtw.jpg",
-    "monitoring-compliance":     "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776977337/architect-holding-blueprint.jpg_he3kqs.jpg",
-    "continuous-improvement":    "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776977327/flat-lay-arrangement-with-safety-equipment.jpg_qmca6i.jpg",
+    "health-safety-management": "/assets/flat-lay-arrangement-with-safety-equipment.jpg_qmca6i.jpg",
+    "environmental-management":  "/assets/employees-with-masks-working-warehouse.jpg_w2gwtw.jpg",
+    "monitoring-compliance":     "/assets/architect-holding-blueprint.jpg_he3kqs.jpg",
+    "continuous-improvement":    "/assets/flat-lay-arrangement-with-safety-equipment.jpg_qmca6i.jpg",
 };
 
 const data = [
@@ -60,6 +60,24 @@ const data = [
         text2: "By maintaining strong HSE governance and oversight, the Group ensures safe working environments, protects the environment, and supports sustainable and responsible operations across all sectors in which it operates.",
     },
 ];
+
+export async function generateMetadata({ params }) {
+    const { id } = await params;
+    const currentData = data.find((item) => item.id === id);
+    if (!currentData) return {};
+
+    return {
+        title: currentData.title,
+        description: currentData.description,
+        alternates: { canonical: `/hse/${id}` },
+        openGraph: {
+            title: currentData.title,
+            description: currentData.description,
+            url: `/hse/${id}`,
+            images: HSE_IMAGES[id] ? [{ url: HSE_IMAGES[id] }] : undefined,
+        },
+    };
+}
 
 async function HealthSafetyManagementDetailPage({ params }) {
     const { id } = await params;

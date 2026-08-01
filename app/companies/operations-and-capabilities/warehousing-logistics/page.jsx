@@ -2,6 +2,13 @@ import CompanyDetailCards from '@/components/UI/companies/detail/CompanyDetailCa
 import SubPageHeading from '@/components/UI/SubPageHeading'
 import { Fragment } from 'react'
 
+export const metadata = {
+  title: "Warehousing & Logistics",
+  description:
+    "MAHY Khoory Group combines physical infrastructure with digital logistics management to ensure resilient, scalable and responsive supply-chain operations.",
+  alternates: { canonical: "/companies/operations-and-capabilities/warehousing-logistics" },
+};
+
 function WarehousingLogisticsPage() {
     return (
         <Fragment>
@@ -9,12 +16,12 @@ function WarehousingLogisticsPage() {
             fullHeight
                 title={"Warehousing & Logistics"}
                 // image={"/gallery/gallery-2.jpg"}
-                                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776594879/quality-management-systems_yyivys.jpg"}
+                                image={"/assets/quality-management-systems_yyivys.jpg"}
 
             />
             <CompanyDetailCards
-            img1 = {"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776630183/warehouse-workers-protective-uniform-walking-through-large-distribution-center-organizing-goods-distribution.jpg_2_oqky00.jpg"}
-            img2 = {"https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776630358/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"}
+            img1 = {"/assets/warehouse-workers-protective-uniform-walking-through-large-distribution-center-organizing-goods-distribution.jpeg"}
+            img2 = {"/assets/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"}
                 heading1='Warehousing & Logistics'
                 text1={[
                     "The MAHY Khoory Group maintains a robust warehousing and logistics infrastructure designed to support its multi-sector operations at scale. Centralized and regional warehouses are integrated across trading, manufacturing, automotive, and project-based businesses, enabling efficient storage, handling, and distribution of products and equipment.",

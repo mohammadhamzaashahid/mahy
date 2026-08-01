@@ -3,27 +3,34 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 
+export const metadata = {
+  title: "National Paper Industry",
+  description:
+    "National Paper Industry (S.P.S – L.L.C) provides end-to-end corrugated packaging services, from design and prototyping through high-speed, high-precision production.",
+  alternates: { canonical: "/companies/details/national-paper-industry" },
+};
+
 function NationalPaperIndustryPage() {
     const features = [
         {
             text: "Single-wall and double-wall corrugated cartons",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311479/Single_wall_double_wall_v9gkge.jpg",
+            image: "/assets/Single_wall_double_wall_v9gkge.jpg",
         },
         {
             text: "Custom-designed boxes and die-cut packaging",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311514/Custom_Designed_boxes_uqistj.jpg",
+            image: "/assets/Custom_Designed_boxes_uqistj.jpg",
         },
         {
             text: "Heavy-duty and specialty packaging configurations",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311548/Heavy_Duty_boxes_sew5y5.jpg",
+            image: "/assets/Heavy_Duty_boxes_sew5y5.jpg",
         },
         {
             text: "Printed corrugated solutions",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311490/Printed_Cartoon_boxes_cllghh.jpg",
+            image: "/assets/Printed_Cartoon_boxes_cllghh.jpg",
         },
         // {
         //     text: "The company offers end-to-end packaging services, supporting customers from initial design and prototyping through large-scale production and delivery. This integrated approach ensures consistency in quality, performance, and lead times.",
-        //     image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777104677/Testlinear_ikbc7c.png",
+        //     image: "/assets/Testlinear_ikbc7c.png",
         // }
     ];
     const adpmCardsData = [
@@ -76,7 +83,7 @@ function NationalPaperIndustryPage() {
     return (
         <main>
             <CompanyOverview
-                video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1772793964/National_Paper_Industries_bhhmav.mp4"}
+                video={"/assets/National_Paper_Industries_bhhmav.mp4"}
                 heading="National Paper Industry (S.P.S – L.L.C)"
                 texts={[
                     "National Paper Industry (S.P.S – L.L.C)   (NPI) is a leading manufacturer of corrugated cartons and packaging solutions in the United Arab Emirates. Headquartered in Ajman, NPI operates as part of the MAHY Khoory Group’s manufacturing division, serving a broad customer base across the UAE and selected regional markets.",
@@ -93,13 +100,13 @@ function NationalPaperIndustryPage() {
                 heading="Market Focus and Client Sectors"
                 tag="[ PAPER INDUSTRY ]"
                 text={"NPI serves a wide range of industries across domestic and regional markets. Key client sectors include:"}
-                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
+                backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
                 endText={"By customizing carton strength, dimensions, and print quality, NPI supports both large industrial clients and small-to-medium enterprises seeking durable, branded, and cost-effective packaging solutions."}
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311768/IMG_-_44_yw68el.jpg"
+                image="/assets/IMG_-_44_yw68el.jpg"
             />
         </main>
     )

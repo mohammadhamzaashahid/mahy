@@ -4,6 +4,13 @@ import PageHeading from "@/components/UI/PageHeading";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import React from "react";
 
+export const metadata = {
+  title: "Global Water Solutions Pressure Tanks",
+  description:
+    "MAHY Khoory Group supplies Global Water Solutions pressure tanks manufactured from premium steel and composite materials for long-term durability and corrosion resistance.",
+  alternates: { canonical: "/products/global-water-pressure-tanks" },
+};
+
 function GlobalWaterPressureTanksPage() {
 
     const advantages = [
@@ -47,11 +54,11 @@ function GlobalWaterPressureTanksPage() {
         description={
           "Global Water Solutions Pressure Tanks are engineered to ensure efficient pressure control, system stability, and long service life in water supply applications. Designed for consistent performance, these tanks support smooth operation of pumps and water networks."
         }
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017288/ptanks1_pgasx4.png"
+        image="/assets/ptanks1_pgasx4.png"
       />
       <div className="my-8">
         <SolarPanelQuoteGrid
-          image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777017292/ptanks2_uafxz4.png"
+          image="/assets/ptanks2_uafxz4.png"
           heading="Key Highlights"
           text="Ideal for booster pump systems, filtration units, and residential or commercial water supply networks, Global Water Solutions tanks help reduce pump cycling, maintain steady pressure, and protect system components."
           items={[
@@ -68,9 +75,9 @@ function GlobalWaterPressureTanksPage() {
           items={advantages}
           imageAspect="landscape"
           images={[
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777580545/steel-pipelines-cables-plant_1_zwqhdq.jpg",
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777580545/steel-pipelines-cables-plant_osu4vz.jpg",
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777580534/equipment-contemporary-winery_jx6xqr.jpg"
+            "/assets/steel-pipelines-cables-plant_1_zwqhdq.jpg",
+            "/assets/steel-pipelines-cables-plant_osu4vz.jpg",
+            "/assets/equipment-contemporary-winery_jx6xqr.jpg"
           ]}
         />
       </div>

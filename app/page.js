@@ -12,6 +12,35 @@ import ProjectsSection from "@/components/Home/ProjectsSection";
 import AwardsSection from "@/components/Awards/AwardsSection";
 import { articles } from "@/constants/news";
 
+const homeDescription =
+  "Founded in Dubai in 1930, M.A.H.Y. Khoory Group has grown into 25 operating companies across 10 industries, employing 4,200+ professionals of 38 nationalities. Explore our water pumping, electrical & MEP engineering, paper recycling, waste management, solar EPC and automotive businesses.";
+
+export async function generateMetadata() {
+  return {
+    description: homeDescription,
+    alternates: { canonical: "/" },
+    openGraph: {
+      description: homeDescription,
+      url: "/",
+    },
+  };
+}
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "M.A.H.Y. Khoory & CO. LLC",
+  alternateName: "MAHY Khoory Group",
+  url: "https://mahykhoory.com",
+  logo: "https://mahykhoory.com/MAHY.png",
+  description: homeDescription,
+  foundingDate: "1930",
+  foundingLocation: "Dubai, United Arab Emirates",
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    value: 4200,
+  },
+};
 
 export default async function Home() {
   const t = await getTranslations("HomePage");
@@ -162,6 +191,10 @@ export default async function Home() {
 
   return (
     <main className="bg-white min-h-screen overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
       <FloatingMenu floatingMenuItems={floatingMenuItems} />
       <div id="home">
         {/* <HeroCarousel slides={HERO_SLIDES} /> */}
@@ -171,7 +204,7 @@ export default async function Home() {
       <section id="who-we-are">
         <WhoWeAre
           image={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            "/assets/office_jaeuiz.webp"
           }
           padding="xl"
         />

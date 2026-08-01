@@ -5,6 +5,13 @@ import ImageSlideShow from "@/components/UI/home/ImageSlideShow"
 import ScrollSectionWithImages from "@/components/UI/home/ScrollSectionWithImages"
 import { getLocale, getTranslations } from "next-intl/server";
 
+export const metadata = {
+  title: "Products & Services",
+  description:
+    "Explore MAHY Khoory Group's full range of products and services, spanning pumping solutions, HVAC, packaging, spare parts and engineering support.",
+  alternates: { canonical: "/products-and-services" },
+};
+
 async function ProductsServicesPage() {
   const t = await getTranslations("HomePage");
   const locale = await getLocale();

@@ -3,6 +3,30 @@ import Breadcrumb from "@/components/UI/Breadcrumb";
 import { getProject } from "@/constants/projects";
 import { getLocale } from "next-intl/server";
 
+export async function generateMetadata({ params }) {
+    const { id } = await params;
+    const project = getProject(id);
+    if (!project?.name) return {};
+
+    const description = project.text
+        ? project.text.length > 200
+            ? `${project.text.slice(0, 197)}...`
+            : project.text
+        : `${project.name} — a ${project.scale ? project.scale.toLowerCase() + " " : ""}${project.sector ? project.sector.toLowerCase() + " " : ""}project delivered by MAHY Khoory Group${project.location ? " in " + project.location : ""}.`;
+
+    return {
+        title: project.name,
+        description,
+        alternates: { canonical: `/projects/${id}` },
+        openGraph: {
+            title: project.name,
+            description,
+            url: `/projects/${id}`,
+            images: project.image ? [{ url: project.image }] : undefined,
+        },
+    };
+}
+
 async function ProjectDetailPage({ params }) {
     const { id } = await params;
     const locale = await getLocale();

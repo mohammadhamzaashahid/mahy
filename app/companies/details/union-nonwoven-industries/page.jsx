@@ -3,19 +3,26 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu"
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards"
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview"
 
+export const metadata = {
+  title: "Union Nonwoven Industries",
+  description:
+    "Union Nonwoven Industries manufactures technical nonwoven textiles locally in the UAE, reducing the carbon footprint associated with imports while supporting national sustainability objectives.",
+  alternates: { canonical: "/companies/details/union-nonwoven-industries" },
+};
+
 function UnionNonWovenIndustriesPage() {
     const services = [
         {
             text: "Composite and laminated nonwoven sheets",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467332/composite_fabrics_d6kyeb.jpg",
+            image: "/assets/composite_fabrics_d6kyeb.jpg",
         },
         {
             text: "Spunbond and meltblown nonwoven fabrics",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467426/spunbond_and-2_zjzau4.jpg",
+            image: "/assets/spunbond_and-2_zjzau4.jpg",
         },
         {
             text: "Geotextile felts and industrial textile layers",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467334/geotextile-roll-construction-site_rtobee.jpg",
+            image: "/assets/geotextile-roll-construction-site_rtobee.jpg",
         }
     ];
     const adpmCardsData = [
@@ -55,8 +62,8 @@ function UnionNonWovenIndustriesPage() {
     return (
         <main className="pb-12">
             <CompanyOverview
-            video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777467364/Video_Project_19_bxkpbt.mp4d"}
-                // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+            video={"/assets/Video_Project_19_bxkpbt.mp4"}
+                // image="/assets/office_jaeuiz.webp"
                 heading="Union Nonwoven Industries"
                 texts={[
                     "Union Nonwoven Industries is a MAHY Khoory Group–affiliated manufacturer specializing in advanced nonwoven textile solutions for industrial, healthcare, hygiene, filtration, and construction applications. Building on the Group’s long-standing expertise in recycling and industrial manufacturing, Union Nonwoven produces high-performance polypropylene and polyester nonwoven fabrics engineered to meet demanding functional and regulatory requirements.",
@@ -75,12 +82,12 @@ function UnionNonWovenIndustriesPage() {
                 text={"Union Nonwoven serves regional and international markets across the GCC and wider MENA region. Its customer base includes:"}
                 endText={"The company also supports landscaping and civil-engineering projects through geotextile solutions used in erosion control, soil stabilization, and drainage systems. Clients range from government and public-sector entities to private industrial and commercial organizations seeking locally manufactured, high-quality technical textiles."}
                 tag="[ NONWOVEN INDUSTRIES ]"
-                backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
+                backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+                image="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
             />
         </main>
     )

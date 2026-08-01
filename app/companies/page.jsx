@@ -7,6 +7,13 @@ import { getLocale, getTranslations } from "next-intl/server";
 import SectorsSection from "@/components/UI/companies/SectorsSection";
 import { companiesSectors } from "@/constants/sectors";
 
+export const metadata = {
+  title: "Our Companies",
+  description:
+    "MAHY Khoory Group of Companies is a Dubai-based diversified holding group comprising 25 operating companies and business divisions spanning trading, engineering, manufacturing, recycling, sustainability, logistics, automotive, hospitality and food & beverage.",
+  alternates: { canonical: "/companies" },
+};
+
 async function Companies({ searchParams }) {
   const params = await searchParams;
   const search = params.search || "";
@@ -20,7 +27,7 @@ async function Companies({ searchParams }) {
       name: "MAHY Khoory Group of Companies",
       slug: "mahy-khoory-group",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900951/mahy-comp-removebg-preview_p7rg9d.png",
+        "/assets/mahy-comp-removebg-preview_p7rg9d.png",
       sector: "group",
       size: "large",
       location: "uae",
@@ -32,7 +39,7 @@ async function Companies({ searchParams }) {
       name: "MAHY Khoory Trading",
       slug: "mahy-khoory-trading",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900740/union-industries_qsyee7.png",
+        "/assets/union-industries_qsyee7.png",
       sector: "trading",
       size: "medium",
       location: "ksa",
@@ -43,7 +50,7 @@ async function Companies({ searchParams }) {
     {
       name: "Al Khoory Engineering",
       slug: "al-khoory-engineering",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777123613/32f40b96-2c09-4429-99c1-a4ea6b99c595.png",
+      image: "/assets/32f40b96-2c09-4429-99c1-a4ea6b99c595.png",
       sector: "engineering",
       size: "large",
       location: "uae",
@@ -55,7 +62,7 @@ async function Companies({ searchParams }) {
       name: "Union Paper Mills",
       slug: "union-paper-mills",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Union_Paper_Mills_yg4zsr.png",
+        "/assets/Union_Paper_Mills_yg4zsr.png",
       sector: "manufacturing",
       size: "large",
       location: "uae",
@@ -67,7 +74,7 @@ async function Companies({ searchParams }) {
       name: "Al Dhafra Paper Manufacturing",
       slug: "al-dhafra-paper-manufacturing",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272940/Al_Dhafra_Paper_Manufacturing_ibg1np.png",
+        "/assets/Al_Dhafra_Paper_Manufacturing_ibg1np.png",
       sector: "manufacturing",
       size: "large",
       location: "uae",
@@ -79,7 +86,7 @@ async function Companies({ searchParams }) {
       name: "Union Wood Works",
       slug: "union-wood-works",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Union_Wood_Works_zah5u9.png",
+        "/assets/Union_Wood_Works_zah5u9.png",
       sector: "manufacturing",
       size: "medium",
       location: "uae",
@@ -91,7 +98,7 @@ async function Companies({ searchParams }) {
       name: "Recyclable Waste Management Division",
       slug: "rwmd",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Al_Dhafra_Waste_Collection_yihnwv.png",
+        "/assets/Al_Dhafra_Waste_Collection_yihnwv.png",
       sector: "waste management",
       size: "large",
       location: "uae",
@@ -103,7 +110,7 @@ async function Companies({ searchParams }) {
       name: "Al Dhafra Waste Collection",
       slug: "al-dhafra-waste-collection",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Al_Dhafra_Waste_Collection_yihnwv.png",
+        "/assets/Al_Dhafra_Waste_Collection_yihnwv.png",
       sector: "waste management",
       size: "medium",
       location: "uae",
@@ -115,7 +122,7 @@ async function Companies({ searchParams }) {
       name: "Around Continent Waste Collection",
       slug: "around-continent-waste-collection",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900738/green-arabia_vv0jlv.png",
+        "/assets/green-arabia_vv0jlv.png",
       sector: "waste management",
       size: "medium",
       location: "uae",
@@ -127,7 +134,7 @@ async function Companies({ searchParams }) {
       name: "Etihad Waste Management",
       slug: "al-etihad-waste-management-services-llc",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900738/al-etihad_iml1nr.png",
+        "/assets/al-etihad_iml1nr.png",
       sector: "waste management",
       size: "large",
       location: "oman",
@@ -138,7 +145,7 @@ async function Companies({ searchParams }) {
       name: "Clean Earth LLC",
       slug: "clean-earth-llc",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900740/clean-earth_ljd0zc.png",
+        "/assets/clean-earth_ljd0zc.png",
       sector: "clean earth",
       size: "large",
       location: "uae",
@@ -150,7 +157,7 @@ async function Companies({ searchParams }) {
       name: "Solid Waste Management Division",
       slug: "solid-waste-management-division",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777272941/Al_Dhafra_Waste_Collection_yihnwv.png",
+        "/assets/Al_Dhafra_Waste_Collection_yihnwv.png",
       sector: "waste management",
       size: "small",
       location: "uae",
@@ -161,7 +168,7 @@ async function Companies({ searchParams }) {
       name: "Union Sustainable Packaging Solutions",
       slug: "union-sustainable-packaging",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900738/Union_Sustainable_Packaging_Solutions_jgnr0t.png",
+        "/assets/Union_Sustainable_Packaging_Solutions_jgnr0t.png",
       sector: "manufacturing",
       size: "medium",
       location: "uae",
@@ -173,7 +180,7 @@ async function Companies({ searchParams }) {
       name: "National Paper Industries",
       slug: "national-paper-industry",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774901474/npi-logo_yq0h45.png",
+        "/assets/npi-logo_yq0h45.png",
       sector: "manufacturing",
       size: "medium",
       location: "uae",
@@ -184,7 +191,7 @@ async function Companies({ searchParams }) {
       name: "Greenland Transport",
       slug: "greenland-general-transport",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900741/greenland_hyiyra.png",
+        "/assets/greenland_hyiyra.png",
       sector: "logistics",
       size: "medium",
       location: "uae",
@@ -196,7 +203,7 @@ async function Companies({ searchParams }) {
       name: "Senan Industry LLC",
       slug: "senan-industry",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900739/senan_uunajv.png",
+        "/assets/senan_uunajv.png",
       sector: "manufacturing",
       size: "medium",
       location: "uae",
@@ -207,7 +214,7 @@ async function Companies({ searchParams }) {
       name: "Pure Energy Construction LLC",
       slug: "pure-energy-construction",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900739/pure-energy_vk9vu2.png",
+        "/assets/pure-energy_vk9vu2.png",
       sector: "energy",
       size: "medium",
       location: "uae",
@@ -219,7 +226,7 @@ async function Companies({ searchParams }) {
       name: "Pearl Marina Hotel Apartments",
       slug: "pearl-marina",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900739/pearl-marina_sespkm.png",
+        "/assets/pearl-marina_sespkm.png",
       sector: "hospitality",
       size: "medium",
       location: "uae",
@@ -230,7 +237,7 @@ async function Companies({ searchParams }) {
       name: "Market Restaurant and Café",
       slug: "market-restaurant",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900740/market-place_wd3u8y.png",
+        "/assets/market-place_wd3u8y.png",
       sector: "hospitality",
       size: "small",
       location: "uae",
@@ -241,7 +248,7 @@ async function Companies({ searchParams }) {
       name: "MAHY Khoory Motors",
       slug: "mahy-khoory-motors",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900741/MKA_wwor7m.png",
+        "/assets/MKA_wwor7m.png",
       sector: "automotive",
       size: "large",
       location: "uae",
@@ -252,7 +259,7 @@ async function Companies({ searchParams }) {
       name: "MAHY Khoory Automotive",
       slug: "mahy-khoory-automotive",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900741/MKA_wwor7m.png",
+        "/assets/MKA_wwor7m.png",
       sector: "automotive",
       size: "large",
       location: "uae",
@@ -262,7 +269,7 @@ async function Companies({ searchParams }) {
     {
       name: "Union Nonwoven Industries",
       slug: "union-nonwoven-industries",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900951/mahy-comp-removebg-preview_p7rg9d.png",
+      image: "/assets/mahy-comp-removebg-preview_p7rg9d.png",
       sector: "industries",
       size: "large",
       location: "uae",
@@ -273,7 +280,7 @@ async function Companies({ searchParams }) {
       name: "Creative Solutions Green Building Consultancy",
       slug: "creative-solutions",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900740/creative-solution_pwju0r.png",
+        "/assets/creative-solution_pwju0r.png",
       sector: "consultancy",
       size: "medium",
       location: "uae",
@@ -378,7 +385,7 @@ async function Companies({ searchParams }) {
       <PageHeading
         title={t("Heading")}
         description={"MAHY Khoory Group of Companies is a Dubai-based diversified holding group comprising 25 operating companies and business divisions across multiple industries. The Group has built a strong presence in the UAE and the wider region through long-term commercial relationships, technical capability, and integrated operations. With businesses spanning trading, engineering, industrial manufacturing, recycling, sustainability, logistics, automotive, hospitality, and food & beverage, the Group operates a balanced and resilient portfolio designed to support both traditional industries and future-focused sectors."}
-        image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777123325/abstract-business-office-building-london_rrnpsd.jpg"}
+        image={"/assets/abstract-business-office-building-london_rrnpsd.jpg"}
       />
 
       <Breadcrumb
@@ -466,28 +473,28 @@ export default Companies;
 //     const companies = [
 //         {
 //             name: "MAHY Khoory Group",
-//             image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900740/union-industries_qsyee7.png",
+//             image: "/assets/union-industries_qsyee7.png",
 //             sectorId: 1,
 //             sizeId: 4,
 //             locationId: 1,
 //         },
 //         {
 //             name: "MAHY Khoory Trading",
-//             image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900740/union-industries_qsyee7.png",
+//             image: "/assets/union-industries_qsyee7.png",
 //             sectorId: 2,
 //             sizeId: 3,
 //             locationId: 2,
 //         },
 //         {
 //             name: "MAHY Khoory Automotive",
-//             image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774900741/MKA_wwor7m.png",
+//             image: "/assets/MKA_wwor7m.png",
 //             sectorId: 3,
 //             sizeId: 5,
 //             locationId: 3,
 //         },
 //         {
 //             name: "National Paper Industry ",
-//             image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1774901474/npi-logo_yq0h45.png",
+//             image: "/assets/npi-logo_yq0h45.png",
 //             sectorId: 4,
 //             sizeId: 2,
 //             locationId: 4,

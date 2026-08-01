@@ -1,6 +1,13 @@
 import VisionBenchmarkSection from "@/components/UI/about-us/BenchMarks";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Leadership & Vision",
+  description:
+    "MAHY Khoory Group's leadership is guided by a long-term strategic vision focused on sustainable growth, operational excellence and continuous transformation across its 25 companies.",
+  alternates: { canonical: "/careers/leadership-and-vision" },
+};
+
 function LeadershipAndVisionPage() {
   const leadershipVision = [
     {
@@ -30,14 +37,14 @@ function LeadershipAndVisionPage() {
         fullHeight
         title={"Leadership & Vision"}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776881251/businessman-standing-roof.jpg_uvfwtd.jpg"
+          "/assets/businessman-standing-roof.jpg_uvfwtd.jpg"
         }
       />
       <VisionBenchmarkSection
         images={[
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776768057/group-people-working-out-business-plan-office.jpg_joudjy.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776768055/planning-corporate-event-with-colleagues-modern-office-setting.jpg_yb8nqq.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776768055/ironing-out-details-shot-corporate-businesspeople-meeting-boardroom.jpg_faoj9g.jpg",
+          "/assets/group-people-working-out-business-plan-office.jpg_joudjy.jpg",
+          "/assets/planning-corporate-event-with-colleagues-modern-office-setting.jpg_yb8nqq.jpg",
+          "/assets/ironing-out-details-shot-corporate-businesspeople-meeting-boardroom.jpg_faoj9g.jpg",
         ]}
         items={leadershipVision}
       />

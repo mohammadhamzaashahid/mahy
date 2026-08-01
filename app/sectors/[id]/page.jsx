@@ -9,6 +9,26 @@ import { getLocale } from "next-intl/server";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+export async function generateMetadata({ params }) {
+    const { id } = await params;
+    const sector = companiesSectors[Number(id) - 1];
+    if (!sector) return {};
+
+    const description = `Explore the ${sector.title} sector within MAHY Khoory Group${sector.companies?.length ? ", including " + sector.companies.slice(0, 3).join(", ") + (sector.companies.length > 3 ? " and more" : "") : ""}.`;
+
+    return {
+        title: sector.title,
+        description,
+        alternates: { canonical: `/sectors/${id}` },
+        openGraph: {
+            title: sector.title,
+            description,
+            url: `/sectors/${id}`,
+            images: sector.image ? [{ url: sector.image }] : undefined,
+        },
+    };
+}
+
 async function CompanySectorsPage({ params }) {
     const { id } = await params;
     const locale = await getLocale();

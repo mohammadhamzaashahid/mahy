@@ -35,7 +35,7 @@ export default function DewaltStrategySection({
     "Frameworks built for long-term success",
     "Working with you, not just for you",
   ],
-  image = "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777554817/worker-using-drill-front-view_yavfah.jpg",
+  image = "/assets/worker-using-drill-front-view_yavfah.jpg",
   imageAlt = "Strategy meeting",
   buttonText = "More about us",
   showButton = true,

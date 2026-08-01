@@ -2,6 +2,13 @@ import TrustedAdvisorSection from "@/components/TrustedAdvisorSection";
 import PageHeading from "@/components/UI/PageHeading";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Ariston Water Heaters",
+  description:
+    "ARISTON water heaters combine modern design with practical functionality, offering a trusted, energy-efficient solution for dependable hot water supply, distributed by MAHY Khoory Group.",
+  alternates: { canonical: "/products/ariston-water-heaters" },
+};
+
 function AristonWaterHeatersPage() {
   return (
     <main>
@@ -10,11 +17,11 @@ function AristonWaterHeatersPage() {
         description={
           "ARISTON Water Heaters are designed to deliver reliable, safe, and efficient hot water solutions for both household and commercial applications. Built with proven electric heating technology and high-quality components, ARISTON water heaters ensure consistent performance and long-term dependability for daily hot water needs."
         }
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016874/arinston-image1_fg7cmd.png"
+        image="/assets/arinston-image1_fg7cmd.png"
       />
       <TrustedAdvisorSection
       object="Employees"
-      images={["https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016872/arinston-image2_ofdbsu.png", "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016869/arinston-image3_azwec3.png"]}
+      images={["/assets/arinston-image2_ofdbsu.png", "/assets/arinston-image3_azwec3.png"]}
         heading="ARISTON Water Heaters"
         texts={[
           "Ideal for homes, apartments, hotels, offices, and commercial facilities, these water heaters provide fast heating, stable temperature control, and efficient energy usage. Their durable construction and safety-focused design make them suitable for continuous operation in demanding environments.",

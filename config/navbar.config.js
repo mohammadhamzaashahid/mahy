@@ -349,10 +349,10 @@ export function getNavigation(t) {
                 label: t("DX&VRFAirConditioningSystems"),
                 href: "/products/dx-vrf-air-conditioning",
               },
-              {
-                label: "Ventilation Fans",
-                href: "/products/akas-ryne-ventilation-fans",
-              },
+              // {
+              //   label: "Ventilation Fans",
+              //   href: "/products/akas-ryne-ventilation-fans",
+              // },
               {
                 label: t("AirConditioningServices"),
                 href: "/services/air-conditioning-services",
@@ -390,32 +390,32 @@ export function getNavigation(t) {
           {
             title: "Industrial & Building Products",
             links: [
-              {
-                label: "LED Lighting Products",
-                href: "/products/led-lighting-products",
-              },
+              // {
+              //   label: "LED Lighting Products",
+              //   href: "/products/led-lighting-products",
+              // },
               {
                 label: "Power Tools & Safety Shoes",
                 href: "/products/dewalt",
               },
+              // {
+              //   label: "Aluminum Ladders",
+              //   href: "/products/vinzor-aluminum-ladders",
+              // },
               {
-                label: "Aluminum Ladders",
-                href: "/products/vinzor-aluminum-ladders",
-              },
-              {
-                label: t("CorrugatedBoxes"),
+                label: "Corrugated Packaging Products",
                 href: "/products/corrugated-boxes",
               },
               {
-                label: t("PlasticJerryCans"),
+                label: "Plastic Jerry Cans & Caps",
                 href: "/products/plastic-jerry-cans",
               },
               {
-                label: t("PalletBlocks"),
+                label: "Compressed Wooden Pallet Blocks",
                 href: "/products/pallet-blocks",
               },
               {
-                label: t("PremiumWoodenPallets"),
+                label: "Sustainable Packaging Products",
                 href: "/products/premium-wooden-pallets",
               },
               {
@@ -464,7 +464,7 @@ export function getNavigation(t) {
                 href: "/services/solar-panel-installation",
               },
               {
-                label: t("WasteCollection&RecyclingServices"),
+                label: "Waste Collection, Management & Recycling Services",
                 href: "/services/waste-collection-recycling",
               },
               {

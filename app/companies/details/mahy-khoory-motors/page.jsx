@@ -5,17 +5,24 @@ import ValuesSection from "@/components/UI/about-us/ValuesSection";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import WhoWeAre from "@/components/UI/home/WhoWeAre";
 
+export const metadata = {
+  title: "MAHY Khoory Motors",
+  description:
+    "MAHY Khoory Motors delivers an experience-driven automotive retail model, reinforcing MAHY Khoory Group's reputation for introducing global automotive innovations to the UAE market.",
+  alternates: { canonical: "/companies/details/mahy-khoory-motors" },
+};
+
 function MahyKhooryMotorsPage() {
   const features = [
     {
       title: "Re-Entry into Automotive Sector",
       text: "MAHY Khoory Motors represents the latest phase in the Group’s automotive evolution. With a legacy dating back to the early 20th century and previous partnerships with major global automotive brands, the MAHY Khoory Group re-entered the automotive sector in 2024 through its national partnership with Dongfeng Motor Corporation.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467098/re-entry_into_l22d57.jpg",
+      image: "/assets/re-entry_into_l22d57.jpg",
     },
     {
       title: "Strategic Expansion with New-Age Brands",
       text: "Building on this foundation and recognizing the rapid advancement of Chinese automotive technology, the Group established MAHY Khoory Motors as a dedicated entity exclusively for OMODA and JAECOO, next-generation marques under the Chery Automobile umbrella. This move reflects strategic agility and a forward-looking response to growing demand for technologically advanced electric and hybrid vehicles in the UAE.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467102/startegic_expansion_kc50pe.jpg",
+      image: "/assets/startegic_expansion_kc50pe.jpg",
     }
   ];
   const overview = [
@@ -55,9 +62,9 @@ function MahyKhooryMotorsPage() {
     <main>
       <CompanyOverview
         video={
-          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1777467113/Video_Project_18_zhdwpz.mp4"
+          "/assets/Video_Project_18_zhdwpz.mp4"
         }
-        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+        // image="/assets/office_jaeuiz.webp"
         heading="MAHY Khoory Motors"
         texts={[
           "MAHY Khoory Motors is the automotive arm of the MAHY Khoory Group in Abu Dhabi, established to bring OMODA & JAECOO to the capital and the Western Region under an exclusive distribution mandate. Created with a focus on modern mobility and brand excellence, the company combines the Group’s long-standing strengths in trading and distribution with a forwardlooking approach to the evolving automotive landscape.",
@@ -73,7 +80,7 @@ MAHY Khoory Motors is dedicated to combining engineering innovation, global bran
 Through a deeply customer‑centric approach, we aim to create a seamless ownership experience supported by advanced facilities, transparent processes, and a commitment to long‑term satisfaction."
         showButton={false}
         invert={false}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467095/Misison_t9weaj.jpg"
+        image="/assets/Misison_t9weaj.jpg"
         imageAlt="Our Mission"
         gap
       />
@@ -82,7 +89,7 @@ Through a deeply customer‑centric approach, we aim to create a seamless owners
         heading="Our Vision"
         text="To establish MAHY Khoory Motors as the leading automotive distributor and mobility innovator in Abu Dhabi and the Western Region—recognized for introducing next‑generation hybrid, electric, and intelligent vehicles that align with the UAE’s sustainability and smart mobility goals.
 We aspire to build a future‑ready network that sets new benchmarks in service quality, technological advancement, and customer engagement, positioning MAHY Khoory Motors as a trusted name in the evolution of modern motoring."
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467107/Visiion_f9avin.jpg"
+        image="/assets/Visiion_f9avin.jpg"
         imageAlt="Our Vision"
         showButton={false}
         invert={true}
@@ -94,7 +101,7 @@ We aspire to build a future‑ready network that sets new benchmarks in service 
       <FeaturesEngineeringSection
         heading="MAHY Khoory Motors Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777467099/SL_052021_43150_03_mmsiny.jpg"
+        image="/assets/SL_052021_43150_03_mmsiny.jpg"
       />
     </main>
   );

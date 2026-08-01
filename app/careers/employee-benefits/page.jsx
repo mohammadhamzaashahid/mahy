@@ -1,6 +1,13 @@
 import CompaniesSectors from "@/components/CompaniesSectors";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Employee Benefits",
+  description:
+    "Learn about the employee benefits offered across MAHY Khoory Group's companies, supporting a stable, rewarding and long-term career environment.",
+  alternates: { canonical: "/careers/employee-benefits" },
+};
+
 function EmployeeBenefitsPage() {
   return (
     <main>
@@ -8,13 +15,13 @@ function EmployeeBenefitsPage() {
         title={"Employee Benefits"}
         fullHeight
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776764649/employee-benefits.jpg_czxz7n.jpg"
+          "/assets/employee-benefits.jpg_czxz7n.jpg"
         }
       />
       <section className="max-w-7xl mx-auto px-5 py-8 md:py-12">
         <CompaniesSectors
           image={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776985047/young-smiling-professional-woman-having-coffee-break-her-full-working-day-she-holds-paper-cup-outdoors-near-business-building-while-relaxing-enjoying-her-beverage.jpg_pqypyo.jpg"
+            "/assets/young-smiling-professional-woman-having-coffee-break-her-full-working-day-she-holds-paper-cup-outdoors-near-business-building-while-relaxing-enjoying-her-beverage.jpg_pqypyo.jpg"
           }
           title={""}
           texts={[

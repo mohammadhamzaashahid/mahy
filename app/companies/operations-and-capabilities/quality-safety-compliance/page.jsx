@@ -2,23 +2,30 @@ import CompanyDetailCards from "@/components/UI/companies/detail/CompanyDetailCa
 import SubPageHeading from "@/components/UI/SubPageHeading";
 import { Fragment } from "react";
 
+export const metadata = {
+  title: "Quality, Safety & Compliance",
+  description:
+    "MAHY Khoory Group embeds quality, safety and compliance into its operational culture, building long-term trust with customers, regulators, partners and stakeholders.",
+  alternates: { canonical: "/companies/operations-and-capabilities/quality-safety-compliance" },
+};
+
 function QualitySafetyCompliancePage() {
   return (
     <Fragment>
       <SubPageHeading
         title={"Quality, Safety & Compliance"}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776887909/standard-quality-control-concept-m.jpg_xkizo5.jpg"
+          "/assets/standard-quality-control-concept-m.jpg_xkizo5.jpg"
         }
         fullHeight
       />
       <CompanyDetailCards
         img1={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776887839/man-pointing-screen-with-stars-it.jpg_fhx1jz.jpg"
+          "/assets/man-pointing-screen-with-stars-it.jpg_fhx1jz.jpg"
         }
         heading1="Quality, Safety & Compliance"
         img2={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776887846/co-workers-reviewing-report.jpg_v3v7tx.jpg"
+          "/assets/co-workers-reviewing-report.jpg_v3v7tx.jpg"
         }
         text1={[
           "The MAHY Khoory Group operates under a strong governance framework that prioritizes quality, safety, and regulatory compliance across all businesses and geographies. Group-wide policies ensure consistent standards while allowing operational flexibility within individual sectors.",

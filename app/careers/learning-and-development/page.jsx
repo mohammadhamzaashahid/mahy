@@ -1,6 +1,13 @@
 import SolarPanelInstallationsGrid from "@/components/Services/SolarPanel/SolarPanelInstallationsGrid";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Learning & Development",
+  description:
+    "MAHY Khoory Group supports structured training and professional development across all levels, including technical certifications, ERP training, compliance and leadership programs.",
+  alternates: { canonical: "/careers/learning-and-development" },
+};
+
 function LearningAndDevelopmentPage() {
   const items = [
     {
@@ -35,7 +42,7 @@ function LearningAndDevelopmentPage() {
         title={"Learning & Development"}
         fullHeight
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/v1776764802/learning-and-development_cobakj.jpg"
+          "/assets/learning-and-development_cobakj.jpg"
         }
       />
       <SolarPanelInstallationsGrid
@@ -45,9 +52,9 @@ function LearningAndDevelopmentPage() {
         itemsTitle={false}
         items={items}
         images={[
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776950556/business-team-take-sits-steps-using-smartphone_bumzph.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776950500/office-workers-walking-street_rgkyyj.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776950288/business-people-talking-break-time-standing-background-modern-city-skyscrapers_ee9zan.jpg"
+          "/assets/business-team-take-sits-steps-using-smartphone_bumzph.jpg",
+          "/assets/office-workers-walking-street_rgkyyj.jpg",
+          "/assets/business-people-talking-break-time-standing-background-modern-city-skyscrapers_ee9zan.jpg"
         ]}
       />
     </main>

@@ -1,6 +1,13 @@
 import EnterprisePinnedSection from "@/components/Layout/EnterprisePinnedSection"
 import SubPageHeading from "@/components/UI/SubPageHeading"
 
+export const metadata = {
+  title: "Engineering Services",
+  description:
+    "MAHY Khoory Group's engineering services span CAD-based system design, in-house fabrication and complete installation & commissioning of pumping systems across the UAE.",
+  alternates: { canonical: "/services/engineering-services" },
+};
+
 function EngineeringServicesPage() {
     const capabilities = [
         {
@@ -13,7 +20,7 @@ function EngineeringServicesPage() {
                 "Flow, head, and energy analysis",
                 "Custom system integration for site-specific requirements"
             ],
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776592634/Engineering-services-Advanced_System_Design.jpg_amb0ik.jpg",
+            image: "/assets/Engineering-services-Advanced_System_Design.jpg_amb0ik.jpg",
         },
         {
             title: "Fabrication & Metal-Work Expertise",
@@ -26,7 +33,7 @@ function EngineeringServicesPage() {
                 "Precision-machined metal components"
             ],
             endText: "Our manufacturing processes comply with industry standards to ensure long-lasting reliability.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776592573/engineering-services-single_skilled_technician.jpg_roa7p4.jpg",
+            image: "/assets/engineering-services-single_skilled_technician.jpg_roa7p4.jpg",
         },
         {
             title: "Installation & Commissioning Services",
@@ -40,7 +47,7 @@ function EngineeringServicesPage() {
                 "Decorative water features & fountain pumps"
             ],
             endText: "All installations follow strict safety, electrical, and mechanical guidelines—ensuring optimal functionality from day one.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776592457/engineering-page_single_professional_technic.jpg_mvffeg.jpg",
+            image: "/assets/engineering-page_single_professional_technic.jpg_mvffeg.jpg",
         },
         {
             title: "Maintenance, Repair & After-Sales Support",
@@ -55,7 +62,7 @@ function EngineeringServicesPage() {
                 "VFD and soft-starter configuration"
             ],
             endText: "Our technicians ensure each system continues to operate safely, efficiently, and with minimal downtime.",
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776592683/engineering-services-maintenance_skilled_technician_wearing.jpg_rei72c.jpg",
+            image: "/assets/engineering-services-maintenance_skilled_technician_wearing.jpg_rei72c.jpg",
         },
         {
             title: "Applications & Expertise",
@@ -69,7 +76,7 @@ function EngineeringServicesPage() {
                 "Water features, lakes & fountains",
                 "RO filtration & water treatment facilities"
             ],
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776592755/engineering-services-application-expertise.jpg_tffpsi.jpg",
+            image: "/assets/engineering-services-application-expertise.jpg_tffpsi.jpg",
         },
         {
             title: "Why Choose Our Engineering Division?",
@@ -81,7 +88,7 @@ function EngineeringServicesPage() {
                 "Skilled engineers & certified technicians",
                 "Fast turnaround, reliable service, and long-term support"
             ],
-            image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776592801/engineering-clean_pump_facility.jpg_taysd3.jpg",
+            image: "/assets/engineering-clean_pump_facility.jpg_taysd3.jpg",
         }
     ];
     return (
@@ -90,7 +97,7 @@ function EngineeringServicesPage() {
             fullHeight
                 title={"Engineering & Technical Services"}
                 description={"With decades of industry expertise, our Engineering Division delivers complete water-transfer and pumping solutions, covering design, fabrication, installation, commissioning, and long-term maintenance. We support a wide range of applications including pressure boosting, water transfer, firefighting, irrigation, decorative water features, and water purification systems—ensuring reliable performance tailored to each project’s technical requirements."}
-                image={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777030656/2_y07xxs.jpg"}
+                image={"/assets/2_y07xxs.jpg"}
             />
             <EnterprisePinnedSection sections={capabilities} />
         </main>

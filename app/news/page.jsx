@@ -9,7 +9,14 @@ import SwipeableNewsGrid from "@/components/UI/news/SwipeableNewsGrid";
 import { getTranslations } from "next-intl/server";
 
 import { getLocale } from "@/utlils";
-import { articles } from "@/constants/news"; 
+import { articles } from "@/constants/news";
+
+export const metadata = {
+  title: "Newsroom",
+  description:
+    "Read the latest news, announcements and updates from MAHY Khoory Group across its companies and industries in the UAE.",
+  alternates: { canonical: "/news" },
+};
 
 const itemsPerPage = 3;
 
@@ -40,7 +47,7 @@ const featuredArticle = articles[0];
       <PageHeading
         title={t("Heading")}
         description={t("Description")}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777027449/skyscrapers-from-low-angle-view_1.jpg_kcydkj.jpg"
+        image="/assets/skyscrapers-from-low-angle-view_1.jpg_kcydkj.jpg"
       />
 
       <Breadcrumb segments={[{ label: t("Page"), href: "/news" }]} locale={locale} />

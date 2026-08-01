@@ -3,6 +3,13 @@ import ServiceRequestForm from "@/components/Contact/ServiceRequestForm";
 import ServiceRequest from "@/components/UI/form/ServiceRequest";
 import { getTranslations } from "next-intl/server";
 
+export const metadata = {
+  title: "Schedule a Service",
+  description:
+    "Schedule a maintenance or service appointment with MAHY Khoory Group's technical teams for your pumping, HVAC or engineering systems.",
+  alternates: { canonical: "/contact-us/schedule-service" },
+};
+
 export default async function ScheduleServicePage() {
   const t = await getTranslations("ContactUsPage");
   const contactUs = {

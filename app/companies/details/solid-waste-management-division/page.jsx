@@ -3,17 +3,24 @@ import KitchenMenu from "@/components/Services/Kitchen/KitchenMenu";
 import PumpingServiceCards from "@/components/Services/PumpingServiceCards";
 import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 
+export const metadata = {
+  title: "Solid Waste Management Division",
+  description:
+    "Solid Waste Management Division (SWMD) delivers integrated industrial waste solutions across wood waste recovery, biomass fuel preparation and RDF production, supporting the UAE's sustainability goals.",
+  alternates: { canonical: "/companies/details/solid-waste-management-division" },
+};
+
 function SolidWasteManagementDivision() {
   const services = [
     {
       title: "Integrated Waste Management Solutions",
       text: "SWMD is a trusted partner in sustainable industrial waste management, delivering integrated solutions across wood waste recovery, biomass fuel preparation, pulper reject recovery, RDF production, and industrial solid waste processing.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311001/Integrated_Waste_collection_skjoy7.jpg",
+      image: "/assets/Integrated_Waste_collection_skjoy7.jpg",
     },
     {
       title: "Sustainability & Environmental Impact",
       text: "Through innovation, skilled manpower, and environmentally responsible practices, SWMD plays a vital role in enhancing resource efficiency and supporting the UAE’s long-term sustainability vision.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777311167/Sustainability_and_environemnt-2_xdfmnf.jpg",
+      image: "/assets/Sustainability_and_environemnt-2_xdfmnf.jpg",
     }
   ];
   const adpmCardsData = [
@@ -51,8 +58,8 @@ function SolidWasteManagementDivision() {
   return (
     <main>
       <CompanyOverview
-        video={"https://res.cloudinary.com/dpn6mdpxd/video/upload/q_auto/v1770201910/Solid_Waste_Management_Division_imhdko.mp4"}
-        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+        video={"/assets/Solid_Waste_Management_Division_imhdko.mp4"}
+        // image="/assets/office_jaeuiz.webp"
         heading="Solid Waste Management Division (SWMD)"
         texts={[
           "The Solid Waste Management Division (SWMD) of the MAHY Khoory Group delivers integrated, sustainable industrial waste management solutions across the UAE. Through advanced processing systems, disciplined operations, and full regulatory compliance, SWMD converts waste into valuable resources—supporting circular economy objectives, reducing landfill dependency, and generating measurable environmental and commercial value.",
@@ -67,12 +74,12 @@ function SolidWasteManagementDivision() {
         cards={adpmCardsData}
         heading="Applications"
         tag="[ WASTE MANAGEMENT ]"
-        backgroundImage="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776679481/skyscrapers-tokyo.jpg_e2niyf.jpg"
+        backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
       />
       <FeaturesEngineeringSection
         heading="Core Operations"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776593394/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
       />
     </main>
   );

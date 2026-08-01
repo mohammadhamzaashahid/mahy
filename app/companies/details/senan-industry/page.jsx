@@ -4,29 +4,36 @@ import CompanyOverview from "@/components/UI/companies/detail/CompanyOverview";
 import { image } from "d3";
 import { object } from "zod";
 
+export const metadata = {
+  title: "Senan Industry",
+  description:
+    "Senan Industry LLC manufactures durable, compliant packaging for the automotive, lubricants, food and beverage, chemical and agriculture industries.",
+  alternates: { canonical: "/companies/details/senan-industry" },
+};
+
 function SenanIndustryPage() {
   const services = [
     {
       title: "Plastic Jerrycans",
       text: "Used for automotive oils, lubricants, and coolants.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457159/Plastic_Jerry_cans_evksua.jpg",
+      image: "/assets/Plastic_Jerry_cans_evksua.jpg",
     },
     {
       title: "Industrial Containers and Drums",
       text: "Designed for chemicals and agrochemicals.",
       objectFit: "contain",
-      image : "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457158/Indistrial_Containers_and_Drums_cgvyha.jpg"
+      image : "/assets/Indistrial_Containers_and_Drums_cgvyha.jpg"
     },
     {
       title: "Bottles and Containers",
       text: "Used for food and beverage applications.",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457157/Bottles_and_Containers_lyprlc.jpg",
+      image: "/assets/Bottles_and_Containers_lyprlc.jpg",
     },
     {
       title: "Custom Packaging Solutions",
       text: "Tailored plastic packaging for private-label brands.",
       objectFit: "contain",
-      image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777457156/Custom_Plastic_Cans_kir57g.jpg",
+      image: "/assets/Custom_Plastic_Cans_kir57g.jpg",
     },
   ];
   const overview = [
@@ -72,9 +79,9 @@ function SenanIndustryPage() {
       {/* Company Overview */}
       <CompanyOverview
         video={
-          "https://res.cloudinary.com/dpn6mdpxd/video/upload/v1770201940/Senan_Industry_Llc_q5fd3z.mp4"
+          "/assets/Senan_Industry_Llc_q5fd3z.mp4"
         }
-        // image="https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1771915804/office_jaeuiz.webp"
+        // image="/assets/office_jaeuiz.webp"
         heading="Senan Industry LLC"
         texts={[
           "Senan Industry LLC is a specialized manufacturer of rigid plastic packaging solutions, operating as part of the MAHY Khoory Group’s manufacturing portfolio.",
@@ -90,7 +97,7 @@ function SenanIndustryPage() {
       <FeaturesEngineeringSection
         heading="Senan Industry LLC Overview"
         items={overview}
-        image="https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776592263/mahy-location-page.jpg_jdopju.jpg"
+        image="/assets/mahy-location-page.jpg_jdopju.jpg"
       />
     </main>
   );

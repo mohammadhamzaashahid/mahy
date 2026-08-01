@@ -2,6 +2,13 @@ import FeaturesEngineeringSection from '@/components/Services/FeaturesEngineerin
 import SubPageHeading from '@/components/UI/SubPageHeading'
 import React from 'react'
 
+export const metadata = {
+  title: "Restaurant & Dining Services",
+  description:
+    "MAHY Khoory Group's restaurant and dining services offer a chef-crafted menu spanning breakfast, lunch, dinner and global cuisines throughout the day.",
+  alternates: { canonical: "/services/restaurant-dining-services" },
+};
+
 function RestaurantDiningServices() {
     const overview = [
         {

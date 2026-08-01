@@ -7,6 +7,13 @@ import PageHeading from "@/components/UI/PageHeading";
 import { getLocale, getTranslations } from "next-intl/server";
 import React from "react";
 
+export const metadata = {
+  title: "Careers",
+  description:
+    "Explore career opportunities at M.A.H.Y. Khoory Group — a diversified, multi-sector organization operating across manufacturing, trading, engineering, logistics, waste management, automotive and hospitality in the UAE.",
+  alternates: { canonical: "/careers" },
+};
+
 async function Careers() {
   const t = await getTranslations("CareersPage");
   const locale = await getLocale();
@@ -14,7 +21,7 @@ async function Careers() {
   const heading = {
     title: t("Heading"),
     description: t("Description"),
-    image: "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1773822107/careers_samv9o.webp",
+    image: "/assets/careers_samv9o.webp",
   };
   const departments = [
     { title: t("Featured1"), description: t("Description1"), image: "/gallery/gallery-1.jpg" },
@@ -46,7 +53,7 @@ async function Careers() {
       </div>
       <CareersShowcaseSection
         title={t("ShowcaseTitle")}
-        imageUrl={"https://res.cloudinary.com/dpn6mdpxd/image/upload/v1772551937/OMODA_JAECOO_expands_UAE_presence_with_MAHY_Khoory_Automotive_as_the_____imgupscaler.ai_Sharpener_4K_1_dszyiv.png"}
+        imageUrl={"/assets/OMODA_JAECOO_expands_UAE_presence_with_MAHY_Khoory_Automotive_as_the_____imgupscaler.ai_Sharpener_4K_1_dszyiv.png"}
         imageAlt="MAHY Life"
       />
       <FeaturedDepartments title={t("FeaturedTitle")} departments={departments} cta={t("Cta")} />

@@ -1,6 +1,13 @@
 import WasteCollectionScrollMovingCards from "@/components/Services/WasteCollection/WasteCollectionScrollMovingCards";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Career Progression",
+  description:
+    "Career progression at MAHY Khoory Group is built on merit — many employees build long-term careers spanning 20-30+ years, with internal promotion based on performance, discipline and measurable contribution.",
+  alternates: { canonical: "/careers/career-progression" },
+};
+
 function CareerProgressionPage() {
   const items = [
     {
@@ -27,7 +34,7 @@ function CareerProgressionPage() {
         title={"Career Progression"}
         fullHeight
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/q_auto/f_auto/v1776595911/businessman-contemplates-city-skyline-amidst-modern-towers.jpg_viobsf.jpg"
+          "/assets/businessman-contemplates-city-skyline-amidst-modern-towers.jpg_viobsf.jpg"
         }
       />
       <WasteCollectionScrollMovingCards items={items} />

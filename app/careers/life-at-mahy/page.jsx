@@ -1,6 +1,13 @@
 import TrustedAdvisorSection from "@/components/TrustedAdvisorSection";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Life at MAHY",
+  description:
+    "Get a glimpse of everyday life and culture at MAHY Khoory Group, one of the UAE's leading diversified industrial and trading groups.",
+  alternates: { canonical: "/careers/life-at-mahy" },
+};
+
 function LifeAtMahyPage() {
   return (
     <main>
@@ -8,7 +15,7 @@ function LifeAtMahyPage() {
         fullHeight
         title={"Life at MAHY Khoory Group"}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776984755/outdoor-network.jpg_ycbhvz.jpg"
+          "/assets/outdoor-network.jpg_ycbhvz.jpg"
         }
       />
       <TrustedAdvisorSection
@@ -21,8 +28,8 @@ function LifeAtMahyPage() {
           "At MAHY Khoory Group, life is defined by professional growth, operational excellence, and long-term partnership. We are committed to maintaining an environment where employees feel secure, respected, and motivated to grow alongside the organization.",
         ]}
         images={[
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776950133/two-business-colleagues-working-project-while-sitting-outdoors-skyscrapers-background_xafkju.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776950288/business-people-talking-break-time-standing-background-modern-city-skyscrapers_ee9zan.jpg",
+          "/assets/two-business-colleagues-working-project-while-sitting-outdoors-skyscrapers-background_xafkju.jpg",
+          "/assets/business-people-talking-break-time-standing-background-modern-city-skyscrapers_ee9zan.jpg",
         ]}
       />
     </main>

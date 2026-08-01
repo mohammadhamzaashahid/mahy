@@ -3,6 +3,13 @@ import ServicedHotelApartments from "@/components/Services/ServicedHotelApartmen
 import TrustedBusinessAdvisor from "@/components/Services/TrustedAdvisorTabs";
 import SubPageHeading from "@/components/UI/SubPageHeading";
 
+export const metadata = {
+  title: "Serviced Hotel Apartments",
+  description:
+    "MAHY Khoory Group's serviced hotel apartments feature a range of lifestyle and recreational facilities designed to enhance every guest's stay.",
+  alternates: { canonical: "/services/serviced-hotel-apartments" },
+};
+
 function ServicedHotelApartmentsPage() {
   const services = [
     {
@@ -18,7 +25,7 @@ function ServicedHotelApartmentsPage() {
       endText:
         "These amenities support both leisure and productivity, making the property suitable for all types of travellers.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776934082/medium-shot-woman-working-luxury-restaurant_fjxhja.jpg",
+        "/assets/medium-shot-woman-working-luxury-restaurant_fjxhja.jpg",
     },
     {
       label: "Dining & Hospitality Services",
@@ -32,7 +39,7 @@ function ServicedHotelApartmentsPage() {
       endText:
         "The dining experience is designed to cater to diverse tastes and daily lifestyle needs.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776934183/elegant-shot-hotel-receptionist-handing-key-card-minimalist-setting_yzuhfm.jpg",
+        "/assets/elegant-shot-hotel-receptionist-handing-key-card-minimalist-setting_yzuhfm.jpg",
     },
     {
       label: "Support & Concierge Services",
@@ -48,7 +55,7 @@ function ServicedHotelApartmentsPage() {
       endText:
         "These services guarantee comfort, safety, and an elevated guest experience.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776934014/walking-business-happy-woman-with-suitcase-city-travel-commute-journey-hotel-professional-corporate-person-with-luggage-work-trip-convention-smile-with-drink-outdoor_f0a3p2.jpg",
+        "/assets/walking-business-happy-woman-with-suitcase-city-travel-commute-journey-hotel-professional-corporate-person-with-luggage-work-trip-convention-smile-with-drink-outdoor_f0a3p2.jpg",
     },
     {
       label: "Prime Dubai Marina Location",
@@ -64,7 +71,7 @@ function ServicedHotelApartmentsPage() {
       endText:
         "The location provides exceptional connectivity for both business and leisure activities.",
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776934241/full-shot-people-working-laptop_lv2ulb.jpg",
+        "/assets/full-shot-people-working-laptop_lv2ulb.jpg",
     },
     {
       label: "Suitable For",
@@ -77,7 +84,7 @@ function ServicedHotelApartmentsPage() {
         "Families seeking spacious, fully equipped accommodation",
       ],
       image:
-        "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776934007/spacious-hotel-lobby-filled-with-numerous-chairs-elegant-lamps-ideal-use-hospitality-industry-promotions-interior-design-websites_unkti2.jpg",
+        "/assets/spacious-hotel-lobby-filled-with-numerous-chairs-elegant-lamps-ideal-use-hospitality-industry-promotions-interior-design-websites_unkti2.jpg",
     },
   ];
   return (
@@ -86,13 +93,13 @@ function ServicedHotelApartmentsPage() {
         fullHeight
         title={"Serviced Hotel Apartments "}
         image={
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776934007/spacious-hotel-lobby-filled-with-numerous-chairs-elegant-lamps-ideal-use-hospitality-industry-promotions-interior-design-websites_unkti2.jpg"
+          "/assets/spacious-hotel-lobby-filled-with-numerous-chairs-elegant-lamps-ideal-use-hospitality-industry-promotions-interior-design-websites_unkti2.jpg"
         }
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1776934241/full-shot-people-working-laptop_lv2ulb.jpg"
+            "/assets/full-shot-people-working-laptop_lv2ulb.jpg"
           }
           title={"Accommodation Options"}
           texts={[
@@ -121,11 +128,11 @@ function ServicedHotelApartmentsPage() {
         heading="Services"
         items={services}
         images={[
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016295/lobby-with-large-lobby-with-large-chandelier-plant-center_pznxim.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016313/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_w7r5es.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016328/traveller-calling-hotel-concierge_mlmxzp.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016355/popular-resort-amara-dolce-vita-luxury-hotel-with-pools-water-parks-recreational-area-along-sea-coast-turkey-sunset-tekirova-kemer_myzrdu.jpg",
-          "https://res.cloudinary.com/dpn6mdpxd/image/upload/v1777016448/modern-studio-apartment-design-with-bedroom-living-space_l4vewk.jpg",
+          "/assets/lobby-with-large-lobby-with-large-chandelier-plant-center_pznxim.jpg",
+          "/assets/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_w7r5es.jpg",
+          "/assets/traveller-calling-hotel-concierge_mlmxzp.jpg",
+          "/assets/popular-resort-amara-dolce-vita-luxury-hotel-with-pools-water-parks-recreational-area-along-sea-coast-turkey-sunset-tekirova-kemer_myzrdu.jpg",
+          "/assets/modern-studio-apartment-design-with-bedroom-living-space_l4vewk.jpg",
         ]}
       />
       {/* <ServicedHotelApartments /> */}
