@@ -20,12 +20,12 @@ function UnionSustainablePackagingPage() {
       title: "Comprehensive Wooden Packaging Solutions",
       objectFit: "cover",
       text: "USPS offers a comprehensive wooden packaging portfolio tailored for industrial needs. Its product range includes new and refurbished wooden pallets (Euro-format, block pallets, A/B/C grade reused pallets) and pallet collars; crates, boxes and timber containers; as well as packaging accessories and dunnage—all designed for durability and reuse. The company also provides pallet repair, pooling, buy-back and rental services, extending pallet life and reducing waste.",
-      image: "/assets/Comprehensive_Wooden_Packaging_lmnwp4.jpg",
+      image: "/assets/companies/details/union-sustainable-packaging/Comprehensive_Wooden_Packaging_lmnwp4.jpg",
     },
     {
       title: "Innovative Recycled Pallet Technology",
       text: "A signature offering is the compressed pallet block, made by Union Wood Works – this is a dense wood block made from waste wood – which replaces traditional solid blocks. These blocks (100% recycled wood) are economical, uniform in size, free of bark or fissures, and exhibit superior nail-holding strength. All products comply with international quality and phytosanitary (ISPM-15) standards, ensuring they can be used for global exports.",
-      image: "/assets/Innovative_recycled_Pallet_pv6isz.jpg",
+      image: "/assets/companies/details/union-sustainable-packaging/Innovative_recycled_Pallet_pv6isz.jpg",
     },
   ];
 
@@ -51,8 +51,8 @@ function UnionSustainablePackagingPage() {
   return (
     <main>
       <CompanyOverview
-      video={"/assets/Video_Project_15_tv7yzn.mp4"}
-        // image="/assets/office_jaeuiz.webp"
+      video={"/assets/companies/details/union-sustainable-packaging/Video_Project_15_tv7yzn.mp4"}
+        // image="/assets/shared/office_jaeuiz.webp"
         heading="Union Sustainable Packaging Solutions (USPS)"
         texts={[
           "Company Overview: Union Sustainable Packaging Solutions (USPS) is the MAHY Khoory Group's dedicated wooden packaging arm, based in Dubai. It evolved from Union Wood Works, a long-standing MAHY subsidiary, and specializes in wooden packaging.",
@@ -64,7 +64,7 @@ function UnionSustainablePackagingPage() {
 
       <CompanyTextOnBackground
         heading="Market Focus and Industry Applications"
-        image="/assets/IMG_aovlhd.png"
+        image="/assets/companies/details/union-sustainable-packaging/IMG_aovlhd.png"
         align="left"
         text="USPS serves a broad spectrum of industries that depend on safe, efficient wooden packaging. Its pallets and crates are used across manufacturing, automotive, electronics, retail/consumer goods, FMCG/e-commerce, agriculture and pharmaceuticals. The company's solutions are well-suited to warehousing and logistics as well as heavy-industry transport, providing reliable handling for everything from machinery parts to consumer products."
         endText="In healthcare and food sectors, the chemical-free, insect-free compressed blocks meet stringent safety requirements. By fitting into PalletBiz's global network, USPS can also tap into adjacent markets (oil & gas, construction, etc.) where durable, reusable packaging helps customers reduce costs and environmental impact."
@@ -76,7 +76,7 @@ function UnionSustainablePackagingPage() {
         text="USPS operates cutting-edge manufacturing with high automation and precision. A dedicated in-house engineering team designs custom packaging to exact specifications, optimizing dimensions, load ratings and material treatments. The UAE facility ensures consistent product quality and fast production cycles. By combining M.A.H.Y. Khoory's design expertise with PalletBiz's best practices, USPS can rapidly scale production of bespoke wooden packaging to meet client specifications anywhere in the world."
         showButton={false}
         invert={false}
-        image="/assets/technology_design_and_manufacturing_ffwywm.jpg"
+        image="/assets/companies/details/union-sustainable-packaging/technology_design_and_manufacturing_ffwywm.jpg"
         imageAlt="Technology, Design, and Manufacturing Capabilities"
         gap
       />
@@ -85,7 +85,7 @@ function UnionSustainablePackagingPage() {
         topHeading=""
         heading="Sustainability Commitment"
         text="Sustainability is integral to USPS's operations. All compressed blocks and repair programs use 100% recycled wood, diverting millions of kilograms of used lumber from waste. Their facility repairs or reuses old pallets and recycles offcuts into new blocks (through Union Wood Works), embodying a repair-reuse-recycle approach. The compressed blocks require no chemicals or heat treatment (reducing emissions and contamination risk) and are naturally pest-free. These practices align with UAE and Middle East green initiatives (UAE Green Agenda 2030) and PalletBiz's circular-economy goals. By providing reusable pallets and promoting pallet pooling, USPS helps customers lower their carbon footprint and total packaging cost."
-        image="/assets/sustainability_commitment_iix88o.jpg"
+        image="/assets/companies/details/union-sustainable-packaging/sustainability_commitment_iix88o.jpg"
         imageAlt="Sustainability Commitment"
         showButton={false}
         invert={true}
@@ -94,7 +94,7 @@ function UnionSustainablePackagingPage() {
       <FeaturesEngineeringSection
         heading="Company Overview"
         items={overview}
-        image="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="/assets/shared/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
       />
     </main>
   );
@@ -156,7 +156,7 @@ export default UnionSustainablePackagingPage;
 //   return (
 //     <main>
 //       <CompanyOverview
-//         image="/assets/office_jaeuiz.webp"
+//         image="/assets/shared/office_jaeuiz.webp"
 //         heading="MAHY Khoory Motors"
 //         texts={[
 //           "Company Overview: Union Sustainable Packaging Solutions (USPS) is the MAHY Khoory Group’s dedicated wooden packaging arm, based in Dubai. It evolved from Union Wood Works, a long-standing MAHY subsidiary, and specializes in wooden packaging.",
@@ -169,7 +169,7 @@ export default UnionSustainablePackagingPage;
 //       />
 //       <CompanyTextOnBackground
 //         heading="Market Focus and Industry Applications"
-//         image="/assets/commitment-to-growth_qhzgjt.jpg"
+//         image="/assets/shared/commitment-to-growth_qhzgjt.jpg"
 //         align="left"
 //         text="USPS serves a broad spectrum of industries that depend on safe, efficient wooden packaging. Its pallets and crates are used across manufacturing, automotive, electronics, retail/consumer goods, FMCG/e-commerce, agriculture and pharmaceuticals. The company’s solutions are well-suited to warehousing and logistics as well as heavy-industry transport, providing reliable handling for everything from machinery parts to consumer products."
 //         endText={
@@ -182,14 +182,14 @@ export default UnionSustainablePackagingPage;
 //         text="USPS operates cutting-edge manufacturing with high automation and precision. A dedicated in-house engineering team designs custom packaging to exact specifications, optimizing dimensions, load ratings and material treatments. The UAE facility ensures consistent product quality and fast production cycles. By combining M.A.H.Y. Khoory’s design expertise with PalletBiz’s best practices, USPS can rapidly scale production of bespoke wooden packaging to meet client specifications anywhere in the world."
 //         showButton={false}
 //         invert={false}
-//         image="/assets/commitment-to-growth_qhzgjt.jpg"
+//         image="/assets/shared/commitment-to-growth_qhzgjt.jpg"
 //         imageAlt=""
 //       />
 //       <WhoWeAre
 //         topHeading="Sustainability Commitment"
 //         heading=""
 //         text="USPS operates cutting-edge manufacturing with high automation and precision. A dedicated in-house engineering team designs custom packaging to exact specifications, optimizing dimensions, load ratings and material treatments. The UAE facility ensures consistent product quality and fast production cycles. By combining M.A.H.Y. Khoory’s design expertise with PalletBiz’s best practices, USPS can rapidly scale production of bespoke wooden packaging to meet client specifications anywhere in the world."
-//         image="/assets/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+//         image="/assets/shared/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
 //         imageAlt="Our Vision"
 //         showButton={false}
 //         invert={true}
@@ -197,7 +197,7 @@ export default UnionSustainablePackagingPage;
 //       <FeaturesEngineeringSection
 //         heading="Company Overview"
 //         items={overview}
-//         image="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+//         image="/assets/shared/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
 //       />
 //     </main>
 //   );

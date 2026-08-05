@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { Quote } from 'lucide-react'
 import { motion } from "framer-motion"
 
-const DEFAULT_IMG1 = "/assets/warehouse-workers-protective-uniform-walking-through-large-distribution-center-organizing-goods-distribution.jpeg"
-const DEFAULT_IMG2 = "/assets/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+const DEFAULT_IMG1 = "/assets/companies/operations-and-capabilities/warehousing-logistics/warehouse-workers-protective-uniform-walking-through-large-distribution-center-organizing-goods-distribution.jpeg"
+const DEFAULT_IMG2 = "/assets/shared/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
 
 function getValidImageSrc(src, fallback) {
     return typeof src === "string" && src.trim() ? src : fallback

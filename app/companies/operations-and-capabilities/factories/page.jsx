@@ -16,7 +16,7 @@ function FactoriesPage() {
         fullHeight
         title={"Manufacturing Facilities"}
         image={
-          "/assets/factory-manager-holding-meeting-talking-his-employees-about-project-plans.jpg_1_vrmxzd.jpg"
+          "/assets/companies/operations-and-capabilities/factories/factory-manager-holding-meeting-talking-his-employees-about-project-plans.jpg_1_vrmxzd.jpg"
         }
       />
 
@@ -38,8 +38,8 @@ function FactoriesPage() {
         ]}
         lastText="Through continuous investment in technology, quality control, and sustainable practices, our manufacturing facilities enable us to deliver reliable products, reduce environmental impact, and support the growing needs of our customers and partners."
         images={[
-          "/assets/governance-oversight_1_kaybzq.jpg",
-          "/assets/mid-adult-manager-car-mechanic-talking-while-using-computer-auto-repair-shop.jpg_ttjdu0.jpg",
+          "/assets/shared/governance-oversight_1_kaybzq.jpg",
+          "/assets/companies/operations-and-capabilities/factories/mid-adult-manager-car-mechanic-talking-while-using-computer-auto-repair-shop.jpg_ttjdu0.jpg",
         ]}
       />
     </Fragment>

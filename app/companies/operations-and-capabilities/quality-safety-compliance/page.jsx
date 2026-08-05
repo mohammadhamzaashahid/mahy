@@ -15,17 +15,17 @@ function QualitySafetyCompliancePage() {
       <SubPageHeading
         title={"Quality, Safety & Compliance"}
         image={
-          "/assets/standard-quality-control-concept-m.jpg_xkizo5.jpg"
+          "/assets/companies/operations-and-capabilities/quality-safety-compliance/standard-quality-control-concept-m.jpg_xkizo5.jpg"
         }
         fullHeight
       />
       <CompanyDetailCards
         img1={
-          "/assets/man-pointing-screen-with-stars-it.jpg_fhx1jz.jpg"
+          "/assets/companies/operations-and-capabilities/quality-safety-compliance/man-pointing-screen-with-stars-it.jpg_fhx1jz.jpg"
         }
         heading1="Quality, Safety & Compliance"
         img2={
-          "/assets/co-workers-reviewing-report.jpg_v3v7tx.jpg"
+          "/assets/companies/operations-and-capabilities/quality-safety-compliance/co-workers-reviewing-report.jpg_v3v7tx.jpg"
         }
         text1={[
           "The MAHY Khoory Group operates under a strong governance framework that prioritizes quality, safety, and regulatory compliance across all businesses and geographies. Group-wide policies ensure consistent standards while allowing operational flexibility within individual sectors.",

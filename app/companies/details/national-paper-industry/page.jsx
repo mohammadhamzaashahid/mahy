@@ -14,23 +14,23 @@ function NationalPaperIndustryPage() {
     const features = [
         {
             text: "Single-wall and double-wall corrugated cartons",
-            image: "/assets/Single_wall_double_wall_v9gkge.jpg",
+            image: "/assets/companies/details/national-paper-industry/Single_wall_double_wall_v9gkge.jpg",
         },
         {
             text: "Custom-designed boxes and die-cut packaging",
-            image: "/assets/Custom_Designed_boxes_uqistj.jpg",
+            image: "/assets/companies/details/national-paper-industry/Custom_Designed_boxes_uqistj.jpg",
         },
         {
             text: "Heavy-duty and specialty packaging configurations",
-            image: "/assets/Heavy_Duty_boxes_sew5y5.jpg",
+            image: "/assets/companies/details/national-paper-industry/Heavy_Duty_boxes_sew5y5.jpg",
         },
         {
             text: "Printed corrugated solutions",
-            image: "/assets/Printed_Cartoon_boxes_cllghh.jpg",
+            image: "/assets/companies/details/national-paper-industry/Printed_Cartoon_boxes_cllghh.jpg",
         },
         // {
         //     text: "The company offers end-to-end packaging services, supporting customers from initial design and prototyping through large-scale production and delivery. This integrated approach ensures consistency in quality, performance, and lead times.",
-        //     image: "/assets/Testlinear_ikbc7c.png",
+        //     image: "/assets/shared/Testlinear_ikbc7c.png",
         // }
     ];
     const adpmCardsData = [
@@ -83,7 +83,7 @@ function NationalPaperIndustryPage() {
     return (
         <main>
             <CompanyOverview
-                video={"/assets/National_Paper_Industries_bhhmav.mp4"}
+                video={"/assets/companies/details/national-paper-industry/National_Paper_Industries_bhhmav.mp4"}
                 heading="National Paper Industry (S.P.S – L.L.C)"
                 texts={[
                     "National Paper Industry (S.P.S – L.L.C)   (NPI) is a leading manufacturer of corrugated cartons and packaging solutions in the United Arab Emirates. Headquartered in Ajman, NPI operates as part of the MAHY Khoory Group’s manufacturing division, serving a broad customer base across the UAE and selected regional markets.",
@@ -100,13 +100,13 @@ function NationalPaperIndustryPage() {
                 heading="Market Focus and Client Sectors"
                 tag="[ PAPER INDUSTRY ]"
                 text={"NPI serves a wide range of industries across domestic and regional markets. Key client sectors include:"}
-                backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
+                backgroundImage="/assets/shared/skyscrapers-tokyo.jpg_e2niyf.jpg"
                 endText={"By customizing carton strength, dimensions, and print quality, NPI supports both large industrial clients and small-to-medium enterprises seeking durable, branded, and cost-effective packaging solutions."}
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="/assets/IMG_-_44_yw68el.jpg"
+                image="/assets/companies/details/national-paper-industry/IMG_-_44_yw68el.jpg"
             />
         </main>
     )

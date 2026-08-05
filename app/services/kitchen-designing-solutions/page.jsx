@@ -180,7 +180,7 @@ function KitchenDesignPage() {
         fullHeight
         title={"Kitchen Designing Solutions"}
         image={
-          "/assets/collezioni-frida-03-pg126-127_olpgru.jpg"
+          "/assets/services/kitchen-designing-solutions/collezioni-frida-03-pg126-127_olpgru.jpg"
         }
       />
       <KitchenImageScaledGrid
@@ -190,20 +190,20 @@ function KitchenDesignPage() {
           "With a comprehensive range of premium appliances, custom cabinetry, high-quality countertops, sinks, and storage systems, we create kitchens that combine elegance, durability, and everyday practicality.",
         ]}
         items={overviewItems}
-        image="/assets/collezioni-frida-03-pg129_qhzqdu.jpg"
+        image="/assets/services/kitchen-designing-solutions/collezioni-frida-03-pg129_qhzqdu.jpg"
       />
       <CompanyDetailMenu items={featuresData} />
-      <KitchenImageGrid image="/assets/fusion-03-pg28-29_drgi9r.jpg" />
+      <KitchenImageGrid image="/assets/services/kitchen-designing-solutions/fusion-03-pg28-29_drgi9r.jpg" />
       <KitchenMenu />
       <KitchenBackgroundGrid
         items={cards}
-        bgImage="/assets/collezioni-asolo-03-pg152-153_rg2cfg.jpg" // <-- replace with your actual image path
+        bgImage="/assets/services/kitchen-designing-solutions/collezioni-asolo-03-pg152-153_rg2cfg.jpg" // <-- replace with your actual image path
       />{" "}
       <KitchenHorizontalItems />
-      <KitchenItems image="/assets/collezioni-asolo-04-pg164-165-166_zrtzth.jpg" />
+      <KitchenItems image="/assets/services/kitchen-designing-solutions/collezioni-asolo-04-pg164-165-166_zrtzth.jpg" />
       <BlobImageSection
         image={
-          "/assets/collezioni-asolo-01-pg142-143_xxk9at.jpg"
+          "/assets/services/kitchen-designing-solutions/collezioni-asolo-01-pg142-143_xxk9at.jpg"
         }
       />
     </main>

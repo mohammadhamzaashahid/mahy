@@ -60,7 +60,7 @@ function PumpingSystemServicesPage() {
     desc:
       "We support projects with structured planning, precise system selection, and technical guidance from concept to completion. Our development approach ensures every solution is engineered for efficiency, reliability, and long‑term performance.",
     image:
-      "/assets/industrial-ventilation-system-with-metal-ducts-hvac-units-2_uaydfh.jpg",
+      "/assets/services/comprehensive-pumping-system-hvac-services/industrial-ventilation-system-with-metal-ducts-hvac-units-2_uaydfh.jpg",
   },
   {
     no: "02",
@@ -68,7 +68,7 @@ function PumpingSystemServicesPage() {
     desc:
       "We analyze industry trends, customer needs, and competitive landscapes to guide smarter decision‑making and product positioning. Our insights help shape strategies that align with market demand and drive sustainable business growth.",
     image:
-      "/assets/air-conditioning-hvac-roof-industrial-building_yepg08.jpg",
+      "/assets/services/comprehensive-pumping-system-hvac-services/air-conditioning-hvac-roof-industrial-building_yepg08.jpg",
   },
   {
     no: "03",
@@ -76,7 +76,7 @@ function PumpingSystemServicesPage() {
     desc:
       "We provide strategic guidance that helps organizations streamline operations, strengthen decision‑making, and unlock new growth opportunities. Our consulting approach focuses on aligning processes, technology, and market needs to drive measurable, long‑term business performance.",
     image:
-      "/assets/3d-rendering-ventilation-system_sjedm3.jpg",
+      "/assets/services/comprehensive-pumping-system-hvac-services/3d-rendering-ventilation-system_sjedm3.jpg",
   },
   {
     no: "04",
@@ -84,7 +84,7 @@ function PumpingSystemServicesPage() {
     desc:
       "We strengthen project value by promoting energy‑efficient HVAC, water heating, and pumping technologies that reduce long‑term operating costs and improve lifecycle performance",
     image:
-      "/assets/industrial-hvac-system-manufacturing-plant_nioui4.jpg",
+      "/assets/services/comprehensive-pumping-system-hvac-services/industrial-hvac-system-manufacturing-plant_nioui4.jpg",
   },
 ];
   const acItems = [
@@ -119,17 +119,17 @@ function PumpingSystemServicesPage() {
     {
       title: "Collaborative",
       text: "We work collaboratively with clients, consultants, and contractors to ensure every system is seamlessly integrated and optimized for performance. Our team-driven approach fosters transparency, alignment, and efficiency, delivering solutions that meet project goals with precision.",
-      image: "/assets/Collabrative_gphizt.jpg",
+      image: "/assets/services/comprehensive-pumping-system-hvac-services/Collabrative_gphizt.jpg",
     },
     {
       title: "Proven Results",
       text: "Our track record spans decades of successful HVAC and pumping installations across major UAE developments. We consistently deliver systems that perform reliably, meet project demands, and exceed client expectations.",
-      image: "/assets/Proven_results_qgyjp4.jpg",
+      image: "/assets/services/comprehensive-pumping-system-hvac-services/Proven_results_qgyjp4.jpg",
     },
     {
       title: "Tailored Solutions",
       text: "We customize every HVAC, water heating, and pumping system to match each project’s unique technical, operational, and efficiency requirements. Our solutions are engineered around your environment, ensuring optimal performance, reliability, and long‑term value.",
-      image: "/assets/Tailored_Solutions_d6xth2.jpg",
+      image: "/assets/services/comprehensive-pumping-system-hvac-services/Tailored_Solutions_d6xth2.jpg",
     },
   ]
 
@@ -138,11 +138,11 @@ function PumpingSystemServicesPage() {
       <PageHeading
         title={"Comprehensive Pumping System & HVAC Solutions"}
         description="Expert installation, commissioning, repair, and Annual Maintenance Contracts (AMC) for air conditioning, pumping systems, water heaters, swimming pools, and fountains. Your single-point solution for mechanical system reliability."
-        image="/assets/maintenance-engineers-inspect-system-pumping-stations-pipes-delivering-clean-water-water-storage-tanks-community_zgcca6.jpg"
+        image="/assets/services/comprehensive-pumping-system-hvac-services/maintenance-engineers-inspect-system-pumping-stations-pipes-delivering-clean-water-water-storage-tanks-community_zgcca6.jpg"
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
-          image="/assets/comprehensive-pumping-system-3_cvxj3a.jpg"
+          image="/assets/services/comprehensive-pumping-system-hvac-services/comprehensive-pumping-system-3_cvxj3a.jpg"
           title={"Precision from Start to Finish"}
           texts={[
             "We provide end-to-end services for chilled water, domestic water supply (transfer & booster), sewerage , and other pumping systems, focusing on optimal performance and minimal downtime.",
@@ -158,7 +158,7 @@ function PumpingSystemServicesPage() {
           "We offer complete solutions for air conditioning and ventilation systems, ensuring consistent comfort, reliability, and energy efficiency."
         }
         items={acItems}
-        image="/assets/comprehensive-pumping-system-2_kt1cfj.png"
+        image="/assets/services/comprehensive-pumping-system-hvac-services/comprehensive-pumping-system-2_kt1cfj.png"
       />
       <SolarPanelQuoteGrid
         heading="Annual Maintenance Contracts (AMC): Proactive Peace of Mind"
@@ -181,12 +181,12 @@ function PumpingSystemServicesPage() {
           "Proper care and timely interventions that protect your investment over the long term.",
           "Fixed or structured costs that make it easier to plan and control maintenance expenses.",
         ]}
-        image="/assets/comprehensive-pumping-system-1_tzdqvk.jpg"
+        image="/assets/services/comprehensive-pumping-system-hvac-services/comprehensive-pumping-system-1_tzdqvk.jpg"
       />
 
       <WhoWeAre
         showButton={false}
-        image="/assets/worker-refilling-hvac-system-refrigerant_r0wiym.jpg"
+        image="/assets/services/comprehensive-pumping-system-hvac-services/worker-refilling-hvac-system-refrigerant_r0wiym.jpg"
         text="Whether you need a one-time repair, a full system overhaul, or a long-term maintenance partner, our service team delivers reliability, accountability, and technical excellence. Talk to us today to discuss a service plan or AMC tailored to your building and operational needs."
         heading="Your Single-Point Solution for Mechanical System Reliability"
       />
@@ -196,7 +196,7 @@ function PumpingSystemServicesPage() {
       heading="Our Services"
       subHeading=""
       steps={steps}
-      image="/assets/freelancer-developing-startup-project-analyzing-financial-statistics_gclscz.jpg"
+      image="/assets/services/comprehensive-pumping-system-hvac-services/freelancer-developing-startup-project-analyzing-financial-statistics_gclscz.jpg"
       />
       {/* <ServicesPumping /> */}
     </main>

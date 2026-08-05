@@ -9,25 +9,25 @@ const services = [
   {
     title: "Business planning",
     desc: "Lorem ipsum dolor sit amet consectetur. Vulputate iaculis morbi morbi convallis erat. Blandit lacinia donec semper ut nam aliquam mus duis.",
-    image: "/assets/gallery-3_exvuhu.jpg",
+    image: "/assets/products/corrugated-paper-reels/gallery-3_exvuhu.jpg",
     imageFit: "cover", // "cover" | "contain"
   },
   {
     title: "Financial strategy",
     desc: "Lorem ipsum dolor sit amet consectetur. Vulputate iaculis morbi morbi convallis erat. Blandit lacinia donec semper ut nam aliquam mus duis.",
-    image: "/assets/gallery-3_exvuhu.jpg",
+    image: "/assets/products/corrugated-paper-reels/gallery-3_exvuhu.jpg",
     imageFit: "cover",
   },
   {
     title: "Business consulting",
     desc: "Lorem ipsum dolor sit amet consectetur. Vulputate iaculis morbi morbi convallis erat. Blandit lacinia donec semper ut nam aliquam mus duis.",
-    image: "/assets/gallery-3_exvuhu.jpg",
+    image: "/assets/products/corrugated-paper-reels/gallery-3_exvuhu.jpg",
     imageFit: "cover",
   },
   {
     title: "Market research",
     desc: "Lorem ipsum dolor sit amet consectetur. Vulputate iaculis morbi morbi convallis erat. Blandit lacinia donec semper ut nam aliquam mus duis.",
-    image: "/assets/gallery-3_exvuhu.jpg",
+    image: "/assets/products/corrugated-paper-reels/gallery-3_exvuhu.jpg",
     imageFit: "cover",
   },
 ];

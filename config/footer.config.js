@@ -47,7 +47,7 @@ export const getFooter = (t) => {
           label: "Contact Us",
           href: "/contact-us",
         },
-        image: "/assets/MK_Logo_Gold_tr9dox.png"
+        image: "/assets/shared/MK_Logo_Gold_tr9dox.png"
       },
     ],
 

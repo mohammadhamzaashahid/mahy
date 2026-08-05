@@ -16,24 +16,24 @@ function SenanIndustryPage() {
     {
       title: "Plastic Jerrycans",
       text: "Used for automotive oils, lubricants, and coolants.",
-      image: "/assets/Plastic_Jerry_cans_evksua.jpg",
+      image: "/assets/companies/details/senan-industry/Plastic_Jerry_cans_evksua.jpg",
     },
     {
       title: "Industrial Containers and Drums",
       text: "Designed for chemicals and agrochemicals.",
       objectFit: "contain",
-      image : "/assets/Indistrial_Containers_and_Drums_cgvyha.jpg"
+      image : "/assets/companies/details/senan-industry/Indistrial_Containers_and_Drums_cgvyha.jpg"
     },
     {
       title: "Bottles and Containers",
       text: "Used for food and beverage applications.",
-      image: "/assets/Bottles_and_Containers_lyprlc.jpg",
+      image: "/assets/companies/details/senan-industry/Bottles_and_Containers_lyprlc.jpg",
     },
     {
       title: "Custom Packaging Solutions",
       text: "Tailored plastic packaging for private-label brands.",
       objectFit: "contain",
-      image: "/assets/Custom_Plastic_Cans_kir57g.jpg",
+      image: "/assets/companies/details/senan-industry/Custom_Plastic_Cans_kir57g.jpg",
     },
   ];
   const overview = [
@@ -79,9 +79,9 @@ function SenanIndustryPage() {
       {/* Company Overview */}
       <CompanyOverview
         video={
-          "/assets/Senan_Industry_Llc_q5fd3z.mp4"
+          "/assets/companies/details/senan-industry/Senan_Industry_Llc_q5fd3z.mp4"
         }
-        // image="/assets/office_jaeuiz.webp"
+        // image="/assets/shared/office_jaeuiz.webp"
         heading="Senan Industry LLC"
         texts={[
           "Senan Industry LLC is a specialized manufacturer of rigid plastic packaging solutions, operating as part of the MAHY Khoory Group’s manufacturing portfolio.",
@@ -97,7 +97,7 @@ function SenanIndustryPage() {
       <FeaturesEngineeringSection
         heading="Senan Industry LLC Overview"
         items={overview}
-        image="/assets/mahy-location-page.jpg_jdopju.jpg"
+        image="/assets/shared/mahy-location-page.jpg_jdopju.jpg"
       />
     </main>
   );

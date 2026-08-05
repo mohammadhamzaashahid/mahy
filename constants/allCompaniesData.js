@@ -11,8 +11,8 @@ export const allCompanies = [
                 "Sustainability and responsible growth are central to the Group's philosophy, with significant operations in recycling, resource recovery, and environmental services. Its advanced infrastructure—including automated manufacturing facilities, logistics networks, and regional warehouses—supports efficient project execution and after-sales service. Looking ahead, the company focuses on controlled diversification, digital transformation, and technology adoption to remain competitive and resilient while delivering sustainable value to stakeholders.",
             ],
             image:
-                // "/assets/0_-_mahy-khoory-group_azokpi.jpg",
-                "/assets/grundfos_cklxxr.png",
+                // "/assets/companies/_shared/0_-_mahy-khoory-group_azokpi.jpg",
+                "/assets/companies/_shared/grundfos_cklxxr.png",
             href: "/companies/details/mahy-khoory-group"
         },
         {
@@ -23,7 +23,7 @@ export const allCompanies = [
                 "Headquartered in Dubai, the division maintains strong coverage across the GCC—particularly in the UAE and Oman—supported by extensive warehousing, logistics, and technical infrastructure. It also facilitates re-export to Africa and other international markets. With a focus on quality, compliance, and sustainability, the division promotes energy-efficient technologies and maintains rigorous inspection standards. Strategic partnerships, digital tools, and ongoing portfolio expansion position M.A.H.Y. Khoory Trading as a key driver of growth within the MAHY Khoory Group.",
             ],
             image:
-                "/assets/1_-_mahy-khoory-trading_ecld8t.jpg",
+                "/assets/companies/_shared/1_-_mahy-khoory-trading_ecld8t.jpg",
             href: "/companies/details/mahy-khoory-trading"
         },
         // {
@@ -34,7 +34,7 @@ export const allCompanies = [
         //         "Headquartered in Dubai with a large central warehouse and dedicated workshops, the company provides rapid distribution, technical support, and after-sales service across all emirates. It promotes energy-efficient technologies such as variable-speed systems and high-efficiency motors, aligning with the Group's sustainability goals. As the MAHY Khoory Group's dedicated pump solutions arm, it plays a strategic role in supporting both external clients and internal subsidiaries. Ongoing investments in smart pumping technologies, digital tools, and advanced service capabilities position the company as a preferred partner for complex pumping and water-management projects.",
         //     ],
         //     image:
-        //         "/assets/2_-_emirates-international_jejxjx.png",
+        //         "/assets/companies/_shared/2_-_emirates-international_jejxjx.png",
         // },
         // {
         //     title: "Greenland Equipment & Machinery Est. L.L.C.",
@@ -44,7 +44,7 @@ export const allCompanies = [
         //         "Headquartered in Dubai and supported by showrooms, warehouses, and a strong logistics network, Greenland ensures fast delivery and nationwide service coverage. It plays a strategic role within the MAHY Khoory Group as the primary HVAC and electromechanical trading arm, complementing the Group's broader engineering and pumping capabilities. With a focus on sustainability, innovation, and digital enablement—including smart controls, IoT-ready systems, and advanced energy-management tools—Greenland continues to strengthen its market presence and support the region's shift toward efficient, environmentally responsible building systems",
         //     ],
         //     image:
-        //         "/assets/greenland-mech_uenskm.jpg",
+        //         "/assets/companies/_shared/greenland-mech_uenskm.jpg",
         // },
         // {
         //     title: "Al Mehwar Alfede General Trading LLC",
@@ -54,7 +54,7 @@ export const allCompanies = [
         //         "Operating from its Dubai office and warehouse, Al Mehwar ensures efficient distribution and maintains stock for fast order fulfillment, supported by light fabrication and testing facilities. It plays a complementary role within the MAHY Khoory Group by managing specific pump product lines and enhancing the Group's overall supply capabilities. With a focus on quality, compliance, and energy-efficient technologies, the company continues to expand its offerings through global partnerships and value-added services, strengthening its position as a trusted specialist in pumping solutions.",
         //     ],
         //     image:
-        //         "/assets/4_-_al-mehwar_vpyemm.png",
+        //         "/assets/companies/_shared/4_-_al-mehwar_vpyemm.png",
         // },
         {
             title: "Al Khoory Engineering",
@@ -64,7 +64,7 @@ export const allCompanies = [
                 "Headquartered in Dubai with engineering offices, workshops, and a dedicated service centre in Ras Al Khor, the company supports projects across the UAE and selected Gulf markets. As the Group's core technical arm for pumping projects, it works closely with trading and service divisions to deliver cohesive, high-quality solutions. With ongoing investments in smart pumping technologies, IoT-enabled monitoring, and specialized applications such as desalination and industrial process systems, Al Khoory Engineering continues to strengthen its role as a leader in engineered pumping solutions.",
             ],
             image:
-                "/assets/5_-_mahy-khoory-engineering_u8wblr.jpg",
+                "/assets/companies/_shared/5_-_mahy-khoory-engineering_u8wblr.jpg",
             href: "/companies/details/al-khoory-engineering",
         },
         {
@@ -75,7 +75,7 @@ export const allCompanies = [
                 "UPM is deeply integrated within the MAHY Khoory Group's recycling ecosystem, working closely with waste collection and packaging subsidiaries to enable a closed-loop model. Sustainability is central to its mission, with continuous improvements in energy efficiency, water usage, and waste recovery. Ongoing investments in automation, digital monitoring, and new recycled paper grades ensure UPM remains a leading, forward-looking manufacturer supporting the region's circular economy and growing packaging industry.",
             ],
             image:
-                "/assets/6_-_union-paper-mills_a7rhay.jpg",
+                "/assets/companies/_shared/6_-_union-paper-mills_a7rhay.jpg",
             href: "/companies/details/union-paper-mills",
         },
         {
@@ -86,7 +86,7 @@ export const allCompanies = [
                 "Sustainability is at the core of the mill's mission, with operations designed to reduce landfill waste, conserve natural resources, and lower carbon emissions through closed-loop water systems and energy-efficient processes. As a strategic pillar of the MAHY Khoory Group, Al Dhafra Paper Manufacturing strengthens the Group's circular manufacturing model and supports the region's transition toward environmentally responsible packaging. With advanced infrastructure, ISO-certified systems, and a skilled leadership team, the mill continues to advance as a leading force in sustainable paper production.",
             ],
             image:
-                "/assets/7_-_al-dhafra-paper_wt16se.jpg",
+                "/assets/companies/_shared/7_-_al-dhafra-paper_wt16se.jpg",
             href: "/companies/details/al-dhafra-paper-manufacturing",
         },
         {
@@ -97,7 +97,7 @@ export const allCompanies = [
                 "As part of the MAHY Khoory Group's Manufacturing Division, Union Wood Works strengthens the Group's environmental footprint by converting wood waste into valuable industrial materials. The company maintains strong compliance, safety, and environmental standards while continuously investing in innovation—from upgraded hydraulic press systems to next-generation eco-wood composites. Through its commitment to sustainability and technological advancement, Union Wood Works positions itself as a regional leader in engineered recycled wood solutions.",
             ],
             image:
-                "/assets/8_-_union-paper-works_nnh5oi.png",
+                "/assets/companies/_shared/8_-_union-paper-works_nnh5oi.png",
             href: "/companies/details/union-wood-works",
             brochure: "/brochures/union-wood-works.pdf",
         },
@@ -109,7 +109,7 @@ export const allCompanies = [
                 "Strategically, RWMD is vital to the MAHY Khoory Group's manufacturing and sustainability goals by securing locally sourced recycled fibre, reducing reliance on imported raw materials, and enabling 100% recycled content in paper products. The division maintains strict regulatory compliance, supported by trained teams, modern infrastructure, and digital tracking systems. Through continuous innovation—such as route optimization, low-emission vehicles, and customer reporting tools—RWMD reinforces its role as a leading, environmentally responsible recycling provider in the UAE.",
             ],
             image:
-                "/assets/9_-_recyclable-waste_ktxefe.jpg",
+                "/assets/companies/_shared/9_-_recyclable-waste_ktxefe.jpg",
             href: "/companies/details/recyclable-waste-management",
             brochure: "/brochures/recyclable-waste-management.pdf",
         },
@@ -121,7 +121,7 @@ export const allCompanies = [
                 "Strategically positioned within the Group's environmental services ecosystem, the company strengthens feedstock security, reduces transportation costs, and enhances supply chain resilience. Its commitment to regulatory compliance, safety, and continuous improvement ensures high-quality, traceable operations across Abu Dhabi. Through landfill diversion, resource recovery, and operational innovation, Al Dhafra Waste Collection supports the UAE's circular economy ambitions while helping clients achieve their own sustainability objectives.",
             ],
             image:
-                "/assets/10_-_al-dhafra-waste-collection_cbexcl.jpg",
+                "/assets/companies/_shared/10_-_al-dhafra-waste-collection_cbexcl.jpg",
             href: "/companies/details/al-dhafra-waste-collection",
         },
         {
@@ -132,7 +132,7 @@ export const allCompanies = [
                 "Strategically, Around Continent Waste Collection strengthens the MAHY Khoory Group's environmental services portfolio by focusing on compliant waste logistics rather than recycling operations. The company maintains strict safety, quality, and regulatory standards through advanced tracking systems, digital waste manifests, and rigorous vehicle inspection programs. By ensuring controlled waste handling and promoting safe practices at source, it plays a vital role in minimizing environmental risks and supporting the UAE's broader sustainability and compliance objectives.",
             ],
             image:
-                "/assets/11_-_around-continent-waste_zezot5.jpg",
+                "/assets/companies/_shared/11_-_around-continent-waste_zezot5.jpg",
             href: "/companies/details/around-continent-waste-collection",
             brochure: "/brochures/around-continent-waste-collection.pdf",
         },
@@ -144,7 +144,7 @@ export const allCompanies = [
                 "Strategically, Al Etihad Waste Management strengthens the MAHY Khoory Group's regional presence and reinforces its leadership in environmental services beyond the UAE. The company operates with strong governance, regulatory compliance, and a commitment to quality, safety, and innovation. Through modern infrastructure, advanced recycling techniques, and active community engagement, it plays a vital role in reducing landfill dependency and supporting Oman's long-term sustainability and circular economy ambitions.",
             ],
             image:
-                "/assets/12_-_etihad-waste-management_y5mnza.jpg",
+                "/assets/companies/_shared/12_-_etihad-waste-management_y5mnza.jpg",
             href: "/companies/details/al-etihad-waste-management-services-llc",
         },
         {
@@ -155,7 +155,7 @@ export const allCompanies = [
                 "Sustainability is central to Clean Earth LLC's value proposition, enabling clients to conserve resources, reduce pollution, and support circular supply chains. By serving sectors such as hospitality, manufacturing, retail, and institutional facilities, the company provides tailored recycling solutions that enhance corporate environmental responsibility. Through reliable operations and strong recycling partnerships, Clean Earth LLC acts as a trusted partner for organizations seeking to meet regulatory requirements and strengthen their sustainability commitments.",
             ],
             image:
-                "/assets/0_-_mahy-khoory-group_azokpi.jpg",
+                "/assets/companies/_shared/0_-_mahy-khoory-group_azokpi.jpg",
             href: "/companies/details/clean-earth-llc",
 
         },
@@ -167,7 +167,7 @@ export const allCompanies = [
                 "Sustainability is central to SWMD's mission, with significant contributions toward Dubai Municipality's zero wood waste to landfill vision. By promoting source segregation and material awareness, it helps waste generators reduce costs and maximize resource value. Operating from strategically located facilities in Dubai, SWMD ensures efficient logistics and 24/7 service availability. Through partnerships with regulatory authorities and continuous innovation, the division enhances resource efficiency, supports municipal sustainability programs, and reinforces the UAE's long-term environmental goals.",
             ],
             image:
-                "/assets/14_-_solid-waste_komaxr.jpg",
+                "/assets/companies/_shared/14_-_solid-waste_komaxr.jpg",
             href: "/companies/details/solid-waste-management-division",
         },
         {
@@ -178,8 +178,8 @@ export const allCompanies = [
                 "Sustainability is central to USPS operations, with a strong focus on recycling, reuse, and waste reduction. Its processes use chemical-free, recycled wood to produce eco-friendly packaging while supporting circular economy principles. Backed by advanced manufacturing, in-house design expertise, and strict quality standards, USPS delivers reliable and customized solutions. The company strengthens MAHY Khoory Group's position in industrial and environmental sectors by combining local expertise with global partnerships.",
             ],
             image:
-                // "/assets/15_-_union-packaging_uugj62.jpg",
-                "/assets/palletbiz_qeqscs.jpg",
+                // "/assets/companies/_shared/15_-_union-packaging_uugj62.jpg",
+                "/assets/companies/_shared/palletbiz_qeqscs.jpg",
             href: "/companies/details/union-sustainable-packaging",
         },
         {
@@ -190,7 +190,7 @@ export const allCompanies = [
                 "NPI's advanced facility is equipped with automated corrugators, flexographic printing lines, die-cutters, and finishing systems, supported by in-house quality control labs. Integrated with Union Paper Mills, the company benefits from a steady supply of recycled paper, reinforcing its circular manufacturing model. Sustainability is central to its operations, with recycled raw materials, waste reduction practices, and energy-efficient equipment minimizing environmental impact. Backed by experienced leadership and a skilled workforce, NPI continues to expand capacity and strengthen its position as a trusted packaging partner in the UAE and regional markets.",
             ],
             image:
-                "/assets/16_-_national-paper_vsgpit.jpg",
+                "/assets/companies/_shared/16_-_national-paper_vsgpit.jpg",
             href: "/companies/details/national-paper-industry",
             brochure: "/brochures/national-paper-industry.pdf",
         },
@@ -202,7 +202,7 @@ export const allCompanies = [
                 "Core services include intra-group logistics, project and heavy transport, staff transportation, and general cargo distribution. With nationwide coverage and readiness to extend into the GCC, the division ensures continuity and responsiveness across operations. It emphasizes safety, compliance, and sustainability through modern fleet management, GPS tracking, preventive maintenance, and fuel-efficient practices. By integrating innovation and digital enablement, Greenland General Transport strengthens the MAHY Khoory Group's execution capability, enabling rapid mobilization, operational transparency, and long-term growth.",
             ],
             image:
-                "/assets/17_-_greenland-transport_voakzk.jpg",
+                "/assets/companies/_shared/17_-_greenland-transport_voakzk.jpg",
             href: "/companies/details/greenland-general-transport",
         },
         {
@@ -213,7 +213,7 @@ export const allCompanies = [
                 "Strategically integrated within the MAHY Khoory Group, Senan Industry benefits from synergies in recycling and sustainability, incorporating recycled materials into production. It emphasizes eco-friendly practices such as designing reusable containers, recycling scrap, and reducing emissions through local manufacturing. The company has supported large-scale projects for government and institutional clients, demonstrating flexibility and reliability. Backed by an experienced leadership team and skilled workforce, Senan Industry operates continuously to meet demand, reinforcing its reputation as a trusted, ISO-certified packaging partner in the UAE and regional markets.",
             ],
             image:
-                "/assets/18_-_senan-industry_yiajzi.jpg",
+                "/assets/companies/_shared/18_-_senan-industry_yiajzi.jpg",
             href: "/companies/details/senan-industry",
             brochure: "/brochures/senan-industry.pdf",
         },
@@ -225,7 +225,7 @@ export const allCompanies = [
                 "Pure Energy applies advanced technologies including high-efficiency solar modules, smart inverters, battery storage, and digital monitoring platforms to maximize yield and reliability. Strategic partnerships with government entities, utilities, global technology providers, and financial institutions enable scalable, commercially viable projects. Sustainability is central to its mission, with a strong focus on reducing carbon emissions, lowering fossil fuel dependence, and promoting energy efficiency. Through innovation and disciplined execution, Pure Energy positions itself as a trusted EPC partner for organizations pursuing net-zero and ESG commitments in the UAE.",
             ],
             image:
-                "/assets/19_-_pure-energy_wbprxe.jpg",
+                "/assets/companies/_shared/19_-_pure-energy_wbprxe.jpg",
             href: "/companies/details/pure-energy-construction",
         },
         {
@@ -236,7 +236,7 @@ export const allCompanies = [
                 "Strategically positioned near Dubai's commercial hubs and leisure attractions, Pearl Marina Hotel Apartments caters to a diverse clientele through partnerships with travel agencies, corporate accounts, and real estate networks. Sustainability initiatives such as energy-efficient lighting, water-saving fixtures, and recycling practices align with Dubai's environmental goals. Managed by an experienced hospitality team, the property continues to upgrade its facilities, ensuring competitive service standards and consistent guest satisfaction.",
             ],
             image:
-                "/assets/20_-_pearl-marina_jwoc7e.jpg",
+                "/assets/companies/_shared/20_-_pearl-marina_jwoc7e.jpg",
             href: "/companies/details/pearl-marina",
             brochure: "/brochures/pearl-marina.pdf",
         },
@@ -248,7 +248,7 @@ export const allCompanies = [
                 "Market Restaurant & Café focuses on delivering a seamless guest experience through efficient operations and modern technology. It utilizes integrated POS systems, digital reservations, and online ordering platforms to enhance service quality and convenience. Sustainability practices such as reducing food waste, using seasonal ingredients, and recycling materials are embedded in its operations. Backed by an experienced hospitality team, the restaurant maintains consistent quality while supporting local partnerships and community engagement.",
             ],
             image:
-                "/assets/21_-_market-restaurant_cvo99s.jpg",
+                "/assets/companies/_shared/21_-_market-restaurant_cvo99s.jpg",
             href: "/companies/details/market-restaurant",
             brochure: "/brochures/pearl-marina.pdf",
         },
@@ -260,7 +260,7 @@ export const allCompanies = [
                 "Innovation and sustainability are central to MAHY Khoory Motors' strategy, with a strong emphasis on EV and hybrid technologies. Supported by partnerships with leading automotive manufacturers, the company is aligned with the UAE's vision for smart and sustainable mobility. It continues to invest in advanced platforms, AI-enabled features, and connected vehicle technologies. As part of the MAHY Khoory Group, it strengthens the organization's presence in future-ready industries while delivering modern mobility solutions.",
             ],
             image:
-                "/assets/IMG_gwgb1p.png",
+                "/assets/companies/_shared/IMG_gwgb1p.png",
             href: "/companies/details/mahy-khoory-motors",
             brochure: "/brochures/mahy-khoory-motors.pdf",
         },
@@ -272,7 +272,7 @@ export const allCompanies = [
                 "MAHY Khoory Automotive emphasizes innovation and growth through digital engagement and advanced customer experiences. Its expanding network of showrooms and service facilities supports a strong national presence and accessibility. With plans to introduce more electric vehicles and smart mobility solutions, the division aligns with evolving market trends and technological advancements. Backed by the Group's legacy and expertise, it aims to become a trusted automotive partner in the UAE.",
             ],
             image:
-                "/assets/23_-_mahy-automotive_la0ndw.jpg",
+                "/assets/companies/_shared/23_-_mahy-automotive_la0ndw.jpg",
             href: "/companies/details/mahy-khoory-automotive",
             brochure: "/brochures/MKA-Brochure.pdf",
         },
@@ -284,7 +284,7 @@ export const allCompanies = [
                 "Union Nonwoven serves markets across the GCC and MENA region, catering to industries such as healthcare, construction, water treatment, and automotive. Its operations emphasize innovation, with ongoing investment in R&D, advanced manufacturing technologies, and performance testing. Sustainability is a key focus, with efforts in waste reduction, recycling, and environmentally responsible production methods. Backed by experienced leadership and the MAHY Khoory Group's legacy, the company delivers reliable, high-quality technical textile solutions.",
             ],
             image:
-                "/assets/0_-_mahy-khoory-group_azokpi.jpg",
+                "/assets/companies/_shared/0_-_mahy-khoory-group_azokpi.jpg",
             href: "/companies/details/union-nonwoven-industries",
         },
         {
@@ -295,7 +295,7 @@ export const allCompanies = [
                 "Creative Solutions serves a wide range of sectors including commercial, residential, hospitality, industrial, and public infrastructure projects. The firm collaborates with global partners, certification bodies, and engineering consultants to deliver integrated solutions. Its impact is measured through reduced energy consumption, lower costs, and verified sustainability outcomes. Backed by experienced professionals and aligned with MAHY Khoory Group's strategy, it plays a key role in advancing sustainable practices across the UAE.",
             ],
             image:
-                "/assets/0_-_mahy-khoory-group_azokpi.jpg",
+                "/assets/companies/_shared/0_-_mahy-khoory-group_azokpi.jpg",
             href: "/companies/details/creative-solutions",
             brochure: "/brochures/creative-solutions.pdf",
         },

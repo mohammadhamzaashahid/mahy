@@ -40,7 +40,7 @@ function AnnualMaintenanceContractsPage() {
         {
             title: "Comprehensive System Assessments",
             text: "We provide a comprehensive range of air conditioning and ventilation services designed to ensure year-round comfort, high system reliability, and long-term energy efficiency. From new installations to corrective repairs and lifecycle maintenance, every service is delivered with engineering accuracy and a strong commitment to customer satisfaction.",
-            image: "/assets/press-materials-ALPHA-pump-technology-Grundfos-master_bruo8u.jpg"
+            image: "/assets/services/annual-maintenance-contracts/press-materials-ALPHA-pump-technology-Grundfos-master_bruo8u.jpg"
         },
         {
             title: "Expert Installation & Commissioning",
@@ -54,7 +54,7 @@ function AnnualMaintenanceContractsPage() {
                 "Ensuring compliance with safety, ventilation, and environmental standards"
             ],
             endText: "These commissioning procedures guarantee stable cooling, quiet operation, and efficient energy consumption.",
-            image: "/assets/press-material-employee-factory-Grundfos-master_ad29rr.jpg"
+            image: "/assets/services/annual-maintenance-contracts/press-material-employee-factory-Grundfos-master_ad29rr.jpg"
         },
         {
             title: "Stress-Free Warranty Repairs",
@@ -66,7 +66,7 @@ function AnnualMaintenanceContractsPage() {
                 "Repairs carried out with minimal disruption to residents, tenants, or operations"
             ],
             endText: "Our streamlined warranty process helps reduce downtime and maintain consistent cooling performance.",
-            image: "/assets/c1rwdlcc_geixvt.jpg"
+            image: "/assets/services/annual-maintenance-contracts/c1rwdlcc_geixvt.jpg"
         },
         {
             title: "Dependable Non-Warranty Repairs",
@@ -79,7 +79,7 @@ function AnnualMaintenanceContractsPage() {
                 "Replacement of faulty compressors, motors, blowers, sensors, contactors, PCB boards, and refrigerant components"
             ],
             endText: "We aim to restore system efficiency while extending equipment lifespan.",
-            image: "/assets/chilled-water-pumps1_n8dxpq.png"
+            image: "/assets/shared/chilled-water-pumps1_n8dxpq.png"
         },
         {
             title: "Additional Support Services",
@@ -90,7 +90,7 @@ function AnnualMaintenanceContractsPage() {
                 "Refrigerant leak testing and system recharging",
                 "Ventilation system inspection & exhaust system servicing"
             ],
-            image: "/assets/car-service-repair-maintenance-people-concept-auto-mechanic-man-smith-writing-clipboard-workshop-warehouse_akpmbw.jpg"
+            image: "/assets/services/annual-maintenance-contracts/car-service-repair-maintenance-people-concept-auto-mechanic-man-smith-writing-clipboard-workshop-warehouse_akpmbw.jpg"
         },
         {
             title: "Why Choose Our Air Conditioning Services?",
@@ -101,7 +101,7 @@ function AnnualMaintenanceContractsPage() {
                 "Genuine parts and long-term service solutions",
                 "Suitable for villas, apartments, towers, offices, warehouses, and commercial buildings"
             ],
-            image: "/assets/1_ywexpd.jpg"
+            image: "/assets/shared/1_ywexpd.jpg"
         }
     ];
 
@@ -112,11 +112,11 @@ function AnnualMaintenanceContractsPage() {
                 title={"Annual Maintenance Contracts"}
                 description={"Reliable, preventive maintenance solutions designed to keep your essential building systems operating safely, efficiently, and continuously throughout the year."}
                 description2={"Our AMC packages are structured to provide year-round technical support, proactive servicing, and long-term protection for residential, commercial, and industrial facilities."}
-                image={"/assets/1_xsgrt2.jpg"}
+                image={"/assets/services/annual-maintenance-contracts/1_xsgrt2.jpg"}
             />
             <div className="pt-10">
                 <SolarPanelQuoteGrid
-                image='/assets/psol3_free9g.png'
+                image='/assets/shared/psol3_free9g.png'
                     heading='Systems Covered Under AMC'
                     text='Our maintenance contracts cover a wide range of mechanical, electrical, and water-management systems, including:'
                     items={systemsCovered}
@@ -124,17 +124,17 @@ function AnnualMaintenanceContractsPage() {
                 />
             </div>
             <KitchenItems
-            image='/assets/psol2_dasgse.png'
+            image='/assets/services/annual-maintenance-contracts/psol2_dasgse.png'
                 title='Key Benefits of Our AMC Services'
                 items={benefits}
             />
             <WasteCollectionGrid
-                image={"/assets/ptanks2_uafxz4.png"}
+                image={"/assets/shared/ptanks2_uafxz4.png"}
                 heading="Why Choose Our AMC Services?"
                 items={whyChooseUs}
 icon={<HiWrench size={25} />}            />
             <WasteCollectionTimeline
-            bottomImage='/assets/man-standing-road-front-skyscraper-sunset_y5zykp.jpg'
+            bottomImage='/assets/shared/man-standing-road-front-skyscraper-sunset_y5zykp.jpg'
             endHeading=''
             endText='Our Annual Maintenance Contract (AMC) services ensure proactive upkeep through scheduled inspections, preventive maintenance, and priority support to keep your systems running efficiently. By minimizing downtime and extending asset lifespan, we deliver reliable performance and cost-effective maintenance tailored to your needs.'
                 heading='Assured Performance All Year Round'

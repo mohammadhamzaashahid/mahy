@@ -15,7 +15,7 @@ export default function GovernancePage() {
       <SubPageHeading
         title="Leadership & Management"
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
-        image="/assets/businessman-standing-front-large-glass-building-business-corporative-concept-generative-ai.jpg_f65dkk.jpg"
+        image="/assets/about-us/leadership-and-management/businessman-standing-front-large-glass-building-business-corporative-concept-generative-ai.jpg_f65dkk.jpg"
         align="center"
         fullHeight
       />

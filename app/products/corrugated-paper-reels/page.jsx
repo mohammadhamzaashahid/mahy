@@ -20,37 +20,37 @@ function CorrugatedPaperReelsPage() {
       title: "Union Testliner (90–200 GSM)",
       desc: "High-quality recycled linerboard suitable for outer layers of corrugated packaging, offering strength, printability, and cost efficiency.",
       image:
-        "/assets/Testlinear_ikbc7c.png",
+        "/assets/shared/Testlinear_ikbc7c.png",
     },
     {
       title: "Unionflute (90–175 GSM)",
       desc: "Durable fluting medium designed for corrugated board applications, providing excellent rigidity, cushioning, and structural performance.",
       image:
-        "/assets/Union_Flute_scjkz4.png",
+        "/assets/shared/Union_Flute_scjkz4.png",
     },
     {
       title: "Unioncore Board (190–450 GSM)",
       desc: "Heavy-duty core board used in paper tubes, cores, and industrial applications, delivering superior strength and load-bearing capacity.",
       image:
-        "/assets/coreboard_ysfopp.png",
+        "/assets/shared/coreboard_ysfopp.png",
     },
     {
       title: "Semikraft Liner (125–200 GSM)",
       desc: "Semi-chemical kraft liner combining strength and surface quality, ideal for packaging solutions requiring enhanced durability and appearance.",
       image:
-        "/assets/Semikraft_knjtkd.png",
+        "/assets/shared/Semikraft_knjtkd.png",
     },
     // {
     //   title: "Customizable Widths & Specifications",
     //   desc: "Reels can be supplied in tailored widths to fit any corrugator or converting line, with options for:• Kraft liner• Test liner• Fluting paper• Medium paper",
     //   image:
-    //     "/assets/gallery-3_exvuhu.jpg",
+    //     "/assets/products/corrugated-paper-reels/gallery-3_exvuhu.jpg",
     // },
     // {
     //   title: "Eco-Friendly Manufacturing",
     //   desc: "Produced using recycled fiber, optimized resource consumption, and environmentally responsible processes to support sustainable packaging.",
     //   image:
-    //     "/assets/gallery-3_exvuhu.jpg",
+    //     "/assets/products/corrugated-paper-reels/gallery-3_exvuhu.jpg",
     // },
   ];
 
@@ -60,28 +60,28 @@ function CorrugatedPaperReelsPage() {
       title: "Corrugated Carton Manufacturing",
       desc: "Ideal for producing single-wall, double-wall, and triple-wall corrugated boards.",
       image:
-        "/assets/gallery-1_exhyck.jpg",
+        "/assets/shared/gallery-1_exhyck.jpg",
     },
     {
       no: "02",
       title: "Packaging & Logistics Operations",
       desc: "Used for outer cartons, protective sheets, pallet packaging, and export-grade boxes.",
       image:
-        "/assets/gallery-2_qwc2me.jpg",
+        "/assets/products/corrugated-paper-reels/gallery-2_qwc2me.jpg",
     },
     {
       no: "03",
       title: "Industrial Packing Solutions",
       desc: "Suitable for heavy-duty protective packaging in factories, warehouses, and distribution centers.",
       image:
-        "/assets/gallery-3_exvuhu.jpg",
+        "/assets/products/corrugated-paper-reels/gallery-3_exvuhu.jpg",
     },
     {
       no: "04",
       title: "E-Commerce & Retail Packaging",
       desc: "High-quality kraft reels suitable for mailer boxes, retail cartons, inserts, and die-cut packaging.",
       image:
-        "/assets/gallery-4_oxzrpw.jpg",
+        "/assets/products/corrugated-paper-reels/gallery-4_oxzrpw.jpg",
     },
   ];
 
@@ -100,9 +100,9 @@ function CorrugatedPaperReelsPage() {
         // description={
         //   "Global Water Solutions Pressure Tanks are engineered to ensure efficient pressure control, system stability, and long service life in water supply applications. Designed for consistent performance, these tanks support smooth operation of pumps and water networks."
         // }
-        image="/assets/Our_Mission_juz165.jpg"
+        image="/assets/shared/Our_Mission_juz165.jpg"
       />
-      <BoosterPumpRevealSection image="/assets/UPM.4_ir521p.jpg" text="Our high-quality corrugated paper reels are available in a comprehensive range of widths, kraft grades, and GSM options, making them the preferred choice for packaging manufacturers, carton converters, and industrial packing operations across the UAE. Engineered for superior strength, stability, and smooth machinability, these reels deliver consistent performance in demanding converting and packaging applications." />
+      <BoosterPumpRevealSection image="/assets/shared/UPM.4_ir521p.jpg" text="Our high-quality corrugated paper reels are available in a comprehensive range of widths, kraft grades, and GSM options, making them the preferred choice for packaging manufacturers, carton converters, and industrial packing operations across the UAE. Engineered for superior strength, stability, and smooth machinability, these reels deliver consistent performance in demanding converting and packaging applications." />
       <ServicesPumping
         title1="Our Key"
         title2="Product Features"
@@ -110,7 +110,7 @@ function CorrugatedPaperReelsPage() {
       />
       {/* <HoverableColumns title="Applications" items={applications} /> */}
       <WasteCollectionGrid
-      image="/assets/image010_r5rssl.png"
+      image="/assets/shared/image010_r5rssl.png"
         heading="Why Choose Our Corrugated Paper Reels?"
         items={whyChooseUs}
         icon={<TbPaperBag size={25} />}

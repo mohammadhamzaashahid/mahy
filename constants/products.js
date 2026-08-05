@@ -155,10 +155,10 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/jdrXLWR",
         images: [
-            "/assets/Picture1_ld0xap.png",
-            "/assets/Picture2_xhzujf.png",
-            "/assets/Picture3_lywzoa.png",
-            "/assets/Picture4_x0eq8m.png"
+            "/assets/shop/Picture1_ld0xap.png",
+            "/assets/products/_shared/Picture2_xhzujf.png",
+            "/assets/products/_shared/Picture3_lywzoa.png",
+            "/assets/products/_shared/Picture4_x0eq8m.png"
         ],
         about: [
             "Water heater designed and manufactured to be installed in UK",
@@ -214,7 +214,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/cnQp7v5",
         images: [
-            "/assets/Picture5_wrxps7.png"
+            "/assets/products/_shared/Picture5_wrxps7.png"
         ],
         about: [
             "Temperature Regulation",
@@ -264,7 +264,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/8WWNR4T",
         images: [
-            "/assets/Picture7_aizaop.png"
+            "/assets/products/_shared/Picture7_aizaop.png"
         ],
         about: [
             "Brand: Ariston",
@@ -306,10 +306,10 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/cvOkqa5",
         images: [
-            "/assets/Picture9_rqsycd.png",
-            "/assets/Picture10_g5y1ql.png",
-            "/assets/Picture11_sgjfnz.png",
-            "/assets/Picture12_rbac1p.png"
+            "/assets/products/_shared/Picture9_rqsycd.png",
+            "/assets/products/_shared/Picture10_g5y1ql.png",
+            "/assets/products/_shared/Picture11_sgjfnz.png",
+            "/assets/products/_shared/Picture12_rbac1p.png"
         ],
         about: [
             "Water heater designed and manufactured to be installed in UK",
@@ -361,7 +361,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/5u51Md4",
         images: [
-            "/assets/Picture13_ypqso7.png"
+            "/assets/products/_shared/Picture13_ypqso7.png"
         ],
         about: [
             "Temperature Regulation",
@@ -411,7 +411,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/7k4kKWG",
         images: [
-            "/assets/Picture13_1_lqvp3z.png"
+            "/assets/products/_shared/Picture13_1_lqvp3z.png"
         ],
         about: [
             "Brand: Ariston",
@@ -458,7 +458,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/3ELJFl9",
         images: [
-            "/assets/Picture17_s6o61f.png"
+            "/assets/products/_shared/Picture17_s6o61f.png"
         ],
         about: [
             "Electric Water Heater"
@@ -507,7 +507,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "",
         images: [
-            "/assets/Picture18_f51ndh.png"
+            "/assets/products/_shared/Picture18_f51ndh.png"
         ],
         about: [
             "Item Category: Water Heater",
@@ -559,7 +559,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/6L6f1Rd",
         images: [
-            "/assets/Picture19_ngavto.png"
+            "/assets/products/_shared/Picture19_ngavto.png"
         ],
         about: [
             "Ariston Pro1 R is wall hung water heater",
@@ -610,8 +610,8 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/3VExoxZ",
         images: [
-            "/assets/Picture20_k90h0p.png",
-            "/assets/Picture21_ao2hkb.png"
+            "/assets/products/_shared/Picture20_k90h0p.png",
+            "/assets/products/_shared/Picture21_ao2hkb.png"
         ],
         about: [
             "Brand: Ariston",
@@ -659,7 +659,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/0s0ES2C",
         images: [
-            "/assets/Picture22_zucusk.png"
+            "/assets/products/_shared/Picture22_zucusk.png"
         ],
         about: [
             "Item Category: Water Heater",
@@ -706,7 +706,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/8r4soo4",
         images: [
-            "/assets/Picture23_rrsbnp.png"
+            "/assets/products/_shared/Picture23_rrsbnp.png"
         ],
         about: [
             "Sleek design",
@@ -747,7 +747,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/iyaN1Gt",
         images: [
-            "/assets/Picture24_hydq3s.png"
+            "/assets/products/_shared/Picture24_hydq3s.png"
         ],
         about: [
             "Brand: Ariston",
@@ -788,9 +788,9 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/jhUn2kI",
         images: [
-            "/assets/Picture25_f1z6wx.png",
-            "/assets/Picture26_w93jvw.png",
-            "/assets/Picture27_dovnvo.png"
+            "/assets/products/_shared/Picture25_f1z6wx.png",
+            "/assets/products/_shared/Picture26_w93jvw.png",
+            "/assets/products/_shared/Picture27_dovnvo.png"
         ],
         about: [
             "Brand: Ariston",
@@ -831,7 +831,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/a3oIFUS",
         images: [
-            "/assets/Picture28_isr1dl.png"
+            "/assets/products/_shared/Picture28_isr1dl.png"
         ],
         about: [
             "built-in safety device",
@@ -880,9 +880,9 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/7lQPVwq",
         images: [
-            "/assets/Picture29_c2oodl.png",
-            "/assets/Picture30_dlev69.png",
-            "/assets/Picture31_gud6yt.png"
+            "/assets/products/_shared/Picture29_c2oodl.png",
+            "/assets/products/_shared/Picture30_dlev69.png",
+            "/assets/products/_shared/Picture31_gud6yt.png"
         ],
         about: [
             "Brand: Ariston",
@@ -925,9 +925,9 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/9jDWAr9",
         images: [
-            "/assets/Picture32_tbjyed.png",
-            "/assets/Picture33_b5strp.png",
-            "/assets/Picture34_t7hdaq.png"
+            "/assets/products/_shared/Picture32_tbjyed.png",
+            "/assets/products/_shared/Picture33_b5strp.png",
+            "/assets/products/_shared/Picture34_t7hdaq.png"
         ],
         about: [
             "Brand: Ariston",
@@ -975,7 +975,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/6c34rEP",
         images: [
-            "/assets/Picture35_lhrhns.png"
+            "/assets/products/_shared/Picture35_lhrhns.png"
         ],
         about: [
             "Ariston Pro1 R is wall hung water heater",
@@ -1026,8 +1026,8 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/92ZJ098",
         images: [
-            "/assets/Picture36_p5idpd.png",
-            "/assets/Picture37_udsz3i.png"
+            "/assets/products/_shared/Picture36_p5idpd.png",
+            "/assets/products/_shared/Picture37_udsz3i.png"
         ],
         about: [
             "Brand: Ariston",
@@ -1075,7 +1075,7 @@ const aristonProducts = [
         brand: "ARISTON",
         amazonLink: "https://amzn.eu/d/f7K4hTm",
         images: [
-            "/assets/Picture38_qg02yu.png"
+            "/assets/products/_shared/Picture38_qg02yu.png"
         ],
         about: [
             "Item Category: Water Heater",
@@ -1125,7 +1125,7 @@ const craneProducts = [
         brand: "CRANE",
         amazonLink: "",
         images: [
-            "/assets/valve_converted_xgfz0v.png"
+            "/assets/shop/valve_converted_xgfz0v.png"
         ],
         about: [
             "Crane gate valves offer the ultimate in dependable service wherever minimum pressure drop is important",
@@ -1169,8 +1169,8 @@ const craneProducts = [
         brand: "CRANE",
         amazonLink: "https://www.amazon.ae/dp/B0D9B9YVVC",
         images: [
-            "/assets/51_6DNn2eWL._AC__hdgbpm.png",
-            "/assets/41BvgwWS1lL._AC_SL1500__fumnxd.png"
+            "/assets/products/_shared/51_6DNn2eWL._AC__hdgbpm.png",
+            "/assets/products/_shared/41BvgwWS1lL._AC_SL1500__fumnxd.png"
         ],
         about: [
             "Application: HVAC",
@@ -1211,8 +1211,8 @@ const craneProducts = [
         brand: "CRANE",
         amazonLink: "",
         images: [
-            "/assets/valve_image_1_unlxgk.png",
-            "/assets/valve_image_2_m2kupy.png"
+            "/assets/products/_shared/valve_image_1_unlxgk.png",
+            "/assets/products/_shared/valve_image_2_m2kupy.png"
         ],
         about: [
             "Crane gate valves offer the ultimate in dependable service wherever minimum pressure drop is important",
@@ -1262,7 +1262,7 @@ const craneProducts = [
         brand: "CRANE",
         amazonLink: "",
         images: [
-            "/assets/valve_final_xhdqa7.png"
+            "/assets/products/_shared/valve_final_xhdqa7.png"
         ],
         about: [
             "Crane gate valves offer the ultimate in dependable service wherever minimum pressure drop is important",
@@ -1295,10 +1295,10 @@ const craneProducts = [
         standardPrice: "220.90",
         brand: "CRANE",
         images: [
-            "/assets/Picture1_b8bwbg.png",
-            "/assets/Picture2_v8o8vd.png",
-            "/assets/Picture3_q2kecj.png",
-            "/assets/Picture4_e1cd1j.png"
+            "/assets/products/_shared/Picture1_b8bwbg.png",
+            "/assets/products/_shared/Picture2_v8o8vd.png",
+            "/assets/products/_shared/Picture3_q2kecj.png",
+            "/assets/products/_shared/Picture4_e1cd1j.png"
         ],
         about: [
             "These are Y-Pattern globe valves supplied with two pressure test points P84 to provide flow measurement, regulation and isolation",
@@ -1336,10 +1336,10 @@ const craneProducts = [
         standardPrice: "2,190.80",
         brand: "CRANE",
         images: [
-            "/assets/Picture1_da7q6l.png",
-            "/assets/Picture2_d05p1v.png",
-            "/assets/Picture3_fa3lpk.png",
-            "/assets/Picture4_c9azai.png"
+            "/assets/products/_shared/Picture1_da7q6l.png",
+            "/assets/products/_shared/Picture2_d05p1v.png",
+            "/assets/products/_shared/Picture3_fa3lpk.png",
+            "/assets/products/_shared/Picture4_c9azai.png"
         ],
         about: [
             "These are Y-Pattern globe valves supplied with two pressure test points P84 to provide flow measurement, regulation and isolation",
@@ -1376,7 +1376,7 @@ const craneProducts = [
         standardPrice: "30.30",
         brand: "CRANE",
         images: [
-            "/assets/Screenshot_2026-01-23_162658_oofjyl.png"
+            "/assets/products/_shared/Screenshot_2026-01-23_162658_oofjyl.png"
         ],
         about: [
             "A generous use of pipeline strainers will make a significant contribution to the reliability of a piping system and to optimise performance of the equipment - pumps, valves, flow measuring devices, traps etc",
@@ -1408,7 +1408,7 @@ const craneProducts = [
         standardPrice: "41.60",
         brand: "CRANE",
         images: [
-            "/assets/Screenshot_2026-01-23_162658_e1kfny.png"
+            "/assets/products/_shared/Screenshot_2026-01-23_162658_e1kfny.png"
         ],
         about: [
             "A generous use of pipeline strainers will make a significant contribution to the reliability of a piping system and to optimise performance of the equipment - pumps, valves, flow measuring devices, traps etc",
@@ -1440,7 +1440,7 @@ const craneProducts = [
         standardPrice: "63.90",
         brand: "CRANE",
         images: [
-            "/assets/Screenshot_2026-01-23_162658_sykxzs.png"
+            "/assets/products/_shared/Screenshot_2026-01-23_162658_sykxzs.png"
         ],
         about: [
             "A generous use of pipeline strainers will make a significant contribution to the reliability of a piping system and to optimise performance of the equipment - pumps, valves, flow measuring devices, traps etc",
@@ -1472,7 +1472,7 @@ const craneProducts = [
         standardPrice: "102.90",
         brand: "CRANE",
         images: [
-            "/assets/Screenshot_2026-01-23_162658_kgnzt8.png"
+            "/assets/products/_shared/Screenshot_2026-01-23_162658_kgnzt8.png"
         ],
         about: [
             "A generous use of pipeline strainers will make a significant contribution to the reliability of a piping system and to optimise performance of the equipment - pumps, valves, flow measuring devices, traps etc",
@@ -1504,7 +1504,7 @@ const craneProducts = [
         standardPrice: "145.00",
         brand: "CRANE",
         images: [
-            "/assets/Screenshot_2026-01-23_162658_sraqqv.png"
+            "/assets/products/_shared/Screenshot_2026-01-23_162658_sraqqv.png"
         ],
         about: [
             "A generous use of pipeline strainers will make a significant contribution to the reliability of a piping system and to optimise performance of the equipment - pumps, valves, flow measuring devices, traps etc",
@@ -1536,7 +1536,7 @@ const craneProducts = [
         standardPrice: "231.20",
         brand: "CRANE",
         images: [
-            "/assets/Screenshot_2026-01-23_162658_g47noe.png"
+            "/assets/products/_shared/Screenshot_2026-01-23_162658_g47noe.png"
         ],
         about: [
             "A generous use of pipeline strainers will make a significant contribution to the reliability of a piping system and to optimise performance of the equipment - pumps, valves, flow measuring devices, traps etc",
@@ -1568,7 +1568,7 @@ const craneProducts = [
         standardPrice: "220.90",
         brand: "CRANE",
         images: [
-            "/assets/Picture1_nqrpok.png"
+            "/assets/products/_shared/Picture1_nqrpok.png"
         ],
         about: [
             "Valves are suitable for use with flanges conforming to BS EN 1092-2 PN16",
@@ -1606,7 +1606,7 @@ const craneProducts = [
         standardPrice: "253.10",
         brand: "CRANE",
         images: [
-            "/assets/Picture1_dswqya.png"
+            "/assets/products/_shared/Picture1_dswqya.png"
         ],
         about: [
             "Valves are suitable for use with flanges conforming to BS EN 1092-2 PN16",
@@ -1644,7 +1644,7 @@ const craneProducts = [
         standardPrice: "424.10",
         brand: "CRANE",
         images: [
-            "/assets/Picture1_wkasqh.png"
+            "/assets/products/_shared/Picture1_wkasqh.png"
         ],
         about: [
             "Valves are suitable for use with flanges conforming to BS EN 1092-2 PN16",
@@ -1682,7 +1682,7 @@ const craneProducts = [
         standardPrice: "591.40",
         brand: "CRANE",
         images: [
-            "/assets/Picture1_micw9q.png"
+            "/assets/products/_shared/Picture1_micw9q.png"
         ],
         about: [
             "Valves are suitable for use with flanges conforming to BS EN 1092-2 PN16",
@@ -1720,7 +1720,7 @@ const craneProducts = [
         standardPrice: "813.40",
         brand: "CRANE",
         images: [
-            "/assets/Picture1_drjylw.png"
+            "/assets/products/_shared/Picture1_drjylw.png"
         ],
         about: [
             "Valves are suitable for use with flanges conforming to BS EN 1092-2 PN16",
@@ -1768,8 +1768,8 @@ const dewaltProducts = [
         brand: "DEWALT",
         amazonLink: "https://www.amazon.ae/dp/DEWD25133K",
         images: [
-            "/assets/61oaKFTEUJL._AC_SL1200__awsn9m.png",
-            "/assets/81D2e2wZkEL._AC_SL1500__pjnjwy.png"
+            "/assets/shop/61oaKFTEUJL._AC_SL1200__awsn9m.png",
+            "/assets/products/dewalt/81D2e2wZkEL._AC_SL1500__pjnjwy.png"
         ],
         about: [
             "3-in-1 Functionality: Rotary drilling, hammer drilling, and chiselling – all powered by an 800W motor",
@@ -1811,10 +1811,10 @@ const dewaltProducts = [
         brand: "DEWALT",
         amazonLink: "https://www.amazon.ae/dp/DCD796D2W",
         images: [
-            "/assets/61G0GECDsSL._AC_SL1200__btvkds.png",
-            "/assets/610VxMj66zL._AC_SL1200__sdko9g.png",
-            "/assets/518lx4XQYEL._AC_SL1200__b7r08x.png",
-            "/assets/518lx4XQYEL._AC_SL1200__b7r08x.png"
+            "/assets/products/_shared/61G0GECDsSL._AC_SL1200__btvkds.png",
+            "/assets/products/_shared/610VxMj66zL._AC_SL1200__sdko9g.png",
+            "/assets/products/_shared/518lx4XQYEL._AC_SL1200__b7r08x.png",
+            "/assets/products/_shared/518lx4XQYEL._AC_SL1200__b7r08x.png"
         ],
         about: [
             "Ultra-Compact & Lightweight Design: Designed for comfortable handling and extended use",
@@ -1854,8 +1854,8 @@ const dewaltProducts = [
         brand: "DEWALT",
         amazonLink: "https://www.amazon.ae/dp/DCD776S2-B5",
         images: [
-            "/assets/71RDkb-CH5L._AC_SL1500__xvaxxk.png",
-            "/assets/31TnOlSqP6L._AC__kkc4wf.png"
+            "/assets/products/_shared/71RDkb-CH5L._AC_SL1500__xvaxxk.png",
+            "/assets/products/_shared/31TnOlSqP6L._AC__kkc4wf.png"
         ],
         about: [
             "18V XR Li-Ion Compact Drill Driver with XR 1.3Ah battery technology",
@@ -1897,8 +1897,8 @@ const dewaltProducts = [
         brand: "DEWALT",
         amazonLink: "https://www.amazon.ae/dp/DCH133M1",
         images: [
-            "/assets/61_8ev0eJXL._AC_SL1000__vbdhct.png",
-            "/assets/51K_y2sMDqL._AC_SL1000__l2nxcm.png"
+            "/assets/products/spare-parts/61_8ev0eJXL._AC_SL1000__vbdhct.png",
+            "/assets/products/_shared/51K_y2sMDqL._AC_SL1000__l2nxcm.png"
         ],
         about: [
             "18V Brushless Motor for maximum efficiency and longer life",
@@ -1940,8 +1940,8 @@ const dewaltProducts = [
         brand: "DEWALT",
         amazonLink: "https://www.amazon.ae/dp/DWD024-B5",
         images: [
-            "/assets/71LZFrdaulS._AC_SL1500__u1fgvu.png",
-            "/assets/81N51tEPbUS._AC_SL1500__o7fuoh.png"
+            "/assets/products/_shared/71LZFrdaulS._AC_SL1500__u1fgvu.png",
+            "/assets/products/_shared/81N51tEPbUS._AC_SL1500__o7fuoh.png"
         ],
         about: [
             "Powerful 750W motor for consistent performance",
@@ -1983,10 +1983,10 @@ const dewaltProducts = [
         brand: "DEWALT",
         amazonLink: "https://www.amazon.ae/dp/DWE4010T-B5",
         images: [
-            "/assets/51IL4uVw7mL._AC_SL1500__avzejp.png",
-            "/assets/513i86x3PiL._AC_SL1392__-_Copy_-_Copy_vgqsxe.png",
-            "/assets/81S4BwmXETL._AC_SL1500__kt6joq.png",
-            "/assets/71GOOhcsiwL._AC_SL1500__ndojqo.png"
+            "/assets/products/_shared/51IL4uVw7mL._AC_SL1500__avzejp.png",
+            "/assets/products/_shared/513i86x3PiL._AC_SL1392__-_Copy_-_Copy_vgqsxe.png",
+            "/assets/products/_shared/81S4BwmXETL._AC_SL1500__kt6joq.png",
+            "/assets/products/_shared/71GOOhcsiwL._AC_SL1500__ndojqo.png"
         ],
         about: [
             "730W motor for reliable grinding performance",
@@ -2026,16 +2026,16 @@ const dewaltProducts = [
         brand: "DEWALT",
         amazonLink: "https://www.amazon.ae/dp/DWE4120-B5",
         images: [
-            "/assets/51K06n6XenL._AC_SL1275__vhxc2t.png",
-            "/assets/71-rIAZzXjL._AC_SL1500__jh7ftz.png",
-            "/assets/71a_CfU2PjS._AC_SL1500__movx2r.png",
-            "/assets/71c56bK0C3L._AC_SL1500__jottzl.png",
-            "/assets/81Cp6a2ODTL._AC_SL1500__agm3aq.png",
-            "/assets/81EWmO_bKMS._AC_SL1500__gbpnv4.png",
-            "/assets/81HpkIvQ0HS._AC_SL1500__ybjgty.png",
-            "/assets/91hA87_i2GL._AC_SL1500__zym3vs.png",
-            "/assets/91hSjxz3z4L._AC_SL1500__vmhmb0.png",
-            "/assets/91B7XzKKDoL._AC_SL1500__r9uxvo.png"
+            "/assets/products/_shared/51K06n6XenL._AC_SL1275__vhxc2t.png",
+            "/assets/products/_shared/71-rIAZzXjL._AC_SL1500__jh7ftz.png",
+            "/assets/products/_shared/71a_CfU2PjS._AC_SL1500__movx2r.png",
+            "/assets/products/_shared/71c56bK0C3L._AC_SL1500__jottzl.png",
+            "/assets/products/_shared/81Cp6a2ODTL._AC_SL1500__agm3aq.png",
+            "/assets/products/_shared/81EWmO_bKMS._AC_SL1500__gbpnv4.png",
+            "/assets/products/_shared/81HpkIvQ0HS._AC_SL1500__ybjgty.png",
+            "/assets/products/_shared/91hA87_i2GL._AC_SL1500__zym3vs.png",
+            "/assets/products/_shared/91hSjxz3z4L._AC_SL1500__vmhmb0.png",
+            "/assets/products/_shared/91B7XzKKDoL._AC_SL1500__r9uxvo.png"
         ],
         about: [
             "Powerful 900W motor delivers up to 12,000 RPM",
@@ -2077,11 +2077,11 @@ const dewaltProducts = [
         brand: "DEWALT",
         amazonLink: "https://www.amazon.ae/dp/DWE4212-B5",
         images: [
-            "/assets/81kifZlm9gL._AC_SL1500__aaorqk.png",
-            "/assets/81W6Exo4XOL._AC_SL1500__nbdppd.png",
-            "/assets/91EruL-9SPL._AC_SL1500__1_mi9o3s.png",
-            "/assets/91EruL-9SPL._AC_SL1500__ksqfhj.png",
-            "/assets/91JnX4MEffL._AC_SL1500__o6za3t.png"
+            "/assets/products/_shared/81kifZlm9gL._AC_SL1500__aaorqk.png",
+            "/assets/products/_shared/81W6Exo4XOL._AC_SL1500__nbdppd.png",
+            "/assets/products/_shared/91EruL-9SPL._AC_SL1500__1_mi9o3s.png",
+            "/assets/products/_shared/91EruL-9SPL._AC_SL1500__ksqfhj.png",
+            "/assets/products/_shared/91JnX4MEffL._AC_SL1500__o6za3t.png"
         ],
         about: [
             "Non-locking paddle switch for enhanced safety",
@@ -2124,7 +2124,7 @@ const franklinMotors = [
         brand: "FRANKLIN",
         amazonLink: "",
         images: [
-            "/assets/Picture1_uvoma3.png"
+            "/assets/shop/Picture1_uvoma3.png"
         ],
         about: [
             "Hermetically sealed stator with anti-track, self-healing stator resin prevents motor burn out",
@@ -2172,12 +2172,12 @@ const globalWaterProducts = [
         newAmazonSellingPrice: "1407.21",
         brand: "GLOBAL WATER SOLUTIONS",
         images: [
-            "/assets/Picture1_yiezev.png",
-            "/assets/Picture2_md01xh.png",
-            "/assets/Picture3_idjiba.png",
-            "/assets/Picture6_fbmjuk.png",
-            "/assets/Picture4_twgq7t.png",
-            "/assets/Picture5_mxc3vz.png"
+            "/assets/shop/Picture1_yiezev.png",
+            "/assets/products/_shared/Picture2_md01xh.png",
+            "/assets/products/_shared/Picture3_idjiba.png",
+            "/assets/products/_shared/Picture6_fbmjuk.png",
+            "/assets/products/_shared/Picture4_twgq7t.png",
+            "/assets/products/_shared/Picture5_mxc3vz.png"
         ],
         about: ["Reverse Osmosis purification method", "Under sink installation", "75GPD capacity with 5 stages", "2.2 gallon tank included", "With PRV & Pump", "Made in Turkey"],
         description: "GWS Aqua wave Premium 75gpd 5 stage Under the Sink RO system for Domestic Use. 1 year warranty from the date of Invoice against Manufacturing Defect.",
@@ -2198,9 +2198,9 @@ const globalWaterProducts = [
         newAmazonSellingPrice: "886.725",
         brand: "GLOBAL WATER SOLUTIONS",
         images: [
-            "/assets/Picture1_j3lbbm.png",
-            "/assets/Picture2_tgf80g.png",
-            "/assets/Picture3_cvdhqt.png"
+            "/assets/products/_shared/Picture1_j3lbbm.png",
+            "/assets/products/_shared/Picture2_tgf80g.png",
+            "/assets/products/_shared/Picture3_cvdhqt.png"
         ],
         about: ["60 Liter capacity", "Pressure vessel for water systems", "3 years warranty against Manufacturing Defect", "Made in USA"],
         description: "GWS Pressure Vessel Vertical Floor Standing type with Stand. GWS Challenger Series 60 Litres Pressure Steel Tank, 10 Bar, With round base.",
@@ -2221,8 +2221,8 @@ const globalWaterProducts = [
         newAmazonSellingPrice: "982.275",
         brand: "GLOBAL WATER SOLUTIONS",
         images: [
-            "/assets/Picture1_ekgoon.png",
-            "/assets/Picture2_d2rxzg.png"
+            "/assets/products/_shared/Picture1_ekgoon.png",
+            "/assets/products/_shared/Picture2_d2rxzg.png"
         ],
         about: ["Anti scaling system for domestic use", "20\" Jumbo housing kit", "BSP version"],
         description: "GWS Anti scaling System for Domestic Use 20\" JUMBO ONESTOP PLUS HOUSING KIT (BSP VERSION).",
@@ -2242,9 +2242,9 @@ const globalWaterProducts = [
         newAmazonSellingPrice: "200",
         brand: "GLOBAL WATER SOLUTIONS",
         images: [
-            "/assets/Picture1_ks7tfa.png",
-            "/assets/Picture2_jxct3y.png",
-            "/assets/Picture3_h1aivs.png"
+            "/assets/products/_shared/Picture1_ks7tfa.png",
+            "/assets/products/_shared/Picture2_jxct3y.png",
+            "/assets/products/_shared/Picture3_h1aivs.png"
         ],
         about: ["24 Liter capacity", "Max Pressure: 10 Bar", "Test Pressure: 14.3 Bar", "Standard Recharge: 2 Bar", "Corrosion-resistant design", "Reduces pump cycling and prolongs pump life"],
         description: "Oracz (Global Water Solutions) 24 Liter Water Pressure Tank. Built with premium-grade steel for domestic, commercial, and light industrial applications.",
@@ -2264,9 +2264,9 @@ const globalWaterProducts = [
         newAmazonSellingPrice: "700",
         brand: "GLOBAL WATER SOLUTIONS",
         images: [
-            "/assets/Picture1_g9nkde.png",
-            "/assets/Picture2_gen8em.png",
-            "/assets/Picture3_lck4ot.png"
+            "/assets/products/_shared/Picture1_g9nkde.png",
+            "/assets/products/_shared/Picture2_gen8em.png",
+            "/assets/products/_shared/Picture3_lck4ot.png"
         ],
         about: ["Ideal for booster systems, thermal expansion, irrigation systems, and hydraulic hammer arresting", "Virgin polypropylene liner with FDA approved high grade butyl diaphragm", "Patented stainless steel water connection", "UV and salt spray protection coating"],
         description: "Global Water Solution Pressure Wave tanks represent the best value and are the best quality pressure vessels available. 1 year warranty.",
@@ -2285,8 +2285,8 @@ const globalWaterProducts = [
         newAmazonSellingPrice: "800",
         brand: "GLOBAL WATER SOLUTIONS",
         images: [
-            "/assets/Picture1_p9b6ws.png",
-            "/assets/Picture2_ij7pyv.png"
+            "/assets/products/_shared/Picture1_p9b6ws.png",
+            "/assets/products/_shared/Picture2_ij7pyv.png"
         ],
         about: ["Virgin polypropylene liner and high-grade butyl diaphragm", "Patented stainless-steel water connection with dual water/air seal", "Ideal for booster systems and thermal expansion", "3 years warranty against Manufacturing Defect", "Made in USA"],
         description: "The Pressure Wave 100-liter vertical pressure tank is built for durability and reliability in demanding pressure applications. Robust carbon steel shell with dual-layer polyurethane paint for excellent corrosion resistance.",
@@ -2306,7 +2306,7 @@ const grundfosProducts = [
         weight: "1.65 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_eivc8u.png"
+            "/assets/shop/Picture1_eivc8u.png"
         ],
         about: ["Automatic start/stop control", "Dry running protection", "1.5 bar start cut-in pressure", "Automatic restart"],
         description: "Grundfos PM START pressure manager designed for automatic start/stop control of water supply pumps with dry-running protection.",
@@ -2324,8 +2324,8 @@ const grundfosProducts = [
         weight: "17.4 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_j4ks9d.png",
-            "/assets/Picture2_ffvdsd.png"
+            "/assets/products/_shared/Picture1_j4ks9d.png",
+            "/assets/products/_shared/Picture2_ffvdsd.png"
         ],
         about: ["Installation services available", "Self-priming design", "Dry run protection", "Compact design"],
         description: "Multipurpose pump for optimal water pressure. Applications: Private homes/villas, Gardens, Schools, Hotels, Small office buildings.",
@@ -2343,7 +2343,7 @@ const grundfosProducts = [
         weight: "16.1 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_rmyum5.png"
+            "/assets/products/_shared/Picture1_rmyum5.png"
         ],
         about: ["Installation services available", "Self-priming design", "Compact design"],
         description: "Multipurpose pump ensuring optimal water pressure for homes, gardens, schools, hotels, small office buildings.",
@@ -2361,8 +2361,8 @@ const grundfosProducts = [
         weight: "14.4 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_bdi5wl.png",
-            "/assets/Picture2_nzxzqs.png"
+            "/assets/products/_shared/Picture1_bdi5wl.png",
+            "/assets/products/_shared/Picture2_nzxzqs.png"
         ],
         about: ["Friendly user control panel", "One year warranty", "Self priming design"],
         description: "Multipurpose pump for optimal water pressure in residential and commercial applications.",
@@ -2380,11 +2380,11 @@ const grundfosProducts = [
         weight: "12 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_fst0pr.png",
-            "/assets/Picture2_aiuiii.png",
-            "/assets/Picture3_lrn2cj.png",
-            "/assets/Picture4_va3xpf.png",
-            "/assets/Picture5_phaepy.png"
+            "/assets/products/_shared/Picture1_fst0pr.png",
+            "/assets/products/_shared/Picture2_aiuiii.png",
+            "/assets/products/_shared/Picture3_lrn2cj.png",
+            "/assets/products/_shared/Picture4_va3xpf.png",
+            "/assets/products/_shared/Picture5_phaepy.png"
         ],
         about: ["Intelligent pump control", "Low noise operation (47 dba)", "Up to 80% energy savings", "Suitable for villas with 3 floors and 8 taps"],
         description: "Smart water pump with intelligent boosting system. Perfect water pressure with automatic adjustment.",
@@ -2402,8 +2402,8 @@ const grundfosProducts = [
         weight: "17.4 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_qnr0yw.png",
-            "/assets/Picture2_u3rgxs.png"
+            "/assets/products/_shared/Picture1_qnr0yw.png",
+            "/assets/products/_shared/Picture2_u3rgxs.png"
         ],
         about: ["Installation services available", "Self-priming design", "Dry run protection"],
         description: "Multipurpose pump for optimal water pressure. Applications: Private homes, gardens, schools, hotels.",
@@ -2421,9 +2421,9 @@ const grundfosProducts = [
         weight: "16.1 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_kuh0ph.png",
-            "/assets/Picture2_onboqz.png",
-            "/assets/Picture3_wnkmuu.png"
+            "/assets/products/_shared/Picture1_kuh0ph.png",
+            "/assets/products/_shared/Picture2_onboqz.png",
+            "/assets/products/_shared/Picture3_wnkmuu.png"
         ],
         about: ["Installation services available", "Self-priming design", "Compact design"],
         description: "Multipurpose pump ensuring optimal water pressure for residential and commercial applications.",
@@ -2441,9 +2441,9 @@ const grundfosProducts = [
         weight: "14.4 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_b8irxb.png",
-            "/assets/Picture2_dkhcij.png",
-            "/assets/Picture3_i0pv8j.png"
+            "/assets/products/_shared/Picture1_b8irxb.png",
+            "/assets/products/_shared/Picture2_dkhcij.png",
+            "/assets/products/_shared/Picture3_i0pv8j.png"
         ],
         about: ["Installation services available", "Self-priming design", "Dry run protection"],
         description: "Multipurpose pump for optimal water pressure in private homes, gardens, schools, hotels.",
@@ -2461,10 +2461,10 @@ const grundfosProducts = [
         weight: "11.8 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_pzyvtj.png",
-            "/assets/Picture2_bn11iz.png",
-            "/assets/Picture3_b8akjm.png",
-            "/assets/Picture4_hwpnvl.png"
+            "/assets/products/_shared/Picture1_pzyvtj.png",
+            "/assets/products/_shared/Picture2_bn11iz.png",
+            "/assets/products/_shared/Picture3_b8akjm.png",
+            "/assets/products/_shared/Picture4_hwpnvl.png"
         ],
         about: ["Intelligent pump control", "Low noise (47 dba)", "Up to 80% energy savings", "Pumps from 8m depth"],
         description: "Smart water pump perfect for villas with up to 3 floors and 8 taps with intelligent boosting.",
@@ -2482,7 +2482,7 @@ const grundfosProducts = [
         weight: "2.7 kg",
         brand: "GRUNDFOS",
         images: [
-            "/assets/Picture1_mjidnc.png"
+            "/assets/products/_shared/Picture1_mjidnc.png"
         ],
         about: ["EC permanent magnet motor", "Suitable for solar systems", "PWM signal control", "4 constant speeds", "Maintenance-free"],
         description: "High-efficiency circulation pump for solar systems with variable or constant flow rate. Energy efficiency index ≤ 0.20.",

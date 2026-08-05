@@ -16,12 +16,12 @@ function CustomerSupportOverviewPage() {
           "At MAHY Khoory Group, delivering reliable support and maintaining strong customer relationships is a core priority across all our sectors."
         }
         image={
-          "/assets/support-contact-us-customer-hotline-business-technology-service-concept.jpg_jtvugs.jpg"
+          "/assets/support/support-contact-us-customer-hotline-business-technology-service-concept.jpg_jtvugs.jpg"
         }
       />
 
       <SolarPanelImageGrid
-        image="/assets/laptop-meeting-business-people-with-cooperation-group-project-proposal-sharing-ideas-office-corporate-employees-computer-brainstorming-feedback-report-online-marketing_zsldhp.jpg"
+        image="/assets/support/laptop-meeting-business-people-with-cooperation-group-project-proposal-sharing-ideas-office-corporate-employees-computer-brainstorming-feedback-report-online-marketing_zsldhp.jpg"
         text="We make it simple for you to connect with us and get the support you need without delays or unnecessary complications. Whether you have a question, require technical assistance, or need service support, our team is always ready to respond promptly and professionally."
         items={[
           {

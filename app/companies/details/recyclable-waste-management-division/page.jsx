@@ -19,14 +19,14 @@ function RecyclableWasteManagementDivision() {
       title: "Waste Paper and Cardboard Collection",
       text: "Scheduled collection of commercial, industrial, and institutional paper waste using roll-off containers, compactors, and pickup vehicles.",
       image:
-        "/assets/Waste_Paper_and_Cartboard_collection_y4aqvf.jpg",
+        "/assets/companies/details/recyclable-waste-management-division/Waste_Paper_and_Cartboard_collection_y4aqvf.jpg",
         objectFit: "cover",
     },
     {
       title: "Multi-Recyclables Management",
       text: "Collection and segregation of additional recyclable materials such as plastics, metals, and beverage cans.",
       image:
-        "/assets/Multi_recylable_Mangement-2_fkt6uo.jpg",
+        "/assets/companies/details/recyclable-waste-management-division/Multi_recylable_Mangement-2_fkt6uo.jpg",
         objectFit: "cover",
     },
 
@@ -34,14 +34,14 @@ function RecyclableWasteManagementDivision() {
       title: "On-Site Recycling Solutions",
       text: "Provision of balers, bins, dumpsters, and staff training to enable effective source segregation at client locations.",
       image:
-        "/assets/On_Site_Recycling_Solution_owmis2.jpg",
+        "/assets/companies/details/recyclable-waste-management-division/On_Site_Recycling_Solution_owmis2.jpg",
         objectFit: "cover",
     },
     {
       title: "Closed-Loop Recycling Support",
       text: "Direct coordination with the Group’s paper mills to ensure recovered materials are efficiently reintegrated into production.",
       image:
-        "/assets/Closed_loop_recycling_support_hs0ynv.jpg",
+        "/assets/companies/details/recyclable-waste-management-division/Closed_loop_recycling_support_hs0ynv.jpg",
         objectFit: "contain",
     },
   ];
@@ -127,7 +127,7 @@ function RecyclableWasteManagementDivision() {
     <main>
       <CompanyOverview
         video={
-          "/assets/RWMD_lrlpyc.mp4"
+          "/assets/companies/details/recyclable-waste-management-division/RWMD_lrlpyc.mp4"
         }
         heading="Recyclable Waste Management Division"
         texts={[
@@ -144,7 +144,7 @@ The division is dedicated to maximizing landfill diversion, improving recycling 
 Through modern equipment, optimized logistics, digital monitoring, and customer‑focused recycling programs, RWMD strives to enhance operational efficiency, reduce environmental impact, and support national sustainability objectives while maintaining the highest standards of safety, compliance, and service excellence."
         showButton={false}
         invert={false}
-        image="/assets/Mission-2_uxdx8g.jpg"
+        image="/assets/companies/details/recyclable-waste-management-division/Mission-2_uxdx8g.jpg"
         imageAlt="Our Mission"
       />
       <WhoWeAre
@@ -155,7 +155,7 @@ The division aims to set new benchmarks in recycling efficiency, digital transfo
 RWMD aspires to shape a future where waste is viewed as a valuable resource, enabling a fully circular manufacturing ecosystem that supports national sustainability goals and reinforces the Group’s leadership in responsible, future‑ready recycling solutions."
         showButton={false}
         invert={true}
-        image="/assets/Vision_kd0x6t.jpg"
+        image="/assets/companies/details/recyclable-waste-management-division/Vision_kd0x6t.jpg"
         imageAlt="Our Vision"
       />
       <KitchenMenu
@@ -168,13 +168,13 @@ RWMD aspires to shape a future where waste is viewed as a valuable resource, ena
         heading="Recyclable Waste Management Division"
         subHeading="Recycling Infrastructure & Circular Economy Solutions"
         tag="[ RECYCLING DIVISION ]"
-        backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
+        backgroundImage="/assets/shared/skyscrapers-tokyo.jpg_e2niyf.jpg"
       />
       <FeaturesEngineeringSection
         heading="RWMD Overview"
         items={overview}
         textPosition="right"
-        image="/assets/RWMD_-_Base_image_pwl9eh.png"
+        image="/assets/companies/details/recyclable-waste-management-division/RWMD_-_Base_image_pwl9eh.png"
       />
     </main>
   );

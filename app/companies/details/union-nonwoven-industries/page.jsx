@@ -14,15 +14,15 @@ function UnionNonWovenIndustriesPage() {
     const services = [
         {
             text: "Composite and laminated nonwoven sheets",
-            image: "/assets/composite_fabrics_d6kyeb.jpg",
+            image: "/assets/companies/details/union-nonwoven-industries/composite_fabrics_d6kyeb.jpg",
         },
         {
             text: "Spunbond and meltblown nonwoven fabrics",
-            image: "/assets/spunbond_and-2_zjzau4.jpg",
+            image: "/assets/companies/details/union-nonwoven-industries/spunbond_and-2_zjzau4.jpg",
         },
         {
             text: "Geotextile felts and industrial textile layers",
-            image: "/assets/geotextile-roll-construction-site_rtobee.jpg",
+            image: "/assets/companies/details/union-nonwoven-industries/geotextile-roll-construction-site_rtobee.jpg",
         }
     ];
     const adpmCardsData = [
@@ -62,8 +62,8 @@ function UnionNonWovenIndustriesPage() {
     return (
         <main className="pb-12">
             <CompanyOverview
-            video={"/assets/Video_Project_19_bxkpbt.mp4"}
-                // image="/assets/office_jaeuiz.webp"
+            video={"/assets/companies/details/union-nonwoven-industries/Video_Project_19_bxkpbt.mp4"}
+                // image="/assets/shared/office_jaeuiz.webp"
                 heading="Union Nonwoven Industries"
                 texts={[
                     "Union Nonwoven Industries is a MAHY Khoory Group–affiliated manufacturer specializing in advanced nonwoven textile solutions for industrial, healthcare, hygiene, filtration, and construction applications. Building on the Group’s long-standing expertise in recycling and industrial manufacturing, Union Nonwoven produces high-performance polypropylene and polyester nonwoven fabrics engineered to meet demanding functional and regulatory requirements.",
@@ -82,12 +82,12 @@ function UnionNonWovenIndustriesPage() {
                 text={"Union Nonwoven serves regional and international markets across the GCC and wider MENA region. Its customer base includes:"}
                 endText={"The company also supports landscaping and civil-engineering projects through geotextile solutions used in erosion control, soil stabilization, and drainage systems. Clients range from government and public-sector entities to private industrial and commercial organizations seeking locally manufactured, high-quality technical textiles."}
                 tag="[ NONWOVEN INDUSTRIES ]"
-                backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
+                backgroundImage="/assets/shared/skyscrapers-tokyo.jpg_e2niyf.jpg"
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+                image="/assets/shared/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
             />
         </main>
     )

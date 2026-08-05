@@ -15,37 +15,37 @@ function SewagePumpsPage() {
     {
       title: "Advanced Non-Clog Hydraulics",
       text: "quipped with vortex, semi-open channel, or closed channel impellers, providing exceptional solids-handling capability while minimizing clogging and blockage.",
-      image: "/assets/sewage-water-pumps1.png_jxevnp.jpg",
+      image: "/assets/products/sewage-wastewater-pumps/sewage-water-pumps1.png_jxevnp.jpg",
     },
     {
       title: "Solids-Handling Capacity",
       text: "Capable of handling large solid particles, fibrous waste, and sludge—ensuring smooth operation in sewage networks and wastewater plants.",
-      image: "/assets/sewage-water-pumps2.png.jpg_sdwjwk.png",
+      image: "/assets/products/sewage-wastewater-pumps/sewage-water-pumps2.png.jpg_sdwjwk.png",
     },
     {
       title: "Cutter & Grinder Options",
       text: "Select models include integrated cutter or grinder mechanisms, ideal for applications involving sanitary products, wipes, plastics, and fibrous materials.",
-      image: "/assets/sewage-water-pumps3.png.jpg_hzqjlj.png",
+      image: "/assets/products/sewage-wastewater-pumps/sewage-water-pumps3.png.jpg_hzqjlj.png",
     },
     {
       title: "Heavy-Duty Cast Iron Construction",
       text: "Pump body, motor housing, and critical components built with corrosion-resistant cast iron for enhanced durability and long operating life.",
-      image: "/assets/sewage-water-pumps4_ku2vqq.png",
+      image: "/assets/products/sewage-wastewater-pumps/sewage-water-pumps4_ku2vqq.png",
     },
     {
       title: "Auto-Coupling System Compatibility",
       text: "Available with guide rails and auto-coupling bases, allowing quick installation and easy removal for maintenance without entering the wet well.",
-      image: "/assets/sewage-water-pumps5_z1lkaf.png",
+      image: "/assets/products/sewage-wastewater-pumps/sewage-water-pumps5_z1lkaf.png",
     },
     {
       title: "Reliable Motor Protection",
       text: "Includes thermal overload protection, oil-chamber sealing, double mechanical seals, moisture sensors (optional), and high-grade bearings for extended life.",
-      image: "/assets/sewage-water-pumps6.png_dcedw0.jpg",
+      image: "/assets/products/sewage-wastewater-pumps/sewage-water-pumps6.png_dcedw0.jpg",
     },
     {
       title: "Wide Duty Range",
       text: "Offered in various capacities—from small commercial sump pumps to large municipal sewage transfer units.",
-      image: "/assets/sewage-water-pumps7_iljkxj.png",
+      image: "/assets/products/sewage-wastewater-pumps/sewage-water-pumps7_iljkxj.png",
     },
   ];
   const applications = [
@@ -83,14 +83,14 @@ function SewagePumpsPage() {
         // description={
         //   "Reliable pumping system services delivering optimal performance and long-term efficiency. From installation to maintenance, we ensure smooth and uninterrupted operations."
         // }
-        image="/assets/sewage-water-pumps_puwwwp.png"
+        image="/assets/products/sewage-wastewater-pumps/sewage-water-pumps_puwwwp.png"
       />
       <KitchenMenu
         heading="Product-Oriented Key Features"
         text="Sewage and wastewater pumps are engineered for the demanding task of transporting solids-laden liquids, sludge, and raw sewage in municipal, industrial, and commercial environments. Designed for heavy-duty, continuous operation, these pumps feature robust construction, advanced impeller technology, and reliable motor protection systems—ensuring long-term performance even under harsh conditions. They are suitable for both dry and wet pit installations and support fully automatic operation through compatible control systems."
         items={features}
       />
-      <KitchenItems image="/assets/sewage-water-pumps8_ipfngh.png" title="Applications" items={applications} />
+      <KitchenItems image="/assets/products/sewage-wastewater-pumps/sewage-water-pumps8_ipfngh.png" title="Applications" items={applications} />
     </main>
   );
 }

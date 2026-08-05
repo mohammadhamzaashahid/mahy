@@ -16,27 +16,27 @@ function PureEnergyConstructionPage() {
     const features = [
         {
             text: "Feasibility studies and site assessments",
-            image: "/assets/Feasibility_Study_jyrbyq.png",
+            image: "/assets/companies/details/pure-energy-construction/Feasibility_Study_jyrbyq.png",
         },
         {
             text: "System design and detailed engineering",
-            image: "/assets/System_Design-2-2-2-2_kcu7ag.png",
+            image: "/assets/companies/details/pure-energy-construction/System_Design-2-2-2-2_kcu7ag.png",
         },
         {
             text: "Procurement of solar modules, inverters, batteries, and balance-of-system components are systems with energy storage",
-            image: "/assets/Procurement_of_Solar_lzk7k3.jpg",
+            image: "/assets/companies/details/pure-energy-construction/Procurement_of_Solar_lzk7k3.jpg",
         },
         {
             text: "Operations and maintenance (O&M) services",
-            image: "/assets/Operation_and_Maintainance_domjru.jpg",
+            image: "/assets/companies/details/pure-energy-construction/Operation_and_Maintainance_domjru.jpg",
         },
         {
             text: "EV charging infrastructure design, supply, and installation",
-            image: "/assets/EV_charging_txkwm2.jpg",
+            image: "/assets/companies/details/pure-energy-construction/EV_charging_txkwm2.jpg",
         },
         // {
         //     text: "This turnkey approach enables clients to adopt renewable energy solutions with minimal complexity while ensuring regulatory compliance, optimized system performance and long-term operational reliability.",
-        //     image: "/assets/Testlinear_ikbc7c.png",
+        //     image: "/assets/shared/Testlinear_ikbc7c.png",
         // }
     ];
     const overview = [
@@ -83,8 +83,8 @@ function PureEnergyConstructionPage() {
     return (
         <main>
             <CompanyOverview
-            video={"/assets/Video_Project_16_-_pure_koqyzk.mp4"}
-                // image="/assets/office_jaeuiz.webp"
+            video={"/assets/companies/details/pure-energy-construction/Video_Project_16_-_pure_koqyzk.mp4"}
+                // image="/assets/shared/office_jaeuiz.webp"
                 heading="Pure Energy Construction LLC"
                 texts={[
                     "Pure Energy Construction LLC is the renewable energy engineering, procurement, and construction (EPC) arm of the MAHY Khoory Group, established in 2017 to support the UAE’s transition toward clean, reliable, and sustainable energy solutions.",
@@ -100,7 +100,7 @@ function PureEnergyConstructionPage() {
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="/assets/sustainable-energy-breathtaking-sunset-landscape-dotted-with-solar-panels-wind-turbines-symbolizing-clean-energy-environmental-responsibility_p7sclx.jpg"
+                image="/assets/companies/details/pure-energy-construction/sustainable-energy-breathtaking-sunset-landscape-dotted-with-solar-panels-wind-turbines-symbolizing-clean-energy-environmental-responsibility_p7sclx.jpg"
             />
         </main>
     )

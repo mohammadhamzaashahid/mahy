@@ -49,11 +49,11 @@ function AlDhafraWasteCollectionPage() {
   const features = [
     {
       text: "Al Dhafra Waste Collection was established to replicate and extend the Group’s successful recycling model implemented in Dubai. The company was formed to serve Abu Dhabi’s growing demand for organized, large-scale recyclable waste collection while strengthening local supply chains for recycled paper manufacturing.",
-      image: "/assets/01_izgytr.png",
+      image: "/assets/companies/details/al-dhafra-waste-collection/01_izgytr.png",
     },
     {
       text: "By working closely with Al Dhafra Paper Manufacturing and Union Paper Mills, the company helps close the material loop locally, reducing reliance on long-distance transport and ensuring a stable flow of recovered raw materials into the Group’s recycling operations.",
-      image: "/assets/02_gxquft.png",
+      image: "/assets/companies/details/al-dhafra-waste-collection/02_gxquft.png",
     }
   ];
 
@@ -84,9 +84,9 @@ function AlDhafraWasteCollectionPage() {
     <main>
       <CompanyOverview
         video={
-          "/assets/0205-waste_wiqnq1.mp4"
+          "/assets/companies/details/al-dhafra-waste-collection/0205-waste_wiqnq1.mp4"
         }
-        // image="/assets/office_jaeuiz.webp"
+        // image="/assets/shared/office_jaeuiz.webp"
         heading="Al Dhafra Waste Collection LLC"
         texts={[
           "Al Dhafra Waste Collection LLC is the MAHY Khoory Group’s dedicated waste collection and recycling services company operating in the Emirate of Abu Dhabi. Established as part of the Group’s strategic expansion into Abu Dhabi’s environmental services sector, the company plays a critical role in supplying recyclable materials to the Group’s containerboard manufacturing operations.",
@@ -99,7 +99,7 @@ function AlDhafraWasteCollectionPage() {
         text="Al Dhafra Waste Collection LLC is dedicated to providing efficient, reliable, and environmentally responsible waste collection and recycling services across Abu Dhabi. The company’s mission is to ensure that recyclable materials are systematically recovered, processed, and reintegrated into productive use—supporting the MAHY Khoory Group’s broader sustainability vision and commitment to circular manufacturing. Through operational excellence, regulatory compliance, and continuous innovation, Al Dhafra Waste Collection strives to minimize landfill dependency and promote resource conservation across the emirate."
         showButton={false}
         invert={false}
-        image="/assets/commitment-to-growth_qhzgjt.jpg"
+        image="/assets/shared/commitment-to-growth_qhzgjt.jpg"
         imageAlt="Our Mission"
         gap={true}
       />
@@ -107,7 +107,7 @@ function AlDhafraWasteCollectionPage() {
         topHeading=""
         heading="Our Vision"
         text="To be Abu Dhabi’s leading provider of sustainable waste collection and recycling solutions, recognized for its contribution to national waste reduction goals and the advancement of a circular economy. Al Dhafra Waste Collection envisions a future where every recyclable material is efficiently recovered and reused, enabling cleaner cities, reduced carbon emissions, and a fully integrated recycling ecosystem that supports the UAE’s long-term environmental objectives."
-        image="/assets/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+        image="/assets/shared/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
         imageAlt="Our Vision"
         showButton={false}
         invert={true}
@@ -121,17 +121,17 @@ function AlDhafraWasteCollectionPage() {
         heading="Services and Capabilities"
         tag="[ WASTE COLLECTION ]"
         text={"Al Dhafra Waste Collection provides a range of recyclable waste management services, including:"}
-        backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
+        backgroundImage="/assets/shared/skyscrapers-tokyo.jpg_e2niyf.jpg"
       />
       <FeaturesEngineeringSection
         heading="Al Dhafra Waste Collection LLC Overview"
         items={overview}
         textPosition="left"
-        image="/assets/IMG_izk6sc.png"
+        image="/assets/companies/details/al-dhafra-waste-collection/IMG_izk6sc.png"
       />
       <CompanyTextOnBackground
         heading="Environmental Impact and Sustainability Contribution"
-        image="/assets/commitment-to-growth_qhzgjt.jpg"
+        image="/assets/shared/commitment-to-growth_qhzgjt.jpg"
         align="left"
         text="Environmental responsibility is central to Al Dhafra Waste Collection’s purpose. By diverting recyclable materials from landfill and channeling them into productive use, the company contributes to significant reductions in landfill volumes, energy consumption, and carbon emissions."
         endText={
@@ -143,14 +143,14 @@ function AlDhafraWasteCollectionPage() {
         topHeading=""
         heading="Infrastructure and Fleet"
         text="The company operates a modern fleet of compactor trucks, flatbed vehicles, and baling trailers, supported by standardized recycling containers deployed across Abu Dhabi. Mobile balers and container exchange systems are used to service high-volume clients efficiently."
-        image="/assets/infrasturcture_and_fleet_uy9pan.jpg"
+        image="/assets/companies/details/al-dhafra-waste-collection/infrasturcture_and_fleet_uy9pan.jpg"
         imageAlt="Infrastructure and Fleet"
         showButton={false}
         invert={true}
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
-          image={"/assets/Innovation_and_continuous_improvement_drrkrv.jpg"}
+          image={"/assets/companies/details/al-dhafra-waste-collection/Innovation_and_continuous_improvement_drrkrv.jpg"}
           title={"Innovation and Continuous Improvement"}
           texts={[
             "Al Dhafra Waste Collection continuously enhances operational efficiency through route-planning and logistics optimization software, reducing fuel consumption and emissions. The company has also introduced customer feedback and service monitoring tools to improve responsiveness and service quality.",

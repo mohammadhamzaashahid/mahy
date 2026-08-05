@@ -20,22 +20,22 @@ function CleanEarthLLCPage() {
     {
       title: "Reusable Industrial Oil Collection",
       text: "Safe collection and recovery of used lubricants and industrial oils for re-refining or approved recycling processes.",
-      image: "/assets/Reusabel_Industrial_Oil-2_yhb062.png",
+      image: "/assets/companies/details/clean-earth-llc/Reusabel_Industrial_Oil-2_yhb062.png",
     },
     {
       title: "Used Cooking Oil Collection",
       text: "Scheduled pickup services for hotels, restaurants, catering facilities, and commercial kitchens, ensuring responsible handling and recycling of cooking oils.",
-      image: "/assets/reusabale_cooking_oil_wqa5aw.jpg",
+      image: "/assets/companies/details/clean-earth-llc/reusabale_cooking_oil_wqa5aw.jpg",
     },
     {
       title: "Metal and Iron Scrap Recovery",
       text: "Collection, segregation, and supply of ferrous and non-ferrous metal scrap to authorized recycling markets.",
-      image: "/assets/metal_and_iron_scrap_wsps3j.jpg",
+      image: "/assets/companies/details/clean-earth-llc/metal_and_iron_scrap_wsps3j.jpg",
     },
     {
       title: "Glass Scrap Collection",
       text: "Handling and transportation of broken and reusable glass for processing into recycled cullet and new glass products.",
-      image: "/assets/Glass_collection_yyrru9.jpg",
+      image: "/assets/companies/details/clean-earth-llc/Glass_collection_yyrru9.jpg",
     }
   ];
   const cards = [
@@ -99,8 +99,8 @@ function CleanEarthLLCPage() {
   return (
     <main>
       <CompanyOverview
-      video={"/assets/Clean_Earth_yf3e44.mov"}
-        // image="/assets/office_jaeuiz.webp"
+      video={"/assets/companies/details/clean-earth-llc/Clean_Earth_yf3e44.mov"}
+        // image="/assets/shared/office_jaeuiz.webp"
         heading="Clean Earth LLC"
         texts={[
           "Clean Earth LLC is a Dubai-based environmental services and recycling company providing professional collection, recovery, and recycling solutions for industrial and commercial waste streams. The company operates with a strong focus on sustainability, environmental responsibility, and regulatory compliance, supporting Dubai’s long-term environmental and circular economy objectives.",
@@ -113,7 +113,7 @@ function CleanEarthLLCPage() {
         text="Clean Earth LLC is committed to delivering reliable, compliant, and environmentally responsible waste collection and recycling services that help businesses reduce their environmental footprint and meet regulatory standards. The company’s mission is to recover valuable materials through safe, efficient, and sustainable processes—supporting clients in adopting responsible waste practices while contributing to Dubai’s long‑term circular economy goals."
         showButton={false}
         invert={false}
-        image="/assets/Our_Mission_r6qq9z.jpg"
+        image="/assets/companies/details/clean-earth-llc/Our_Mission_r6qq9z.jpg"
         imageAlt="Our Mission"
       />
       <WhoWeAre
@@ -122,7 +122,7 @@ function CleanEarthLLCPage() {
         text="Clean Earth LLC aims to be a leading partner in sustainable waste management across the UAE, recognized for its role in promoting resource recovery, reducing landfill dependency, and advancing circular economy principles. The company envisions a cleaner, greener urban environment where businesses actively participate in responsible waste handling, supported by modern recycling solutions and strong environmental stewardship."
         showButton={false}
         invert={true}
-        image="/assets/Our_Vision_t50wqq.jpg"
+        image="/assets/companies/details/clean-earth-llc/Our_Vision_t50wqq.jpg"
         imageAlt="Our Vision"
       />
       <KitchenMenu
@@ -135,12 +135,12 @@ function CleanEarthLLCPage() {
         heading="Operations and Compliance"
         text={"Clean Earth LLC operates in full alignment with Dubai’s environmental regulations and waste-management standards. All collection and transportation activities are supported by trained logistics personnel and compliant vehicles designed to meet safety and environmental requirements."}
         tag="[ ENVIRONMENTAL SERVICES ]"
-        backgroundImage="/assets/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"
+        backgroundImage="/assets/shared/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"
       />
       <FeaturesEngineeringSection
         heading="Company Overview"
         items={overview}
-        image="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="/assets/shared/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
       />
     </main>
   );

@@ -27,7 +27,7 @@ async function Companies({ searchParams }) {
       name: "MAHY Khoory Group of Companies",
       slug: "mahy-khoory-group",
       image:
-        "/assets/mahy-comp-removebg-preview_p7rg9d.png",
+        "/assets/companies/mahy-comp-removebg-preview_p7rg9d.png",
       sector: "group",
       size: "large",
       location: "uae",
@@ -39,7 +39,7 @@ async function Companies({ searchParams }) {
       name: "MAHY Khoory Trading",
       slug: "mahy-khoory-trading",
       image:
-        "/assets/union-industries_qsyee7.png",
+        "/assets/companies/union-industries_qsyee7.png",
       sector: "trading",
       size: "medium",
       location: "ksa",
@@ -50,7 +50,7 @@ async function Companies({ searchParams }) {
     {
       name: "Al Khoory Engineering",
       slug: "al-khoory-engineering",
-      image: "/assets/32f40b96-2c09-4429-99c1-a4ea6b99c595.png",
+      image: "/assets/companies/32f40b96-2c09-4429-99c1-a4ea6b99c595.png",
       sector: "engineering",
       size: "large",
       location: "uae",
@@ -62,7 +62,7 @@ async function Companies({ searchParams }) {
       name: "Union Paper Mills",
       slug: "union-paper-mills",
       image:
-        "/assets/Union_Paper_Mills_yg4zsr.png",
+        "/assets/companies/Union_Paper_Mills_yg4zsr.png",
       sector: "manufacturing",
       size: "large",
       location: "uae",
@@ -74,7 +74,7 @@ async function Companies({ searchParams }) {
       name: "Al Dhafra Paper Manufacturing",
       slug: "al-dhafra-paper-manufacturing",
       image:
-        "/assets/Al_Dhafra_Paper_Manufacturing_ibg1np.png",
+        "/assets/companies/Al_Dhafra_Paper_Manufacturing_ibg1np.png",
       sector: "manufacturing",
       size: "large",
       location: "uae",
@@ -86,7 +86,7 @@ async function Companies({ searchParams }) {
       name: "Union Wood Works",
       slug: "union-wood-works",
       image:
-        "/assets/Union_Wood_Works_zah5u9.png",
+        "/assets/companies/Union_Wood_Works_zah5u9.png",
       sector: "manufacturing",
       size: "medium",
       location: "uae",
@@ -98,7 +98,7 @@ async function Companies({ searchParams }) {
       name: "Recyclable Waste Management Division",
       slug: "rwmd",
       image:
-        "/assets/Al_Dhafra_Waste_Collection_yihnwv.png",
+        "/assets/companies/Al_Dhafra_Waste_Collection_yihnwv.png",
       sector: "waste management",
       size: "large",
       location: "uae",
@@ -110,7 +110,7 @@ async function Companies({ searchParams }) {
       name: "Al Dhafra Waste Collection",
       slug: "al-dhafra-waste-collection",
       image:
-        "/assets/Al_Dhafra_Waste_Collection_yihnwv.png",
+        "/assets/companies/Al_Dhafra_Waste_Collection_yihnwv.png",
       sector: "waste management",
       size: "medium",
       location: "uae",
@@ -122,7 +122,7 @@ async function Companies({ searchParams }) {
       name: "Around Continent Waste Collection",
       slug: "around-continent-waste-collection",
       image:
-        "/assets/green-arabia_vv0jlv.png",
+        "/assets/companies/green-arabia_vv0jlv.png",
       sector: "waste management",
       size: "medium",
       location: "uae",
@@ -134,7 +134,7 @@ async function Companies({ searchParams }) {
       name: "Etihad Waste Management",
       slug: "al-etihad-waste-management-services-llc",
       image:
-        "/assets/al-etihad_iml1nr.png",
+        "/assets/companies/al-etihad_iml1nr.png",
       sector: "waste management",
       size: "large",
       location: "oman",
@@ -145,7 +145,7 @@ async function Companies({ searchParams }) {
       name: "Clean Earth LLC",
       slug: "clean-earth-llc",
       image:
-        "/assets/clean-earth_ljd0zc.png",
+        "/assets/companies/clean-earth_ljd0zc.png",
       sector: "clean earth",
       size: "large",
       location: "uae",
@@ -157,7 +157,7 @@ async function Companies({ searchParams }) {
       name: "Solid Waste Management Division",
       slug: "solid-waste-management-division",
       image:
-        "/assets/Al_Dhafra_Waste_Collection_yihnwv.png",
+        "/assets/companies/Al_Dhafra_Waste_Collection_yihnwv.png",
       sector: "waste management",
       size: "small",
       location: "uae",
@@ -168,7 +168,7 @@ async function Companies({ searchParams }) {
       name: "Union Sustainable Packaging Solutions",
       slug: "union-sustainable-packaging",
       image:
-        "/assets/Union_Sustainable_Packaging_Solutions_jgnr0t.png",
+        "/assets/companies/Union_Sustainable_Packaging_Solutions_jgnr0t.png",
       sector: "manufacturing",
       size: "medium",
       location: "uae",
@@ -180,7 +180,7 @@ async function Companies({ searchParams }) {
       name: "National Paper Industries",
       slug: "national-paper-industry",
       image:
-        "/assets/npi-logo_yq0h45.png",
+        "/assets/companies/npi-logo_yq0h45.png",
       sector: "manufacturing",
       size: "medium",
       location: "uae",
@@ -191,7 +191,7 @@ async function Companies({ searchParams }) {
       name: "Greenland Transport",
       slug: "greenland-general-transport",
       image:
-        "/assets/greenland_hyiyra.png",
+        "/assets/companies/greenland_hyiyra.png",
       sector: "logistics",
       size: "medium",
       location: "uae",
@@ -203,7 +203,7 @@ async function Companies({ searchParams }) {
       name: "Senan Industry LLC",
       slug: "senan-industry",
       image:
-        "/assets/senan_uunajv.png",
+        "/assets/companies/senan_uunajv.png",
       sector: "manufacturing",
       size: "medium",
       location: "uae",
@@ -214,7 +214,7 @@ async function Companies({ searchParams }) {
       name: "Pure Energy Construction LLC",
       slug: "pure-energy-construction",
       image:
-        "/assets/pure-energy_vk9vu2.png",
+        "/assets/companies/pure-energy_vk9vu2.png",
       sector: "energy",
       size: "medium",
       location: "uae",
@@ -226,7 +226,7 @@ async function Companies({ searchParams }) {
       name: "Pearl Marina Hotel Apartments",
       slug: "pearl-marina",
       image:
-        "/assets/pearl-marina_sespkm.png",
+        "/assets/companies/pearl-marina_sespkm.png",
       sector: "hospitality",
       size: "medium",
       location: "uae",
@@ -237,7 +237,7 @@ async function Companies({ searchParams }) {
       name: "Market Restaurant and Café",
       slug: "market-restaurant",
       image:
-        "/assets/market-place_wd3u8y.png",
+        "/assets/companies/market-place_wd3u8y.png",
       sector: "hospitality",
       size: "small",
       location: "uae",
@@ -248,7 +248,7 @@ async function Companies({ searchParams }) {
       name: "MAHY Khoory Motors",
       slug: "mahy-khoory-motors",
       image:
-        "/assets/MKA_wwor7m.png",
+        "/assets/companies/MKA_wwor7m.png",
       sector: "automotive",
       size: "large",
       location: "uae",
@@ -259,7 +259,7 @@ async function Companies({ searchParams }) {
       name: "MAHY Khoory Automotive",
       slug: "mahy-khoory-automotive",
       image:
-        "/assets/MKA_wwor7m.png",
+        "/assets/companies/MKA_wwor7m.png",
       sector: "automotive",
       size: "large",
       location: "uae",
@@ -269,7 +269,7 @@ async function Companies({ searchParams }) {
     {
       name: "Union Nonwoven Industries",
       slug: "union-nonwoven-industries",
-      image: "/assets/mahy-comp-removebg-preview_p7rg9d.png",
+      image: "/assets/companies/mahy-comp-removebg-preview_p7rg9d.png",
       sector: "industries",
       size: "large",
       location: "uae",
@@ -280,7 +280,7 @@ async function Companies({ searchParams }) {
       name: "Creative Solutions Green Building Consultancy",
       slug: "creative-solutions",
       image:
-        "/assets/creative-solution_pwju0r.png",
+        "/assets/companies/creative-solution_pwju0r.png",
       sector: "consultancy",
       size: "medium",
       location: "uae",
@@ -385,7 +385,7 @@ async function Companies({ searchParams }) {
       <PageHeading
         title={t("Heading")}
         description={"MAHY Khoory Group of Companies is a Dubai-based diversified holding group comprising 25 operating companies and business divisions across multiple industries. The Group has built a strong presence in the UAE and the wider region through long-term commercial relationships, technical capability, and integrated operations. With businesses spanning trading, engineering, industrial manufacturing, recycling, sustainability, logistics, automotive, hospitality, and food & beverage, the Group operates a balanced and resilient portfolio designed to support both traditional industries and future-focused sectors."}
-        image={"/assets/abstract-business-office-building-london_rrnpsd.jpg"}
+        image={"/assets/companies/abstract-business-office-building-london_rrnpsd.jpg"}
       />
 
       <Breadcrumb
@@ -473,28 +473,28 @@ export default Companies;
 //     const companies = [
 //         {
 //             name: "MAHY Khoory Group",
-//             image: "/assets/union-industries_qsyee7.png",
+//             image: "/assets/companies/union-industries_qsyee7.png",
 //             sectorId: 1,
 //             sizeId: 4,
 //             locationId: 1,
 //         },
 //         {
 //             name: "MAHY Khoory Trading",
-//             image: "/assets/union-industries_qsyee7.png",
+//             image: "/assets/companies/union-industries_qsyee7.png",
 //             sectorId: 2,
 //             sizeId: 3,
 //             locationId: 2,
 //         },
 //         {
 //             name: "MAHY Khoory Automotive",
-//             image: "/assets/MKA_wwor7m.png",
+//             image: "/assets/companies/MKA_wwor7m.png",
 //             sectorId: 3,
 //             sizeId: 5,
 //             locationId: 3,
 //         },
 //         {
 //             name: "National Paper Industry ",
-//             image: "/assets/npi-logo_yq0h45.png",
+//             image: "/assets/companies/npi-logo_yq0h45.png",
 //             sectorId: 4,
 //             sizeId: 2,
 //             locationId: 4,

@@ -17,11 +17,11 @@ function AristonWaterHeatersPage() {
         description={
           "ARISTON Water Heaters are designed to deliver reliable, safe, and efficient hot water solutions for both household and commercial applications. Built with proven electric heating technology and high-quality components, ARISTON water heaters ensure consistent performance and long-term dependability for daily hot water needs."
         }
-        image="/assets/arinston-image1_fg7cmd.png"
+        image="/assets/products/ariston-water-heaters/arinston-image1_fg7cmd.png"
       />
       <TrustedAdvisorSection
       object="Employees"
-      images={["/assets/arinston-image2_ofdbsu.png", "/assets/arinston-image3_azwec3.png"]}
+      images={["/assets/products/ariston-water-heaters/arinston-image2_ofdbsu.png", "/assets/products/ariston-water-heaters/arinston-image3_azwec3.png"]}
         heading="ARISTON Water Heaters"
         texts={[
           "Ideal for homes, apartments, hotels, offices, and commercial facilities, these water heaters provide fast heating, stable temperature control, and efficient energy usage. Their durable construction and safety-focused design make them suitable for continuous operation in demanding environments.",

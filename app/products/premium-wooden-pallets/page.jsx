@@ -15,35 +15,46 @@ export const metadata = {
 function PremiumWoodenPallets() {
   const features = [
     {
-      label: "Heavy-Duty Metal Pallets",
-      text: "Designed for the most demanding environments—manufacturing plants, heavy industries, chemical warehouses, and cold-storage rooms—our metal pallets offer:",
-      bullets: [
-        "Exceptional structural strength",
-        "Fire resistance",
-        "Long service life with minimal maintenance",
-        "Hygienic and moisture-resistant performance",
-      ],
-      endText:
-        "Ideal for industries requiring reusable, long-lasting, and contamination-free pallet solutions.",
+      label: "Wooden Boxes & Crates",
+      text: "Wooden Boxes and Crates provide durable, versatile packaging solutions for safe transportation and storage of heavy equipment, machinery, and goods. Manufactured from heat-treated wood, PalletBiz offers standard and customized solutions including solid boxes, seaworthy crates, and specialized designs to ensure secure handling and product protection.",
+      // bullets: [
+      //   "Exceptional structural strength",
+      //   "Fire resistance",
+      //   "Long service life with minimal maintenance",
+      //   "Hygienic and moisture-resistant performance",
+      // ],
+      // endText:
+      //   "Ideal for industries requiring reusable, long-lasting, and contamination-free pallet solutions.",
       image:
-        "/assets/pure-wood-pure-pellets-factory-price_ggev6t.jpg",
+        "/assets/products/premium-wooden-pallets/wooden-pallets.png",
     },
     {
-      label: "Export-Ready Construction",
-      text: "Our pallets comply with regional and international shipping standards, making them suitable for global logistics companies, export warehouses, and manufacturing hubs.",
+      label: "Dunnage",
+      text: "Dunnage solutions protect goods during transportation and storage by providing cushioning, support, and stability. Wooden grooves and runners help secure uniquely shaped items, prevent movement, and minimize damage, ensuring safe handling and product integrity throughout the supply chain.",
       image:
-        "/assets/Pine-Wood-Pellets_mq1yfw.jpg",
+        "/assets/products/premium-wooden-pallets/dunage.png",
     },
     {
-      label: "Custom Engineering & Fabrication",
-      text: "We design and manufacture pallets tailored to customer-specific requirements, including:",
-      bullets: [
-        "Custom dimensions",
-        "Reinforced load-bearing structures",
-        "Specialized coatings or treatments",
-      ],
+      label: "Pallet Collars (Frames)",
+      text: "Pallet Collars offer a flexible solution for converting pallets into secure storage and transport containers. Easy to assemble, dismantle, and store, they optimize space while providing efficient handling and protection for loose goods and components across various industries.",
+      // bullets: [
+      //   "Custom dimensions",
+      //   "Reinforced load-bearing structures",
+      //   "Specialized coatings or treatments",
+      // ],
       image:
-        "/assets/firewood-fg55-64_1000_w42qyr.jpg",
+        "/assets/products/premium-wooden-pallets/pallets.png",
+    },
+    {
+      label: "Metal Pallets",
+      text: "Metal Pallets provide durable, high-strength solutions for industrial handling, storage, and transportation. Designed for demanding environments, they offer excellent load capacity, reliability, and resistance to harsh conditions. PalletBiz provides customized metal solutions including steel pallets, gitterboxes, and wire mesh containers.",
+      // bullets: [
+      //   "Custom dimensions",
+      //   "Reinforced load-bearing structures",
+      //   "Specialized coatings or treatments",
+      // ],
+      image:
+        "/assets/products/premium-wooden-pallets/metal.png",
     },
   ];
   const advantages = [
@@ -85,13 +96,14 @@ function PremiumWoodenPallets() {
     <main>
       <PageHeading
         title={"Premium Wooden Pallets"}
-        image="/assets/IMG_gzq8fj.png"
+        image="/assets/shared/IMG_gzq8fj.png"
       />
       <TrustedBusinessAdvisor
         images={[
-          "/assets/image002_lmmmfu.png",
-          "/assets/IMG_-_2_stmfpe.png",
-          "/assets/biomass-wood-pellet-500x500_wxke1f.jpg",
+          "/assets/products/premium-wooden-pallets/wooden-pallets.png",
+          "/assets/products/premium-wooden-pallets/dunage.png",
+          "/assets/products/premium-wooden-pallets/metal.png",
+          "/assets/products/premium-wooden-pallets/pallets.png",
         ]}
         heading="Premium Wooden Pallets"
         text="Manufactured using heat-treated, high-density compressed wood blocks and quality timber, our wooden pallets are engineered for:"
@@ -108,12 +120,12 @@ function PremiumWoodenPallets() {
         heading="Premimun Pallets"
         items={advantages}
         images={[
-          "/assets/Sustainable_Origins_ttvxce.jpg",
-          "/assets/image003_je11qk.png",
+          "/assets/shared/Sustainable_Origins_ttvxce.jpg",
+          "/assets/shared/image003_je11qk.png",
            
         ]}
       />
-      <TrustedAdvisorSection images={["/assets/Advance_recycling_n7hyqc.jpg", "/assets/3d-view-puzzle-pieces_ng78lk.jpg"]} heading="Applications" bullets={applications} />
+      <TrustedAdvisorSection images={["/assets/shared/Advance_recycling_n7hyqc.jpg", "/assets/shared/3d-view-puzzle-pieces_ng78lk.jpg"]} heading="Applications" bullets={applications} />
     </main>
   );
 }

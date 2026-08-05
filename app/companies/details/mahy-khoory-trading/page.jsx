@@ -15,27 +15,27 @@ function MahyKhooryTradingPage() {
   const features = [
     {
       text: "Channel Partners",
-      image: "/assets/Channel_Partners_dnqnjz.jpg",
+      image: "/assets/companies/details/mahy-khoory-trading/Channel_Partners_dnqnjz.jpg",
     },
     {
       text: "MEP and EPC contractors",
-      image: "/assets/MEP_and_PEC_Contractors_io2u3c.jpg",
+      image: "/assets/companies/details/mahy-khoory-trading/MEP_and_PEC_Contractors_io2u3c.jpg",
     },
     {
       text: "Real estate developers",
-      image: "/assets/Real_Estate_Develolopers_gqozxh.jpg",
+      image: "/assets/companies/details/mahy-khoory-trading/Real_Estate_Develolopers_gqozxh.jpg",
     },
     {
       text: "Government and municipal utilities",
-      image: "/assets/Government_and_Municipality_na3sgn.jpg",
+      image: "/assets/companies/details/mahy-khoory-trading/Government_and_Municipality_na3sgn.jpg",
     },
     {
       text: "Industrial and manufacturing operators",
-      image: "/assets/Industrial_and_Manufacturing_mgdvo9.jpg",
+      image: "/assets/companies/details/mahy-khoory-trading/Industrial_and_Manufacturing_mgdvo9.jpg",
     },
     {
       text: "Hospitality and commercial facility owners",
-      image: "/assets/Hospitality_and_Commercial_xktgcp.jpg",
+      image: "/assets/companies/details/mahy-khoory-trading/Hospitality_and_Commercial_xktgcp.jpg",
     },
   ];
   const overview = [
@@ -79,8 +79,8 @@ function MahyKhooryTradingPage() {
   return (
     <main>
       <CompanyOverview
-        video={"/assets/M.A.H.Y._KHOORY_CO._jtklrf.mp4"}
-        //   image="/assets/office_jaeuiz.webp"
+        video={"/assets/companies/details/mahy-khoory-trading/M.A.H.Y._KHOORY_CO._jtklrf.mp4"}
+        //   image="/assets/shared/office_jaeuiz.webp"
         heading="MAHY Khoory Trading"
         texts={[
           "M.A.H.Y. Khoory Trading is the commercial and distribution arm of the MAHY Khoory Group, serving as a key supplier of industrial, electromechanical, and building services equipment across the GCC and selected international markets. The division plays a central role in supporting infrastructure, construction, industrial, and utility sectors through the supply of reliable, high-quality products sourced from leading global manufacturers. With decades of experience in import, distribution, and project supply, M.A.H.Y. Khoory Trading has established itself as a trusted partner for contractors, developers, and institutional clients, delivering both products and technical support at scale.",

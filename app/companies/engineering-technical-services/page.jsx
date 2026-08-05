@@ -18,16 +18,16 @@ function EngineeringTechnicalServices() {
              <SubPageHeading
                     fullHeight
                     title="Engineering & Technical Services"
-                    // image="/assets/Code_of_Conduct.jpg_qjqqzs.jpg"
+                    // image="/assets/shared/Code_of_Conduct.jpg_qjqqzs.jpg"
                     image={
-                      "/assets/worker-without-helmet-factory-with-welding-clip-welding-sparks-fly-from-iron-factory-man-works.jpg_biti5g.jpg"
+                      "/assets/companies/engineering-technical-services/worker-without-helmet-factory-with-welding-clip-welding-sparks-fly-from-iron-factory-man-works.jpg_biti5g.jpg"
                     }
                     align="center"
                   />
             <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
                 <CompaniesSectors
-                    image={"/assets/architects-wearing-helmets-plans.jpg_d62rdl.jpg"}
-                    image2={"/assets/cutting-metal-with-plasma-equipment.jpg_vmayse.jpg"}
+                    image={"/assets/companies/engineering-technical-services/architects-wearing-helmets-plans.jpg_d62rdl.jpg"}
+                    image2={"/assets/companies/engineering-technical-services/cutting-metal-with-plasma-equipment.jpg_vmayse.jpg"}
                     title={"Engineering & Technical Services"}
                     texts={[
                         "This sector delivers specialized engineering expertise, system integration, and turnkey execution of complex pumping and fluid-handling projects.",

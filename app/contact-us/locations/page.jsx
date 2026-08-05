@@ -26,7 +26,7 @@ function locations() {
                 title={"Our Locations"}
                 fullHeight
                 description={"At MAHY Khoory Group, delivering reliable support and maintaining strong customer relationships is a core priority across all our sectors."}
-                image={"/assets/mahy-location-page.jpg_jdopju.jpg"}
+                image={"/assets/shared/mahy-location-page.jpg_jdopju.jpg"}
             />
 
             <MahyLocationsMap/>

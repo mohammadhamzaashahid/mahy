@@ -6,7 +6,7 @@ import { useLocale } from "next-intl";
 
 function DesignProcess({ processes, space = "lg:space-y-10", image }) {
   const locale = useLocale();
-  if (!image) image = "/assets/multi-ethnic-group-three-businesspeople-meeting-modern-office-two-women-caucasian-man-wearing-suit-looking-laptop-computer.jpg_grdqs2.jpg"
+  if (!image) image = "/assets/shared/multi-ethnic-group-three-businesspeople-meeting-modern-office-two-women-caucasian-man-wearing-suit-looking-laptop-computer.jpg_grdqs2.jpg"
 
   const containerVariants = {
     hidden: { opacity: 0, x: locale === "ar" ? 20 : -20 },

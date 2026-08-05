@@ -257,13 +257,12 @@ export function getNavigation(t) {
                 label: t("AllGroupCompanies"),
                 href: "/companies/all",
               },
-                {
+              {
                 label: "Explore Companies",
                 href: "/companies/",
               },
             ],
           },
-          
         ],
       },
       {
@@ -475,11 +474,28 @@ export function getNavigation(t) {
               //   label: t("Restaurant&DiningServices"),
               //   href: "/services/restaurant-dining-services",
               // },
-              
+
               {
                 label: t("SpareParts"),
                 href: "/products/spare-parts",
               },
+              {
+                label: "Restaurants, Catering & Banquet Service",
+                href: "/services/restaurants-catering-and-banquet-service",
+              },
+              {
+                label: "Material Handling Consultancy",
+                href: "/services/material-handling-consultancy",
+              },
+              {
+                label: "Transportation",
+                href: "/companies/transportation-logistics",
+              },
+              {
+                label: "Automobile",
+                href: "/companies/automotive",
+              },
+              
             ],
           },
         ],
@@ -488,7 +504,7 @@ export function getNavigation(t) {
         id: "shop",
         label: t("Shop"),
         // href: `${process.env.NEXT_PUBLIC_MAHY_SHOP_URL}`,
-       href: `/under-maintenance`,
+        href: `/under-maintenance`,
 
         // linkType: "mega",
         // columns: [
@@ -662,7 +678,7 @@ export function getNavigation(t) {
             title: t("SalesBusinessEnquiries"),
             links: [
               // { label: t("SalesEnquiry"), href: "/contact-us/sales" },
-              { label: "Enquiries", href: "/contact-us" }
+              { label: "Enquiries", href: "/contact-us" },
               // { label: t("RequestQuotation"), href: "/rfq" },
               // {
               //   label: t("KeyAccountContacts"),

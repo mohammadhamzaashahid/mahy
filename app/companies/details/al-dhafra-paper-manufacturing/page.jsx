@@ -95,32 +95,32 @@ function AlDhafraPaper() {
       title: "Union Testliner (90–200 GSM)",
       text: "High-quality recycled linerboard suitable for outer layers of corrugated packaging, offering strength, printability, and cost efficiency.",
       image:
-        "/assets/Testlinear_ikbc7c.png",
+        "/assets/shared/Testlinear_ikbc7c.png",
     },
     {
       title: "Unionflute (90–175 GSM)",
       text: "Durable fluting medium designed for corrugated board applications, providing excellent rigidity, cushioning, and structural performance.",
       image:
-        "/assets/Union_Flute_scjkz4.png",
+        "/assets/shared/Union_Flute_scjkz4.png",
     },
     {
       title: "Unioncore Board (190–450 GSM)",
       text: "Heavy-duty core board used in paper tubes, cores, and industrial applications, delivering superior strength and load-bearing capacity.",
       image:
-        "/assets/coreboard_ysfopp.png",
+        "/assets/shared/coreboard_ysfopp.png",
     },
     {
       title: "Semikraft Liner (125–200 GSM)",
       text: "Semi-chemical kraft liner combining strength and surface quality, ideal for packaging solutions requiring enhanced durability and appearance.",
       image:
-        "/assets/Semikraft_knjtkd.png",
+        "/assets/shared/Semikraft_knjtkd.png",
     },
   ];
   return (
     <main>
       <CompanyOverview
-        video={"/assets/Video_Project_7_z3gnr8.mp4"}
-        // image="/assets/office_jaeuiz.webp"
+        video={"/assets/companies/details/al-dhafra-paper-manufacturing/Video_Project_7_z3gnr8.mp4"}
+        // image="/assets/shared/office_jaeuiz.webp"
         heading="Al Dhafra Paper Manufacturing"
         texts={[
           "Al Dhafra Paper Manufacturing is the MAHY Khoory Group’s dedicated recycled containerboard manufacturing facility, located in Abu Dhabi. Established in 2017, Al Dhafra Paper Manufacturing operates as a fully integrated mill converting 100% recovered wastepaper into high-quality Test liner and Fluting Medium for the packaging industry.With an average production capacity of approximately 690 tonnes per day, the mill operates in compliance with leading environmental, technical, and regulatory standards. Situated within ICAD III, the facility is equipped with state-of-the-art production lines and benefits from continuous technology upgrades, ensuring operational efficiency and product consistency aligned with international benchmarks.",
@@ -133,7 +133,7 @@ function AlDhafraPaper() {
         text="To manufacture high‑quality recycled containerboard that drives sustainable packaging solutions across the region. Al Dhafra Paper Manufacturing is committed to transforming 100% recovered wastepaper into reliable, eco‑friendly products through advanced technology, operational excellence, and responsible resource management—supporting the MAHY Khoory Group’s vision of circular manufacturing and environmental stewardship."
         showButton={false}
         invert={false}
-        image="/assets/Our_Mission_2_rxnnh3.jpg"
+        image="/assets/companies/details/al-dhafra-paper-manufacturing/Our_Mission_2_rxnnh3.jpg"
         imageAlt="Our Mission"
       />
 
@@ -141,7 +141,7 @@ function AlDhafraPaper() {
         topHeading=""
         heading="Our Vision"
         text="To be the Middle East’s benchmark for sustainable containerboard production by leading in innovation, efficiency, and environmental responsibility. Al Dhafra Paper Manufacturing aims to strengthen regional self‑sufficiency in recycled paper, expand the use of recovered fibre, and continuously advance manufacturing practices that contribute to a cleaner, greener future."
-        image="/assets/Our_Vision_idubjb.jpg"
+        image="/assets/companies/details/al-dhafra-paper-manufacturing/Our_Vision_idubjb.jpg"
         imageAlt="Our Vision"
 
         showButton={false}
@@ -150,7 +150,7 @@ function AlDhafraPaper() {
       {/* <ValuesSection
         title="Our Mission"
         description="Al Dhafra Paper Manufacturing’s mission is to be a regional leader in sustainable containerboard manufacturing, fully aligned with the MAHY Khoory Group’s commitment to delivering solutions that enhance quality of life while protecting the environment."
-        imageSrc="/assets/commitment-to-growth_qhzgjt.jpg"
+        imageSrc="/assets/shared/commitment-to-growth_qhzgjt.jpg"
         imageAlt="Our Mission"
         ctaHref={false}
         imagePosition="right"
@@ -159,7 +159,7 @@ function AlDhafraPaper() {
       <ValuesSection
         title="Our Vision"
         description="Our vision is to expand the use of recycled fibre, reduce the environmental footprint of packaging materials, and support regional industries with reliable, eco-friendly paper products."
-        imageSrc="/assets/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+        imageSrc="/assets/shared/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
         imageAlt="Our Vision"
         ctaHref={false}
         imagePosition="left"
@@ -175,14 +175,14 @@ function AlDhafraPaper() {
         heading="Al Dhafra Paper Manufacturing"
         subHeading="Recycled Containerboard Manufacturing & Industrial Operations"
         tag="[ PAPER MANUFACTURING ]"
-        backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
+        backgroundImage="/assets/shared/skyscrapers-tokyo.jpg_e2niyf.jpg"
       />
 
       <FeaturesEngineeringSection
         heading="Al Dhafra Paper Mills Overview"
         items={overview}
         textPosition="left"
-        image="/assets/ADPMCL_Base_image_rc71lw.png"
+        image="/assets/companies/details/al-dhafra-paper-manufacturing/ADPMCL_Base_image_rc71lw.png"
       />
     </main>
   );

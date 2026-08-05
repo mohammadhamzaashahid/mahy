@@ -18,14 +18,14 @@ function AutomotivePage() {
       <SubPageHeading
         title="Move That Spread Comfort "
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
-        image="/assets/traffic-light-trails-downtown.jpg_1_rpo8xg.jpg"
+        image="/assets/companies/automotive/traffic-light-trails-downtown.jpg_1_rpo8xg.jpg"
         align="center"
         fullHeight
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "/assets/webp_mobile_listing_main_2023_DongFeng_AX7_Mache_Exterior_05_ttbcgg.webp"
+            "/assets/companies/automotive/webp_mobile_listing_main_2023_DongFeng_AX7_Mache_Exterior_05_ttbcgg.webp"
           }
           title={"Automotive"}
           texts={[

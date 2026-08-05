@@ -34,7 +34,7 @@ function CareerProgressionPage() {
         title={"Career Progression"}
         fullHeight
         image={
-          "/assets/businessman-contemplates-city-skyline-amidst-modern-towers.jpg_viobsf.jpg"
+          "/assets/careers/career-progression/businessman-contemplates-city-skyline-amidst-modern-towers.jpg_viobsf.jpg"
         }
       />
       <WasteCollectionScrollMovingCards items={items} />

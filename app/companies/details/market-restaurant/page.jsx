@@ -17,23 +17,23 @@ function MarketRestarauntPage() {
     const features = [
         {
             text: "Freshly prepared salads and starters",
-            image: "/assets/salad_hpftaj.jpg",
+            image: "/assets/companies/details/market-restaurant/salad_hpftaj.jpg",
         },
         {
             text: "Grilled meats and seafood dishes",
-            image: "/assets/grills_pvtzgw.jpg",
+            image: "/assets/companies/details/market-restaurant/grills_pvtzgw.jpg",
         },
         {
             text: "Specialty brunch selections",
-            image: "/assets/brunch_ogrd4c.jpg",
+            image: "/assets/companies/details/market-restaurant/brunch_ogrd4c.jpg",
         },
         {
             text: "Desserts and café-style beverages",
-            image: "/assets/dessert_daynah.jpg",
+            image: "/assets/companies/details/market-restaurant/dessert_daynah.jpg",
         },
         {
             text: "In addition to dine-in service, the restaurant provides takeaway, delivery, and catering services, and is well suited for private gatherings, corporate lunches, and small social events.",
-            image: "/assets/delivery_yx0mar.jpg",
+            image: "/assets/companies/details/market-restaurant/delivery_yx0mar.jpg",
         }
     ];
     const adpmCardsData = [
@@ -102,7 +102,7 @@ function MarketRestarauntPage() {
     return (
         <main>
             <CompanyOverview
-                video={"/assets/Video_Project_10_eosc43.mp4"}
+                video={"/assets/companies/details/market-restaurant/Video_Project_10_eosc43.mp4"}
                 heading="Market Restaurant & Café"
                 texts={[
                     "Market Restaurant & Café is a contemporary casual dining destination located in Dubai Marina, operating under the hospitality portfolio of the MAHY Khoory Group. Positioned as a modern neighborhood restaurant, the concept combines seasonally inspired cuisine with a relaxed and welcoming atmosphere. Situated adjacent to Pearl Marina Hotel Apartments, the restaurant serves both hotel guests and the wider public, offering a convenient and approachable dining experience within one of Dubai’s most vibrant residential and leisure districts.",
@@ -119,17 +119,17 @@ function MarketRestarauntPage() {
                 heading="Target Market and Customer Segments"
                 tag="[ RESTAURANT ]"
                 text={"The restaurant caters to a diverse clientele, including:"}
-                backgroundImage="/assets/albert-YYZU0Lo1uXE-unsplash_e8shgs.jpg"
+                backgroundImage="/assets/companies/details/market-restaurant/albert-YYZU0Lo1uXE-unsplash_e8shgs.jpg"
                 endText={"Its casual yet refined positioning makes it attractive to families, individuals, and groups looking for a comfortable dining environment without formality."}
             />
             {/* <CompanyTextOnBackground
-                image="/assets/commitment-to-growth_qhzgjt.jpg"
+                image="/assets/shared/commitment-to-growth_qhzgjt.jpg"
                 align="left"
             /> */}
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+                image="/assets/shared/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
             />
         </main>
     )

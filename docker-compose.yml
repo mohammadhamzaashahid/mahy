@@ -1,0 +1,25 @@
+services:
+  frontend:
+    image: muhammadhamza4118/mahy-frontend:latest
+    restart: unless-stopped
+    volumes:
+      - /srv/mahy/assets:/app/public/assets:ro
+    expose:
+      - "3000"
+    networks: [web]
+
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - /srv/mahy/assets:/srv/mahy/assets:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    depends_on: [frontend]
+    networks: [web]
+
+networks:
+  web:

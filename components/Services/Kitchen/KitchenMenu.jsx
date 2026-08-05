@@ -14,21 +14,21 @@ function KitchenMenu({
       title: "Strategic Visionaries",
       text: "We start by understanding your business at its core. Ourteam of seasoned consultants collaborates with you to craft a strategic vision that aligns with your goals.",
       image:
-        "/assets/fusion-03-pg30_qsuufj.jpg",
+        "/assets/shared/fusion-03-pg30_qsuufj.jpg",
       objectFit: "cover",
     },
     {
       title: "Customized Solutions",
       text: "No two businesses are alike, and we recognize that. Our team develops bespoke solutions tailored to your specific needs.",
       image:
-        "/assets/collezioni-frida-03-pg129_qhzqdu.jpg",
+        "/assets/services/kitchen-designing-solutions/collezioni-frida-03-pg129_qhzqdu.jpg",
       objectFit: "cover",
     },
     {
       title: "Collaborative Execution",
       text: "We start by understanding your business at its core. Ourteam of seasoned consultants collaborates with you to craft a strategic vision that aligns with your goals.",
       image:
-        "/assets/collezioni-opera-02-pg199_vbgmzu.jpg",
+        "/assets/companies/details/pearl-marina/collezioni-opera-02-pg199_vbgmzu.jpg",
       objectFit: "cover",
     },
   ],

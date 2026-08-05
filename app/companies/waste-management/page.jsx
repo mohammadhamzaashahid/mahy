@@ -18,14 +18,14 @@ function WasteManagementPage() {
       <SubPageHeading
         title="Clean and Green World"
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
-        image="/assets/person-business-attire-placing-recyclable-documents-into-recycling-bin-promoting-sustainability-ecofriendly-office-practices.jpg_c1xxjo.jpg"
+        image="/assets/companies/waste-management/person-business-attire-placing-recyclable-documents-into-recycling-bin-promoting-sustainability-ecofriendly-office-practices.jpg_c1xxjo.jpg"
         align="center"
         fullHeight
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "/assets/arrangement-with-recycle-bin-countertop.jpg_o0vei8.jpg"
+            "/assets/companies/waste-management/arrangement-with-recycle-bin-countertop.jpg_o0vei8.jpg"
           }
           title={"Waste Management"}
           texts={[

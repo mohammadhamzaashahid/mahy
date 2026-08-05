@@ -19,13 +19,13 @@ function EnergySustainabilityConsulting() {
              <SubPageHeading
         title="Sustainability Is Our Power"
         // description="The company has a well-developed internal governance structure, under which all governance bodies have clear and focused authority and responsibility."
-        image="/assets/investors-examine-solar-panel-surface-using-tablet-discussing-design-efficiency.jpg_plo6qi.jpg"
+        image="/assets/companies/energy-sustainability-consulting/investors-examine-solar-panel-surface-using-tablet-discussing-design-efficiency.jpg_plo6qi.jpg"
         align="center"
         fullHeight
       />
             <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
                 <CompaniesSectors
-                    image={"/assets/photovoltaics-factory-industrial-production-managers-looking-schematics.jpg_pric2u.jpg"}
+                    image={"/assets/companies/energy-sustainability-consulting/photovoltaics-factory-industrial-production-managers-looking-schematics.jpg_pric2u.jpg"}
                     title={"Energy & Sustainability Consulting"}
                     texts={[
                         "This sector provides sustainability advisory and green-building consultancy services.",

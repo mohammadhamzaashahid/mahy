@@ -37,14 +37,14 @@ function LeadershipAndVisionPage() {
         fullHeight
         title={"Leadership & Vision"}
         image={
-          "/assets/businessman-standing-roof.jpg_uvfwtd.jpg"
+          "/assets/careers/leadership-and-vision/businessman-standing-roof.jpg_uvfwtd.jpg"
         }
       />
       <VisionBenchmarkSection
         images={[
-          "/assets/group-people-working-out-business-plan-office.jpg_joudjy.jpg",
-          "/assets/planning-corporate-event-with-colleagues-modern-office-setting.jpg_yb8nqq.jpg",
-          "/assets/ironing-out-details-shot-corporate-businesspeople-meeting-boardroom.jpg_faoj9g.jpg",
+          "/assets/careers/leadership-and-vision/group-people-working-out-business-plan-office.jpg_joudjy.jpg",
+          "/assets/careers/leadership-and-vision/planning-corporate-event-with-colleagues-modern-office-setting.jpg_yb8nqq.jpg",
+          "/assets/careers/leadership-and-vision/ironing-out-details-shot-corporate-businesspeople-meeting-boardroom.jpg_faoj9g.jpg",
         ]}
         items={leadershipVision}
       />

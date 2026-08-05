@@ -15,12 +15,12 @@ function SolidWasteManagementDivision() {
     {
       title: "Integrated Waste Management Solutions",
       text: "SWMD is a trusted partner in sustainable industrial waste management, delivering integrated solutions across wood waste recovery, biomass fuel preparation, pulper reject recovery, RDF production, and industrial solid waste processing.",
-      image: "/assets/Integrated_Waste_collection_skjoy7.jpg",
+      image: "/assets/companies/details/solid-waste-management-division/Integrated_Waste_collection_skjoy7.jpg",
     },
     {
       title: "Sustainability & Environmental Impact",
       text: "Through innovation, skilled manpower, and environmentally responsible practices, SWMD plays a vital role in enhancing resource efficiency and supporting the UAE’s long-term sustainability vision.",
-      image: "/assets/Sustainability_and_environemnt-2_xdfmnf.jpg",
+      image: "/assets/companies/details/solid-waste-management-division/Sustainability_and_environemnt-2_xdfmnf.jpg",
     }
   ];
   const adpmCardsData = [
@@ -58,8 +58,8 @@ function SolidWasteManagementDivision() {
   return (
     <main>
       <CompanyOverview
-        video={"/assets/Solid_Waste_Management_Division_imhdko.mp4"}
-        // image="/assets/office_jaeuiz.webp"
+        video={"/assets/companies/details/solid-waste-management-division/Solid_Waste_Management_Division_imhdko.mp4"}
+        // image="/assets/shared/office_jaeuiz.webp"
         heading="Solid Waste Management Division (SWMD)"
         texts={[
           "The Solid Waste Management Division (SWMD) of the MAHY Khoory Group delivers integrated, sustainable industrial waste management solutions across the UAE. Through advanced processing systems, disciplined operations, and full regulatory compliance, SWMD converts waste into valuable resources—supporting circular economy objectives, reducing landfill dependency, and generating measurable environmental and commercial value.",
@@ -74,12 +74,12 @@ function SolidWasteManagementDivision() {
         cards={adpmCardsData}
         heading="Applications"
         tag="[ WASTE MANAGEMENT ]"
-        backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
+        backgroundImage="/assets/shared/skyscrapers-tokyo.jpg_e2niyf.jpg"
       />
       <FeaturesEngineeringSection
         heading="Core Operations"
         items={overview}
-        image="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+        image="/assets/shared/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
       />
     </main>
   );

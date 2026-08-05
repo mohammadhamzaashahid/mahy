@@ -25,7 +25,7 @@ function ServicedHotelApartmentsPage() {
       endText:
         "These amenities support both leisure and productivity, making the property suitable for all types of travellers.",
       image:
-        "/assets/medium-shot-woman-working-luxury-restaurant_fjxhja.jpg",
+        "/assets/services/serviced-hotel-apartments/medium-shot-woman-working-luxury-restaurant_fjxhja.jpg",
     },
     {
       label: "Dining & Hospitality Services",
@@ -39,7 +39,7 @@ function ServicedHotelApartmentsPage() {
       endText:
         "The dining experience is designed to cater to diverse tastes and daily lifestyle needs.",
       image:
-        "/assets/elegant-shot-hotel-receptionist-handing-key-card-minimalist-setting_yzuhfm.jpg",
+        "/assets/services/serviced-hotel-apartments/elegant-shot-hotel-receptionist-handing-key-card-minimalist-setting_yzuhfm.jpg",
     },
     {
       label: "Support & Concierge Services",
@@ -55,7 +55,7 @@ function ServicedHotelApartmentsPage() {
       endText:
         "These services guarantee comfort, safety, and an elevated guest experience.",
       image:
-        "/assets/walking-business-happy-woman-with-suitcase-city-travel-commute-journey-hotel-professional-corporate-person-with-luggage-work-trip-convention-smile-with-drink-outdoor_f0a3p2.jpg",
+        "/assets/services/serviced-hotel-apartments/walking-business-happy-woman-with-suitcase-city-travel-commute-journey-hotel-professional-corporate-person-with-luggage-work-trip-convention-smile-with-drink-outdoor_f0a3p2.jpg",
     },
     {
       label: "Prime Dubai Marina Location",
@@ -71,7 +71,7 @@ function ServicedHotelApartmentsPage() {
       endText:
         "The location provides exceptional connectivity for both business and leisure activities.",
       image:
-        "/assets/full-shot-people-working-laptop_lv2ulb.jpg",
+        "/assets/services/serviced-hotel-apartments/full-shot-people-working-laptop_lv2ulb.jpg",
     },
     {
       label: "Suitable For",
@@ -84,7 +84,7 @@ function ServicedHotelApartmentsPage() {
         "Families seeking spacious, fully equipped accommodation",
       ],
       image:
-        "/assets/spacious-hotel-lobby-filled-with-numerous-chairs-elegant-lamps-ideal-use-hospitality-industry-promotions-interior-design-websites_unkti2.jpg",
+        "/assets/services/serviced-hotel-apartments/spacious-hotel-lobby-filled-with-numerous-chairs-elegant-lamps-ideal-use-hospitality-industry-promotions-interior-design-websites_unkti2.jpg",
     },
   ];
   return (
@@ -93,13 +93,13 @@ function ServicedHotelApartmentsPage() {
         fullHeight
         title={"Serviced Hotel Apartments "}
         image={
-          "/assets/spacious-hotel-lobby-filled-with-numerous-chairs-elegant-lamps-ideal-use-hospitality-industry-promotions-interior-design-websites_unkti2.jpg"
+          "/assets/services/serviced-hotel-apartments/spacious-hotel-lobby-filled-with-numerous-chairs-elegant-lamps-ideal-use-hospitality-industry-promotions-interior-design-websites_unkti2.jpg"
         }
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "/assets/full-shot-people-working-laptop_lv2ulb.jpg"
+            "/assets/services/serviced-hotel-apartments/full-shot-people-working-laptop_lv2ulb.jpg"
           }
           title={"Accommodation Options"}
           texts={[
@@ -128,11 +128,11 @@ function ServicedHotelApartmentsPage() {
         heading="Services"
         items={services}
         images={[
-          "/assets/lobby-with-large-lobby-with-large-chandelier-plant-center_pznxim.jpg",
-          "/assets/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_w7r5es.jpg",
-          "/assets/traveller-calling-hotel-concierge_mlmxzp.jpg",
-          "/assets/popular-resort-amara-dolce-vita-luxury-hotel-with-pools-water-parks-recreational-area-along-sea-coast-turkey-sunset-tekirova-kemer_myzrdu.jpg",
-          "/assets/modern-studio-apartment-design-with-bedroom-living-space_l4vewk.jpg",
+          "/assets/shared/lobby-with-large-lobby-with-large-chandelier-plant-center_pznxim.jpg",
+          "/assets/shared/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_w7r5es.jpg",
+          "/assets/shared/traveller-calling-hotel-concierge_mlmxzp.jpg",
+          "/assets/services/serviced-hotel-apartments/popular-resort-amara-dolce-vita-luxury-hotel-with-pools-water-parks-recreational-area-along-sea-coast-turkey-sunset-tekirova-kemer_myzrdu.jpg",
+          "/assets/services/serviced-hotel-apartments/modern-studio-apartment-design-with-bedroom-living-space_l4vewk.jpg",
         ]}
       />
       {/* <ServicedHotelApartments /> */}

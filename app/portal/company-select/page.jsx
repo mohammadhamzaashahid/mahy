@@ -9,34 +9,34 @@ import { useEffect, useState } from "react";
 const BLOCKED_ENTITIES = ["DAT", "RWMD", "ADWC", "SWMD", "GLT", "GAWM"];
 
 const MK_MOTORS_LOGO =
-  "/assets/image-21_rmr4xp.jpg";
+  "/assets/portal/company-select/image-21_rmr4xp.jpg";
 const FALLBACK_COMPANY_LOGO =
-  "/assets/image-21_rmr4xp.jpg";
+  "/assets/portal/company-select/image-21_rmr4xp.jpg";
 
 const COMPANY_IMAGE_MAP = {
   "Mohd Abdulla Haji Yousuf (MAHY) Khoory & CO.,LLC":
-    "/assets/image-1_o4wida.png",
+    "/assets/portal/company-select/image-1_o4wida.png",
 
   "Emirates International Equipments Machinery LLC.":
-    "/assets/image-3_sdiod9.jpg",
+    "/assets/portal/company-select/image-3_sdiod9.jpg",
 
   "Greenland Equipment & Machinery EST. L.L.C":
-    "/assets/image-4_lcsxcf.jpg",
+    "/assets/portal/company-select/image-4_lcsxcf.jpg",
 
   "Al Mehwar Al Fde General Trading L.L.C":
-    "/assets/image-5_xlekgs.png",
+    "/assets/portal/company-select/image-5_xlekgs.png",
 
   "Al Khoory Engineering":
-    "/assets/image-6_ids5vt.png",
+    "/assets/portal/company-select/image-6_ids5vt.png",
 
   "Union Paper Mills":
-    "/assets/image-7_wqqqtt.png",
+    "/assets/portal/company-select/image-7_wqqqtt.png",
 
   "Al Dhafra Paper Manufacturing":
-    "/assets/al-dfhara-ppr_xvf7ur.png",
+    "/assets/portal/company-select/al-dfhara-ppr_xvf7ur.png",
 
   "Union Wood Works":
-    "/assets/image-9_qon0ki.png",
+    "/assets/portal/company-select/image-9_qon0ki.png",
 
   "MAHY Khoory Automotive Division": MK_MOTORS_LOGO,
   "MK Motors Cars Traiding L.L.C SPC": MK_MOTORS_LOGO,

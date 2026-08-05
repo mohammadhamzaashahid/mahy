@@ -19,7 +19,7 @@ function SubmitCv() {
         description={
           "MAHY Khoory Group welcomes experienced professionals, specialists, and motivated individuals who are interested in building a long-term career within a diversified, multi-sector organization."
         }
-        image={"/assets/people-working-with-computers.jpg_s9wcea.jpg"}
+        image={"/assets/careers/submit-cv/people-working-with-computers.jpg_s9wcea.jpg"}
         fullHeight
       />
       <div className="pt-5">
@@ -34,7 +34,7 @@ function SubmitCv() {
               link: false,
             },
           ]}
-          image="/assets/upload-cv-page_fizfrq.jpg"
+          image="/assets/careers/submit-cv/upload-cv-page_fizfrq.jpg"
           items={[
             "Your full name",
             "Area of expertise or desired department",
@@ -47,7 +47,7 @@ function SubmitCv() {
       <div className="pb-10">
         <ServicesGloballyTemp
           invert
-          image="/assets/business-people-meeting-conference-discussion-corporate-concept.jpg_jfwfzf.jpg"
+          image="/assets/careers/submit-cv/business-people-meeting-conference-discussion-corporate-concept.jpg_jfwfzf.jpg"
           texts2={[
             "Our Human Resources team will review your profile and maintain it within our centralized talent database. As a holding group comprising 25 companies across manufacturing, trading, engineering, logistics, waste management, automotive, hospitality, and other sectors, opportunities may arise within different subsidiaries based on operational requirements.",
             "You are also encouraged to explore the individual websites of the companies listed under the Companies section of our website. Several subsidiaries may have dedicated career pages where you can apply directly for company-specific roles aligned with your professional background.",

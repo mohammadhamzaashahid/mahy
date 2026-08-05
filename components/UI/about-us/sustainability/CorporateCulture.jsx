@@ -75,7 +75,7 @@ function CorporateCulture() {
         </div>
         <div className="absolute inset-0">
           <Image
-            src={"/assets/corporate-buildings.jpg_vxoi9u.jpg"}
+            src={"/assets/shared/corporate-buildings.jpg_vxoi9u.jpg"}
             alt="Corporate Culture"
             fill
             style={{ objectFit: "cover" }}

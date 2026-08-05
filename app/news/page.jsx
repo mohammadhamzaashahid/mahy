@@ -47,7 +47,7 @@ const featuredArticle = articles[0];
       <PageHeading
         title={t("Heading")}
         description={t("Description")}
-        image="/assets/skyscrapers-from-low-angle-view_1.jpg_kcydkj.jpg"
+        image="/assets/news/skyscrapers-from-low-angle-view_1.jpg_kcydkj.jpg"
       />
 
       <Breadcrumb segments={[{ label: t("Page"), href: "/news" }]} locale={locale} />

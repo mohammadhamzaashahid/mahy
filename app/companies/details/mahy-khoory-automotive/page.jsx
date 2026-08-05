@@ -23,13 +23,13 @@ function MahyKhooryAutomotivePage() {
             title: "Market Entry & Expansion",
             objectFit: "contain",
             text: "The brand’s debut was marked by the opening of a flagship showroom and service facility in Dubai, followed by showrooms in Abu Dhabi and ongoing expansion plans, establishing a strong foundation for national expansion.",
-            image: "/assets/Startegic_expansion_yswyze.png",
+            image: "/assets/companies/details/mahy-khoory-automotive/Startegic_expansion_yswyze.png",
         },
         {
             title: "Automotive Division Launch",
             objectFit: "contain",
             text: "Building on the MAHY Khoory Group’s 96 years of legacy as a distributor of global brands, including established American automotive marques, the Automotive division was launched as part of the Group’s diversification strategy. The decision to partner with Dongfeng reflects a forward-looking approach, recognizing the rising global competitiveness and technological maturity of Chinese automotive manufacturers.",
-            image: "/assets/Re-entry_into_automotive_section_pjhg1t.png",
+            image: "/assets/companies/details/mahy-khoory-automotive/Re-entry_into_automotive_section_pjhg1t.png",
         },
     ];
     const adpmCardsData = [
@@ -70,8 +70,8 @@ function MahyKhooryAutomotivePage() {
     return (
         <main>
             <CompanyOverview
-                video={"/assets/Mka_Mkm_wu2ejg.mp4"}
-                // image="/assets/office_jaeuiz.webp"
+                video={"/assets/companies/details/mahy-khoory-automotive/Mka_Mkm_wu2ejg.mp4"}
+                // image="/assets/shared/office_jaeuiz.webp"
                 heading="MAHY Khoory Automotive"
                 texts={[
                     "MAHY Khoory Automotive represents the MAHY Khoory Group’s strategic expansion into the automotive sector introducing modern, valuedriven and technology-forward mobility solutions to the UAE. As the Group’s curated entry into the automotive sector, the division has forged a strong partnership with Dongfeng Motor Corporation, one of China’s most respected and innovative automotive manufacturers.",
@@ -86,7 +86,7 @@ MAHY Khoory Automotive is committed to combining engineering excellence, advance
 Through a customer centric culture, professional expertise, and a fully integrated sales to service ecosystem, we aim to create an ownership experience defined by trust, transparency, and continuous support."
                 showButton={false}
                 invert={false}
-                image="/assets/Mission_toqp8t.jpg"
+                image="/assets/companies/details/mahy-khoory-automotive/Mission_toqp8t.jpg"
                 imageAlt="Our Mission"
             />
             <WhoWeAre
@@ -96,7 +96,7 @@ Through a customer centric culture, professional expertise, and a fully integrat
 MAHY Khoory Automotive aspires to build a nationwide network of modern automotive facilities, introduce a diverse portfolio of innovative vehicles, and set new benchmarks in quality, accessibility, and service excellence—shaping the future of mobility in alignment with the UAE’s progressive vision."
                 showButton={false}
                 invert={true}
-                image="/assets/visiion_ccccqb.webp"
+                image="/assets/companies/details/mahy-khoory-automotive/visiion_ccccqb.webp"
                 imageAlt="Our Vision"
             />
             <KitchenMenu
@@ -110,13 +110,13 @@ MAHY Khoory Automotive aspires to build a nationwide network of modern automotiv
                 heading="Products and Services"
                 tag="[ AUTOMOTIVE ]"
                 text={"MAHY Khoory Automotive delivers a fully integrated automotive offering, covering sales, after-sales, and customer support:"}
-                backgroundImage="/assets/visiion_ccccqb.webp"
+                backgroundImage="/assets/companies/details/mahy-khoory-automotive/visiion_ccccqb.webp"
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
                 textPosition="left"
-                image="/assets/car-is-moving-up-graph-with-yellow-arrow-pointing-up_m85bck.jpg"
+                image="/assets/companies/details/mahy-khoory-automotive/car-is-moving-up-graph-with-yellow-arrow-pointing-up_m85bck.jpg"
                 
             />
         </main>

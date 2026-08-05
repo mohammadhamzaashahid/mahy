@@ -41,7 +41,7 @@ function OpportunitiesPage() {
       <SubPageHeading
         title={"Career Opportunities"}
         image={
-          "/assets/career-oppurtunities_lyub4o.jpg"
+          "/assets/careers/opportunities/career-oppurtunities_lyub4o.jpg"
         }
         fullHeight
       />
@@ -50,7 +50,7 @@ function OpportunitiesPage() {
           items={items}
           text1="4200"
           text2="Employees"
-          images={["/assets/businessman-climbed-stairs-double-exposure-with-new-york-office-buildings-night-concept-business-achievement-goal-leadership.jpg_z9q04v.jpg", "/assets/businessman-analyzing-data-computer-screen.jpg_nynwvg.jpg"]}
+          images={["/assets/careers/opportunities/businessman-climbed-stairs-double-exposure-with-new-york-office-buildings-night-concept-business-achievement-goal-leadership.jpg_z9q04v.jpg", "/assets/careers/opportunities/businessman-analyzing-data-computer-screen.jpg_nynwvg.jpg"]}
         />
       </div>
     </main>

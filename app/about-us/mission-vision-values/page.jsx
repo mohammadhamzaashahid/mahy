@@ -16,8 +16,8 @@ async function MissionVisionValues() {
 
   return (
     <main className="bg-gray-50">
-     <AboutUsSection image="/assets/young-company-colleagues-sitting-row-talking-each-other.jpg"/>
-     <MissionVisionSection image="/assets/designer-concept_axdjf2.jpg"/>
+     <AboutUsSection image="/assets/about-us/mission-vision-values/young-company-colleagues-sitting-row-talking-each-other.jpg"/>
+     <MissionVisionSection image="/assets/about-us/mission-vision-values/designer-concept_axdjf2.jpg"/>
     </main>
   );
 }

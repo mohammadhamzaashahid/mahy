@@ -25,7 +25,7 @@ export default function GovernancePage() {
         eyebrow="Discover More"
         title="MAHY Khoory Center"
         description="Find out more about MAHY events, read the latest media announcements and publications, or access our video and image gallery via the MAHY Media Centre."
-        image="/assets/woman-reading-diagrams-tablet-device-helped-by-specialist.jpg_epm3nu.jpg"
+        image="/assets/about-us/health-safety-environment/woman-reading-diagrams-tablet-device-helped-by-specialist.jpg_epm3nu.jpg"
       />
       <InfoNavigationSection />
     </main>

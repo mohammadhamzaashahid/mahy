@@ -16,8 +16,8 @@ function HoldingOverviewPage() {
         fullHeight
         title={"Holding Company Overview"}
         image={
-          //   "/assets/holding-overview-page.jpg_norjia.jpg"
-          "/assets/empty-corporate-boardroom-with-documents-city-skyline-twilight.jpg_bhsoze.jpg"
+          //   "/assets/shared/holding-overview-page.jpg_norjia.jpg"
+          "/assets/companies/holding-overview/empty-corporate-boardroom-with-documents-city-skyline-twilight.jpg_bhsoze.jpg"
         }
       />
       <CompanyTextGrid
@@ -52,7 +52,7 @@ function HoldingOverviewPage() {
 
       <section className="relative w-full h-[65vh] md:h-[85vh] overflow-hidden">
         <Image
-          src="/assets/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
+          src="/assets/shared/urban-business-growth-financial-success.jpg_bnuzqg.jpg"
           alt="Business Growth"
           fill
           className="object-cover object-center"

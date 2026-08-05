@@ -35,12 +35,12 @@ async function Shop({ searchParams }) {
     const t = await getTranslations("ShopPage");
 
     const topFilters = [
-        { key: "ariston", label: "Ariston", text: t("Filter1Text"), image: "/assets/Picture1_ld0xap.png" },
-        { key: "crane", label: "Crane", text: t("Filter2Text"), image: "/assets/valve_converted_xgfz0v.png" },
-        { key: "dewalt", label: "Dewalt Tools", text: t("Filter4Text"), image: "/assets/61oaKFTEUJL._AC_SL1200__awsn9m.png" },
-        { key: "franklin", label: "Franklin Motors", text: t("Filter5Text"), image: "/assets/Picture1_uvoma3.png" },
-        { key: "globalWater", label: "Global Water Solutions", text: t("Filter6Text"), image: "/assets/Picture1_yiezev.png" },
-        { key: "grundfos", label: "Grundfos Pumps", text: t("Filter7Text"), image: "/assets/Picture1_eivc8u.png" },
+        { key: "ariston", label: "Ariston", text: t("Filter1Text"), image: "/assets/shop/Picture1_ld0xap.png" },
+        { key: "crane", label: "Crane", text: t("Filter2Text"), image: "/assets/shop/valve_converted_xgfz0v.png" },
+        { key: "dewalt", label: "Dewalt Tools", text: t("Filter4Text"), image: "/assets/shop/61oaKFTEUJL._AC_SL1200__awsn9m.png" },
+        { key: "franklin", label: "Franklin Motors", text: t("Filter5Text"), image: "/assets/shop/Picture1_uvoma3.png" },
+        { key: "globalWater", label: "Global Water Solutions", text: t("Filter6Text"), image: "/assets/shop/Picture1_yiezev.png" },
+        { key: "grundfos", label: "Grundfos Pumps", text: t("Filter7Text"), image: "/assets/shop/Picture1_eivc8u.png" },
     ];
 
     const { items, cookieKey, stored, total, totalPages } = await getNewProducts(brand, Number(page), category, Number(price_min), Number(price_max));

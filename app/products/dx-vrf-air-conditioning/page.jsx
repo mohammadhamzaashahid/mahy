@@ -130,11 +130,11 @@ function DxArfAirConditioningPage() {
         // description={
         //   "Global Water Solutions Pressure Tanks are engineered to ensure efficient pressure control, system stability, and long service life in water supply applications. Designed for consistent performance, these tanks support smooth operation of pumps and water networks."
         // }
-        image="/assets/air-conditioner-air-conditioning-system-industrial-house-generative-ai-illustrator_zl8nyt.jpg"
+        image="/assets/products/dx-vrf-air-conditioning/air-conditioner-air-conditioning-system-industrial-house-generative-ai-illustrator_zl8nyt.jpg"
       />
       <TrustedAdvisorSection
       object="Employees"
-      images={["/assets/1_xdkma2.png", "/assets/2_famb09.png"]}
+      images={["/assets/products/dx-vrf-air-conditioning/1_xdkma2.png", "/assets/products/dx-vrf-air-conditioning/2_famb09.png"]}
         heading=""
         texts={[
           "Our Air Conditioning Division provides a complete range of DX (Direct Expansion) and VRF (Variable Refrigerant Flow) systems engineered for high performance, energy efficiency, and long-term reliability. Designed for residential, commercial, and industrial applications, our solutions ensure optimal indoor comfort even in the harsh climatic conditions of the UAE.",
@@ -144,18 +144,18 @@ function DxArfAirConditioningPage() {
       />
       <WasteCollectionMenu
     
-      image="/assets/air-conditioning_zoherk.png"
+      image="/assets/products/dx-vrf-air-conditioning/air-conditioning_zoherk.png"
         heading="Product-Oriented Features"
         tabs={tabItems.map((item) => item.title)}
         items={tabItems.map((item) => featuresElement({ item }))}
       />
       <SolarPanelInstallationsGrid
-      images={["/assets/4_pbropg.png", "/assets/3_nlkrvm.png", "/assets/5_hjecz7.png"]}
+      images={["/assets/products/dx-vrf-air-conditioning/4_pbropg.png", "/assets/products/dx-vrf-air-conditioning/3_nlkrvm.png", "/assets/products/dx-vrf-air-conditioning/5_hjecz7.png"]}
         heading="Service-Oriented Offerings"
         items={serviceOfferings}
           icon={<HiOutlinePlus size={30} color="white" />}
       />
-      <WhyUs items={applications} reverse={true} image="/assets/6_hey3gy.png" />
+      <WhyUs items={applications} reverse={true} image="/assets/products/dx-vrf-air-conditioning/6_hey3gy.png" />
     </main>
   );
 }

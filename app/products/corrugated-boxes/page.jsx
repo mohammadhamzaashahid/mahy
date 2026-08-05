@@ -134,15 +134,15 @@ const features = [
         // description={
         //   "Global Water Solutions Pressure Tanks are engineered to ensure efficient pressure control, system stability, and long service life in water supply applications. Designed for consistent performance, these tanks support smooth operation of pumps and water networks."
         // }
-        image="/assets/corrugated-boxes-1_hjkemf.png"
+        image="/assets/products/corrugated-boxes/corrugated-boxes-1_hjkemf.png"
       />
       <SolarPanelInstallationsGrid
         text="Our high-quality corrugated boxes are available in a comprehensive range of sizes, flute profiles, board grades, and customization options, designed to meet the diverse packaging needs of industrial, commercial, and retail sectors across the UAE. Manufactured using premium kraft liners, high-strength fluting paper, and environmentally responsible raw materials, these cartons offer excellent durability, crush resistance, and printability—ensuring superior product protection and brand presentation."
         items={features}
         images={[
-          "/assets/corrugated-boxes-2_fqyd2m.png",
-          "/assets/corrugated-boxes-3_e43tje.jpg",
-          "/assets/corrugated-boxes-4_dtlvfc.jpg"
+          "/assets/products/corrugated-boxes/corrugated-boxes-2_fqyd2m.png",
+          "/assets/products/corrugated-boxes/corrugated-boxes-3_e43tje.jpg",
+          "/assets/products/corrugated-boxes/corrugated-boxes-4_dtlvfc.jpg"
         ]}
       />
       <ServicesSection title="Applications" items={applications} />

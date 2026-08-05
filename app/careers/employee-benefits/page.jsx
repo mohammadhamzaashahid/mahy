@@ -15,13 +15,13 @@ function EmployeeBenefitsPage() {
         title={"Employee Benefits"}
         fullHeight
         image={
-          "/assets/employee-benefits.jpg_czxz7n.jpg"
+          "/assets/careers/employee-benefits/employee-benefits.jpg_czxz7n.jpg"
         }
       />
       <section className="max-w-7xl mx-auto px-5 py-8 md:py-12">
         <CompaniesSectors
           image={
-            "/assets/young-smiling-professional-woman-having-coffee-break-her-full-working-day-she-holds-paper-cup-outdoors-near-business-building-while-relaxing-enjoying-her-beverage.jpg_pqypyo.jpg"
+            "/assets/careers/employee-benefits/young-smiling-professional-woman-having-coffee-break-her-full-working-day-she-holds-paper-cup-outdoors-near-business-building-while-relaxing-enjoying-her-beverage.jpg_pqypyo.jpg"
           }
           title={""}
           texts={[

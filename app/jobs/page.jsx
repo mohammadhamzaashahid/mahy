@@ -32,7 +32,7 @@ async function Jobs({ searchParams }) {
             <PageHeading
                 title={t("Heading")}
                 description={t("SubHeading")}
-                image={"/assets/careers_samv9o.webp"}
+                image={"/assets/shared/careers_samv9o.webp"}
             />
             <Breadcrumb
                 segments={[{ label: t2("Page"), href: "/careers" }, { label: t("Page"), href: "/jobs" }]}

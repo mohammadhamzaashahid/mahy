@@ -15,7 +15,7 @@ function LifeAtMahyPage() {
         fullHeight
         title={"Life at MAHY Khoory Group"}
         image={
-          "/assets/outdoor-network.jpg_ycbhvz.jpg"
+          "/assets/careers/life-at-mahy/outdoor-network.jpg_ycbhvz.jpg"
         }
       />
       <TrustedAdvisorSection
@@ -28,8 +28,8 @@ function LifeAtMahyPage() {
           "At MAHY Khoory Group, life is defined by professional growth, operational excellence, and long-term partnership. We are committed to maintaining an environment where employees feel secure, respected, and motivated to grow alongside the organization.",
         ]}
         images={[
-          "/assets/two-business-colleagues-working-project-while-sitting-outdoors-skyscrapers-background_xafkju.jpg",
-          "/assets/business-people-talking-break-time-standing-background-modern-city-skyscrapers_ee9zan.jpg",
+          "/assets/careers/life-at-mahy/two-business-colleagues-working-project-while-sitting-outdoors-skyscrapers-background_xafkju.jpg",
+          "/assets/shared/business-people-talking-break-time-standing-background-modern-city-skyscrapers_ee9zan.jpg",
         ]}
       />
     </main>

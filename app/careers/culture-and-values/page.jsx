@@ -15,7 +15,7 @@ function CultureAndValuesPage() {
         fullHeight
         title={"Our Culture & Values"}
         image={
-          "/assets/startup-diverse-international-businesspeople-shaking-hands.jpg_ibbnzw.jpg"
+          "/assets/careers/culture-and-values/startup-diverse-international-businesspeople-shaking-hands.jpg_ibbnzw.jpg"
         }
         description={
           "At MAHY Khoory Group, our culture is built on a strong foundation of integrity, accountability, and operational discipline. As a diversified holding organization operating across 25 companies and multiple industries, we maintain a unified corporate culture that ensures consistency, professionalism, and high performance across all business units."
@@ -23,7 +23,7 @@ function CultureAndValuesPage() {
       />
       <div className="my-8">
         <SolarPanelQuoteGrid
-          image="/assets/businessman-summer-city-with-three-women.jpg_wriu63.jpg"
+          image="/assets/shared/businessman-summer-city-with-three-women.jpg_wriu63.jpg"
           text="Integrity is at the core of everything we do. We uphold transparency in our operations, ethical conduct in our decision-making, and responsibility in our commitments to clients, partners, and employees. We believe that long-term success is achieved through trust, compliance, and adherence to structured governance frameworks."
           text2="Accountability is embedded in our daily operations. Every role within the organization carries clearly defined responsibilities and measurable performance expectations. We promote ownership of tasks, proactive problem-solving, and results-driven execution at every level of the group."
           items={[

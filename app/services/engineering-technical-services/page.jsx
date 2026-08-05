@@ -13,7 +13,7 @@ export const metadata = {
   alternates: { canonical: "/services/engineering-technical-services" },
 };
 
-function PumpingSystemServicesPage() {
+function EngineeringTechnicalServices() {
   return (
     <main>
       <SubPageHeading
@@ -22,7 +22,7 @@ function PumpingSystemServicesPage() {
         description={
           "Reliable pumping system services delivering optimal performance and long-term efficiency. From installation to maintenance, we ensure smooth and uninterrupted operations."
         }
-        image={"/assets/data-center-admins-monitoring-artificial-intelligence-llm-visualization.jpg_x17h5t.jpg"}
+        image={"/assets/services/engineering-technical-services/data-center-admins-monitoring-artificial-intelligence-llm-visualization.jpg_x17h5t.jpg"}
       />
       <FeaturesEngineeringSection />
       <OfferingsSection/>
@@ -33,4 +33,4 @@ function PumpingSystemServicesPage() {
   );
 }
 
-export default PumpingSystemServicesPage;
+export default EngineeringTechnicalServices;

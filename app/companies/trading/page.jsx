@@ -18,19 +18,19 @@ function TradingPage() {
       <SubPageHeading
         fullHeight
         title="Trading"
-        // image="/assets/Code_of_Conduct.jpg_qjqqzs.jpg"
+        // image="/assets/shared/Code_of_Conduct.jpg_qjqqzs.jpg"
         image={
-          "/assets/business-meeting-office.jpg_ubgwsk.jpg"
+          "/assets/companies/trading/business-meeting-office.jpg_ubgwsk.jpg"
         }
         align="center"
       />
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "/assets/working-through-meeting-agenda-like-pros-shot-team-executives-having-formal-meeting-boardroom.jpg_nlnvae.jpg"
+            "/assets/companies/trading/working-through-meeting-agenda-like-pros-shot-team-executives-having-formal-meeting-boardroom.jpg_nlnvae.jpg"
           }
           image2={
-            "/assets/business-meeting-office_c8qylz.jpg"
+            "/assets/companies/trading/business-meeting-office_c8qylz.jpg"
           }
           title={"Trading"}
           texts={[

@@ -15,10 +15,8 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  output: "standalone",
   images: {
-    // Images are now served locally from /public/assets (synced to the VPS
-    // and fronted by Nginx). Local paths need no remotePatterns; next/image
-    // still optimizes them (WebP/AVIF, responsive) via sharp on the server.
     formats: ["image/avif", "image/webp"],
   },
   experimental: {

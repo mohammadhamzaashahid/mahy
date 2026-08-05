@@ -19,7 +19,7 @@ const defaultItems = [
     desc:
       "Lorem ipsum dolor sit amet consectetur. Id purus enim diam felis. Pharetra ut posuere sem vitae dui nec velit.",
     image:
-      "/assets/gallery-1_exhyck.jpg",
+      "/assets/shared/gallery-1_exhyck.jpg",
   },
   {
     no: "02",
@@ -27,7 +27,7 @@ const defaultItems = [
     desc:
       "Lorem ipsum dolor sit amet consectetur. Id purus enim diam felis. Pharetra ut posuere sem vitae dui nec velit.",
     image:
-      "/assets/gallery-2_qwc2me.jpg",
+      "/assets/products/corrugated-paper-reels/gallery-2_qwc2me.jpg",
   },
   {
     no: "03",
@@ -35,7 +35,7 @@ const defaultItems = [
     desc:
       "Lorem ipsum dolor sit amet consectetur. Id purus enim diam felis. Pharetra ut posuere sem vitae dui nec velit.",
     image:
-      "/assets/gallery-3_exvuhu.jpg",
+      "/assets/products/corrugated-paper-reels/gallery-3_exvuhu.jpg",
   },
   {
     no: "04",
@@ -43,7 +43,7 @@ const defaultItems = [
     desc:
       "Lorem ipsum dolor sit amet consectetur. Id purus enim diam felis. Pharetra ut posuere sem vitae dui nec velit.",
     image:
-      "/assets/gallery-4_oxzrpw.jpg",
+      "/assets/products/corrugated-paper-reels/gallery-4_oxzrpw.jpg",
   },
 ];
 

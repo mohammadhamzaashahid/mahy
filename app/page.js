@@ -108,86 +108,7 @@ export default async function Home() {
     t("FloatingMenu.Item6"),
     t("FloatingMenu.Item7"),
   ];
-  // const advantages = {
-  //   heading: t("Advantages.Heading"),
-  //   text1: t("Advantages.Text1"),
-  //   text2: t("Advantages.Text2"),
-  //   items: [
-  //     {
-  //       title: t("Advantages.Title1"),
-  //       heading: t("Advantages.Heading1"),
-  //       description: t("Advantages.Description1"),
-  //     },
-  //     {
-  //       title: t("Advantages.Title2"),
-  //       heading: t("Advantages.Heading2"),
-  //       description: t("Advantages.Description2"),
-  //     },
-  //     {
-  //       title: t("Advantages.Title3"),
-  //       description: t("Advantages.Description3"),
-  //     },
-  //     {
-  //       title: t("Advantages.Title4"),
-  //       description: t("Advantages.Description4"),
-  //     },
-  //     {
-  //       title: t("Advantages.Title5"),
-  //       description: t("Advantages.Description5"),
-  //     },
-  //   ],
-  // };
-  // const announcements = [
-  //   {
-  //     heading: t("Announcements.Heading1"),
-  //     title: t("Announcements.Title1"),
-  //     text: t("Announcements.Text1"),
-  //   },
-  //   {
-  //     heading: t("Announcements.Heading2"),
-  //     title: t("Announcements.Title2"),
-  //     text: t("Announcements.Text2"),
-  //     img: "/gallery/gallery-7.webp",
-  //   },
-  //   {
-  //     heading: t("Announcements.Heading3"),
-  //     title: t("Announcements.Title3"),
-  //     text: t("Announcements.Text3"),
-  //     img: "/gallery/gallery-8.jpeg",
-  //   },
-  //   {
-  //     heading: t("Announcements.Heading4"),
-  //     title: t("Announcements.Title4"),
-  //     text: t("Announcements.Text4"),
-  //     img: "/gallery/gallery-9.jpeg",
-  //   },
-  //   {
-  //     heading: t("Announcements.Heading5"),
-  //     title: t("Announcements.Title5"),
-  //     text: t("Announcements.Text5"),
-  //     img: "/gallery/gallery-4.jpg",
-  //   },
-  //   {
-  //     heading: t("Announcements.Heading6"),
-  //     title: t("Announcements.Title6"),
-  //     text: t("Announcements.Text6"),
-  //     img: "/gallery/gallery-5.jpg",
-  //   },
-  //   {
-  //     heading: t("Announcements.Heading7"),
-  //     title: t("Announcements.Title7"),
-  //     text: t("Announcements.Text7"),
-  //     img: "/gallery/gallery-6.jpg",
-  //   },
-  //   {
-  //     heading: t("Announcements.Heading8"),
-  //     title: t("Announcements.Title8"),
-  //     text: t("Announcements.Text8"),
-  //   },
-  // ];
-  // const articleTranslations = await getTranslations("Articles");
-  // const articles = await getArticles(0, 4, articleTranslations);
-
+  
 
   return (
     <main className="bg-white min-h-screen overflow-x-hidden">
@@ -204,7 +125,7 @@ export default async function Home() {
       <section id="who-we-are">
         <WhoWeAre
           image={
-            "/assets/office_jaeuiz.webp"
+            "/assets/shared/office_jaeuiz.webp"
           }
           padding="xl"
         />

@@ -18,7 +18,7 @@ function IndusteriesPage() {
         description={
           "We operate across diverse industries, delivering reliable solutions tailored to evolving market needs. Our expertise spans technology, infrastructure, energy, and industrial sectors. We help organizations enhance efficiency, sustainability, and long-term growth."
         }
-        image={"/assets/group-young-modern-people-smart-casual-wear-communicating-using-modern-technologies-while-working-office.jpg_1_i2je89.jpg"}
+        image={"/assets/industries/group-young-modern-people-smart-casual-wear-communicating-using-modern-technologies-while-working-office.jpg_1_i2je89.jpg"}
       />
       <CompaniesList />
       <section className="max-w-7xl mx-auto px-5 py-14 border-t border-gray-100">

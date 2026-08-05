@@ -16,24 +16,24 @@ function PearlMarinaPage() {
     const features = [
         {
             text: "Fully furnished apartments with equipped kitchens or kitchenettes",
-            image: "/assets/collezioni-opera-02-pg199_vbgmzu.jpg",
+            image: "/assets/companies/details/pearl-marina/collezioni-opera-02-pg199_vbgmzu.jpg",
         },
         {
             text: "Spacious living and dining areas with private balconies",
-            image: "/assets/Spacious_living_and_dining_azzfj9.jpg",
+            image: "/assets/companies/details/pearl-marina/Spacious_living_and_dining_azzfj9.jpg",
             objectFit: "contain",
         },
         {
             text: "24-hour front desk and concierge services",
-            image: "/assets/traveller-calling-hotel-concierge_mlmxzp.jpg",
+            image: "/assets/shared/traveller-calling-hotel-concierge_mlmxzp.jpg",
         },
         {
             text: "Daily housekeeping and laundry support",
-            image: "/assets/Hospitality-2_onqzpn.jpg",
+            image: "/assets/companies/details/pearl-marina/Hospitality-2_onqzpn.jpg",
         },
         {
             text: "On-site dining options",
-            image: "/assets/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_w7r5es.jpg",
+            image: "/assets/shared/croissant-boiled-egg-orange-juice-yogurt-breakfast-tray-bed-hotel-room_w7r5es.jpg",
         }
     ];
     const adpmCardsData = [
@@ -89,8 +89,8 @@ function PearlMarinaPage() {
     return (
         <main>
             <CompanyOverview
-            video={"/assets/Video_Project_17_vz30mp.mp4"}             
-                // image="/assets/ChatGPT_Image_Feb_5_2026_11_42_00_AM_pglvjk.png"
+            video={"/assets/companies/details/pearl-marina/Video_Project_17_vz30mp.mp4"}             
+                // image="/assets/companies/details/pearl-marina/ChatGPT_Image_Feb_5_2026_11_42_00_AM_pglvjk.png"
                 heading="Pearl Marina Hotel Apartments"
                 texts={[
                     "Pearl Marina Hotel Apartments is a boutique hospitality property located in the heart of Dubai Marina, offering upscale, fully furnished serviced apartments designed for both short- and long-term stays. Operated as part of the MAHY Khoory Group’s hospitality portfolio, the property combines contemporary elegance with the dynamic lifestyle of Dubai’s Marina waterfront.",
@@ -108,7 +108,7 @@ function PearlMarinaPage() {
                 text="The property is well suited to business travelers and corporate clients, offering dedicated business services, meeting rooms, and conference facilities. These amenities support executives, project teams, and long-stay corporate guests requiring a professional yet comfortable accommodation environment."
                 showButton={false}
                 invert={false}
-                image="/assets/lobby-with-large-lobby-with-large-chandelier-plant-center_pznxim.jpg"
+                image="/assets/shared/lobby-with-large-lobby-with-large-chandelier-plant-center_pznxim.jpg"
                 imageAlt="Business and Corporate Facilities"
             />
             <PumpingServiceCards
@@ -116,13 +116,13 @@ function PearlMarinaPage() {
                 heading="Target Market and Guest Segments"
                 tag="[ PEARL MARINA ]"
                 text={"Pearl Marina Hotel Apartments serves a diverse clientele, including:"}
-                backgroundImage="/assets/valeriia-bugaiova-_pPHgeHz1uk-unsplash_oqslxo.jpg"
+                backgroundImage="/assets/companies/details/pearl-marina/valeriia-bugaiova-_pPHgeHz1uk-unsplash_oqslxo.jpg"
                 endText={"Its strategic location near Dubai Internet City, Dubai Media City, major commercial districts, retail destinations, beaches, and leisure attractions makes it highly attractive to both regional and international guests."}
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="/assets/businessman-summer-city-with-three-women.jpg_wriu63.jpg"
+                image="/assets/shared/businessman-summer-city-with-three-women.jpg_wriu63.jpg"
             />
         </main>
     )

@@ -12,7 +12,7 @@ function RecruitmentProcessPage() {
     const items = [
         {
             label: "Structured & Professional Evaluation",
-            image: "/assets/Dubai_business_district_at_night_with_illuminated_skyscrapers.jpg_inqewf.jpg",
+            image: "/assets/careers/recruitment-process/Dubai_business_district_at_night_with_illuminated_skyscrapers.jpg_inqewf.jpg",
             items: [
                 {
                     title: "Structured & Professional Evaluation",
@@ -22,7 +22,7 @@ function RecruitmentProcessPage() {
         },
         {
             label: "Department & HR Assessment",
-            image: "/assets/corporate_workspace_with_a_sleek_desk_displaying_organized_documents.jpg_h6ggoy.jpg",
+            image: "/assets/careers/recruitment-process/corporate_workspace_with_a_sleek_desk_displaying_organized_documents.jpg_h6ggoy.jpg",
             items: [
                 {
                     title: "Department & HR Assessment",
@@ -32,7 +32,7 @@ function RecruitmentProcessPage() {
         },
         {
             label: "Offer & Onboarding",
-            image: "/assets/corporate_office_desk_with_a_formal_employment_offer_letter_placed.jpg_xuuxei.jpg",
+            image: "/assets/careers/recruitment-process/corporate_office_desk_with_a_formal_employment_offer_letter_placed.jpg_xuuxei.jpg",
             items: [
                 {
                     title: "Offer & Onboarding",
@@ -46,7 +46,7 @@ function RecruitmentProcessPage() {
             <SubPageHeading
             fullHeight
                 title={"Recruitment Process"}
-                image={"/assets/customer-relationship-management-concept-with-global-structure-human-resources-hr-management-recruit.jpg_hgiy6w.jpg"}
+                image={"/assets/careers/recruitment-process/customer-relationship-management-concept-with-global-structure-human-resources-hr-management-recruit.jpg_hgiy6w.jpg"}
             />
             <CompanyVisionPurpose
                 heading="Recruitment Process"

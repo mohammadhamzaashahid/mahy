@@ -42,7 +42,7 @@ function AkasFansPage() {
           "Ideal for kitchens, bathrooms, warehouses, workshops, and industrial facilities, AKAS & RYNE fans combine high airflow capacity with efficient energy usage. Their robust construction and precision-balanced motors ensure quiet operation, stable performance, and extended service life, even under continuous operation."
         }
         image={
-          "/assets/fans_kihc0c.jpg"
+          "/assets/products/akas-ryne-ventilation-fans/fans_kihc0c.jpg"
         }
       /> */}
 
@@ -51,10 +51,10 @@ function AkasFansPage() {
         description={
           "AKAS & RYNE Ventilation Fans are engineered to deliver powerful air movement, reliable performance, and long-term durability across residential, commercial, and industrial environments. Designed with advanced airflow technology, these fans ensure effective removal of heat, moisture, smoke, and odors—creating healthier and more comfortable indoor spaces."
         }
-        image="/assets/ventilation-fans-1_vawdoy.jpg"
+        image="/assets/products/akas-ryne-ventilation-fans/ventilation-fans-1_vawdoy.jpg"
       />
       <KitchenItems
-        image="/assets/ventilation-fans-2_eni0zu.png"
+        image="/assets/products/akas-ryne-ventilation-fans/ventilation-fans-2_eni0zu.png"
         heading="AKAS & RYNE Ventilation Fans"
         text="With a focus on safety, efficiency, and performance, AKAS & RYNE Ventilation Fans support proper air circulation and compliance with ventilation standards, making them a dependable choice for both small-scale installations and large commercial projects."
         title="Key Highlights"

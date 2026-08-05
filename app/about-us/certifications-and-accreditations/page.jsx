@@ -20,7 +20,7 @@ function CapabilitiesPage() {
         fullHeight
         title={"Awards, Certifications & Accreditations"}
         image={
-          "/assets/certifications-and-accreditations_a2ssqq.jpg"
+          "/assets/about-us/certifications-and-accreditations/certifications-and-accreditations_a2ssqq.jpg"
         }
       />
 
@@ -103,7 +103,7 @@ export default CapabilitiesPage;
 //       fullHeight
 //         title={"Awards, Certifications & Accreditiations"}
 //         // description={"Our key capabilities and expertise span strategic planning, advanced technology integration, and operational excellence. We deliver tailored solutions through deep industry knowledge, innovation-driven processes, and skilled teams. This enables us to consistently achieve high-quality outcomes and long-term value for our partners."}
-//         image={"/assets/certifications-and-accreditations_a2ssqq.jpg"}
+//         image={"/assets/about-us/certifications-and-accreditations/certifications-and-accreditations_a2ssqq.jpg"}
 //       />
 //       <section className="bg-[#ffffff] py-24">
 //         <div className="mx-auto max-w-7xl px-6">

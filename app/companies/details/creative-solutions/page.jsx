@@ -19,7 +19,7 @@ function CreativeSolutionsPage() {
     const services = [
         {
             text: "Green-building assessments and certification advisory",
-            image: "/assets/green_building-2_ei71gx.jpg",
+            image: "/assets/companies/details/creative-solutions/green_building-2_ei71gx.jpg",
         },
         // {
         //     text: "LEED, WELL, ESTIDAMA, and Dubai Green Building compliance",
@@ -27,21 +27,21 @@ function CreativeSolutionsPage() {
         // },
         {
             text: "Energy audits and performance benchmarking",
-            image: "/assets/energy_audits_qsb37r.jpg",
+            image: "/assets/companies/details/creative-solutions/energy_audits_qsb37r.jpg",
         },
         {
             text: "Energy and water modeling and optimization",
             objectFit: "contain",
-            image: "/assets/Energy_and_water_modeling_am6bpz.jpg",
+            image: "/assets/companies/details/creative-solutions/Energy_and_water_modeling_am6bpz.jpg",
         },
         {
             text: "Mechanical and electrical system commissioning",
             objectFit: "contain",
-            image: "/assets/mechanical_and_electrical_system_sqknrp.jpg",
+            image: "/assets/companies/details/creative-solutions/mechanical_and_electrical_system_sqknrp.jpg",
         },
         {
             text: "Post-occupancy performance monitoring",
-            image: "/assets/Performance_monitoring_ral6mx.jpg",
+            image: "/assets/companies/details/creative-solutions/Performance_monitoring_ral6mx.jpg",
         }
     ];
     const cards = [
@@ -101,8 +101,8 @@ function CreativeSolutionsPage() {
     return (
         <main>
             <CompanyOverview
-            video={"/assets/Video_Project_19_k9zzvb.mp4"}
-                // image="/assets/office_jaeuiz.webp"
+            video={"/assets/companies/details/creative-solutions/Video_Project_19_k9zzvb.mp4"}
+                // image="/assets/shared/office_jaeuiz.webp"
                 heading="Creative Solutions Green Building Consultancy"
                 texts={[
                     "Creative Solutions Green Building Consultancy is MAHY Khoory Group’s specialized sustainability and green-building advisory arm, established to support environmentally responsible design, energy efficiency, and high-performance building operations. The consultancy integrates architectural insight with environmental and energy engineering expertise to help clients achieve internationally recognized green-building standards.",
@@ -119,13 +119,13 @@ function CreativeSolutionsPage() {
                 heading="Markets and Client Sectors"
                 text={"Creative Solutions serves clients across:"}
                 tag="[ CREATIVE SOLUTIONS ]"
-                backgroundImage="/assets/man-standing-road-front-skyscraper-sunset_y5zykp.jpg"
+                backgroundImage="/assets/shared/man-standing-road-front-skyscraper-sunset_y5zykp.jpg"
                 endText={""}
             />
             <FeaturesEngineeringSection
                 heading="Company Overview"
                 items={overview}
-                image="/assets/magnified-analysis-data-graphs-monitoring-screen_ju82mb.jpg"
+                image="/assets/companies/details/creative-solutions/magnified-analysis-data-graphs-monitoring-screen_ju82mb.jpg"
             />
         </main>
     )

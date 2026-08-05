@@ -40,24 +40,24 @@ function MahyKhooryGroupPage() {
     
     {
       text: "Advanced Automated Manufacturing Facilities",
-      image: "/assets/Manufactring_hsht41.jpg",
+      image: "/assets/companies/details/mahy-khoory-group/Manufactring_hsht41.jpg",
     },
     {
       text: "Centralized & Regional Warehousing",
-      image: "/assets/Engineering_k7gzg4.jpg",
+      image: "/assets/companies/details/mahy-khoory-group/Engineering_k7gzg4.jpg",
     },
     {
       text: "Specialized Workshops & Technical Capabilities",
-      image: "/assets/3_a8sput.jpg",
+      image: "/assets/companies/details/mahy-khoory-group/3_a8sput.jpg",
     },
     {
       text: "Integrated Logistics & Supply Chain Network",
-      image: "/assets/transp_mqqea6.jpg",
+      image: "/assets/companies/details/mahy-khoory-group/transp_mqqea6.jpg",
     },
     // {
     //   text: "Headquartered in Dubai, the MAHY Khoory Group maintains a strong operational footprint across the United Arab Emirates, with offices, warehouses, manufacturing facilities, and service centers in Abu Dhabi, Al Ain, Sharjah, and Ras Al Khaimah. Beyond the UAE, the Group serves customers and supports projects in more than 29 countries, spanning the GCC, Africa, and South Asia. This geographic reach allows the Group to combine deep local market knowledge with the capability to support regional and international projects of varying scale and complexity.",
     //   // text: "By leveraging its established expertise across pumping systems, electromechanical solutions, recycling, and environmental services, the MAHY Khoory Group is well positioned to deliver sustainable long-term value for customers, partners, and stakeholders.",
-    //   image: "/assets/Waste_Management_s1kndw.jpg",
+    //   image: "/assets/companies/details/mahy-khoory-group/Waste_Management_s1kndw.jpg",
     // }
   ];
   const overview = [
@@ -90,8 +90,8 @@ function MahyKhooryGroupPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
       <CompanyOverview
-      video={"/assets/Large-Industrial-Pumping-Structure-Releasing-Waste-2025-12-09-08-06-36-Utc_heqlt4.mp4"}
-        // image="/assets/office_jaeuiz.webp"
+      video={"/assets/companies/details/mahy-khoory-group/Large-Industrial-Pumping-Structure-Releasing-Waste-2025-12-09-08-06-36-Utc_heqlt4.mp4"}
+        // image="/assets/shared/office_jaeuiz.webp"
         heading="MAHY Khoory Group"
         texts={[
           "M.A.H.Y. Khoory & Co. LLC is the holding company of the MAHY Khoory Group, a diversified enterprise group headquartered in Dubai with a distinguished heritage dating back to 1930. Over more than nine decades, the Group has grown from a pioneering entrepreneurial venture into a well-established organization with a strong reputation for technical expertise, operational reliability, and long-term value creation across the Middle East and selected international markets.",
@@ -115,7 +115,7 @@ function MahyKhooryGroupPage() {
       <FeaturesEngineeringSection
         heading="Company Overview"
         items={overview}
-        image="/assets/Copilot_20260425_153801_nxlyei.png"
+        image="/assets/companies/details/mahy-khoory-group/Copilot_20260425_153801_nxlyei.png"
       />
     </main>
   );

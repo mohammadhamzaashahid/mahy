@@ -34,7 +34,7 @@ async function StrategicPartnershipsPage() {
             heading: "Global Brands & Local Expertise",
             text1: "Through strategic alliances with internationally recognized manufacturers and suppliers, MAHY Khoory Group brings proven technologies, products, and systems to local and regional markets. These partnerships are strengthened by the Group's deep local market knowledge, operational infrastructure, and technical capabilities.",
             text2: "By combining global expertise with local execution, we ensure that solutions are relevant, compliant, and tailored to customer requirements.",
-            img: "/assets/building-organization-uncertainty-choice-abstract-risk.jpg_xurfli.jpg"
+            img: "/assets/about-us/partners/building-organization-uncertainty-choice-abstract-risk.jpg_xurfli.jpg"
         },
         {
             heading: "Value Creation Through Collaboration",
@@ -49,25 +49,25 @@ async function StrategicPartnershipsPage() {
                     "Joint development of customized and cost-effective solutions"
                 ]
             },
-            img: "/assets/online-research.jpg_yhmhf8.jpg"
+            img: "/assets/about-us/partners/online-research.jpg_yhmhf8.jpg"
         },
         {
             heading: "Governance & Professional Engagement",
             text1: "All strategic partnerships are governed by structured agreements, clear commercial frameworks, and defined performance standards. The Group applies strong governance, compliance, and risk management practices to ensure transparency, ethical conduct, and alignment with regulatory requirements.",
             text2: "Partners can expect professionalism, consistency, and respect in all engagements with MAHY Khoory Group.",
-            img: "/assets/group-asia-young-creative-people-smart-casual-wear-discussing-business-brainstorming.jpg_a1ejss.jpg"
+            img: "/assets/about-us/partners/group-asia-young-creative-people-smart-casual-wear-discussing-business-brainstorming.jpg_a1ejss.jpg"
         },
         {
             heading: "Commitment to Trust & Reliability",
             text1: "Trust is central to every partnership we build. MAHY Khoory Group values reliability, confidentiality, and accountability, and we take pride in honoring our commitments to partners and stakeholders.",
             text2: "Through responsible business practices and long-standing relationships, the Group continues to strengthen its partnership network and support sustainable growth across all sectors in which it operates.",
-            img: "/assets/business-partnership-successful-global-logistics.jpg_uj60m7.jpg"
+            img: "/assets/about-us/partners/business-partnership-successful-global-logistics.jpg_uj60m7.jpg"
         },
         {
             heading: t("Announcements.Heading6"),
             text1: t("Announcements.Title6"),
             text2: t("Announcements.Text6"),
-            img: "/assets/strategic-brilliance-unfolds-as-person-engages-game-chess-symbolizing-business-strategy.jpg_rchqvn.jpg"
+            img: "/assets/about-us/partners/strategic-brilliance-unfolds-as-person-engages-game-chess-symbolizing-business-strategy.jpg_rchqvn.jpg"
         }
     ];
 
@@ -78,7 +78,7 @@ async function StrategicPartnershipsPage() {
                 title={"Strategic Partnerships"}
                 description={"Strategic partnerships are a cornerstone of MAHY Khoory Group’s long-term success. Over decades of operation, the Group has built and maintained strong relationships with international manufacturers, suppliers, service providers, and business partners across multiple industries and markets."}
                 description2={"These partnerships are founded on mutual trust, transparency, and shared objectives, enabling the Group to deliver reliable products, integrated solutions, and consistent value to customers across the UAE and beyond."}
-                image={"/assets/king-leadership-reflected-victorious-chess-strategy-generated-by-ai.jpg_af3dyn.jpg"}
+                image={"/assets/about-us/partners/king-leadership-reflected-victorious-chess-strategy-generated-by-ai.jpg_af3dyn.jpg"}
             />
             <Announcements items={announcements} cta={t("Announcements.Button")} locale={locale} linknext={linknext} />
         </main>

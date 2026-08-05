@@ -17,7 +17,7 @@ export const companiesSectors = [
             "Senan Industry LLC",
             "Al Khoory Engineering",
         ],
-        image: "/assets/Manufactring_hsht41.jpg"
+        image: "/assets/companies/details/mahy-khoory-group/Manufactring_hsht41.jpg"
     },
     {
         title: "Waste Management",
@@ -37,7 +37,7 @@ export const companiesSectors = [
             "Around Continent Waste Collection",
             "Recyclable Waste Management Division",
         ],
-        image: "/assets/Waste_Management_s1kndw.jpg"
+        image: "/assets/companies/details/mahy-khoory-group/Waste_Management_s1kndw.jpg"
     },
     {
         title: "Hospitality & Food",
@@ -53,7 +53,7 @@ export const companiesSectors = [
             "Pearl Marina Hotel Apartments",
             "Market Resturant And Cafe"
         ],
-        image: "/assets/Hospitality-2_onqzpn.jpg"
+        image: "/assets/companies/details/pearl-marina/Hospitality-2_onqzpn.jpg"
     },
     {
         title: "Trading",
@@ -69,7 +69,7 @@ export const companiesSectors = [
             "MAHY Khoory Trading",
             "Pure Energy Construction LLC"
         ],
-        image: "/assets/Trading_hoeowy.jpg"
+        image: "/assets/industries/Trading_hoeowy.jpg"
     },
     {
         title: "Automotive",
@@ -84,7 +84,7 @@ export const companiesSectors = [
             "MAHY Khoory Automotive",
             "MAHY Khoory Motors",
         ],
-        image: "/assets/Automotive_q5rutz.jpg"
+        image: "/assets/industries/Automotive_q5rutz.jpg"
     },
     {
         title: "Energy Sustainability and Consulting",
@@ -98,7 +98,7 @@ export const companiesSectors = [
         companies: [
             "Creative Solutions Green Building Consultancy",
         ],
-        image: "/assets/Solar_Panel_tmy4tx.jpg"
+        image: "/assets/industries/Solar_Panel_tmy4tx.jpg"
     },
 
      {
@@ -113,7 +113,7 @@ export const companiesSectors = [
         companies: [
             "Al Khoory Engineering"
         ],
-        image: "/assets/Engineering_k7gzg4.jpg"
+        image: "/assets/companies/details/mahy-khoory-group/Engineering_k7gzg4.jpg"
     },
      {
         title: "Transportation",
@@ -127,6 +127,6 @@ export const companiesSectors = [
         companies: [
             "Greenland Transport"
         ],
-        image: "/assets/transp_mqqea6.jpg"
+        image: "/assets/companies/details/mahy-khoory-group/transp_mqqea6.jpg"
     },
 ];

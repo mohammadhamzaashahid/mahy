@@ -28,22 +28,22 @@ function AirConditioningServicesPage() {
     {
       label: "OEM Warranty Support",
       text: "Full coordination with AC brands and OEMs for warranty validation and approvals",
-      image: "/assets/air-condioning-2_flnp8z.png",
+      image: "/assets/services/air-conditioning-services/air-condioning-2_flnp8z.png",
     },
     {
       label: "Genuine Spare Parts",
       text: "Use of genuine spare parts to maintain system integrity and durability",
-      image: "/assets/air-condioning-2_flnp8z.png",
+      image: "/assets/services/air-conditioning-services/air-condioning-2_flnp8z.png",
     },
     {
       label: "Service Documentation",
       text: "Comprehensive service documentation for record-keeping and future reference",
-      image: "/assets/air-condioning-2_flnp8z.png",
+      image: "/assets/services/air-conditioning-services/air-condioning-2_flnp8z.png",
     },
     {
       label: "Minimal Disruption",
       text: "Repairs carried out with minimal disruption to residents, tenants, or operations",
-      image: "/assets/air-condioning-2_flnp8z.png",
+      image: "/assets/services/air-conditioning-services/air-condioning-2_flnp8z.png",
     },
   ];
   const processes = [
@@ -97,27 +97,27 @@ function AirConditioningServicesPage() {
       title: "Preventive Maintenance Contracts",
       text: "Preventive maintenance contracts (filter cleaning, coil washing, gas top-up, electrical checks)",
       image:
-        "/assets/electrician-with-screwdriver-repairing-air-conditioner-indoors_qv3kan.jpg",
+        "/assets/services/air-conditioning-services/electrician-with-screwdriver-repairing-air-conditioner-indoors_qv3kan.jpg",
     },
     {
       title: "Duct Cleaning & IAQ Services",
       text: "Duct cleaning & IAQ (Indoor Air Quality) improvement services",
-      image: "/assets/air-condioning-4_mbdocr.png",
+      image: "/assets/services/air-conditioning-services/air-condioning-4_mbdocr.png",
     },
     {
       title: "Thermostat Calibration & Optimization",
       text: "Thermostat calibration & control optimization",
-      image: "/assets/air-condioning-5_aesro0.jpg",
+      image: "/assets/services/air-conditioning-services/air-condioning-5_aesro0.jpg",
     },
     {
       title: "Refrigerant Leak Testing",
       text: "Refrigerant leak testing and system recharging",
-      image: "/assets/air-condioning-6_udyays.jpg",
+      image: "/assets/services/air-conditioning-services/air-condioning-6_udyays.jpg",
     },
     {
       title: "Ventilation & Exhaust Servicing",
       text: "Ventilation system inspection & exhaust system servicing",
-      image: "/assets/air-condioning-7_mziiru.png",
+      image: "/assets/services/air-conditioning-services/air-condioning-7_mziiru.png",
     },
   ];
   const whyChooseUs = [
@@ -149,7 +149,7 @@ function AirConditioningServicesPage() {
         description={
           "We provide a comprehensive range of air conditioning and ventilation services designed to ensure year-round comfort, high system reliability, and long-term energy efficiency. From new installations to corrective repairs and lifecycle maintenance, every service is delivered with engineering accuracy and a strong commitment to customer satisfaction."
         }
-        image="/assets/technician-using-diagnostic-tools-check-air-conditioning-unit_npjxfa.jpg"
+        image="/assets/services/air-conditioning-services/technician-using-diagnostic-tools-check-air-conditioning-unit_npjxfa.jpg"
       />
       <div className="pt-10">
         <SolarPanelQuoteGrid
@@ -157,7 +157,7 @@ function AirConditioningServicesPage() {
           text="Our installation and commissioning services follow strict engineering guidelines and manufacturer specifications to ensure optimal performance from day one:"
           items={installation}
           quoteText="These commissioning procedures guarantee stable cooling, quiet operation, and efficient energy consumption."
-          image="/assets/air-condioning-1_hl73cp.png"
+          image="/assets/services/air-conditioning-services/air-condioning-1_hl73cp.png"
         />
       </div>
       <TrustedBusinessAdvisor
@@ -173,7 +173,7 @@ function AirConditioningServicesPage() {
       <DesignProcessContainer
         heading={"Dependable Non-Warranty Repairs"}
         processes={processes}
-        image={"/assets/air-condioning-3_aphpe6.png"}
+        image={"/assets/shared/air-condioning-3_aphpe6.png"}
         text1={
           "Our swift and accurate repair services ensure your AC systems return to peak performance quickly and efficiently:"
         }
@@ -187,7 +187,7 @@ function AirConditioningServicesPage() {
       />
       <AirConditioningServicesItems />
       <WasteCollectionGrid
-        image={"/assets/air-condioning-8_fxkhqs.png"}
+        image={"/assets/services/air-conditioning-services/air-condioning-8_fxkhqs.png"}
         heading="Why Choose Our Air Conditioning Services?"
         items={whyChooseUs}
         icon={<TbAirConditioning size={25} />}

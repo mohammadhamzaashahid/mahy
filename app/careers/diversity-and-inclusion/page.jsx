@@ -10,15 +10,15 @@ export const metadata = {
 
 function DiversityAndInclusionPage() {
     const Images = [
-        "/assets/tall-steel-skyscraper-reflects-bright-city-lights-generated-by-ai.png",
-        "/assets/businessman-showing-changes-report.jpg_ojripq.jpg"
+        "/assets/careers/diversity-and-inclusion/tall-steel-skyscraper-reflects-bright-city-lights-generated-by-ai.png",
+        "/assets/careers/diversity-and-inclusion/businessman-showing-changes-report.jpg_ojripq.jpg"
     ]
     return (
         <main>
             <SubPageHeading
                 fullHeight
                 title={"Diversity & Inclusion"}
-                image={"/assets/diversity_inclusion.jpg_fomkzs.jpg"}
+                image={"/assets/careers/diversity-and-inclusion/diversity_inclusion.jpg_fomkzs.jpg"}
             />
             <TrustedAdvisorSection
                 numbers_1="30+ Nationalities"

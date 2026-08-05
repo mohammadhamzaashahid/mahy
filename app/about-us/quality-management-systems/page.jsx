@@ -15,7 +15,7 @@ function QualityManagementSystemsPage() {
             fullHeight
                 title={"Quality Management Systems"}
                 description={"The company follows a structured Quality Management System to ensure consistent product and service excellence. Processes are continuously monitored, reviewed, and improved to meet regulatory and customer requirements. Quality standards are embedded across operations to drive reliability, efficiency, and customer satisfaction."}
-                image={"/assets/quality-management-systems_yyivys.jpg"}
+                image={"/assets/shared/quality-management-systems_yyivys.jpg"}
             />
             <Qms />
         </main>

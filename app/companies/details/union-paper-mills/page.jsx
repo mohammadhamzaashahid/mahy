@@ -84,25 +84,25 @@ function UnionPaperMills() {
       title: "Union Testliner (90–200 GSM)",
       text: "High-quality recycled linerboard suitable for outer layers of corrugated packaging, offering strength, printability, and cost efficiency.",
       image:
-        "/assets/Testlinear_ikbc7c.png",
+        "/assets/shared/Testlinear_ikbc7c.png",
     },
     {
       title: "Unionflute (90–175 GSM)",
       text: "Durable fluting medium designed for corrugated board applications, providing excellent rigidity, cushioning, and structural performance.",
       image:
-        "/assets/Union_Flute_scjkz4.png",
+        "/assets/shared/Union_Flute_scjkz4.png",
     },
     {
       title: "Unioncore Board (190–450 GSM)",
       text: "Heavy-duty core board used in paper tubes, cores, and industrial applications, delivering superior strength and load-bearing capacity.",
       image:
-        "/assets/coreboard_ysfopp.png",
+        "/assets/shared/coreboard_ysfopp.png",
     },
     {
       title: "Semikraft Liner (125–200 GSM)",
       text: "Semi-chemical kraft liner combining strength and surface quality, ideal for packaging solutions requiring enhanced durability and appearance.",
       image:
-        "/assets/Semikraft_knjtkd.png",
+        "/assets/shared/Semikraft_knjtkd.png",
     },
   ];
 
@@ -110,9 +110,9 @@ function UnionPaperMills() {
     <main>
       <CompanyOverview
         video={
-          "/assets/Union_Paper_Mills_Reel_q14iax.mp4"
+          "/assets/companies/details/union-paper-mills/Union_Paper_Mills_Reel_q14iax.mp4"
         }
-        // image="/assets/office_jaeuiz.webp"
+        // image="/assets/shared/office_jaeuiz.webp"
         heading="Union Paper Mills"
         texts={[
           "Union Paper Mills (UPM) is the flagship recycled paper manufacturing facility of the MAHY Khoory Group, and one of the UAE’s pioneering large-scale paper recycling operations. Established in 1988, UPM specializes in converting post-consumer and industrial waste paper into high-quality recycled paperboard products that serve the regional and international packaging industry.Located in Dubai, the mill operates as a critical pillar of the Group’s circular manufacturing ecosystem, supplying recycled linerboard and fluting medium to corrugated box manufacturers and packaging converters across the UAE and the wider Gulf region.",
@@ -125,7 +125,7 @@ function UnionPaperMills() {
         text="At Union Paper Mills, our mission is to manufacture high-quality recycled paperboard by efficiently transforming post-consumer and industrial waste into valuable packaging materials. We are committed to minimizing environmental impact by reducing reliance on virgin raw materials, optimizing energy and water usage, and continuously improving waste recovery processes. Through advanced technology, operational excellence, and strict adherence to international quality and environmental standards, we aim to deliver consistent, reliable products that support the needs of corrugated packaging manufacturers and industrial users. As an integral part of the MAHY Khoory Group’s circular ecosystem, we strive to create sustainable value for our customers, partners, and the wider community while contributing to the UAE’s environmental and industrial development goals."
         showButton={false}
         invert={false}
-        image="/assets/Our_Mission_juz165.jpg"
+        image="/assets/shared/Our_Mission_juz165.jpg"
         imageAlt="Our Mission"
       />
 
@@ -133,7 +133,7 @@ function UnionPaperMills() {
         topHeading=""
         heading="Our Vision"
         text="Our vision is to be a leading and most trusted recycled paper manufacturer in the region, recognized for our commitment to sustainability, innovation, and excellence in manufacturing. We aspire to strengthen our position within the regional and international packaging value chain through continuous investment in advanced technologies, capacity expansion, and product development. By enhancing our integrated recycling model and adopting smarter, more efficient production practices, we aim to set industry benchmarks in quality, environmental responsibility, and operational performance. Ultimately, we seek to play a key role in advancing the circular economy, supporting sustainable industrial growth, and shaping the future of eco-friendly packaging solutions in the region."
-        image="/assets/UPM.4_ir521p.jpg"
+        image="/assets/shared/UPM.4_ir521p.jpg"
         imageAlt="Our Vision"
 
         showButton={false}
@@ -151,7 +151,7 @@ function UnionPaperMills() {
         heading="Union Paper Mills"
         subHeading="Recycled Paper Manufacturing & Sustainable Industrial Solutions"
         tag="[ MANUFACTURING DIVISION ]"
-        backgroundImage="/assets/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"
+        backgroundImage="/assets/shared/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"
       />
 
       <FeaturesEngineeringSection
@@ -160,7 +160,7 @@ function UnionPaperMills() {
         //   "M.A.H.Y. Khoory Trading is a GCC-wide procurement and distribution division that delivers compliant, energy-efficient solutions through strong infrastructure, technical support, and global partnerships, driving consistent quality, operational efficiency, and long-term growth across the Group."
         // }
         items={overview}
-        image="/assets/image010_r5rssl.png"
+        image="/assets/shared/image010_r5rssl.png"
         textPosition="left"
       />
     </main>

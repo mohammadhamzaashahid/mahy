@@ -7,7 +7,7 @@ import Image from "next/image"
 export default function WhyUs({
     items,
     reverse = true,
-    image = "/assets/idea-creative-solving-question-icons.jpg"
+    image = "/assets/shared/idea-creative-solving-question-icons.jpg"
 }) {
     const [openIndex, setOpenIndex] = React.useState(0)
     const contentClassName = "text-sm text-gray-500 leading-relaxed pb-4 pl-[30px] pr-6"

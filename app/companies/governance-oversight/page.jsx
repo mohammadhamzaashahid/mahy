@@ -14,7 +14,7 @@ function GovernanceOversightPage() {
             <SubPageHeading
                 title={"Governance & Oversight"}
                 fullHeight
-                image={"/assets/governance-oversight_1_kaybzq.jpg"}
+                image={"/assets/shared/governance-oversight_1_kaybzq.jpg"}
             />
             <CompanyTextOnBackground />
         </main>

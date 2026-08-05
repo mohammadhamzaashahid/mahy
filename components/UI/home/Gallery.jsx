@@ -14,24 +14,24 @@ function Gallery({ galleryItems, cta }) {
     const items = [
         {
             title: galleryItems[0],
-            image: "/assets/gallery-1_exhyck.jpg"
+            image: "/assets/shared/gallery-1_exhyck.jpg"
         },
 
         {
             title: galleryItems[1],
-            image: "/assets/gallery-2_qwc2me.jpg"
+            image: "/assets/products/corrugated-paper-reels/gallery-2_qwc2me.jpg"
         },
         {
             title: galleryItems[2],
-            image: "/assets/gallery-3_exvuhu.jpg"
+            image: "/assets/products/corrugated-paper-reels/gallery-3_exvuhu.jpg"
         },
         {
             title: galleryItems[3],
-            image: "/assets/gallery-4_oxzrpw.jpg"
+            image: "/assets/products/corrugated-paper-reels/gallery-4_oxzrpw.jpg"
         },
         {
             title: galleryItems[4],
-            image: "/assets/gallery-5_wcndsr.jpg"
+            image: "/assets/shared/gallery-5_wcndsr.jpg"
         },
     ]
 

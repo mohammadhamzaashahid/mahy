@@ -18,9 +18,9 @@ function ManufacturingPage() {
       <SubPageHeading
         fullHeight
         title="Manufacturing"
-        // image="/assets/Code_of_Conduct.jpg_qjqqzs.jpg"
+        // image="/assets/shared/Code_of_Conduct.jpg_qjqqzs.jpg"
         image={
-          "/assets/close-up-data-center-engineer-using-tablet-doing-maintenance-ai-rigs.jpg_crlc14.jpg"
+          "/assets/companies/manufacturing/close-up-data-center-engineer-using-tablet-doing-maintenance-ai-rigs.jpg_crlc14.jpg"
         }
         align="center"
       />
@@ -28,10 +28,10 @@ function ManufacturingPage() {
       <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
         <CompaniesSectors
           image={
-            "/assets/close-up-data-center-computer-scientist-using-tablet-deploying-servers-network-hardware-it.jpg_lp83fn.jpg"
+            "/assets/shared/close-up-data-center-computer-scientist-using-tablet-deploying-servers-network-hardware-it.jpg_lp83fn.jpg"
           }
           image2={
-            "/assets/detail-shot-skyscrapers.jpg_jamp5y.jpg"
+            "/assets/companies/manufacturing/detail-shot-skyscrapers.jpg_jamp5y.jpg"
           }
           title={"Manufacturing"}
           texts={[

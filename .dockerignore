@@ -1,0 +1,13 @@
+node_modules
+.next
+.git
+.github
+public/assets
+*.md
+.env*
+Dockerfile
+docker-compose.yml
+nginx
+.DS_Store
+npm-debug.log*
+coverage

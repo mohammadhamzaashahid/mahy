@@ -98,9 +98,9 @@ async function GroupHistoryAndLegacyPage() {
       <SubPageHeading
       fullHeight
         title={"Group History & Legacy"}
-        // image={"/assets/formal-people-with-gadgets-meeting.jpg_et6idb.jpg"}
-        // image={"/assets/grouphistory-legacy_ghps2d.png"}
-        image={"/assets/manhattan-new-york-city-las-americas-6th-av.jpg_h6ccdy.jpg"}
+        // image={"/assets/about-us/group-history-and-legacy/formal-people-with-gadgets-meeting.jpg_et6idb.jpg"}
+        // image={"/assets/about-us/group-history-and-legacy/grouphistory-legacy_ghps2d.png"}
+        image={"/assets/about-us/group-history-and-legacy/manhattan-new-york-city-las-americas-6th-av.jpg_h6ccdy.jpg"}
       />
       <TimelineContainer
         title={"History Of MAHY Khoory"}

@@ -16,8 +16,8 @@ function GroupStructurePage() {
                   fullHeight
                     title={"MAHY KHOORY GROUP"}
                     image={
-                    //   "/assets/holding-overview-page.jpg_norjia.jpg"
-            "/assets/urban-jewel-tones-sunrise-paints-glass-facades.jpg_h5bjgi.jpg"
+                    //   "/assets/shared/holding-overview-page.jpg_norjia.jpg"
+            "/assets/companies/group-structure/urban-jewel-tones-sunrise-paints-glass-facades.jpg_h5bjgi.jpg"
                 }
                   />
             <GroupStructure />

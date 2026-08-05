@@ -15,27 +15,27 @@ function PumpingSystemServicesPage() {
     {
       title: "Booster Pumps",
       text: "High-performance pressure boosting systems for domestic villas, commercial buildings, and high-rise towers. GRUNDFOS booster systems ensure stable water pressure, intelligent control, and energy-efficient operation through advanced VFD technology and modular pump configurations.",
-      image: "/assets/psol3_free9g.png",
+      image: "/assets/shared/psol3_free9g.png",
     },
     {
       title: "Transfer Pumps",
       text: "Designed for fluid movement, circulation, and utility applications, these pumps provide dependable operation with high hydraulic efficiency. Ideal for building services, chilled/hot water loops, mechanical rooms, and industrial water distribution.",
-      image: "/assets/psol4_aeocww.png",
+      image: "/assets/products/pumping-solutions/psol4_aeocww.png",
     },
     {
       title: "Submersible Pumps",
       text: "Engineered for submerged operation in boreholes, sumps, tanks, and drainage pits, GRUNDFOS submersible lines deliver superior performance in clean water, sandy wells, drainage, and dewatering applications.",
-      image: "/assets/psol5_iunacy.jpg",
+      image: "/assets/products/pumping-solutions/psol5_iunacy.jpg",
     },
     {
       title: "Sewage & Wastewater Pumps",
       text: "Purpose-built for heavy-duty solids handling, sewage transfer, and sludge movement. Available with channel, vortex, and grinder/cutter options, these pumps support municipal networks, STPs, commercial buildings, and industrial wastewater management.",
-      image: "/assets/psol6_qabvp2.jpg",
+      image: "/assets/products/pumping-solutions/psol6_qabvp2.jpg",
     },
     {
       title: "Chilled Water Pumps",
       text: "Optimized for HVAC applications, these pumps ensure precise chilled water circulation for district cooling plants, central cooling networks, and commercial building HVAC systems. Fully compatible with VFD controls for maximum energy savings.",
-      image: "/assets/psol7_kndyxu.jpg",
+      image: "/assets/products/pumping-solutions/psol7_kndyxu.jpg",
     },
   ];
   const steps = [
@@ -68,11 +68,11 @@ function PumpingSystemServicesPage() {
         description={
           "Reliable pumping system services delivering optimal performance and long-term efficiency. From installation to maintenance, we ensure smooth and uninterrupted operations."
         }
-        image="/assets/products-service-optimization-and-consultancy-heroimage-master_1800x500_vussf6.avif"
+        image="/assets/products/pumping-solutions/products-service-optimization-and-consultancy-heroimage-master_1800x500_vussf6.avif"
       />
       <TrustedAdvisorSection
       object="Employees"
-      images={["/assets/psol1_ae3dip.png", "/assets/press-material-products-industrial-pumping-systems-Grundfos-master_320x220_pn4ovk.jpg"]}
+      images={["/assets/products/pumping-solutions/psol1_ae3dip.png", "/assets/products/pumping-solutions/press-material-products-industrial-pumping-systems-Grundfos-master_320x220_pn4ovk.jpg"]}
         heading="Overview"
         texts={[
           "The Pumping Solutions catalogue showcases a complete portfolio of GRUNDFOS-engineered pump systems, purpose-built for residential, commercial, industrial, and infrastructure applications. Each pump is designed with advanced hydraulics, high-efficiency motors, and durable materials to ensure optimal performance, reduced energy consumption, and long operational life—particularly suited to the demanding climatic and water quality conditions of the UAE.",
@@ -89,7 +89,7 @@ function PumpingSystemServicesPage() {
         subHeading="Specialized Engineering"
         heading="Engineered for UAE Market Requirements"
         steps={steps}
-        image="/assets/psol8.jpg_njgwhj.png"
+        image="/assets/shared/psol8.jpg_njgwhj.png"
       />
 
       {/* <StackingCardsSection /> */}

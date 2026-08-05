@@ -18,7 +18,7 @@ function AllCompaniesPage() {
                 fullHeight
                 scrollReadText="View All Companies"
                 title={"All Companies"}
-                image={"/assets/back-view-thoughtful-businessman-looking-through-window-big-modern-cityplanning-future-project-concept-early-morning-scene.jpg_ayuw8c.jpg"}
+                image={"/assets/companies/all/back-view-thoughtful-businessman-looking-through-window-big-modern-cityplanning-future-project-concept-early-morning-scene.jpg_ayuw8c.jpg"}
             />
             <ScrollTimeline
                 items={allCompanies}

@@ -4,25 +4,25 @@ const partners = [
   {
     id: 0,
     image:
-      "/assets/grundfos_mgr1iy.png",
+      "/assets/about-us/partners/grundfos_mgr1iy.png",
     name: "Grundfos",
   },
   {
     id: 1,
     image:
-      "/assets/GAIA_drogzh.png",
+      "/assets/about-us/partners/GAIA_drogzh.png",
     name: "Gaia",
   },
   {
     id: 2,
     image:
-      "/assets/oventrop_lcfzj9.png",
+      "/assets/about-us/partners/oventrop_lcfzj9.png",
     name: "Oventrop",
   },
   {
     id: 3,
     image:
-      "/assets/ListerPetter_zoul9w.png",
+      "/assets/about-us/partners/ListerPetter_zoul9w.png",
     name: "Lister Petter",
   },
   // {
@@ -68,31 +68,31 @@ const partners = [
   // {
   //   id: 4,
   //   image:
-  //     "/assets/Marathon_nzfxf7.png",
+  //     "/assets/about-us/partners/Marathon_nzfxf7.png",
   //   name: "Marathon Motor",
   // },
   {
     id: 12,
     image:
-      "/assets/Artiston_muldmh.png",
+      "/assets/about-us/partners/Artiston_muldmh.png",
     name: "Ariston",
   },
   // {
   //   id: 6,
   //   image:
-  //     "/assets/PakaWaste_dh4pkx.png",
+  //     "/assets/about-us/partners/PakaWaste_dh4pkx.png",
   //   name: "Pakawaste",
   // },
   // {
   //   id: 13,
   //   image:
-  //     "/assets/MKA_z1fx1q.png",
+  //     "/assets/about-us/partners/MKA_z1fx1q.png",
   //   name: "Mahy Khoory Motors",
   // },
   // {
   //   id: 8,
   //   image:
-  //     "/assets/Havells_akbdxh.png",
+  //     "/assets/about-us/partners/Havells_akbdxh.png",
   //   name: "Havells",
   // },
 ];

@@ -16,8 +16,8 @@ export default function TrustedAdvisorSection({
   numbers_2 = "96"
 }) {
   const defaultFallBack = [
-    "/assets/Dubai_skyline_at_twilight_with_glowing_connection.jpg_vctmco.jpg",
-    "/assets/corporate_tower_with_multiple_illuminated_floors_visible.jpg_wgx927.jpg",
+    "/assets/shared/Dubai_skyline_at_twilight_with_glowing_connection.jpg_vctmco.jpg",
+    "/assets/shared/corporate_tower_with_multiple_illuminated_floors_visible.jpg_wgx927.jpg",
   ];
 
   const Images = {
@@ -78,7 +78,7 @@ export default function TrustedAdvisorSection({
             <div className="flex flex-col gap-6 md:gap-8 md:-translate-y-6">
               <div className="relative h-100 md:aspect-4/5 overflow-hidden">
                 <Image
-                  // src="/assets/Dubai_skyline_at_twilight_with_glowing_connection.jpg_vctmco.jpg"
+                  // src="/assets/shared/Dubai_skyline_at_twilight_with_glowing_connection.jpg_vctmco.jpg"
                   src={Images.first}
                   alt=""
                   fill
@@ -122,7 +122,7 @@ export default function TrustedAdvisorSection({
 
               <div className="relative h-100 md:aspect-4/5 overflow-hidden">
                 <Image
-                  // src="/assets/corporate_tower_with_multiple_illuminated_floors_visible.jpg_wgx927.jpg"
+                  // src="/assets/shared/corporate_tower_with_multiple_illuminated_floors_visible.jpg_wgx927.jpg"
                   src={Images.second}
                   alt=""
                   fill

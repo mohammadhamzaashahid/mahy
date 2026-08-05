@@ -21,7 +21,7 @@ async function Careers() {
   const heading = {
     title: t("Heading"),
     description: t("Description"),
-    image: "/assets/careers_samv9o.webp",
+    image: "/assets/shared/careers_samv9o.webp",
   };
   const departments = [
     { title: t("Featured1"), description: t("Description1"), image: "/gallery/gallery-1.jpg" },
@@ -53,7 +53,7 @@ async function Careers() {
       </div>
       <CareersShowcaseSection
         title={t("ShowcaseTitle")}
-        imageUrl={"/assets/OMODA_JAECOO_expands_UAE_presence_with_MAHY_Khoory_Automotive_as_the_____imgupscaler.ai_Sharpener_4K_1_dszyiv.png"}
+        imageUrl={"/assets/careers/OMODA_JAECOO_expands_UAE_presence_with_MAHY_Khoory_Automotive_as_the_____imgupscaler.ai_Sharpener_4K_1_dszyiv.png"}
         imageAlt="MAHY Life"
       />
       <FeaturedDepartments title={t("FeaturedTitle")} departments={departments} cta={t("Cta")} />

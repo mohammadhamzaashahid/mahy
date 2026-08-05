@@ -2,10 +2,10 @@ import SubPageHeading from "@/components/UI/SubPageHeading";
 import CompaniesSectors from "@/components/CompaniesSectors";
 
 const HSE_IMAGES = {
-    "health-safety-management": "/assets/flat-lay-arrangement-with-safety-equipment.jpg_qmca6i.jpg",
-    "environmental-management":  "/assets/employees-with-masks-working-warehouse.jpg_w2gwtw.jpg",
-    "monitoring-compliance":     "/assets/architect-holding-blueprint.jpg_he3kqs.jpg",
-    "continuous-improvement":    "/assets/flat-lay-arrangement-with-safety-equipment.jpg_qmca6i.jpg",
+    "health-safety-management": "/assets/hse/[id]/flat-lay-arrangement-with-safety-equipment.jpg_qmca6i.jpg",
+    "environmental-management":  "/assets/hse/[id]/employees-with-masks-working-warehouse.jpg_w2gwtw.jpg",
+    "monitoring-compliance":     "/assets/hse/[id]/architect-holding-blueprint.jpg_he3kqs.jpg",
+    "continuous-improvement":    "/assets/hse/[id]/flat-lay-arrangement-with-safety-equipment.jpg_qmca6i.jpg",
 };
 
 const data = [

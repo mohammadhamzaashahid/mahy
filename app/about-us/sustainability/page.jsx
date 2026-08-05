@@ -17,13 +17,13 @@ function SustainabilityPage() {
             title: "Responsible Operations",
             text: "Sustainability at MAHY Khoory Group is closely linked to operational discipline and governance. Environmental considerations are incorporated into operational planning, investment decisions, and continuous improvement initiatives across all businesses.",
             text2: "We apply structured management systems, monitoring processes, and audits to ensure responsible operations, environmental protection, and ongoing performance improvement.",
-            image: "/assets/corporate-sustainability.jpg_vhc4mz.jpg"
+            image: "/assets/shared/corporate-sustainability.jpg_vhc4mz.jpg"
         },
         {
             title: "Health, Safety & People",
             text: "The Group places strong emphasis on the health, safety, and well-being of its employees, contractors, and stakeholders. Safe working environments, risk management, and continuous training are essential components of our sustainability framework.",
             text2: "By investing in people, skills development, and safety awareness, we aim to create stable, productive, and responsible workplaces across all operations.",
-            image: "/assets/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
+            image: "/assets/shared/photo-family-visiting-dubai-opera-architectural-masterpiece.jpg_qopoc6.jpg"
         },
         {
             title: "Community Engagement & Social Responsibility",
@@ -41,14 +41,14 @@ function SustainabilityPage() {
             title: "Continuous Improvement & Long-Term Commitment",
             text: "Sustainability and CSR at MAHY Khoory Group are ongoing commitments. We continuously review our practices, monitor performance, and enhance systems to respond to evolving regulatory requirements, industry standards, and stakeholder expectations.",
             text2: "Through responsible operations, environmental stewardship, and community engagement, the Group seeks to support sustainable growth and long-term value creation across all sectors in which it operates.",
-            image: "/assets/businessman-touching-glowing-increasing-arrow-business-profit-investment-growth-concept_fagrjk.jpg"
+            image: "/assets/about-us/sustainability/businessman-touching-glowing-increasing-arrow-business-profit-investment-growth-concept_fagrjk.jpg"
         }
     ];
 
     return (
         <main className='lg:pb-20'>
             <div className="w-full h-screen relative">
-                <Image src={"/assets/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"} alt="Sustainability" fill style={{ objectFit: "cover" }} />
+                <Image src={"/assets/shared/photorealistic-view-tree-nature-with-branches-trunk.jpg_mtzsxt.jpg"} alt="Sustainability" fill style={{ objectFit: "cover" }} />
                 <div className="absolute left-0 right-0 bottom-0 h-1/3 bg-linear-to-t from-white to-transparent" />
                 <div className="absolute inset-0 text-center z-10 top-7 pt-45 text-4xl text-white">
                     <p>To lead in connectivity and intelligence computing.</p>
@@ -57,7 +57,7 @@ function SustainabilityPage() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl gap-8 lg:gap-15 mx-auto relative bottom-40 lg:bottom-20 px-4 lg:px-0 h-150 lg:h-fit">
                 <div className="relative h-70 lg:h-90 rounded-4xl overflow-hidden">
-                    <Image src={"/assets/office_jaeuiz.webp"} alt="Office"
+                    <Image src={"/assets/shared/office_jaeuiz.webp"} alt="Office"
                         fill style={{ objectFit: "cover" }} />
                 </div>
                 <div className="flex flex-col justify-center">

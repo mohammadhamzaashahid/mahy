@@ -20,7 +20,7 @@ function SustainabilityEnvironmentPage() {
         "The Group is a regional leader in circular-economy practices, integrating waste collection, recycling, manufacturing, and sustainable product development into a unified environmental ecosystem.",
       ],
       image:
-        "/assets/recycling-symbol-green-wall-modern-office.jpg_hflmu9.jpg",
+        "/assets/shared/recycling-symbol-green-wall-modern-office.jpg_hflmu9.jpg",
     },
     {
       title: "Circular Economy & Resource Recovery",
@@ -29,7 +29,7 @@ function SustainabilityEnvironmentPage() {
         "This closed-loop approach significantly reduces landfill dependency and reliance on virgin resources.",
       ],
       image:
-        "/assets/skyscrapers-tokyo.jpg_e2niyf.jpg",
+        "/assets/shared/skyscrapers-tokyo.jpg_e2niyf.jpg",
     },
     {
       title: "Comprehensive Environmental Services",
@@ -38,7 +38,7 @@ function SustainabilityEnvironmentPage() {
         "These operations support municipalities, industries, and commercial clients in meeting regulatory and sustainability objectives.",
       ],
       image:
-        "/assets/comprehensive-growth_irbplq.jpg",
+        "/assets/shared/comprehensive-growth_irbplq.jpg",
     },
     {
       title: "Renewable Energy & Green Solutions",
@@ -46,14 +46,14 @@ function SustainabilityEnvironmentPage() {
         "The Group also invests in renewable energy solutions, energy-efficient systems, and green-building consultancy.",
         "It enables both internal operations and external clients to reduce carbon emissions and operating costs.",
       ],
-      image: "/assets/renewable-energy_nkj0in.jpg",
+      image: "/assets/companies/operations-and-capabilities/sustainability-environment/renewable-energy_nkj0in.jpg",
     },
     {
       title: "Commitment to Sustainable Growth",
       bullets: [
         "Through responsible growth, continuous environmental investment, and measurable sustainability outcomes, the MAHY Khoory Group demonstrates that environmental stewardship and industrial scale can advance together.",
       ],
-      image: "/assets/commitment-to-growth_qhzgjt.jpg",
+      image: "/assets/shared/commitment-to-growth_qhzgjt.jpg",
     },
   ];
 
@@ -63,7 +63,7 @@ function SustainabilityEnvironmentPage() {
         fullHeight
         title={"Sustainability & Environment"}
         image={
-          "/assets/corporate-sustainability.jpg_vhc4mz.jpg"
+          "/assets/shared/corporate-sustainability.jpg_vhc4mz.jpg"
         }
       />
       <EnterprisePinnedSection sections={sections} />

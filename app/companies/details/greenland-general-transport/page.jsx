@@ -21,12 +21,12 @@ function GreenlandGeneralTransportPage() {
         {
             title: "Strategic Foundation",
             text: "Greenland General Transport was established in response to the MAHY Khoory Group’s expanding operational footprint and increasing demand for centralized logistics control.",
-            image: "/assets/Starategic_Foundations_dlqxi1.jpg",
+            image: "/assets/companies/details/greenland-general-transport/Starategic_Foundations_dlqxi1.jpg",
         },
         {
             title: "Growth & Operational Expansion",
             text: "As the Group diversified into manufacturing, engineering, waste management, renewable energy, automotive, and hospitality sectors, the need for an internal, dependable transportation network became strategically essential. Over time, the division has expanded in scale and capability, growing alongside the Group.",
-            image: "/assets/Growth_lqql3r.jpg",
+            image: "/assets/companies/details/greenland-general-transport/Growth_lqql3r.jpg",
         }
     ];
     const adpmCardsData = [
@@ -82,8 +82,8 @@ function GreenlandGeneralTransportPage() {
     return (
         <main>
             <CompanyOverview
-                video={"/assets/0205_tlzogv.mp4"}
-                // image="/assets/office_jaeuiz.webp"
+                video={"/assets/companies/details/greenland-general-transport/0205_tlzogv.mp4"}
+                // image="/assets/shared/office_jaeuiz.webp"
                 heading="Greenland General Transport"
                 texts={[
                     "Greenland General Transport is the in-house logistics and transportation division of the MAHY Khoory Group, established to provide reliable, efficient, and fully integrated transport services across the Group’s diverse business operations.",
@@ -97,7 +97,7 @@ function GreenlandGeneralTransportPage() {
 By integrating technology, skilled manpower, and modern transport infrastructure, Greenland General Transport ensures that every delivery—whether for manufacturing, engineering, trading, environmental services, or hospitality—is executed with precision, accountability, and full compliance with UAE transport and safety regulations."
                 showButton={false}
                 invert={false}
-                image="/assets/Mission-green-2_bwo6i1.png"
+                image="/assets/companies/details/greenland-general-transport/Mission-green-2_bwo6i1.png"
                 imageAlt="Our Mission"
             />
             <WhoWeAre
@@ -107,7 +107,7 @@ By integrating technology, skilled manpower, and modern transport infrastructure
 Through continuous modernization, strategic scalability, and a commitment to efficiency, Greenland General Transport seeks to become a benchmark for integrated in-house logistics, supporting the Group’s long-term growth, diversification, and project delivery across the UAE and the wider GCC region."
                 showButton={false}
                 invert={true}
-                image="/assets/Vision-2_vev3cy.png"
+                image="/assets/companies/details/greenland-general-transport/Vision-2_vev3cy.png"
                 imageAlt="Our Vision"
             />
             <KitchenMenu
@@ -118,17 +118,17 @@ Through continuous modernization, strategic scalability, and a commitment to eff
                 cards={adpmCardsData}
                 heading="Core Services and Capabilities"
                 tag="[ TRANSPORT ]"
-                backgroundImage="/assets/skyscrapers-tokyo.jpg_e2niyf.jpg"
+                backgroundImage="/assets/shared/skyscrapers-tokyo.jpg_e2niyf.jpg"
                 endText={"These services ensure continuity, responsiveness, and reliability across the Group’s operations."}
             />
             <FeaturesEngineeringSection
                 heading="Greenland General Transport Overview"
                 items={overview}
-                image="/assets/New_qyja1x.png"
+                image="/assets/companies/details/greenland-general-transport/New_qyja1x.png"
             />
             <CompanyTextOnBackground
                 heading="Sustainability and Environmental Responsibility"
-                image="/assets/commitment-to-growth_qhzgjt.jpg"
+                image="/assets/shared/commitment-to-growth_qhzgjt.jpg"
                 align="left"
                 text="Greenland General Transport actively supports the MAHY Khoory Group’s sustainability objectives through responsible fleet and route management."
                 endText="The division operates modern, fuel-efficient vehicles and applies route optimization technologies to reduce fuel consumption and emissions, with future initiatives including lower-emission and alternative-fuel vehicles."
@@ -141,12 +141,12 @@ Through continuous modernization, strategic scalability, and a commitment to eff
                 text="The division operates a diversified fleet comprising heavy-duty flatbed and box trucks, medium and light delivery vehicles, and passenger buses for staff transport. It utilizes central warehousing infrastructure and maintains an in-house vehicle maintenance facility, ensuring high fleet availability and minimal downtime."
                 showButton={false}
                 invert={true}
-                image="/assets/commercial-trucks-lined-up-logistics-hub-sunset_gwx6nh.jpg"
+                image="/assets/companies/details/greenland-general-transport/commercial-trucks-lined-up-logistics-hub-sunset_gwx6nh.jpg"
                 imageAlt="Infrastructure and Fleet"
             />
             <section className="max-w-7xl mx-auto px-5 py-15 md:pt-25">
                 <CompaniesSectors
-                    image={"/assets/finance-concept_uatzew.jpg"}
+                    image={"/assets/companies/details/greenland-general-transport/finance-concept_uatzew.jpg"}
                     title={"Innovation and Digital Enablement"}
                     texts={[
                         "Innovation is integral to Greenland General Transport’s operating model. The division leverages telematics, GPS tracking, and digital route-planning systems to enhance efficiency, safety, and service reliability.",

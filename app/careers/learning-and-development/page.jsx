@@ -42,7 +42,7 @@ function LearningAndDevelopmentPage() {
         title={"Learning & Development"}
         fullHeight
         image={
-          "/assets/learning-and-development_cobakj.jpg"
+          "/assets/careers/learning-and-development/learning-and-development_cobakj.jpg"
         }
       />
       <SolarPanelInstallationsGrid
@@ -52,9 +52,9 @@ function LearningAndDevelopmentPage() {
         itemsTitle={false}
         items={items}
         images={[
-          "/assets/business-team-take-sits-steps-using-smartphone_bumzph.jpg",
-          "/assets/office-workers-walking-street_rgkyyj.jpg",
-          "/assets/business-people-talking-break-time-standing-background-modern-city-skyscrapers_ee9zan.jpg"
+          "/assets/careers/learning-and-development/business-team-take-sits-steps-using-smartphone_bumzph.jpg",
+          "/assets/careers/learning-and-development/office-workers-walking-street_rgkyyj.jpg",
+          "/assets/shared/business-people-talking-break-time-standing-background-modern-city-skyscrapers_ee9zan.jpg"
         ]}
       />
     </main>

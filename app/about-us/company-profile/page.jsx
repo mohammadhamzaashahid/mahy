@@ -119,12 +119,12 @@ async function companyProfile() {
       <SubPageHeading
         fullHeight
         scrollReadText="Know About Us"
-        image={"/assets/business-people-group-hd-8k-wallpaper-stock-photographic-image.jpg_bbf9gf.jpg"}
+        image={"/assets/about-us/company-profile/business-people-group-hd-8k-wallpaper-stock-photographic-image.jpg_bbf9gf.jpg"}
         // image2={"/profile/profile-bg-2.jpg"}
         height="h-screen"
         title={"Our Company Profile"}
       />
-      <WhoWeAre showButton={false} image={"/assets/group-business-people-are-sitting-conference-room-looking-out-city-skyline-sun-is-setting-sky-is-bright-orange_wmnkpt.jpg"} />
+      <WhoWeAre showButton={false} image={"/assets/about-us/company-profile/group-business-people-are-sitting-conference-room-looking-out-city-skyline-sun-is-setting-sky-is-bright-orange_wmnkpt.jpg"} />
       {/* <div className="text-center px-4 bg-black p-20">
         <AnimatedLines bg="bg-gray-200" />
         <p className="text-heading text-2xl sm:text-1xl font-semibold text-gray-100">

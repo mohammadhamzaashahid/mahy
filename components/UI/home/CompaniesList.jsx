@@ -11,14 +11,14 @@ import ScrollToTop from '../ScrollToTop';
 import { useRef, useState, useEffect } from "react";
 
 const industeries = [
-    { label: "Trading", href: "/companies/trading", image: "/assets/trading-mahy_wdglvr.jpg" },
-    { label: "Manufacturing", href: "/companies/manufacturing", image: "/assets/factory-workers-operating-machinery-on-production-2026-01-09-10-18-36-utc_tsa0tc.jpg" },
-    { label: "Automotive", href: "/companies/automotive", image: "/assets/two-businessmen-are-working-together-in-the-car-sh-2026-01-08-23-56-20-utc_tjv68e.jpg" },
-    { label: "Waste Management", href: "/companies/waste-management", image: "/assets/joyful-indian-worker-in-protective-vest-and-gloves-2026-01-06-00-11-34-utc_m8310z.jpg" },
-    { label: "Transportation", href: "/companies/transportation-logistics", image: "/assets/free-photo-ai-generated-truck.jpg_xjeied.jpg" },
-    { label: "Energy & Sustainability Consulting", href: "/companies/energy-sustainability-consulting", image: "/assets/businesswoman-with-solar-panels-model-having-prese-2026-01-09-09-42-23-utc_l5vlii.jpg" },
-    { label: "Hospitality", href: "/companies/energy-sustainability-consulting", image: "/assets/Hospitality_food_b3zern.jpg" },
-    { label: "Engineering", href: "/companies/energy-sustainability-consulting", image: "/assets/worker-working-factory.jpeg" },
+    { label: "Trading", href: "/companies/trading", image: "/assets/shared/trading-mahy_wdglvr.jpg" },
+    { label: "Manufacturing", href: "/companies/manufacturing", image: "/assets/shared/factory-workers-operating-machinery-on-production-2026-01-09-10-18-36-utc_tsa0tc.jpg" },
+    { label: "Automotive", href: "/companies/automotive", image: "/assets/shared/two-businessmen-are-working-together-in-the-car-sh-2026-01-08-23-56-20-utc_tjv68e.jpg" },
+    { label: "Waste Management", href: "/companies/waste-management", image: "/assets/shared/joyful-indian-worker-in-protective-vest-and-gloves-2026-01-06-00-11-34-utc_m8310z.jpg" },
+    { label: "Transportation", href: "/companies/transportation-logistics", image: "/assets/shared/free-photo-ai-generated-truck.jpg_xjeied.jpg" },
+    { label: "Energy & Sustainability Consulting", href: "/companies/energy-sustainability-consulting", image: "/assets/shared/businesswoman-with-solar-panels-model-having-prese-2026-01-09-09-42-23-utc_l5vlii.jpg" },
+    { label: "Hospitality", href: "/companies/energy-sustainability-consulting", image: "/assets/shared/Hospitality_food_b3zern.jpg" },
+    { label: "Engineering", href: "/companies/energy-sustainability-consulting", image: "/assets/shared/worker-working-factory.jpeg" },
 ];
 
 
@@ -155,7 +155,7 @@ const CompaniesTab = ({ companies }) => {
 //             ))}
 //         </div>
 //         {/* <div className="relative h-120 md:h-full w-full">
-//             <Image src="/assets/trading-mahy_wdglvr.jpg" style={{ objectFit: "cover" }} alt="Companies" fill />
+//             <Image src="/assets/shared/trading-mahy_wdglvr.jpg" style={{ objectFit: "cover" }} alt="Companies" fill />
 //             <div className="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
 //             <div className='absolute bottom-7 left-7 text-gray-200'>
 //                 <div className='flex flex-wrap gap-3 mb-4'>

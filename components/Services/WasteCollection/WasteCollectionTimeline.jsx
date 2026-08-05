@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 const defaultItems = [
-    { title: "Research", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum. Duis cursus, mi quis viverrau spendisse varius enim", image: "/assets/81D2e2wZkEL._AC_SL1500__pjnjwy.png" },
-    { title: "Proposals", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum. Duis cursus, mi quis viverrau spendisse varius enim", image: "/assets/518lx4XQYEL._AC_SL1200__b7r08x.png" },
-    { title: "Develop", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum. Duis cursus, mi quis viverrau spendisse varius enim", image: "/assets/515qTE0N52L._AC_SL1200__vw9mug.png" },
-    { title: "Support", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum. Duis cursus, mi quis viverrau spendisse varius enim", image: "/assets/91B7XzKKDoL._AC_SL1500__r9uxvo.png" }
+    { title: "Research", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum. Duis cursus, mi quis viverrau spendisse varius enim", image: "/assets/products/dewalt/81D2e2wZkEL._AC_SL1500__pjnjwy.png" },
+    { title: "Proposals", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum. Duis cursus, mi quis viverrau spendisse varius enim", image: "/assets/products/_shared/518lx4XQYEL._AC_SL1200__b7r08x.png" },
+    { title: "Develop", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum. Duis cursus, mi quis viverrau spendisse varius enim", image: "/assets/shared/515qTE0N52L._AC_SL1200__vw9mug.png" },
+    { title: "Support", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum. Duis cursus, mi quis viverrau spendisse varius enim", image: "/assets/products/_shared/91B7XzKKDoL._AC_SL1500__r9uxvo.png" }
 ];
 
 function WasteCollectionTimeline({
